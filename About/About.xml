@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+	<name>Map Vehicles - Ocean Expansion</name>
+	<packageId>OELS.MapVehicles.OceanExpansion</packageId>
+	<author>OELS</author>
+	<description>Add four vehicles with map using the Vehicle Map Framework.
+Vehicle Map Frameworkを使用したマップ付きの乗り物を4種追加します。
+	</description>
+	<modVersion IgnoreIfNoMatchingField="True">ver.1.0.0</modVersion>
+
+	<supportedVersions>
+		<li>1.5</li>
+		<li>1.6</li>
+	</supportedVersions>
+
+	<modDependencies>
+		<li>
+			<packageId>OELS.VehicleMapFramework</packageId>
+			<alternativePackageIds IgnoreIfNoMatchingField="True">
+				<li>OELS.VehicleMapFramework.dev</li>
+			</alternativePackageIds>
+			<displayName>Vehicle Map Framework</displayName>
+			<downloadUrl>https://github.com/oelsart/VehicleMapFramework</downloadUrl>
+		</li>
+	</modDependencies>
+	<loadAfter>
+		<li>OELS.VehicleMapFramework</li>
+	</loadAfter>
+</ModMetaData>
