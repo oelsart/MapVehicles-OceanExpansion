@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+	<Vehicles.VehicleDef ParentName="BaseSeaVehiclePawnWithMap">
+		<defName>MV_ExpandableRaft</defName>
+		<label>raft</label>
+		<description>TODO</description>
+
+		<graphicData>
+			<texPath>MapVehiclesOcean/Raft/Raft</texPath>
+			<graphicClass>Vehicles.Graphic_Vehicle</graphicClass>
+			<shaderType>CutoutComplexPattern</shaderType>
+			<drawSize>(4,4)</drawSize>
+		</graphicData>
+		
+		<building>
+			<neverBuildable>true</neverBuildable>
+			<relatedBuildCommands>
+				<li>MV_RaftPiece</li>
+				<li>MV_RaftPieceFloat</li>
+				<li>MV_RigOneTiered</li>
+				<li>MV_RigTwoTiered</li>
+				<li>MV_RigThreeTiered</li>
+			</relatedBuildCommands>
+		</building>
+
+		<fillPercent>0.1</fillPercent>
+
+		<buildDef>MV_ExpandableRaft_Blueprint</buildDef>
+
+		<size>(3,3)</size>
+
+		<vehicleCategory>Transport</vehicleCategory>
+		<techLevel>Neolithic</techLevel>
+		<vehicleType>Sea</vehicleType>
+
+		<statBases>
+			<ArmorRating_Blunt>0.2</ArmorRating_Blunt>
+			<ArmorRating_Sharp>0.2</ArmorRating_Sharp>
+			<ArmorRating_Heat>0.4</ArmorRating_Heat>
+			<Flammability>1.0</Flammability>
+			<MarketValue>150</MarketValue>
+		</statBases>
+
+		<vehicleStats>
+			<Mass>85</Mass>
+			<MoveSpeed>0.00000001</MoveSpeed>
+			<CargoCapacity>0</CargoCapacity>
+			<RepairRate>1.75</RepairRate>
+			<MaximumPayload>450</MaximumPayload>
+		</vehicleStats>
+
+		<race>
+			<baseBodySize>4</baseBodySize>
+			<fleshType>WoodenVehicle</fleshType>
+		</race>
+
+		<properties>			
+			<manhunterTargetsVehicle>true</manhunterTargetsVehicle>
+		</properties>
+
+		<components>
+			<li>
+				<key>Body</key>
+				<label>Body</label>
+				<health>450</health>
+				<depth>External</depth>
+				<hitbox>
+					<side>Body</side>
+				</hitbox>
+			</li>
+		</components>
+
+		<comps>
+			<li Class="VehicleMapFramework.CompProperties_RelatedBuildCommands"/>
+		</comps>
+
+		<modExtensions>
+			<li Class="VehicleMapFramework.VehicleMapProps_Unique">
+				<size>(25,25)</size>
+				<expandableCellRects>
+					<li>(0,0,24,10)</li>
+					<li>(0,14,24,24)</li>
+					<li>(0,11,10,13)</li>
+					<li>(14,11,24,13)</li>
+				</expandableCellRects>
+			</li>
+		</modExtensions>
+	</Vehicles.VehicleDef>
+</Defs>

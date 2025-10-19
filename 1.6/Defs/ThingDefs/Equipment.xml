@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<ThingDef Name="MV_ShipEquipmentBase" Abstract="True">
+		<tradeability>None</tradeability>
+		<category>Building</category>
+		<thingClass>Building</thingClass>
+		<designationCategory>VMF_VehicleMap</designationCategory>
+	</ThingDef>
+	
+	<DesignatorDropdownGroupDef>
+		<defName>MV_RaftPieceGroup</defName>
+	</DesignatorDropdownGroupDef>
+
+	<ThingDef Name="MV_RaftPieceBase" ParentName="MV_ShipEquipmentBase" Abstract="True">
+		<thingClass>VehicleMapFramework.VehicleStructure</thingClass>
+		<drawerType>MapMeshOnly</drawerType>
+		<altitudeLayer>BelowTerrain</altitudeLayer>
+		<designatorDropdown>MV_RaftPieceGroup</designatorDropdown>
+		<useBlueprintGraphicAsGhost>true</useBlueprintGraphicAsGhost>
+		<useHitPoints>false</useHitPoints>
+		<destroyable>false</destroyable>
+		<building>
+			<isEdifice>false</isEdifice>
+		</building>
+		<placeWorkers>
+			<li>VehicleMapFramework.PlaceWorker_MapExpander</li>
+			<li>VehicleMapFramework.PlaceWorker_VehicleRelatedBuildings</li>
+		</placeWorkers>
+		<comps>
+			<li Class="VehicleMapFramework.CompProperties_MapExpander"/>
+		</comps>
+	</ThingDef>
+	
+	<ThingDef ParentName="MV_RaftPieceBase">
+		<defName>MV_RaftPiece</defName>
+		<label>raft piece</label>
+		<description>TODO</description>
+		<graphicData>
+			<texPath>MapVehiclesOcean/RaftPiece/RaftPiece</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<shaderType>Cutout</shaderType>
+			<drawSize>2</drawSize>
+		</graphicData>
+		<uiIconPath>MapVehiclesOcean/RaftPiece/Blueprint_RaftPiece_east</uiIconPath>
+		<costList>
+			<WoodLog>45</WoodLog>
+		</costList>
+		<building>
+			<blueprintGraphicData>
+				<graphicClass>Graphic_Multi</graphicClass>
+				<texPath>MapVehiclesOcean/RaftPiece/Blueprint_RaftPiece</texPath>
+				<shaderType>EdgeDetect</shaderType>
+				<drawSize>2</drawSize>
+			</blueprintGraphicData>
+		</building>
+		<comps>
+			<li Class="VehicleMapFramework.CompProperties_ExtraPrint">
+				<graphics>
+					<li>
+						<graphicClass>Graphic_Multi</graphicClass>
+						<texPath>MapVehiclesOcean/RaftPiece/RaftPieceBG</texPath>
+						<shaderType>Cutout</shaderType>
+						<renderQueue>2899</renderQueue>
+						<drawSize>2</drawSize>
+						<drawOffset>(0,-4,0)</drawOffset>
+					</li>
+				</graphics>
+			</li>
+			<li Class="VehicleMapFramework.CompProperties_BuildableUpgrades">
+				<upgrades>
+					<li Class = "Vehicles.StatUpgrade">
+						<vehicleStats>
+							<li>
+								<def>MaximumPayload</def>
+								<value>50</value>
+							</li>
+						</vehicleStats>
+					</li>
+					<li Class = "VehicleMapFramework.VehicleUpgradeBuildable">
+						<health>
+							<li>
+								<key>Body</key>
+								<value>100</value>
+							</li>
+						</health>
+					</li>
+				</upgrades>
+			</li>
+		</comps>
+	</ThingDef>
+	
+	<ThingDef ParentName="MV_RaftPieceBase">
+		<defName>MV_RaftPieceFloat</defName>
+		<label>raft piece (float)</label>
+		<description>TODO</description>
+		<graphicData>
+			<texPath>MapVehiclesOcean/RaftPiece/RaftPieceFloat</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<shaderType>Cutout</shaderType>
+			<drawSize>2</drawSize>
+		</graphicData>
+		<uiIconPath>MapVehiclesOcean/RaftPiece/Blueprint_RaftPieceFloat_east</uiIconPath>
+		<costList>
+			<WoodLog>45</WoodLog>
+			<Chemfuel>20</Chemfuel>
+		</costList>
+		<building>
+			<blueprintGraphicData>
+				<graphicClass>Graphic_Multi</graphicClass>
+				<texPath>MapVehiclesOcean/RaftPiece/Blueprint_RaftPieceFloat</texPath>
+				<shaderType>EdgeDetect</shaderType>
+				<drawSize>2</drawSize>
+			</blueprintGraphicData>
+		</building>
+		<comps>
+			<li Class="VehicleMapFramework.CompProperties_ExtraPrint">
+				<graphics>
+					<li>
+						<graphicClass>Graphic_Multi</graphicClass>
+						<texPath>MapVehiclesOcean/RaftPiece/RaftPieceFloatBG</texPath>
+						<shaderType>Cutout</shaderType>
+						<renderQueue>2899</renderQueue>
+						<drawSize>2</drawSize>
+						<drawOffset>(0,-4,0)</drawOffset>
+					</li>
+				</graphics>
+			</li>
+			<li Class="VehicleMapFramework.CompProperties_BuildableUpgrades">
+				<upgrades>
+					<li Class = "Vehicles.StatUpgrade">
+						<vehicleStats>
+							<li>
+								<def>MaximumPayload</def>
+								<value>250</value>
+							</li>
+						</vehicleStats>
+					</li>
+					<li Class = "VehicleMapFramework.VehicleUpgradeBuildable">
+						<health>
+							<li>
+								<key>Body</key>
+								<value>150</value>
+							</li>
+						</health>
+					</li>
+				</upgrades>
+			</li>
+		</comps>
+	</ThingDef>
+		
+	<ThingDef Name="MV_RigBase" ParentName="MV_ShipEquipmentBase" Abstract="True">
+		<passability>Impassable</passability>
+		<fillPercent>1</fillPercent>
+		<drawerType>MapMeshAndRealTime</drawerType>
+		<graphicData>
+			<texPath>MapVehiclesOcean/Rig/MastRoot</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
+			<drawRotated>false</drawRotated>
+		</graphicData>
+		<rotatable>false</rotatable>
+		<statBases>
+			<Beauty>2</Beauty>
+		</statBases>
+		<selectable>true</selectable>
+		<stuffCategories>
+			<li>Fabric</li>
+			<li>Leathery</li>
+		</stuffCategories>
+		<building>
+			<supportsWallAttachments>true</supportsWallAttachments>
+		</building>
+		<useBlueprintGraphicAsGhost>true</useBlueprintGraphicAsGhost>
+		<placeWorkers>
+			<li>VehicleMapFramework.PlaceWorker_ForceOnVehicle</li>
+			<li>VehicleMapFramework.PlaceWorker_VehicleRelatedBuildings</li>
+		</placeWorkers>
+	</ThingDef>
+	
+	<ThingDef ParentName="MV_RigBase">
+		<defName>MV_RigOneTiered</defName>
+		<label>rig I</label>
+		<description>TODO</description>
+		<statBases>
+			<MaxHitPoints>150</MaxHitPoints>
+			<Mass>120</Mass>
+		</statBases>
+		<uiIconPathsStuff>
+			<li>
+				<appearance>Fabric</appearance>
+				<iconPath>MapVehiclesOcean/Rig/Rig1/Fabric_Rig1_Icon</iconPath>
+			</li>
+			<li>
+				<appearance>Leathery</appearance>
+				<iconPath>MapVehiclesOcean/Rig/Rig1/Leathery_Rig1_Icon</iconPath>
+			</li>
+		</uiIconPathsStuff>
+		<costList>
+			<WoodLog>120</WoodLog>
+			<Steel>75</Steel>
+		</costList>
+		<costStuffCount>240</costStuffCount>
+		<building>
+			<blueprintGraphicData>
+				<graphicClass>Graphic_Multi</graphicClass>
+				<texPath>MapVehiclesOcean/Rig/Rig1/Fabric_Rig1</texPath>
+				<shaderType>EdgeDetect</shaderType>
+				<drawSize>(8,4)</drawSize>
+				<drawOffset>(0,0,1.5)</drawOffset>
+			</blueprintGraphicData>
+		</building>
+		<comps>
+			<li Class="CompProperties_DrawAdditionalGraphics">
+				<compClass>VehicleMapFramework.CompDrawAdditionalGraphicsOpacity</compClass>
+				<graphics>
+					<li>
+						<graphicClass>VehicleMapFramework.Graphic_AppearanceMulti</graphicClass>
+						<texPath>MapVehiclesOcean/Rig/Rig1/Rig1</texPath>
+						<shaderType>VMF_CutoutComplexRGBOpacity</shaderType>
+						<drawSize>(8,4)</drawSize>
+						<drawOffset>(0,0,1.5)</drawOffset>
+					</li>
+				</graphics>
+			</li>
+			<li Class="VehicleMapFramework.CompProperties_BuildableUpgrades">
+				<upgrades>
+					<li Class = "Vehicles.StatUpgrade">
+						<vehicleStats>
+							<li>
+								<def>MoveSpeed</def>
+								<value>0.5</value>
+							</li>
+						</vehicleStats>
+					</li>
+				</upgrades>
+			</li>
+		</comps>
+	</ThingDef>
+	
+	<ThingDef ParentName="MV_RigBase">
+		<defName>MV_RigTwoTiered</defName>
+		<label>rig II</label>
+		<description>TODO</description>
+		<statBases>
+			<MaxHitPoints>300</MaxHitPoints>
+			<Mass>220</Mass>
+		</statBases>
+		<uiIconPathsStuff>
+			<li>
+				<appearance>Fabric</appearance>
+				<iconPath>MapVehiclesOcean/Rig/Rig2/Fabric_Rig2_Icon</iconPath>
+			</li>
+			<li>
+				<appearance>Leathery</appearance>
+				<iconPath>MapVehiclesOcean/Rig/Rig2/Leathery_Rig2_Icon</iconPath>
+			</li>
+		</uiIconPathsStuff>
+		<costList>
+			<WoodLog>230</WoodLog>
+			<Steel>140</Steel>
+		</costList>
+		<costStuffCount>460</costStuffCount>
+		<building>
+			<blueprintGraphicData>
+				<graphicClass>Graphic_Multi</graphicClass>
+				<texPath>MapVehiclesOcean/Rig/Rig2/Fabric_Rig2</texPath>
+				<shaderType>EdgeDetect</shaderType>
+				<drawSize>(16,8)</drawSize>
+				<drawOffset>(0,0,3.5)</drawOffset>
+			</blueprintGraphicData>
+		</building>
+		<comps>
+			<li Class="CompProperties_DrawAdditionalGraphics">
+				<compClass>VehicleMapFramework.CompDrawAdditionalGraphicsOpacity</compClass>
+				<graphics>
+					<li>
+						<graphicClass>VehicleMapFramework.Graphic_AppearanceMulti</graphicClass>
+						<texPath>MapVehiclesOcean/Rig/Rig2/Rig2</texPath>
+						<shaderType>VMF_CutoutComplexRGBOpacity</shaderType>
+						<drawSize>(16,8)</drawSize>
+						<drawOffset>(0,0,3.5)</drawOffset>
+					</li>
+				</graphics>
+			</li>
+			<li Class="VehicleMapFramework.CompProperties_BuildableUpgrades">
+				<upgrades>
+					<li Class = "Vehicles.StatUpgrade">
+						<vehicleStats>
+							<li>
+								<def>MoveSpeed</def>
+								<value>1</value>
+							</li>
+						</vehicleStats>
+					</li>
+				</upgrades>
+			</li>
+		</comps>
+	</ThingDef>
+	
+	<ThingDef ParentName="MV_RigBase">
+		<defName>MV_RigThreeTiered</defName>
+		<label>rig III</label>
+		<description>TODO</description>
+		<statBases>
+			<MaxHitPoints>450</MaxHitPoints>
+			<Mass>330</Mass>
+		</statBases>
+		<uiIconPathsStuff>
+			<li>
+				<appearance>Fabric</appearance>
+				<iconPath>MapVehiclesOcean/Rig/Rig3/Fabric_Rig3_Icon</iconPath>
+			</li>
+			<li>
+				<appearance>Leathery</appearance>
+				<iconPath>MapVehiclesOcean/Rig/Rig3/Leathery_Rig3_Icon</iconPath>
+			</li>
+		</uiIconPathsStuff>
+		<costList>
+			<WoodLog>340</WoodLog>
+			<Steel>200</Steel>
+		</costList>
+		<costStuffCount>690</costStuffCount>
+		<building>
+			<blueprintGraphicData>
+				<graphicClass>Graphic_Multi</graphicClass>
+				<texPath>MapVehiclesOcean/Rig/Rig3/Fabric_Rig3</texPath>
+				<shaderType>EdgeDetect</shaderType>
+				<drawSize>(16,8)</drawSize>
+				<drawOffset>(0,0,3.5)</drawOffset>
+			</blueprintGraphicData>
+		</building>
+		<comps>
+			<li Class="CompProperties_DrawAdditionalGraphics">
+				<compClass>VehicleMapFramework.CompDrawAdditionalGraphicsOpacity</compClass>
+				<graphics>
+					<li>
+						<graphicClass>VehicleMapFramework.Graphic_AppearanceMulti</graphicClass>
+						<texPath>MapVehiclesOcean/Rig/Rig3/Rig3</texPath>
+						<shaderType>VMF_CutoutComplexRGBOpacity</shaderType>
+						<drawSize>(16,8)</drawSize>
+						<drawOffset>(0,0,3.5)</drawOffset>
+					</li>
+				</graphics>
+			</li>
+			<li Class="VehicleMapFramework.CompProperties_BuildableUpgrades">
+				<upgrades>
+					<li Class = "Vehicles.StatUpgrade">
+						<vehicleStats>
+							<li>
+								<def>MoveSpeed</def>
+								<value>1.5</value>
+							</li>
+						</vehicleStats>
+					</li>
+				</upgrades>
+			</li>
+		</comps>
+	</ThingDef>
+	
+</Defs>

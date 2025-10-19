@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<StuffAppearanceDef>
+		<defName>Fabric</defName>
+		<pathPrefix>Fabric_</pathPrefix>
+	</StuffAppearanceDef>
+
+	<StuffAppearanceDef>
+		<defName>Leathery</defName>
+		<pathPrefix>Leathery_</pathPrefix>
+	</StuffAppearanceDef>
+
+</Defs>

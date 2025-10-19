@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+	<Vehicles.VehicleBuildDef ParentName="VehicleBoatWithMapBaseBuildable">
+		<defName>MV_ExpandableRaft_Blueprint</defName>
+		<label>raft</label>
+		<description>TODO</description>
+		<designationCategory>VF_Vehicles</designationCategory>
+		<graphicData>
+			<texPath>MapVehiclesOcean/Raft/Raft</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<drawSize>(4,4)</drawSize>
+		</graphicData>
+
+		<statBases>
+			<MaxHitPoints>900</MaxHitPoints>
+			<WorkToBuild>3200</WorkToBuild>
+			<Flammability>0.05</Flammability>
+		</statBases>
+
+		<size>(3,3)</size>
+
+		<researchPrerequisites>
+		</researchPrerequisites>
+		
+		<costList>
+			<WoodLog>405</WoodLog>
+		</costList>
+
+		<soundImpactDefault>BulletImpact_Wood</soundImpactDefault>
+
+		<thingToSpawn>MV_ExpandableRaft</thingToSpawn>
+
+		<constructionSkillPrerequisite>4</constructionSkillPrerequisite>
+	</Vehicles.VehicleBuildDef>
+</Defs>
