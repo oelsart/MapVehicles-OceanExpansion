@@ -19,8 +19,12 @@
 		<useBlueprintGraphicAsGhost>true</useBlueprintGraphicAsGhost>
 		<useHitPoints>false</useHitPoints>
 		<destroyable>false</destroyable>
+		<drawStyleCategory>Floors</drawStyleCategory>
+		<drawGUIOverlay>true</drawGUIOverlay>
+		<drawGUIOverlayQuality>false</drawGUIOverlayQuality>
 		<building>
 			<isEdifice>false</isEdifice>
+			<deconstructible>false</deconstructible>
 		</building>
 		<placeWorkers>
 			<li>VehicleMapFramework.PlaceWorker_MapExpander</li>
@@ -355,6 +359,273 @@
 				</upgrades>
 			</li>
 		</comps>
+	</ThingDef>
+	
+	<ThingDef ParentName="FurnitureBase">
+		<defName>MV_Oar</defName>
+		<label>oar</label>
+		<description>TODO</description>
+		<tradeability>None</tradeability>
+		<drawerType>MapMeshOnly</drawerType>
+		<designationCategory>VMF_VehicleMap</designationCategory>
+		<thingCategories>
+			<li>BuildingsSpecial</li>
+		</thingCategories>
+		<graphicData>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<texPath>MapVehiclesOcean/Oar/Oar</texPath>
+			<shaderType>Cutout</shaderType>
+			<drawSize>1.5</drawSize>
+			<drawOffsetNorth>(0,2,-0.1)</drawOffsetNorth>
+			<drawOffsetSouth>(0,0,0.3)</drawOffsetSouth>
+			<drawOffsetEast>(-0.1,0,0)</drawOffsetEast>
+			<drawOffsetWest>(0.1,0,0)</drawOffsetWest>
+		</graphicData>
+		<uiIconScale>0.666667</uiIconScale>
+		<statBases>
+			<MaxHitPoints>50</MaxHitPoints>
+			<Mass>5</Mass>
+		</statBases>
+		<costList>
+			<WoodLog>75</WoodLog>
+		</costList>
+		<comps>
+			<li Class="VehicleMapFramework.CompProperties_BuildableUpgrades">
+				<compClass>VehicleMapFramework.CompVehicleSeat</compClass>
+				<upgrades>
+					<li Class = "VehicleMapFramework.VehicleUpgradeBuildable">
+						<roles>
+							<li Class = "VehicleMapFramework.RoleUpgradeBuildable">
+								<key>Rower</key>
+								<editKey>rower</editKey>
+								<label>Rower</label>
+								<handlingTypes>Movement</handlingTypes>
+								<slots>1</slots>
+								<slotsToOperate>1</slotsToOperate>
+								<exposed>true</exposed>
+								<pawnRenderer>
+									<showBody>true</showBody>
+									<north>South</north>
+									<northEast>South</northEast>
+									<east>West</east>
+									<southEast>North</southEast>
+									<south>North</south>
+									<southWest>North</southWest>
+									<west>East</west>
+									<northWest>South</northWest>
+									<drawOffsetNorth>(0,0,0.5)</drawOffsetNorth>
+									<drawOffsetSouth>(0,0,0)</drawOffsetSouth>
+								</pawnRenderer>
+							</li>
+						</roles>
+					</li>
+					<li Class="Vehicles.StatUpgrade">
+						<vehicleStats>
+							<li>
+								<def>MoveSpeed</def>
+								<value>0.25</value>
+							</li>
+						</vehicleStats>
+					</li>
+				</upgrades>
+			</li>
+		</comps>
+		<placeWorkers>
+			<li>VehicleMapFramework.PlaceWorker_ForceOnVehicleMapEdge</li>
+			<li>VehicleMapFramework.PlaceWorker_VehicleRelatedBuildings</li>
+		</placeWorkers>
+	</ThingDef>
+	
+	<DesignatorDropdownGroupDef>
+		<defName>MV_GrapplingLauncherGroup</defName>
+	</DesignatorDropdownGroupDef>
+	
+	<ThingDef ParentName="BaseArtilleryBuilding">
+		<defName>MV_Turret_GrapplingLauncher</defName>
+		<label>grappling launcher</label>
+		<description>TODO: A turret that sets up a zipline at the location where it pierces. Used for direct access between vehicles.</description>
+		<thingClass>VehicleMapFramework.Building_TurretGunForcedTargetOnly</thingClass>
+		<designationCategory>VMF_VehicleMap</designationCategory>
+		<designatorDropdown>MV_GrapplingLauncherGroup</designatorDropdown>
+		<graphicData>
+			<texPath>MapVehiclesOcean/GrapplingLauncher/GrapplingLauncher_Base</texPath>
+			<drawRotated>false</drawRotated>
+			<drawSize>1.05</drawSize>
+		</graphicData>
+		<size>(1,1)</size>
+		<stuffCategories Inherit="False"/>
+		<costStuffCount Inherit="False"/>
+		<costList>
+			<WoodLog>50</WoodLog>
+			<Steel>15</Steel>
+			<ComponentIndustrial>1</ComponentIndustrial>
+		</costList>
+		<hasInteractionCell>false</hasInteractionCell>
+		<inspectorTabs Inherit="False"/>
+		<building>
+			<turretGunDef>MV_Gun_GrapplingLauncher</turretGunDef>
+			<turretBurstWarmupTime>0</turretBurstWarmupTime>
+			<turretBurstCooldownTime>0</turretBurstCooldownTime>
+			<turretTopDrawSize>1.25</turretTopDrawSize>
+			<relatedBuildCommands>
+				<li>MV_MooringRing</li>
+			</relatedBuildCommands>
+		</building>
+		<statBases>
+			<MaxHitPoints>90</MaxHitPoints>
+			<Flammability>0.75</Flammability>
+			<WorkToBuild>1200</WorkToBuild>
+			<Mass>20</Mass>
+			<Beauty>-20</Beauty>
+			<ShootingAccuracyTurret>1</ShootingAccuracyTurret>
+		</statBases>
+		<comps Inherit="False">
+			<li Class="CompProperties_Forbiddable"/>
+			<li Class="CompProperties_Interactable">
+				<compClass>CompInteractableRocketswarmLauncher</compClass>
+				<activeTicks>1</activeTicks>
+				<ticksToActivate>90</ticksToActivate>
+				<jobString>activate</jobString>
+				<activateTexPath>UI/Commands/ActivateTurret</activateTexPath>
+				<targetingParameters>
+					<canTargetBuildings>false</canTargetBuildings>
+					<canTargetAnimals>false</canTargetAnimals>
+					<canTargetMechs>false</canTargetMechs>
+					<onlyTargetControlledPawns>true</onlyTargetControlledPawns>
+				</targetingParameters>
+			</li>
+			<li Class="VehicleMapFramework.CompProperties_Zipline">
+				<standbyGraphic>
+					<texPath>MapVehiclesOcean/GrapplingLauncher/GrapplingLauncher_TopOverlay</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>1.25</drawSize>
+				</standbyGraphic>
+			</li>
+		</comps>
+		<researchPrerequisites>
+		</researchPrerequisites>
+		<uiOrder>1063</uiOrder>
+		<uiIconPath>MapVehiclesOcean/GrapplingLauncher/GrapplingLauncher_MenuIcon</uiIconPath>
+		<placeWorkers Inherit="False">
+			<li>PlaceWorker_TurretTop</li>
+		</placeWorkers>
+	</ThingDef>
+
+	<ThingDef ParentName="BaseWeaponTurret">
+		<defName>MV_Gun_GrapplingLauncher</defName>
+		<label>grappling launcher gun</label>
+		<description>TODO: A gun made to be mounted on a zipline turret.</description>
+		<graphicData>
+			<texPath>MapVehiclesOcean/GrapplingLauncher/GrapplingLauncher_Top</texPath>
+			<drawOffset>(0,0,0.2)</drawOffset>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<statBases>
+			<Mass>5</Mass>
+			<Flammability>0</Flammability>
+		</statBases>
+		<verbs>
+			<li>
+				<verbClass>VehicleMapFramework.Verb_LaunchZipline</verbClass>
+				<defaultProjectile>MV_Bullet_GrapplingLauncher</defaultProjectile>
+				<range>9.9</range>
+				<targetParams Class="VehicleMapFramework.TargetingParametersForSpecificThingDef">
+					<canTargetPawns>false</canTargetPawns>
+					<thingDef>MV_MooringRing</thingDef>
+				</targetParams>
+				<soundCast>Shot_Autocannon</soundCast>
+				<soundCastTail>GunTail_Heavy</soundCastTail>
+			</li>
+		</verbs>
+	</ThingDef>
+
+	<ThingDef ParentName="BaseBullet">
+		<defName>MV_Bullet_GrapplingLauncher</defName>
+		<label>grappling launcher bullet</label>
+		<thingClass>VehicleMapFramework.Bullet_ZiplineEnd</thingClass>
+		<graphicData>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>Transparent</shaderType>
+			<texPath>MapVehiclesOcean/GrapplingLauncher/GrapplingHook</texPath>
+			<drawSize>1.5</drawSize>
+		</graphicData>
+		<projectile>
+			<speed>20</speed>
+			<arcHeightFactor>0.2</arcHeightFactor>
+			<damageDef>Stab</damageDef>
+			<damageAmountBase>0</damageAmountBase>
+		</projectile>
+		<modExtensions>
+			<li Class="VehicleMapFramework.CustomZipline">
+				<texPath>MapVehiclesOcean/GrapplingLauncher/Rope</texPath>
+				<ziplineWidth>0.09</ziplineWidth>
+				<ziplineEndOffset>0.18</ziplineEndOffset>
+				<launcherOffset>0.55</launcherOffset>
+				<ziplineEndDef>MV_GrapplingHook</ziplineEndDef>
+				<ziplineReturnDef>MV_Bullet_GrapplingLauncherReturn</ziplineReturnDef>
+			</li>
+		</modExtensions>
+	</ThingDef>
+
+	<ThingDef ParentName="BaseBullet">
+		<defName>MV_Bullet_GrapplingLauncherReturn</defName>
+		<label>grappling launcher bullet</label>
+		<thingClass>VehicleMapFramework.Bullet_ZiplineEndReturn</thingClass>
+		<graphicData>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>Transparent</shaderType>
+			<texPath>MapVehiclesOcean/GrapplingLauncher/GrapplingHook</texPath>
+			<drawSize>1.5</drawSize>
+		</graphicData>
+		<projectile>
+			<speed>5</speed>
+			<damageDef>Stab</damageDef>
+			<damageAmountBase>0</damageAmountBase>
+		</projectile>
+	</ThingDef>
+
+	<ThingDef ParentName="BaseBullet">
+		<defName>MV_GrapplingHook</defName>
+		<label>grappling hook</label>
+		<thingClass>VehicleMapFramework.ZiplineEnd</thingClass>
+		<category>Attachment</category>
+		<drawerType>MapMeshAndRealTime</drawerType>
+		<altitudeLayer>BuildingBelowTop</altitudeLayer>
+		<graphicData>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>Cutout</shaderType>
+			<texPath>MapVehiclesOcean/GrapplingLauncher/GrapplingHook</texPath>
+			<drawSize>1.5</drawSize>
+		</graphicData>
+		<statBases>
+			<Mass>0.1</Mass>
+		</statBases>
+		<comps>
+			<li Class="VehicleMapFramework.CompProperties_Zipline"/>
+		</comps>
+	</ThingDef>
+	
+	<ThingDef ParentName="MV_ShipEquipmentBase">
+		<defName>MV_MooringRing</defName>
+		<label>mooring ring</label>
+		<description>TODO</description>
+		<category>Building</category>
+		<drawerType>MapMeshOnly</drawerType>
+		<altitudeLayer>FloorEmplacement</altitudeLayer>
+		<designatorDropdown>MV_GrapplingLauncherGroup</designatorDropdown>
+		<graphicData>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<texPath>MapVehiclesOcean/MooringRing/MooringRing</texPath>
+		</graphicData>
+		<selectable>true</selectable>
+		<statBases>
+			<MaxHitPoints>180</MaxHitPoints>
+			<Mass>0.1</Mass>
+		</statBases>
+		<costList>
+			<Steel>10</Steel>
+		</costList>
+		<building />
 	</ThingDef>
 	
 </Defs>
