@@ -31,7 +31,7 @@ public class VehicleTurret_RotateVehicle : VehicleTurret
     {
         if (base.TurretRotationTick())
         {
-            if (TurretTargetValid)
+            if (TurretTargetValid || vehicle.CompVehicleTurrets.Deploying)
             {
                 RotateVehicle();
             }
