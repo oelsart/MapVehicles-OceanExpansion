@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Defs>
+	<ThingDef ParentName="MakeableShellBase">
+		<defName>MV_Cannonball</defName>
+		<label>cannonball</label>
+		<description>TODO</description>
+		<possessionCount>1</possessionCount>
+		<graphicData>
+			<texPath>MapVehiclesOcean/Cannon/CannonballResource</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<projectileWhenLoaded>MV_Bullet_Cannonball</projectileWhenLoaded>
+		<statBases>
+			<Mass>10</Mass>
+		</statBases>
+		<costList>
+			<Steel>15</Steel>
+		</costList>
+		<recipeMaker>
+			<!-- <researchPrerequisite>Mortars</researchPrerequisite> -->
+		</recipeMaker>
+	</ThingDef>
+	
+	<ThingDef ParentName="BaseBullet">
+		<defName>MV_Bullet_Cannonball</defName>
+		<label>cannonball</label>
+		<thingClass>MapVehicles.Cannonball</thingClass>
+		
+		<graphicData>
+			<texPath>MapVehiclesOcean/Cannon/Cannonball</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>TransparentPostLight</shaderType>
+		</graphicData>
+		
+		<projectile>
+			<damageDef>Blunt</damageDef>
+			<damageAmountBase>120</damageAmountBase>
+			<armorPenetrationBase>120</armorPenetrationBase>
+			<speed>40</speed>
+			<arcHeightFactor>1</arcHeightFactor>
+			<shadowSize>0.3</shadowSize>
+			<soundImpactAnticipate>MortarRound_PreImpact</soundImpactAnticipate>
+			<soundHitThickRoof>Artillery_HitThickRoof</soundHitThickRoof>
+		</projectile>
+	</ThingDef>
+
+	<Vehicles.VehicleTurretDef ParentName="VehicleTurretBase">
+		<defName>MV_Cannon_Turret</defName>
+		<label>cannon</label>
+		<description>TODO</description>
+		<turretType>Rotatable</turretType>
+		<shotSound>MortarIncendiary_Explode</shotSound>
+		<reloadSound>Artillery_ShellLoaded</reloadSound>
+		<autoSnapTargeting>true</autoSnapTargeting>
+		
+		<projectile>MV_Bullet_Cannonball</projectile>
+		<reloadTimer>5.4</reloadTimer>
+		<warmUpTimer>0.5</warmUpTimer>
+		<magazineCapacity>1</magazineCapacity>
+		<chargePerAmmoCount>1</chargePerAmmoCount>
+		<rotationSpeed>0.5</rotationSpeed>
+		
+		<restrictionType>Vehicles.TurretRestrictions_Stationary</restrictionType>
+		<projectileOffset>1</projectileOffset>
+		<maxRange>37.9</maxRange>
+		<minRange>2</minRange>
+		
+		<attachProjectileFlag>Tank</attachProjectileFlag>
+		
+		<recoil>
+			<distanceTotal>0.15</distanceTotal>
+			<distancePerTick>0.05</distancePerTick>
+			<speedMultiplierPostRecoil>0.35</speedMultiplierPostRecoil>
+		</recoil>
+		
+		<vehicleRecoil>
+			<distanceTotal>0.1</distanceTotal>
+			<distancePerTick>0.05</distancePerTick>
+			<speedMultiplierPostRecoil>0.55</speedMultiplierPostRecoil>
+		</vehicleRecoil>
+		
+		<fireModes>
+			<li>
+				<shotsPerBurst>1</shotsPerBurst>
+				<ticksBetweenBursts>120</ticksBetweenBursts>
+				<label>Single</label>
+				<texPath>UI/Gizmos/FireRate_Single</texPath>
+				<applyShooterAccuracy>true</applyShooterAccuracy>
+				<forcedMissRadius>2</forcedMissRadius>
+				<canMiss>True</canMiss>
+			</li>
+		</fireModes>
+
+		<gizmoIconTexPath>MapVehiclesOcean/Cannon/Cannon_north</gizmoIconTexPath>
+		
+		<ammunition>
+			<thingDefs>
+				<li>MV_Cannonball</li>
+			</thingDefs>
+		</ammunition>
+		
+		<motes>
+			<li>
+				<cycles>1</cycles>
+				<moteDef>Mote_CannonPlume</moteDef>
+				<offset>(0, 0, 1.25)</offset>
+				<animationType>Reset</animationType>
+			</li>
+		</motes>
+	</Vehicles.VehicleTurretDef>
+</Defs>

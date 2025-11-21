@@ -178,6 +178,7 @@
 		<placeWorkers>
 			<li>VehicleMapFramework.PlaceWorker_ForceOnVehicle</li>
 			<li>VehicleMapFramework.PlaceWorker_VehicleRelatedBuildings</li>
+			<li>PlaceWorker_NotUnderRoof</li>
 		</placeWorkers>
 	</ThingDef>
 	
@@ -223,6 +224,10 @@
 						<shaderType>VMF_CutoutComplexRGBOpacity</shaderType>
 						<drawSize>(8,4)</drawSize>
 						<drawOffset>(0,0,1.5)</drawOffset>
+						<shadowData>
+							<volume>(0.75,1,0.75)</volume>
+							<offset>(0,0,-1.8)</offset>
+						</shadowData>
 					</li>
 				</graphics>
 			</li>
@@ -283,6 +288,10 @@
 						<shaderType>VMF_CutoutComplexRGBOpacity</shaderType>
 						<drawSize>(16,8)</drawSize>
 						<drawOffset>(0,0,3.5)</drawOffset>
+						<shadowData>
+							<volume>(0.75,2,0.75)</volume>
+							<offset>(0,0,-3.8)</offset>
+						</shadowData>
 					</li>
 				</graphics>
 			</li>
@@ -343,6 +352,10 @@
 						<shaderType>VMF_CutoutComplexRGBOpacity</shaderType>
 						<drawSize>(16,8)</drawSize>
 						<drawOffset>(0,0,3.5)</drawOffset>
+						<shadowData>
+							<volume>(0.75,3,0.75)</volume>
+							<offset>(0,0,-3.8)</offset>
+						</shadowData>
 					</li>
 				</graphics>
 			</li>
@@ -467,6 +480,7 @@
 			<turretBurstWarmupTime>0</turretBurstWarmupTime>
 			<turretBurstCooldownTime>0</turretBurstCooldownTime>
 			<turretTopDrawSize>1.25</turretTopDrawSize>
+			<turretTopOffset>(0,0.2)</turretTopOffset>
 			<relatedBuildCommands>
 				<li>MV_MooringRing</li>
 			</relatedBuildCommands>
@@ -474,7 +488,7 @@
 		<statBases>
 			<MaxHitPoints>90</MaxHitPoints>
 			<Flammability>0.75</Flammability>
-			<WorkToBuild>1200</WorkToBuild>
+			<WorkToBuild>1600</WorkToBuild>
 			<Mass>20</Mass>
 			<Beauty>-20</Beauty>
 			<ShootingAccuracyTurret>1</ShootingAccuracyTurret>
@@ -517,7 +531,6 @@
 		<description>TODO: A gun made to be mounted on a zipline turret.</description>
 		<graphicData>
 			<texPath>MapVehiclesOcean/GrapplingLauncher/GrapplingLauncher_Top</texPath>
-			<drawOffset>(0,0,0.2)</drawOffset>
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<statBases>
@@ -589,6 +602,9 @@
 		<label>grappling hook</label>
 		<thingClass>VehicleMapFramework.ZiplineEnd</thingClass>
 		<category>Attachment</category>
+		<thingCategories>
+			<li>BuildingsMisc</li>
+		</thingCategories>
 		<drawerType>MapMeshAndRealTime</drawerType>
 		<altitudeLayer>BuildingBelowTop</altitudeLayer>
 		<graphicData>
@@ -609,7 +625,10 @@
 		<defName>MV_MooringRing</defName>
 		<label>mooring ring</label>
 		<description>TODO</description>
-		<category>Building</category>
+		<thingCategories>
+			<li>BuildingsMisc</li>
+		</thingCategories>
+		<minifiedDef>MinifiedThing</minifiedDef>
 		<drawerType>MapMeshOnly</drawerType>
 		<altitudeLayer>FloorEmplacement</altitudeLayer>
 		<designatorDropdown>MV_GrapplingLauncherGroup</designatorDropdown>
@@ -620,12 +639,177 @@
 		<selectable>true</selectable>
 		<statBases>
 			<MaxHitPoints>180</MaxHitPoints>
+			<WorkToBuild>350</WorkToBuild>
 			<Mass>0.1</Mass>
 		</statBases>
 		<costList>
 			<Steel>10</Steel>
 		</costList>
 		<building />
+	</ThingDef>
+	
+	<ThingDef ParentName="MV_ShipEquipmentBase">
+		<defName>MV_Helm</defName>
+		<label>helm</label>
+		<description>TODO</description>
+		<thingCategories>
+			<li>BuildingsSpecial</li>
+		</thingCategories>
+		<minifiedDef>MinifiedThing</minifiedDef>
+		<drawerType>MapMeshOnly</drawerType>
+		<graphicData>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<texPath>MapVehiclesOcean/Helm/Helm</texPath>
+			<shaderType>CutoutComplex</shaderType>
+			<color>(128,53,0)</color>
+			<colorTwo>(199,136,20)</colorTwo>
+			<drawOffsetNorth>(0,0,0.23)</drawOffsetNorth>
+			<drawOffsetEast>(0,0,0.1)</drawOffsetEast>
+			<drawOffsetWest>(0,0,0.1)</drawOffsetWest>
+			<shadowData>
+				<volume>(0.2,0.1,0.2)</volume>
+				<offset>(0,0,0.23)</offset>
+			</shadowData>
+		</graphicData>
+		<selectable>true</selectable>
+		<statBases>
+			<MaxHitPoints>180</MaxHitPoints>
+			<WorkToBuild>1000</WorkToBuild>
+			<Mass>40</Mass>
+		</statBases>
+		<fillPercent>0.2</fillPercent>
+		<costList>
+			<WoodLog>30</WoodLog>
+			<Steel>10</Steel>
+			<ComponentIndustrial>3</ComponentIndustrial>
+		</costList>
+		<comps>
+			<li Class = "VehicleMapFramework.CompProperties_BuildableUpgrades">
+				<compClass>VehicleMapFramework.CompVehicleSeat</compClass>
+				<upgrades>
+					<li Class = "VehicleMapFramework.VehicleUpgradeBuildable">
+						<roles>
+							<li Class = "VehicleMapFramework.RoleUpgradeBuildable">
+								<key>helmsman</key>
+								<editKey>helmsman</editKey>
+								<label>Helmsman</label>
+								<handlingTypes>Movement</handlingTypes>
+								<slots>1</slots>
+								<slotsToOperate>1</slotsToOperate>
+								<exposed>true</exposed>
+								<pawnRenderer>
+									<drawOffsetNorth>(0,0,0.2)</drawOffsetNorth>
+									<drawOffsetSouth>(0,0,0.35)</drawOffsetSouth>
+									<drawOffsetEast>(-0.2,0,0)</drawOffsetEast>
+									<drawOffsetWest>(0.2,0,0)</drawOffsetWest>
+									<layerNorth>1</layerNorth>
+									<layerSouth>-25</layerSouth>
+								</pawnRenderer>
+							</li>
+						</roles>
+					</li>
+				</upgrades>
+			</li>
+		</comps>
+		<placeWorkers>
+			<li>VehicleMapFramework.PlaceWorker_ForceOnVehicle</li>
+			<li>VehicleMapFramework.PlaceWorker_VehicleRelatedBuildings</li>
+		</placeWorkers>
+	</ThingDef>
+	
+	<ThingDef ParentName="MV_ShipEquipmentBase">
+		<defName>MV_Hatch</defName>
+		<label>hatch</label>
+		<description>TODO</description>
+		<thingClass>VehicleMapFramework.Building_Hatch</thingClass>
+		<drawerType>MapMeshOnly</drawerType>
+		<altitudeLayer>FloorCoverings</altitudeLayer>
+		<graphicData>
+			<graphicClass>Graphic_Single</graphicClass>
+			<texPath>MapVehiclesOcean/Hatch/Hatch</texPath>
+			<shaderType>Cutout</shaderType>
+			<drawSize>(4,4)</drawSize>
+			<damageData>
+				<rect>(0.5,0.5,3.5,3.5)</rect>
+			</damageData>
+		</graphicData>
+		<size>(3,3)</size>
+		<selectable>true</selectable>
+		<rotatable>false</rotatable>
+		<statBases>
+			<MaxHitPoints>200</MaxHitPoints>
+			<WorkToBuild>8000</WorkToBuild>
+			<Mass>20</Mass>
+		</statBases>
+		<coversFloor>true</coversFloor>
+		<stuffCategories>
+			<li>Woody</li>
+			<li>Metallic</li>
+		</stuffCategories>
+		<costStuffCount>100</costStuffCount>
+		<surfaceType>Item</surfaceType>
+		<canOverlapZones>false</canOverlapZones>
+		<preventDroppingThingsOn>true</preventDroppingThingsOn>
+		<building>
+			<preventDeteriorationOnTop>true</preventDeteriorationOnTop>
+			<ignoreStoredThingsBeauty>true</ignoreStoredThingsBeauty>
+			<bed_canBeMedical>false</bed_canBeMedical>
+			<bed_countsForBedroomOrBarracks>false</bed_countsForBedroomOrBarracks>
+			<bed_emptyCountsForBarracks>false</bed_emptyCountsForBarracks>
+			<bed_UseSheetColor>false</bed_UseSheetColor>
+			<bed_pawnDrawOffset>10000</bed_pawnDrawOffset>
+			<storageGroupTag>Hatch</storageGroupTag>
+			<blueprintClass>Blueprint_Storage</blueprintClass>
+			<maxItemsInCell>3</maxItemsInCell>
+			<fixedStorageSettings>
+				<filter>
+					<disallowNotEverStorable>true</disallowNotEverStorable>
+					<categories>
+						<li>Root</li>
+					</categories>
+					<disallowedCategories>
+						<li>Chunks</li>
+						<li>Plants</li>
+						<li>Buildings</li>
+					</disallowedCategories>
+					<disallowedThingDefs MayRequire="Ludeon.RimWorld.Biotech">
+						<li MayRequire="Ludeon.RimWorld.Biotech">Wastepack</li>
+					</disallowedThingDefs>
+					<specialFiltersToDisallow>
+						<li>AllowLargeCorpses</li>
+					</specialFiltersToDisallow>
+				</filter>
+			</fixedStorageSettings>
+			<defaultStorageSettings>
+				<priority>Preferred</priority>
+				<filter>
+					<categories>
+						<li>Foods</li>
+						<li>Manufactured</li>
+						<li>ResourcesRaw</li>
+						<li>Items</li>
+						<li>Weapons</li>
+						<li>Apparel</li>
+						<li>BodyParts</li>
+					</categories>
+				</filter>
+			</defaultStorageSettings>
+			<paintable>true</paintable>
+		</building>
+		<inspectorTabs>
+			<li>ITab_Storage</li>
+		</inspectorTabs>
+		<comps>
+			<li Class="CompProperties_AssignableToPawn">
+				<drawAssignmentOverlay>false</drawAssignmentOverlay>
+				<compClass>CompAssignableToPawn_Bed</compClass>
+				<maxAssignedPawnsCount>3</maxAssignedPawnsCount>
+			</li>
+		</comps>
+		<placeWorkers>
+			<li>VehicleMapFramework.PlaceWorker_ForceOnVehicle</li>
+			<li>VehicleMapFramework.PlaceWorker_VehicleRelatedBuildings</li>
+		</placeWorkers>
 	</ThingDef>
 	
 </Defs>

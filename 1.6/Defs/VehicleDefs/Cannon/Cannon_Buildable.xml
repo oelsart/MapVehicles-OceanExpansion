@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+	<Vehicles.VehicleBuildDef ParentName="VehicleBaseBuildable">
+		<defName>MV_Cannon_Blueprint</defName>
+		<label>cannon</label>
+		<description>TODO</description>
+		<designationCategory>VF_Vehicles</designationCategory>
+		<graphicData>
+			<texPath>MapVehiclesOcean/Cannon/Cannon</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<drawSize>(2,2)</drawSize>
+		</graphicData>
+
+		<statBases>
+			<MaxHitPoints>300</MaxHitPoints>
+			<WorkToBuild>1800</WorkToBuild>
+			<Flammability>0</Flammability>
+		</statBases>
+
+		<size>(1,1)</size>
+
+		<researchPrerequisites>
+		</researchPrerequisites>
+		
+		<costList>
+			<WoodLog>80</WoodLog>
+			<Steel>75</Steel>
+		</costList>
+
+		<soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
+
+		<thingToSpawn>MV_Cannon</thingToSpawn>
+
+		<constructionSkillPrerequisite>6</constructionSkillPrerequisite>
+	</Vehicles.VehicleBuildDef>
+</Defs>

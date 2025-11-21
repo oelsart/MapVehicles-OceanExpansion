@@ -2,36 +2,41 @@
 
 <Defs>
 	<Vehicles.VehicleBuildDef ParentName="VehicleBoatWithMapBaseBuildable">
-		<defName>MV_ExpandableRaft_Blueprint</defName>
-		<label>raft</label>
+		<defName>MV_Keel_Blueprint</defName>
+		<label>keel</label>
 		<description>TODO</description>
 		<designationCategory>VF_Vehicles</designationCategory>
 		<graphicData>
-			<texPath>MapVehiclesOcean/Raft/Raft</texPath>
+			<texPath>MapVehiclesOcean/Keel/Keel</texPath>
 			<graphicClass>Graphic_Multi</graphicClass>
-			<drawSize>(4,4)</drawSize>
+			<drawSize>(8,16)</drawSize>
+			<drawOffsetNorth>(0,0,0.75)</drawOffsetNorth>
+			<drawOffsetSouth>(0,0,-0.75)</drawOffsetSouth>
+			<drawOffsetEast>(0.5,0,0)</drawOffsetEast>
 		</graphicData>
 
 		<statBases>
-			<MaxHitPoints>900</MaxHitPoints>
-			<WorkToBuild>3200</WorkToBuild>
+			<MaxHitPoints>3500</MaxHitPoints>
+			<WorkToBuild>10500</WorkToBuild>
 			<Flammability>0.05</Flammability>
 		</statBases>
 
-		<size>(3,3)</size>
+		<size>(5,14)</size>
 
 		<researchPrerequisites>
 		</researchPrerequisites>
 		
 		<costList>
-			<WoodLog>405</WoodLog>
+			<WoodLog>1450</WoodLog>
+			<Steel>120</Steel>
+			<ComponentIndustrial>5</ComponentIndustrial>
 		</costList>
 
 		<soundImpactDefault>BulletImpact_Wood</soundImpactDefault>
 
-		<thingToSpawn>MV_ExpandableRaft</thingToSpawn>
+		<thingToSpawn>MV_Keel</thingToSpawn>
 
-		<constructionSkillPrerequisite>4</constructionSkillPrerequisite>
+		<constructionSkillPrerequisite>8</constructionSkillPrerequisite>
 		
 		<terrainAffordanceNeeded>VMF_DeepWater</terrainAffordanceNeeded>
 	</Vehicles.VehicleBuildDef>

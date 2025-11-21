@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+	<Vehicles.VehicleDef ParentName="BaseSeaVehiclePawnWithMap">
+		<defName>MV_Keel</defName>
+		<label>keel</label>
+		<description>TODO</description>
+
+		<graphicData>
+			<texPath>MapVehiclesOcean/Keel/Keel</texPath>
+			<graphicClass>Vehicles.Graphic_Vehicle</graphicClass>
+			<shaderType>CutoutComplexPattern</shaderType>
+			<pattern>VMF_RGBMask</pattern>
+			<drawSize>(8,16)</drawSize>
+			<drawOffsetNorth>(0,0,0.75)</drawOffsetNorth>
+			<drawOffsetSouth>(0,0,-0.75)</drawOffsetSouth>
+			<drawOffsetEast>(0.5,0,0)</drawOffsetEast>
+			<color>(128,53,0)</color>
+			<colorTwo>(165,165,165)</colorTwo>
+			<colorThree>(203,248,255)</colorThree>
+		</graphicData>
+		
+		<building>
+			<neverBuildable>true</neverBuildable>
+			<relatedBuildCommands>
+				<li>MV_RigOneTiered</li>
+				<li>MV_RigTwoTiered</li>
+				<li>MV_RigThreeTiered</li>
+				<li>MV_Helm</li>
+				<li>MV_Hatch</li>
+			</relatedBuildCommands>
+		</building>
+
+		<fillPercent>0.35</fillPercent>
+
+		<buildDef>MV_Keel_Blueprint</buildDef>
+
+		<size>(5,14)</size>
+
+		<vehicleCategory>Transport</vehicleCategory>
+		<techLevel>Medieval</techLevel>
+		<vehicleType>Sea</vehicleType>
+
+		<statBases>
+			<ArmorRating_Blunt>0.2</ArmorRating_Blunt>
+			<ArmorRating_Sharp>0.2</ArmorRating_Sharp>
+			<ArmorRating_Heat>0.4</ArmorRating_Heat>
+			<Flammability>1.0</Flammability>
+			<MarketValue>150</MarketValue>
+		</statBases>
+
+		<vehicleStats>
+			<Mass>860</Mass>
+			<MoveSpeed>0.11</MoveSpeed>
+			<CargoCapacity>300</CargoCapacity>
+			<RepairRate>1.75</RepairRate>
+			<MaximumPayload>3000</MaximumPayload>
+		</vehicleStats>
+
+		<race>
+			<baseBodySize>12</baseBodySize>
+			<fleshType>WoodenVehicle</fleshType>
+		</race>
+
+		<components>
+			<li>
+				<key>Body</key>
+				<label>Body</label>
+				<health>2300</health>
+				<depth>External</depth>
+				<hitbox>
+					<side>Body</side>
+				</hitbox>
+			</li>
+		</components>
+
+		<comps>
+			<li Class="VehicleMapFramework.CompProperties_RelatedBuildCommands"/>
+		</comps>
+
+		<modExtensions>
+			<li Class="VehicleMapFramework.VehicleMapProps">
+				<size>(7,13)</size>
+				<offsetNorth>(0,0,-1.5625)</offsetNorth>
+				<offsetSouth>(0,0,1.671875)</offsetSouth>
+				<offsetEast>(-1.91875,0,0.209375)</offsetEast>
+				<emptyStructureCells>
+					<li>(0,4)</li>
+					<li>(6,4)</li>
+				</emptyStructureCells>
+				<emptyStructureCellRects>
+					<li>(0,0,1,3)</li>
+					<li>(5,0,6,3)</li>
+					<li>(2,0,4,0)</li>
+					<li>(0,10,1,12)</li>
+					<li>(5,10,6,12)</li>
+					<li>(2,12,4,12)</li>
+				</emptyStructureCellRects>
+				<outOfBoundsCellRects>
+					<li>(0,5,0,9)</li>
+					<li>(6,5,6,9)</li>
+				</outOfBoundsCellRects>
+			</li>
+		</modExtensions>
+	</Vehicles.VehicleDef>
+</Defs>

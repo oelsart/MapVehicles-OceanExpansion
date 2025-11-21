@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+	<SoundDef>
+		<defName>MV_WaterSplash</defName>
+		<context>MapOnly</context>
+		<maxSimultaneous>1</maxSimultaneous>
+		<subSounds>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>MapVehiclesOcean/Water_Splash</clipPath>
+					</li>
+				</grains>
+				<volumeRange>20~20</volumeRange>
+			</li>
+		</subSounds>
+	</SoundDef>
+	
+	<SoundDef>
+		<defName>MV_CannonballImpact</defName>
+		<context>MapOnly</context>
+		<maxSimultaneous>1</maxSimultaneous>
+		<subSounds>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>MapVehiclesOcean/Cannonball_Impact</clipPath>
+					</li>
+				</grains>
+				<volumeRange>35~35</volumeRange>
+			</li>
+		</subSounds>
+	</SoundDef>
+	
+</Defs>

@@ -24,7 +24,7 @@ filename = "textures"
 [bundles.mapvehiclesoceanexpansion]
 description = "Bundle for Map Vehicles -Ocean Expansion-"
 output_directory = "../../Common/AssetBundles"
-asset_directory = "./"
+asset_directory = "../ArtSource"
 bundle_path = "OELS.MapVehicles.OceanExpansion"
 bundle_name = "OELS.MapVehicles.OceanExpansion"
 filename = "textures"
