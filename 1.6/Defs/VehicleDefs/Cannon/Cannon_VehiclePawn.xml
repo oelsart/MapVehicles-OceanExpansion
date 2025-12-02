@@ -115,11 +115,11 @@
 			<li Class="Vehicles.CompProperties_VehicleTurrets">
 				<deployTime>0.5</deployTime>
 				<turrets>
-					<li Class="MapVehicles.VehicleTurret_RotateVehicle">
+					<li Class="VehicleMapFramework.VehicleTurret_RotateVehicle">
 						<turretDef>MV_Cannon_Turret</turretDef>
 						<gizmoLabel>Cannon</gizmoLabel>
 						<aimPieOffset>(0, 1)</aimPieOffset>
-						<angleRestricted>(337.5,22.5)</angleRestricted>
+						<angleRestricted>(292.5,67.5)</angleRestricted>
 						<key>cannonturret</key>
 						<component>
 							<key>Barrel</key>

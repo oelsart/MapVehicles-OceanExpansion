@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/BiomeDef[defName="Ocean"]/terrainPatchMakers</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>Defs/BiomeDef[defName="Ocean"]</xpath>
+			<value>
+				<terrainPatchMakers>
+					<li>
+						<thresholds>
+							<li>
+								<terrain>WaterOceanDeep</terrain>
+							</li>
+						</thresholds>
+					</li>
+				</terrainPatchMakers>
+			</value>
+		</nomatch>
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/BiomeDef[defName="Lake"]/terrainPatchMakers</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>Defs/BiomeDef[defName="Lake"]</xpath>
+			<value>
+				<terrainPatchMakers>
+					<li>
+						<thresholds>
+							<li>
+								<terrain>WaterDeep</terrain>
+							</li>
+						</thresholds>
+					</li>
+				</terrainPatchMakers>
+			</value>
+		</nomatch>
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/BiomeDef[defName="Ocean" or defName="Lake"]/baseWeatherCommonalities</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>Defs/BiomeDef[defName="Ocean" or defName="Lake"]</xpath>
+			<value>
+				<baseWeatherCommonalities> <!--TemperateForest-->
+					<Clear>18</Clear>
+					<Fog>1</Fog>
+					<Rain>2</Rain>
+					<DryThunderstorm>1</DryThunderstorm>
+					<RainyThunderstorm>1</RainyThunderstorm>
+					<FoggyRain>1</FoggyRain>
+					<SnowGentle>4</SnowGentle>
+					<SnowHard>4</SnowHard>
+					<GrayPall MayRequire="Ludeon.RimWorld.Anomaly">1</GrayPall>
+					<Overcast MayRequire="Ludeon.RimWorld.Odyssey">2</Overcast>
+				</baseWeatherCommonalities>
+			</value>
+		</nomatch>
+	</Operation>
+</Patch>

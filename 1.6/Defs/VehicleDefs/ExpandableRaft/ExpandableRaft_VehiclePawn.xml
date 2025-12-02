@@ -12,18 +12,6 @@
 			<shaderType>CutoutComplexPattern</shaderType>
 			<drawSize>(4,4)</drawSize>
 		</graphicData>
-		
-		<building>
-			<neverBuildable>true</neverBuildable>
-			<relatedBuildCommands>
-				<li>MV_Oar</li>
-				<li>MV_RaftPiece</li>
-				<li>MV_RaftPieceFloat</li>
-				<li>MV_RigOneTiered</li>
-				<li>MV_RigTwoTiered</li>
-				<li>MV_RigThreeTiered</li>
-			</relatedBuildCommands>
-		</building>
 
 		<fillPercent>0.1</fillPercent>
 
@@ -31,7 +19,7 @@
 
 		<size>(3,3)</size>
 
-		<vehicleCategory>Transport</vehicleCategory>
+		<vehicleCategory>Combat</vehicleCategory>
 		<techLevel>Neolithic</techLevel>
 		<vehicleType>Sea</vehicleType>
 
@@ -55,9 +43,17 @@
 			<baseBodySize>4</baseBodySize>
 			<fleshType>WoodenVehicle</fleshType>
 		</race>
-
-		<properties>			
+		
+		<enabled>Everyone</enabled>
+		<properties>
 			<manhunterTargetsVehicle>true</manhunterTargetsVehicle>
+			<fishing>true</fishing>
+			<winterSpeedMultiplier>1</winterSpeedMultiplier>
+			<riverCost>1</riverCost>
+
+			<track Class = "Vehicles.VehicleTrack_Wake">
+				<speed>1</speed>
+			</track>
 		</properties>
 
 		<components>
@@ -74,6 +70,7 @@
 
 		<comps>
 			<li Class="VehicleMapFramework.CompProperties_RelatedBuildCommands"/>
+			<li Class="VehicleMapFramework.CompProperties_RemoveSegmentGizmo"/>
 		</comps>
 
 		<modExtensions>

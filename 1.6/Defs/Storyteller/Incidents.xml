@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<IncidentDef>
+		<defName>MV_SeaAmbush</defName>
+		<label>sea ambush</label>
+		<category>ThreatBig</category>
+		<targetTags>
+			<li>Caravan</li>
+			<li>VMF_Map_TempIncidentSea</li>
+		</targetTags>
+		<workerClass>VehicleMapFramework.IncidentWorker_Ambush_EnemyBoats</workerClass>
+		<pointsScaleable>true</pointsScaleable>
+		<minRefireDays>0.17</minRefireDays>
+		<letterText>{0} has been ambushed by {1} from {2}!</letterText>
+		<letterLabel>Caravan ambushed</letterLabel>
+		<letterDef>ThreatBig</letterDef>
+		<tale>CaravanAmbushedByHumanlike</tale>
+		<mtbDaysByBiome>
+			<Ocean>10</Ocean>
+			<Lake>10</Lake>
+		</mtbDaysByBiome>
+	</IncidentDef>
+</Defs>

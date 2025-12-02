@@ -14,4 +14,8 @@ public static class MVO_DefOf
     public static SoundDef MV_WaterSplash;
     
     public static SoundDef MV_CannonballImpact;
+
+    public static FleckDef MV_ShockwaveSmall;
+
+    public static FleckDef GroundWaterSplash;
 }

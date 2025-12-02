@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<FleckDef ParentName="FleckBase">
+		<defName>MV_ShockwaveSmall</defName>
+		<altitudeLayer>MoteLow</altitudeLayer>
+		<fadeInTime>0.0</fadeInTime>
+		<solidTime>0.0</solidTime>
+		<fadeOutTime>0.15</fadeOutTime>
+		<growthRate>50</growthRate>
+		<graphicData>
+			<graphicClass>Graphic_FleckPulse</graphicClass>
+			<texPath>Things/Mote/Black</texPath>
+			<shaderType>MoteLargeDistortionWave</shaderType>
+			<shaderParameters>
+				<_DistortionTex>/Things/Mote/PsychicDistortionCurrents</_DistortionTex>
+				<_NoiseTex>/Things/Mote/PsycastNoise</_NoiseTex>
+				<_distortionIntensity>0.2</_distortionIntensity>
+				<_brightnessMultiplier>5.15</_brightnessMultiplier>
+			</shaderParameters>
+			<drawSize>1.0</drawSize>
+		</graphicData>
+	</FleckDef>
+	
+</Defs>

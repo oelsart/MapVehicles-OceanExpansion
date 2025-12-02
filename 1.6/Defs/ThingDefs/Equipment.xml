@@ -237,7 +237,7 @@
 						<vehicleStats>
 							<li>
 								<def>MoveSpeed</def>
-								<value>0.5</value>
+								<value>1</value>
 							</li>
 						</vehicleStats>
 					</li>
@@ -301,7 +301,7 @@
 						<vehicleStats>
 							<li>
 								<def>MoveSpeed</def>
-								<value>1</value>
+								<value>2</value>
 							</li>
 						</vehicleStats>
 					</li>
@@ -365,7 +365,7 @@
 						<vehicleStats>
 							<li>
 								<def>MoveSpeed</def>
-								<value>1.5</value>
+								<value>3</value>
 							</li>
 						</vehicleStats>
 					</li>
@@ -652,6 +652,7 @@
 		<defName>MV_Helm</defName>
 		<label>helm</label>
 		<description>TODO</description>
+		<thingClass>VehicleMapFramework.Building_AttackTargetByComps</thingClass>
 		<thingCategories>
 			<li>BuildingsSpecial</li>
 		</thingCategories>

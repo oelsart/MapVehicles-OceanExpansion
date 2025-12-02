@@ -26,6 +26,17 @@
 		<costList>
 			<WoodLog>405</WoodLog>
 		</costList>
+		
+		<building>
+			<relatedBuildCommands>
+				<li>MV_Oar</li>
+				<li>MV_RaftPiece</li>
+				<li>MV_RaftPieceFloat</li>
+				<li>MV_RigOneTiered</li>
+				<li>MV_RigTwoTiered</li>
+				<li>MV_RigThreeTiered</li>
+			</relatedBuildCommands>
+		</building>
 
 		<soundImpactDefault>BulletImpact_Wood</soundImpactDefault>
 

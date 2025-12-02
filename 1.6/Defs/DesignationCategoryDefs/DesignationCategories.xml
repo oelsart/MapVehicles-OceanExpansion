@@ -9,7 +9,6 @@
 		<specialDesignatorClasses>
 			<li>Designator_Cancel</li>
 			<li>Designator_Deconstruct</li>
-			<li>VehicleMapFramework.Designator_RemoveVehicleSegment</li>
 		</specialDesignatorClasses>
 	</DesignationCategoryDef>
 

@@ -19,17 +19,6 @@
 			<colorTwo>(165,165,165)</colorTwo>
 			<colorThree>(203,248,255)</colorThree>
 		</graphicData>
-		
-		<building>
-			<neverBuildable>true</neverBuildable>
-			<relatedBuildCommands>
-				<li>MV_RigOneTiered</li>
-				<li>MV_RigTwoTiered</li>
-				<li>MV_RigThreeTiered</li>
-				<li>MV_Helm</li>
-				<li>MV_Hatch</li>
-			</relatedBuildCommands>
-		</building>
 
 		<fillPercent>0.35</fillPercent>
 
@@ -37,7 +26,7 @@
 
 		<size>(5,14)</size>
 
-		<vehicleCategory>Transport</vehicleCategory>
+		<vehicleCategory>Combat</vehicleCategory>
 		<techLevel>Medieval</techLevel>
 		<vehicleType>Sea</vehicleType>
 
@@ -61,6 +50,17 @@
 			<baseBodySize>12</baseBodySize>
 			<fleshType>WoodenVehicle</fleshType>
 		</race>
+		
+		<enabled>Everyone</enabled>
+		<properties>
+			<fishing>true</fishing>
+			<winterSpeedMultiplier>1</winterSpeedMultiplier>
+			<riverCost>1</riverCost>
+
+			<track Class = "Vehicles.VehicleTrack_Wake">
+				<speed>1</speed>
+			</track>
+		</properties>
 
 		<components>
 			<li>
@@ -76,6 +76,16 @@
 
 		<comps>
 			<li Class="VehicleMapFramework.CompProperties_RelatedBuildCommands"/>
+			<li Class="VehicleMapFramework.CompProperties_NpcVehicleMap">
+				<mapParamsList>
+					<li>
+						<pawnCountRange>0~</pawnCountRange>
+						<prefabDef>MV_Keel_PrefabA</prefabDef>
+						<preferredDir>West</preferredDir>
+					</li>
+				</mapParamsList>
+			</li>
+			
 		</comps>
 
 		<modExtensions>

@@ -31,6 +31,17 @@
 			<Steel>120</Steel>
 			<ComponentIndustrial>5</ComponentIndustrial>
 		</costList>
+		
+		<building>
+			<neverBuildable>true</neverBuildable>
+			<relatedBuildCommands>
+				<li>MV_RigOneTiered</li>
+				<li>MV_RigTwoTiered</li>
+				<li>MV_RigThreeTiered</li>
+				<li>MV_Helm</li>
+				<li>MV_Hatch</li>
+			</relatedBuildCommands>
+		</building>
 
 		<soundImpactDefault>BulletImpact_Wood</soundImpactDefault>
 

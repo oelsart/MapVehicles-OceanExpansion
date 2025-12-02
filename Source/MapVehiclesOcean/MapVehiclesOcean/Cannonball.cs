@@ -1,5 +1,6 @@
 ﻿using RimWorld;
 using UnityEngine;
+using Vehicles;
 using Verse;
 using Verse.Sound;
 
@@ -13,16 +14,25 @@ public class Cannonball : Bullet
         base.Impact(hitThing, blockedByShield);
         if (!blockedByShield)
         {
-            var scale = Mathf.Sqrt(DamageAmount) * 2f;
-            if (hitThing != null)
+            var pos = ExactPosition;
+            var scale = Mathf.Sqrt(DamageAmount) / 3f;
+            
+            switch (hitThing)
             {
-                FleckMaker.ThrowDustPuffThick(ExactPosition, map, scale, Color.white);
-                MVO_DefOf.MV_CannonballImpact.PlayOneShot(new TargetInfo(Position, map));
-            }
-            else if (Position.GetTerrain(map).takeSplashes)
-            {
-                Delay.AfterNTicks(10, () => FleckMaker.WaterSplash(ExactPosition, map, scale, 20f));
-                MVO_DefOf.MV_WaterSplash.PlayOneShot(new TargetInfo(Position, map));
+                case VehiclePawn:
+                    FleckMaker.ThrowDustPuff(pos, map, scale);
+                    FleckMaker.Static(pos, map, MVO_DefOf.MV_ShockwaveSmall, scale);
+                    MVO_DefOf.MV_CannonballImpact.PlayOneShot(new TargetInfo(Position, map));
+                    break;
+                case null when Position.GetTerrain(map).takeSplashes:
+                    FleckMaker.Static(pos, map, MVO_DefOf.GroundWaterSplash, scale);
+                    FleckMaker.WaterRipple(pos, map, scale);
+                    MVO_DefOf.MV_WaterSplash.PlayOneShot(new TargetInfo(Position, map));
+                    break;
+                default:
+                    FleckMaker.ThrowDustPuff(pos, map, scale);
+                    FleckMaker.Static(pos, map, MVO_DefOf.MV_ShockwaveSmall, scale);
+                    break;
             }
         }
     }
