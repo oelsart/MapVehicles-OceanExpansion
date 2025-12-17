@@ -173,13 +173,16 @@
 		</stuffCategories>
 		<building>
 			<supportsWallAttachments>true</supportsWallAttachments>
+			<relatedBuildCommands>
+				<li>MV_CrowsNest</li>
+			</relatedBuildCommands>
 		</building>
 		<useBlueprintGraphicAsGhost>true</useBlueprintGraphicAsGhost>
 		<placeWorkers>
 			<li>VehicleMapFramework.PlaceWorker_ForceOnVehicle</li>
 			<li>VehicleMapFramework.PlaceWorker_VehicleRelatedBuildings</li>
 			<li>PlaceWorker_NotUnderRoof</li>
-		</placeWorkers>
+		</placeWorkers>	
 	</ThingDef>
 	
 	<ThingDef ParentName="MV_RigBase">
@@ -372,6 +375,115 @@
 				</upgrades>
 			</li>
 		</comps>
+	</ThingDef>
+
+	<ThingDef ParentName="MV_ShipEquipmentBase">
+		<defName>MV_CrowsNest</defName>
+		<label>Crow's nest</label>
+		<description>TODO</description>
+		<drawerType>RealtimeOnly</drawerType>
+		<graphicData>
+			<graphicClass>Graphic_Single</graphicClass>
+			<texPath>VehicleMapFramework/ClearTex</texPath>
+		</graphicData>
+		<uiIconPath>MapVehiclesOcean/CrowsNest/CrowsNestBlueprint_south</uiIconPath>
+		<rotatable>false</rotatable>
+		<statBases>
+			<MaxHitPoints>100</MaxHitPoints>
+			<WorkToBuild>6000</WorkToBuild>
+			<Beauty>3</Beauty>
+			<Mass>25</Mass>
+		</statBases>
+		<selectable>true</selectable>
+		<useBlueprintGraphicAsGhost>true</useBlueprintGraphicAsGhost>
+		<building>
+			<isEdifice>false</isEdifice>
+			<blueprintGraphicData>
+				<graphicClass>Graphic_Multi</graphicClass>
+				<texPath>MapVehiclesOcean/CrowsNest/CrowsNestBlueprint</texPath>
+				<shaderType>EdgeDetect</shaderType>
+				<color>(0.8235294,0.92156863,1,0.6)</color>
+				<drawSize>2</drawSize>
+			</blueprintGraphicData>
+		</building>
+		<comps>
+			<li Class="VehicleMapFramework.CompProperties_AdditionalGraphicsChildByParent">
+				<graphicsByParent>
+					<li>
+						<key>MV_RigOneTiered</key>
+						<value>
+							<li>
+								<graphicClass>Graphic_Multi</graphicClass>
+								<texPath>MapVehiclesOcean/CrowsNest/CrowsNest</texPath>
+								<shaderType>VMF_CutoutComplexRGBOpacity</shaderType>
+								<drawSize>2</drawSize>
+								<drawOffset>(0,0.0001,2.93)</drawOffset>
+								<drawOffsetEast>(0,0.0001,3)</drawOffsetEast>
+								<drawOffsetWest>(0,0.0001,3)</drawOffsetWest>
+							</li>
+							<li>
+								<graphicClass>Graphic_Multi</graphicClass>
+								<texPath>MapVehiclesOcean/CrowsNest/CrowsNestOverlay</texPath>
+								<shaderType>VMF_CutoutComplexRGBOpacity</shaderType>
+								<drawSize>2</drawSize>
+								<drawOffset>(0,0.0002,2.93)</drawOffset>
+								<drawOffsetEast>(0,0.0002,3)</drawOffsetEast>
+								<drawOffsetWest>(0,0.0002,3)</drawOffsetWest>
+							</li>
+						</value>
+					</li>
+					<li>
+						<key>MV_RigTwoTiered</key>
+						<value>
+							<li>
+								<graphicClass>Graphic_Multi</graphicClass>
+								<texPath>MapVehiclesOcean/CrowsNest/CrowsNest</texPath>
+								<shaderType>VMF_CutoutComplexRGBOpacity</shaderType>
+								<drawSize>1.6</drawSize>
+								<drawOffset>(0,0.0001,5.35)</drawOffset>
+								<drawOffsetEast>(0.444,0.0001,5.18)</drawOffsetEast>
+								<drawOffsetWest>(-0.444,0.0001,5.18)</drawOffsetWest>
+							</li>
+							<li>
+								<graphicClass>Graphic_Multi</graphicClass>
+								<texPath>MapVehiclesOcean/CrowsNest/CrowsNestOverlay</texPath>
+								<shaderType>VMF_CutoutComplexRGBOpacity</shaderType>
+								<drawSize>1.6</drawSize>
+								<drawOffset>(0,0.0002,5.35)</drawOffset>
+								<drawOffsetEast>(0.444,0.0002,5.18)</drawOffsetEast>
+								<drawOffsetWest>(-0.444,0.0002,5.18)</drawOffsetWest>
+							</li>
+						</value>
+					</li>
+					<li>
+						<key>MV_RigThreeTiered</key>
+						<value>
+							<li>
+								<graphicClass>Graphic_Multi</graphicClass>
+								<texPath>MapVehiclesOcean/CrowsNest/CrowsNest</texPath>
+								<shaderType>VMF_CutoutComplexRGBOpacity</shaderType>
+								<drawSize>1.4</drawSize>
+								<drawOffset>(0,0.0001,7.1)</drawOffset>
+								<drawOffsetEast>(0.825,0.0001,7.2)</drawOffsetEast>
+								<drawOffsetWest>(-0.825,0.0001,7.2)</drawOffsetWest>
+							</li>
+							<li>
+								<graphicClass>Graphic_Multi</graphicClass>
+								<texPath>MapVehiclesOcean/CrowsNest/CrowsNestOverlay</texPath>
+								<shaderType>VMF_CutoutComplexRGBOpacity</shaderType>
+								<drawSize>1.4</drawSize>
+								<drawOffset>(0,0.0002,7.1)</drawOffset>
+								<drawOffsetEast>(0.825,0.0002,7.2)</drawOffsetEast>
+								<drawOffsetWest>(-0.825,0.0002,7.2)</drawOffsetWest>
+							</li>
+						</value>
+					</li>
+				</graphicsByParent>
+			</li>
+		</comps>
+		<placeWorkers>
+			<li>VehicleMapFramework.PlaceWorker_RelatedBuildings</li>
+		</placeWorkers>
 	</ThingDef>
 	
 	<ThingDef ParentName="FurnitureBase">
