@@ -395,6 +395,8 @@
 			<Mass>25</Mass>
 		</statBases>
 		<selectable>true</selectable>
+		<hasInteractionCell>true</hasInteractionCell>
+		<interactionCellOffset>(0,0,-1)</interactionCellOffset>
 		<useBlueprintGraphicAsGhost>true</useBlueprintGraphicAsGhost>
 		<building>
 			<isEdifice>false</isEdifice>
@@ -426,9 +428,9 @@
 								<texPath>MapVehiclesOcean/CrowsNest/CrowsNestOverlay</texPath>
 								<shaderType>VMF_CutoutComplexRGBOpacity</shaderType>
 								<drawSize>2</drawSize>
-								<drawOffset>(0,0.0002,2.93)</drawOffset>
-								<drawOffsetEast>(0,0.0002,3)</drawOffsetEast>
-								<drawOffsetWest>(0,0.0002,3)</drawOffsetWest>
+								<drawOffset>(0,0.1,2.93)</drawOffset>
+								<drawOffsetEast>(0,0.1,3)</drawOffsetEast>
+								<drawOffsetWest>(0,0.1,3)</drawOffsetWest>
 							</li>
 						</value>
 					</li>
@@ -449,9 +451,9 @@
 								<texPath>MapVehiclesOcean/CrowsNest/CrowsNestOverlay</texPath>
 								<shaderType>VMF_CutoutComplexRGBOpacity</shaderType>
 								<drawSize>1.6</drawSize>
-								<drawOffset>(0,0.0002,5.35)</drawOffset>
-								<drawOffsetEast>(0.444,0.0002,5.18)</drawOffsetEast>
-								<drawOffsetWest>(-0.444,0.0002,5.18)</drawOffsetWest>
+								<drawOffset>(0,0.1,5.35)</drawOffset>
+								<drawOffsetEast>(0.444,0.1,5.18)</drawOffsetEast>
+								<drawOffsetWest>(-0.444,0.1,5.18)</drawOffsetWest>
 							</li>
 						</value>
 					</li>
@@ -472,14 +474,20 @@
 								<texPath>MapVehiclesOcean/CrowsNest/CrowsNestOverlay</texPath>
 								<shaderType>VMF_CutoutComplexRGBOpacity</shaderType>
 								<drawSize>1.4</drawSize>
-								<drawOffset>(0,0.0002,7.1)</drawOffset>
-								<drawOffsetEast>(0.825,0.0002,7.2)</drawOffsetEast>
-								<drawOffsetWest>(-0.825,0.0002,7.2)</drawOffsetWest>
+								<drawOffset>(0,0.1,7.1)</drawOffset>
+								<drawOffsetEast>(0.825,0.1,7.2)</drawOffsetEast>
+								<drawOffsetWest>(-0.825,0.1,7.2)</drawOffsetWest>
 							</li>
 						</value>
 					</li>
 				</graphicsByParent>
 			</li>
+			<li Class="CompProperties_Scanner">
+				<compClass>MapVehicles.CompCrowsNest</compClass>
+				<scanFindMtbDays>3</scanFindMtbDays>
+				<scanSpeedStat>ReadingSpeed</scanSpeedStat>
+			</li>
+			<li Class="CompProperties_Forbiddable"/>
 		</comps>
 		<placeWorkers>
 			<li>VehicleMapFramework.PlaceWorker_RelatedBuildings</li>

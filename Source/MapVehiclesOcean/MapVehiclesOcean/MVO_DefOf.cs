@@ -18,4 +18,8 @@ public static class MVO_DefOf
     public static FleckDef MV_ShockwaveSmall;
 
     public static FleckDef GroundWaterSplash;
+
+    public static JobDef MV_JobLookout;
+
+    public static ThingDef MV_CrowsNest;
 }

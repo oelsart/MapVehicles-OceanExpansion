@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <WorkGiverDef>
+        <defName>MV_WorkLookout</defName>
+        <label>lookout</label>
+        <giverClass>MapVehicles.WorkGiver_Lookout</giverClass>
+        <workType>BasicWorker</workType>
+        <priorityInType>50</priorityInType>
+        <verb>keep a lookout</verb>
+        <gerund>keeping a lookout</gerund>
+        <scannerDef>MV_CrowsNest</scannerDef>
+        <requiredCapacities>
+            <li>Sight</li>
+        </requiredCapacities>
+    </WorkGiverDef>
+    
+</Defs>

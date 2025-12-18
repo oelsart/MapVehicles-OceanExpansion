@@ -17,6 +17,12 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\..\..\VehicleMapFramework\Source\VehicleMapFramework\VehicleMapFramework.csproj">
+      <Private>False</Private>
+    </ProjectReference>
+  </ItemGroup>
+  
+  <ItemGroup>
     <Reference Include="SmashTools">
       <HintPath>..\..\..\..\..\..\..\workshop\content\294100\3014915404\1.6\Assemblies\SmashTools.dll</HintPath>
       <Private>False</Private>
