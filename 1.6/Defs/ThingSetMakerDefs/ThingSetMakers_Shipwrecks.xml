@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    
+    <ThingSetMakerDef>
+        <defName>MV_ShipwreckCargo</defName>
+        <debugParams>
+            <totalMarketValueRange>10000~15000</totalMarketValueRange>
+        </debugParams>
+        <root Class="ThingSetMaker_Sum">
+            <options>
+                <li>
+                    <minMarketValue>6000</minMarketValue>
+                    <maxMarketValue>18000</maxMarketValue>
+                    <thingSetMaker Class="ThingSetMaker_RandomOption">
+                        <options>
+                            <li>
+                                <weight>1</weight>
+                                <thingSetMaker Class="ThingSetMaker_MarketValue">
+                                    <fixedParams>
+                                        <filter>
+                                            <thingDefs>
+                                                <li>WoodLog</li>
+                                                <li>Steel</li>
+                                            </thingDefs>
+                                        </filter>
+                                    </fixedParams>
+                                </thingSetMaker>
+                            </li>
+                            <li>
+                                <weight>1</weight>
+                                <thingSetMaker Class="ThingSetMaker_MarketValue">
+                                    <fixedParams>
+                                        <filter>
+                                            <categories>
+                                                <li>ResourcesRaw</li>
+                                            </categories>
+                                            <disallowedCategories>
+                                                <li>PlantMatter</li>
+                                            </disallowedCategories>
+                                        </filter>
+                                    </fixedParams>
+                                </thingSetMaker>
+                            </li>
+                            <li>
+                                <weight>0.65</weight>
+                                <thingSetMaker Class="ThingSetMaker_MarketValue">
+                                    <fixedParams>
+                                        <filter>
+                                            <categories>
+                                                <li>Textiles</li>
+                                                <li>Leathers</li>
+                                                <li>Wools</li>
+                                            </categories>
+                                        </filter>
+                                    </fixedParams>
+                                </thingSetMaker>
+                            </li>
+                            <li>
+                                <weight>0.5</weight>
+                                <thingSetMaker Class="ThingSetMaker_MarketValue">
+                                    <fixedParams>
+                                        <filter>
+                                            <categories>
+                                                <li>Items</li>
+                                            </categories>
+                                            <disallowedCategories>
+                                                <li>Unfinished</li>
+                                                <li>Artifacts</li>
+                                                <li>InertRelics</li>
+                                            </disallowedCategories>
+                                        </filter>
+                                    </fixedParams>
+                                </thingSetMaker>
+                            </li>
+                            <li>
+                                <weight>0.8</weight>
+                                <thingSetMaker Class="ThingSetMaker_MarketValue">
+                                    <fixedParams>
+                                        <filter>
+                                            <categories>
+                                                <li>BuildingsArt</li>
+                                                <li>BuildingsFurniture</li>
+                                                <li>BuildingsJoy</li>
+                                            </categories>
+                                        </filter>
+                                    </fixedParams>
+                                </thingSetMaker>
+                            </li>
+                            <li>
+                                <weight>0.75</weight>
+                                <thingSetMaker Class="ThingSetMaker_MarketValue">
+                                    <fixedParams>
+                                        <filter>
+                                            <categories>
+                                                <li>Weapons</li>
+                                                <li>ApparelArmor</li>
+                                                <li>ArmorHeadgear</li>
+                                                <li>ApparelUtility</li>
+                                                <li>MortarShells</li>
+                                            </categories>
+                                        </filter>
+                                    </fixedParams>
+                                </thingSetMaker>
+                            </li>
+                        </options>
+                    </thingSetMaker>
+                </li>
+                <li>
+                    <minMarketValue>1000</minMarketValue>
+                    <maxMarketValue>6000</maxMarketValue>
+                    <thingSetMaker Class="ThingSetMaker_MarketValue">
+                        <fixedParams>
+                            <filter>
+                                <categories>
+                                    <li>FoodMeals</li>
+                                    <li>Medicine</li>
+                                </categories>
+                            </filter>
+                        </fixedParams>
+                    </thingSetMaker>
+                </li>
+            </options>
+        </root>
+    </ThingSetMakerDef>
+    
+</Defs>

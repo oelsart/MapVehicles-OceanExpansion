@@ -21,5 +21,7 @@ public static class MVO_DefOf
 
     public static JobDef MV_JobLookout;
 
-    public static ThingDef MV_CrowsNest;
+    public static QuestScriptDef MV_Shipwreck;
+
+    public static ThingSetMakerDef MV_ShipwreckCargo;
 }

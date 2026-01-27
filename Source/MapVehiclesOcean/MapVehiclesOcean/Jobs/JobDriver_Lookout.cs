@@ -13,13 +13,14 @@ public class JobDriver_Lookout : JobDriver_OperateScanner
     {
         get
         {
+            if (!OnLastToil) return Vector3.zero;
             var comp = job.targetA.Thing.TryGetComp<CompAdditionalGraphicsChildByParent>();
             var rot = comp.parentThing.BaseRotationVehicleDraw();
             var offset = comp.Props.graphicsByParent[comp.parentThing.def][0].DrawOffsetForRot(rot);
             if (!rot.IsHorizontal) offset.z += 0.15f;
             if (comp.parentThing.IsOnNonFocusedVehicleMapOf(out var vehicle))
             {
-                offset = offset.RotatedBy(-vehicle.FullAngle - vehicle.Angle);
+                offset = offset.RotatedBy(-vehicle.FullAngle - vehicle.Angle + vehicle.Transform.rotation);
             }
             return offset + new Vector3(0f, 0f, 1.35f);
         }

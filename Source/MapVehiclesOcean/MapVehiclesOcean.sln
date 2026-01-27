@@ -5,6 +5,8 @@ VisualStudioVersion = 18.3.11218.70 d18.3
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MapVehiclesOcean", "MapVehiclesOcean\MapVehiclesOcean.csproj", "{D4BCD246-5CEA-4B7B-8F3C-7C0131BB511E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NanameWalls", "..\..\NanameWalls\Source\NANAMEWalls\NanameWalls\NanameWalls.csproj", "{F14D240F-3AB5-4AAA-A6C0-82FA55F7B81F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{D4BCD246-5CEA-4B7B-8F3C-7C0131BB511E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D4BCD246-5CEA-4B7B-8F3C-7C0131BB511E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D4BCD246-5CEA-4B7B-8F3C-7C0131BB511E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F14D240F-3AB5-4AAA-A6C0-82FA55F7B81F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F14D240F-3AB5-4AAA-A6C0-82FA55F7B81F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F14D240F-3AB5-4AAA-A6C0-82FA55F7B81F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F14D240F-3AB5-4AAA-A6C0-82FA55F7B81F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

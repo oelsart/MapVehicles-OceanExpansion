@@ -7,7 +7,7 @@
 		<description>TODO</description>
 		<designationCategory>VF_Vehicles</designationCategory>
 		<graphicData>
-			<texPath>MapVehiclesOcean/Cannon/Cannon</texPath>
+			<texPath>MapVehiclesOcean/Things/Cannon/Cannon</texPath>
 			<graphicClass>Graphic_Multi</graphicClass>
 			<drawSize>(2,2)</drawSize>
 		</graphicData>

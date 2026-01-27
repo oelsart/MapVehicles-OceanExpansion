@@ -7,7 +7,7 @@
 		<description>TODO</description>
 		<possessionCount>1</possessionCount>
 		<graphicData>
-			<texPath>MapVehiclesOcean/Cannon/CannonballResource</texPath>
+			<texPath>MapVehiclesOcean/Things/Cannon/CannonballResource</texPath>
 			<graphicClass>Graphic_StackCount</graphicClass>
 		</graphicData>
 		<projectileWhenLoaded>MV_Bullet_Cannonball</projectileWhenLoaded>
@@ -28,7 +28,7 @@
 		<thingClass>MapVehicles.Cannonball</thingClass>
 		
 		<graphicData>
-			<texPath>MapVehiclesOcean/Cannon/Cannonball</texPath>
+			<texPath>MapVehiclesOcean/Things/Cannon/Cannonball</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 			<shaderType>TransparentPostLight</shaderType>
 		</graphicData>
@@ -92,7 +92,7 @@
 			</li>
 		</fireModes>
 
-		<gizmoIconTexPath>MapVehiclesOcean/Cannon/Cannon_north</gizmoIconTexPath>
+		<gizmoIconTexPath>MapVehiclesOcean/Things/Cannon/Cannon_north</gizmoIconTexPath>
 		
 		<ammunition>
 			<thingDefs>

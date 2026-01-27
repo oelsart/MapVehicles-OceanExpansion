@@ -40,19 +40,19 @@
 		<label>raft piece</label>
 		<description>TODO</description>
 		<graphicData>
-			<texPath>MapVehiclesOcean/RaftPiece/RaftPiece</texPath>
+			<texPath>MapVehiclesOcean/Things/RaftPiece/RaftPiece</texPath>
 			<graphicClass>Graphic_Multi</graphicClass>
 			<shaderType>Cutout</shaderType>
 			<drawSize>2</drawSize>
 		</graphicData>
-		<uiIconPath>MapVehiclesOcean/RaftPiece/Blueprint_RaftPiece_east</uiIconPath>
+		<uiIconPath>MapVehiclesOcean/Things/RaftPiece/Blueprint_RaftPiece_east</uiIconPath>
 		<costList>
 			<WoodLog>45</WoodLog>
 		</costList>
 		<building>
 			<blueprintGraphicData>
 				<graphicClass>Graphic_Multi</graphicClass>
-				<texPath>MapVehiclesOcean/RaftPiece/Blueprint_RaftPiece</texPath>
+				<texPath>MapVehiclesOcean/Things/RaftPiece/Blueprint_RaftPiece</texPath>
 				<shaderType>EdgeDetect</shaderType>
 				<drawSize>2</drawSize>
 			</blueprintGraphicData>
@@ -62,7 +62,7 @@
 				<graphics>
 					<li>
 						<graphicClass>Graphic_Multi</graphicClass>
-						<texPath>MapVehiclesOcean/RaftPiece/RaftPieceBG</texPath>
+						<texPath>MapVehiclesOcean/Things/RaftPiece/RaftPieceBG</texPath>
 						<shaderType>Cutout</shaderType>
 						<renderQueue>2899</renderQueue>
 						<drawSize>2</drawSize>
@@ -98,12 +98,12 @@
 		<label>raft piece (float)</label>
 		<description>TODO</description>
 		<graphicData>
-			<texPath>MapVehiclesOcean/RaftPiece/RaftPieceFloat</texPath>
+			<texPath>MapVehiclesOcean/Things/RaftPiece/RaftPieceFloat</texPath>
 			<graphicClass>Graphic_Multi</graphicClass>
 			<shaderType>Cutout</shaderType>
 			<drawSize>2</drawSize>
 		</graphicData>
-		<uiIconPath>MapVehiclesOcean/RaftPiece/Blueprint_RaftPieceFloat_east</uiIconPath>
+		<uiIconPath>MapVehiclesOcean/Things/RaftPiece/Blueprint_RaftPieceFloat_east</uiIconPath>
 		<costList>
 			<WoodLog>45</WoodLog>
 			<Chemfuel>20</Chemfuel>
@@ -111,7 +111,7 @@
 		<building>
 			<blueprintGraphicData>
 				<graphicClass>Graphic_Multi</graphicClass>
-				<texPath>MapVehiclesOcean/RaftPiece/Blueprint_RaftPieceFloat</texPath>
+				<texPath>MapVehiclesOcean/Things/RaftPiece/Blueprint_RaftPieceFloat</texPath>
 				<shaderType>EdgeDetect</shaderType>
 				<drawSize>2</drawSize>
 			</blueprintGraphicData>
@@ -121,7 +121,7 @@
 				<graphics>
 					<li>
 						<graphicClass>Graphic_Multi</graphicClass>
-						<texPath>MapVehiclesOcean/RaftPiece/RaftPieceFloatBG</texPath>
+						<texPath>MapVehiclesOcean/Things/RaftPiece/RaftPieceFloatBG</texPath>
 						<shaderType>Cutout</shaderType>
 						<renderQueue>2899</renderQueue>
 						<drawSize>2</drawSize>
@@ -157,7 +157,7 @@
 		<fillPercent>1</fillPercent>
 		<drawerType>MapMeshAndRealTime</drawerType>
 		<graphicData>
-			<texPath>MapVehiclesOcean/Rig/MastRoot</texPath>
+			<texPath>MapVehiclesOcean/Things/Rig/MastRoot</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 			<shaderType>CutoutComplex</shaderType>
 			<drawRotated>false</drawRotated>
@@ -196,11 +196,11 @@
 		<uiIconPathsStuff>
 			<li>
 				<appearance>Fabric</appearance>
-				<iconPath>MapVehiclesOcean/Rig/Rig1/Fabric_Rig1_Icon</iconPath>
+				<iconPath>MapVehiclesOcean/Things/Rig/Rig1/Fabric_Rig1_Icon</iconPath>
 			</li>
 			<li>
 				<appearance>Leathery</appearance>
-				<iconPath>MapVehiclesOcean/Rig/Rig1/Leathery_Rig1_Icon</iconPath>
+				<iconPath>MapVehiclesOcean/Things/Rig/Rig1/Leathery_Rig1_Icon</iconPath>
 			</li>
 		</uiIconPathsStuff>
 		<costList>
@@ -211,7 +211,7 @@
 		<building>
 			<blueprintGraphicData>
 				<graphicClass>Graphic_Multi</graphicClass>
-				<texPath>MapVehiclesOcean/Rig/Rig1/Fabric_Rig1</texPath>
+				<texPath>MapVehiclesOcean/Things/Rig/Rig1/Fabric_Rig1</texPath>
 				<shaderType>EdgeDetect</shaderType>
 				<drawSize>(8,4)</drawSize>
 				<drawOffset>(0,0,1.5)</drawOffset>
@@ -223,10 +223,10 @@
 				<graphics>
 					<li>
 						<graphicClass>VehicleMapFramework.Graphic_AppearanceMulti</graphicClass>
-						<texPath>MapVehiclesOcean/Rig/Rig1/Rig1</texPath>
+						<texPath>MapVehiclesOcean/Things/Rig/Rig1/Rig1</texPath>
 						<shaderType>VMF_CutoutComplexRGBOpacity</shaderType>
 						<drawSize>(8,4)</drawSize>
-						<drawOffset>(0,0,1.5)</drawOffset>
+						<drawOffset>(0,0.1,1.5)</drawOffset>
 						<shadowData>
 							<volume>(0.75,1,0.75)</volume>
 							<offset>(0,0,-1.8)</offset>
@@ -260,11 +260,11 @@
 		<uiIconPathsStuff>
 			<li>
 				<appearance>Fabric</appearance>
-				<iconPath>MapVehiclesOcean/Rig/Rig2/Fabric_Rig2_Icon</iconPath>
+				<iconPath>MapVehiclesOcean/Things/Rig/Rig2/Fabric_Rig2_Icon</iconPath>
 			</li>
 			<li>
 				<appearance>Leathery</appearance>
-				<iconPath>MapVehiclesOcean/Rig/Rig2/Leathery_Rig2_Icon</iconPath>
+				<iconPath>MapVehiclesOcean/Things/Rig/Rig2/Leathery_Rig2_Icon</iconPath>
 			</li>
 		</uiIconPathsStuff>
 		<costList>
@@ -275,7 +275,7 @@
 		<building>
 			<blueprintGraphicData>
 				<graphicClass>Graphic_Multi</graphicClass>
-				<texPath>MapVehiclesOcean/Rig/Rig2/Fabric_Rig2</texPath>
+				<texPath>MapVehiclesOcean/Things/Rig/Rig2/Fabric_Rig2</texPath>
 				<shaderType>EdgeDetect</shaderType>
 				<drawSize>(16,8)</drawSize>
 				<drawOffset>(0,0,3.5)</drawOffset>
@@ -287,10 +287,10 @@
 				<graphics>
 					<li>
 						<graphicClass>VehicleMapFramework.Graphic_AppearanceMulti</graphicClass>
-						<texPath>MapVehiclesOcean/Rig/Rig2/Rig2</texPath>
+						<texPath>MapVehiclesOcean/Things/Rig/Rig2/Rig2</texPath>
 						<shaderType>VMF_CutoutComplexRGBOpacity</shaderType>
 						<drawSize>(16,8)</drawSize>
-						<drawOffset>(0,0,3.5)</drawOffset>
+						<drawOffset>(0,0.1,3.5)</drawOffset>
 						<shadowData>
 							<volume>(0.75,2,0.75)</volume>
 							<offset>(0,0,-3.8)</offset>
@@ -324,11 +324,11 @@
 		<uiIconPathsStuff>
 			<li>
 				<appearance>Fabric</appearance>
-				<iconPath>MapVehiclesOcean/Rig/Rig3/Fabric_Rig3_Icon</iconPath>
+				<iconPath>MapVehiclesOcean/Things/Rig/Rig3/Fabric_Rig3_Icon</iconPath>
 			</li>
 			<li>
 				<appearance>Leathery</appearance>
-				<iconPath>MapVehiclesOcean/Rig/Rig3/Leathery_Rig3_Icon</iconPath>
+				<iconPath>MapVehiclesOcean/Things/Rig/Rig3/Leathery_Rig3_Icon</iconPath>
 			</li>
 		</uiIconPathsStuff>
 		<costList>
@@ -339,7 +339,7 @@
 		<building>
 			<blueprintGraphicData>
 				<graphicClass>Graphic_Multi</graphicClass>
-				<texPath>MapVehiclesOcean/Rig/Rig3/Fabric_Rig3</texPath>
+				<texPath>MapVehiclesOcean/Things/Rig/Rig3/Fabric_Rig3</texPath>
 				<shaderType>EdgeDetect</shaderType>
 				<drawSize>(16,8)</drawSize>
 				<drawOffset>(0,0,3.5)</drawOffset>
@@ -351,10 +351,10 @@
 				<graphics>
 					<li>
 						<graphicClass>VehicleMapFramework.Graphic_AppearanceMulti</graphicClass>
-						<texPath>MapVehiclesOcean/Rig/Rig3/Rig3</texPath>
+						<texPath>MapVehiclesOcean/Things/Rig/Rig3/Rig3</texPath>
 						<shaderType>VMF_CutoutComplexRGBOpacity</shaderType>
 						<drawSize>(16,8)</drawSize>
-						<drawOffset>(0,0,3.5)</drawOffset>
+						<drawOffset>(0,0.1,3.5)</drawOffset>
 						<shadowData>
 							<volume>(0.75,3,0.75)</volume>
 							<offset>(0,0,-3.8)</offset>
@@ -386,7 +386,7 @@
 			<graphicClass>Graphic_Single</graphicClass>
 			<texPath>VehicleMapFramework/ClearTex</texPath>
 		</graphicData>
-		<uiIconPath>MapVehiclesOcean/CrowsNest/CrowsNestBlueprint_south</uiIconPath>
+		<uiIconPath>MapVehiclesOcean/Things/CrowsNest/CrowsNestBlueprint_south</uiIconPath>
 		<rotatable>false</rotatable>
 		<statBases>
 			<MaxHitPoints>100</MaxHitPoints>
@@ -402,7 +402,7 @@
 			<isEdifice>false</isEdifice>
 			<blueprintGraphicData>
 				<graphicClass>Graphic_Multi</graphicClass>
-				<texPath>MapVehiclesOcean/CrowsNest/CrowsNestBlueprint</texPath>
+				<texPath>MapVehiclesOcean/Things/CrowsNest/CrowsNestBlueprint</texPath>
 				<shaderType>EdgeDetect</shaderType>
 				<color>(0.8235294,0.92156863,1,0.6)</color>
 				<drawSize>2</drawSize>
@@ -416,7 +416,7 @@
 						<value>
 							<li>
 								<graphicClass>Graphic_Multi</graphicClass>
-								<texPath>MapVehiclesOcean/CrowsNest/CrowsNest</texPath>
+								<texPath>MapVehiclesOcean/Things/CrowsNest/CrowsNest</texPath>
 								<shaderType>VMF_CutoutComplexRGBOpacity</shaderType>
 								<drawSize>2</drawSize>
 								<drawOffset>(0,0.0001,2.93)</drawOffset>
@@ -425,7 +425,7 @@
 							</li>
 							<li>
 								<graphicClass>Graphic_Multi</graphicClass>
-								<texPath>MapVehiclesOcean/CrowsNest/CrowsNestOverlay</texPath>
+								<texPath>MapVehiclesOcean/Things/CrowsNest/CrowsNestOverlay</texPath>
 								<shaderType>VMF_CutoutComplexRGBOpacity</shaderType>
 								<drawSize>2</drawSize>
 								<drawOffset>(0,0.1,2.93)</drawOffset>
@@ -439,7 +439,7 @@
 						<value>
 							<li>
 								<graphicClass>Graphic_Multi</graphicClass>
-								<texPath>MapVehiclesOcean/CrowsNest/CrowsNest</texPath>
+								<texPath>MapVehiclesOcean/Things/CrowsNest/CrowsNest</texPath>
 								<shaderType>VMF_CutoutComplexRGBOpacity</shaderType>
 								<drawSize>1.6</drawSize>
 								<drawOffset>(0,0.0001,5.35)</drawOffset>
@@ -448,7 +448,7 @@
 							</li>
 							<li>
 								<graphicClass>Graphic_Multi</graphicClass>
-								<texPath>MapVehiclesOcean/CrowsNest/CrowsNestOverlay</texPath>
+								<texPath>MapVehiclesOcean/Things/CrowsNest/CrowsNestOverlay</texPath>
 								<shaderType>VMF_CutoutComplexRGBOpacity</shaderType>
 								<drawSize>1.6</drawSize>
 								<drawOffset>(0,0.1,5.35)</drawOffset>
@@ -462,7 +462,7 @@
 						<value>
 							<li>
 								<graphicClass>Graphic_Multi</graphicClass>
-								<texPath>MapVehiclesOcean/CrowsNest/CrowsNest</texPath>
+								<texPath>MapVehiclesOcean/Things/CrowsNest/CrowsNest</texPath>
 								<shaderType>VMF_CutoutComplexRGBOpacity</shaderType>
 								<drawSize>1.4</drawSize>
 								<drawOffset>(0,0.0001,7.1)</drawOffset>
@@ -471,7 +471,7 @@
 							</li>
 							<li>
 								<graphicClass>Graphic_Multi</graphicClass>
-								<texPath>MapVehiclesOcean/CrowsNest/CrowsNestOverlay</texPath>
+								<texPath>MapVehiclesOcean/Things/CrowsNest/CrowsNestOverlay</texPath>
 								<shaderType>VMF_CutoutComplexRGBOpacity</shaderType>
 								<drawSize>1.4</drawSize>
 								<drawOffset>(0,0.1,7.1)</drawOffset>
@@ -506,7 +506,7 @@
 		</thingCategories>
 		<graphicData>
 			<graphicClass>Graphic_Multi</graphicClass>
-			<texPath>MapVehiclesOcean/Oar/Oar</texPath>
+			<texPath>MapVehiclesOcean/Things/Oar/Oar</texPath>
 			<shaderType>Cutout</shaderType>
 			<drawSize>1.5</drawSize>
 			<drawOffsetNorth>(0,2,-0.1)</drawOffsetNorth>
@@ -581,7 +581,7 @@
 		<designationCategory>VMF_VehicleMap</designationCategory>
 		<designatorDropdown>MV_GrapplingLauncherGroup</designatorDropdown>
 		<graphicData>
-			<texPath>MapVehiclesOcean/GrapplingLauncher/GrapplingLauncher_Base</texPath>
+			<texPath>MapVehiclesOcean/Things/GrapplingLauncher/GrapplingLauncher_Base</texPath>
 			<drawRotated>false</drawRotated>
 			<drawSize>1.05</drawSize>
 		</graphicData>
@@ -630,7 +630,7 @@
 			</li>
 			<li Class="VehicleMapFramework.CompProperties_Zipline">
 				<standbyGraphic>
-					<texPath>MapVehiclesOcean/GrapplingLauncher/GrapplingLauncher_TopOverlay</texPath>
+					<texPath>MapVehiclesOcean/Things/GrapplingLauncher/GrapplingLauncher_TopOverlay</texPath>
 					<graphicClass>Graphic_Single</graphicClass>
 					<drawSize>1.25</drawSize>
 				</standbyGraphic>
@@ -639,7 +639,7 @@
 		<researchPrerequisites>
 		</researchPrerequisites>
 		<uiOrder>1063</uiOrder>
-		<uiIconPath>MapVehiclesOcean/GrapplingLauncher/GrapplingLauncher_MenuIcon</uiIconPath>
+		<uiIconPath>MapVehiclesOcean/Things/GrapplingLauncher/GrapplingLauncher_MenuIcon</uiIconPath>
 		<placeWorkers Inherit="False">
 			<li>PlaceWorker_TurretTop</li>
 		</placeWorkers>
@@ -650,7 +650,7 @@
 		<label>grappling launcher gun</label>
 		<description>TODO: A gun made to be mounted on a zipline turret.</description>
 		<graphicData>
-			<texPath>MapVehiclesOcean/GrapplingLauncher/GrapplingLauncher_Top</texPath>
+			<texPath>MapVehiclesOcean/Things/GrapplingLauncher/GrapplingLauncher_Top</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<statBases>
@@ -679,7 +679,7 @@
 		<graphicData>
 			<graphicClass>Graphic_Single</graphicClass>
 			<shaderType>Transparent</shaderType>
-			<texPath>MapVehiclesOcean/GrapplingLauncher/GrapplingHook</texPath>
+			<texPath>MapVehiclesOcean/Things/GrapplingLauncher/GrapplingHook</texPath>
 			<drawSize>1.5</drawSize>
 		</graphicData>
 		<projectile>
@@ -690,7 +690,7 @@
 		</projectile>
 		<modExtensions>
 			<li Class="VehicleMapFramework.CustomZipline">
-				<texPath>MapVehiclesOcean/GrapplingLauncher/Rope</texPath>
+				<texPath>MapVehiclesOcean/Things/GrapplingLauncher/Rope</texPath>
 				<ziplineWidth>0.09</ziplineWidth>
 				<ziplineEndOffset>0.18</ziplineEndOffset>
 				<launcherOffset>0.55</launcherOffset>
@@ -707,7 +707,7 @@
 		<graphicData>
 			<graphicClass>Graphic_Single</graphicClass>
 			<shaderType>Transparent</shaderType>
-			<texPath>MapVehiclesOcean/GrapplingLauncher/GrapplingHook</texPath>
+			<texPath>MapVehiclesOcean/Things/GrapplingLauncher/GrapplingHook</texPath>
 			<drawSize>1.5</drawSize>
 		</graphicData>
 		<projectile>
@@ -730,7 +730,7 @@
 		<graphicData>
 			<graphicClass>Graphic_Single</graphicClass>
 			<shaderType>Cutout</shaderType>
-			<texPath>MapVehiclesOcean/GrapplingLauncher/GrapplingHook</texPath>
+			<texPath>MapVehiclesOcean/Things/GrapplingLauncher/GrapplingHook</texPath>
 			<drawSize>1.5</drawSize>
 		</graphicData>
 		<statBases>
@@ -754,7 +754,10 @@
 		<designatorDropdown>MV_GrapplingLauncherGroup</designatorDropdown>
 		<graphicData>
 			<graphicClass>Graphic_Multi</graphicClass>
-			<texPath>MapVehiclesOcean/MooringRing/MooringRing</texPath>
+			<texPath>MapVehiclesOcean/Things/MooringRing/MooringRing</texPath>
+			<damageData>
+				<rect>(0.3,0.3,0.7,0.7)</rect>
+			</damageData>
 		</graphicData>
 		<selectable>true</selectable>
 		<statBases>
@@ -780,13 +783,19 @@
 		<drawerType>MapMeshOnly</drawerType>
 		<graphicData>
 			<graphicClass>Graphic_Multi</graphicClass>
-			<texPath>MapVehiclesOcean/Helm/Helm</texPath>
+			<texPath>MapVehiclesOcean/Things/Helm/Helm</texPath>
 			<shaderType>CutoutComplex</shaderType>
 			<color>(128,53,0)</color>
 			<colorTwo>(199,136,20)</colorTwo>
 			<drawOffsetNorth>(0,0,0.23)</drawOffsetNorth>
 			<drawOffsetEast>(0,0,0.1)</drawOffsetEast>
 			<drawOffsetWest>(0,0,0.1)</drawOffsetWest>
+			<damageData>
+				<rectN>(0,0.73,1,1.23)</rectN>
+				<rectE>(0.6,0.1,1,1.1)</rectE>
+				<rectS>(0,0,1,0.55)</rectS>
+				<rectW>(0,0.1,0.4,1.1)</rectW>
+			</damageData>
 			<shadowData>
 				<volume>(0.2,0.1,0.2)</volume>
 				<offset>(0,0,0.23)</offset>
@@ -847,11 +856,10 @@
 		<altitudeLayer>FloorCoverings</altitudeLayer>
 		<graphicData>
 			<graphicClass>Graphic_Single</graphicClass>
-			<texPath>MapVehiclesOcean/Hatch/Hatch</texPath>
-			<shaderType>Cutout</shaderType>
+			<texPath>MapVehiclesOcean/Things/Hatch/Hatch</texPath>
 			<drawSize>(4,4)</drawSize>
 			<damageData>
-				<rect>(0.5,0.5,3.5,3.5)</rect>
+				<rect>(0.125,0.125,0.875,0.875)</rect>
 			</damageData>
 		</graphicData>
 		<size>(3,3)</size>

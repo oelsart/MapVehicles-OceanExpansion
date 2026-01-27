@@ -1,0 +1,183 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    
+    <PrefabDef>
+        <defName>MV_ShipwreckA</defName>
+        <size>(7,15)</size>
+        <things>
+            <MV_ShipwreckHatch>
+                <position>(3, 0, 9)</position>
+                <stuff>WoodLog</stuff>
+            </MV_ShipwreckHatch>
+            <Table1x2c>
+                <position>(5, 0, 2)</position>
+                <stuff>WoodLog</stuff>
+                <quality>Normal</quality>
+            </Table1x2c>
+            <Door>
+                <position>(2, 0, 4)</position>
+                <stuff>WoodLog</stuff>
+            </Door>
+            <MV_ShipFloorDiagonalC>
+                <position>(2, 0, 14)</position>
+                <relativeRotation>Opposite</relativeRotation>
+            </MV_ShipFloorDiagonalC>
+            <MV_ShipFloorDiagonalC>
+                <position>(4, 0, 14)</position>
+                <relativeRotation>Counterclockwise</relativeRotation>
+            </MV_ShipFloorDiagonalC>
+            <MV_ShipFloorDiagonalCB>
+                <position>(1, 0, 13)</position>
+                <relativeRotation>Opposite</relativeRotation>
+            </MV_ShipFloorDiagonalCB>
+            <MV_ShipFloorDiagonalBC>
+                <position>(5, 0, 13)</position>
+                <relativeRotation>Counterclockwise</relativeRotation>
+            </MV_ShipFloorDiagonalBC>
+            <MV_ShipFloorDiagonalBA>
+                <position>(6, 0, 1)</position>
+            </MV_ShipFloorDiagonalBA>
+            <MV_ShipFloorDiagonalBA>
+                <position>(0, 0, 12)</position>
+                <relativeRotation>Opposite</relativeRotation>
+            </MV_ShipFloorDiagonalBA>
+            <MV_ShipFloorDiagonalAB>
+                <position>(0, 0, 1)</position>
+                <relativeRotation>Clockwise</relativeRotation>
+            </MV_ShipFloorDiagonalAB>
+            <MV_ShipFloorDiagonalAB>
+                <position>(6, 0, 12)</position>
+                <relativeRotation>Counterclockwise</relativeRotation>
+            </MV_ShipFloorDiagonalAB>
+            <Fence>
+                <rects>
+                    <li>(0,8,0,9)</li>
+                    <li>(6,8,6,9)</li>
+                    <li>(3,13,3,14)</li>
+                </rects>
+                <stuff>WoodLog</stuff>
+            </Fence>
+            <MV_ShipwreckMast>
+                <position>(3, 0, 6)</position>
+            </MV_ShipwreckMast>
+            <DiningChair>
+                <position>(4, 0, 3)</position>
+                <relativeRotation>Clockwise</relativeRotation>
+                <stuff>WoodLog</stuff>
+                <quality>Poor</quality>
+            </DiningChair>
+            <MV_ShipwreckBarrel>
+                <rects>
+                    <li>(2,1,4,1)</li>
+                </rects>
+            </MV_ShipwreckBarrel>
+            <Bed>
+                <position>(1, 0, 3)</position>
+                <relativeRotation>Opposite</relativeRotation>
+                <stuff>WoodLog</stuff>
+                <quality>Normal</quality>
+            </Bed>
+            <MV_ShipwreckCannon>
+                <rects>
+                    <li>(0,7,0,7)</li>
+                    <li>(0,10,0,10)</li>
+                </rects>
+                <relativeRotation>Counterclockwise</relativeRotation>
+            </MV_ShipwreckCannon>
+            <MV_ShipwreckCannon>
+                <position>(6, 0, 10)</position>
+                <relativeRotation>Clockwise</relativeRotation>
+            </MV_ShipwreckCannon>
+            <MV_Helm>
+                <position>(3, 0, 12)</position>
+            </MV_Helm>
+            <TorchWallLamp>
+                <position>(3, 0, 3)</position>
+            </TorchWallLamp>
+            <Fence_NAWDiagonal>
+                <rects>
+                    <li>(0,11,0,11)</li>
+                    <li>(6,11,6,11)</li>
+                    <li>(1,12,1,12)</li>
+                    <li>(5,12,5,12)</li>
+                    <li>(2,13,2,13)</li>
+                    <li>(4,13,4,13)</li>
+                </rects>
+                <stuff>WoodLog</stuff>
+            </Fence_NAWDiagonal>
+            <Wall>
+                <rects>
+                    <li>(1,0,5,0)</li>
+                    <li>(0,3,0,4)</li>
+                    <li>(6,3,6,4)</li>
+                    <li>(1,4,1,4)</li>
+                    <li>(3,4,5,4)</li>
+                </rects>
+                <stuff>WoodLog</stuff>
+            </Wall>
+            <MV_MooringRing>
+                <position>(6, 0, 5)</position>
+            </MV_MooringRing>
+            <Wall_NAWDiagonal>
+                <rects>
+                    <li>(1,1,1,1)</li>
+                    <li>(5,1,5,1)</li>
+                    <li>(0,2,0,2)</li>
+                    <li>(6,2,6,2)</li>
+                </rects>
+                <stuff>WoodLog</stuff>
+            </Wall_NAWDiagonal>
+        </things>
+        <terrain>
+            <WaterOceanDeep>
+                <rects>
+                    <li>(0,0,0,0)</li>
+                    <li>(6,0,6,0)</li>
+                    <li>(0,13,0,14)</li>
+                    <li>(6,13,6,14)</li>
+                    <li>(1,14,1,14)</li>
+                    <li>(5,14,5,14)</li>
+                </rects>
+            </WaterOceanDeep>
+            <WaterOceanShallow>
+                <rects>
+                    <li>(1,0,5,0)</li>
+                    <li>(0,1,6,12)</li>
+                    <li>(1,13,5,13)</li>
+                    <li>(2,14,4,14)</li>
+                </rects>
+            </WaterOceanShallow>
+            <MV_WoodShipwreckFloorA>
+                <rects>
+                    <li>(0,2,6,3)</li>
+                    <li>(0,4,0,4)</li>
+                    <li>(3,4,6,4)</li>
+                    <li>(0,8,1,11)</li>
+                    <li>(2,9,6,11)</li>
+                </rects>
+            </MV_WoodShipwreckFloorA>
+            <MV_WoodShipwreckFloorB>
+                <rects>
+                    <li>(1,0,5,1)</li>
+                    <li>(1,12,5,12)</li>
+                    <li>(2,13,4,13)</li>
+                </rects>
+            </MV_WoodShipwreckFloorB>
+            <MV_WoodShipwreckFloorC>
+                <rects>
+                    <li>(3,14,3,14)</li>
+                </rects>
+            </MV_WoodShipwreckFloorC>
+            <WoodPlankFloor>
+                <rects>
+                    <li>(1,4,2,4)</li>
+                    <li>(4,5,6,5)</li>
+                    <li>(0,7,2,7)</li>
+                    <li>(2,8,6,8)</li>
+                    <li>(3,6,3,6)</li>
+                </rects>
+            </WoodPlankFloor>
+        </terrain>
+    </PrefabDef>
+
+</Defs>

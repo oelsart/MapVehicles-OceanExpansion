@@ -7,7 +7,7 @@
 		<description>TODO</description>
 
 		<graphicData>
-			<texPath>MapVehiclesOcean/Raft/Raft</texPath>
+			<texPath>MapVehiclesOcean/Things/Raft/Raft</texPath>
 			<graphicClass>Vehicles.Graphic_Vehicle</graphicClass>
 			<shaderType>CutoutComplexPattern</shaderType>
 			<drawSize>(4,4)</drawSize>

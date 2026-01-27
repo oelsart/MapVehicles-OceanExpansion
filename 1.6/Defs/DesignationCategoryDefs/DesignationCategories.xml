@@ -11,5 +11,16 @@
 			<li>Designator_Deconstruct</li>
 		</specialDesignatorClasses>
 	</DesignationCategoryDef>
+	
+	<DesignationCategoryDef>
+		<defName>MV_Dev</defName>
+		<label>DEV: Props</label>
+		<order>0</order>
+
+		<specialDesignatorClasses>
+			<li>Designator_Cancel</li>
+			<li>Designator_Deconstruct</li>
+		</specialDesignatorClasses>
+	</DesignationCategoryDef>
 
 </Defs>

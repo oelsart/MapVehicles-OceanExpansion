@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <TerrainDef Name="MV_WoodShipwreckFloor" ParentName="FloorBase">
+        <defName>MV_WoodShipwreckFloorA</defName>
+        <label>wood floor</label>
+        <description>Wood plank flooring for that warm, homey feeling. While it is quick to lay, it is also very flammable.</description>
+        <texturePath>Terrain/Surfaces/WoodFloor</texturePath>
+        <bridgePropsPath>MapVehiclesOcean/Things/WoodShipProps/WoodShipPropsA</bridgePropsPath>
+        <color>(108,78,55)</color>
+        <fertility>0</fertility>
+        <edgeType>Hard</edgeType>
+        <bridge>true</bridge>
+        <isFoundation>true</isFoundation>
+        <renderPrecedence>250</renderPrecedence>
+        <preventCraters>true</preventCraters>
+        <affordances>
+            <li>Light</li>
+            <li>Medium</li>
+            <li>Heavy</li>
+            <li>Walkable</li>
+        </affordances>
+        <designationCategory Inherit="False"/>
+        <statBases>
+            <Flammability>0.22</Flammability>
+        </statBases>
+    </TerrainDef>
+    
+    <TerrainDef ParentName="MV_WoodShipwreckFloor">
+        <defName>MV_WoodShipwreckFloorB</defName>
+        <bridgePropsPath>MapVehiclesOcean/Things/WoodShipProps/WoodShipPropsB</bridgePropsPath>
+    </TerrainDef>
+
+    <TerrainDef ParentName="MV_WoodShipwreckFloor">
+        <defName>MV_WoodShipwreckFloorC</defName>
+        <bridgePropsPath>MapVehiclesOcean/Things/WoodShipProps/WoodShipPropsC</bridgePropsPath>
+    </TerrainDef>
+    
+</Defs>

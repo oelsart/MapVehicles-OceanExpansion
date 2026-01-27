@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    
+    <QuestScriptDef>
+        <defName>MV_Shipwreck</defName>
+        <autoAccept>true</autoAccept>
+        <defaultChallengeRating>1</defaultChallengeRating>
+        <isRootSpecial>true</isRootSpecial>
+        <questNameRules>
+            <rulesStrings>
+                <li>questName->[MV_wreck] of [MV_ship]</li>
+                <li>questName->[MV_ship] [MV_wreck]</li>
+                <li>questName->The [MV_ship] [MV_wreck]</li>
+                <li>questName->[MV_sunken] [MV_ship]</li>
+                <li>questName->[MV_ship] [MV_found]</li>
+                
+                <li>MV_ship->ship</li>
+                <li>MV_ship->vessel</li>
+                <li>MV_ship->boat</li>
+                <li>MV_ship->craft</li>
+                <li>MV_ship->freighter</li>
+                <li>MV_ship->transport</li>
+
+                <li>MV_wreck->wreck</li>
+                <li>MV_wreck->wreckage</li>
+                <li>MV_wreck->remains</li>
+                <li>MV_wreck->hulk</li>
+                <li>MV_wreck->ruin</li>
+
+                <li>MV_sunken->sunken</li>
+                <li>MV_sunken->ghost</li>
+                <li>MV_sunken->derelict</li>
+                <li>MV_sunken->distant</li>
+                <li>MV_sunken->far</li>
+                <li>MV_sunken->unknown</li>
+                
+                <li>MV_found->found</li>
+                <li>MV_found->spotted</li>
+                <li>MV_found->sighted</li>
+                <li>MV_found->located</li>
+
+            </rulesStrings>
+        </questNameRules>
+        <questDescriptionRules>
+            <rulesStrings>
+                <li>questDescription->By the lookout, [worker_definite] has found a shipwreck nearby.\n\nUnfortunately, it won't last - others will scavenge it first in [timeoutTicks_duration] if we don't.[MV_ShipwreckThreatDescription]</li>
+            </rulesStrings>
+        </questDescriptionRules>
+        <root Class="QuestNode_Sequence">
+            <nodes>
+                <li Class="QuestNode_SubScript">
+                    <def>Util_AdjustPointsForDistantFight</def>
+                </li>
+
+                <li Class="VehicleMapFramework.QuestNode_GetSeaSiteTile">
+                    <storeAs>siteTile</storeAs>
+                    <preferCloserTiles>true</preferCloserTiles>
+                </li>
+
+                <li Class="QuestNode_ViolentQuestsAllowed">
+                    <node Class="QuestNode_Set">
+                        <name>siteThreatChance</name>
+                        <value>0.5</value>
+                    </node>
+                    <elseNode Class="QuestNode_Set">
+                        <name>siteThreatChance</name>
+                        <value>0</value>
+                    </elseNode>
+                </li>
+
+                <li Class="QuestNode_GetSitePartDefsByTagsAndFaction">
+                    <storeAs>sitePartDefs</storeAs>
+                    <storeFactionAs>siteFaction</storeFactionAs>
+                    <sitePartsTags>
+                        <li>
+                            <tag>MV_Shipwreck</tag>
+                        </li>
+                        <li>
+                            <tag>MV_SeaThreat</tag>
+                            <chance>$siteThreatChance</chance>
+                        </li>
+                    </sitePartsTags>
+                </li>
+
+                <li Class="QuestNode_GetDefaultSitePartsParams">
+                    <tile>$siteTile</tile>
+                    <faction>$siteFaction</faction>
+                    <sitePartDefs>$sitePartDefs</sitePartDefs>
+                    <storeSitePartsParamsAs>sitePartsParams</storeSitePartsParamsAs>
+                </li>
+
+                <li Class="QuestNode_SubScript">
+                    <def>VMF_Util_GenerateSeaSite</def>
+                </li>
+
+                <li Class="QuestNode_SpawnWorldObjects">
+                    <worldObjects>$site</worldObjects>
+                </li>
+
+                <li Class="QuestNode_Set">
+                    <name>timeoutTicks</name>
+                    <value>$(30*60000)</value>
+                </li>
+                <li Class="QuestNode_WorldObjectTimeout">
+                    <worldObject>$site</worldObject>
+                    <delayTicks>$timeoutTicks</delayTicks>
+                    <isQuestTimeout>true</isQuestTimeout>
+                    <inSignalDisable>site.MapGenerated</inSignalDisable>
+                    <node Class="QuestNode_Sequence">
+                        <nodes>
+                            <li Class="QuestNode_Letter">
+                                <label TKey="LetterLabelQuestExpired">Quest expired: [resolvedQuestName]</label>
+                                <text TKey="LetterTextQuestExpired">Others have scavenged the shipwreck. The quest [resolvedQuestName] has expired.</text>
+                            </li>
+                            <li Class="QuestNode_End">
+                                <outcome>Fail</outcome>
+                            </li>
+                        </nodes>
+                    </node>
+                </li>
+
+                <li Class="QuestNode_NoWorldObject">
+                    <worldObject>$site</worldObject>
+                    <node Class="QuestNode_End" />
+                </li>
+            </nodes>
+        </root>
+    </QuestScriptDef>
+    
+</Defs>

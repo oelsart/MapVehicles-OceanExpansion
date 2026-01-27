@@ -10,7 +10,7 @@ function Process-PngFile {
 		# アルファチャンネル存在判定
 		if ($(magick identify -format "%[channels]" $filePath) -match "a") {
 			Write-Host "変換中: $($filePath | Split-Path -Leaf)" -ForegroundColor Green
-			magick "$filePath" -channel rgba -fx "u.a==0?0:u" "$filePath"
+			magick "$filePath" -background black -alpha background -channel RGB -fx "u*a" "$filePath"
 		} else {
 			Write-Host "スキップ: $($filePath | Split-Path -Leaf)"
 		}
