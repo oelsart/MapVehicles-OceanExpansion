@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    
+    <TerrainDef Name="MV_VirtualWaterBase" ParentName="WaterDeepBase" Abstract="True">
+        <dontRender>true</dontRender>
+        <edgeType>Hard</edgeType>
+    </TerrainDef>
+    
+    <TerrainDef ParentName="MV_VirtualWaterBase">
+        <defName>MV_WaterDeepVirtual</defName>
+        <label>deep water</label>
+    </TerrainDef>
+
+    <TerrainDef ParentName="MV_VirtualWaterBase">
+        <defName>MV_WaterOceanDeepVirtual</defName>
+        <label>deep ocean water</label>
+        <waterBodyType>Saltwater</waterBodyType>
+    </TerrainDef>
+
+    <TerrainDef ParentName="MV_VirtualWaterBase">
+        <defName>MV_NoWaterVirtual</defName>
+        <label>out of bounds</label>
+        <waterBodyType>Other</waterBodyType>
+    </TerrainDef>
+    
+</Defs>

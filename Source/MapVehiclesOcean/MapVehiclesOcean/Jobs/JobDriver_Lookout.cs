@@ -7,7 +7,7 @@ using Verse.AI;
 namespace MapVehicles;
 
 [HotSwap]
-public class JobDriver_Lookout : JobDriver_OperateScanner
+public class JobDriver_Lookout : JobDriver_OperateScanner, IBodyOffsetJobDriver
 {
     public override Vector3 ForcedBodyOffset
     {
@@ -25,6 +25,8 @@ public class JobDriver_Lookout : JobDriver_OperateScanner
             return offset + new Vector3(0f, 0f, 1.35f);
         }
     }
+
+    float IBodyOffsetJobDriver.PawnDrawPosOffset_Y => 0.1f;
 
     protected override IEnumerable<Toil> MakeNewToils()
     {

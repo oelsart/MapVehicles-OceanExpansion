@@ -1,0 +1,197 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <PrefabDef>
+        <defName>MV_ExpandableRaft_PrefabA</defName>
+        <size>(5,5)</size>
+        <terrain>
+            <VMF_VehicleFloor>
+                <rects>
+                    <li>(1,0,3,0)</li>
+                    <li>(1,4,3,4)</li>
+                    <li>(0,0,0,4)</li>
+                    <li>(4,0,4,4)</li>
+                </rects>
+            </VMF_VehicleFloor>
+        </terrain>
+        <things>
+            <MV_RaftPiece>
+                <rects>
+                    <li>(1,0,3,0)</li>
+                    <li>(1,4,3,4)</li>
+                </rects>
+            </MV_RaftPiece>
+            <MV_RaftPieceFloat>
+                <rects>
+                    <li>(0,0,0,4)</li>
+                    <li>(4,0,4,4)</li>
+                </rects>
+            </MV_RaftPieceFloat>
+            <Battery>
+                <position>(0, 0, 0)</position>
+            </Battery>
+            <Turret_MiniTurret>
+                <position>(0, 0, 4)</position>
+                <stuff>Steel</stuff>
+            </Turret_MiniTurret>
+            <MV_RigOneTiered>
+                <position>(2, 0, 2)</position>
+                <stuff>Cloth</stuff>
+            </MV_RigOneTiered>
+            <PowerConduit>
+                <rects>
+                    <li>(0,2,0,4)</li>
+                </rects>
+            </PowerConduit>
+            <Bedroll>
+                <position>(3, 0, 2)</position>
+                <relativeRotation>Opposite</relativeRotation>
+                <stuff>Cloth</stuff>
+                <quality>Poor</quality>
+            </Bedroll>
+            <Shelf>
+                <positions>
+                    <li>(4, 0, 1)</li>
+                    <li>(4, 0, 3)</li>
+                </positions>
+                <relativeRotation>Counterclockwise</relativeRotation>
+                <stuff>WoodLog</stuff>
+            </Shelf>
+            <MV_Oar>
+                <position>(2, 0, 0)</position>
+            </MV_Oar>
+            <WoodLog>
+                <rects>
+                    <li>(4,3,4,3)</li>
+                </rects>
+                <stackCountRange>15~75</stackCountRange>
+            </WoodLog>
+            <MedicineHerbal>
+                <position>(4, 0, 2)</position>
+                <stackCountRange>10~25</stackCountRange>
+            </MedicineHerbal>
+            <Steel>
+                <position>(4, 0, 4)</position>
+                <stackCountRange>15~75</stackCountRange>
+            </Steel>
+            <MealSurvivalPack>
+                <rects>
+                    <li>(4,1,4,1)</li>
+                </rects>
+                <stackCountRange>5~10</stackCountRange>
+            </MealSurvivalPack>
+        </things>
+    </PrefabDef>
+
+    <PrefabDef>
+        <defName>MV_ExpandableRaft_PrefabB</defName>
+        <size>(7,11)</size>
+        <terrain>
+            <VMF_VehicleFloor>
+                <rects>
+                    <li>(1,1,5,3)</li>
+                    <li>(1,4,1,9)</li>
+                    <li>(5,4,5,9)</li>
+                    <li>(2,7,4,9)</li>
+                    <li>(0,0,0,10)</li>
+                    <li>(6,0,6,10)</li>
+                </rects>
+            </VMF_VehicleFloor>
+        </terrain>
+        <things>
+            <MV_RaftPiece>
+                <rects>
+                    <li>(1,1,5,3)</li>
+                    <li>(1,4,1,9)</li>
+                    <li>(5,4,5,9)</li>
+                    <li>(2,7,4,9)</li>
+                </rects>
+            </MV_RaftPiece>
+            <MV_RaftPieceFloat>
+                <rects>
+                    <li>(0,0,0,10)</li>
+                    <li>(6,0,6,10)</li>
+                </rects>
+            </MV_RaftPieceFloat>
+            <Battery>
+                <positions>
+                    <li>(2, 0, 3)</li>
+                    <li>(2, 0, 6)</li>
+                </positions>
+            </Battery>
+            <MV_Cannon_Blueprint>
+                <positions>
+                    <li>(1, 0, 5)</li>
+                </positions>
+                <relativeRotation>Counterclockwise</relativeRotation>
+            </MV_Cannon_Blueprint>
+            <Turret_MiniTurret>
+                <rects>
+                    <li>(1,3,1,3)</li>
+                    <li>(1,7,1,7)</li>
+                </rects>
+                <stuff>Steel</stuff>
+            </Turret_MiniTurret>
+            <Turret_Mortar>
+                <position>(5, 0, 7)</position>
+                <relativeRotation>Clockwise</relativeRotation>
+                <stuff>Steel</stuff>
+            </Turret_Mortar>
+            <Barricade>
+                <rects>
+                    <li>(0,3,0,7)</li>
+                </rects>
+                <stuff>Steel</stuff>
+            </Barricade>
+            <MV_CrowsNest>
+                <position>(3, 0, 5)</position>
+            </MV_CrowsNest>
+            <PowerConduit>
+                <position>(2, 0, 5)</position>
+            </PowerConduit>
+            <MV_RigTwoTiered>
+                <position>(3, 0, 5)</position>
+                <stuff>Cloth</stuff>
+            </MV_RigTwoTiered>
+            <Shelf>
+                <position>(6, 0, 3)</position>
+                <relativeRotation>Counterclockwise</relativeRotation>
+                <stuff>Steel</stuff>
+            </Shelf>
+            <MV_Cannonball>
+                <positions>
+                    <li>(6, 0 ,3)</li>
+                    <li>(6, 0 ,3)</li>
+                    <li>(6, 0 ,3)</li>
+                </positions>
+                <stackCountRange>5~25</stackCountRange>
+            </MV_Cannonball>
+            <Shell_HighExplosive>
+                <positions>
+                    <li>(6, 0 ,4)</li>
+                    <li>(6, 0 ,4)</li>
+                    <li>(6, 0 ,4)</li>
+                </positions>
+                <stackCountRange>1~15</stackCountRange>
+            </Shell_HighExplosive>
+            <MV_Oar>
+                <rects>
+                    <li>(1,1,1,1)</li>
+                    <li>(5,1,5,1)</li>
+                </rects>
+            </MV_Oar>
+            <MV_MooringRing>
+                <positions>
+                    <li>(0, 0, 0)</li>
+                    <li>(6, 0, 0)</li>
+                    <li>(0, 0, 10)</li>
+                    <li>(6, 0, 10)</li>
+                </positions>
+            </MV_MooringRing>
+            <MV_Turret_GrapplingLauncher>
+                <position>(3, 0, 1)</position>
+            </MV_Turret_GrapplingLauncher>
+        </things>
+    </PrefabDef>
+
+</Defs>

@@ -1,0 +1,7 @@
+<Analyzer>
+	<MapVehiclesOcean>
+		<Types>
+			<li>MapVehicles.CompFishingSpot</li>
+		</Types>
+	</MapVehiclesOcean>
+</Analyzer>

@@ -7,20 +7,33 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MapVehiclesOcean", "MapVehi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NanameWalls", "..\..\NanameWalls\Source\NANAMEWalls\NanameWalls\NanameWalls.csproj", "{F14D240F-3AB5-4AAA-A6C0-82FA55F7B81F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VehicleMapFramework", "..\..\..\VehicleMapFramework\Source\VehicleMapFramework\VehicleMapFramework.csproj", "{34BA798B-C6E2-44E5-8570-13D6CC7D7274}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
+		Dev|Any CPU = Dev|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{D4BCD246-5CEA-4B7B-8F3C-7C0131BB511E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{D4BCD246-5CEA-4B7B-8F3C-7C0131BB511E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D4BCD246-5CEA-4B7B-8F3C-7C0131BB511E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D4BCD246-5CEA-4B7B-8F3C-7C0131BB511E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D4BCD246-5CEA-4B7B-8F3C-7C0131BB511E}.Dev|Any CPU.ActiveCfg = Dev|Any CPU
+		{D4BCD246-5CEA-4B7B-8F3C-7C0131BB511E}.Dev|Any CPU.Build.0 = Dev|Any CPU
 		{F14D240F-3AB5-4AAA-A6C0-82FA55F7B81F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{F14D240F-3AB5-4AAA-A6C0-82FA55F7B81F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F14D240F-3AB5-4AAA-A6C0-82FA55F7B81F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F14D240F-3AB5-4AAA-A6C0-82FA55F7B81F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F14D240F-3AB5-4AAA-A6C0-82FA55F7B81F}.Dev|Any CPU.ActiveCfg = Release|Any CPU
+		{F14D240F-3AB5-4AAA-A6C0-82FA55F7B81F}.Dev|Any CPU.Build.0 = Release|Any CPU
+		{34BA798B-C6E2-44E5-8570-13D6CC7D7274}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{34BA798B-C6E2-44E5-8570-13D6CC7D7274}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{34BA798B-C6E2-44E5-8570-13D6CC7D7274}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{34BA798B-C6E2-44E5-8570-13D6CC7D7274}.Release|Any CPU.Build.0 = Release|Any CPU
+		{34BA798B-C6E2-44E5-8570-13D6CC7D7274}.Dev|Any CPU.ActiveCfg = Dev|Any CPU
+		{34BA798B-C6E2-44E5-8570-13D6CC7D7274}.Dev|Any CPU.Build.0 = Dev|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

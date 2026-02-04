@@ -6,6 +6,8 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <OutDir>../../../1.6/Assemblies</OutDir>
     <RootNamespace>MapVehicles</RootNamespace>
+    <Configurations>Debug;Release;Dev</Configurations>
+    <Platforms>AnyCPU</Platforms>
   </PropertyGroup>
 
   <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">

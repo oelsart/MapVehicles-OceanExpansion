@@ -12,7 +12,8 @@
 						<clipPath>MapVehiclesOcean/Water_Splash</clipPath>
 					</li>
 				</grains>
-				<volumeRange>20~20</volumeRange>
+				<volumeRange>10~25</volumeRange>
+				<pitchRange>0.8~2.5</pitchRange>
 			</li>
 		</subSounds>
 	</SoundDef>

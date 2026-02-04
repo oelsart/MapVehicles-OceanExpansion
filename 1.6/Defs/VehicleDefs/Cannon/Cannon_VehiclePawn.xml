@@ -39,7 +39,7 @@
 		</vehicleStats>
 
 		<race>
-			<baseBodySize>2</baseBodySize>
+			<baseBodySize>1.5</baseBodySize>
 		</race>
 		
 		<properties>
@@ -70,7 +70,7 @@
 						<drawOffsetNorth>(0,0,-0.75)</drawOffsetNorth>
 						<drawOffsetSouth>(0,0,0.75)</drawOffsetSouth>
 						<drawOffsetEast>(-0.75,0,0)</drawOffsetEast>
-						<layerNorth>1</layerNorth>
+						<layerNorth>0</layerNorth>
 						<layerSouth>-10</layerSouth>
 					</pawnRenderer>
 				</li>
@@ -81,12 +81,12 @@
 			<li>
 				<key>Barrel</key>
 				<label>Barrel</label>
-				<health>250</health>
+				<health>160</health>
 				<depth>External</depth>
 				<armor>
-					<ArmorRating_Blunt>1</ArmorRating_Blunt>
-					<ArmorRating_Sharp>1.5</ArmorRating_Sharp>
-					<ArmorRating_Heat>0.75</ArmorRating_Heat>
+					<ArmorRating_Blunt>0.75</ArmorRating_Blunt>
+					<ArmorRating_Sharp>0.9</ArmorRating_Sharp>
+					<ArmorRating_Heat>0.3</ArmorRating_Heat>
 				</armor>
 				<hitbox>
 					<side>Body</side>
@@ -95,12 +95,11 @@
 			<li>
 				<key>Carriage</key>
 				<label>Carriage</label>
-				<health>80</health>
+				<health>60</health>
 				<depth>External</depth>
 				<armor>
-					<ArmorRating_Blunt>0.25</ArmorRating_Blunt>
-					<ArmorRating_Sharp>0.25</ArmorRating_Sharp>
-					<ArmorRating_Heat>0.2</ArmorRating_Heat>
+					<ArmorRating_Blunt>0.2</ArmorRating_Blunt>
+					<ArmorRating_Sharp>0.2</ArmorRating_Sharp>
 				</armor>
 				<hitbox>
 					<side>Body</side>
@@ -115,11 +114,11 @@
 			<li Class="Vehicles.CompProperties_VehicleTurrets">
 				<deployTime>0.5</deployTime>
 				<turrets>
-					<li Class="VehicleMapFramework.VehicleTurret_RotateVehicle">
+					<li Class="MapVehicles.VehicleTurret_Cannon">
 						<turretDef>MV_Cannon_Turret</turretDef>
 						<gizmoLabel>Cannon</gizmoLabel>
 						<aimPieOffset>(0, 1)</aimPieOffset>
-						<angleRestricted>(292.5,67.5)</angleRestricted>
+						<angleRestricted>(0,359)</angleRestricted>
 						<key>cannonturret</key>
 						<component>
 							<key>Barrel</key>

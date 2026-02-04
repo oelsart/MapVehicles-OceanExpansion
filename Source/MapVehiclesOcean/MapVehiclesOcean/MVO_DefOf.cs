@@ -24,4 +24,10 @@ public static class MVO_DefOf
     public static QuestScriptDef MV_Shipwreck;
 
     public static ThingSetMakerDef MV_ShipwreckCargo;
+
+    public static TerrainDef MV_WaterDeepVirtual;
+    
+    public static TerrainDef MV_WaterOceanDeepVirtual;
+    
+    public static TerrainDef MV_NoWaterVirtual;
 }

@@ -38,6 +38,8 @@
 			<RepairRate>1.75</RepairRate>
 			<MaximumPayload>450</MaximumPayload>
 		</vehicleStats>
+		
+		<combatPower>50</combatPower>
 
 		<race>
 			<baseBodySize>4</baseBodySize>
@@ -71,6 +73,25 @@
 		<comps>
 			<li Class="VehicleMapFramework.CompProperties_RelatedBuildCommands"/>
 			<li Class="VehicleMapFramework.CompProperties_RemoveSegmentGizmo"/>
+			<li Class="VehicleMapFramework.CompProperties_DelayedKill">
+				<message>VMF_BeginToSink</message>
+				<effecterDef>MV_SinkSplash</effecterDef>
+			</li>
+			<li Class="VehicleMapFramework.CompProperties_NpcVehicleMap">
+				<pawnCountWeight>0.8</pawnCountWeight>
+				<mapParamsList>
+					<li>
+						<pawnCountRange>0~2</pawnCountRange>
+						<prefabDef>MV_ExpandableRaft_PrefabA</prefabDef>
+						<preferredDir>North</preferredDir>
+					</li>
+					<li>
+						<pawnCountRange>3~</pawnCountRange>
+						<prefabDef>MV_ExpandableRaft_PrefabB</prefabDef>
+						<preferredDir>West</preferredDir>
+					</li>
+				</mapParamsList>
+			</li>
 		</comps>
 
 		<modExtensions>

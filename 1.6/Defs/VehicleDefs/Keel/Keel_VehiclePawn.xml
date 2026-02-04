@@ -43,8 +43,10 @@
 			<MoveSpeed>0.11</MoveSpeed>
 			<CargoCapacity>300</CargoCapacity>
 			<RepairRate>1.75</RepairRate>
-			<MaximumPayload>3000</MaximumPayload>
+			<MaximumPayload>5000</MaximumPayload>
 		</vehicleStats>
+
+		<combatPower>100</combatPower>
 
 		<race>
 			<baseBodySize>12</baseBodySize>
@@ -76,11 +78,20 @@
 
 		<comps>
 			<li Class="VehicleMapFramework.CompProperties_RelatedBuildCommands"/>
+			<li Class="VehicleMapFramework.CompProperties_DelayedKill">
+				<message>VMF_BeginToSink</message>
+				<effecterDef>MV_SinkSplash</effecterDef>
+			</li>
 			<li Class="VehicleMapFramework.CompProperties_NpcVehicleMap">
 				<mapParamsList>
 					<li>
-						<pawnCountRange>0~</pawnCountRange>
+						<pawnCountRange>0~6</pawnCountRange>
 						<prefabDef>MV_Keel_PrefabA</prefabDef>
+						<preferredDir>North</preferredDir>
+					</li>
+					<li>
+						<pawnCountRange>3~</pawnCountRange>
+						<prefabDef>MV_Keel_PrefabB</prefabDef>
 						<preferredDir>West</preferredDir>
 					</li>
 				</mapParamsList>

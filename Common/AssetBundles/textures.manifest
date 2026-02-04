@@ -1,15 +1,15 @@
 ManifestFileVersion: 0
-CRC: 3908065621
+CRC: 2837389548
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 84d721ab4da692d7ac87fadd94c32b75
+    Hash: 68d8f6100f6b238635dbeabe258d508d
   TypeTreeHash:
     serializedVersion: 2
     Hash: ce3b6d18a872ca8039cd5eb3c4fb7ef5
   IncrementalBuildHash:
     serializedVersion: 2
-    Hash: 84d721ab4da692d7ac87fadd94c32b75
+    Hash: 68d8f6100f6b238635dbeabe258d508d
 HashAppended: 0
 ClassTypes:
 - Class: 28
@@ -99,6 +99,7 @@ Assets:
 - Assets/Data/OELS.MapVehicles.OceanExpansion/Textures/MapVehiclesOcean/Things/Rig/Rig1/Leathery_Rig1_eastm.png
 - Assets/Data/OELS.MapVehicles.OceanExpansion/Textures/MapVehiclesOcean/Things/Rig/Rig1/Fabric_Rig1_northm.png
 - Assets/Data/OELS.MapVehicles.OceanExpansion/Textures/MapVehiclesOcean/Things/Rig/Rig1/Leathery_Rig1_northm.png
+- Assets/Data/OELS.MapVehicles.OceanExpansion/Textures/MapVehiclesOcean/Things/FishingSpot/FishingSpot.png
 - Assets/Data/OELS.MapVehicles.OceanExpansion/Textures/MapVehiclesOcean/Things/Rig/Rig3/Fabric_Rig3_southm.png
 - Assets/Data/OELS.MapVehicles.OceanExpansion/Textures/MapVehiclesOcean/Things/Helm/Helm_east.png
 - Assets/Data/OELS.MapVehicles.OceanExpansion/Textures/MapVehiclesOcean/Things/Cannon/CannonballResource/Cannonball_a.png

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-	<ThingDef Name="MV_ShipEquipmentBase" Abstract="True">
+	<ThingDef Name="MV_ShipEquipmentBase" ParentName="BuildingBase" Abstract="True">
 		<tradeability>None</tradeability>
 		<category>Building</category>
 		<thingClass>Building</thingClass>
@@ -13,12 +13,13 @@
 
 	<ThingDef Name="MV_RaftPieceBase" ParentName="MV_ShipEquipmentBase" Abstract="True">
 		<thingClass>VehicleMapFramework.VehicleStructure</thingClass>
-		<drawerType>MapMeshOnly</drawerType>
 		<altitudeLayer>BelowTerrain</altitudeLayer>
 		<designatorDropdown>MV_RaftPieceGroup</designatorDropdown>
 		<useBlueprintGraphicAsGhost>true</useBlueprintGraphicAsGhost>
 		<useHitPoints>false</useHitPoints>
 		<destroyable>false</destroyable>
+		<selectable>false</selectable>
+		<noRightClickDraftAttack>true</noRightClickDraftAttack>
 		<drawStyleCategory>Floors</drawStyleCategory>
 		<drawGUIOverlay>true</drawGUIOverlay>
 		<drawGUIOverlayQuality>false</drawGUIOverlayQuality>
@@ -26,6 +27,7 @@
 			<isEdifice>false</isEdifice>
 			<deconstructible>false</deconstructible>
 		</building>
+		<terrainAffordanceNeeded>VMF_ImpassableFloor</terrainAffordanceNeeded>
 		<placeWorkers>
 			<li>VehicleMapFramework.PlaceWorker_MapExpander</li>
 			<li>VehicleMapFramework.PlaceWorker_VehicleRelatedBuildings</li>
@@ -76,7 +78,7 @@
 						<vehicleStats>
 							<li>
 								<def>MaximumPayload</def>
-								<value>50</value>
+								<value>10</value>
 							</li>
 						</vehicleStats>
 					</li>
@@ -84,7 +86,7 @@
 						<health>
 							<li>
 								<key>Body</key>
-								<value>100</value>
+								<value>10</value>
 							</li>
 						</health>
 					</li>
@@ -135,7 +137,7 @@
 						<vehicleStats>
 							<li>
 								<def>MaximumPayload</def>
-								<value>250</value>
+								<value>150</value>
 							</li>
 						</vehicleStats>
 					</li>
@@ -143,7 +145,7 @@
 						<health>
 							<li>
 								<key>Body</key>
-								<value>150</value>
+								<value>10</value>
 							</li>
 						</health>
 					</li>
@@ -166,7 +168,6 @@
 		<statBases>
 			<Beauty>2</Beauty>
 		</statBases>
-		<selectable>true</selectable>
 		<stuffCategories>
 			<li>Fabric</li>
 			<li>Leathery</li>
@@ -394,7 +395,6 @@
 			<Beauty>3</Beauty>
 			<Mass>25</Mass>
 		</statBases>
-		<selectable>true</selectable>
 		<hasInteractionCell>true</hasInteractionCell>
 		<interactionCellOffset>(0,0,-1)</interactionCellOffset>
 		<useBlueprintGraphicAsGhost>true</useBlueprintGraphicAsGhost>
@@ -419,18 +419,18 @@
 								<texPath>MapVehiclesOcean/Things/CrowsNest/CrowsNest</texPath>
 								<shaderType>VMF_CutoutComplexRGBOpacity</shaderType>
 								<drawSize>2</drawSize>
-								<drawOffset>(0,0.0001,2.93)</drawOffset>
-								<drawOffsetEast>(0,0.0001,3)</drawOffsetEast>
-								<drawOffsetWest>(0,0.0001,3)</drawOffsetWest>
+								<drawOffset>(0,0.1001,2.93)</drawOffset>
+								<drawOffsetEast>(0,0.1001,3)</drawOffsetEast>
+								<drawOffsetWest>(0,0.1001,3)</drawOffsetWest>
 							</li>
 							<li>
 								<graphicClass>Graphic_Multi</graphicClass>
 								<texPath>MapVehiclesOcean/Things/CrowsNest/CrowsNestOverlay</texPath>
 								<shaderType>VMF_CutoutComplexRGBOpacity</shaderType>
 								<drawSize>2</drawSize>
-								<drawOffset>(0,0.1,2.93)</drawOffset>
-								<drawOffsetEast>(0,0.1,3)</drawOffsetEast>
-								<drawOffsetWest>(0,0.1,3)</drawOffsetWest>
+								<drawOffset>(0,0.2,2.93)</drawOffset>
+								<drawOffsetEast>(0,0.2,3)</drawOffsetEast>
+								<drawOffsetWest>(0,0.2,3)</drawOffsetWest>
 							</li>
 						</value>
 					</li>
@@ -442,18 +442,18 @@
 								<texPath>MapVehiclesOcean/Things/CrowsNest/CrowsNest</texPath>
 								<shaderType>VMF_CutoutComplexRGBOpacity</shaderType>
 								<drawSize>1.6</drawSize>
-								<drawOffset>(0,0.0001,5.35)</drawOffset>
-								<drawOffsetEast>(0.444,0.0001,5.18)</drawOffsetEast>
-								<drawOffsetWest>(-0.444,0.0001,5.18)</drawOffsetWest>
+								<drawOffset>(0,0.1001,5.35)</drawOffset>
+								<drawOffsetEast>(0.444,0.1001,5.18)</drawOffsetEast>
+								<drawOffsetWest>(-0.444,0.1001,5.18)</drawOffsetWest>
 							</li>
 							<li>
 								<graphicClass>Graphic_Multi</graphicClass>
 								<texPath>MapVehiclesOcean/Things/CrowsNest/CrowsNestOverlay</texPath>
 								<shaderType>VMF_CutoutComplexRGBOpacity</shaderType>
 								<drawSize>1.6</drawSize>
-								<drawOffset>(0,0.1,5.35)</drawOffset>
-								<drawOffsetEast>(0.444,0.1,5.18)</drawOffsetEast>
-								<drawOffsetWest>(-0.444,0.1,5.18)</drawOffsetWest>
+								<drawOffset>(0,0.2,5.35)</drawOffset>
+								<drawOffsetEast>(0.444,0.2,5.18)</drawOffsetEast>
+								<drawOffsetWest>(-0.444,0.2,5.18)</drawOffsetWest>
 							</li>
 						</value>
 					</li>
@@ -465,18 +465,18 @@
 								<texPath>MapVehiclesOcean/Things/CrowsNest/CrowsNest</texPath>
 								<shaderType>VMF_CutoutComplexRGBOpacity</shaderType>
 								<drawSize>1.4</drawSize>
-								<drawOffset>(0,0.0001,7.1)</drawOffset>
-								<drawOffsetEast>(0.825,0.0001,7.2)</drawOffsetEast>
-								<drawOffsetWest>(-0.825,0.0001,7.2)</drawOffsetWest>
+								<drawOffset>(0,0.1001,7.1)</drawOffset>
+								<drawOffsetEast>(0.825,0.1001,7.2)</drawOffsetEast>
+								<drawOffsetWest>(-0.825,0.1001,7.2)</drawOffsetWest>
 							</li>
 							<li>
 								<graphicClass>Graphic_Multi</graphicClass>
 								<texPath>MapVehiclesOcean/Things/CrowsNest/CrowsNestOverlay</texPath>
 								<shaderType>VMF_CutoutComplexRGBOpacity</shaderType>
 								<drawSize>1.4</drawSize>
-								<drawOffset>(0,0.1,7.1)</drawOffset>
-								<drawOffsetEast>(0.825,0.1,7.2)</drawOffsetEast>
-								<drawOffsetWest>(-0.825,0.1,7.2)</drawOffsetWest>
+								<drawOffset>(0,0.2,7.1)</drawOffset>
+								<drawOffsetEast>(0.825,0.2,7.2)</drawOffsetEast>
+								<drawOffsetWest>(-0.825,0.2,7.2)</drawOffsetWest>
 							</li>
 						</value>
 					</li>
@@ -494,15 +494,13 @@
 		</placeWorkers>
 	</ThingDef>
 	
-	<ThingDef ParentName="FurnitureBase">
+	<ThingDef ParentName="MV_ShipEquipmentBase">
 		<defName>MV_Oar</defName>
 		<label>oar</label>
 		<description>TODO</description>
-		<tradeability>None</tradeability>
-		<drawerType>MapMeshOnly</drawerType>
-		<designationCategory>VMF_VehicleMap</designationCategory>
+		<minifiedDef>MinifiedThing</minifiedDef>
 		<thingCategories>
-			<li>BuildingsSpecial</li>
+			<li>BuildingsFurniture</li>
 		</thingCategories>
 		<graphicData>
 			<graphicClass>Graphic_Multi</graphicClass>
@@ -519,6 +517,7 @@
 			<MaxHitPoints>50</MaxHitPoints>
 			<Mass>5</Mass>
 		</statBases>
+		<fillPercent>0.1</fillPercent>
 		<costList>
 			<WoodLog>75</WoodLog>
 		</costList>
@@ -546,7 +545,7 @@
 									<southWest>North</southWest>
 									<west>East</west>
 									<northWest>South</northWest>
-									<drawOffsetNorth>(0,0,0.5)</drawOffsetNorth>
+									<drawOffsetNorth>(0,0,-0.5)</drawOffsetNorth>
 									<drawOffsetSouth>(0,0,0)</drawOffsetSouth>
 								</pawnRenderer>
 							</li>
@@ -605,6 +604,7 @@
 				<li>MV_MooringRing</li>
 			</relatedBuildCommands>
 		</building>
+		<passability>Standable</passability>
 		<statBases>
 			<MaxHitPoints>90</MaxHitPoints>
 			<Flammability>0.75</Flammability>
@@ -613,6 +613,7 @@
 			<Beauty>-20</Beauty>
 			<ShootingAccuracyTurret>1</ShootingAccuracyTurret>
 		</statBases>
+		<fillPercent>0.2</fillPercent>
 		<comps Inherit="False">
 			<li Class="CompProperties_Forbiddable"/>
 			<li Class="CompProperties_Interactable">
@@ -661,7 +662,7 @@
 			<li>
 				<verbClass>VehicleMapFramework.Verb_LaunchZipline</verbClass>
 				<defaultProjectile>MV_Bullet_GrapplingLauncher</defaultProjectile>
-				<range>9.9</range>
+				<range>17.9</range>
 				<targetParams Class="VehicleMapFramework.TargetingParametersForSpecificThingDef">
 					<canTargetPawns>false</canTargetPawns>
 					<thingDef>MV_MooringRing</thingDef>
@@ -721,11 +722,8 @@
 		<defName>MV_GrapplingHook</defName>
 		<label>grappling hook</label>
 		<thingClass>VehicleMapFramework.ZiplineEnd</thingClass>
-		<category>Attachment</category>
-		<thingCategories>
-			<li>BuildingsMisc</li>
-		</thingCategories>
-		<drawerType>MapMeshAndRealTime</drawerType>
+		<category>Building</category>
+		<drawerType>RealtimeOnly</drawerType>
 		<altitudeLayer>BuildingBelowTop</altitudeLayer>
 		<graphicData>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -733,6 +731,9 @@
 			<texPath>MapVehiclesOcean/Things/GrapplingLauncher/GrapplingHook</texPath>
 			<drawSize>1.5</drawSize>
 		</graphicData>
+		<building>
+			<isEdifice>false</isEdifice>
+		</building>
 		<statBases>
 			<Mass>0.1</Mass>
 		</statBases>
@@ -746,10 +747,9 @@
 		<label>mooring ring</label>
 		<description>TODO</description>
 		<thingCategories>
-			<li>BuildingsMisc</li>
+			<li>BuildingsFurniture</li>
 		</thingCategories>
 		<minifiedDef>MinifiedThing</minifiedDef>
-		<drawerType>MapMeshOnly</drawerType>
 		<altitudeLayer>FloorEmplacement</altitudeLayer>
 		<designatorDropdown>MV_GrapplingLauncherGroup</designatorDropdown>
 		<graphicData>
@@ -759,7 +759,6 @@
 				<rect>(0.3,0.3,0.7,0.7)</rect>
 			</damageData>
 		</graphicData>
-		<selectable>true</selectable>
 		<statBases>
 			<MaxHitPoints>180</MaxHitPoints>
 			<WorkToBuild>350</WorkToBuild>
@@ -777,10 +776,9 @@
 		<description>TODO</description>
 		<thingClass>VehicleMapFramework.Building_AttackTargetByComps</thingClass>
 		<thingCategories>
-			<li>BuildingsSpecial</li>
+			<li>BuildingsFurniture</li>
 		</thingCategories>
 		<minifiedDef>MinifiedThing</minifiedDef>
-		<drawerType>MapMeshOnly</drawerType>
 		<graphicData>
 			<graphicClass>Graphic_Multi</graphicClass>
 			<texPath>MapVehiclesOcean/Things/Helm/Helm</texPath>
@@ -801,13 +799,12 @@
 				<offset>(0,0,0.23)</offset>
 			</shadowData>
 		</graphicData>
-		<selectable>true</selectable>
 		<statBases>
 			<MaxHitPoints>180</MaxHitPoints>
 			<WorkToBuild>1000</WorkToBuild>
 			<Mass>40</Mass>
 		</statBases>
-		<fillPercent>0.2</fillPercent>
+		<fillPercent>0.35</fillPercent>
 		<costList>
 			<WoodLog>30</WoodLog>
 			<Steel>10</Steel>
@@ -852,7 +849,6 @@
 		<label>hatch</label>
 		<description>TODO</description>
 		<thingClass>VehicleMapFramework.Building_Hatch</thingClass>
-		<drawerType>MapMeshOnly</drawerType>
 		<altitudeLayer>FloorCoverings</altitudeLayer>
 		<graphicData>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -863,7 +859,6 @@
 			</damageData>
 		</graphicData>
 		<size>(3,3)</size>
-		<selectable>true</selectable>
 		<rotatable>false</rotatable>
 		<statBases>
 			<MaxHitPoints>200</MaxHitPoints>
@@ -938,6 +933,34 @@
 		<placeWorkers>
 			<li>VehicleMapFramework.PlaceWorker_ForceOnVehicle</li>
 			<li>VehicleMapFramework.PlaceWorker_VehicleRelatedBuildings</li>
+		</placeWorkers>
+	</ThingDef>
+	
+	<ThingDef ParentName="MV_ShipEquipmentBase" MayRequire="Ludeon.RimWorld.Odyssey">
+		<defName>MV_FishingSpot</defName>
+		<label>fishing spot</label>
+		<description>TODO</description>
+		<graphicData>
+			<graphicClass>Graphic_Single</graphicClass>
+			<texPath>UI/Overlays/InteractionCell</texPath>
+			<shaderType>MetaOverlay</shaderType>
+		</graphicData>
+		<tickerType>Normal</tickerType>
+		<useHitPoints>false</useHitPoints>
+		<noRightClickDraftAttack>true</noRightClickDraftAttack>
+		<useBlueprintGraphicAsGhost>true</useBlueprintGraphicAsGhost>
+		<building>
+			<isEdifice>false</isEdifice>
+			<blueprintGraphicData>
+				<graphicClass>Graphic_Single</graphicClass>
+				<texPath>MapVehiclesOcean/Things/FishingSpot/FishingSpot</texPath>
+			</blueprintGraphicData>
+		</building>
+		<comps>
+			<li Class="MapVehicles.CompProperties_FishingSpot"/>
+		</comps>
+		<placeWorkers>
+			<li>VehicleMapFramework.PlaceWorker_ForceOnVehicleMapEdgeReverse</li>
 		</placeWorkers>
 	</ThingDef>
 	

@@ -53,6 +53,7 @@
 		<shotSound>MortarIncendiary_Explode</shotSound>
 		<reloadSound>Artillery_ShellLoaded</reloadSound>
 		<autoSnapTargeting>true</autoSnapTargeting>
+		<autoRefuelProportion>10</autoRefuelProportion>
 		
 		<projectile>MV_Bullet_Cannonball</projectile>
 		<reloadTimer>5.4</reloadTimer>
@@ -87,7 +88,7 @@
 				<label>Single</label>
 				<texPath>UI/Gizmos/FireRate_Single</texPath>
 				<applyShooterAccuracy>true</applyShooterAccuracy>
-				<forcedMissRadius>2</forcedMissRadius>
+				<forcedMissRadius>5</forcedMissRadius>
 				<canMiss>True</canMiss>
 			</li>
 		</fireModes>

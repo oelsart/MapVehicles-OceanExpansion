@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    
+    <EffecterDef>
+        <defName>MV_SinkSplash</defName>
+        <children>
+            <li>
+                <subEffecterClass>SubEffecter_SprayerChance</subEffecterClass>
+                <chancePeriodTicks>20</chancePeriodTicks>
+                <chancePerTick>0.03</chancePerTick>
+                <fleckDef>MV_GroundWaterSplashLow</fleckDef>
+                <burstCount>2~3</burstCount>
+                <spawnLocType>RandomCellOnTarget</spawnLocType>
+                <positionRadius>0</positionRadius>
+                <positionOffset>(0, 0, 0)</positionOffset>
+                <scale>1.5~3</scale>
+                <absoluteAngle>True</absoluteAngle>
+                <rotationRate>0</rotationRate>
+                <rotation>0</rotation>
+                <speed>0</speed>
+                <soundDef>MV_WaterSplash</soundDef>
+            </li>
+            <li>
+                <subEffecterClass>SubEffecter_SprayerChance</subEffecterClass>
+                <fleckDef>MV_WaterChurnNoiseLow</fleckDef>
+                <burstCount>4~12</burstCount>
+                <spawnLocType>RandomCellOnTarget</spawnLocType>
+                <positionRadius>.5</positionRadius>
+                <positionOffset>(0, 0, 0)</positionOffset>
+                <scale>0.5~1.5</scale>
+                <angle>0~360</angle>
+                <fleckUsesAngleForVelocity>True</fleckUsesAngleForVelocity>
+                <absoluteAngle>false</absoluteAngle>
+                <rotationRate>30~50</rotationRate>
+                <rotation>0</rotation>
+                <speed>-2.5~2.5</speed>
+            </li>
+            <li>
+                <subEffecterClass>SubEffecter_SprayerChance</subEffecterClass>
+                <positionRadius>0.2</positionRadius>
+                <fleckDef>MV_AirPuffLow</fleckDef>
+                <burstCount>1~3</burstCount>
+                <spawnLocType>RandomCellOnTarget</spawnLocType>
+                <speed>0.4~0.8</speed>
+                <scale>0.5~0.8</scale>
+            </li>
+            <li>
+                <subEffecterClass>SubEffecter_SoundIntermittent</subEffecterClass>
+                <soundDef>MV_WaterSplash</soundDef>
+                <intermittentSoundInterval>15~60</intermittentSoundInterval>
+            </li>
+        </children>
+    </EffecterDef>
+    
+</Defs>
