@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    
+    <ResearchProjectDef>
+        <defName>MV_ExpandableRaft</defName>
+        <label>raft</label>
+        <description>Learn to build rafts.</description>
+        <tab>MV_Ocean</tab>
+        <baseCost>400</baseCost>
+        <techLevel>Neolithic</techLevel>
+        <researchViewX>0.00</researchViewX>
+        <researchViewY>0.00</researchViewY>
+        <generalRules>
+            <rulesStrings>
+                <li>subject->raft</li>
+                <li>subject_story->arrived at [MV_raft_way] method for humanity to cross the ocean</li>
+                    <li>MV_raft_way->the first</li>
+                    <li>MV_raft_way->the primitive</li>
+                    <li>MV_raft_way->an ultimate</li>
+                <li>subject_story->suggested tying a few logs together with rope</li>
+                <li>subject_story->reached the peak of human technology</li>
+                <li>subject_gerund->constructing rafts</li>
+            </rulesStrings>
+        </generalRules>
+    </ResearchProjectDef>
+    
+    <ResearchProjectDef>
+        <defName>MV_Keel</defName>
+        <label>keel</label>
+        <description>Learn to build the Keel.</description>
+        <tab>MV_Ocean</tab>
+        <baseCost>1200</baseCost>
+        <techLevel>Medieval</techLevel>
+        <researchViewX>1.00</researchViewX>
+        <researchViewY>0.00</researchViewY>
+        <prerequisites>
+            <li>MV_ExpandableRaft</li>
+        </prerequisites>
+        <techprintCount>1</techprintCount>
+        <techprintCommonality>0.2</techprintCommonality>
+        <techprintMarketValue>2000</techprintMarketValue>
+        <heldByFactionCategoryTags>
+            <li>Empire</li>
+            <li>Ancient</li>
+            <li>Outlander</li>
+        </heldByFactionCategoryTags>
+        <generalRules>
+            <rulesStrings>
+                <li>subject->keel</li>
+                <li>subject_story->finally mastered building decent ships</li>
+                <li>subject_story->designed a ship with sufficient buoyancy and sturdiness</li>
+                <li>subject_story->now they can go all over the world</li>
+                <li>subject_gerund->constructing the Keel</li>
+            </rulesStrings>
+        </generalRules>
+    </ResearchProjectDef>
+    
+</Defs>

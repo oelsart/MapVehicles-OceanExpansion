@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <ResearchProjectDef>
+        <defName>MV_RaftPieceFloat</defName>
+        <label>floating raft piece</label>
+        <description>Learn to increase the buoyancy of rafts.</description>
+        <tab>MV_Ocean</tab>
+        <baseCost>400</baseCost>
+        <techLevel>Industrial</techLevel>
+        <researchViewX>0.50</researchViewX>
+        <researchViewY>1.00</researchViewY>
+        <prerequisites>
+            <li>MV_ExpandableRaft</li>
+            <li>BiofuelRefining</li>
+        </prerequisites>
+        <generalRules>
+            <rulesStrings>
+                <li>subject->raft float</li>
+                <li>subject_story->increasing the buoyancy of rafts</li>
+                <li>subject_gerund->constructing floating raft pieces</li>
+            </rulesStrings>
+        </generalRules>
+    </ResearchProjectDef>
+    
+    <ResearchProjectDef>
+        <defName>MV_RigI</defName>
+        <label>rig I</label>
+        <description>TODO</description>
+        <tab>MV_Ocean</tab>
+        <baseCost>650</baseCost>
+        <techLevel>Medieval</techLevel>
+        <researchViewX>0.50</researchViewX>
+        <researchViewY>2.00</researchViewY>
+        <prerequisites>
+            <li>MV_ExpandableRaft</li>
+        </prerequisites>
+        <generalRules>
+            <rulesStrings>
+                <li>subject->rig</li>
+                <li>subject_story->TODO</li>
+                <li>subject_gerund->TODO</li>
+            </rulesStrings>
+        </generalRules>
+    </ResearchProjectDef>
+
+    <ResearchProjectDef>
+        <defName>MV_RigII</defName>
+        <label>rig II</label>
+        <description>TODO</description>
+        <tab>MV_Ocean</tab>
+        <baseCost>250</baseCost>
+        <techLevel>Medieval</techLevel>
+        <researchViewX>0.50</researchViewX>
+        <researchViewY>3.00</researchViewY>
+        <prerequisites>
+            <li>MV_ExpandableRaft</li>
+        </prerequisites>
+        <generalRules>
+            <rulesStrings>
+                <li>subject->rig</li>
+                <li>subject_story->TODO</li>
+                <li>subject_gerund->TODO</li>
+            </rulesStrings>
+        </generalRules>
+    </ResearchProjectDef>
+    
+</Defs>

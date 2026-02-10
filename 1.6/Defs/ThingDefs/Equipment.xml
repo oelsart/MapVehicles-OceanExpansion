@@ -4,6 +4,9 @@
 		<tradeability>None</tradeability>
 		<category>Building</category>
 		<thingClass>Building</thingClass>
+		<researchPrerequisites>
+			<li>MV_ExpandableRaft</li>
+		</researchPrerequisites>
 		<designationCategory>VMF_VehicleMap</designationCategory>
 	</ThingDef>
 	
@@ -118,6 +121,9 @@
 				<drawSize>2</drawSize>
 			</blueprintGraphicData>
 		</building>
+		<researchPrerequisites>
+			<li>MV_ExpandableRaft</li>
+		</researchPrerequisites>
 		<comps>
 			<li Class="VehicleMapFramework.CompProperties_ExtraPrint">
 				<graphics>
@@ -663,6 +669,7 @@
 				<verbClass>VehicleMapFramework.Verb_LaunchZipline</verbClass>
 				<defaultProjectile>MV_Bullet_GrapplingLauncher</defaultProjectile>
 				<range>17.9</range>
+				<canGoWild>false</canGoWild>
 				<targetParams Class="VehicleMapFramework.TargetingParametersForSpecificThingDef">
 					<canTargetPawns>false</canTargetPawns>
 					<thingDef>MV_MooringRing</thingDef>
@@ -695,7 +702,7 @@
 				<ziplineWidth>0.09</ziplineWidth>
 				<ziplineEndOffset>0.18</ziplineEndOffset>
 				<launcherOffset>0.55</launcherOffset>
-				<ziplineEndDef>MV_GrapplingHook</ziplineEndDef>
+				<ziplineEndDef>MV_GrapplingLauncherHook</ziplineEndDef>
 				<ziplineReturnDef>MV_Bullet_GrapplingLauncherReturn</ziplineReturnDef>
 			</li>
 		</modExtensions>
@@ -719,7 +726,7 @@
 	</ThingDef>
 
 	<ThingDef ParentName="BaseBullet">
-		<defName>MV_GrapplingHook</defName>
+		<defName>MV_GrapplingLauncherHook</defName>
 		<label>grappling hook</label>
 		<thingClass>VehicleMapFramework.ZiplineEnd</thingClass>
 		<category>Building</category>

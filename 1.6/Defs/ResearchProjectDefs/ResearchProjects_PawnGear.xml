@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <ResearchProjectDef>
+        <defName>MV_SailorMelee</defName>
+        <label>sailor's melee</label>
+        <description>Learn to increase the buoyancy of rafts.</description>
+        <tab>MV_Ocean</tab>
+        <baseCost>400</baseCost>
+        <techLevel>Medieval</techLevel>
+        <researchViewX>1.00</researchViewX>
+        <researchViewY>4.00</researchViewY>
+        <prerequisites>
+            <li>Smithing</li>
+        </prerequisites>
+        <generalRules>
+            <rulesStrings>
+                <li>subject->sailor's melee</li>
+                <li>subject_story->essential for sailors</li>
+                <li>subject_gerund->crafting sailor's melee equipment</li>
+            </rulesStrings>
+        </generalRules>
+    </ResearchProjectDef>
+    
+</Defs>

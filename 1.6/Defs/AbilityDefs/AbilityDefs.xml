@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    
+    <AbilityDef>
+        <defName>MV_GrapplingHook</defName>
+        <label>grappling hook</label>
+        <abilityClass>VehicleMapFramework.Ability_GrapplingHook</abilityClass>
+        <displayOrder>50</displayOrder>
+        <verbProperties>
+            <verbClass>VehicleMapFramework.Verb_LaunchZipline</verbClass>
+            <defaultProjectile>MV_Bullet_GrapplingHook</defaultProjectile>
+            <range>4.9</range>
+            <canGoWild>false</canGoWild>
+            <ai_IsWeapon>false</ai_IsWeapon>
+            <targetParams>
+                <canTargetLocations>true</canTargetLocations>
+                <canTargetBuildings>false</canTargetBuildings>
+                <canTargetHumans>false</canTargetHumans>
+                <canTargetMechs>false</canTargetMechs>
+                <canTargetAnimals>false</canTargetAnimals>
+                <onlyTargetColonists>false</onlyTargetColonists>
+            </targetParams>
+            <soundCast>Shot_Revolver</soundCast>
+            <soundCastTail>GunTail_Light</soundCastTail>
+        </verbProperties>
+        <aiCanUse>true</aiCanUse>
+        <ai_SearchAOEForTargets>true</ai_SearchAOEForTargets>
+        <groupAbility>true</groupAbility>
+        <cooldownTicksRange>120</cooldownTicksRange>
+        <iconPath>MapVehiclesOcean/Things/ZiplineBelt/ZiplineBelt_AbilityIcon</iconPath>
+    </AbilityDef>
+
+    <ThingDef ParentName="BaseBullet">
+        <defName>MV_Bullet_GrapplingHook</defName>
+        <label>grappling hook bullet</label>
+        <thingClass>VehicleMapFramework.Bullet_ZiplineEnd</thingClass>
+        <graphicData>
+            <graphicClass>Graphic_Single</graphicClass>
+            <shaderType>Transparent</shaderType>
+            <texPath>MapVehiclesOcean/Things/ZiplineBelt/ZiplineEnd</texPath>
+            <drawSize>1</drawSize>
+        </graphicData>
+        <projectile>
+            <speed>20</speed>
+            <arcHeightFactor>0.15</arcHeightFactor>
+            <damageDef>Stab</damageDef>
+            <damageAmountBase>0</damageAmountBase>
+        </projectile>
+        <modExtensions>
+            <li Class="VehicleMapFramework.CustomZipline">
+                <texPath>MapVehiclesOcean/Things/GrapplingLauncher/Rope</texPath>
+                <ziplineWidth>0.07</ziplineWidth>
+                <ziplineEndOffset>0.11</ziplineEndOffset>
+                <launcherOffset>0</launcherOffset>
+                <ziplineEndDef>MV_GrapplingHook</ziplineEndDef>
+            </li>
+        </modExtensions>
+    </ThingDef>
+
+    <ThingDef ParentName="BaseBullet">
+        <defName>MV_GrapplingHook</defName>
+        <label>grappling hook</label>
+        <thingClass>VehicleMapFramework.ZiplineEnd</thingClass>
+        <category>Building</category>
+        <drawerType>RealtimeOnly</drawerType>
+        <altitudeLayer>BuildingBelowTop</altitudeLayer>
+        <graphicData>
+            <graphicClass>Graphic_Single</graphicClass>
+            <shaderType>Cutout</shaderType>
+            <texPath>MapVehiclesOcean/Things/ZiplineBelt/ZiplineEnd</texPath>
+            <drawSize>1</drawSize>
+        </graphicData>
+        <building>
+            <isEdifice>false</isEdifice>
+        </building>
+        <statBases>
+            <Mass>0.1</Mass>
+        </statBases>
+    </ThingDef>
+    
+</Defs>

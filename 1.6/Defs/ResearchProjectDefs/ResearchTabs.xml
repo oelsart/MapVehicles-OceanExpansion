@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    
+    <ResearchTabDef>
+        <defName>MV_Ocean</defName>
+        <label>Ocean</label>
+        <generalTitle>Ocean research projects</generalTitle>
+        <generalDescription>Unlock new technology to cross the ocean.</generalDescription>
+    </ResearchTabDef>
+    
+</Defs>

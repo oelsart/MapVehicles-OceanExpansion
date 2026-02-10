@@ -24,6 +24,7 @@
 		<size>(5,14)</size>
 
 		<researchPrerequisites>
+			<li>MV_Keel</li>
 		</researchPrerequisites>
 		
 		<costList>

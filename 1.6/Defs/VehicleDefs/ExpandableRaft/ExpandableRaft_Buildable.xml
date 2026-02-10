@@ -21,6 +21,7 @@
 		<size>(3,3)</size>
 
 		<researchPrerequisites>
+			<li>MV_ExpandableRaft</li>
 		</researchPrerequisites>
 		
 		<costList>

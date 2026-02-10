@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    
+    <ThingDef ParentName="ApparelBase">
+        <defName>MV_ZiplineBelt</defName>
+        <label>zipline belt</label>
+        <description>TODO</description>
+        <graphicData>
+            <graphicClass>Graphic_Single</graphicClass>
+            <texPath>MapVehiclesOcean/Things/ZiplineBelt/ZiplineBelt_south</texPath>
+        </graphicData>
+        <techLevel>Medieval</techLevel>
+        <statBases>
+            <Mass>1</Mass>
+            <WorkToMake>7000</WorkToMake>
+            <Flammability>0.8</Flammability>
+            <EquipDelay>2</EquipDelay>
+        </statBases>
+        <stuffCategories>
+            <li>Leathery</li>
+        </stuffCategories>
+        <costStuffCount>20</costStuffCount>
+        <costList>
+            <ComponentIndustrial>1</ComponentIndustrial>
+            <Steel>10</Steel>
+        </costList>
+        <recipeMaker>
+            <unfinishedThingDef>UnfinishedBelt</unfinishedThingDef>
+            <researchPrerequisite>MV_SailorMelee</researchPrerequisite>
+            <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+            <workSkill>Crafting</workSkill>
+            <effectWorking>Tailor</effectWorking>
+            <soundWorking>Recipe_Tailor</soundWorking>
+            <recipeUsers>
+                <li>ElectricTailoringBench</li>
+                <li>HandTailoringBench</li>
+            </recipeUsers>
+            <useIngredientsForColor>false</useIngredientsForColor>
+            <skillRequirements>
+                <Crafting>6</Crafting>
+            </skillRequirements>
+            <displayPriority>310</displayPriority>
+        </recipeMaker>
+        <thingCategories>
+            <li>ApparelUtility</li>
+        </thingCategories>
+        <apparel>
+            <wornGraphicPath>MapVehiclesOcean/Things/ZiplineBelt/ZiplineBelt</wornGraphicPath>
+            <countsAsClothingForNudity>false</countsAsClothingForNudity>
+            <careIfWornByCorpse>false</careIfWornByCorpse>
+            <careIfDamaged>false</careIfDamaged>
+            <wearPerDay>0</wearPerDay>
+            <bodyPartGroups>
+                <li>Waist</li>
+            </bodyPartGroups>
+            <layers>
+                <li>Belt</li>
+            </layers>
+            <tags>
+                <li>BeltDefense</li>
+            </tags>
+            <developmentalStageFilter>Child, Adult</developmentalStageFilter>
+            <abilities>
+                <li>MV_GrapplingHook</li>
+            </abilities>
+        </apparel>
+        <colorGenerator Class="ColorGenerator_Options">
+            <options>
+                <li>
+                    <weight>10</weight>
+                    <only>(0.33,0.33,0.33,1)</only>
+                </li>
+                <li>
+                    <weight>10</weight>
+                    <only>(0.65,0.65,0.65,1)</only>
+                </li>
+                <li>
+                    <weight>6</weight>
+                    <min>(0.3,0.3,0.3,1)</min>
+                    <max>(0.5,0.5,0.5,1)</max>
+                </li>
+                <li>
+                    <weight>10</weight>
+                    <only>(0.9,0.9,0.9,1)</only>
+                </li>
+            </options>
+        </colorGenerator>
+        <comps>
+            <li Class="VehicleMapFramework.CompProperties_ZiplineBelt" />
+        </comps>
+        <allowedArchonexusCount>1</allowedArchonexusCount>
+        <tradeTags>
+            <li>Armor</li>
+        </tradeTags>
+    </ThingDef>
+    
+</Defs>
