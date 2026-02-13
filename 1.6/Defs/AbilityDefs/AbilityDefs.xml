@@ -10,6 +10,9 @@
             <verbClass>VehicleMapFramework.Verb_LaunchZipline</verbClass>
             <defaultProjectile>MV_Bullet_GrapplingHook</defaultProjectile>
             <range>4.9</range>
+            <warmupTime>0.5</warmupTime>
+            <defaultCooldownTime>1</defaultCooldownTime>
+            <drawAimPie>false</drawAimPie>
             <canGoWild>false</canGoWild>
             <ai_IsWeapon>false</ai_IsWeapon>
             <targetParams>
@@ -23,11 +26,10 @@
             <soundCast>Shot_Revolver</soundCast>
             <soundCastTail>GunTail_Light</soundCastTail>
         </verbProperties>
-        <aiCanUse>true</aiCanUse>
-        <ai_SearchAOEForTargets>true</ai_SearchAOEForTargets>
         <groupAbility>true</groupAbility>
         <cooldownTicksRange>120</cooldownTicksRange>
         <iconPath>MapVehiclesOcean/Things/ZiplineBelt/ZiplineBelt_AbilityIcon</iconPath>
+        <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
     </AbilityDef>
 
     <ThingDef ParentName="BaseBullet">
