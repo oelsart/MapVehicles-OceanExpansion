@@ -27,7 +27,6 @@
             <soundCastTail>GunTail_Light</soundCastTail>
         </verbProperties>
         <groupAbility>true</groupAbility>
-        <cooldownTicksRange>120</cooldownTicksRange>
         <iconPath>MapVehiclesOcean/Things/ZiplineBelt/ZiplineBelt_AbilityIcon</iconPath>
         <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
     </AbilityDef>
@@ -68,7 +67,7 @@
         <altitudeLayer>BuildingBelowTop</altitudeLayer>
         <graphicData>
             <graphicClass>Graphic_Single</graphicClass>
-            <shaderType>Cutout</shaderType>
+            <shaderType>Transparent</shaderType>
             <texPath>MapVehiclesOcean/Things/ZiplineBelt/ZiplineEnd</texPath>
             <drawSize>1</drawSize>
         </graphicData>
