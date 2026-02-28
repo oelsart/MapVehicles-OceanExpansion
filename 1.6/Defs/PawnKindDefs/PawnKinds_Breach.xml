@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <PawnKindDef ParentName="TribalBase">
+        <defName>MV_Tribal_Breacher_GrapplingBelt</defName>
+        <label>breacher</label>
+        <combatPower>55</combatPower>
+        <itemQuality>Poor</itemQuality>
+        <canBeSapper>true</canBeSapper>
+        <isGoodBreacher>true</isGoodBreacher>
+        <gearHealthRange>0.5~1.8</gearHealthRange>
+        <apparelMoney>200~300</apparelMoney>
+        <apparelRequired>
+            <li>Apparel_WarVeil</li>
+            <li>MV_Apparel_GrapplingBelt</li>
+        </apparelRequired>
+        <weaponMoney>150~150</weaponMoney>
+        <weaponTags>
+            <li>NeolithicMeleeDestructive</li>
+        </weaponTags>
+        <initialWillRange>1~3</initialWillRange>
+        <initialResistanceRange>12~19</initialResistanceRange>
+    </PawnKindDef>
+
+</Defs>

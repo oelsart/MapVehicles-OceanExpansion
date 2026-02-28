@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <PawnKindDef ParentName="VillagerBase">
+        <defName>MV_Villager_Pig_GrapplingBelt</defName>
+        <apparelRequired>
+            <li>MV_Apparel_GrapplingBelt</li>
+        </apparelRequired>
+        <weaponTags>
+            <li>ShortShots</li>
+            <li>MedievalMeleeBasic</li>
+        </weaponTags>
+        <defaultFactionDef>OutlanderRoughPig</defaultFactionDef>
+    </PawnKindDef>
+
+    <PawnKindDef ParentName="GuardBase">
+        <defName>MV_Town_Guard_Pig_GrapplingBelt</defName>
+        <apparelRequired>
+            <li>MV_Apparel_GrapplingBelt</li>
+        </apparelRequired>
+        <weaponTags>
+            <li>ShortShots</li>
+            <li>MedievalMeleeBasic</li>
+        </weaponTags>
+        <defaultFactionDef>OutlanderRoughPig</defaultFactionDef>
+    </PawnKindDef>
+
+    <PawnKindDef ParentName="CouncilmanBase">
+        <defName>MV_Town_Councilman_Pig_GrapplingBelt</defName>
+        <apparelRequired>
+            <li>MV_Apparel_GrapplingBelt</li>
+        </apparelRequired>
+        <weaponTags>
+            <li>ShortShots</li>
+            <li>MedievalMeleeBasic</li>
+        </weaponTags>
+        <defaultFactionDef>OutlanderRoughPig</defaultFactionDef>
+    </PawnKindDef>
+
+</Defs>

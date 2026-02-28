@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <PawnKindDef ParentName="MV_TribalWarriorBase_GrapplingBelt">
+        <defName>MV_Tribal_Warrior_Fire_GrapplingBelt</defName>
+        <weaponTags>
+            <li>NeolithicMeleeDecent</li>
+            <li>GrenadeFlame</li>
+        </weaponTags>
+        <combatPower>75</combatPower>
+        <defaultFactionDef>TribeSavageImpid</defaultFactionDef>
+    </PawnKindDef>
+
+</Defs>

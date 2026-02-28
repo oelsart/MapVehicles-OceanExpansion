@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+    <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/FactionDef[defName="Empire"]/pawnGroupMakers</xpath>
+        <value>
+            <li>
+                <!-- Normal fights -->
+                <kindDef>MV_ShipCombat</kindDef>
+                <commonality>100</commonality>
+                <options>
+                    <Empire_Fighter_Trooper>5</Empire_Fighter_Trooper>
+                    <Empire_Fighter_Janissary>3.5</Empire_Fighter_Janissary>
+                    <Empire_Fighter_Cataphract>2</Empire_Fighter_Cataphract>
+                    <MV_Empire_Fighter_Champion_GrapplingBelt>4</MV_Empire_Fighter_Champion_GrapplingBelt>
+                </options>
+            </li>
+            <li>
+                <!-- breach fights -->
+                <kindDef>MV_ShipCombat</kindDef>
+                <commonality>10</commonality>
+                <options>
+                    <Empire_Fighter_Grenadier>2</Empire_Fighter_Grenadier>
+                    <Empire_Fighter_Trooper>5</Empire_Fighter_Trooper>
+                    <Empire_Fighter_Janissary>3.5</Empire_Fighter_Janissary>
+                    <Empire_Fighter_Cataphract>2</Empire_Fighter_Cataphract>
+                    <MV_Empire_Fighter_Champion_GrapplingBelt>4</MV_Empire_Fighter_Champion_GrapplingBelt>
+                </options>
+            </li>
+        </value>
+    </Operation>
+    
+</Patch>

@@ -4,7 +4,7 @@
     <ResearchProjectDef>
         <defName>MV_SailorMelee</defName>
         <label>sailor's melee</label>
-        <description>Learn to increase the buoyancy of rafts.</description>
+        <description>Learn technologies useful for melee combat on ships.</description>
         <tab>MV_Ocean</tab>
         <baseCost>400</baseCost>
         <techLevel>Medieval</techLevel>

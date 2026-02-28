@@ -1,15 +1,15 @@
 ManifestFileVersion: 0
-CRC: 1915563622
+CRC: 647601383
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: fb0ecc91bd913779ad7023ded1b21de4
+    Hash: 8e8083b7257cb4cbbddacc5d307fce72
   TypeTreeHash:
     serializedVersion: 2
     Hash: ce3b6d18a872ca8039cd5eb3c4fb7ef5
   IncrementalBuildHash:
     serializedVersion: 2
-    Hash: fb0ecc91bd913779ad7023ded1b21de4
+    Hash: 8e8083b7257cb4cbbddacc5d307fce72
 HashAppended: 0
 ClassTypes:
 - Class: 28
@@ -69,6 +69,7 @@ Assets:
 - Assets/Data/OELS.MapVehicles.OceanExpansion/Textures/MapVehiclesOcean/Things/Rig/Rig1/Leathery_Rig1_Icon.png
 - Assets/Data/OELS.MapVehicles.OceanExpansion/Textures/MapVehiclesOcean/Things/Rig/Rig1/Leathery_Rig1_east.png
 - Assets/Data/OELS.MapVehicles.OceanExpansion/Textures/MapVehiclesOcean/Things/WoodShipProps/WoodShipPropsB_Diagonal_west.png
+- Assets/Data/OELS.MapVehicles.OceanExpansion/Textures/MapVehiclesOcean/Things/Cutlass.png
 - Assets/Data/OELS.MapVehicles.OceanExpansion/Textures/MapVehiclesOcean/Things/Cannon/Cannon_east.png
 - Assets/Data/OELS.MapVehicles.OceanExpansion/Textures/MapVehiclesOcean/Things/Helm/Helm_eastm.png
 - Assets/Data/OELS.MapVehicles.OceanExpansion/Textures/MapVehiclesOcean/Things/RaftPiece/Blueprint_RaftPieceFloat_east.png

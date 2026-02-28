@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <!-- Champion -->
+
+    <PawnKindDef ParentName="ImperialFighterBase">
+        <defName>MV_Empire_Fighter_Champion_GrapplingBelt</defName>
+        <label>champion</label>
+        <maxGenerationAge>40</maxGenerationAge>
+        <combatPower>100</combatPower>
+        <weaponTags>
+            <li>MedievalMeleeDecent</li>
+            <li>MedievalMeleeAdvanced</li>
+            <li>UltratechMelee</li>
+        </weaponTags>
+        <apparelRequired>
+            <li>Apparel_PlateArmor</li>
+            <li>MV_Apparel_GrapplingBelt</li>
+        </apparelRequired>
+        <apparelColor>(250,250,250)</apparelColor>
+        <techHediffsTags>
+            <li>Advanced</li>
+            <li>ImplantEmpireCommon</li>
+        </techHediffsTags>
+        <skills>
+            <li>
+                <skill>Melee</skill>
+                <range>8~13</range>
+            </li>
+        </skills>
+        <initialWillRange>3~5</initialWillRange>
+        <initialResistanceRange>12~20</initialResistanceRange>
+        <useFactionXenotypes>false</useFactionXenotypes>
+        <xenotypeSet>
+            <xenotypeChances>
+                <Neanderthal MayRequire="Ludeon.RimWorld.Biotech">0.03</Neanderthal>
+                <Hussar MayRequire="Ludeon.RimWorld.Biotech">0.4</Hussar>
+                <Genie MayRequire="Ludeon.RimWorld.Biotech">0.03</Genie>
+            </xenotypeChances>
+        </xenotypeSet>
+    </PawnKindDef>
+    
+</Defs>

@@ -1,0 +1,172 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+    <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/FactionDef[@Name="OutlanderFactionBase"]/pawnGroupMakers</xpath>
+        <value>
+            <li>
+                <!-- Normal fights, standard mix -->
+                <kindDef>MV_ShipCombat</kindDef>
+                <options>
+                    <Villager>5</Villager>
+                    <Town_Guard>10</Town_Guard>
+                    <Grenadier_Destructive>1.5</Grenadier_Destructive>
+                    <MV_Mercenary_Slasher_GrapplingBelt>7</MV_Mercenary_Slasher_GrapplingBelt>
+                    <Mercenary_Gunner>10</Mercenary_Gunner>
+                    <Mercenary_Elite>10</Mercenary_Elite>
+                    <Town_Councilman>10</Town_Councilman>
+                </options>
+            </li>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/FactionDef[@Name="TribeBase"]/pawnGroupMakers</xpath>
+        <value>
+            <li>
+                <!-- Normal fights, ranged with melee mix-ins -->
+                <kindDef>MV_ShipCombat</kindDef>
+                <commonality>100</commonality>
+                <options>
+                    <Tribal_Penitent>5</Tribal_Penitent>
+                    <MV_Tribal_Warrior_GrapplingBelt>5</MV_Tribal_Warrior_GrapplingBelt>
+                    <Tribal_Archer>10</Tribal_Archer>
+                    <Tribal_Hunter>10</Tribal_Hunter>
+                    <Tribal_HeavyArcher>10</Tribal_HeavyArcher>
+                    <MV_Tribal_Berserker_GrapplingBelt>5</MV_Tribal_Berserker_GrapplingBelt>
+                    <Tribal_ChiefRanged>3</Tribal_ChiefRanged>
+                    <MV_Tribal_ChiefMelee_GrapplingBelt>1.5</MV_Tribal_ChiefMelee_GrapplingBelt>
+                </options>
+            </li>
+            <li>
+                <!-- Normal fights, ranged only -->
+                <kindDef>MV_ShipCombat</kindDef>
+                <commonality>60</commonality>
+                <options>
+                    <Tribal_Archer>10</Tribal_Archer>
+                    <Tribal_Hunter>10</Tribal_Hunter>
+                    <Tribal_HeavyArcher>10</Tribal_HeavyArcher>
+                    <Tribal_ChiefRanged>5</Tribal_ChiefRanged>
+                </options>
+            </li>
+            <li>
+                <!-- Normal fights, melee only -->
+                <kindDef>MV_ShipCombat</kindDef>
+                <commonality>60</commonality>
+                <options>
+                    <Tribal_Penitent>10</Tribal_Penitent>
+                    <MV_Tribal_Warrior_GrapplingBelt>10</MV_Tribal_Warrior_GrapplingBelt>
+                    <MV_Tribal_Berserker_GrapplingBelt>10</MV_Tribal_Berserker_GrapplingBelt>
+                    <MV_Tribal_ChiefMelee_GrapplingBelt>5</MV_Tribal_ChiefMelee_GrapplingBelt>
+                </options>
+            </li>
+            <li>
+                <!-- breach-capable fights, breachers plus ranged with melee mix-ins -->
+                <kindDef>MV_ShipCombat</kindDef>
+                <commonality>5</commonality>
+                <options>
+                    <MV_Tribal_Breacher_GrapplingBelt>5</MV_Tribal_Breacher_GrapplingBelt>
+                    <Tribal_Penitent>5</Tribal_Penitent>
+                    <MV_Tribal_Warrior_GrapplingBelt>5</MV_Tribal_Warrior_GrapplingBelt>
+                    <Tribal_Archer>10</Tribal_Archer>
+                    <Tribal_Hunter>10</Tribal_Hunter>
+                    <Tribal_HeavyArcher>10</Tribal_HeavyArcher>
+                    <MV_Tribal_Berserker_GrapplingBelt>5</MV_Tribal_Berserker_GrapplingBelt>
+                    <Tribal_ChiefRanged>3</Tribal_ChiefRanged>
+                    <MV_Tribal_ChiefMelee_GrapplingBelt>1.5</MV_Tribal_ChiefMelee_GrapplingBelt>
+                </options>
+            </li>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/FactionDef[defName="Pirate"]/pawnGroupMakers</xpath>
+        <value>
+            <li>
+                <!-- Normal fights, ranged with melee mix-ins -->
+                <kindDef>MV_ShipCombat</kindDef>
+                <commonality>100</commonality>
+                <options>
+                    <Drifter>10</Drifter>
+                    <Thrasher>3</Thrasher>
+                    <Scavenger>10</Scavenger>
+                    <Pirate>10</Pirate>
+                    <Grenadier_EMP>0.25</Grenadier_EMP>
+                    <Grenadier_Smoke>0.25</Grenadier_Smoke>
+                    <Grenadier_Destructive>2</Grenadier_Destructive>
+                    <Mercenary_Gunner>10</Mercenary_Gunner>
+                    <Mercenary_Heavy>6</Mercenary_Heavy>
+                    <MV_Mercenary_Slasher_GrapplingBelt>3</MV_Mercenary_Slasher_GrapplingBelt>
+                    <Mercenary_Sniper>7</Mercenary_Sniper>
+                    <Mercenary_Elite>10</Mercenary_Elite>
+                    <PirateBoss>5</PirateBoss>
+                </options>
+            </li>
+            <li>
+                <!-- Normal fights, melee-only -->
+                <kindDef>MV_ShipCombat</kindDef>
+                <commonality>30</commonality>
+                <disallowedStrategies>
+                    <li>Siege</li>
+                </disallowedStrategies>
+                <options>
+                    <Thrasher>10</Thrasher>
+                    <MV_Mercenary_Slasher_GrapplingBelt>10</MV_Mercenary_Slasher_GrapplingBelt>
+                    <PirateBoss>5</PirateBoss>
+                </options>
+            </li>
+            <li>
+                <!-- Normal fights, ranged only -->
+                <kindDef>MV_ShipCombat</kindDef>
+                <commonality>20</commonality>
+                <options>
+                    <Scavenger>10</Scavenger>
+                    <Pirate>10</Pirate>
+                    <Grenadier_EMP>0.25</Grenadier_EMP>
+                    <Grenadier_Smoke>0.25</Grenadier_Smoke>
+                    <Grenadier_Destructive>2</Grenadier_Destructive>
+                    <Mercenary_Gunner>10</Mercenary_Gunner>
+                    <Mercenary_Heavy>6</Mercenary_Heavy>
+                    <Mercenary_Sniper>7</Mercenary_Sniper>
+                    <Mercenary_Elite>10</Mercenary_Elite>
+                    <PirateBoss>5</PirateBoss>
+                </options>
+            </li>
+            <li>
+                <!-- Normal fights, explosives with ranged mix-ins -->
+                <kindDef>MV_ShipCombat</kindDef>
+                <commonality>15</commonality>
+                <disallowedStrategies>
+                    <li>Siege</li>
+                </disallowedStrategies>
+                <options>
+                    <Grenadier_EMP>0.5</Grenadier_EMP>
+                    <Grenadier_Smoke>0.5</Grenadier_Smoke>
+                    <Grenadier_Destructive>10</Grenadier_Destructive>
+                    <Mercenary_Gunner>1</Mercenary_Gunner>
+                    <Mercenary_Heavy>10</Mercenary_Heavy>
+                    <Mercenary_Elite>1</Mercenary_Elite>
+                    <PirateBoss>1</PirateBoss>
+                </options>
+            </li>
+            <li>
+                <!-- Normal fights, snipers only -->
+                <kindDef>MV_ShipCombat</kindDef>
+                <commonality>10</commonality>
+                <options>
+                    <Mercenary_Sniper>10</Mercenary_Sniper>
+                </options>
+            </li>
+            <li>
+                <!-- Normal fights, drifters only (very rare) -->
+                <kindDef>MV_ShipCombat</kindDef>
+                <commonality>2.5</commonality>
+                <maxTotalPoints>1000</maxTotalPoints>
+                <options>
+                    <Drifter>10</Drifter>
+                </options>
+            </li>
+        </value>
+    </Operation>
+    
+</Patch>

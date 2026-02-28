@@ -2,8 +2,8 @@
 <Defs>
     
     <ThingDef ParentName="ApparelBase">
-        <defName>MV_ZiplineBelt</defName>
-        <label>zipline belt</label>
+        <defName>MV_Apparel_GrapplingBelt</defName>
+        <label>grappling belt</label>
         <description>TODO</description>
         <graphicData>
             <graphicClass>Graphic_Single</graphicClass>

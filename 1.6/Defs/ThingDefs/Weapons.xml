@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<Defs>
+
+    <ThingDef ParentName="BaseMeleeWeapon_Sharp_Quality">
+        <defName>MV_MeleeWeapon_Cutlass</defName>
+        <label>cutlass</label>
+        <description>A short, maneuverable sword used in combat on the deck of sail ships.</description>
+        <possessionCount>1</possessionCount>
+        <graphicData>
+            <texPath>MapVehiclesOcean/Things/Cutlass</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <techLevel>Medieval</techLevel>
+        <weaponTags>
+            <li>MV_ShipCombat</li>
+        </weaponTags>
+        <costStuffCount>75</costStuffCount>
+        <thingSetMakerTags><li>RewardStandardQualitySuper</li></thingSetMakerTags>
+        <statBases>
+            <WorkToMake>16000</WorkToMake>
+            <Mass>1.4</Mass>
+        </statBases>
+        <equippedAngleOffset>-65</equippedAngleOffset>
+        <stuffCategories>
+            <li>Metallic</li>
+        </stuffCategories>
+        <tools>
+            <li>
+                <label>handle</label>
+                <capacities>
+                    <li>Blunt</li>
+                </capacities>
+                <power>3</power>
+                <cooldownTime>1</cooldownTime>
+            </li>
+            <li>
+                <label>edge</label>
+                <capacities>
+                    <li>Cut</li>
+                </capacities>
+                <power>15</power>
+                <cooldownTime>1.3</cooldownTime>
+            </li>
+        </tools>
+        <recipeMaker>
+            <researchPrerequisite>MV_SailorMelee</researchPrerequisite>
+            <skillRequirements>
+                <Crafting>8</Crafting>
+            </skillRequirements>
+            <displayPriority>1020</displayPriority>
+        </recipeMaker>
+    </ThingDef>
+    
+</Defs>
