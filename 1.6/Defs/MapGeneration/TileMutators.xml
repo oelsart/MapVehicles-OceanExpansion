@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <TileMutatorDef>
+        <defName>MV_OceanIsland</defName>
+        <label>ocean island</label>
+        <description>A solitary island floating in the sea.</description>
+        <workerClass>MapVehicles.TileMutatorWorker_OceanIsland</workerClass>
+        <categories>
+            <li>Ocean</li>
+        </categories>
+        <priority>5</priority>
+        <overrideCategories>
+            <li>Mountain</li>
+        </overrideCategories>
+        <genOrder>-50</genOrder>
+        <biomeWhitelist>
+            <li>Ocean</li>
+        </biomeWhitelist>
+        <canSpawnOnRoad>false</canSpawnOnRoad>
+        <canSpawnOnRiver>false</canSpawnOnRiver>
+    </TileMutatorDef>
+    
+    <TileMutatorDef>
+        <defName>MV_HumanTraces</defName>
+        <label>human traces</label>
+        <description>Someone was here once... They never left.</description>
+        <workerClass>MapVehicles.TileMutatorWorker_HumanTraces</workerClass>
+        <biomeBlacklist>
+            <li>SeaIce</li>
+            <li>IceSheet</li>
+            <li>GlacialPlain</li>
+        </biomeBlacklist>
+    </TileMutatorDef>
+    
+</Defs>

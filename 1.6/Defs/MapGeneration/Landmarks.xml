@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <LandmarkDef>
+        <defName>MV_OceanIsland</defName>
+        <label>ocean island</label>
+        <iconTexturePath>World/Landmarks/CoastalIsland</iconTexturePath>
+        <atlasSize>(2, 2)</atlasSize>
+        <drawType>TerrainMask</drawType>
+        <commonality>0.75</commonality>
+        <nameMaker>NamerLandmark_CoastalIsland</nameMaker>
+        <category>ocean</category>
+        <mutatorChances>
+            <MV_OceanIsland Required="True"/>
+            <MV_HumanTraces>0.4</MV_HumanTraces>
+            <Stockpile>0.05</Stockpile>
+            <SunnyMutator>0.05</SunnyMutator>
+            <WetClimate>0.15</WetClimate>
+            <WindyMutator>0.15</WindyMutator>
+            <AnimalHabitat>0.15</AnimalHabitat>
+            <AnimalLife_Increased>0.05</AnimalLife_Increased>
+            <PlantGrove>0.05</PlantGrove>
+            <PlantLife_Increased>0.05</PlantLife_Increased>
+            <Sandy>0.05</Sandy>
+            <Fertile>0.05</Fertile>
+            <Muddy>0.05</Muddy>
+            <WildPlants>0.1</WildPlants>
+            <WildTropicalPlants>0.03</WildTropicalPlants>
+            <ArcheanTrees>0.01</ArcheanTrees>
+            <AncientUplink>0.02</AncientUplink>
+            <Fish_Increased>0.05</Fish_Increased>
+            <Fish_Decreased>0.01</Fish_Decreased>
+        </mutatorChances>
+    </LandmarkDef>
+    
+</Defs>

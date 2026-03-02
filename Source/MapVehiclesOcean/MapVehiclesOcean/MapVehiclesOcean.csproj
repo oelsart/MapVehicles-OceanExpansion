@@ -34,10 +34,5 @@
       <Private>False</Private>
     </Reference>
   </ItemGroup>
-  
-  <ItemGroup>
-    <Folder Include="Quests\" />
-    <Folder Include="Utilities\" />
-  </ItemGroup>
 
 </Project>

@@ -1,37 +1,29 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Patch>
 	<Operation Class="PatchOperationConditional">
-		<xpath>Defs/BiomeDef[defName="Ocean"]/terrainPatchMakers</xpath>
+		<xpath>Defs/BiomeDef[defName="Ocean"]/terrainsByFertility</xpath>
 		<nomatch Class="PatchOperationAdd">
 			<xpath>Defs/BiomeDef[defName="Ocean"]</xpath>
 			<value>
-				<terrainPatchMakers>
+				<terrainsByFertility>
 					<li>
-						<thresholds>
-							<li>
-								<terrain>WaterOceanDeep</terrain>
-							</li>
-						</thresholds>
+						<terrain>WaterDeep</terrain>
 					</li>
-				</terrainPatchMakers>
+				</terrainsByFertility>
 			</value>
 		</nomatch>
 	</Operation>
 	
 	<Operation Class="PatchOperationConditional">
-		<xpath>Defs/BiomeDef[defName="Lake"]/terrainPatchMakers</xpath>
+		<xpath>Defs/BiomeDef[defName="Lake"]/terrainsByFertility</xpath>
 		<nomatch Class="PatchOperationAdd">
 			<xpath>Defs/BiomeDef[defName="Lake"]</xpath>
 			<value>
-				<terrainPatchMakers>
+				<terrainsByFertility>
 					<li>
-						<thresholds>
-							<li>
-								<terrain>WaterDeep</terrain>
-							</li>
-						</thresholds>
+						<terrain>WaterDeep</terrain>
 					</li>
-				</terrainPatchMakers>
+				</terrainsByFertility>
 			</value>
 		</nomatch>
 	</Operation>

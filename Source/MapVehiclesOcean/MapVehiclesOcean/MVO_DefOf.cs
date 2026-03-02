@@ -30,4 +30,7 @@ public static class MVO_DefOf
     public static TerrainDef MV_WaterOceanDeepVirtual;
     
     public static TerrainDef MV_NoWaterVirtual;
+
+    [MayRequireOdyssey]
+    public static LandmarkDef MV_OceanIsland;
 }

@@ -1,4 +1,5 @@
 ﻿using RimWorld;
+using RimWorld.Planet;
 using RimWorld.QuestGen;
 using Verse;
 
@@ -8,6 +9,13 @@ public class CompCrowsNest : CompScanner
 {
     protected override void DoFind(Pawn worker)
     {
+        if (ModsConfig.OdysseyActive &&
+            HiddenIslandManager.HiddenIslandTileIDs(worker.Map?.Tile.Layer) is { Count: > 0 } hashSet &&
+            TileFinder.TryFindTileWithDistance(worker.Tile, 1, 9, out var tile, t => hashSet.Contains(t.tileId), TileFinderMode.Near))
+        {
+            HiddenIslandManager.DiscoverHiddenIsland(tile);
+            return;
+        }
         var slate = new Slate();
         slate.Set("map", parent.Map);
         slate.Set("worker", worker);
