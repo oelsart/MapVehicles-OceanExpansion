@@ -11,6 +11,10 @@ public static class MVO_DefOf
         DefOfHelper.EnsureInitializedInCtor(typeof(MVO_DefOf));
     }
 
+    public static ThingDef MV_Volleyball;
+
+    public static ThingDef MV_Filth_TallyMarks;
+
     public static SoundDef MV_WaterSplash;
     
     public static SoundDef MV_CannonballImpact;

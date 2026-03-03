@@ -138,6 +138,47 @@
         </costList>
         <canOverlapZones>false</canOverlapZones>
     </ThingDef>
+
+    <ThingDef ParentName="ShipwreckPropsBase">
+        <defName>MV_Volleyball</defName>
+        <label>volleyball</label>
+        <description>It looks like a ball for playing games. A face is drawn on it.</description>
+        <graphicData>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>0.8</drawSize>
+            <texPath>MapVehiclesOcean/Things/Volleyball</texPath>
+        </graphicData>
+        <size>(1,1)</size>
+        <passability>PassThroughOnly</passability>
+        <fillPercent>0.1</fillPercent>
+        <statBases>
+            <MaxHitPoints>10</MaxHitPoints>
+            <Mass>0.2</Mass>
+        </statBases>
+        <costList>
+            <Cloth>10</Cloth>
+        </costList>
+    </ThingDef>
+
+    <ThingDef ParentName="BaseFilth">
+        <defName>MV_Filth_TallyMarks</defName>
+        <label>tally marks</label>
+        <graphicData>
+            <graphicClass>Graphic_Single</graphicClass>
+            <texPath>MapVehiclesOcean/Things/TallyMarks</texPath>
+            <shaderType>TransparentBelowSnow</shaderType>
+        </graphicData>
+        <statBases>
+            <Beauty>0</Beauty>
+        </statBases>
+        <filth>
+            <ignoreFilthMultiplierStat>true</ignoreFilthMultiplierStat>
+            <disappearsInDays>500~500</disappearsInDays>
+            <cleaningWorkToReduceThickness>25</cleaningWorkToReduceThickness>
+            <canFilthAttach>false</canFilthAttach>
+            <cleaningSound>Interact_CleanFilth_Dirt</cleaningSound>
+        </filth>
+    </ThingDef>
     
     <ThingDef Name="MV_ShipFloorDiagonalBase" ParentName="ShipwreckPropsBase">
         <defName>MV_ShipFloorDiagonalA</defName>

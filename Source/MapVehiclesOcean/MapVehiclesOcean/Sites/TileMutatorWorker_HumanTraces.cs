@@ -16,7 +16,7 @@ public class TileMutatorWorker_HumanTraces(TileMutatorDef def) : TileMutatorWork
             return;
         SpawnCorpse(map, cell);
 
-        if (CellFinder.TryFindRandomCellNear(cell, map, 8, c =>
+        if (CellFinder.TryFindRandomCellNear(cell, map, 4, c =>
                     !c.Fogged(map) && GenSpawn.CanSpawnAt(ThingDefOf.Campfire, c, map) && c.GetRoof(map) is not null,
                 out var cell2))
         {
@@ -26,12 +26,39 @@ public class TileMutatorWorker_HumanTraces(TileMutatorDef def) : TileMutatorWork
         }
 
         var rot = Rot4.Random;
-        if (CellFinder.TryFindRandomCellNear(cell, map, 8, c =>
+        if (CellFinder.TryFindRandomCellNear(cell, map, 4, c =>
                     !c.Fogged(map) && GenSpawn.CanSpawnAt(ThingDefOf.Bedroll, c, map, rot) && c.GetRoof(map) is not null,
                 out var cell3))
         {
             var bedroll = ThingMaker.MakeThing(ThingDefOf.Bedroll, GenStuff.RandomStuffFor(ThingDefOf.Bedroll));
             GenSpawn.Spawn(bedroll, cell3, map, rot);
+        }
+        
+        if (CellFinder.TryFindRandomCellNear(cell, map, 4, c =>
+                    !c.Fogged(map) && GenSpawn.CanSpawnAt(MVO_DefOf.MV_Volleyball, c, map, Rot4.North),
+                out var cell4))
+        {
+            GenSpawn.Spawn(MVO_DefOf.MV_Volleyball, cell4, map, Rot4.North);
+        }
+        
+        if (CellFinder.TryFindRandomCellNear(cell, map, 4, c =>
+                    !c.Fogged(map) && GenSpawn.CanSpawnAt(MVO_DefOf.MV_Filth_TallyMarks, c, map, Rot4.North) && c.GetRoof(map) is not null,
+                out var cell5))
+        {
+            GenSpawn.Spawn(MVO_DefOf.MV_Filth_TallyMarks, cell5, map, Rot4.North);
+        }
+
+        if (ModsConfig.BiotechActive)
+        {
+            for (var i = 0; i < Rand.Range(0, 2); i++)
+            {
+                if (CellFinder.TryFindRandomCellNear(cell, map, 4, c =>
+                            !c.Fogged(map) && GenSpawn.CanSpawnAt(ThingDefOf.Filth_Floordrawing, c, map, Rot4.North) && c.GetRoof(map) is not null,
+                        out var cell6))
+                {
+                    GenSpawn.Spawn(ThingDefOf.Filth_Floordrawing, cell6, map, Rot4.North);
+                }
+            }
         }
         
         return;

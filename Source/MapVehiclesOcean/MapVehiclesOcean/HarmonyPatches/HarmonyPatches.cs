@@ -32,7 +32,10 @@ public static class Patch_EnterMapUtilityVehicles_EnterMap
 {
     public static void Prefix(Map map, ref EnterMapUtilityVehicles.SpawnParams spawnParams)
     {
-        if (map.Tile.Tile.WaterCovered && spawnParams.enterMode == CaravanEnterMode.Center)
+        if (map.Tile.Tile.WaterCovered)
+        {
             spawnParams.enterMode = CaravanEnterMode.Edge;
+            Log.Message("Entering map with water cover, setting enter mode to edge");
+        }
     }
 }

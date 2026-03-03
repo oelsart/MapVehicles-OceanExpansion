@@ -1,15 +1,15 @@
 ManifestFileVersion: 0
-CRC: 647601383
+CRC: 2596955293
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 8e8083b7257cb4cbbddacc5d307fce72
+    Hash: a4fef50eb84808fbcd17303aa06d6934
   TypeTreeHash:
     serializedVersion: 2
     Hash: ce3b6d18a872ca8039cd5eb3c4fb7ef5
   IncrementalBuildHash:
     serializedVersion: 2
-    Hash: 8e8083b7257cb4cbbddacc5d307fce72
+    Hash: a4fef50eb84808fbcd17303aa06d6934
 HashAppended: 0
 ClassTypes:
 - Class: 28
@@ -154,15 +154,17 @@ Assets:
 - Assets/Data/OELS.MapVehicles.OceanExpansion/Textures/MapVehiclesOcean/Things/RaftPiece/RaftPieceFloat_north.png
 - Assets/Data/OELS.MapVehicles.OceanExpansion/Textures/MapVehiclesOcean/Things/Cannon/CannonballResource/Cannonball_b.png
 - Assets/Data/OELS.MapVehicles.OceanExpansion/Textures/MapVehiclesOcean/Things/GrapplingLauncher/GrapplingLauncher_MenuIcon.png
-- Assets/Data/OELS.MapVehicles.OceanExpansion/Textures/MapVehiclesOcean/Things/Raft/Raft_south.png
+- Assets/Data/OELS.MapVehicles.OceanExpansion/Textures/MapVehiclesOcean/Things/TallyMarks.png
 - Assets/Data/OELS.MapVehicles.OceanExpansion/Textures/MapVehiclesOcean/Things/WoodShipProps/WoodShipPropsA_Diagonal_north.png
+- Assets/Data/OELS.MapVehicles.OceanExpansion/Textures/MapVehiclesOcean/Things/Raft/Raft_south.png
+- Assets/Data/OELS.MapVehicles.OceanExpansion/Textures/MapVehiclesOcean/Things/Volleyball.png
 - Assets/Data/OELS.MapVehicles.OceanExpansion/Textures/MapVehiclesOcean/Things/WoodShipProps/WoodShipPropsBC_Diagonal_south.png
 - Assets/Data/OELS.MapVehicles.OceanExpansion/Textures/MapVehiclesOcean/Things/ZiplineBelt/ZiplineBelt_AbilityIcon.png
-- Assets/Data/OELS.MapVehicles.OceanExpansion/Textures/MapVehiclesOcean/Things/Rig/Rig2/Leathery_Rig2_south.png
 - Assets/Data/OELS.MapVehicles.OceanExpansion/Textures/MapVehiclesOcean/Things/Helm/Helm_northm.png
 - Assets/Data/OELS.MapVehicles.OceanExpansion/Textures/MapVehiclesOcean/Things/Rig/MastRoot_m.png
 - Assets/Data/OELS.MapVehicles.OceanExpansion/Textures/MapVehiclesOcean/Things/Slugshell/Slugshell_east.png
 - Assets/Data/OELS.MapVehicles.OceanExpansion/Textures/MapVehiclesOcean/Things/WoodShipProps/WoodShipPropsBA_Diagonal_north.png
+- Assets/Data/OELS.MapVehicles.OceanExpansion/Textures/MapVehiclesOcean/Things/Rig/Rig2/Leathery_Rig2_south.png
 - Assets/Data/OELS.MapVehicles.OceanExpansion/Textures/MapVehiclesOcean/Things/Cannon/Cannon_eastm.png
 - Assets/Data/OELS.MapVehicles.OceanExpansion/Textures/MapVehiclesOcean/Things/CrowsNest/CrowsNestBlueprint_north.png
 - Assets/Data/OELS.MapVehicles.OceanExpansion/Textures/MapVehiclesOcean/Things/CrowsNest/CrowsNest_east.png
