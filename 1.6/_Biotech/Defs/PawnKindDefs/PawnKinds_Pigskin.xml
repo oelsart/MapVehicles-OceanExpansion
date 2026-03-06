@@ -2,9 +2,9 @@
 <Defs>
 
     <PawnKindDef ParentName="VillagerBase">
-        <defName>MV_Villager_Pig_GrapplingBelt</defName>
+        <defName>MVO_Villager_Pig_GrapplingBelt</defName>
         <apparelRequired>
-            <li>MV_Apparel_GrapplingBelt</li>
+            <li>MVO_Apparel_GrapplingBelt</li>
         </apparelRequired>
         <weaponTags>
             <li>ShortShots</li>
@@ -14,9 +14,9 @@
     </PawnKindDef>
 
     <PawnKindDef ParentName="GuardBase">
-        <defName>MV_Town_Guard_Pig_GrapplingBelt</defName>
+        <defName>MVO_Town_Guard_Pig_GrapplingBelt</defName>
         <apparelRequired>
-            <li>MV_Apparel_GrapplingBelt</li>
+            <li>MVO_Apparel_GrapplingBelt</li>
         </apparelRequired>
         <weaponTags>
             <li>ShortShots</li>
@@ -26,9 +26,9 @@
     </PawnKindDef>
 
     <PawnKindDef ParentName="CouncilmanBase">
-        <defName>MV_Town_Councilman_Pig_GrapplingBelt</defName>
+        <defName>MVO_Town_Councilman_Pig_GrapplingBelt</defName>
         <apparelRequired>
-            <li>MV_Apparel_GrapplingBelt</li>
+            <li>MVO_Apparel_GrapplingBelt</li>
         </apparelRequired>
         <weaponTags>
             <li>ShortShots</li>

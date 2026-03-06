@@ -2,7 +2,7 @@
 <Defs>
 	
 	<PrefabDef>
-		<defName>MV_Keel_PrefabA</defName>
+		<defName>MVO_Keel_PrefabA</defName>
 		<size>(7,14)</size>
 		<things>
 			<Battery>
@@ -40,24 +40,24 @@
 				<position>(1, 0, 8)</position>
 				<relativeRotation>Clockwise</relativeRotation>
 			</VMF_Ladder>
-			<MV_Turret_GrapplingLauncher>
+			<MVO_Turret_GrapplingLauncher>
 				<position>(5, 0, 8)</position>
 				<relativeRotation>Clockwise</relativeRotation>
-			</MV_Turret_GrapplingLauncher>
-			<MV_Helm>
+			</MVO_Turret_GrapplingLauncher>
+			<MVO_Helm>
 				<position>(3, 0, 10)</position>
-			</MV_Helm>
-			<MV_Hatch>
+			</MVO_Helm>
+			<MVO_Hatch>
 				<position>(3, 0, 8)</position>
 				<stuff>Steel</stuff>
-			</MV_Hatch>
-			<MV_RigThreeTiered>
+			</MVO_Hatch>
+			<MVO_RigThreeTiered>
 				<position>(3, 0, 6)</position>
 				<stuff>Cloth</stuff>
-			</MV_RigThreeTiered>
-			<MV_MooringRing>
+			</MVO_RigThreeTiered>
+			<MVO_MooringRing>
 				<position>(3, 0, 1)</position>
-			</MV_MooringRing>
+			</MVO_MooringRing>
 			<Steel>
 				<rects>
 					<li>(2,7,2,9)</li>
@@ -81,7 +81,7 @@
 
 
 	<PrefabDef>
-		<defName>MV_Keel_PrefabB</defName>
+		<defName>MVO_Keel_PrefabB</defName>
 		<size>(7,14)</size>
 		<things>
 			<Battery>
@@ -105,38 +105,38 @@
 				<position>(1, 0, 9)</position>
 				<relativeRotation>Clockwise</relativeRotation>
 			</VMF_Ladder>
-			<MV_Helm>
+			<MVO_Helm>
 				<position>(3, 0, 10)</position>
-			</MV_Helm>
+			</MVO_Helm>
 			<VMF_Turret_ZiplineTurret>
 				<position>(3, 0, 2)</position>
 			</VMF_Turret_ZiplineTurret>
 			<PowerConduit>
 				<position>(3, 0, 2)</position>
 			</PowerConduit>
-			<MV_RigThreeTiered>
+			<MVO_RigThreeTiered>
 				<position>(3, 0, 6)</position>
 				<stuff>Cloth</stuff>
-			</MV_RigThreeTiered>
+			</MVO_RigThreeTiered>
 			<Shelf>
 				<position>(5, 0, 4)</position>
 				<relativeRotation>Counterclockwise</relativeRotation>
 				<stuff>Steel</stuff>
 			</Shelf>
-			<MV_Cannonball>
+			<MVO_Cannonball>
 				<rects>
 					<li>(5,4,5,5)</li>
 				</rects>
 				<stackCountRange>15~25</stackCountRange>
-			</MV_Cannonball>
-			<MV_Cannon_Blueprint>
+			</MVO_Cannonball>
+			<MVO_Cannon_Blueprint>
 				<rects>
 					<li>(1,4,1,4)</li>
 					<li>(1,6,1,6)</li>
 					<li>(1,8,1,8)</li>
 				</rects>
 				<relativeRotation>Counterclockwise</relativeRotation>
-			</MV_Cannon_Blueprint>
+			</MVO_Cannon_Blueprint>
 		</things>
 	</PrefabDef>
 	

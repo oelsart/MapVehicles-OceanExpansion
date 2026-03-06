@@ -2,7 +2,7 @@
 
 <Defs>
 	<Vehicles.VehicleDef ParentName="BaseSeaVehiclePawnWithMap">
-		<defName>MV_ExpandableRaft</defName>
+		<defName>MVO_ExpandableRaft</defName>
 		<label>raft</label>
 		<description>TODO</description>
 
@@ -15,7 +15,7 @@
 
 		<fillPercent>0.1</fillPercent>
 
-		<buildDef>MV_ExpandableRaft_Blueprint</buildDef>
+		<buildDef>MVO_ExpandableRaft_Blueprint</buildDef>
 
 		<size>(3,3)</size>
 
@@ -75,19 +75,19 @@
 			<li Class="VehicleMapFramework.CompProperties_RemoveSegmentGizmo"/>
 			<li Class="VehicleMapFramework.CompProperties_DelayedKill">
 				<message>VMF_BeginToSink</message>
-				<effecterDef>MV_SinkSplash</effecterDef>
+				<effecterDef>MVO_SinkSplash</effecterDef>
 			</li>
 			<li Class="VehicleMapFramework.CompProperties_NpcVehicleMap">
 				<pawnCountWeight>0.8</pawnCountWeight>
 				<mapParamsList>
 					<li>
 						<pawnCountRange>0~2</pawnCountRange>
-						<prefabDef>MV_ExpandableRaft_PrefabA</prefabDef>
+						<prefabDef>MVO_ExpandableRaft_PrefabA</prefabDef>
 						<preferredDir>North</preferredDir>
 					</li>
 					<li>
 						<pawnCountRange>3~</pawnCountRange>
-						<prefabDef>MV_ExpandableRaft_PrefabB</prefabDef>
+						<prefabDef>MVO_ExpandableRaft_PrefabB</prefabDef>
 						<preferredDir>West</preferredDir>
 					</li>
 				</mapParamsList>

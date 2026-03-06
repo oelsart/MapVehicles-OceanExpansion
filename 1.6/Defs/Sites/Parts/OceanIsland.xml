@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<Defs>
+    
+    <SitePartDef>
+        <defName>MVO_IslandTreasure</defName>
+        <label>treasure</label>
+        <description>The treasure that lies dormant on the island.</description>
+        <workerClass>MapVehiclesOcean.SitePartWorker_GeneratedThings</workerClass>
+        <siteTexture>World/WorldObjects/Sites/GenericSite</siteTexture>
+        <expandingIconTexture>World/WorldObjects/Expanding/Sites/ItemStash</expandingIconTexture>
+        <handlesWorldObjectTimeoutInspectString>true</handlesWorldObjectTimeoutInspectString>
+        <tags>
+            <li>MVO_IslandTreasure</li>
+        </tags>
+    </SitePartDef>
+
+    <GenStepDef>
+        <defName>MVO_IslandTreasure</defName>
+        <linkWithSite>MVO_IslandTreasure</linkWithSite>
+        <order>700</order>
+        <genStep Class="MapVehiclesOcean.GenStep_IslandTreasure" />
+    </GenStepDef>
+    
+    <SitePartDef>
+        <defName>MVO_IslandHumanTraces</defName>
+        <label>human traces</label>
+        <description>Someone was here once... They never left.</description>
+        <workerClass>MapVehiclesOcean.SitePartWorker_GeneratedPawns</workerClass>
+        <siteTexture>World/WorldObjects/Sites/GenericSite</siteTexture>
+        <expandingIconTexture>World/WorldObjects/Expanding/Sites/DownedRefugee</expandingIconTexture>
+        <tags>
+            <li>MVO_IslandHumanTraces</li>
+        </tags>
+    </SitePartDef>
+
+    <GenStepDef>
+        <defName>MVO_IslandHumanTraces</defName>
+        <linkWithSite>MVO_IslandHumanTraces</linkWithSite>
+        <order>1600</order>
+        <genStep Class="MapVehiclesOcean.GenStep_HumanTraces" />
+    </GenStepDef>
+    
+</Defs>

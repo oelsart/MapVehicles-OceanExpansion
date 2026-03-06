@@ -13,7 +13,7 @@
 	</DesignationCategoryDef>
 	
 	<DesignationCategoryDef>
-		<defName>MV_Dev</defName>
+		<defName>MVO_Dev</defName>
 		<label>DEV: Props</label>
 		<order>0</order>
 

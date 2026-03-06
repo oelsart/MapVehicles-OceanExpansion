@@ -2,11 +2,11 @@
 <Defs>
 
     <ThingDef Name="ShipwreckPropsBase" ParentName="BuildingBase" Abstract="True">
-        <designationCategory>MV_Dev</designationCategory>
+        <designationCategory>MVO_Dev</designationCategory>
     </ThingDef>
     
     <ThingDef ParentName="ShipwreckPropsBase">
-        <defName>MV_ShipwreckHatch</defName>
+        <defName>MVO_ShipwreckHatch</defName>
         <label>hatch</label>
         <description>TODO</description>
         <thingClass>Building_Crate</thingClass>
@@ -35,7 +35,7 @@
     </ThingDef>
 
     <ThingDef ParentName="ShipwreckPropsBase">
-        <defName>MV_ShipwreckMast</defName>
+        <defName>MVO_ShipwreckMast</defName>
         <label>broken mast</label>
         <description>TODO</description>
         <graphicData>
@@ -68,7 +68,7 @@
     </ThingDef>
 
     <ThingDef ParentName="ShipwreckPropsBase">
-        <defName>MV_ShipwreckBarrel</defName>
+        <defName>MVO_ShipwreckBarrel</defName>
         <label>barrel</label>
         <description>TODO</description>
         <thingClass>Building_Crate</thingClass>
@@ -110,7 +110,37 @@
     </ThingDef>
 
     <ThingDef ParentName="ShipwreckPropsBase">
-        <defName>MV_ShipwreckCannon</defName>
+        <defName>MVO_StoneCoffer</defName>
+        <label>coffer</label>
+        <description>TODO</description>
+        <thingClass>Building_Crate</thingClass>
+        <graphicData>
+            <graphicClass>Graphic_Multi</graphicClass>
+            <texPath>MapVehiclesOcean/Things/StoneCoffer/StoneCoffer</texPath>
+            <shaderType>CutoutComplex</shaderType>
+            <drawSize>(4,2)</drawSize>
+            <damageData>
+                <rect>(0.125,0.1,0.875,0.6)</rect>
+            </damageData>
+        </graphicData>
+        <size>(3,1)</size>
+        <passability>PassThroughOnly</passability>
+        <fillPercent>0.5</fillPercent>
+        <statBases>
+            <MaxHitPoints>320</MaxHitPoints>
+            <Mass>50</Mass>
+        </statBases>
+        <stuffCategories>
+            <li>Stony</li>
+        </stuffCategories>
+        <costStuffCount>120</costStuffCount>
+        <costList>
+            <Gold>3</Gold>
+        </costList>
+    </ThingDef>
+
+    <ThingDef ParentName="ShipwreckPropsBase">
+        <defName>MVO_ShipwreckCannon</defName>
         <label>broken cannon</label>
         <description>TODO</description>
         <graphicData>
@@ -140,7 +170,7 @@
     </ThingDef>
 
     <ThingDef ParentName="ShipwreckPropsBase">
-        <defName>MV_Volleyball</defName>
+        <defName>MVO_Volleyball</defName>
         <label>volleyball</label>
         <description>It looks like a ball for playing games. A face is drawn on it.</description>
         <graphicData>
@@ -161,7 +191,7 @@
     </ThingDef>
 
     <ThingDef ParentName="BaseFilth">
-        <defName>MV_Filth_TallyMarks</defName>
+        <defName>MVO_Filth_TallyMarks</defName>
         <label>tally marks</label>
         <graphicData>
             <graphicClass>Graphic_Single</graphicClass>
@@ -180,8 +210,8 @@
         </filth>
     </ThingDef>
     
-    <ThingDef Name="MV_ShipFloorDiagonalBase" ParentName="ShipwreckPropsBase">
-        <defName>MV_ShipFloorDiagonalA</defName>
+    <ThingDef Name="MVO_ShipFloorDiagonalBase" ParentName="ShipwreckPropsBase">
+        <defName>MVO_ShipFloorDiagonalA</defName>
         <label>wood floor</label>
         <description>Wood plank flooring for that warm, homey feeling. While it is quick to lay, it is also very flammable.</description>
         <altitudeLayer>Floor</altitudeLayer>
@@ -207,43 +237,43 @@
         </building>
     </ThingDef>
     
-    <ThingDef ParentName="MV_ShipFloorDiagonalBase">
-        <defName>MV_ShipFloorDiagonalB</defName>
+    <ThingDef ParentName="MVO_ShipFloorDiagonalBase">
+        <defName>MVO_ShipFloorDiagonalB</defName>
         <graphicData>
             <texPath>MapVehiclesOcean/Things/WoodShipProps/WoodShipPropsB_Diagonal</texPath>
         </graphicData>
     </ThingDef>
 
-    <ThingDef ParentName="MV_ShipFloorDiagonalBase">
-        <defName>MV_ShipFloorDiagonalC</defName>
+    <ThingDef ParentName="MVO_ShipFloorDiagonalBase">
+        <defName>MVO_ShipFloorDiagonalC</defName>
         <graphicData>
             <texPath>MapVehiclesOcean/Things/WoodShipProps/WoodShipPropsC_Diagonal</texPath>
         </graphicData>
     </ThingDef>
 
-    <ThingDef ParentName="MV_ShipFloorDiagonalBase">
-        <defName>MV_ShipFloorDiagonalAB</defName>
+    <ThingDef ParentName="MVO_ShipFloorDiagonalBase">
+        <defName>MVO_ShipFloorDiagonalAB</defName>
         <graphicData>
             <texPath>MapVehiclesOcean/Things/WoodShipProps/WoodShipPropsAB_Diagonal</texPath>
         </graphicData>
     </ThingDef>
 
-    <ThingDef ParentName="MV_ShipFloorDiagonalBase">
-        <defName>MV_ShipFloorDiagonalBA</defName>
+    <ThingDef ParentName="MVO_ShipFloorDiagonalBase">
+        <defName>MVO_ShipFloorDiagonalBA</defName>
         <graphicData>
             <texPath>MapVehiclesOcean/Things/WoodShipProps/WoodShipPropsBA_Diagonal</texPath>
         </graphicData>
     </ThingDef>
 
-    <ThingDef ParentName="MV_ShipFloorDiagonalBase">
-        <defName>MV_ShipFloorDiagonalBC</defName>
+    <ThingDef ParentName="MVO_ShipFloorDiagonalBase">
+        <defName>MVO_ShipFloorDiagonalBC</defName>
         <graphicData>
             <texPath>MapVehiclesOcean/Things/WoodShipProps/WoodShipPropsBC_Diagonal</texPath>
         </graphicData>
     </ThingDef>
 
-    <ThingDef ParentName="MV_ShipFloorDiagonalBase">
-        <defName>MV_ShipFloorDiagonalCB</defName>
+    <ThingDef ParentName="MVO_ShipFloorDiagonalBase">
+        <defName>MVO_ShipFloorDiagonalCB</defName>
         <graphicData>
             <texPath>MapVehiclesOcean/Things/WoodShipProps/WoodShipPropsCB_Diagonal</texPath>
         </graphicData>

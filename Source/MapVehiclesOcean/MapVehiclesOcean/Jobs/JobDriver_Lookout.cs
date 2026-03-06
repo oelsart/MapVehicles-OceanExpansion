@@ -4,7 +4,7 @@ using VehicleMapFramework;
 using Verse;
 using Verse.AI;
 
-namespace MapVehicles;
+namespace MapVehiclesOcean;
 
 [HotSwap]
 public class JobDriver_Lookout : JobDriver_OperateScanner, IBodyOffsetJobDriver

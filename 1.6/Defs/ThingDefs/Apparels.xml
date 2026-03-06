@@ -2,7 +2,7 @@
 <Defs>
     
     <ThingDef ParentName="ApparelBase">
-        <defName>MV_Apparel_GrapplingBelt</defName>
+        <defName>MVO_Apparel_GrapplingBelt</defName>
         <label>grappling belt</label>
         <description>TODO</description>
         <graphicData>
@@ -26,7 +26,7 @@
         </costList>
         <recipeMaker>
             <unfinishedThingDef>UnfinishedBelt</unfinishedThingDef>
-            <researchPrerequisite>MV_SailorMelee</researchPrerequisite>
+            <researchPrerequisite>MVO_SailorMelee</researchPrerequisite>
             <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
             <workSkill>Crafting</workSkill>
             <effectWorking>Tailor</effectWorking>
@@ -101,7 +101,7 @@
             </tags>
             <developmentalStageFilter>Child, Adult</developmentalStageFilter>
             <abilities>
-                <li>MV_GrapplingHook</li>
+                <li>MVO_GrapplingHook</li>
             </abilities>
         </apparel>
         <colorGenerator Class="ColorGenerator_Options">

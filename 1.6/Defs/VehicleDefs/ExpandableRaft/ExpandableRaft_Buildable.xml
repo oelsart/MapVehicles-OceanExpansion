@@ -2,7 +2,7 @@
 
 <Defs>
 	<Vehicles.VehicleBuildDef ParentName="VehicleBoatWithMapBaseBuildable">
-		<defName>MV_ExpandableRaft_Blueprint</defName>
+		<defName>MVO_ExpandableRaft_Blueprint</defName>
 		<label>raft</label>
 		<description>TODO</description>
 		<designationCategory>VF_Vehicles</designationCategory>
@@ -21,7 +21,7 @@
 		<size>(3,3)</size>
 
 		<researchPrerequisites>
-			<li>MV_ExpandableRaft</li>
+			<li>MVO_ExpandableRaft</li>
 		</researchPrerequisites>
 		
 		<costList>
@@ -30,18 +30,18 @@
 		
 		<building>
 			<relatedBuildCommands>
-				<li>MV_Oar</li>
-				<li>MV_RaftPiece</li>
-				<li>MV_RaftPieceFloat</li>
-				<li>MV_RigOneTiered</li>
-				<li>MV_RigTwoTiered</li>
-				<li>MV_RigThreeTiered</li>
+				<li>MVO_Oar</li>
+				<li>MVO_RaftPiece</li>
+				<li>MVO_RaftPieceFloat</li>
+				<li>MVO_RigOneTiered</li>
+				<li>MVO_RigTwoTiered</li>
+				<li>MVO_RigThreeTiered</li>
 			</relatedBuildCommands>
 		</building>
 
 		<soundImpactDefault>BulletImpact_Wood</soundImpactDefault>
 
-		<thingToSpawn>MV_ExpandableRaft</thingToSpawn>
+		<thingToSpawn>MVO_ExpandableRaft</thingToSpawn>
 
 		<constructionSkillPrerequisite>4</constructionSkillPrerequisite>
 		

@@ -1,6 +1,6 @@
 ﻿using Verse;
 
-namespace MapVehicles;
+namespace MapVehiclesOcean;
 
 public class Settings : ModSettings
 {

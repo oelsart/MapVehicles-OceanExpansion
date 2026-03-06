@@ -2,7 +2,7 @@
 using UnityEngine;
 using Verse;
 
-namespace MapVehicles;
+namespace MapVehiclesOcean;
 
 public class MapVehiclesOcean : Mod
 {
@@ -22,7 +22,7 @@ public class MapVehiclesOcean : Mod
     {
         var listing_Standard = new Listing_Standard();
         listing_Standard.Begin(inRect);
-        listing_Standard.SliderPercentLabeled("MV_HiddenIslandChance".Translate(), null, null, ref settings.hiddenIslandChance, 0f, 1f, 1);
+        listing_Standard.SliderPercentLabeled("MVO_HiddenIslandChance".Translate(), null, null, ref settings.hiddenIslandChance, 0f, 1f, 1);
         listing_Standard.End();
 
         var bottomRight = inRect.BottomPartPixels(30f).RightPartPixels(30f);

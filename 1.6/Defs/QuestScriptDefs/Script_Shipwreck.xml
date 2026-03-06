@@ -2,48 +2,48 @@
 <Defs>
     
     <QuestScriptDef>
-        <defName>MV_Shipwreck</defName>
+        <defName>MVO_Shipwreck</defName>
         <autoAccept>true</autoAccept>
         <defaultChallengeRating>1</defaultChallengeRating>
         <isRootSpecial>true</isRootSpecial>
         <questNameRules>
             <rulesStrings>
-                <li>questName->[MV_wreck] of [MV_ship]</li>
-                <li>questName->[MV_ship] [MV_wreck]</li>
-                <li>questName->The [MV_ship] [MV_wreck]</li>
-                <li>questName->[MV_sunken] [MV_ship]</li>
-                <li>questName->[MV_ship] [MV_found]</li>
+                <li>questName->[MVO_wreck] of [MVO_ship]</li>
+                <li>questName->[MVO_ship] [MVO_wreck]</li>
+                <li>questName->The [MVO_ship] [MVO_wreck]</li>
+                <li>questName->[MVO_sunken] [MVO_ship]</li>
+                <li>questName->[MVO_ship] [MVO_found]</li>
                 
-                <li>MV_ship->ship</li>
-                <li>MV_ship->vessel</li>
-                <li>MV_ship->boat</li>
-                <li>MV_ship->craft</li>
-                <li>MV_ship->freighter</li>
-                <li>MV_ship->transport</li>
+                <li>MVO_ship->ship</li>
+                <li>MVO_ship->vessel</li>
+                <li>MVO_ship->boat</li>
+                <li>MVO_ship->craft</li>
+                <li>MVO_ship->freighter</li>
+                <li>MVO_ship->transport</li>
 
-                <li>MV_wreck->wreck</li>
-                <li>MV_wreck->wreckage</li>
-                <li>MV_wreck->remains</li>
-                <li>MV_wreck->hulk</li>
-                <li>MV_wreck->ruin</li>
+                <li>MVO_wreck->wreck</li>
+                <li>MVO_wreck->wreckage</li>
+                <li>MVO_wreck->remains</li>
+                <li>MVO_wreck->hulk</li>
+                <li>MVO_wreck->ruin</li>
 
-                <li>MV_sunken->sunken</li>
-                <li>MV_sunken->ghost</li>
-                <li>MV_sunken->derelict</li>
-                <li>MV_sunken->distant</li>
-                <li>MV_sunken->far</li>
-                <li>MV_sunken->unknown</li>
+                <li>MVO_sunken->sunken</li>
+                <li>MVO_sunken->ghost</li>
+                <li>MVO_sunken->derelict</li>
+                <li>MVO_sunken->distant</li>
+                <li>MVO_sunken->far</li>
+                <li>MVO_sunken->unknown</li>
                 
-                <li>MV_found->found</li>
-                <li>MV_found->spotted</li>
-                <li>MV_found->sighted</li>
-                <li>MV_found->located</li>
+                <li>MVO_found->found</li>
+                <li>MVO_found->spotted</li>
+                <li>MVO_found->sighted</li>
+                <li>MVO_found->located</li>
 
             </rulesStrings>
         </questNameRules>
         <questDescriptionRules>
             <rulesStrings>
-                <li>questDescription->By the lookout, [worker_definite] has found a shipwreck nearby.\n\nUnfortunately, it won't last - others will scavenge it first in [timeoutTicks_duration] if we don't.[MV_ShipwreckThreatDescription]</li>
+                <li>questDescription->By the lookout, [worker_definite] has found a shipwreck nearby.\n\nUnfortunately, it won't last - others will scavenge it first in [timeoutTicks_duration] if we don't.[MVO_ShipwreckThreatDescription]</li>
             </rulesStrings>
         </questDescriptionRules>
         <root Class="QuestNode_Sequence">
@@ -52,7 +52,7 @@
                     <def>Util_AdjustPointsForDistantFight</def>
                 </li>
 
-                <li Class="VehicleMapFramework.QuestNode_GetSeaSiteTile">
+                <li Class="MapVehiclesOcean.QuestNode_GetSeaSiteTile">
                     <storeAs>siteTile</storeAs>
                     <preferCloserTiles>true</preferCloserTiles>
                 </li>
@@ -67,16 +67,22 @@
                         <value>0</value>
                     </elseNode>
                 </li>
+                
+                <li Class="QuestNode_GenerateThingSet">
+                    <storeAs>generatedThings</storeAs>
+                    <thingSetMaker>MVO_ShipwreckCargo</thingSetMaker>
+                    <totalMarketValueRange>4000~6000</totalMarketValueRange>
+                </li>
 
                 <li Class="QuestNode_GetSitePartDefsByTagsAndFaction">
                     <storeAs>sitePartDefs</storeAs>
                     <storeFactionAs>siteFaction</storeFactionAs>
                     <sitePartsTags>
                         <li>
-                            <tag>MV_Shipwreck</tag>
+                            <tag>MVO_Shipwreck</tag>
                         </li>
                         <li>
-                            <tag>MV_SeaThreat</tag>
+                            <tag>MVO_SeaThreat</tag>
                             <chance>$siteThreatChance</chance>
                         </li>
                     </sitePartsTags>
@@ -90,7 +96,7 @@
                 </li>
 
                 <li Class="QuestNode_SubScript">
-                    <def>VMF_Util_GenerateSeaSite</def>
+                    <def>MVO_Util_GenerateSeaSite</def>
                 </li>
 
                 <li Class="QuestNode_SpawnWorldObjects">

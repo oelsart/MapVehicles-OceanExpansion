@@ -4,7 +4,7 @@ using Vehicles;
 using Verse;
 using Verse.Sound;
 
-namespace MapVehicles;
+namespace MapVehiclesOcean;
 
 public class Cannonball : Bullet
 {
@@ -21,17 +21,17 @@ public class Cannonball : Bullet
             {
                 case VehiclePawn:
                     FleckMaker.ThrowDustPuff(pos, map, scale);
-                    FleckMaker.Static(pos, map, MVO_DefOf.MV_ShockwaveSmall, scale);
-                    MVO_DefOf.MV_CannonballImpact.PlayOneShot(new TargetInfo(Position, map));
+                    FleckMaker.Static(pos, map, MVO_DefOf.MVO_ShockwaveSmall, scale);
+                    MVO_DefOf.MVO_CannonballImpact.PlayOneShot(new TargetInfo(Position, map));
                     break;
                 case null when Position.GetTerrain(map).takeSplashes:
                     FleckMaker.Static(pos, map, MVO_DefOf.GroundWaterSplash, scale);
                     FleckMaker.WaterRipple(pos, map, scale);
-                    MVO_DefOf.MV_WaterSplash.PlayOneShot(new TargetInfo(Position, map));
+                    MVO_DefOf.MVO_WaterSplash.PlayOneShot(new TargetInfo(Position, map));
                     break;
                 default:
                     FleckMaker.ThrowDustPuff(pos, map, scale);
-                    FleckMaker.Static(pos, map, MVO_DefOf.MV_ShockwaveSmall, scale);
+                    FleckMaker.Static(pos, map, MVO_DefOf.MVO_ShockwaveSmall, scale);
                     break;
             }
         }

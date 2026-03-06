@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    
+    <IncidentTargetTagDef>
+        <defName>MVO_Map_TempIncidentSea</defName>
+    </IncidentTargetTagDef>
+    
+</Defs>

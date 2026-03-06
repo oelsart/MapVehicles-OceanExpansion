@@ -1,4 +1,4 @@
-﻿namespace MapVehicles;
+﻿namespace MapVehiclesOcean;
 
 public class HotSwapAttribute : Attribute
 {

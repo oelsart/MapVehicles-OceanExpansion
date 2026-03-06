@@ -5,7 +5,7 @@ using RimWorld.Planet;
 using UnityEngine;
 using Verse;
 
-namespace MapVehicles;
+namespace MapVehiclesOcean;
 
 public class HiddenIslandManager(World world) : WorldComponent(world)
 {
@@ -23,7 +23,7 @@ public class HiddenIslandManager(World world) : WorldComponent(world)
     {
         var world = Instance.world;
         var layer = tile.Layer;
-        world.landmarks.AddLandmark(MVO_DefOf.MV_OceanIsland, tile, layer, true);
+        world.landmarks.AddLandmark(MVO_DefOf.MVO_OceanIsland, tile, layer, true);
         tile.Tile.PrimaryBiome = NonWaterBiomeFrom(tile.Tile, tile, layer);
         HiddenIslandTileIDs(layer)?.Remove(tile.tileId);
         world.renderer.GetLayer<WorldDrawLayer_Terrain>(layer).SetDirty();

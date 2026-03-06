@@ -2,7 +2,7 @@
 
 <Defs>
 	<Vehicles.VehicleBuildDef ParentName="VehicleBaseBuildable">
-		<defName>MV_Cannon_Blueprint</defName>
+		<defName>MVO_Cannon_Blueprint</defName>
 		<label>cannon</label>
 		<description>TODO</description>
 		<designationCategory>VF_Vehicles</designationCategory>
@@ -30,7 +30,7 @@
 
 		<soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
 
-		<thingToSpawn>MV_Cannon</thingToSpawn>
+		<thingToSpawn>MVO_Cannon</thingToSpawn>
 
 		<constructionSkillPrerequisite>6</constructionSkillPrerequisite>
 	</Vehicles.VehicleBuildDef>

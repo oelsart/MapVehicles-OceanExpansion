@@ -3,7 +3,7 @@ using UnityEngine;
 using Verse;
 using Verse.Noise;
 
-namespace MapVehicles;
+namespace MapVehiclesOcean;
 
 public class TileMutatorWorker_OceanIsland(TileMutatorDef def) : TileMutatorWorker_Coast(def)
 {

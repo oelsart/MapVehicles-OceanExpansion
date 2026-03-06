@@ -2,7 +2,7 @@
 
 <Defs>
 	<Vehicles.VehicleDef ParentName="BaseVehiclePawn">
-		<defName>MV_Cannon</defName>
+		<defName>MVO_Cannon</defName>
 		<label>cannon</label>
 		<description>TODO</description>
 
@@ -18,7 +18,7 @@
 
 		<fillPercent>0.25</fillPercent>
 
-		<buildDef>MV_Cannon_Blueprint</buildDef>
+		<buildDef>MVO_Cannon_Blueprint</buildDef>
 
 		<size>(1,1)</size>
 
@@ -114,8 +114,8 @@
 			<li Class="Vehicles.CompProperties_VehicleTurrets">
 				<deployTime>0.5</deployTime>
 				<turrets>
-					<li Class="MapVehicles.VehicleTurret_Cannon">
-						<turretDef>MV_Cannon_Turret</turretDef>
+					<li Class="MapVehiclesOcean.VehicleTurret_Cannon">
+						<turretDef>MVO_Cannon_Turret</turretDef>
 						<gizmoLabel>Cannon</gizmoLabel>
 						<aimPieOffset>(0, 1)</aimPieOffset>
 						<angleRestricted>(0,359)</angleRestricted>

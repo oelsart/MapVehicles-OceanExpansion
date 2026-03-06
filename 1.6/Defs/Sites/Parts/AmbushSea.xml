@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <SitePartDef>
+        <defName>MVO_SeaThreat</defName>
+        <label>sea threat</label>
+        <description>A sea threat.</description>
+        <workerClass>SitePartWorker_Ambush</workerClass>
+        <siteTexture>World/WorldObjects/Sites/GenericSite</siteTexture>
+        <expandingIconTexture>World/WorldObjects/Expanding/Sites/Ambush</expandingIconTexture>
+        <defaultHidden>true</defaultHidden>
+        <wantsThreatPoints>true</wantsThreatPoints>
+        <tags>
+            <li>MVO_SeaThreat</li>
+        </tags>
+        <excludesTags>
+            <li>MechCluster</li>
+            <li>MechClusterForceNoConditionCauser</li>
+            <li>SleepingMechanoids</li>
+            <li>Manhunters</li>
+        </excludesTags>
+    </SitePartDef>
+
+    <GenStepDef>
+        <defName>MVO_SeaThreat</defName>
+        <linkWithSite>MVO_SeaThreat</linkWithSite>
+        <order>1600</order>
+        <genStep Class="MapVehiclesOcean.GenStep_SeaThreat" />
+    </GenStepDef>
+    
+</Defs>

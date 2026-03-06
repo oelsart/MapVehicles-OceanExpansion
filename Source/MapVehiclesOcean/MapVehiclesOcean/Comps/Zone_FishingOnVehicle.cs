@@ -2,7 +2,7 @@
 using RimWorld;
 using Verse;
 
-namespace MapVehicles;
+namespace MapVehiclesOcean;
 
 public class Zone_FishingOnVehicle : Zone_Fishing
 {

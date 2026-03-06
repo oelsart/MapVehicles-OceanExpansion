@@ -4,7 +4,7 @@ using VehicleMapFramework;
 using Vehicles;
 using Verse;
 
-namespace MapVehicles;
+namespace MapVehiclesOcean;
 
 [UsedImplicitly(ImplicitUseTargetFlags.WithMembers)]
 public class VehicleTurret_Cannon : VehicleTurret_AutoRefuel

@@ -2,7 +2,7 @@
 using VehicleMapFramework;
 using Verse;
 
-namespace MapVehicles;
+namespace MapVehiclesOcean;
 
 [HotSwap]
 public class CompFishingSpot : ThingComp
@@ -69,9 +69,9 @@ public class CompFishingSpot : ThingComp
         
         var terrain = waterBodyType switch
         {
-            WaterBodyType.Freshwater => MVO_DefOf.MV_WaterDeepVirtual,
-            WaterBodyType.Saltwater => MVO_DefOf.MV_WaterOceanDeepVirtual,
-            _ => MVO_DefOf.MV_NoWaterVirtual
+            WaterBodyType.Freshwater => MVO_DefOf.MVO_WaterDeepVirtual,
+            WaterBodyType.Saltwater => MVO_DefOf.MVO_WaterOceanDeepVirtual,
+            _ => MVO_DefOf.MVO_NoWaterVirtual
         };
         if (cell.GetTerrain(map) != terrain)
         {

@@ -2,10 +2,16 @@
 <Defs>
     
     <JobDef>
-        <defName>MV_JobLookout</defName>
-        <driverClass>MapVehicles.JobDriver_Lookout</driverClass>
+        <defName>MVO_JobLookout</defName>
+        <driverClass>MapVehiclesOcean.JobDriver_Lookout</driverClass>
         <reportString>keeping a lookout at TargetA.</reportString>
         <allowOpportunisticPrefix>true</allowOpportunisticPrefix>
+    </JobDef>
+
+    <JobDef>
+        <defName>MVO_GotoShipCombat</defName>
+        <driverClass>MapVehiclesOcean.JobDriver_GotoShipCombat</driverClass>
+        <reportString>moving.</reportString>
     </JobDef>
     
 </Defs>

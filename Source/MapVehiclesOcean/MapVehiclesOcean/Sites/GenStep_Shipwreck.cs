@@ -4,7 +4,7 @@ using RimWorld.Planet;
 using UnityEngine;
 using Verse;
 
-namespace MapVehicles;
+namespace MapVehiclesOcean;
 
 public class GenStep_Shipwreck : GenStep_Scatterer
 {

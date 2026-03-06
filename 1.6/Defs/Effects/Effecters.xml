@@ -2,13 +2,13 @@
 <Defs>
     
     <EffecterDef>
-        <defName>MV_SinkSplash</defName>
+        <defName>MVO_SinkSplash</defName>
         <children>
             <li>
                 <subEffecterClass>SubEffecter_SprayerChance</subEffecterClass>
                 <chancePeriodTicks>20</chancePeriodTicks>
                 <chancePerTick>0.03</chancePerTick>
-                <fleckDef>MV_GroundWaterSplashLow</fleckDef>
+                <fleckDef>MVO_GroundWaterSplashLow</fleckDef>
                 <burstCount>2~3</burstCount>
                 <spawnLocType>RandomCellOnTarget</spawnLocType>
                 <positionRadius>0</positionRadius>
@@ -18,11 +18,11 @@
                 <rotationRate>0</rotationRate>
                 <rotation>0</rotation>
                 <speed>0</speed>
-                <soundDef>MV_WaterSplash</soundDef>
+                <soundDef>MVO_WaterSplash</soundDef>
             </li>
             <li>
                 <subEffecterClass>SubEffecter_SprayerChance</subEffecterClass>
-                <fleckDef>MV_WaterChurnNoiseLow</fleckDef>
+                <fleckDef>MVO_WaterChurnNoiseLow</fleckDef>
                 <burstCount>4~12</burstCount>
                 <spawnLocType>RandomCellOnTarget</spawnLocType>
                 <positionRadius>.5</positionRadius>
@@ -38,7 +38,7 @@
             <li>
                 <subEffecterClass>SubEffecter_SprayerChance</subEffecterClass>
                 <positionRadius>0.2</positionRadius>
-                <fleckDef>MV_AirPuffLow</fleckDef>
+                <fleckDef>MVO_AirPuffLow</fleckDef>
                 <burstCount>1~3</burstCount>
                 <spawnLocType>RandomCellOnTarget</spawnLocType>
                 <speed>0.4~0.8</speed>
@@ -46,7 +46,7 @@
             </li>
             <li>
                 <subEffecterClass>SubEffecter_SoundIntermittent</subEffecterClass>
-                <soundDef>MV_WaterSplash</soundDef>
+                <soundDef>MVO_WaterSplash</soundDef>
                 <intermittentSoundInterval>15~60</intermittentSoundInterval>
             </li>
         </children>

@@ -2,7 +2,7 @@
 
 <Defs>
 	<Vehicles.VehicleBuildDef ParentName="VehicleBoatWithMapBaseBuildable">
-		<defName>MV_Keel_Blueprint</defName>
+		<defName>MVO_Keel_Blueprint</defName>
 		<label>keel</label>
 		<description>TODO</description>
 		<designationCategory>VF_Vehicles</designationCategory>
@@ -24,7 +24,7 @@
 		<size>(5,14)</size>
 
 		<researchPrerequisites>
-			<li>MV_Keel</li>
+			<li>MVO_Keel</li>
 		</researchPrerequisites>
 		
 		<costList>
@@ -36,17 +36,17 @@
 		<building>
 			<neverBuildable>true</neverBuildable>
 			<relatedBuildCommands>
-				<li>MV_RigOneTiered</li>
-				<li>MV_RigTwoTiered</li>
-				<li>MV_RigThreeTiered</li>
-				<li>MV_Helm</li>
-				<li>MV_Hatch</li>
+				<li>MVO_RigOneTiered</li>
+				<li>MVO_RigTwoTiered</li>
+				<li>MVO_RigThreeTiered</li>
+				<li>MVO_Helm</li>
+				<li>MVO_Hatch</li>
 			</relatedBuildCommands>
 		</building>
 
 		<soundImpactDefault>BulletImpact_Wood</soundImpactDefault>
 
-		<thingToSpawn>MV_Keel</thingToSpawn>
+		<thingToSpawn>MVO_Keel</thingToSpawn>
 
 		<constructionSkillPrerequisite>8</constructionSkillPrerequisite>
 		

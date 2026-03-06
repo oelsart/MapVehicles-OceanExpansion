@@ -3,7 +3,7 @@
 <Defs>
 
     <ThingDef ParentName="BaseMeleeWeapon_Sharp_Quality">
-        <defName>MV_MeleeWeapon_Cutlass</defName>
+        <defName>MVO_MeleeWeapon_Cutlass</defName>
         <label>cutlass</label>
         <description>A short, maneuverable sword used in combat on the deck of sail ships.</description>
         <possessionCount>1</possessionCount>
@@ -13,7 +13,7 @@
         </graphicData>
         <techLevel>Medieval</techLevel>
         <weaponTags>
-            <li>MV_ShipCombat</li>
+            <li>MVO_ShipCombat</li>
         </weaponTags>
         <costStuffCount>75</costStuffCount>
         <thingSetMakerTags><li>RewardStandardQualitySuper</li></thingSetMakerTags>
@@ -44,7 +44,7 @@
             </li>
         </tools>
         <recipeMaker>
-            <researchPrerequisite>MV_SailorMelee</researchPrerequisite>
+            <researchPrerequisite>MVO_SailorMelee</researchPrerequisite>
             <skillRequirements>
                 <Crafting>8</Crafting>
             </skillRequirements>

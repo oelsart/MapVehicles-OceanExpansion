@@ -2,7 +2,7 @@
 <Defs>
 
 	<FleckDef ParentName="FleckBase">
-		<defName>MV_ShockwaveSmall</defName>
+		<defName>MVO_ShockwaveSmall</defName>
 		<altitudeLayer>MoteLow</altitudeLayer>
 		<fadeInTime>0.0</fadeInTime>
 		<solidTime>0.0</solidTime>
@@ -23,7 +23,7 @@
 	</FleckDef>
 	
 	<FleckDef ParentName="FleckBase_RandomGraphic_Thrown">
-		<defName>MV_GroundWaterSplashLow</defName>
+		<defName>MVO_GroundWaterSplashLow</defName>
 		<randomGraphics>
 			<li>
 				<graphicClass>Graphic_FleckPulse</graphicClass>
@@ -123,7 +123,7 @@
 	</FleckDef>
 
 	<FleckDef ParentName="FleckBase_Thrown">
-		<defName>MV_WaterChurnNoiseLow</defName>
+		<defName>MVO_WaterChurnNoiseLow</defName>
 		<graphicData>
 			<texPath>Things/Mote/WaterChurnNoise</texPath>
 			<renderInstanced>true</renderInstanced>
@@ -138,7 +138,7 @@
 	</FleckDef>
 
 	<FleckDef ParentName="FleckBase_Thrown">
-		<defName>MV_AirPuffLow</defName>
+		<defName>MVO_AirPuffLow</defName>
 		<graphicData>
 			<texPath>Things/Mote/AirPuff</texPath>
 			<renderInstanced>true</renderInstanced>

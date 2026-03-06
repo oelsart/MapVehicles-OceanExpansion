@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
 
-    <PawnKindDef ParentName="MV_MercenarySlasherGrapplingBeltBase">
-        <defName>MV_Mercenary_Slasher_Yttakin_GrapplingBelt</defName>
+    <PawnKindDef ParentName="MVO_MercenarySlasherGrapplingBeltBase">
+        <defName>MVO_Mercenary_Slasher_Yttakin_GrapplingBelt</defName>
         <apparelTags Inherit="False">
             <li>IndustrialMilitaryBasic</li>
             <li>IndustrialMilitaryAdvanced</li>

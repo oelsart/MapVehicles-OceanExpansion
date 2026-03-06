@@ -1,20 +1,20 @@
 ﻿using RimWorld;
-using RimWorld.Planet;
-using UnityEngine;
 using Verse;
 
-namespace MapVehicles;
+namespace MapVehiclesOcean;
 
-public class TileMutatorWorker_HumanTraces(TileMutatorDef def) : TileMutatorWorker(def)
+public class GenStep_HumanTraces : GenStep
 {
+    public override int SeedPart => 169876513;
+
     private static readonly IntRange CorpseAgeRangeDays = new (30, 6000);
-    
-    public override void GeneratePostFog(Map map)
+
+    public override void Generate(Map map, GenStepParams parms)
     {
-        base.GeneratePostFog(map);
         if (!TryFindShelterCell(map, out var cell))
             return;
-        SpawnCorpse(map, cell);
+        foreach (var pawn in parms.sitePart.things.OfType<Pawn>())
+            SpawnPawn(pawn, map, cell);
 
         if (CellFinder.TryFindRandomCellNear(cell, map, 4, c =>
                     !c.Fogged(map) && GenSpawn.CanSpawnAt(ThingDefOf.Campfire, c, map) && c.GetRoof(map) is not null,
@@ -35,17 +35,17 @@ public class TileMutatorWorker_HumanTraces(TileMutatorDef def) : TileMutatorWork
         }
         
         if (CellFinder.TryFindRandomCellNear(cell, map, 4, c =>
-                    !c.Fogged(map) && GenSpawn.CanSpawnAt(MVO_DefOf.MV_Volleyball, c, map, Rot4.North),
+                    !c.Fogged(map) && GenSpawn.CanSpawnAt(MVO_DefOf.MVO_Volleyball, c, map, Rot4.North),
                 out var cell4))
         {
-            GenSpawn.Spawn(MVO_DefOf.MV_Volleyball, cell4, map, Rot4.North);
+            GenSpawn.Spawn(MVO_DefOf.MVO_Volleyball, cell4, map, Rot4.North);
         }
         
         if (CellFinder.TryFindRandomCellNear(cell, map, 4, c =>
-                    !c.Fogged(map) && GenSpawn.CanSpawnAt(MVO_DefOf.MV_Filth_TallyMarks, c, map, Rot4.North) && c.GetRoof(map) is not null,
+                    !c.Fogged(map) && GenSpawn.CanSpawnAt(MVO_DefOf.MVO_Filth_TallyMarks, c, map, Rot4.North) && c.GetRoof(map) is not null,
                 out var cell5))
         {
-            GenSpawn.Spawn(MVO_DefOf.MV_Filth_TallyMarks, cell5, map, Rot4.North);
+            GenSpawn.Spawn(MVO_DefOf.MVO_Filth_TallyMarks, cell5, map, Rot4.North);
         }
 
         if (ModsConfig.BiotechActive)
@@ -70,19 +70,17 @@ public class TileMutatorWorker_HumanTraces(TileMutatorDef def) : TileMutatorWork
                 out result);
         }
 
-        static void SpawnCorpse(Map map, IntVec3 cell)
+        static void SpawnPawn(Pawn pawn, Map map, IntVec3 cell)
         {
-            var pawn = PawnGenerator.GeneratePawn(PawnKindDefOf.Drifter);
             if (!CellFinder.TryFindRandomSpawnCellForPawnNear(cell, map, out var cell2))
                 return;
-            pawn.health.SetDead();
-            pawn.apparel.DestroyAll();
-            pawn.equipment.DestroyAllEquipment();
-            Find.WorldPawns.PassToWorld(pawn, PawnDiscardDecideMode.Discard);
-            var corpse = pawn.MakeCorpse(null, null);
-            corpse.Age = Mathf.RoundToInt(CorpseAgeRangeDays.RandomInRange * 60000);
-            corpse.GetComp<CompRottable>().RotProgress += corpse.Age;
-            GenSpawn.Spawn(pawn.Corpse, cell2, map);
+            if (pawn.Dead)
+                GenSpawn.Spawn(pawn.Corpse, cell2, map);
+            else
+            {
+                pawn.mindState.WillJoinColonyIfRescued = true;
+                GenSpawn.Spawn(pawn, cell2, map);
+            }
         }
     }
 }

@@ -2,7 +2,7 @@
 
 <Defs>
 	<ThingDef ParentName="MakeableShellBase">
-		<defName>MV_Cannonball</defName>
+		<defName>MVO_Cannonball</defName>
 		<label>cannonball</label>
 		<description>TODO</description>
 		<possessionCount>1</possessionCount>
@@ -10,7 +10,7 @@
 			<texPath>MapVehiclesOcean/Things/Cannon/CannonballResource</texPath>
 			<graphicClass>Graphic_StackCount</graphicClass>
 		</graphicData>
-		<projectileWhenLoaded>MV_Bullet_Cannonball</projectileWhenLoaded>
+		<projectileWhenLoaded>MVO_Bullet_Cannonball</projectileWhenLoaded>
 		<statBases>
 			<Mass>10</Mass>
 		</statBases>
@@ -23,9 +23,9 @@
 	</ThingDef>
 	
 	<ThingDef ParentName="BaseBullet">
-		<defName>MV_Bullet_Cannonball</defName>
+		<defName>MVO_Bullet_Cannonball</defName>
 		<label>cannonball</label>
-		<thingClass>MapVehicles.Cannonball</thingClass>
+		<thingClass>MapVehiclesOcean.Cannonball</thingClass>
 		
 		<graphicData>
 			<texPath>MapVehiclesOcean/Things/Cannon/Cannonball</texPath>
@@ -46,7 +46,7 @@
 	</ThingDef>
 
 	<Vehicles.VehicleTurretDef ParentName="VehicleTurretBase">
-		<defName>MV_Cannon_Turret</defName>
+		<defName>MVO_Cannon_Turret</defName>
 		<label>cannon</label>
 		<description>TODO</description>
 		<turretType>Rotatable</turretType>
@@ -55,7 +55,7 @@
 		<autoSnapTargeting>true</autoSnapTargeting>
 		<autoRefuelProportion>10</autoRefuelProportion>
 		
-		<projectile>MV_Bullet_Cannonball</projectile>
+		<projectile>MVO_Bullet_Cannonball</projectile>
 		<reloadTimer>5.4</reloadTimer>
 		<warmUpTimer>0.5</warmUpTimer>
 		<magazineCapacity>1</magazineCapacity>
@@ -97,7 +97,7 @@
 		
 		<ammunition>
 			<thingDefs>
-				<li>MV_Cannonball</li>
+				<li>MVO_Cannonball</li>
 			</thingDefs>
 		</ammunition>
 		

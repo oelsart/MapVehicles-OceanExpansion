@@ -2,7 +2,7 @@
 <Defs>
 
     <PawnKindDef ParentName="TribalBase">
-        <defName>MV_Tribal_Breacher_GrapplingBelt</defName>
+        <defName>MVO_Tribal_Breacher_GrapplingBelt</defName>
         <label>breacher</label>
         <combatPower>55</combatPower>
         <itemQuality>Poor</itemQuality>
@@ -12,7 +12,7 @@
         <apparelMoney>200~300</apparelMoney>
         <apparelRequired>
             <li>Apparel_WarVeil</li>
-            <li>MV_Apparel_GrapplingBelt</li>
+            <li>MVO_Apparel_GrapplingBelt</li>
         </apparelRequired>
         <weaponMoney>150~150</weaponMoney>
         <weaponTags>

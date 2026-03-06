@@ -2,7 +2,7 @@
 <Defs>
     
     <ResearchTabDef>
-        <defName>MV_Ocean</defName>
+        <defName>MVO_Ocean</defName>
         <label>Ocean</label>
         <generalTitle>Ocean research projects</generalTitle>
         <generalDescription>Unlock new technology to cross the ocean.</generalDescription>

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
 
-    <ThingDef Name="MV_NanameBase" ParentName="BuildingBase" Abstract="True">
-        <designationCategory>MV_Dev</designationCategory>
+    <ThingDef Name="MVO_NanameBase" ParentName="BuildingBase" Abstract="True">
+        <designationCategory>MVO_Dev</designationCategory>
     </ThingDef>
     
-    <ThingDef ParentName="MV_NanameBase" Name="Wall">
+    <ThingDef ParentName="MVO_NanameBase" Name="Wall">
         <defName>Wall_NAWDiagonal</defName>
         <label>wall</label>
         <description>An impassable wall. Capable of holding up a roof.</description>
@@ -118,7 +118,7 @@
         </damageMultipliers>
     </ThingDef>
 
-    <ThingDef ParentName="MV_NanameBase">
+    <ThingDef ParentName="MVO_NanameBase">
         <defName>Fence_NAWDiagonal</defName>
         <label>fence</label>
         <description>A fence made of posts joined by crossbars used for building pens for certain kinds of animals. Some kinds of animals can get past fences. Predators will not hunt creatures on the other side of a fence, but may still wander inside.</description>

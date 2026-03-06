@@ -2,10 +2,10 @@
 <Defs>
 
     <ResearchProjectDef>
-        <defName>MV_SailorMelee</defName>
+        <defName>MVO_SailorMelee</defName>
         <label>sailor's melee</label>
         <description>Learn technologies useful for melee combat on ships.</description>
-        <tab>MV_Ocean</tab>
+        <tab>MVO_Ocean</tab>
         <baseCost>400</baseCost>
         <techLevel>Medieval</techLevel>
         <researchViewX>1.00</researchViewX>

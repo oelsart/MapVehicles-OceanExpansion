@@ -2,7 +2,7 @@
 <Defs>
 
     <LandmarkDef>
-        <defName>MV_OceanIsland</defName>
+        <defName>MVO_OceanIsland</defName>
         <label>ocean island</label>
         <iconTexturePath>World/Landmarks/CoastalIsland</iconTexturePath>
         <atlasSize>(2, 2)</atlasSize>
@@ -11,8 +11,7 @@
         <nameMaker>NamerLandmark_CoastalIsland</nameMaker>
         <category>ocean</category>
         <mutatorChances>
-            <MV_OceanIsland Required="True"/>
-            <MV_HumanTraces>0.4</MV_HumanTraces>
+            <MVO_OceanIsland Required="True"/>
             <Stockpile>0.05</Stockpile>
             <SunnyMutator>0.05</SunnyMutator>
             <WetClimate>0.15</WetClimate>

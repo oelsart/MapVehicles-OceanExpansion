@@ -3,7 +3,7 @@
 
     <!-- Mid merc tier - gunner, slasher, sniper, heavy -->
 
-    <PawnKindDef ParentName="MercenaryMidTierBase" Name="MV_MercenarySlasherGrapplingBeltBase" Abstract="True">
+    <PawnKindDef ParentName="MercenaryMidTierBase" Name="MVO_MercenarySlasherGrapplingBeltBase" Abstract="True">
         <label>mercenary slasher</label>
         <combatPower>140</combatPower>
         <canBeSapper>true</canBeSapper>
@@ -15,7 +15,7 @@
             <li>IndustrialMilitaryAdvanced</li>
         </apparelTags>
         <apparelRequired>
-            <li>MV_Apparel_GrapplingBelt</li>
+            <li>MVO_Apparel_GrapplingBelt</li>
         </apparelRequired>
         <apparelMoney>300~1400</apparelMoney>
         <apparelAllowHeadgearChance>0</apparelAllowHeadgearChance>
@@ -36,8 +36,8 @@
         <initialResistanceRange>19~29</initialResistanceRange>
     </PawnKindDef>
 
-    <PawnKindDef ParentName="MV_MercenarySlasherGrapplingBeltBase">
-        <defName>MV_Mercenary_Slasher_GrapplingBelt</defName>
+    <PawnKindDef ParentName="MVO_MercenarySlasherGrapplingBeltBase">
+        <defName>MVO_Mercenary_Slasher_GrapplingBelt</defName>
         <initialResistanceRange>10~16</initialResistanceRange>
     </PawnKindDef>
 

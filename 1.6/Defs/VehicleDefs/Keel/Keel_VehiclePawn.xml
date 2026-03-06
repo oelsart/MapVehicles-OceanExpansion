@@ -2,7 +2,7 @@
 
 <Defs>
 	<Vehicles.VehicleDef ParentName="BaseSeaVehiclePawnWithMap">
-		<defName>MV_Keel</defName>
+		<defName>MVO_Keel</defName>
 		<label>keel</label>
 		<description>TODO</description>
 
@@ -22,7 +22,7 @@
 
 		<fillPercent>0.35</fillPercent>
 
-		<buildDef>MV_Keel_Blueprint</buildDef>
+		<buildDef>MVO_Keel_Blueprint</buildDef>
 
 		<size>(5,14)</size>
 
@@ -80,18 +80,18 @@
 			<li Class="VehicleMapFramework.CompProperties_RelatedBuildCommands"/>
 			<li Class="VehicleMapFramework.CompProperties_DelayedKill">
 				<message>VMF_BeginToSink</message>
-				<effecterDef>MV_SinkSplash</effecterDef>
+				<effecterDef>MVO_SinkSplash</effecterDef>
 			</li>
 			<li Class="VehicleMapFramework.CompProperties_NpcVehicleMap">
 				<mapParamsList>
 					<li>
 						<pawnCountRange>0~6</pawnCountRange>
-						<prefabDef>MV_Keel_PrefabA</prefabDef>
+						<prefabDef>MVO_Keel_PrefabA</prefabDef>
 						<preferredDir>North</preferredDir>
 					</li>
 					<li>
 						<pawnCountRange>3~</pawnCountRange>
-						<prefabDef>MV_Keel_PrefabB</prefabDef>
+						<prefabDef>MVO_Keel_PrefabB</prefabDef>
 						<preferredDir>West</preferredDir>
 					</li>
 				</mapParamsList>

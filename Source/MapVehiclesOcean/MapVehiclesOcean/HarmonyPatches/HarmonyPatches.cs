@@ -1,11 +1,9 @@
 ﻿using HarmonyLib;
 using RimWorld;
-using RimWorld.Planet;
 using VehicleMapFramework;
-using Vehicles.World;
 using Verse;
 
-namespace MapVehicles.HarmonyPatches;
+namespace MapVehiclesOcean.HarmonyPatches;
 
 public static class HarmonyPatches
 {
@@ -27,15 +25,16 @@ public static class Patch_WaterBodyTracker_Notify_Fished
     }
 }
 
-[HarmonyPatch(typeof(EnterMapUtilityVehicles), nameof(EnterMapUtilityVehicles.EnterMap))]
-public static class Patch_EnterMapUtilityVehicles_EnterMap
-{
-    public static void Prefix(Map map, ref EnterMapUtilityVehicles.SpawnParams spawnParams)
-    {
-        if (map.Tile.Tile.WaterCovered)
-        {
-            spawnParams.enterMode = CaravanEnterMode.Edge;
-            Log.Message("Entering map with water cover, setting enter mode to edge");
-        }
-    }
-}
+// 島タイルでCampした時のためのパッチだが発火してないかも。まず島マップでキャンプできるか不明。
+// [HarmonyPatch(typeof(EnterMapUtilityVehicles), nameof(EnterMapUtilityVehicles.EnterMap))]
+// public static class Patch_EnterMapUtilityVehicles_EnterMap
+// {
+//     public static void Prefix(Map map, ref EnterMapUtilityVehicles.SpawnParams spawnParams)
+//     {
+//         if (map.Tile.Tile.WaterCovered)
+//         {
+//             spawnParams.enterMode = CaravanEnterMode.Edge;
+//             Log.Message("Entering map with water cover, setting enter mode to edge");
+//         }
+//     }
+// }

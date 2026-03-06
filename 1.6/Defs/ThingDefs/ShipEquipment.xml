@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-	<ThingDef Name="MV_ShipEquipmentBase" ParentName="BuildingBase" Abstract="True">
+	<ThingDef Name="MVO_ShipEquipmentBase" ParentName="BuildingBase" Abstract="True">
 		<tradeability>None</tradeability>
 		<category>Building</category>
 		<thingClass>Building</thingClass>
 		<researchPrerequisites>
-			<li>MV_ExpandableRaft</li>
+			<li>MVO_ExpandableRaft</li>
 		</researchPrerequisites>
 		<designationCategory>VMF_VehicleMap</designationCategory>
 	</ThingDef>
 	
 	<DesignatorDropdownGroupDef>
-		<defName>MV_RaftPieceGroup</defName>
+		<defName>MVO_RaftPieceGroup</defName>
 	</DesignatorDropdownGroupDef>
 
-	<ThingDef Name="MV_RaftPieceBase" ParentName="MV_ShipEquipmentBase" Abstract="True">
+	<ThingDef Name="MVO_RaftPieceBase" ParentName="MVO_ShipEquipmentBase" Abstract="True">
 		<thingClass>VehicleMapFramework.VehicleStructure</thingClass>
 		<altitudeLayer>BelowTerrain</altitudeLayer>
-		<designatorDropdown>MV_RaftPieceGroup</designatorDropdown>
+		<designatorDropdown>MVO_RaftPieceGroup</designatorDropdown>
 		<useBlueprintGraphicAsGhost>true</useBlueprintGraphicAsGhost>
 		<useHitPoints>false</useHitPoints>
 		<destroyable>false</destroyable>
@@ -40,8 +40,8 @@
 		</comps>
 	</ThingDef>
 	
-	<ThingDef ParentName="MV_RaftPieceBase">
-		<defName>MV_RaftPiece</defName>
+	<ThingDef ParentName="MVO_RaftPieceBase">
+		<defName>MVO_RaftPiece</defName>
 		<label>raft piece</label>
 		<description>TODO</description>
 		<graphicData>
@@ -98,8 +98,8 @@
 		</comps>
 	</ThingDef>
 	
-	<ThingDef ParentName="MV_RaftPieceBase">
-		<defName>MV_RaftPieceFloat</defName>
+	<ThingDef ParentName="MVO_RaftPieceBase">
+		<defName>MVO_RaftPieceFloat</defName>
 		<label>raft piece (float)</label>
 		<description>TODO</description>
 		<graphicData>
@@ -122,7 +122,7 @@
 			</blueprintGraphicData>
 		</building>
 		<researchPrerequisites>
-			<li>MV_ExpandableRaft</li>
+			<li>MVO_ExpandableRaft</li>
 		</researchPrerequisites>
 		<comps>
 			<li Class="VehicleMapFramework.CompProperties_ExtraPrint">
@@ -160,7 +160,7 @@
 		</comps>
 	</ThingDef>
 		
-	<ThingDef Name="MV_RigBase" ParentName="MV_ShipEquipmentBase" Abstract="True">
+	<ThingDef Name="MVO_RigBase" ParentName="MVO_ShipEquipmentBase" Abstract="True">
 		<passability>Impassable</passability>
 		<fillPercent>1</fillPercent>
 		<drawerType>MapMeshAndRealTime</drawerType>
@@ -181,7 +181,7 @@
 		<building>
 			<supportsWallAttachments>true</supportsWallAttachments>
 			<relatedBuildCommands>
-				<li>MV_CrowsNest</li>
+				<li>MVO_CrowsNest</li>
 			</relatedBuildCommands>
 		</building>
 		<useBlueprintGraphicAsGhost>true</useBlueprintGraphicAsGhost>
@@ -192,8 +192,8 @@
 		</placeWorkers>	
 	</ThingDef>
 	
-	<ThingDef ParentName="MV_RigBase">
-		<defName>MV_RigOneTiered</defName>
+	<ThingDef ParentName="MVO_RigBase">
+		<defName>MVO_RigOneTiered</defName>
 		<label>rig I</label>
 		<description>TODO</description>
 		<statBases>
@@ -256,8 +256,8 @@
 		</comps>
 	</ThingDef>
 	
-	<ThingDef ParentName="MV_RigBase">
-		<defName>MV_RigTwoTiered</defName>
+	<ThingDef ParentName="MVO_RigBase">
+		<defName>MVO_RigTwoTiered</defName>
 		<label>rig II</label>
 		<description>TODO</description>
 		<statBases>
@@ -320,8 +320,8 @@
 		</comps>
 	</ThingDef>
 	
-	<ThingDef ParentName="MV_RigBase">
-		<defName>MV_RigThreeTiered</defName>
+	<ThingDef ParentName="MVO_RigBase">
+		<defName>MVO_RigThreeTiered</defName>
 		<label>rig III</label>
 		<description>TODO</description>
 		<statBases>
@@ -384,8 +384,8 @@
 		</comps>
 	</ThingDef>
 
-	<ThingDef ParentName="MV_ShipEquipmentBase">
-		<defName>MV_CrowsNest</defName>
+	<ThingDef ParentName="MVO_ShipEquipmentBase">
+		<defName>MVO_CrowsNest</defName>
 		<label>Crow's nest</label>
 		<description>TODO</description>
 		<drawerType>RealtimeOnly</drawerType>
@@ -418,7 +418,7 @@
 			<li Class="VehicleMapFramework.CompProperties_AdditionalGraphicsChildByParent">
 				<graphicsByParent>
 					<li>
-						<key>MV_RigOneTiered</key>
+						<key>MVO_RigOneTiered</key>
 						<value>
 							<li>
 								<graphicClass>Graphic_Multi</graphicClass>
@@ -441,7 +441,7 @@
 						</value>
 					</li>
 					<li>
-						<key>MV_RigTwoTiered</key>
+						<key>MVO_RigTwoTiered</key>
 						<value>
 							<li>
 								<graphicClass>Graphic_Multi</graphicClass>
@@ -464,7 +464,7 @@
 						</value>
 					</li>
 					<li>
-						<key>MV_RigThreeTiered</key>
+						<key>MVO_RigThreeTiered</key>
 						<value>
 							<li>
 								<graphicClass>Graphic_Multi</graphicClass>
@@ -489,7 +489,7 @@
 				</graphicsByParent>
 			</li>
 			<li Class="CompProperties_Scanner">
-				<compClass>MapVehicles.CompCrowsNest</compClass>
+				<compClass>MapVehiclesOcean.CompCrowsNest</compClass>
 				<scanFindMtbDays>3</scanFindMtbDays>
 				<scanSpeedStat>ReadingSpeed</scanSpeedStat>
 			</li>
@@ -500,8 +500,8 @@
 		</placeWorkers>
 	</ThingDef>
 	
-	<ThingDef ParentName="MV_ShipEquipmentBase">
-		<defName>MV_Oar</defName>
+	<ThingDef ParentName="MVO_ShipEquipmentBase">
+		<defName>MVO_Oar</defName>
 		<label>oar</label>
 		<description>TODO</description>
 		<minifiedDef>MinifiedThing</minifiedDef>
@@ -575,16 +575,16 @@
 	</ThingDef>
 	
 	<DesignatorDropdownGroupDef>
-		<defName>MV_GrapplingLauncherGroup</defName>
+		<defName>MVO_GrapplingLauncherGroup</defName>
 	</DesignatorDropdownGroupDef>
 	
 	<ThingDef ParentName="BaseArtilleryBuilding">
-		<defName>MV_Turret_GrapplingLauncher</defName>
+		<defName>MVO_Turret_GrapplingLauncher</defName>
 		<label>grappling launcher</label>
 		<description>TODO: A turret that sets up a zipline at the location where it pierces. Used for direct access between vehicles.</description>
 		<thingClass>VehicleMapFramework.Building_TurretGunForcedTargetOnly</thingClass>
 		<designationCategory>VMF_VehicleMap</designationCategory>
-		<designatorDropdown>MV_GrapplingLauncherGroup</designatorDropdown>
+		<designatorDropdown>MVO_GrapplingLauncherGroup</designatorDropdown>
 		<graphicData>
 			<texPath>MapVehiclesOcean/Things/GrapplingLauncher/GrapplingLauncher_Base</texPath>
 			<drawRotated>false</drawRotated>
@@ -601,13 +601,13 @@
 		<hasInteractionCell>false</hasInteractionCell>
 		<inspectorTabs Inherit="False"/>
 		<building>
-			<turretGunDef>MV_Gun_GrapplingLauncher</turretGunDef>
+			<turretGunDef>MVO_Gun_GrapplingLauncher</turretGunDef>
 			<turretBurstWarmupTime>0</turretBurstWarmupTime>
 			<turretBurstCooldownTime>0</turretBurstCooldownTime>
 			<turretTopDrawSize>1.25</turretTopDrawSize>
 			<turretTopOffset>(0,0.2)</turretTopOffset>
 			<relatedBuildCommands>
-				<li>MV_MooringRing</li>
+				<li>MVO_MooringRing</li>
 			</relatedBuildCommands>
 		</building>
 		<passability>Standable</passability>
@@ -653,7 +653,7 @@
 	</ThingDef>
 
 	<ThingDef ParentName="BaseWeaponTurret">
-		<defName>MV_Gun_GrapplingLauncher</defName>
+		<defName>MVO_Gun_GrapplingLauncher</defName>
 		<label>grappling launcher gun</label>
 		<description>TODO: A gun made to be mounted on a zipline turret.</description>
 		<graphicData>
@@ -667,12 +667,12 @@
 		<verbs>
 			<li>
 				<verbClass>VehicleMapFramework.Verb_LaunchZipline</verbClass>
-				<defaultProjectile>MV_Bullet_GrapplingLauncher</defaultProjectile>
+				<defaultProjectile>MVO_Bullet_GrapplingLauncher</defaultProjectile>
 				<range>17.9</range>
 				<canGoWild>false</canGoWild>
 				<targetParams Class="VehicleMapFramework.TargetingParametersForSpecificThingDef">
 					<canTargetPawns>false</canTargetPawns>
-					<thingDef>MV_MooringRing</thingDef>
+					<thingDef>MVO_MooringRing</thingDef>
 				</targetParams>
 				<soundCast>Shot_Autocannon</soundCast>
 				<soundCastTail>GunTail_Heavy</soundCastTail>
@@ -681,7 +681,7 @@
 	</ThingDef>
 
 	<ThingDef ParentName="BaseBullet">
-		<defName>MV_Bullet_GrapplingLauncher</defName>
+		<defName>MVO_Bullet_GrapplingLauncher</defName>
 		<label>grappling launcher bullet</label>
 		<thingClass>VehicleMapFramework.Bullet_ZiplineEnd</thingClass>
 		<graphicData>
@@ -702,14 +702,14 @@
 				<ziplineWidth>0.09</ziplineWidth>
 				<ziplineEndOffset>0.18</ziplineEndOffset>
 				<launcherOffset>0.55</launcherOffset>
-				<ziplineEndDef>MV_GrapplingLauncherHook</ziplineEndDef>
-				<ziplineReturnDef>MV_Bullet_GrapplingLauncherReturn</ziplineReturnDef>
+				<ziplineEndDef>MVO_GrapplingLauncherHook</ziplineEndDef>
+				<ziplineReturnDef>MVO_Bullet_GrapplingLauncherReturn</ziplineReturnDef>
 			</li>
 		</modExtensions>
 	</ThingDef>
 
 	<ThingDef ParentName="BaseBullet">
-		<defName>MV_Bullet_GrapplingLauncherReturn</defName>
+		<defName>MVO_Bullet_GrapplingLauncherReturn</defName>
 		<label>grappling launcher bullet</label>
 		<thingClass>VehicleMapFramework.Bullet_ZiplineEndReturn</thingClass>
 		<graphicData>
@@ -726,7 +726,7 @@
 	</ThingDef>
 
 	<ThingDef ParentName="BaseBullet">
-		<defName>MV_GrapplingLauncherHook</defName>
+		<defName>MVO_GrapplingLauncherHook</defName>
 		<label>grappling hook</label>
 		<thingClass>VehicleMapFramework.ZiplineEnd</thingClass>
 		<category>Building</category>
@@ -749,8 +749,8 @@
 		</comps>
 	</ThingDef>
 	
-	<ThingDef ParentName="MV_ShipEquipmentBase">
-		<defName>MV_MooringRing</defName>
+	<ThingDef ParentName="MVO_ShipEquipmentBase">
+		<defName>MVO_MooringRing</defName>
 		<label>mooring ring</label>
 		<description>TODO</description>
 		<thingCategories>
@@ -758,7 +758,7 @@
 		</thingCategories>
 		<minifiedDef>MinifiedThing</minifiedDef>
 		<altitudeLayer>FloorEmplacement</altitudeLayer>
-		<designatorDropdown>MV_GrapplingLauncherGroup</designatorDropdown>
+		<designatorDropdown>MVO_GrapplingLauncherGroup</designatorDropdown>
 		<graphicData>
 			<graphicClass>Graphic_Multi</graphicClass>
 			<texPath>MapVehiclesOcean/Things/MooringRing/MooringRing</texPath>
@@ -777,8 +777,8 @@
 		<building />
 	</ThingDef>
 	
-	<ThingDef ParentName="MV_ShipEquipmentBase">
-		<defName>MV_Helm</defName>
+	<ThingDef ParentName="MVO_ShipEquipmentBase">
+		<defName>MVO_Helm</defName>
 		<label>helm</label>
 		<description>TODO</description>
 		<thingClass>VehicleMapFramework.Building_AttackTargetByComps</thingClass>
@@ -851,8 +851,8 @@
 		</placeWorkers>
 	</ThingDef>
 	
-	<ThingDef ParentName="MV_ShipEquipmentBase">
-		<defName>MV_Hatch</defName>
+	<ThingDef ParentName="MVO_ShipEquipmentBase">
+		<defName>MVO_Hatch</defName>
 		<label>hatch</label>
 		<description>TODO</description>
 		<thingClass>VehicleMapFramework.Building_Hatch</thingClass>
@@ -943,8 +943,8 @@
 		</placeWorkers>
 	</ThingDef>
 	
-	<ThingDef ParentName="MV_ShipEquipmentBase" MayRequire="Ludeon.RimWorld.Odyssey">
-		<defName>MV_FishingSpot</defName>
+	<ThingDef ParentName="MVO_ShipEquipmentBase" MayRequire="Ludeon.RimWorld.Odyssey">
+		<defName>MVO_FishingSpot</defName>
 		<label>fishing spot</label>
 		<description>TODO</description>
 		<graphicData>
@@ -964,7 +964,7 @@
 			</blueprintGraphicData>
 		</building>
 		<comps>
-			<li Class="MapVehicles.CompProperties_FishingSpot"/>
+			<li Class="MapVehiclesOcean.CompProperties_FishingSpot"/>
 		</comps>
 		<placeWorkers>
 			<li>VehicleMapFramework.PlaceWorker_ForceOnVehicleMapEdgeReverse</li>

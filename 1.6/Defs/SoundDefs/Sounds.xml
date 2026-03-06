@@ -2,7 +2,7 @@
 <Defs>
 
 	<SoundDef>
-		<defName>MV_WaterSplash</defName>
+		<defName>MVO_WaterSplash</defName>
 		<context>MapOnly</context>
 		<maxSimultaneous>1</maxSimultaneous>
 		<subSounds>
@@ -19,7 +19,7 @@
 	</SoundDef>
 	
 	<SoundDef>
-		<defName>MV_CannonballImpact</defName>
+		<defName>MVO_CannonballImpact</defName>
 		<context>MapOnly</context>
 		<maxSimultaneous>1</maxSimultaneous>
 		<subSounds>

@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <ThingSetMakerDef>
+        <defName>MVO_IslandTreasure</defName>
+        <debugParams>
+            <totalMarketValueRange>9000~12000</totalMarketValueRange>
+        </debugParams>
+        <root Class="MapVehiclesOcean.ThingSetMaker_SumWithMarketValueWeight">
+            <options>
+                <li>
+                    <thingSetMaker Class="ThingSetMaker_MarketValue">
+                        <fixedParams>
+                            <qualityGenerator>Super</qualityGenerator>
+                            <filter>
+                                <thingDefs>
+                                    <li>Silver</li>
+                                    <li>Gold</li>
+                                </thingDefs>
+                                <categories>
+                                    <li>BuildingsArt</li>
+                                    <li>BuildingsFurniture</li>
+                                    <li>BuildingsJoy</li>
+                                </categories>
+                                <stuffCategoriesToAllow>
+                                    <li>Metallic</li>
+                                </stuffCategoriesToAllow>
+                            </filter>
+                        </fixedParams>
+                    </thingSetMaker>
+                </li>
+                <li>
+                    <chance>0.4</chance>
+                    <marketValueWeightRange>0.3~0.5</marketValueWeightRange>
+                    <thingSetMaker Class="ThingSetMaker_MarketValue">
+                        <fixedParams>
+                            <qualityGenerator>Super</qualityGenerator>
+                            <filter>
+                                <categories>
+                                    <li>BuildingsArt</li>
+                                    <li>BuildingsJoy</li>
+                                </categories>
+                                <stuffCategoriesToAllow>
+                                    <li>Metallic</li>
+                                </stuffCategoriesToAllow>
+                            </filter>
+                        </fixedParams>
+                    </thingSetMaker>
+                </li>
+                <li> <!-- Treasures -->
+                    <marketValueWeightRange>0.2~0.4</marketValueWeightRange>
+                    <thingSetMaker Class="ThingSetMaker_RandomOption">
+                        <options>
+                            <li MayRequire="Ludeon.RimWorld.Royalty">
+                                <weight>0.75</weight>
+                                <thingSetMaker Class="ThingSetMaker_Count">
+                                    <fixedParams>
+                                        <countRange>1~1</countRange>
+                                        <filter>
+                                            <thingDefs>
+                                                <li>Techprint_MVO_Keel</li>
+                                                <li>Techprint_MVO_RigI</li>
+                                                <li>Techprint_MVO_RigII</li>
+                                            </thingDefs>
+                                        </filter>
+                                    </fixedParams>
+                                </thingSetMaker>
+                            </li>
+                            <li MayRequire="Ludeon.RimWorld.Odyssey">
+                                <weight>0.4</weight>
+                                <thingSetMaker Class="ThingSetMaker_UniqueWeapon">
+                                    <fixedParams>
+                                        <countRange>1~1</countRange>
+                                    </fixedParams>
+                                </thingSetMaker>
+                            </li>
+                            <li MayRequire="Ludeon.RimWorld.Anomaly">
+                                <weight>0.05</weight>
+                                <thingSetMaker Class="ThingSetMaker_Count">
+                                    <fixedParams>
+                                        <countRange>1~1</countRange>
+                                        <filter>
+                                            <thingDefs>
+                                                <li>GoldenCube</li>
+                                            </thingDefs>
+                                        </filter>
+                                    </fixedParams>
+                                </thingSetMaker>
+                            </li>
+                        </options>
+                    </thingSetMaker>
+                </li>
+            </options>
+        </root>
+    </ThingSetMakerDef>
+
+</Defs>

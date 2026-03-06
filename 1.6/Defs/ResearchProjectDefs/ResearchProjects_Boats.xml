@@ -2,10 +2,10 @@
 <Defs>
     
     <ResearchProjectDef>
-        <defName>MV_ExpandableRaft</defName>
+        <defName>MVO_ExpandableRaft</defName>
         <label>raft</label>
         <description>Learn to build rafts.</description>
-        <tab>MV_Ocean</tab>
+        <tab>MVO_Ocean</tab>
         <baseCost>400</baseCost>
         <techLevel>Neolithic</techLevel>
         <researchViewX>0.00</researchViewX>
@@ -13,10 +13,10 @@
         <generalRules>
             <rulesStrings>
                 <li>subject->raft</li>
-                <li>subject_story->arrived at [MV_raft_way] method for humanity to cross the ocean</li>
-                    <li>MV_raft_way->the first</li>
-                    <li>MV_raft_way->the primitive</li>
-                    <li>MV_raft_way->an ultimate</li>
+                <li>subject_story->arrived at [MVO_raft_way] method for humanity to cross the ocean</li>
+                    <li>MVO_raft_way->the first</li>
+                    <li>MVO_raft_way->the primitive</li>
+                    <li>MVO_raft_way->an ultimate</li>
                 <li>subject_story->suggested tying a few logs together with rope</li>
                 <li>subject_story->reached the peak of human technology</li>
                 <li>subject_gerund->constructing rafts</li>
@@ -25,16 +25,16 @@
     </ResearchProjectDef>
     
     <ResearchProjectDef>
-        <defName>MV_Keel</defName>
+        <defName>MVO_Keel</defName>
         <label>keel</label>
         <description>Learn to build the Keel.</description>
-        <tab>MV_Ocean</tab>
+        <tab>MVO_Ocean</tab>
         <baseCost>1200</baseCost>
         <techLevel>Medieval</techLevel>
         <researchViewX>1.00</researchViewX>
         <researchViewY>0.00</researchViewY>
         <prerequisites>
-            <li>MV_ExpandableRaft</li>
+            <li>MVO_ExpandableRaft</li>
         </prerequisites>
         <techprintCount>1</techprintCount>
         <techprintCommonality>0.2</techprintCommonality>

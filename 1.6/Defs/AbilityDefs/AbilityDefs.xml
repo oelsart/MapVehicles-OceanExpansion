@@ -2,13 +2,13 @@
 <Defs>
     
     <AbilityDef>
-        <defName>MV_GrapplingHook</defName>
+        <defName>MVO_GrapplingHook</defName>
         <label>grappling hook</label>
         <abilityClass>VehicleMapFramework.Ability_GrapplingHook</abilityClass>
         <displayOrder>50</displayOrder>
         <verbProperties>
             <verbClass>VehicleMapFramework.Verb_LaunchZipline</verbClass>
-            <defaultProjectile>MV_Bullet_GrapplingHook</defaultProjectile>
+            <defaultProjectile>MVO_Bullet_GrapplingHook</defaultProjectile>
             <range>4.9</range>
             <warmupTime>0.5</warmupTime>
             <defaultCooldownTime>1</defaultCooldownTime>
@@ -32,7 +32,7 @@
     </AbilityDef>
 
     <ThingDef ParentName="BaseBullet">
-        <defName>MV_Bullet_GrapplingHook</defName>
+        <defName>MVO_Bullet_GrapplingHook</defName>
         <label>grappling hook bullet</label>
         <thingClass>VehicleMapFramework.Bullet_ZiplineEnd</thingClass>
         <graphicData>
@@ -53,13 +53,13 @@
                 <ziplineWidth>0.07</ziplineWidth>
                 <ziplineEndOffset>0.11</ziplineEndOffset>
                 <launcherOffset>0</launcherOffset>
-                <ziplineEndDef>MV_GrapplingHook</ziplineEndDef>
+                <ziplineEndDef>MVO_GrapplingHook</ziplineEndDef>
             </li>
         </modExtensions>
     </ThingDef>
 
     <ThingDef ParentName="BaseBullet">
-        <defName>MV_GrapplingHook</defName>
+        <defName>MVO_GrapplingHook</defName>
         <label>grappling hook</label>
         <thingClass>VehicleMapFramework.ZiplineEnd</thingClass>
         <category>Building</category>

@@ -2,27 +2,28 @@
 <Defs>
 
     <SitePartDef>
-        <defName>MV_Shipwreck</defName>
+        <defName>MVO_Shipwreck</defName>
         <label>shipwreck</label>
-        <workerClass>MapVehicles.SitePartWorker_Shipwreck</workerClass>
+        <workerClass>MapVehiclesOcean.SitePartWorker_GeneratedThings</workerClass>
         <description>A mineable lump of precious resources.</description>
         <siteTexture>World/WorldObjects/Sites/GenericSite</siteTexture>
         <expandingIconTexture>World/WorldObjects/Expanding/Sites/PreciousLump</expandingIconTexture>
         <forceExitAndRemoveMapCountdownDurationDays>11</forceExitAndRemoveMapCountdownDurationDays>
         <mainPartAllThreatsLabel>Hostile activity detected.</mainPartAllThreatsLabel>
         <tags>
-            <li>MV_Shipwreck</li>
+            <li>MVO_Shipwreck</li>
         </tags>
     </SitePartDef>
 
     <GenStepDef>
-        <defName>MV_Shipwreck</defName>
-        <linkWithSite>MV_Shipwreck</linkWithSite>
+        <defName>MVO_Shipwreck</defName>
+        <linkWithSite>MVO_Shipwreck</linkWithSite>
         <order>900</order>
-        <genStep Class="MapVehicles.GenStep_Shipwreck">
+        <genStep Class="MapVehiclesOcean.GenStep_Shipwreck">
             <wrecks>
-                <li>MV_ShipwreckA</li>
+                <li>MVO_ShipwreckA</li>
             </wrecks>
+            <nearMapCenter>true</nearMapCenter>
         </genStep>
     </GenStepDef>
 
