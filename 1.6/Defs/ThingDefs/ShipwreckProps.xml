@@ -177,6 +177,9 @@
             <graphicClass>Graphic_Single</graphicClass>
             <drawSize>0.8</drawSize>
             <texPath>MapVehiclesOcean/Things/Volleyball</texPath>
+            <damageData>
+                <rect>(0,0,1,1)</rect>
+            </damageData>
         </graphicData>
         <size>(1,1)</size>
         <passability>PassThroughOnly</passability>
@@ -188,6 +191,37 @@
         <costList>
             <Cloth>10</Cloth>
         </costList>
+    </ThingDef>
+    
+    <ThingDef ParentName="ShipwreckPropsBase">
+        <defName>MVO_Stele</defName>
+        <label>stele</label>
+        <description>A section of an inscription showing the way to the "Island".</description>
+        <graphicData>
+            <graphicClass>Graphic_Random</graphicClass>
+            <drawSize>(2,4)</drawSize>
+            <texPath>MapVehiclesOcean/Things/Stele</texPath>
+        </graphicData>
+        <size>(2,2)</size>
+        <rotatable>false</rotatable>
+        <passability>Impassable</passability>
+        <fillPercent>1</fillPercent>
+        <castEdgeShadows>true</castEdgeShadows>
+        <staticSunShadowHeight>1</staticSunShadowHeight>
+        <statBases>
+            <MaxHitPoints>800</MaxHitPoints>
+            <Mass>450</Mass>
+        </statBases>
+        <costList>
+            <Obsidian MayRequire="Ludeon.RimWorld.Odyssey">200</Obsidian>
+        </costList>
+        <comps>
+            <li Class="CompProperties_Studiable">
+                <studyAmountToComplete>100</studyAmountToComplete>
+                <studyEnabledByDefault>false</studyEnabledByDefault>
+                <showToggleGizmo>true</showToggleGizmo>
+            </li>
+        </comps>
     </ThingDef>
 
     <ThingDef ParentName="BaseFilth">

@@ -13,7 +13,9 @@ public class GenStep_HumanTraces : GenStep
     {
         if (!TryFindShelterCell(map, out var cell))
             return;
-        foreach (var pawn in parms.sitePart.things.OfType<Pawn>())
+
+        var pawns = parms.sitePart.things.OfType<Pawn>().ToList();
+        foreach (var pawn in pawns)
             SpawnPawn(pawn, map, cell);
 
         if (CellFinder.TryFindRandomCellNear(cell, map, 4, c =>

@@ -5,14 +5,14 @@
         <defName>MVO_ExpandableRaft_PrefabA</defName>
         <size>(5,5)</size>
         <terrain>
-            <VMF_VehicleFloor>
+            <MVO_TempFloor>
                 <rects>
                     <li>(1,0,3,0)</li>
                     <li>(1,4,3,4)</li>
                     <li>(0,0,0,4)</li>
                     <li>(4,0,4,4)</li>
                 </rects>
-            </VMF_VehicleFloor>
+            </MVO_TempFloor>
         </terrain>
         <things>
             <MVO_RaftPiece>
@@ -87,7 +87,7 @@
         <defName>MVO_ExpandableRaft_PrefabB</defName>
         <size>(7,11)</size>
         <terrain>
-            <VMF_VehicleFloor>
+            <MVO_TempFloor>
                 <rects>
                     <li>(1,1,5,3)</li>
                     <li>(1,4,1,9)</li>
@@ -96,7 +96,7 @@
                     <li>(0,0,0,10)</li>
                     <li>(6,0,6,10)</li>
                 </rects>
-            </VMF_VehicleFloor>
+            </MVO_TempFloor>
         </terrain>
         <things>
             <MVO_RaftPiece>

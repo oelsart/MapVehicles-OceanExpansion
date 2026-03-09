@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <TerrainDef>
+        <defName>MVO_TempFloor</defName>
+        <label>out of bounds</label>
+        <dontRender>true</dontRender>
+        <fertility>0</fertility>
+        <passability>Standable</passability>
+        <pathCost>0</pathCost>
+        <affordances>
+            <li>VMF_ImpassableFloor</li>
+        </affordances>
+        <filthAcceptanceMask>
+            <li>None</li>
+        </filthAcceptanceMask>
+    </TerrainDef>
+    
+</Defs>

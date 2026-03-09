@@ -16,6 +16,8 @@ public static class MVO_DefOf
 
     public static ThingDef MVO_StoneCoffer;
 
+    public static ThingDef MVO_Stele;
+
     public static ThingDef MVO_Filth_TallyMarks;
 
     public static SoundDef MVO_WaterSplash;
@@ -33,6 +35,8 @@ public static class MVO_DefOf
     public static QuestScriptDef MVO_Shipwreck;
 
     public static QuestScriptDef MVO_DesertedIsland;
+    
+    public static QuestScriptDef MVO_TheIsland;
 
     public static TerrainDef MVO_WaterDeepVirtual;
     
@@ -45,6 +49,7 @@ public static class MVO_DefOf
     public static PawnGroupKindDef MVO_ShipCombat;
 
     public static WorldObjectDef MVO_AmbushSea;
+    
 
     [MayRequireOdyssey]
     public static LandmarkDef MVO_OceanIsland;

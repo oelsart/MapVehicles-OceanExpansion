@@ -31,7 +31,8 @@ public class GenStep_SeaThreat : GenStep_MapVehicleThreat
             groupKind = PawnGroupKindDefOf.Combat,
             tile = sitePart.site.Tile,
             faction = faction,
-            points = Mathf.Max(sitePart.parms.points, faction.def.MinPointsToGeneratePawnGroup(MVO_DefOf.MVO_ShipCombat))
+            points = Mathf.Max(sitePart.parms.points,
+                faction.def.MinPointsToGeneratePawnGroup(MVO_DefOf.MVO_ShipCombat))
         }).ToList();
     }
 }

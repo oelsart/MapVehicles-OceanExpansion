@@ -80,7 +80,7 @@
                                 </li>
                                 <li Class="QuestNode_AddRangeToList">
                                     <name>sitePartDefs</name>
-                                    <value>sitePartDefs2</value>
+                                    <value>$sitePartDefs2</value>
                                 </li>
                                 <li Class="QuestNode_GeneratePawn">
                                     <storeAs>generatedPawn</storeAs>
@@ -92,7 +92,7 @@
                                 </li>
                                 <li Class="QuestNode_Letter">
                                     <label>discovery of a castaway</label>
-                                    <text>There is a castaway [survivor_label] on the island. They are calling for help!</text>
+                                    <text>There is a castaway [generatedPawn_label] on the island. They are calling for help!</text>
                                 </li>
                             </nodes>
                         </node>

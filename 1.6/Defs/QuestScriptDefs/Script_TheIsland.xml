@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <QuestScriptDef>
+        <defName>MVO_TheIsland</defName>
+        <autoAccept>true</autoAccept>
+        <defaultChallengeRating>4</defaultChallengeRating>
+        <isRootSpecial>true</isRootSpecial>
+        <questNameRules>
+            <rulesStrings>
+                <li>questName->The "Island"</li>
+            </rulesStrings>
+        </questNameRules>
+        <questDescriptionRules>
+            <rulesStrings>
+                <li>questDescription->There is a legend about an "island" on this planet. It is said that treasures beyond measure lie buried there, yet no one even knows the island's location.
+                \nIs it wealth, or power, or... well, it seems worth looking into anyway.</li>
+            </rulesStrings>
+        </questDescriptionRules>
+        <root Class="QuestNode_Sequence">
+            <nodes>
+                <li Class="QuestNode_QuestUnique">
+                    <tag>MVO_TheIsland</tag>
+                </li>
+
+                <!-- Add reward info -->
+                <li Class="MapVehiclesOcean.QuestNode_UnknownTreasureReward">
+                    <inSignalChoiceUsed>MVO_TheIsland.Clear</inSignalChoiceUsed>
+                </li>
+                
+                <li Class="MapVehiclesOcean.QuestNode_SignalCount">
+                    <inSignal>MVO_Stele.Researched</inSignal>
+                    <node Class="QuestNode_Sequence">
+                        <nodes>
+                            <li Class="QuestNode_Signal">
+                                <inSignal>OuterNodeCompleted.1</inSignal>
+                                <node Class="QuestNode_Letter">
+                                    <letterDef>PositiveEvent</letterDef>
+                                    <label TKey="LetterLabelIslandExistence">[resolvedQuestName]: Existence</label>
+                                    <text TKey="LetterTextIslandExistence">The legendary "island" truly exists. This stele appears to record the lives of those who once lived there.</text>
+                                </node>
+                            </li>
+                            <li Class="QuestNode_Signal">
+                                <inSignal>OuterNodeCompleted.2</inSignal>
+                                <node Class="QuestNode_Letter">
+                                    <letterDef>PositiveEvent</letterDef>
+                                    <label TKey="LetterLabelIslandAppeared">[resolvedQuestName]: Kingdom</label>
+                                    <text TKey="LetterTextIslandAppeared">A dynasty was established on the "island" and it seems to have once wielded immense influence on this planet.</text>
+                                </node>
+                            </li>
+                            <li Class="QuestNode_Signal">
+                                <inSignal>OuterNodeCompleted.3</inSignal>
+                                <node Class="QuestNode_Letter">
+                                    <letterDef>PositiveEvent</letterDef>
+                                    <label TKey="LetterLabelIslandAppeared">[resolvedQuestName]: Questions</label>
+                                    <text TKey="LetterTextIslandAppeared">Several discrepancies exist between the kingdom depicted in legend and the planet's current geography.
+                                        \nYet that very fact should provide clues to pinpoint the island's location.</text>
+                                </node>
+                            </li>
+                            <li Class="QuestNode_Signal">
+                                <inSignal>OuterNodeCompleted.4</inSignal>
+                                <node Class="QuestNode_Sequence">
+                                    <nodes>
+                                        <li Class="MapVehiclesOcean.QuestNode_FindTheIslandTile">
+                                            <storeAs>siteTile</storeAs>
+                                        </li>
+                                        <li Class="MapVehiclesOcean.QuestNode_DiscoverHiddenIsland">
+                                            <tile>$siteTile</tile>
+                                        </li>
+                                        <li Class="QuestNode_GetSitePartDefsByTagsAndFaction">
+                                            <storeAs>sitePartDefs</storeAs>
+                                            <sitePartsTags>
+                                                <li>
+                                                    <tag>MVO_IslandHumanTraces</tag>
+                                                </li>
+                                            </sitePartsTags>
+                                        </li>
+                                        <li Class="QuestNode_GetDefaultSitePartsParams">
+                                            <tile>$siteTile</tile>
+                                            <sitePartDefs>$sitePartDefs</sitePartDefs>
+                                            <storeSitePartsParamsAs>sitePartsParams</storeSitePartsParamsAs>
+                                        </li>
+                                        <li Class="QuestNode_SubScript">
+                                            <def>Util_GenerateSite</def>
+                                            <parms>
+                                                <hiddenSitePartsPossible>true</hiddenSitePartsPossible>
+                                            </parms>
+                                        </li>
+                                        <li Class="QuestNode_SpawnWorldObjects">
+                                            <worldObjects>$site</worldObjects>
+                                        </li>
+                                        <li Class="QuestNode_AddToList">
+                                            <name>lookTargets</name>
+                                            <value>$site</value>
+                                        </li>
+                                        <li Class="QuestNode_Letter">
+                                            <letterDef>PositiveEvent</letterDef>
+                                            <lookTargets>$lookTargets</lookTargets>
+                                            <label TKey="LetterLabelIslandAppeared">[resolvedQuestName]: Discovery</label>
+                                            <text TKey="LetterTextIslandAppeared">The location of the “island” has finally been pinpointed and can now be viewed on the world map.
+                                                \nHowever, it lies within a fierce naval battle zone. Enemy ships could appear at any moment.</text>
+                                        </li>
+                                        <li Class="QuestNode_NoWorldObject">
+                                            <worldObject>$site</worldObject>
+                                            <node Class="QuestNode_End">
+                                                <outcome>Fail</outcome>
+                                            </node>
+                                        </li>
+                                    </nodes>
+                                </node>
+                            </li>
+                        </nodes>
+                    </node>
+                </li>
+
+                <!-- Ending -->
+
+                <li Class="QuestNode_End">
+                    <inSignal>MVO_TheIsland.Clear</inSignal>
+                    <outcome>Success</outcome>
+                </li>
+            </nodes>
+        </root>
+    </QuestScriptDef>
+    
+</Defs>

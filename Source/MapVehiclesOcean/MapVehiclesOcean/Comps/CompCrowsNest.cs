@@ -12,7 +12,9 @@ public class CompCrowsNest : CompScanner
         var slate = new Slate();
         slate.Set("map", parent.Map);
         slate.Set("worker", worker);
+        
         if (ModsConfig.OdysseyActive &&
+            Find.QuestManager.ActiveQuestsListForReading.Exists(q => q.root == MVO_DefOf.MVO_TheIsland) &&
             HiddenIslandManager.HiddenIslandTileIDs(worker.Map?.Tile.Layer) is { Count: > 0 } hashSet &&
             TileFinder.TryFindTileWithDistance(worker.Tile, 1, 9, out var tile, t => hashSet.Contains(t.tileId), TileFinderMode.Near))
         {
