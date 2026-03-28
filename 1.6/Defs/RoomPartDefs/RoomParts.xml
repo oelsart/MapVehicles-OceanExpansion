@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <RoomPartDef>
+        <defName>MVO_FillWithConduits</defName>
+        <workerClass>MapVehiclesOcean.RoomPart_FillWithConduits</workerClass>
+    </RoomPartDef>
+    
+    <RoomPartDef>
+        <defName>MVO_ConnectConduits</defName>
+        <workerClass>MapVehiclesOcean.RoomPart_ConnectConduits</workerClass>
+    </RoomPartDef>
+
+    <RoomPartDef>
+        <defName>MVO_FillBatteries</defName>
+        <workerClass>MapVehiclesOcean.RoomPart_FillBatteries</workerClass>
+    </RoomPartDef>
+
+    <MapVehiclesOcean.RoomPart_PrefabDef>
+        <defName>MVO_DiningTables_Large</defName>
+        <workerClass>MapVehiclesOcean.RoomPart_FillWithPrefab</workerClass>
+        <prefab>DiningTable_Large</prefab>
+        <snapToGrid>true</snapToGrid>
+        <fillOnPost>true</fillOnPost>
+    </MapVehiclesOcean.RoomPart_PrefabDef>
+
+    <MapVehiclesOcean.RoomPart_PrefabDef>
+        <defName>MVO_DiningTables_Small</defName>
+        <workerClass>MapVehiclesOcean.RoomPart_FillWithPrefab</workerClass>
+        <prefab>MVO_DiningTable_Small_Edge</prefab>
+        <intervalRange>5</intervalRange>
+        <fillOnPost>true</fillOnPost>
+    </MapVehiclesOcean.RoomPart_PrefabDef>
+    
+    <MapVehiclesOcean.RoomPart_PrefabDef>
+        <defName>MVO_BedRooms</defName>
+        <workerClass>MapVehiclesOcean.RoomPart_FillWithPrefab</workerClass>
+        <prefab>MVO_SubRoom_BedRoom</prefab>
+        <intervalRange>4</intervalRange>
+        <forceSpawn>true</forceSpawn>
+        <contractedBy>0</contractedBy>
+    </MapVehiclesOcean.RoomPart_PrefabDef>
+    
+    <MapVehiclesOcean.RoomPart_PrefabDef>
+        <defName>MVO_FirefoamPoppers</defName>
+        <workerClass>MapVehiclesOcean.RoomPart_FillWithPrefab</workerClass>
+        <prefab>MVO_FirefoamPopper_Edge</prefab>
+        <intervalRange>8</intervalRange>
+        <ignoreAdjacent>true</ignoreAdjacent>
+    </MapVehiclesOcean.RoomPart_PrefabDef>
+
+    <MapVehiclesOcean.RoomPart_PrefabDef>
+        <defName>MVO_Couches</defName>
+        <workerClass>MapVehiclesOcean.RoomPart_FillWithPrefab</workerClass>
+        <prefab>Couch_Edge</prefab>
+        <intervalRange>8</intervalRange>
+    </MapVehiclesOcean.RoomPart_PrefabDef>
+
+    <MapVehiclesOcean.RoomPart_PrefabDef>
+        <defName>MVO_PokerTables</defName>
+        <workerClass>MapVehiclesOcean.RoomPart_FillWithPrefab</workerClass>
+        <prefab>PokerTable</prefab>
+        <snapToGrid>true</snapToGrid>
+        <ignoreAdjacent>true</ignoreAdjacent>
+    </MapVehiclesOcean.RoomPart_PrefabDef>
+
+    <MapVehiclesOcean.RoomPart_PrefabDef>
+        <defName>MVO_Batteries</defName>
+        <workerClass>MapVehiclesOcean.RoomPart_FillWithPrefab</workerClass>
+        <prefab>MVO_Battery</prefab>
+        <snapToGrid>true</snapToGrid>
+        <ignoreAdjacent>true</ignoreAdjacent>
+    </MapVehiclesOcean.RoomPart_PrefabDef>
+    
+    <RoomPart_ThingDef>
+        <defName>MVO_MiniTurrets</defName>
+        <thingDef>Turret_MiniTurret</thingDef>
+        <stuffDef>Steel</stuffDef>
+        <workerClass>MapVehiclesOcean.RoomPart_OuterCornerThings</workerClass>
+    </RoomPart_ThingDef>
+    
+</Defs>

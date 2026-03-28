@@ -44,13 +44,18 @@ public static class MVO_DefOf
     
     public static TerrainDef MVO_NoWaterVirtual;
 
+    public static TerrainDef MVO_FloatingStructure;
+
+    public static TerrainDef MVO_FloatingStructureBridge;
+
     public static DutyDef MVO_RangedBoatAggressive;
 
     public static PawnGroupKindDef MVO_ShipCombat;
 
     public static WorldObjectDef MVO_AmbushSea;
-    
 
+    public static StructureLayoutDef MVO_MaritimeBase;
+    
     [MayRequireOdyssey]
     public static LandmarkDef MVO_OceanIsland;
 }

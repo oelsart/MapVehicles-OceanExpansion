@@ -251,7 +251,7 @@
         <altitudeLayer>Floor</altitudeLayer>
         <graphicData>
             <graphicClass>Graphic_Multi</graphicClass>
-            <texPath>MapVehiclesOcean/Things/WoodShipProps/WoodShipPropsA_Diagonal</texPath>
+            <texPath>MapVehiclesOcean/Terrain/WoodShipProps/WoodShipPropsA_Diagonal</texPath>
             <shaderType>Mote</shaderType>
             <drawSize>2</drawSize>
             <drawOffset>(0,0,-0.5)</drawOffset>
@@ -274,42 +274,42 @@
     <ThingDef ParentName="MVO_ShipFloorDiagonalBase">
         <defName>MVO_ShipFloorDiagonalB</defName>
         <graphicData>
-            <texPath>MapVehiclesOcean/Things/WoodShipProps/WoodShipPropsB_Diagonal</texPath>
+            <texPath>MapVehiclesOcean/Terrain/WoodShipProps/WoodShipPropsB_Diagonal</texPath>
         </graphicData>
     </ThingDef>
 
     <ThingDef ParentName="MVO_ShipFloorDiagonalBase">
         <defName>MVO_ShipFloorDiagonalC</defName>
         <graphicData>
-            <texPath>MapVehiclesOcean/Things/WoodShipProps/WoodShipPropsC_Diagonal</texPath>
+            <texPath>MapVehiclesOcean/Terrain/WoodShipProps/WoodShipPropsC_Diagonal</texPath>
         </graphicData>
     </ThingDef>
 
     <ThingDef ParentName="MVO_ShipFloorDiagonalBase">
         <defName>MVO_ShipFloorDiagonalAB</defName>
         <graphicData>
-            <texPath>MapVehiclesOcean/Things/WoodShipProps/WoodShipPropsAB_Diagonal</texPath>
+            <texPath>MapVehiclesOcean/Terrain/WoodShipProps/WoodShipPropsAB_Diagonal</texPath>
         </graphicData>
     </ThingDef>
 
     <ThingDef ParentName="MVO_ShipFloorDiagonalBase">
         <defName>MVO_ShipFloorDiagonalBA</defName>
         <graphicData>
-            <texPath>MapVehiclesOcean/Things/WoodShipProps/WoodShipPropsBA_Diagonal</texPath>
+            <texPath>MapVehiclesOcean/Terrain/WoodShipProps/WoodShipPropsBA_Diagonal</texPath>
         </graphicData>
     </ThingDef>
 
     <ThingDef ParentName="MVO_ShipFloorDiagonalBase">
         <defName>MVO_ShipFloorDiagonalBC</defName>
         <graphicData>
-            <texPath>MapVehiclesOcean/Things/WoodShipProps/WoodShipPropsBC_Diagonal</texPath>
+            <texPath>MapVehiclesOcean/Terrain/WoodShipProps/WoodShipPropsBC_Diagonal</texPath>
         </graphicData>
     </ThingDef>
 
     <ThingDef ParentName="MVO_ShipFloorDiagonalBase">
         <defName>MVO_ShipFloorDiagonalCB</defName>
         <graphicData>
-            <texPath>MapVehiclesOcean/Things/WoodShipProps/WoodShipPropsCB_Diagonal</texPath>
+            <texPath>MapVehiclesOcean/Terrain/WoodShipProps/WoodShipPropsCB_Diagonal</texPath>
         </graphicData>
     </ThingDef>
     

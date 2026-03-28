@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <SitePartDef>
+        <defName>MVO_MaritimeBase</defName>
+        <label>maritime base</label>
+        <description>A maritime base moving across the sea.</description>
+        <siteTexture>World/WorldObjects/Sites/GenericSite</siteTexture>
+        <forceExitAndRemoveMapCountdownDurationDays>11</forceExitAndRemoveMapCountdownDurationDays>
+        <tags>
+            <li>MVO_MaritimeBase</li>
+        </tags>
+    </SitePartDef>
+
+    <GenStepDef>
+        <defName>MVO_MaritimeBase</defName>
+        <linkWithSite>MVO_MaritimeBase</linkWithSite>
+        <order>1600</order>
+        <genStep Class="MapVehiclesOcean.GenStep_MaritimeBase" />
+    </GenStepDef>
+    
+</Defs>

@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    
+    <StructureLayoutDef>
+        <defName>MVO_MaritimeBase</defName>
+        <workerClass>MapVehiclesOcean.LayoutWorker_MaritimeBase</workerClass>
+        <corridorDef>MVO_MaritimeBaseCorridor</corridorDef>
+        <roomDefs>
+            <MVO_MaritimeBaseStorage>1</MVO_MaritimeBaseStorage>
+            <MVO_MaritimeBaseDining>0.75</MVO_MaritimeBaseDining>
+            <MVO_MaritimeBaseBedRoom>1</MVO_MaritimeBaseBedRoom>
+            <MVO_MaritimeBaseBatteryRoom>
+                <weight>2.5</weight>
+                <countRange>0~1</countRange>
+            </MVO_MaritimeBaseBatteryRoom>
+            <MVO_MaritimeBasePowerPlantArea>
+                <weight>2.5</weight>
+                <countRange>0~1</countRange>
+            </MVO_MaritimeBasePowerPlantArea>
+        </roomDefs>
+    </StructureLayoutDef>
+    
+</Defs>

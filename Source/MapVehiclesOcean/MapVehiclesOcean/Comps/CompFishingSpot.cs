@@ -4,7 +4,6 @@ using Verse;
 
 namespace MapVehiclesOcean;
 
-[HotSwap]
 public class CompFishingSpot : ThingComp
 {
     protected IntVec3 FishingCell => parent.Position + parent.Rotation.FacingCell;

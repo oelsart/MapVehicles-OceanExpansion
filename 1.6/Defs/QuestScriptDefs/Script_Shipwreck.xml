@@ -48,10 +48,6 @@
         </questDescriptionRules>
         <root Class="QuestNode_Sequence">
             <nodes>
-                <li Class="QuestNode_SubScript">
-                    <def>Util_AdjustPointsForDistantFight</def>
-                </li>
-
                 <li Class="MapVehiclesOcean.QuestNode_GetSeaSiteTile">
                     <storeAs>siteTile</storeAs>
                     <preferCloserTiles>true</preferCloserTiles>

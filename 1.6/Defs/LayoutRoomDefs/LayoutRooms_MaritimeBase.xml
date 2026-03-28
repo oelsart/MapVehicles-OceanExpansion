@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    
+    <LayoutRoomDef>
+        <defName>MVO_MaritimeBaseCorridor</defName>
+        <noRoof>true</noRoof>
+        <floorTypes>
+            <li>MVO_FloatingStructureCrude</li>
+        </floorTypes>
+        <parts>
+            <MVO_FillWithConduits />
+        </parts>
+    </LayoutRoomDef>
+
+    <LayoutRoomDef>
+        <defName>MVO_MaritimeBaseStorage</defName>
+        <fillEdges>
+            <AncientDisplayBank>
+                <groupsPerTenEdgeCells>5~8</groupsPerTenEdgeCells>
+                <groupCountRange>4~5</groupCountRange>
+            </AncientDisplayBank>
+        </fillEdges>
+        <fillInterior>
+            <AncientSystemRack>
+                <thingsPerHundredCells>30~40</thingsPerHundredCells>
+                <snapToGrid>true</snapToGrid>
+            </AncientSystemRack>
+        </fillInterior>
+        <wallAttachments>
+            <TorchWallLamp>
+                <thingsPer10EdgeCells>3</thingsPer10EdgeCells>
+            </TorchWallLamp>
+        </wallAttachments>
+        <parts>
+            <MVO_ConnectConduits />
+            <MVO_MiniTurrets />
+        </parts>
+    </LayoutRoomDef>
+
+    <LayoutRoomDef>
+        <defName>MVO_MaritimeBaseDining</defName>
+        <prefabs>
+            <MVO_SubRoom_Kitchen>
+                <countPerTenEdgeCells>5</countPerTenEdgeCells>
+            </MVO_SubRoom_Kitchen>
+        </prefabs>
+        <parts>
+            <MVO_DiningTables_Small />
+            <MVO_DiningTables_Large />
+            <MVO_ConnectConduits />
+            <MVO_MiniTurrets />
+        </parts>
+        <wallAttachments>
+            <TorchWallLamp>
+                <thingsPer10EdgeCells>3</thingsPer10EdgeCells>
+            </TorchWallLamp>
+        </wallAttachments>
+    </LayoutRoomDef>
+
+    <LayoutRoomDef>
+        <defName>MVO_MaritimeBaseBedRoom</defName>
+        <parts>
+            <MVO_BedRooms />
+            <MVO_FirefoamPoppers />
+            <MVO_Couches />
+            <MVO_PokerTables />
+            <MVO_ConnectConduits />
+            <MVO_MiniTurrets />
+        </parts>    
+    </LayoutRoomDef>
+
+    <LayoutRoomDef>
+        <defName>MVO_MaritimeBaseBatteryRoom</defName>
+        <parts>
+            <MVO_Batteries />
+            <MVO_ConnectConduits />
+            <MVO_FillBatteries />
+            <MVO_MiniTurrets />
+        </parts>
+    </LayoutRoomDef>
+
+    <LayoutRoomDef>
+        <defName>MVO_MaritimeBasePowerPlantArea</defName>
+        <roomContentsWorkerType>MapVehiclesOcean.RoomContents_PowerPlantArea</roomContentsWorkerType>
+        <noRoof>true</noRoof>
+        <parts>
+            <MVO_ConnectConduits />
+            <MVO_MiniTurrets />
+        </parts>
+    </LayoutRoomDef>
+    
+</Defs>

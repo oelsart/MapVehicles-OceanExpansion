@@ -6,20 +6,13 @@
         <label>wood floor</label>
         <description>Wood plank flooring for that warm, homey feeling. While it is quick to lay, it is also very flammable.</description>
         <texturePath>Terrain/Surfaces/WoodFloor</texturePath>
-        <bridgePropsPath>MapVehiclesOcean/Things/WoodShipProps/WoodShipPropsA</bridgePropsPath>
+        <bridgePropsPath>MapVehiclesOcean/Terrain/WoodShipProps/WoodShipPropsA</bridgePropsPath>
         <color>(108,78,55)</color>
-        <fertility>0</fertility>
         <edgeType>Hard</edgeType>
         <bridge>true</bridge>
         <isFoundation>true</isFoundation>
         <renderPrecedence>250</renderPrecedence>
         <preventCraters>true</preventCraters>
-        <affordances>
-            <li>Light</li>
-            <li>Medium</li>
-            <li>Heavy</li>
-            <li>Walkable</li>
-        </affordances>
         <designationCategory Inherit="False"/>
         <statBases>
             <Flammability>0.22</Flammability>
@@ -28,12 +21,37 @@
     
     <TerrainDef ParentName="MVO_WoodShipwreckFloor">
         <defName>MVO_WoodShipwreckFloorB</defName>
-        <bridgePropsPath>MapVehiclesOcean/Things/WoodShipProps/WoodShipPropsB</bridgePropsPath>
+        <bridgePropsPath>MapVehiclesOcean/Terrain/WoodShipProps/WoodShipPropsB</bridgePropsPath>
     </TerrainDef>
 
     <TerrainDef ParentName="MVO_WoodShipwreckFloor">
         <defName>MVO_WoodShipwreckFloorC</defName>
-        <bridgePropsPath>MapVehiclesOcean/Things/WoodShipProps/WoodShipPropsC</bridgePropsPath>
+        <bridgePropsPath>MapVehiclesOcean/Terrain/WoodShipProps/WoodShipPropsC</bridgePropsPath>
+    </TerrainDef>
+    
+    <TerrainDef ParentName="MVO_WoodShipwreckFloor">
+        <defName>MVO_FloatingStructure</defName>
+        <label>floating structure</label>
+        <description>Floating structure platform on the ocean.</description>
+        <bridgePropsPath>MapVehiclesOcean/Terrain/FloatingStructure/FloatingStructureProps</bridgePropsPath>
+        <terrainAffordanceNeeded>VMF_DeepWater</terrainAffordanceNeeded>
+    </TerrainDef>
+
+    <TerrainDef ParentName="MVO_WoodShipwreckFloor">
+        <defName>MVO_FloatingStructureBridge</defName>
+        <label>floating structure</label>
+        <description>Floating structure platform on the ocean.</description>
+        <bridgePropsPath>MapVehiclesOcean/Terrain/FloatingStructure/FloatingStructureBridgeProps</bridgePropsPath>
+        <terrainAffordanceNeeded>VMF_DeepWater</terrainAffordanceNeeded>
+    </TerrainDef>
+
+    <TerrainDef ParentName="MVO_WoodShipwreckFloor">
+        <defName>MVO_FloatingStructureCrude</defName>
+        <label>floating structure</label>
+        <description>Floating structure platform on the ocean.</description>
+        <texturePath>MapVehiclesOcean/Terrain/CrudeBridge</texturePath>
+        <bridgePropsPath>MapVehiclesOcean/Terrain/FloatingStructure/FloatingStructureBridgeProps</bridgePropsPath>
+        <terrainAffordanceNeeded>VMF_DeepWater</terrainAffordanceNeeded>
     </TerrainDef>
     
 </Defs>
