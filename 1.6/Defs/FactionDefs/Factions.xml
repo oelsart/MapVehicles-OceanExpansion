@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    
+    <FactionDef ParentName="AncientsBase">
+        <defName>MVO_Maritime</defName>
+        <label>maritime</label>
+        <pawnSingular>seasteader</pawnSingular>
+        <pawnsPlural>seasteaders</pawnsPlural>
+        <fixedName>Seasteaders</fixedName>
+        <hidden>false</hidden>
+        <techLevel>Industrial</techLevel>
+        <apparelStuffFilter>
+            <thingDefs>
+                <li>Cloth</li>
+                <li>Synthread</li>
+                <li>Steel</li>
+            </thingDefs>
+        </apparelStuffFilter>
+        <messageDefendersAttacking>Maritime soldiers are attacking.</messageDefendersAttacking>
+        <caravanTraderKinds>
+            <li>MVO_MaritimeBase_Seasteader_BulkGoods</li>
+            <li>MVO_MaritimeBase_Seasteader_CombatSupplier</li>
+            <li>MVO_MaritimeBase_Seasteader_Exotic</li>
+            <li>MVO_MaritimeBase_Seasteader_PirateMerchant</li>
+        </caravanTraderKinds>
+        <pawnGroupMakers Inherit="False">
+            <li>
+                <kindDef>Combat</kindDef>
+                <options>
+                    <Villager>5</Villager>
+                    <Town_Guard>10</Town_Guard>
+                    <Grenadier_Destructive>1.5</Grenadier_Destructive>
+                    <Mercenary_Slasher>7</Mercenary_Slasher>
+                    <Mercenary_Gunner>10</Mercenary_Gunner>
+                    <Mercenary_Elite>10</Mercenary_Elite>
+                    <Town_Councilman>10</Town_Councilman>
+                </options>
+            </li>
+            <li>
+                <kindDef>Peaceful</kindDef>
+                <options>
+                    <Villager>20</Villager>
+                    <Villager_Child MayRequire="Ludeon.RimWorld.Biotech">10</Villager_Child>
+                    <Town_Guard>10</Town_Guard>
+                    <Town_Councilman>10</Town_Councilman>
+                </options>
+            </li>
+            <li>
+                <kindDef>Trader</kindDef>
+                <traders>
+                    <Town_Trader>1</Town_Trader>
+                </traders>
+                <carriers>
+                    <MVO_PackTortoise>1</MVO_PackTortoise>
+                </carriers>
+                <guards>
+                    <Villager>3</Villager>
+                    <Town_Guard>10</Town_Guard>
+                    <Grenadier_Destructive>1.5</Grenadier_Destructive>
+                    <Mercenary_Slasher>7</Mercenary_Slasher>
+                    <Mercenary_Gunner>10</Mercenary_Gunner>
+                    <Mercenary_Elite>10</Mercenary_Elite>
+                </guards>
+            </li>
+            <li>
+                <kindDef>Settlement</kindDef>
+                <options>
+                    <Villager>10</Villager>
+                    <Town_Guard>10</Town_Guard>
+                    <Grenadier_Destructive>1.5</Grenadier_Destructive>
+                    <Mercenary_Slasher>7</Mercenary_Slasher>
+                    <Mercenary_Gunner>10</Mercenary_Gunner>
+                    <Mercenary_Elite>10</Mercenary_Elite>
+                    <Town_Councilman>10</Town_Councilman>
+                </options>
+            </li>
+            <li MayRequire="Ludeon.RimWorld.Ideology">
+                <kindDef>Miners</kindDef>
+                <commonality>1</commonality>
+                <options>
+                    <Miner>1</Miner>
+                </options>
+            </li>
+            <li MayRequire="Ludeon.RimWorld.Ideology">
+                <kindDef>Hunters</kindDef>
+                <commonality>1</commonality>
+                <options>
+                    <Hunter>1</Hunter>
+                </options>
+            </li>
+            <li MayRequire="Ludeon.RimWorld.Ideology">
+                <kindDef>Loggers</kindDef>
+                <commonality>1</commonality>
+                <options>
+                    <Logger>1</Logger>
+                </options>
+            </li>
+            <li MayRequire="Ludeon.RimWorld.Ideology">
+                <kindDef>Farmers</kindDef>
+                <commonality>1</commonality>
+                <options>
+                    <Farmer>1</Farmer>
+                </options>
+            </li>
+        </pawnGroupMakers>
+        <modExtensions>
+            <li Class="KCSG.CustomGenOption" MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">
+                <canSpawnSettlements>false</canSpawnSettlements>
+            </li>
+        </modExtensions>
+    </FactionDef>
+    
+</Defs>

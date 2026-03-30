@@ -13,7 +13,11 @@ public class RoomPart_ConnectConduits(RoomPartDef def) : RoomPartWorker(def)
         foreach (var c in outerRect.EdgeCells)
         {
             if (GenConstruct.CanPlaceBlueprintAt(ThingDefOf.HiddenConduit, c, Rot4.North, map))
-                GenSpawn.Spawn(ThingDefOf.HiddenConduit, c, map)?.SetFaction(faction);
+            {
+                var conduit = ThingMaker.MakeThing(ThingDefOf.HiddenConduit);
+                conduit.SetFactionDirect(faction);
+                GenSpawn.Spawn(conduit, c, map);
+            }
         }
         
         map.powerNetManager.UpdatePowerNetsAndConnections_First();
@@ -31,7 +35,12 @@ public class RoomPart_ConnectConduits(RoomPartDef def) : RoomPartWorker(def)
             while (outerRect.Contains(cell))
             {
                 if (GenConstruct.CanPlaceBlueprintAt(ThingDefOf.HiddenConduit, cell, Rot4.North, map))
-                    GenSpawn.Spawn(ThingDefOf.HiddenConduit, cell, map)?.SetFaction(faction);
+                {
+                    var conduit = ThingMaker.MakeThing(ThingDefOf.HiddenConduit);
+                    conduit.SetFactionDirect(faction);
+                    GenSpawn.Spawn(conduit, cell, map);
+                }
+                
                 cell += rot.FacingCell;
             }
         }

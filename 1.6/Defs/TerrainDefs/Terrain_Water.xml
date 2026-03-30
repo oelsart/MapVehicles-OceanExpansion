@@ -1,5 +1,37 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
+
+    <TerrainDef ParentName="WaterDeepBase">
+        <defName>MVO_WaterDeepPassable</defName>
+        <label>deep water</label>
+        <passability>Standable</passability>
+        <avoidWander>true</avoidWander>
+        <renderPrecedence>395</renderPrecedence>
+        <pollutedTexturePath>Terrain/Surfaces/WaterDeepRampPolluted</pollutedTexturePath>
+        <pathCost>75</pathCost>
+        <waterBodyType>Freshwater</waterBodyType>
+        <gravshipReplacementTerrain>WaterShallow</gravshipReplacementTerrain>
+        <affordances>
+            <li>Bridgeable</li>
+        </affordances>
+    </TerrainDef>
+
+    <TerrainDef ParentName="WaterDeepBase">
+        <defName>MVO_WaterOceanDeepPassable</defName>
+        <label>deep ocean water</label>
+        <passability>Standable</passability>
+        <avoidWander>true</avoidWander>
+        <pathCost>75</pathCost>
+        <renderPrecedence>397</renderPrecedence>
+        <waterBodyType>Saltwater</waterBodyType>
+        <gravshipReplacementTerrain>WaterOceanShallow</gravshipReplacementTerrain>
+        <affordances>
+            <li>Bridgeable</li>
+        </affordances>
+        <tags>
+            <li>Ocean</li>
+        </tags>
+    </TerrainDef>
     
     <TerrainDef Name="MVO_VirtualWaterBase" ParentName="WaterDeepBase" Abstract="True">
         <dontRender>true</dontRender>

@@ -30,7 +30,7 @@
                     <preferCloserTiles>true</preferCloserTiles>
                 </li>
 
-                <li Class="QuestNode_GetSitePartDefsByTagsAndFaction">
+                <li Class="MapVehiclesOcean.QuestNode_GetSitePartDefsByTagsAndFactionAllowNonHostile">
                     <storeAs>sitePartDefs</storeAs>
                     <storeFactionAs>siteFaction</storeFactionAs>
                     <sitePartsTags>

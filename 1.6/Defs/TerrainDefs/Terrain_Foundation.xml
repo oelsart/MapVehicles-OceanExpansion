@@ -17,6 +17,7 @@
         <statBases>
             <Flammability>0.22</Flammability>
         </statBases>
+        <terrainAffordanceNeeded>Bridgeable</terrainAffordanceNeeded>
     </TerrainDef>
     
     <TerrainDef ParentName="MVO_WoodShipwreckFloor">
@@ -34,7 +35,6 @@
         <label>floating structure</label>
         <description>Floating structure platform on the ocean.</description>
         <bridgePropsPath>MapVehiclesOcean/Terrain/FloatingStructure/FloatingStructureProps</bridgePropsPath>
-        <terrainAffordanceNeeded>VMF_DeepWater</terrainAffordanceNeeded>
     </TerrainDef>
 
     <TerrainDef ParentName="MVO_WoodShipwreckFloor">
@@ -42,7 +42,6 @@
         <label>floating structure</label>
         <description>Floating structure platform on the ocean.</description>
         <bridgePropsPath>MapVehiclesOcean/Terrain/FloatingStructure/FloatingStructureBridgeProps</bridgePropsPath>
-        <terrainAffordanceNeeded>VMF_DeepWater</terrainAffordanceNeeded>
     </TerrainDef>
 
     <TerrainDef ParentName="MVO_WoodShipwreckFloor">
@@ -51,7 +50,6 @@
         <description>Floating structure platform on the ocean.</description>
         <texturePath>MapVehiclesOcean/Terrain/CrudeBridge</texturePath>
         <bridgePropsPath>MapVehiclesOcean/Terrain/FloatingStructure/FloatingStructureBridgeProps</bridgePropsPath>
-        <terrainAffordanceNeeded>VMF_DeepWater</terrainAffordanceNeeded>
     </TerrainDef>
     
 </Defs>

@@ -5,7 +5,6 @@
         <defName>MVO_SeaThreat</defName>
         <label>sea threat</label>
         <description>A sea threat.</description>
-        <workerClass>SitePartWorker_Ambush</workerClass>
         <siteTexture>World/WorldObjects/Sites/GenericSite</siteTexture>
         <expandingIconTexture>World/WorldObjects/Expanding/Sites/Ambush</expandingIconTexture>
         <defaultHidden>true</defaultHidden>
@@ -24,7 +23,7 @@
     <GenStepDef>
         <defName>MVO_SeaThreat</defName>
         <linkWithSite>MVO_SeaThreat</linkWithSite>
-        <order>1600</order>
+        <order>900</order>
         <genStep Class="MapVehiclesOcean.GenStep_SeaThreat" />
     </GenStepDef>
     

@@ -13,19 +13,30 @@ public class GenStep_MaritimeBase : GenStep
     {
         var sketch = MVO_DefOf.MVO_MaritimeBase.Worker.GenerateStructureSketch(new StructureGenParams
         {
-            size = DefaultSize
+            size = DefaultSize,
+            faction = map.ParentFaction
         });
         map.layoutStructureSketches.Add(sketch);
         var cellRect = CellRect.CenteredOn(map.Center, DefaultSize);
         Dictionary<IntVec3, TerrainDef> terrains = [];
         foreach (var cell in cellRect)
         {
-            terrains[cell] = map.terrainGrid.TerrainAt(cell);
+            terrains[cell] = map.terrainGrid.BaseTerrainAt(cell);
             map.terrainGrid.SetTerrain(cell, TerrainDefOf.WaterShallow);
         }
-        MVO_DefOf.MVO_MaritimeBase.Worker.Spawn(sketch, map, cellRect.Min);
+        MVO_DefOf.MVO_MaritimeBase.Worker.Spawn(sketch, map, cellRect.Min, faction: map.ParentFaction);
         foreach (var cell in cellRect)
-            map.terrainGrid.SetTerrain(cell, terrains[cell]);
+        {
+            if (map.terrainGrid.TopTerrainAt(cell) is { layerable: true })
+            {
+                map.terrainGrid.SetUnderTerrain(cell, terrains[cell]);
+            }
+            else
+            {
+                map.terrainGrid.SetTerrain(cell, terrains[cell]);
+            }
+        }
         terrains.Clear();
+        MapGenerator.SetVar("SpawnRect", cellRect);
     }
 }

@@ -1,15 +1,15 @@
 ManifestFileVersion: 0
-CRC: 633563924
+CRC: 624861052
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 035213d561b84874cf71ddfd2c9b2996
+    Hash: 7f9d55377d2d5e2705486712dea2c1d9
   TypeTreeHash:
     serializedVersion: 2
     Hash: ce3b6d18a872ca8039cd5eb3c4fb7ef5
   IncrementalBuildHash:
     serializedVersion: 2
-    Hash: 035213d561b84874cf71ddfd2c9b2996
+    Hash: 7f9d55377d2d5e2705486712dea2c1d9
 HashAppended: 0
 ClassTypes:
 - Class: 28
@@ -32,6 +32,7 @@ Assets:
 - Assets/Data/OELS.MapVehicles.OceanExpansion/Textures/MapVehiclesOcean/Terrain/WoodShipProps/WoodShipPropsA_Loop.png
 - Assets/Data/OELS.MapVehicles.OceanExpansion/Textures/MapVehiclesOcean/Things/Rig/MastRoot.png
 - Assets/Data/OELS.MapVehicles.OceanExpansion/Textures/MapVehiclesOcean/Things/Rig/Rig2/Leathery_Rig2_north.png
+- Assets/Data/OELS.MapVehicles.OceanExpansion/Textures/Things/Pawn/Animal/Tortoise/TortoisePack_east.png
 - Assets/Data/OELS.MapVehicles.OceanExpansion/Textures/MapVehiclesOcean/Things/MooringRing/MooringRing_east.png
 - Assets/Data/OELS.MapVehicles.OceanExpansion/Textures/MapVehiclesOcean/Things/GrapplingLauncher/GrapplingHook.png
 - Assets/Data/OELS.MapVehicles.OceanExpansion/Textures/MapVehiclesOcean/Things/Oar/Oar_south.png
@@ -77,6 +78,7 @@ Assets:
 - Assets/Data/OELS.MapVehicles.OceanExpansion/Textures/MapVehiclesOcean/Things/CrowsNest/CrowsNestBlueprint_east.png
 - Assets/Data/OELS.MapVehicles.OceanExpansion/Textures/MapVehiclesOcean/Terrain/WoodShipProps/WoodShipPropsBA_Diagonal_north.png
 - Assets/Data/OELS.MapVehicles.OceanExpansion/Textures/MapVehiclesOcean/Things/ZiplineBelt/ZiplineBelt_east.png
+- Assets/Data/OELS.MapVehicles.OceanExpansion/Textures/Things/Pawn/Animal/Tortoise/TortoisePack_north.png
 - Assets/Data/OELS.MapVehicles.OceanExpansion/Textures/MapVehiclesOcean/Things/Cannon/CannonballResource/Cannonball_c.png
 - Assets/Data/OELS.MapVehicles.OceanExpansion/Textures/MapVehiclesOcean/Terrain/WoodShipProps/WoodShipPropsBA_Diagonal_east.png
 - Assets/Data/OELS.MapVehicles.OceanExpansion/Textures/MapVehiclesOcean/Terrain/WoodShipProps/WoodShipPropsCB_Diagonal_west.png
@@ -125,6 +127,7 @@ Assets:
 - Assets/Data/OELS.MapVehicles.OceanExpansion/Textures/MapVehiclesOcean/Things/Rig/Rig1/Fabric_Rig1_Icon.png
 - Assets/Data/OELS.MapVehicles.OceanExpansion/Textures/MapVehiclesOcean/Terrain/WoodShipProps/WoodShipPropsC_Loop.png
 - Assets/Data/OELS.MapVehicles.OceanExpansion/Textures/MapVehiclesOcean/Things/Rig/Rig3/Leathery_Rig3_eastm.png
+- Assets/Data/OELS.MapVehicles.OceanExpansion/Textures/Things/Pawn/Animal/Tortoise/TortoisePack_south.png
 - Assets/Data/OELS.MapVehicles.OceanExpansion/Textures/MapVehiclesOcean/Things/Keel/Keel_east.png
 - Assets/Data/OELS.MapVehicles.OceanExpansion/Textures/MapVehiclesOcean/Things/Stele/Stele_C.png
 - Assets/Data/OELS.MapVehicles.OceanExpansion/Textures/MapVehiclesOcean/Things/Rig/Rig3/Fabric_Rig3_north.png

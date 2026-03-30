@@ -30,7 +30,7 @@ public class LayoutWorker_MaritimeBase(LayoutDef def) : LayoutWorker(def)
             floor = MVO_DefOf.MVO_FloatingStructureBridge,
             importantFloor = MVO_DefOf.MVO_FloatingStructure,
             importantFloorSpacing = 1,
-            defaultAffordanceTerrain = TerrainDefOf.WaterOceanDeep,
+            defaultAffordanceTerrain = MVO_DefOf.MVO_WaterOceanDeepPassable,
             wallStuff = ThingDefOf.WoodLog,
             doorStuff = ThingDefOf.WoodLog,
             structureLayout = GenerateBase(parms)

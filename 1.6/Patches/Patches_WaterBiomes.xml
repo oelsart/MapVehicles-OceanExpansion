@@ -7,9 +7,31 @@
 			<value>
 				<terrainsByFertility>
 					<li>
-						<terrain>WaterDeep</terrain>
+						<terrain>MVO_WaterOceanDeepPassable</terrain>
 					</li>
 				</terrainsByFertility>
+			</value>
+		</nomatch>
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/BiomeDef[defName="Ocean"]/allowedPackAnimals</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>Defs/BiomeDef[defName="Ocean"]</xpath>
+			<value>
+				<allowedPackAnimals>
+					<li>MVO_PackTortoise</li>
+				</allowedPackAnimals>
+			</value>
+		</nomatch>
+	</Operation>
+
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/BiomeDef[defName="Ocean"]/allowedPackAnimals/li[text()=Tortoise]</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>Defs/BiomeDef[defName="Ocean"]/allowedPackAnimals</xpath>
+			<value>
+				<li>MVO_PackTortoise</li>
 			</value>
 		</nomatch>
 	</Operation>
@@ -21,9 +43,31 @@
 			<value>
 				<terrainsByFertility>
 					<li>
-						<terrain>WaterDeep</terrain>
+						<terrain>MVO_WaterDeepPassable</terrain>
 					</li>
 				</terrainsByFertility>
+			</value>
+		</nomatch>
+	</Operation>
+
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/BiomeDef[defName="Lake"]/allowedPackAnimals</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>Defs/BiomeDef[defName="Lake"]</xpath>
+			<value>
+				<allowedPackAnimals>
+					<li>MVO_PackTortoise</li>
+				</allowedPackAnimals>
+			</value>
+		</nomatch>
+	</Operation>
+
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/BiomeDef[defName="Lake"]/allowedPackAnimals/li[text()=Tortoise]</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>Defs/BiomeDef[defName="Lake"]/allowedPackAnimals</xpath>
+			<value>
+				<li>MVO_PackTortoise</li>
 			</value>
 		</nomatch>
 	</Operation>

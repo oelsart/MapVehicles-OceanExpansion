@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-using VehicleMapFramework;
-using Vehicles;
+﻿using Vehicles;
 using Verse;
 using Verse.AI;
 

@@ -9,13 +9,14 @@
             <MVO_MaritimeBaseStorage>1</MVO_MaritimeBaseStorage>
             <MVO_MaritimeBaseDining>0.75</MVO_MaritimeBaseDining>
             <MVO_MaritimeBaseBedRoom>1</MVO_MaritimeBaseBedRoom>
+            <MVO_MaritimeBaseAnimalBarn>
+                <countRange>1</countRange>
+            </MVO_MaritimeBaseAnimalBarn>
             <MVO_MaritimeBaseBatteryRoom>
-                <weight>2.5</weight>
-                <countRange>0~1</countRange>
+                <countRange>1</countRange>
             </MVO_MaritimeBaseBatteryRoom>
             <MVO_MaritimeBasePowerPlantArea>
-                <weight>2.5</weight>
-                <countRange>0~1</countRange>
+                <countRange>1</countRange>
             </MVO_MaritimeBasePowerPlantArea>
         </roomDefs>
     </StructureLayoutDef>

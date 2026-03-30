@@ -129,7 +129,7 @@
             </Wall_NAWDiagonal>
         </things>
         <terrain>
-            <WaterOceanDeep>
+            <MVO_WaterOceanDeepPassable>
                 <rects>
                     <li>(0,0,0,0)</li>
                     <li>(6,0,6,0)</li>
@@ -138,7 +138,7 @@
                     <li>(1,14,1,14)</li>
                     <li>(5,14,5,14)</li>
                 </rects>
-            </WaterOceanDeep>
+            </MVO_WaterOceanDeepPassable>
             <WaterOceanShallow>
                 <rects>
                     <li>(1,0,5,0)</li>

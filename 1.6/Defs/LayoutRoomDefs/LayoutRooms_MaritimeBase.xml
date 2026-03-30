@@ -80,6 +80,21 @@
     </LayoutRoomDef>
 
     <LayoutRoomDef>
+        <defName>MVO_MaritimeBaseAnimalBarn</defName>
+        <fillEdges>
+            <AnimalBed>
+                <stuff>Cloth</stuff>
+                <groupsPerTenEdgeCells>3~5</groupsPerTenEdgeCells>
+            </AnimalBed>
+        </fillEdges>
+        <parts>
+            <MVO_FillWithStrawMatting />
+            <MVO_ConnectConduits />
+            <MVO_MiniTurrets />
+        </parts>
+    </LayoutRoomDef>
+
+    <LayoutRoomDef>
         <defName>MVO_MaritimeBasePowerPlantArea</defName>
         <roomContentsWorkerType>MapVehiclesOcean.RoomContents_PowerPlantArea</roomContentsWorkerType>
         <noRoof>true</noRoof>

@@ -1,4 +1,5 @@
-﻿using SmashTools;
+﻿using RimWorld;
+using SmashTools;
 using UnityEngine;
 using Verse;
 
@@ -16,6 +17,18 @@ public class MapVehiclesOcean : Mod
     {
         Mod = this;
         settings = GetSettings<Settings>();
+        
+        LongEventHandler.ExecuteWhenFinished(() =>
+        {
+            foreach (var def in DefDatabase<ThingDef>.AllDefsListForReading)
+            {
+                if (def.modContentPack == Mod.Content &&
+                    def.thingCategories.NotNullAndAny(c => c == ThingCategoryDefOf.Techprints))
+                {
+                    def.thingCategories.Add(MVO_DefOf.MVO_Techprints);
+                }
+            }
+        });
     }
 
     public override void DoSettingsWindowContents(Rect inRect)

@@ -4,6 +4,7 @@ using Verse;
 
 namespace MapVehiclesOcean;
 
+[StaticConstructorOnStartup]
 public class Reward_UnknownTreasure : Reward_Unknown
 {
     public override IEnumerable<GenUI.AnonymousStackElement> StackElements

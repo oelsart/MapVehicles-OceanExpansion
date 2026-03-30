@@ -57,11 +57,9 @@
                                     <fixedParams>
                                         <countRange>1~1</countRange>
                                         <filter>
-                                            <thingDefs>
-                                                <li>Techprint_MVO_Keel</li>
-                                                <li>Techprint_MVO_RigI</li>
-                                                <li>Techprint_MVO_RigII</li>
-                                            </thingDefs>
+                                            <categories>
+                                                <li>MVO_Techprints</li>
+                                            </categories>
                                         </filter>
                                     </fixedParams>
                                 </thingSetMaker>

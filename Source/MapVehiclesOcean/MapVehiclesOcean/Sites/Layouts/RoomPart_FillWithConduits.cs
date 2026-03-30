@@ -12,7 +12,11 @@ public class RoomPart_FillWithConduits(RoomPartDef def) : RoomPartWorker(def)
         foreach (var rect in room.rects)
         {
             foreach (var c in rect)
-                GenSpawn.Spawn(ThingDefOf.HiddenConduit, c, map)?.SetFaction(faction);
+            {
+                var conduit = ThingMaker.MakeThing(ThingDefOf.HiddenConduit);
+                conduit.SetFactionDirect(faction);
+                GenSpawn.Spawn(conduit, c, map);
+            }
         }
     }
 }

@@ -19,6 +19,8 @@ public static class MVO_DefOf
     public static ThingDef MVO_Stele;
 
     public static ThingDef MVO_Filth_TallyMarks;
+    
+    public static ThingCategoryDef MVO_Techprints;
 
     public static SoundDef MVO_WaterSplash;
     
@@ -32,11 +34,13 @@ public static class MVO_DefOf
 
     public static JobDef MVO_GotoShipCombat;
 
-    public static QuestScriptDef MVO_Shipwreck;
-
     public static QuestScriptDef MVO_DesertedIsland;
     
     public static QuestScriptDef MVO_TheIsland;
+
+    public static TerrainDef MVO_WaterDeepPassable;
+    
+    public static TerrainDef MVO_WaterOceanDeepPassable;
 
     public static TerrainDef MVO_WaterDeepVirtual;
     
@@ -50,6 +54,8 @@ public static class MVO_DefOf
 
     public static DutyDef MVO_RangedBoatAggressive;
 
+    public static DutyDef MVO_WanderAnywhere;
+
     public static PawnGroupKindDef MVO_ShipCombat;
 
     public static WorldObjectDef MVO_AmbushSea;
@@ -58,4 +64,6 @@ public static class MVO_DefOf
     
     [MayRequireOdyssey]
     public static LandmarkDef MVO_OceanIsland;
+
+    public static FactionDef MVO_Maritime;
 }

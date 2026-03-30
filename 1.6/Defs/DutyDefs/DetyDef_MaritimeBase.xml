@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    
+    <DutyDef>
+        <defName>MVO_WanderAnywhere</defName>
+        <thinkNode Class="ThinkNode_Priority">
+            <subNodes>
+                <li Class="JobGiver_WanderAnywhere" />
+            </subNodes>
+        </thinkNode>
+    </DutyDef>
+    
+</Defs>

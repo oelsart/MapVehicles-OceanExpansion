@@ -5,18 +5,33 @@
         <defName>MVO_MaritimeBase</defName>
         <label>maritime base</label>
         <description>A maritime base moving across the sea.</description>
+        <workerClass>MapVehiclesOcean.SitePartWorker_MarineSite</workerClass>
         <siteTexture>World/WorldObjects/Sites/GenericSite</siteTexture>
         <forceExitAndRemoveMapCountdownDurationDays>11</forceExitAndRemoveMapCountdownDurationDays>
+        <wantsThreatPoints>true</wantsThreatPoints>
+        <requiresFaction>true</requiresFaction>
+        <considerEnteringAsAttack>false</considerEnteringAsAttack>
         <tags>
             <li>MVO_MaritimeBase</li>
+            <li>MVO_MaritimeBasePawns</li>
         </tags>
     </SitePartDef>
 
     <GenStepDef>
         <defName>MVO_MaritimeBase</defName>
         <linkWithSite>MVO_MaritimeBase</linkWithSite>
-        <order>1600</order>
+        <order>400</order>
         <genStep Class="MapVehiclesOcean.GenStep_MaritimeBase" />
+    </GenStepDef>
+
+    <GenStepDef>
+        <defName>MVO_MaritimeBasePawns</defName>
+        <linkWithSite>MVO_MaritimeBase</linkWithSite>
+        <order>900</order>
+        <genStep Class="MapVehiclesOcean.GenStep_MaritimeBasePawns">
+            <factionDef>MVO_Maritime</factionDef>
+            <pawnGroupKindDef>Trader</pawnGroupKindDef>
+        </genStep>
     </GenStepDef>
     
 </Defs>
