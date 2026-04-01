@@ -5,9 +5,9 @@
         <defName>MVO_Shipwreck</defName>
         <label>shipwreck</label>
         <workerClass>MapVehiclesOcean.SitePartWorker_GeneratedThings</workerClass>
-        <description>A mineable lump of precious resources.</description>
+        <description>Remains of shipwrecks.</description>
         <siteTexture>World/WorldObjects/Sites/GenericSite</siteTexture>
-        <expandingIconTexture>World/WorldObjects/Expanding/Sites/PreciousLump</expandingIconTexture>
+        <expandingIconTexture>MapVehiclesOcean/World/Shipwreck</expandingIconTexture>
         <forceExitAndRemoveMapCountdownDurationDays>11</forceExitAndRemoveMapCountdownDurationDays>
         <mainPartAllThreatsLabel>Hostile activity detected.</mainPartAllThreatsLabel>
         <tags>

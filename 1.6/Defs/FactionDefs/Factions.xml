@@ -9,6 +9,10 @@
         <fixedName>Seasteaders</fixedName>
         <hidden>false</hidden>
         <techLevel>Industrial</techLevel>
+        <factionIconPath>MapVehiclesOcean/World/Seasteader</factionIconPath>
+        <colorSpectrum>
+            <li>(0.37, 0.57, 0.95)</li>
+        </colorSpectrum>
         <apparelStuffFilter>
             <thingDefs>
                 <li>Cloth</li>

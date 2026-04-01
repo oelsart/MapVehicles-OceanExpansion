@@ -7,6 +7,8 @@
         <description>A maritime base moving across the sea.</description>
         <workerClass>MapVehiclesOcean.SitePartWorker_MarineSite</workerClass>
         <siteTexture>World/WorldObjects/Sites/GenericSite</siteTexture>
+        <expandingIconTexture>MapVehiclesOcean/World/Seasteader</expandingIconTexture>
+        <applyFactionColorToSiteTexture>true</applyFactionColorToSiteTexture>
         <forceExitAndRemoveMapCountdownDurationDays>11</forceExitAndRemoveMapCountdownDurationDays>
         <wantsThreatPoints>true</wantsThreatPoints>
         <requiresFaction>true</requiresFaction>
