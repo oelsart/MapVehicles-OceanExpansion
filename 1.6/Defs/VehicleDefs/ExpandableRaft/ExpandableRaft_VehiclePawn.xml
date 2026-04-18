@@ -79,7 +79,7 @@
 			</li>
 			<li Class="VehicleMapFramework.CompProperties_NpcVehicleMap">
 				<pawnCountWeight>0.8</pawnCountWeight>
-				<mapParamsList>
+				<mapParams>
 					<li>
 						<pawnCountRange>0~2</pawnCountRange>
 						<prefabDef>MVO_ExpandableRaft_PrefabA</prefabDef>
@@ -90,7 +90,7 @@
 						<prefabDef>MVO_ExpandableRaft_PrefabB</prefabDef>
 						<preferredDir>West</preferredDir>
 					</li>
-				</mapParamsList>
+				</mapParams>
 			</li>
 		</comps>
 

@@ -21,14 +21,7 @@ public class IncidentWorker_Ambush_EnemyBoats : IncidentWorker_Ambush_EnemyMapVe
     protected override bool ValidRaiderVehicle(VehicleDef vehicleDef, VehicleCategory category, PawnsArrivalModeDef arrivalModeDef,
         Faction faction, float points)
     {
-        return vehicleDef.thingClass.SameOrSubclassOf<VehiclePawnWithMap>() && vehicleDef.HasComp<CompNpcVehicleMap>() &&
-               vehicleDef.GetModExtension<VehicleMapProps_Unique>() is null or { baseDef: null } &&
-               vehicleDef.type == VehicleType.Sea && (vehicleDef.vehicleCategory & category) == category &&
-               vehicleDef.combatPower <= points && faction.def.techLevel >= vehicleDef.techLevel &&
-               (vehicleDef.enabled & VehicleEnabled.For.Raiders) != VehicleEnabled.For.None &&
-               vehicleDef.npcProperties != null && (vehicleDef.npcProperties.raidParams == null ||
-                                                    vehicleDef.npcProperties.raidParams.Allows(faction,
-                                                        arrivalModeDef));
+        return VehicleCaravanIncidentUtility.ValidSeaThreatVehicle(vehicleDef, category, arrivalModeDef, faction, points);
     }
 
     protected override LordJob CreateLordJob(List<VehiclePawnWithMap> generatedVehicles, IncidentParms parms)

@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <SitePartDef>
+        <defName>MVO_Drifter</defName>
+        <label>drifter</label>
+        <description>A drifting person in need of rescue.</description>
+        <workerClass>MapVehiclesOcean.SitePartWorker_GeneratedPawns</workerClass>
+        <siteTexture>World/WorldObjects/Sites/GenericSite</siteTexture>
+        <expandingIconTexture>World/WorldObjects/Expanding/Sites/DownedRefugee</expandingIconTexture>
+        <forceExitAndRemoveMapCountdownDurationDays>11</forceExitAndRemoveMapCountdownDurationDays>
+        <tags>
+            <li>MVO_Drifter</li>
+        </tags>
+    </SitePartDef>
+
+    <GenStepDef>
+        <defName>MVO_Drifter</defName>
+        <linkWithSite>MVO_Drifter</linkWithSite>
+        <order>900</order>
+        <genStep Class="MapVehiclesOcean.GenStep_Drifter">
+            <vehicleDefs>
+                <MVO_ExpandableRaft>10000000</MVO_ExpandableRaft>
+				<MVO_Keel>0.0000001</MVO_Keel> <!-- Fallback -->
+            </vehicleDefs>
+        </genStep>
+    </GenStepDef>
+
+</Defs>

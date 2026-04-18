@@ -83,7 +83,7 @@
 				<effecterDef>MVO_SinkSplash</effecterDef>
 			</li>
 			<li Class="VehicleMapFramework.CompProperties_NpcVehicleMap">
-				<mapParamsList>
+				<mapParams>
 					<li>
 						<pawnCountRange>0~6</pawnCountRange>
 						<prefabDef>MVO_Keel_PrefabA</prefabDef>
@@ -94,7 +94,7 @@
 						<prefabDef>MVO_Keel_PrefabB</prefabDef>
 						<preferredDir>West</preferredDir>
 					</li>
-				</mapParamsList>
+				</mapParams>
 			</li>
 			
 		</comps>

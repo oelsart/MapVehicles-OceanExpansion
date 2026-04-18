@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <QuestScriptDef>
+        <defName>MVO_Drifter</defName>
+        <autoAccept>true</autoAccept>
+        <defaultChallengeRating>1</defaultChallengeRating>
+        <isRootSpecial>true</isRootSpecial>
+        <questNameRules>
+            <rulesStrings>
+                <li>questName->[drifter_adj] [drifter_noun]</li>
+                <li>questName->Rescuing [drifter_nameDef]</li>
+                <li>questName->The [drifter_adj] Survivor</li>
+                
+                <li>drifter_adj->Drifting</li>
+                <li>drifter_adj->Stranded</li>
+                <li>drifter_adj->Lost</li>
+                <li>drifter_adj->Solitary</li>
+                <li>drifter_adj->Shipwrecked</li>
+
+                <li>drifter_noun->Survivor</li>
+                <li>drifter_noun->Drifter</li>
+                <li>drifter_noun->Castaway</li>
+                <li>drifter_noun->Sailor</li>
+            </rulesStrings>
+        </questNameRules>
+        <questDescriptionRules>
+            <rulesStrings>
+                <li>questDescription->By the lookout, [worker_definite] has spotted a person drifting on the waves. They appear to be [drifter_label], and they are in desperate need of rescue.\n\n[drifter_pronoun] is currently at a nearby sea location. We should hurry, as [drifter_pronoun] won't be able to survive more than [timeoutTicks_duration] in these conditions.</li>
+            </rulesStrings>
+        </questDescriptionRules>
+        <root Class="QuestNode_Sequence">
+            <nodes>
+                <li Class="MapVehiclesOcean.QuestNode_GetSeaSiteTile">
+                    <storeAs>siteTile</storeAs>
+                    <preferCloserTiles>true</preferCloserTiles>
+                </li>
+                
+                <li Class="QuestNode_GetFaction">
+                    <allowEnemy>false</allowEnemy>
+                    <allowNeutral>true</allowNeutral>
+                    <allowAlly>true</allowAlly>
+                    <storeAs>drifterFaction</storeAs>
+                </li>
+                
+                <li Class="QuestNode_GeneratePawn">
+                    <kindDef>SpaceRefugee</kindDef>
+                    <faction>$drifterFaction</faction>
+                    <storeAs>drifter</storeAs>
+                    <mustBeCapableOfViolence>false</mustBeCapableOfViolence>
+                </li>
+                
+                <li Class="QuestNode_GetSitePartDefsByTagsAndFaction">
+                    <storeAs>sitePartDefs</storeAs>
+                    <storeFactionAs>siteFaction</storeFactionAs>
+                    <sitePartsTags>
+                        <li>
+                            <tag>MVO_Drifter</tag>
+                        </li>
+                    </sitePartsTags>
+                </li>
+
+                <li Class="QuestNode_GetDefaultSitePartsParams">
+                    <tile>$siteTile</tile>
+                    <faction>$siteFaction</faction>
+                    <sitePartDefs>$sitePartDefs</sitePartDefs>
+                    <storeSitePartsParamsAs>sitePartsParams</storeSitePartsParamsAs>
+                </li>
+                
+                <li Class="QuestNode_Set">
+                    <name>generatedPawn</name>
+                    <value>$drifter</value>
+                </li>
+
+                <li Class="QuestNode_SubScript">
+                    <def>MVO_Util_GenerateSeaSite</def>
+                </li>
+
+                <li Class="QuestNode_SpawnWorldObjects">
+                    <worldObjects>$site</worldObjects>
+                </li>
+
+                <li Class="QuestNode_Set">
+                    <name>timeoutTicks</name>
+                    <value>$(randInt(3, 5)*60000)</value>
+                </li>
+                <li Class="QuestNode_WorldObjectTimeout">
+                    <worldObject>$site</worldObject>
+                    <delayTicks>$timeoutTicks</delayTicks>
+                    <isQuestTimeout>true</isQuestTimeout>
+                    <inSignalDisable>site.MapGenerated</inSignalDisable>
+                    <node Class="QuestNode_Sequence">
+                        <nodes>
+                            <li Class="QuestNode_Letter">
+                                <label TKey="LetterLabelQuestExpired">Quest expired: [resolvedQuestName]</label>
+                                <text TKey="LetterTextQuestExpired">[drifter_nameDef] has drifted away or succumbed to the ocean. The quest [resolvedQuestName] has expired.</text>
+                            </li>
+                            <li Class="QuestNode_End">
+                                <outcome>Fail</outcome>
+                            </li>
+                        </nodes>
+                    </node>
+                </li>
+
+                <li Class="QuestNode_AddPawnReward">
+                    <pawn>$drifter</pawn>
+                    <inSignalChoiceUsed>site.MapGenerated</inSignalChoiceUsed>
+                    <rewardDetailsHidden>true</rewardDetailsHidden>
+                </li>
+                
+                <li Class="QuestNode_NoWorldObject">
+                    <worldObject>$site</worldObject>
+                    <node Class="QuestNode_End" />
+                </li>
+            </nodes>
+        </root>
+    </QuestScriptDef>
+
+</Defs>
