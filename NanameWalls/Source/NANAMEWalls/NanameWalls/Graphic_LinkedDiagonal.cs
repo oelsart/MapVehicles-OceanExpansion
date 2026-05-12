@@ -14,6 +14,7 @@ public class Graphic_LinkedDiagonal(Graphic subGraphic) : Graphic_LinkedCornerFi
     private const float AltitudeOffset = 0.015f;
     private static readonly int[] TrisIndex = [0, 1, 2, 0, 2, 3];
     private static readonly int[] TrisIndexFlipped = [0, 2, 1, 0, 3, 2];
+    
     private static readonly Vector2[] CornerFillerUVs =
     [
         new(0.5f, 0.6f),
@@ -21,6 +22,15 @@ public class Graphic_LinkedDiagonal(Graphic subGraphic) : Graphic_LinkedCornerFi
         new(0.5f, 0.6f),
         new(0.5f, 0.6f)
     ];
+    
+    private static readonly Color32[] DefaultColors =
+    [
+        new(byte.MaxValue, byte.MaxValue, byte.MaxValue, byte.MaxValue),
+        new(byte.MaxValue, byte.MaxValue, byte.MaxValue, byte.MaxValue),
+        new(byte.MaxValue, byte.MaxValue, byte.MaxValue, byte.MaxValue),
+        new(byte.MaxValue, byte.MaxValue, byte.MaxValue, byte.MaxValue)
+    ];
+    
     protected Diagonals diagonalFlag;
     
     public const int LinkerNumber = 217;
@@ -52,7 +62,8 @@ public class Graphic_LinkedDiagonal(Graphic subGraphic) : Graphic_LinkedCornerFi
             c = rotated + parent.Position;
         }
 
-        var edifice = c.GetEdificeSafe(parent.Map);
+        var map = parent.Map;
+        var edifice = c.GetEdificeSafe(map);
         if (edifice is null)
             return flag;
         if (!linkWithNormal &&
@@ -143,7 +154,6 @@ public class Graphic_LinkedDiagonal(Graphic subGraphic) : Graphic_LinkedCornerFi
                 linkDirections |= LinkDirections.Down;
             }
         }
-        // ReSharper disable once InvertIf
         if ((linkDirections & LinkDirections.Up) <= LinkDirections.None && northEast ^ northWest)
         {
             if (!north2 && (northEast ? ClearFor(settings, Rot4.North, Rot4.West, parent) : ClearFor(settings, Rot4.North, Rot4.East, parent)))
@@ -154,9 +164,11 @@ public class Graphic_LinkedDiagonal(Graphic subGraphic) : Graphic_LinkedCornerFi
         return MaterialAtlasPool.SubMaterialFromAtlas(subGraphic.MatSingleFor(parent), linkDirections);
     }
 
-    private Material GetMaterial(Thing thing)
+    private Material GetMaterial(Thing thing, UVSource source)
     {
-        var baseMat = MaterialAtlasPool.SubMaterialFromAtlas(subGraphic.MatSingleFor(thing), LinkDirections.None);
+        var baseMat = source == UVSource.Whole
+            ? subGraphic.MatSingleFor(thing)
+            : MaterialAtlasPool.SubMaterialFromAtlas(subGraphic.MatSingleFor(thing), (LinkDirections)source);
         if (materialCache.TryGetValue(baseMat, out var mat))
         {
             return mat;
@@ -184,32 +196,43 @@ public class Graphic_LinkedDiagonal(Graphic subGraphic) : Graphic_LinkedCornerFi
             return false;
         
         var pos = thing.Position + rot.AsIntVec3;
-        if (!pos.InBounds(thing.Map)) return false;
+        var map = thing.Map;
+        if (!pos.InBounds(map)) return false;
         
         // Substructureの境目では壁はへこまない: Propsの表示がうまくできないため
         if (ModsConfig.OdysseyActive)
         {
-            var terrainDef = thing.Map.terrainGrid.FoundationAt(pos);
+            var terrainDef = map.terrainGrid.FoundationAt(pos);
             var flag = terrainDef is { IsSubstructure: true };
-            terrainDef = thing.Map.terrainGrid.FoundationAt(thing.Position);
+            terrainDef = map.terrainGrid.FoundationAt(thing.Position);
             if (flag != terrainDef is { IsSubstructure: true })
             {
                 return true;
             }
         }
 
-        var forceDentPossibly = (pos + rot2.Opposite.FacingCell).GetEdificeSafe(thing.Map);
-        if (forceDentPossibly != null &&
+        var forceDentPossibly = (pos + rot2.Opposite.FacingCell).GetEdificeSafe(map);
+        if (forceDentPossibly is not null &&
             NanameWalls.Mod.originalDefs.TryGetValue(forceDentPossibly.def, out var originalDef) &&
             NanameWalls.Mod.Settings.meshSettings.TryGetValue(originalDef.defName, out var settings2) &&
             (settings2.forceDent && forceDentPossibly.Rotation == rot2 ||
              settings2.forceDentOpposite && forceDentPossibly.Rotation == rot2.Opposite))
             return false;
 
-        if (pos.GetEdifice(thing.Map) != null) return false;
+        if (pos.Roofed(map) &&
+            (thing.TryGetComp<CompNanameWall>() is { DentRoofed: true } ||
+            forceDentPossibly?.TryGetComp<CompNanameWall>() is { DentRoofed: true }))
+            return false;
+
+        if (pos.GetEdifice(map) is not null) return false;
         var opposite = rot.Opposite;
         var opposite2 = rot2.Opposite;
-        return !pos.GetThingList(thing.Map).Any(t => (t.def.building?.isAttachment ?? false) && (t.Rotation == opposite || t.Rotation == opposite2));
+        foreach (var t in pos.GetThingList(map))
+        {
+            if (t.def.building is { isAttachment: true } && (t.Rotation == opposite || t.Rotation == opposite2))
+                return false;
+        }
+        return true;
     }
 
     public override void Print(SectionLayer layer, Thing thing, float extraRotation)
@@ -274,18 +297,20 @@ public class Graphic_LinkedDiagonal(Graphic subGraphic) : Graphic_LinkedCornerFi
             }
         }
         diagonalFlag = flag;
-
-        var mat = GetMaterial(thing);
-        var subMesh = layer.GetSubMesh(mat);
+        
         var center = thing.TrueCenter().WithYOffset(AltitudeOffset);
-
+        
         // Original printing
         var anyLinked = north || south || east || west;
         var halfLinked = !north && !south && east ^ west;
         var cornerFiller = originalDef.graphicData?.linkType == LinkDrawerType.CornerFiller;
         if (!settings.skipOriginalPrint || anyLinked && !halfLinked)
         {
-            if (cornerFiller)
+            if (OpenTheWindows.Active && thing.def.thingClass.SameOrSubclassOf(OpenTheWindows.Building_Window))
+            {
+                subGraphic.Print(layer, thing, extraRotation);
+            }
+            else if (cornerFiller)
             {
                 base.Print(layer, thing, extraRotation);
             }
@@ -302,9 +327,9 @@ public class Graphic_LinkedDiagonal(Graphic subGraphic) : Graphic_LinkedCornerFi
 
         // Half-linked printing
         if (halfLinked)
-            PrintConditional(layer.GetSubMesh(mat), settings, center, extraRotation, east, Condition.HalfLinked);
+            PrintConditional(layer, thing, settings, center, extraRotation, east, Condition.HalfLinked);
         if (!anyLinked)
-            PrintConditional(layer.GetSubMesh(mat), settings, center, extraRotation, false, Condition.NoLinked);
+            PrintConditional(layer, thing, settings, center, extraRotation, false, Condition.NoLinked);
 
         // Diagonal printing
         foreach (Diagonals direction in Enum.GetValues(typeof(Diagonals)))
@@ -312,23 +337,24 @@ public class Graphic_LinkedDiagonal(Graphic subGraphic) : Graphic_LinkedCornerFi
             if (direction is Diagonals.None or Diagonals.NoFinalize) continue;
             if ((flag & direction) > Diagonals.None)
             {
-                PrintDiagonal(subMesh, settings, center, extraRotation, direction);
+                PrintDiagonal(layer, thing, settings, center, extraRotation, direction);
             }
         }
 
         if (flag != Diagonals.None && (flag & flag - 1) == 0)
         {
-            PrintDiagonal(subMesh, settings, center, extraRotation, flag, true);
+            PrintDiagonal(layer, thing, settings, center, extraRotation, flag, true);
         }
         if (flag.HasFlag(Diagonals.SouthEast | Diagonals.SouthWest) && !north)
         {
-            PrintDiagonal(subMesh, settings, center, extraRotation, Diagonals.SouthEast, true);
-            PrintDiagonal(subMesh, settings, center, extraRotation, Diagonals.SouthWest, true);
+            PrintDiagonal(layer, thing, settings, center, extraRotation, Diagonals.SouthEast, true);
+            PrintDiagonal(layer, thing, settings, center, extraRotation, Diagonals.SouthWest, true);
         }
 
         if (!cornerFiller) return;
 
         //CornerFillers
+        var mat = GetMaterial(thing, UVSource.None);
         if (north)
         {
             if ((flag & Diagonals.SouthEast) > Diagonals.None)
@@ -352,18 +378,22 @@ public class Graphic_LinkedDiagonal(Graphic subGraphic) : Graphic_LinkedCornerFi
         }
     }
 
-    private static void PrintConditional(LayerSubMesh subMesh, MeshSettings settings, Vector3 center, float extraRotation, bool flipped, Condition condition)
+    private void PrintConditional(SectionLayer layer, Thing thing, MeshSettings settings, Vector3 center, float extraRotation, bool flipped, Condition condition)
     {
         var index = flipped ? TrisIndexFlipped : TrisIndex;
-        var count = subMesh.verts.Count;
-        var count2 = count;
 
-        foreach (var vertsItem in settings.settingItems.Values.Where(item => item.condition == condition))
+        foreach (var vertsItem in settings.settingItems.Values)
         {
-            if (!settings.settingItems.TryGetValue(vertsItem.link, out var linkUVs)) continue;
+            if (vertsItem.condition != condition ||
+                !settings.settingItems.TryGetValue(vertsItem.link, out var linkUVs)) continue;
+
+            var mat = GetMaterial(thing, linkUVs.source);
+            var subMesh = layer.GetSubMesh(mat);
+            var count = subMesh.verts.Count;
+            var count2 = count;
             var verts = vertsItem.vectors;
             var uvs = linkUVs.vectors;
-            var repeat = settings.settingItems.Values.FirstOrDefault(item => item.link == vertsItem.label)?.repeat ?? 1;
+            var repeat = RepeatCount(settings, vertsItem.label);
 
             for (var i = 0; i < repeat; i++)
             {
@@ -374,32 +404,38 @@ public class Graphic_LinkedDiagonal(Graphic subGraphic) : Graphic_LinkedCornerFi
                 subMesh.verts.Add(verts[1] + (verts[2] - verts[1]) * num2);
                 subMesh.verts.Add(verts[0] + (verts[3] - verts[0]) * num2);
                 subMesh.uvs.AddRange(uvs);
+                subMesh.colors.AddRange(DefaultColors);
+                
                 for (var j = 0; j < 6; j++)
                 {
                     subMesh.tris.Add(count2 + index[j]);
                 }
                 count2 += 4;
             }
-        }
 
-        FinalizeVerts(subMesh, count, center, flipped, extraRotation);
+            FinalizeVerts(subMesh, count, center, flipped, extraRotation);
+        }
     }
 
-    private static void PrintDiagonal(LayerSubMesh subMesh, MeshSettings settings, Vector3 center, float extraRotation, Diagonals direction, bool finishPrint = false)
+    private void PrintDiagonal(SectionLayer layer, Thing thing, MeshSettings settings, Vector3 center, float extraRotation, Diagonals direction, bool finishPrint = false)
     {
         var north = direction is Diagonals.NorthEast or Diagonals.NorthWest;
         var flipped = direction is Diagonals.NorthEast or Diagonals.SouthWest;
         var index = flipped ? TrisIndexFlipped : TrisIndex;
-        var count = subMesh.verts.Count;
-        var count2 = count;
 
         var vertsDirection = north ? finishPrint ? Condition.SouthFinish : Condition.North : finishPrint ? Condition.NorthFinish : Condition.South;
-        foreach (var vertsItem in settings.settingItems.Values.Where(item => item.condition == vertsDirection))
+        foreach (var vertsItem in settings.settingItems.Values)
         {
-            if (!settings.settingItems.TryGetValue(vertsItem.link, out var linkUVs)) continue;
+            if (vertsItem.condition != vertsDirection ||
+                !settings.settingItems.TryGetValue(vertsItem.link, out var linkUVs)) continue;
+            
+            var mat = GetMaterial(thing, linkUVs.source);
+            var subMesh = layer.GetSubMesh(mat);
+            var count = subMesh.verts.Count;
+            var count2 = count;
             var verts = vertsItem.vectors;
             var uvs = linkUVs.vectors;
-            var repeat = settings.settingItems.Values.FirstOrDefault(item => item.link == vertsItem.label)?.repeat ?? 1;
+            var repeat = RepeatCount(settings, vertsItem.label);
 
             for (var i = 0; i < repeat; i++)
             {
@@ -410,15 +446,28 @@ public class Graphic_LinkedDiagonal(Graphic subGraphic) : Graphic_LinkedCornerFi
                 subMesh.verts.Add(verts[1] + (verts[2] - verts[1]) * num2);
                 subMesh.verts.Add(verts[0] + (verts[3] - verts[0]) * num2);
                 subMesh.uvs.AddRange(uvs);
+                subMesh.colors.AddRange(DefaultColors);
                 for (var j = 0; j < 6; j++)
                 {
                     subMesh.tris.Add(count2 + index[j]);
                 }
                 count2 += 4;
             }
-        }
 
-        FinalizeVerts(subMesh, count, center, flipped, extraRotation);
+            FinalizeVerts(subMesh, count, center, flipped, extraRotation);
+        }
+    }
+
+    private static int RepeatCount(MeshSettings settings, string link)
+    {
+        foreach (var item in settings.settingItems.Values)
+        {
+            if (item.link == link)
+            {
+                return item.repeat;
+            }
+        }
+        return 1;
     }
 
     private static void FinalizeVerts(LayerSubMesh subMesh, int skip, Vector3 center, bool flipped, float rot)

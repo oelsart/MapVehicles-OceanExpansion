@@ -76,6 +76,10 @@
                     <li>Pemmican</li>
                 </thingDefs>
             </li>
+            <li Class="StockGenerator_Tag">
+                <tradeTag>MVO_TradeGoods</tradeTag>
+                <thingDefCountRange>50~150</thingDefCountRange>
+            </li>
 
             <!-- Drugs -->
             <li Class="StockGenerator_Category">

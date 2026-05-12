@@ -12,6 +12,7 @@
 	
 	<DesignatorDropdownGroupDef>
 		<defName>MVO_RaftPieceGroup</defName>
+		<iconSource>Placed</iconSource>
 	</DesignatorDropdownGroupDef>
 
 	<ThingDef Name="MVO_RaftPieceBase" ParentName="MVO_ShipEquipmentBase" Abstract="True">
@@ -159,6 +160,11 @@
 			</li>
 		</comps>
 	</ThingDef>
+	
+	<DesignatorDropdownGroupDef>
+		<defName>MVO_RigGroup</defName>
+		<iconSource>Placed</iconSource>
+	</DesignatorDropdownGroupDef>
 		
 	<ThingDef Name="MVO_RigBase" ParentName="MVO_ShipEquipmentBase" Abstract="True">
 		<passability>Impassable</passability>
@@ -171,6 +177,7 @@
 			<drawRotated>false</drawRotated>
 		</graphicData>
 		<rotatable>false</rotatable>
+		<designatorDropdown>MVO_RigGroup</designatorDropdown>
 		<statBases>
 			<Beauty>2</Beauty>
 		</statBases>
@@ -580,6 +587,7 @@
 	
 	<DesignatorDropdownGroupDef>
 		<defName>MVO_GrapplingLauncherGroup</defName>
+		<iconSource>Placed</iconSource>
 	</DesignatorDropdownGroupDef>
 	
 	<ThingDef ParentName="BaseArtilleryBuilding">

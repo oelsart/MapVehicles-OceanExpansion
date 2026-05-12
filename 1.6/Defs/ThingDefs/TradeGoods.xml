@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    
+    <ThingDef ParentName="ResourceBase">
+        <defName>MVO_TradeGoods</defName>
+        <label>trade goods</label>
+        <description>Trade goods that are good for nothing but selling. If taken far away, they’ll fetch a higher price.</description>
+        <graphicData>
+            <graphicClass>Graphic_Random</graphicClass>
+            <texPath>MapVehiclesOcean/Things/TradeGoods</texPath>
+        </graphicData>
+        <thingCategories>
+            <li>Items</li>
+        </thingCategories>
+        <techLevel>Neolithic</techLevel>
+        <statBases>
+            <MarketValue>100</MarketValue>
+            <Beauty>4</Beauty>
+            <Mass>3</Mass>
+        </statBases>
+        <tradeTags>
+            <li>MVO_TradeGoods</li>
+        </tradeTags>
+        <comps>
+            <li Class="MapVehiclesOcean.CompProperties_TradeGoods">
+                <distanceFactorCurve>
+                    <points>
+                        <li>(0, 1)</li>
+                        <li>(100, 1.75)</li>
+                        <li>(300, 3)</li>
+                        <li>(500, 3.8)</li>
+                        <li>(5000, 4.2)</li>
+                    </points>
+                </distanceFactorCurve>
+            </li>
+        </comps>
+    </ThingDef>
+    
+</Defs>
