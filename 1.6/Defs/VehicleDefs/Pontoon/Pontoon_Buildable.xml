@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+	
+	<Vehicles.VehicleBuildDef Name="MVO_PontoonBuild" ParentName="VehicleBoatWithMapBaseBuildable">
+		<defName>MVO_Pontoon_Blueprint</defName>
+		<label>pontoon</label>
+		<description>TODO</description>
+		<designationCategory>VF_Vehicles</designationCategory>
+		<graphicData>
+			<texPath>MapVehiclesOcean/Things/Pontoon/Pontoon</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<drawSize>(16,16)</drawSize>
+		</graphicData>
+
+		<statBases>
+			<MaxHitPoints>7500</MaxHitPoints>
+			<WorkToBuild>22500</WorkToBuild>
+			<Flammability>0.05</Flammability>
+		</statBases>
+
+		<size>(8,16)</size>
+
+		<researchPrerequisites>
+			<li>MVO_Pontoon</li>
+		</researchPrerequisites>
+		
+		<costList>
+			<WoodLog>200</WoodLog>
+			<Steel>1800</Steel>
+			<ComponentIndustrial>15</ComponentIndustrial>
+			<Chemfuel>280</Chemfuel>
+		</costList>
+		
+		<building>
+			<neverBuildable>true</neverBuildable>
+			<relatedBuildCommands>
+				<li>MVO_RigOneTiered</li>
+				<li>MVO_RigTwoTiered</li>
+				<li>MVO_RigThreeTiered</li>
+				<li>MVO_Helm</li>
+			</relatedBuildCommands>
+		</building>
+
+		<soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
+
+		<thingToSpawn>MVO_Pontoon</thingToSpawn>
+
+		<constructionSkillPrerequisite>12</constructionSkillPrerequisite>
+		
+		<terrainAffordanceNeeded>VMF_DeepWater</terrainAffordanceNeeded>
+	</Vehicles.VehicleBuildDef>
+	
+	<Vehicles.VehicleBuildDef Name="MVO_PontoonNoBuildBase" ParentName="MVO_PontoonBuild" Abstract="True">
+		<designationCategory Inherit="False" />
+	</Vehicles.VehicleBuildDef>
+
+	<Vehicles.VehicleBuildDef ParentName="MVO_PontoonNoBuildBase">
+		<defName>MVO_Pontoon_LDecked_Blueprint</defName>
+		<size>(8,16)</size>
+		<thingToSpawn>MVO_Pontoon_LDecked</thingToSpawn>
+	</Vehicles.VehicleBuildDef>
+
+	<Vehicles.VehicleBuildDef ParentName="MVO_PontoonNoBuildBase">
+		<defName>MVO_Pontoon_RDecked_Blueprint</defName>
+		<size>(8,16)</size>
+		<thingToSpawn>MVO_Pontoon_RDecked</thingToSpawn>
+	</Vehicles.VehicleBuildDef>
+
+	<Vehicles.VehicleBuildDef ParentName="MVO_PontoonNoBuildBase">
+		<defName>MVO_Pontoon_LRDecked_Blueprint</defName>
+		<size>(16,16)</size>
+		<thingToSpawn>MVO_Pontoon_LRDecked</thingToSpawn>
+	</Vehicles.VehicleBuildDef>
+	
+</Defs>

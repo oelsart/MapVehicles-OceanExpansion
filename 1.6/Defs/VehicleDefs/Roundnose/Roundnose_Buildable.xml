@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+	<Vehicles.VehicleBuildDef ParentName="VehicleBoatWithMapBaseBuildable">
+		<defName>MVO_Roundnose_Blueprint</defName>
+		<label>roundnose</label>
+		<description>TODO</description>
+		<designationCategory>VF_Vehicles</designationCategory>
+		<graphicData>
+			<texPath>MapVehiclesOcean/Things/Roundnose/Roundnose</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<drawSize>(8,16)</drawSize>
+		</graphicData>
+
+		<statBases>
+			<MaxHitPoints>5000</MaxHitPoints>
+			<WorkToBuild>18000</WorkToBuild>
+			<Flammability>0.05</Flammability>
+		</statBases>
+
+		<size>(8,16)</size>
+
+		<researchPrerequisites>
+			<li>MVO_Roundnose</li>
+		</researchPrerequisites>
+		
+		<costList>
+			<WoodLog>1800</WoodLog>
+			<Steel>480</Steel>
+			<ComponentIndustrial>10</ComponentIndustrial>
+		</costList>
+		
+		<building>
+			<neverBuildable>true</neverBuildable>
+			<relatedBuildCommands>
+				<li>MVO_RigOneTiered</li>
+				<li>MVO_RigTwoTiered</li>
+				<li>MVO_RigThreeTiered</li>
+				<li>MVO_Helm</li>
+				<li>MVO_Hatch</li>
+			</relatedBuildCommands>
+		</building>
+
+		<soundImpactDefault>BulletImpact_Wood</soundImpactDefault>
+
+		<thingToSpawn>MVO_Roundnose</thingToSpawn>
+
+		<constructionSkillPrerequisite>10</constructionSkillPrerequisite>
+		
+		<terrainAffordanceNeeded>VMF_DeepWater</terrainAffordanceNeeded>
+	</Vehicles.VehicleBuildDef>
+</Defs>

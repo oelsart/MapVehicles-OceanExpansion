@@ -28,7 +28,7 @@
 			<ArmorRating_Sharp>0.2</ArmorRating_Sharp>
 			<ArmorRating_Heat>0.4</ArmorRating_Heat>
 			<Flammability>1.0</Flammability>
-			<MarketValue>150</MarketValue>
+			<MarketValue>500</MarketValue>
 		</statBases>
 
 		<vehicleStats>

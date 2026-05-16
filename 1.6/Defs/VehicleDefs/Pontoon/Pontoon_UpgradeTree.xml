@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    
+    <Vehicles.UpgradeTreeDef>
+        <defName>MVO_Pontoon_UpgradeTree</defName>
+        <nodes>
+            <li>
+                <key>DeckExpansionLeft</key>
+                <label>deck expansion (left)</label>
+                <description>Add an additional deck to the left side of the boat.</description>
+                <displayLabel>true</displayLabel>
+                <work>12500</work>
+                <drawSize>(200,200)</drawSize>
+                <gridCoordinate>(11,12)</gridCoordinate>
+                <icon>MapVehiclesOcean/Things/Pontoon/Upgrade_LeftDeck</icon>
+                <ingredients>
+                    <WoodLog>80</WoodLog>
+                    <Steel>800</Steel>
+                    <ComponentIndustrial>5</ComponentIndustrial>
+                    <Chemfuel>120</Chemfuel>
+                </ingredients>
+                <upgrades>
+                    <li Class="VehicleMapFramework.ExpansionUpgrade">
+                        <defTransitions>
+                            <li>
+                                <key>MVO_Pontoon</key>
+                                <value>MVO_Pontoon_LDecked</value>
+                            </li>
+                            <li>
+                                <key>MVO_Pontoon_RDecked</key>
+                                <value>MVO_Pontoon_LRDecked</value>
+                            </li>
+                        </defTransitions>
+                        <expandAreas>
+                            <li>(0,0,3,11)</li>
+                        </expandAreas>
+                    </li>
+                </upgrades>
+            </li>
+            <li>
+                <key>DeckExpansionRight</key>
+                <label>deck expansion (right)</label>
+                <description>Add an additional deck to the right side of the boat.</description>
+                <displayLabel>true</displayLabel>
+                <work>12500</work>
+                <drawSize>(200,200)</drawSize>
+                <gridCoordinate>(31,12)</gridCoordinate>
+                <icon>MapVehiclesOcean/Things/Pontoon/Upgrade_RightDeck</icon>
+                <ingredients>
+                    <WoodLog>80</WoodLog>
+                    <Steel>800</Steel>
+                    <ComponentIndustrial>5</ComponentIndustrial>
+                    <Chemfuel>120</Chemfuel>
+                </ingredients>
+                <upgrades>
+                    <li Class="VehicleMapFramework.ExpansionUpgrade">
+                        <defTransitions>
+                            <li>
+                                <key>MVO_Pontoon</key>
+                                <value>MVO_Pontoon_RDecked</value>
+                            </li>
+                            <li>
+                                <key>MVO_Pontoon_LDecked</key>
+                                <value>MVO_Pontoon_LRDecked</value>
+                            </li>
+                        </defTransitions>
+                        <expandAreas>
+                            <li>(11,0,14,11)</li>
+                        </expandAreas>
+                    </li>
+                </upgrades>
+            </li>
+        </nodes>
+    </Vehicles.UpgradeTreeDef>
+    
+</Defs>

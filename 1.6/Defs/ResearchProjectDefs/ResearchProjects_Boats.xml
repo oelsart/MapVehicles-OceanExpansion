@@ -54,5 +54,67 @@
             </rulesStrings>
         </generalRules>
     </ResearchProjectDef>
+
+    <ResearchProjectDef>
+        <defName>MVO_Roundnose</defName>
+        <label>roundnose</label>
+        <description>Learn to build the Roundnose.</description>
+        <tab>MVO_Ocean</tab>
+        <baseCost>2000</baseCost>
+        <techLevel>Medieval</techLevel>
+        <researchViewX>1.00</researchViewX>
+        <researchViewY>0.00</researchViewY>
+        <prerequisites>
+            <li>MVO_Keel</li>
+        </prerequisites>
+        <techprintCount>1</techprintCount>
+        <techprintCommonality>0.1</techprintCommonality>
+        <techprintMarketValue>3500</techprintMarketValue>
+        <heldByFactionCategoryTags>
+            <li>Empire</li>
+            <li>Ancient</li>
+            <li>Outlander</li>
+        </heldByFactionCategoryTags>
+        <generalRules>
+            <rulesStrings>
+                <li>subject->roundnose</li>
+                <li>subject_story->steel-reinforced ships can now be built</li>
+                <li>subject_story->designed a ship with robustness and space efficiency</li>
+                <li>subject_story->perfect for warships in the fleet</li>
+                <li>subject_gerund->constructing the Roundnose</li>
+            </rulesStrings>
+        </generalRules>
+    </ResearchProjectDef>
+
+    <ResearchProjectDef>
+        <defName>MVO_Pontoon</defName>
+        <label>pontoon</label>
+        <description>Learn to build the Pontoon.</description>
+        <tab>MVO_Ocean</tab>
+        <baseCost>3000</baseCost>
+        <techLevel>Medieval</techLevel>
+        <researchViewX>1.00</researchViewX>
+        <researchViewY>0.00</researchViewY>
+        <prerequisites>
+            <li>MVO_Keel</li>
+        </prerequisites>
+        <techprintCount>1</techprintCount>
+        <techprintCommonality>0.1</techprintCommonality>
+        <techprintMarketValue>4200</techprintMarketValue>
+        <heldByFactionCategoryTags>
+            <li>Empire</li>
+            <li>Ancient</li>
+            <li>Outlander</li>
+        </heldByFactionCategoryTags>
+        <generalRules>
+            <rulesStrings>
+                <li>subject->pontoon</li>
+                <li>subject_story->steel square rafts can now be built</li>
+                <li>subject_story->designed a ship with ultimate space efficiency</li>
+                <li>subject_story->technology returns to rafts</li>
+                <li>subject_gerund->constructing the Pontoon</li>
+            </rulesStrings>
+        </generalRules>
+    </ResearchProjectDef>
     
 </Defs>
