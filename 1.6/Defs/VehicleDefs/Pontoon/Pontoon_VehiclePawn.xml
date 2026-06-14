@@ -29,6 +29,7 @@
 						<drawSize>(8,8)</drawSize>
 						<drawOffsetSouth>(0,0,-4)</drawOffsetSouth>
 						<drawOffsetEast>(4,0,0)</drawOffsetEast>
+						<drawOffsetWest>(-4,0,0)</drawOffsetWest>
 						<altLayerSpawned>PawnRope</altLayerSpawned>
 						<color>(125,72,15)</color>
 						<colorTwo>(150,150,150)</colorTwo>
@@ -141,7 +142,24 @@
 			<drawOffsetWest>(0,0,2)</drawOffsetWest>
 		</graphicData>
 		<drawProperties>
-			<graphicOverlays>
+			<graphicOverlays Inherit="False">
+				<li>
+					<renderUI>false</renderUI>
+					<graphicData>
+						<texPath>MapVehiclesOcean/Things/Pontoon/Fence</texPath>
+						<graphicClass>Vehicles.Graphic_Vehicle</graphicClass>
+						<shaderType>CutoutComplexPattern</shaderType>
+						<pattern>VMF_RGBMask</pattern>
+						<drawSize>(8,8)</drawSize>
+						<drawOffsetSouth>(-2,0,-4)</drawOffsetSouth>
+						<drawOffsetEast>(4,0,-2)</drawOffsetEast>
+						<drawOffsetWest>(-4,0,2)</drawOffsetWest>
+						<altLayerSpawned>PawnRope</altLayerSpawned>
+						<color>(125,72,15)</color>
+						<colorTwo>(150,150,150)</colorTwo>
+						<colorThree>(203,183,39)</colorThree>
+					</graphicData>
+				</li>
 				<li>
 					<identifier>LeftDeck</identifier>
 					<dynamicShadows>true</dynamicShadows>
@@ -219,7 +237,24 @@
 			<drawOffsetWest>(0,0,-2)</drawOffsetWest>
 		</graphicData>
 		<drawProperties>
-			<graphicOverlays>
+			<graphicOverlays Inherit="False">
+				<li>
+					<renderUI>false</renderUI>
+					<graphicData>
+						<texPath>MapVehiclesOcean/Things/Pontoon/Fence</texPath>
+						<graphicClass>Vehicles.Graphic_Vehicle</graphicClass>
+						<shaderType>CutoutComplexPattern</shaderType>
+						<pattern>VMF_RGBMask</pattern>
+						<drawSize>(8,8)</drawSize>
+						<drawOffsetSouth>(2,0,-4)</drawOffsetSouth>
+						<drawOffsetEast>(4,0,2)</drawOffsetEast>
+						<drawOffsetWest>(-4,0,-2)</drawOffsetWest>
+						<altLayerSpawned>PawnRope</altLayerSpawned>
+						<color>(125,72,15)</color>
+						<colorTwo>(150,150,150)</colorTwo>
+						<colorThree>(203,183,39)</colorThree>
+					</graphicData>
+				</li>
 				<li>
 					<identifier>RightDeck</identifier>
 					<dynamicShadows>true</dynamicShadows>

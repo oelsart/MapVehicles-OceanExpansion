@@ -6,7 +6,6 @@
         <defName>MVO_MeleeWeapon_Cutlass</defName>
         <label>cutlass</label>
         <description>A short, maneuverable sword used in combat on the deck of sail ships.</description>
-        <possessionCount>1</possessionCount>
         <graphicData>
             <texPath>MapVehiclesOcean/Things/Cutlass</texPath>
             <graphicClass>Graphic_Single</graphicClass>

@@ -1,0 +1,20 @@
+ManifestFileVersion: 0
+CRC: 2653181426
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: f57516547f38a1e4d8f8c87df3eb9cd9
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 0df1dec30b5d061d422d3e6493d27647
+  IncrementalBuildHash:
+    serializedVersion: 2
+    Hash: f57516547f38a1e4d8f8c87df3eb9cd9
+HashAppended: 0
+ClassTypes:
+- Class: 48
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/Data/OELS.MapVehicles.OceanExpansion/Materials/MapVehiclesOcean/CutoutRGBOutline.shader
+Dependencies: []

@@ -80,7 +80,7 @@
             </wornGraphicData>
             <drawData>
                 <defaultData>
-                    <layer>25</layer>
+                    <layer>21.5</layer>
                 </defaultData>
                 <dataWest>
                     <flip>true</flip>
@@ -128,6 +128,261 @@
         <allowedArchonexusCount>1</allowedArchonexusCount>
         <tradeTags>
             <li>Armor</li>
+        </tradeTags>
+    </ThingDef>
+
+    <ThingDef ParentName="ApparelMakeableBase">
+        <defName>MVO_Apparel_SailorShirt</defName>
+        <label>sailor shirt</label>
+        <description>A simple sailor shirt.</description>
+        <recipeMaker>
+            <researchPrerequisite>MVO_SailorOutfit</researchPrerequisite>
+            <displayPriority>311</displayPriority>
+        </recipeMaker>
+        <graphicData>
+            <texPath>MapVehiclesOcean/Things/Apparel/SailorSuit/Shirt</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <shaderType>CutoutComplex</shaderType>
+            <drawSize>0.9</drawSize>
+        </graphicData>
+        <costStuffCount>50</costStuffCount>
+        <stuffCategories>
+            <li>Fabric</li>
+        </stuffCategories>
+        <thingCategories>
+            <li>ApparelMisc</li>
+        </thingCategories>
+        <statBases>
+            <MaxHitPoints>100</MaxHitPoints>
+            <WorkToMake>2200</WorkToMake>
+            <Mass>0.35</Mass>
+            <StuffEffectMultiplierArmor>0.2</StuffEffectMultiplierArmor>
+            <StuffEffectMultiplierInsulation_Cold>0.25</StuffEffectMultiplierInsulation_Cold>
+            <StuffEffectMultiplierInsulation_Heat>0.15</StuffEffectMultiplierInsulation_Heat>
+            <EquipDelay>1.5</EquipDelay>
+        </statBases>
+        <apparel>
+            <bodyPartGroups>
+                <li>Torso</li>
+                <li>Shoulders</li>
+            </bodyPartGroups>
+            <wornGraphicPath>MapVehiclesOcean/Things/Apparel/SailorSuit/Shirt</wornGraphicPath>
+            <useWornGraphicMask>true</useWornGraphicMask>
+            <drawData>
+                <defaultData>
+                    <layer>21</layer>
+                </defaultData>
+            </drawData>
+            <layers>
+                <li>OnSkin</li>
+            </layers>
+            <tags>
+                <li>IndustrialBasic</li>
+                <li>Western</li>
+            </tags>
+            <defaultOutfitTags>
+                <li>Worker</li>
+            </defaultOutfitTags>
+        </apparel>
+        <tradeTags>
+            <li>BasicClothing</li>
+        </tradeTags>
+    </ThingDef>
+
+    <ThingDef ParentName="ApparelMakeableBase">
+        <defName>MVO_Apparel_SailorPants</defName>
+        <label>sailor pants</label>
+        <description>A simple set of sailor pants.</description>
+        <recipeMaker>
+            <researchPrerequisite>MVO_SailorOutfit</researchPrerequisite>
+            <displayPriority>312</displayPriority>
+        </recipeMaker>
+        <graphicData>
+            <texPath>MapVehiclesOcean/Things/Apparel/SailorSuit/Pants</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <costStuffCount>40</costStuffCount>
+        <stuffCategories>
+            <li>Fabric</li>
+        </stuffCategories>
+        <thingCategories>
+            <li>ApparelMisc</li>
+        </thingCategories>
+        <statBases>
+            <MaxHitPoints>100</MaxHitPoints>
+            <WorkToMake>2000</WorkToMake>
+            <Mass>0.3</Mass>
+            <StuffEffectMultiplierArmor>0.2</StuffEffectMultiplierArmor>
+            <StuffEffectMultiplierInsulation_Cold>0.25</StuffEffectMultiplierInsulation_Cold>
+            <StuffEffectMultiplierInsulation_Heat>0.15</StuffEffectMultiplierInsulation_Heat>
+            <EquipDelay>2</EquipDelay>
+        </statBases>
+        <apparel>
+            <bodyPartGroups>
+                <li>Legs</li>
+            </bodyPartGroups>
+            <wornGraphicPath>MapVehiclesOcean/Things/Apparel/SailorSuit/Pants</wornGraphicPath>
+            <useWornGraphicMask>true</useWornGraphicMask>
+            <drawData>
+                <defaultData>
+                    <layer>20.5</layer>
+                </defaultData>
+            </drawData>
+            <layers>
+                <li>OnSkin</li>
+            </layers>
+            <tags>
+                <li>IndustrialBasic</li>
+                <li>Western</li>
+            </tags>
+            <defaultOutfitTags>
+                <li>Worker</li>
+            </defaultOutfitTags>
+            <canBeDesiredForIdeo>false</canBeDesiredForIdeo>
+        </apparel>
+        <tradeTags>
+            <li>BasicClothing</li>
+        </tradeTags>
+    </ThingDef>
+
+    <ThingDef ParentName="HatMakeableBase">
+        <defName>MVO_Apparel_SailorHat</defName>
+        <label>sailor hat</label>
+        <description>TODO</description>
+        <recipeMaker>
+            <researchPrerequisite>MVO_SailorOutfit</researchPrerequisite>
+            <displayPriority>313</displayPriority>
+        </recipeMaker>
+        <graphicData>
+            <texPath>MapVehiclesOcean/Things/Apparel/SailorSuit/Hat</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>0.9</drawSize>
+        </graphicData>
+        <costStuffCount>25</costStuffCount>
+        <stuffCategories>
+            <li>Fabric</li>
+        </stuffCategories>
+        <statBases>
+            <MaxHitPoints>80</MaxHitPoints>
+            <WorkToMake>1800</WorkToMake>
+            <Mass>0.14</Mass>
+            <StuffEffectMultiplierArmor>0.2</StuffEffectMultiplierArmor>
+            <StuffEffectMultiplierInsulation_Cold>0.10</StuffEffectMultiplierInsulation_Cold>
+            <StuffEffectMultiplierInsulation_Heat>0.50</StuffEffectMultiplierInsulation_Heat>
+            <EquipDelay>0.6</EquipDelay>
+        </statBases>
+        <equippedStatOffsets>
+            <SocialImpact>0.10</SocialImpact>
+            <SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">-0.05</SlaveSuppressionOffset>
+        </equippedStatOffsets>
+        <apparel>
+            <countsAsClothingForNudity>false</countsAsClothingForNudity>
+            <developmentalStageFilter>Child, Adult</developmentalStageFilter>
+            <bodyPartGroups>
+                <li>UpperHead</li>
+            </bodyPartGroups>
+            <wornGraphicPath>MapVehiclesOcean/Things/Apparel/SailorSuit/Hat</wornGraphicPath>
+            <useWornGraphicMask>true</useWornGraphicMask>
+            <renderSkipFlags>
+                <li>None</li>
+            </renderSkipFlags>
+            <drawData>
+                <scale>0.6</scale>
+                <defaultData>
+                    <offset>(0,0,0.06)</offset>
+                </defaultData>
+            </drawData>
+            <layers>
+                <li>Overhead</li>
+            </layers>
+            <tags>
+                <li>IndustrialBasic</li>
+                <li>Western</li>
+            </tags>
+            <defaultOutfitTags>
+                <li>Worker</li>
+            </defaultOutfitTags>
+        </apparel>
+        <tradeTags>
+            <li>BasicClothing</li>
+        </tradeTags>
+    </ThingDef>
+
+    <ThingDef ParentName="HatMakeableBase">
+        <defName>MVO_Apparel_PirateHat</defName>
+        <label>pirate hat</label>
+        <description>TODO</description>
+        <recipeMaker>
+            <researchPrerequisite>MVO_SailorOutfit</researchPrerequisite>
+            <displayPriority>314</displayPriority>
+        </recipeMaker>
+        <graphicData>
+            <texPath>MapVehiclesOcean/Things/Apparel/PirateHat/PirateHat</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>0.9</drawSize>
+        </graphicData>
+        <costStuffCount>25</costStuffCount>
+        <stuffCategories>
+            <li>Leathery</li>
+        </stuffCategories>
+        <statBases>
+            <MaxHitPoints>80</MaxHitPoints>
+            <WorkToMake>1800</WorkToMake>
+            <Mass>0.14</Mass>
+            <StuffEffectMultiplierArmor>0.2</StuffEffectMultiplierArmor>
+            <StuffEffectMultiplierInsulation_Cold>0.10</StuffEffectMultiplierInsulation_Cold>
+            <StuffEffectMultiplierInsulation_Heat>0.50</StuffEffectMultiplierInsulation_Heat>
+            <EquipDelay>0.6</EquipDelay>
+        </statBases>
+        <equippedStatOffsets>
+            <SocialImpact>0.10</SocialImpact>
+            <SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">0.05</SlaveSuppressionOffset>
+        </equippedStatOffsets>
+        <apparel>
+            <countsAsClothingForNudity>false</countsAsClothingForNudity>
+            <developmentalStageFilter>Child, Adult</developmentalStageFilter>
+            <bodyPartGroups>
+                <li>UpperHead</li>
+            </bodyPartGroups>
+            <wornGraphicPath>MapVehiclesOcean/Things/Apparel/PirateHat/PirateHat</wornGraphicPath>
+            <useWornGraphicMask>true</useWornGraphicMask>
+            <renderSkipFlags>
+                <li>None</li>
+            </renderSkipFlags>
+            <drawData>
+                <defaultData>
+                    <offset>(0,0,0.22)</offset>
+                </defaultData>
+            </drawData>
+            <layers>
+                <li>Overhead</li>
+            </layers>
+            <tags>
+                <li>IndustrialBasic</li>
+                <li>Western</li>
+            </tags>
+            <defaultOutfitTags>
+                <li>Worker</li>
+            </defaultOutfitTags>
+        </apparel>
+        <colorGenerator Class="ColorGenerator_Options">
+            <options>
+                <li>
+                    <weight>10</weight>
+                    <only>(0.25,0.25,0.25)</only>
+                </li>
+                <li>
+                    <weight>15</weight>
+                    <only>(0.2,0.2,0.2)</only>
+                </li>
+                <li>
+                    <weight>20</weight>
+                    <only>(0.1,0.1,0.1)</only>
+                </li>
+            </options>
+        </colorGenerator>
+        <tradeTags>
+            <li>BasicClothing</li>
         </tradeTags>
     </ThingDef>
     

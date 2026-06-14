@@ -21,5 +21,26 @@
             </rulesStrings>
         </generalRules>
     </ResearchProjectDef>
+
+    <ResearchProjectDef>
+        <defName>MVO_SailorOutfit</defName>
+        <label>sailor's outfit</label>
+        <description>TODO</description>
+        <tab>MVO_Ocean</tab>
+        <baseCost>300</baseCost>
+        <techLevel>Medieval</techLevel>
+        <researchViewX>2.00</researchViewX>
+        <researchViewY>4.00</researchViewY>
+        <prerequisites>
+            <li>ComplexClothing</li>
+        </prerequisites>
+        <generalRules>
+            <rulesStrings>
+                <li>subject->sailor's outfit</li>
+                <li>subject_story->TODO</li>
+                <li>subject_gerund->TODO</li>
+            </rulesStrings>
+        </generalRules>
+    </ResearchProjectDef>
     
 </Defs>
