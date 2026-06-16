@@ -33,13 +33,13 @@
 		</costList>
 		
 		<building>
-			<neverBuildable>true</neverBuildable>
 			<relatedBuildCommands>
 				<li>MVO_RigOneTiered</li>
 				<li>MVO_RigTwoTiered</li>
 				<li>MVO_RigThreeTiered</li>
 				<li>MVO_Helm</li>
 			</relatedBuildCommands>
+			<destroyEffecter>MVO_SpawnSinker</destroyEffecter>
 		</building>
 
 		<soundImpactDefault>BulletImpact_Metal</soundImpactDefault>

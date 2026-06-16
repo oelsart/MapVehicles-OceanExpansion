@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
+
 <Defs>
-    
+
     <EffecterDef>
         <defName>MVO_SinkSplash</defName>
         <children>
@@ -52,4 +53,16 @@
         </children>
     </EffecterDef>
     
+    <EffecterDef>
+        <defName>MVO_SpawnSinker</defName>
+        <children>
+            <li>
+                <subEffecterClass>VehicleMapFramework.SubEffector_SpawnSinkerMote</subEffecterClass>
+                <color>(19,29,36)</color>
+                <speed>0.2</speed>
+                <angle>170~190</angle>
+            </li>
+        </children>
+    </EffecterDef>
+
 </Defs>
