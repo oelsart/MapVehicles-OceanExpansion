@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NanameWalls", "..\..\Naname
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VehicleMapFramework", "..\..\..\VehicleMapFramework\Source\VehicleMapFramework\VehicleMapFramework.csproj", "{34BA798B-C6E2-44E5-8570-13D6CC7D7274}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "..\MVO_Unity\Assembly-CSharp.csproj", "{E07781C7-DB1A-2616-E9C4-89BB8288D2E1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -34,6 +36,11 @@ Global
 		{34BA798B-C6E2-44E5-8570-13D6CC7D7274}.Release|Any CPU.Build.0 = Release|Any CPU
 		{34BA798B-C6E2-44E5-8570-13D6CC7D7274}.Dev|Any CPU.ActiveCfg = Dev|Any CPU
 		{34BA798B-C6E2-44E5-8570-13D6CC7D7274}.Dev|Any CPU.Build.0 = Dev|Any CPU
+		{E07781C7-DB1A-2616-E9C4-89BB8288D2E1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E07781C7-DB1A-2616-E9C4-89BB8288D2E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E07781C7-DB1A-2616-E9C4-89BB8288D2E1}.Dev|Any CPU.ActiveCfg = Debug|Any CPU
+		{E07781C7-DB1A-2616-E9C4-89BB8288D2E1}.Dev|Any CPU.Build.0 = Debug|Any CPU
+		{E07781C7-DB1A-2616-E9C4-89BB8288D2E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <BodyDef>
+    <defName>MVO_Shark</defName>
+    <label>shark</label>
+    <corePart>
+      <def>MVO_SharkBody</def>
+      <height>Middle</height>
+      <depth>Outside</depth>
+      <parts>
+        <li>
+          <def>MVO_CaudalFin</def>
+          <coverage>0.12</coverage>
+        </li>
+        <li>
+          <def>Spine</def>
+          <coverage>0.05</coverage>
+          <depth>Inside</depth>
+        </li>
+        <li>
+          <def>Stomach</def>
+          <coverage>0.05</coverage>
+          <depth>Inside</depth>
+        </li>
+        <li>
+          <def>Heart</def>
+          <coverage>0.03</coverage>
+          <depth>Inside</depth>
+        </li>
+        <li>
+          <def>MVO_Gill</def>
+          <customLabel>left gill</customLabel>
+          <coverage>0.04</coverage>
+          <depth>Inside</depth>
+        </li>
+        <li>
+          <def>MVO_Gill</def>
+          <customLabel>right gill</customLabel>
+          <coverage>0.04</coverage>
+          <depth>Inside</depth>
+        </li>
+        <li>
+          <def>Kidney</def>
+          <customLabel>left kidney</customLabel>
+          <coverage>0.03</coverage>
+          <depth>Inside</depth>
+        </li>
+        <li>
+          <def>Kidney</def>
+          <customLabel>right kidney</customLabel>
+          <coverage>0.03</coverage>
+          <depth>Inside</depth>
+        </li>
+        <li>
+          <def>Liver</def>
+          <coverage>0.08</coverage>
+          <depth>Inside</depth>
+        </li>
+        <li>
+          <def>MVO_PectoralFin</def>
+          <customLabel>left pectoral fin</customLabel>
+          <coverage>0.08</coverage>
+        </li>
+        <li>
+          <def>MVO_PectoralFin</def>
+          <customLabel>right pectoral fin</customLabel>
+          <coverage>0.08</coverage>
+        </li>
+        <li>
+          <def>MVO_SharkHead</def>
+          <coverage>0.18</coverage>
+          <groups>
+            <li>HeadAttackTool</li>
+          </groups>
+          <parts>
+            <li>
+              <def>Skull</def>
+              <coverage>0.25</coverage>
+              <depth>Inside</depth>
+              <parts>
+                <li>
+                  <def>Brain</def>
+                  <coverage>0.50</coverage>
+                  <depth>Inside</depth>
+                </li>
+              </parts>
+            </li>
+            <li>
+              <def>Eye</def>
+              <customLabel>left eye</customLabel>
+              <coverage>0.08</coverage>
+            </li>
+            <li>
+              <def>Eye</def>
+              <customLabel>right eye</customLabel>
+              <coverage>0.08</coverage>
+            </li>
+            <li>
+              <def>Nose</def>
+              <coverage>0.14</coverage>
+            </li>
+            <li>
+              <def>MVO_SharkJaw</def>
+              <coverage>0.30</coverage>
+              <groups>
+                <li>Teeth</li>
+              </groups>
+            </li>
+          </parts>
+        </li>
+      </parts>
+    </corePart>
+  </BodyDef>
+
+</Defs>

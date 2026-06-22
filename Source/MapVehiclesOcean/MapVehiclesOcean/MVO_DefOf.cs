@@ -1,9 +1,11 @@
-﻿using RimWorld;
+﻿using JetBrains.Annotations;
+using RimWorld;
 using Verse;
 using Verse.AI;
 
 namespace MapVehiclesOcean;
 
+[UsedImplicitly(ImplicitUseTargetFlags.WithMembers)]
 [DefOf]
 public static class MVO_DefOf
 {
@@ -66,4 +68,6 @@ public static class MVO_DefOf
     public static LandmarkDef MVO_OceanIsland;
 
     public static FactionDef MVO_Maritime;
+
+    public static PathGridDef MVO_Aquatic;
 }

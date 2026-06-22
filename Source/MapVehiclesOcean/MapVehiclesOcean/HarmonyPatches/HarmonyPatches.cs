@@ -4,6 +4,7 @@ using RimWorld.Planet;
 using VehicleMapFramework;
 using Vehicles.World;
 using Verse;
+using Verse.AI;
 
 namespace MapVehiclesOcean.HarmonyPatches;
 

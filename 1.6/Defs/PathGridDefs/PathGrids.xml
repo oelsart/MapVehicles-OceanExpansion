@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <PathGridDef>
+    <defName>MVO_Aquatic</defName>
+    <fencePassable>false</fencePassable>
+    <flying>false</flying>
+    <workerType>MapVehiclesOcean.PathGrid_Aquatic</workerType>
+  </PathGridDef>
+  
+</Defs>
