@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<Defs>
+
+    <RecipeDef>
+        <defName>MVO_PrepSharkMeat</defName>
+        <label>prep shark meat</label>
+        <description>TODO</description>
+        <jobString>Prepping shark meat.</jobString>
+        <workAmount>400</workAmount>
+        <workSpeedStat>CookSpeed</workSpeedStat>
+        <requiredGiverWorkType>Cooking</requiredGiverWorkType>
+        <effectWorking>ButcherFlesh</effectWorking>
+        <soundWorking>Recipe_ButcherCorpseFlesh</soundWorking>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Meat_MVO_Shark</li>
+                    </thingDefs>
+                </filter>
+                <count>25</count>
+            </li>
+        </ingredients>
+        <products>
+            <Meat_MVO_Shark_Prepped>25</Meat_MVO_Shark_Prepped>
+        </products>
+        <workSkill>Cooking</workSkill>
+        <researchPrerequisite>MVO_PrepMeat</researchPrerequisite>
+        <displayPriority>1600</displayPriority>
+        <recipeUsers>
+            <li>FueledStove</li>
+            <li>ElectricStove</li>
+        </recipeUsers>
+    </RecipeDef>
+
+    <RecipeDef>
+        <defName>MVO_PrepSharkMeatBulk</defName>
+        <label>prep shark meat x4</label>
+        <description>TODO</description>
+        <jobString>Prepping shark meat.</jobString>
+        <workAmount>1600</workAmount>
+        <workSpeedStat>CookSpeed</workSpeedStat>
+        <requiredGiverWorkType>Cooking</requiredGiverWorkType>
+        <effectWorking>ButcherFlesh</effectWorking>
+        <soundWorking>Recipe_ButcherCorpseFlesh</soundWorking>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Meat_MVO_Shark</li>
+                    </thingDefs>
+                </filter>
+                <count>100</count>
+            </li>
+        </ingredients>
+        <products>
+            <Meat_MVO_Shark_Prepped>100</Meat_MVO_Shark_Prepped>
+        </products>
+        <workSkill>Cooking</workSkill>
+        <researchPrerequisite>MVO_PrepMeat</researchPrerequisite>
+        <displayPriority>1599</displayPriority>
+        <recipeUsers>
+            <li>FueledStove</li>
+            <li>ElectricStove</li>
+        </recipeUsers>
+    </RecipeDef>
+
+</Defs>

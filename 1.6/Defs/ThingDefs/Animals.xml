@@ -50,6 +50,8 @@
 <!--            </li>-->
 <!--        </comps>-->
         <race>
+            <fleshType>MVO_SeaCreature</fleshType>
+            <meatColor>(255,255,180)</meatColor>
             <body>MVO_Shark</body>
             <waterSeeker>true</waterSeeker>
             <waterCellCost>1</waterCellCost>
@@ -94,30 +96,6 @@
         <modExtensions>
             <li Class="MapVehiclesOcean.AquaticCreature" />
         </modExtensions>
-    </ThingDef>
-
-    <ThingDef ParentName="LeatherBase">
-        <defName>MVO_Leather_Shark</defName>
-        <label>sharkskin</label>
-        <description>TODO</description>
-        <possessionCount>20</possessionCount>
-        <graphicData>
-            <color>(119,129,159)</color>
-        </graphicData>
-        <statBases>
-            <MarketValue>3.1</MarketValue>
-            <StuffPower_Armor_Sharp>0.88</StuffPower_Armor_Sharp>
-            <StuffPower_Armor_Blunt>0.35</StuffPower_Armor_Blunt>
-            <StuffPower_Insulation_Cold>4</StuffPower_Insulation_Cold>
-            <StuffPower_Insulation_Heat>10</StuffPower_Insulation_Heat>
-        </statBases>
-        <stuffProps>
-            <color>(119,129,159)</color>
-            <commonality>0.075</commonality>
-            <statFactors>
-                <Beauty>1.7</Beauty>
-            </statFactors>
-        </stuffProps>
     </ThingDef>
 
     <PawnKindDef ParentName="AnimalKindBase">

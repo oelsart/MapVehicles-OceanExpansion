@@ -6,10 +6,10 @@
         <label>floating raft piece</label>
         <description>Learn to increase the buoyancy of rafts.</description>
         <tab>MVO_Ocean</tab>
-        <baseCost>400</baseCost>
+        <baseCost>600</baseCost>
         <techLevel>Industrial</techLevel>
-        <researchViewX>0.50</researchViewX>
-        <researchViewY>1.00</researchViewY>
+        <researchViewX>1.00</researchViewX>
+        <researchViewY>0.50</researchViewY>
         <prerequisites>
             <li>MVO_ExpandableRaft</li>
             <li>BiofuelRefining</li>
@@ -28,10 +28,10 @@
         <label>rig I</label>
         <description>TODO</description>
         <tab>MVO_Ocean</tab>
-        <baseCost>650</baseCost>
+        <baseCost>550</baseCost>
         <techLevel>Medieval</techLevel>
-        <researchViewX>0.50</researchViewX>
-        <researchViewY>2.00</researchViewY>
+        <researchViewX>1.00</researchViewX>
+        <researchViewY>1.00</researchViewY>
         <techprintCount>1</techprintCount>
         <techprintCommonality>0.3</techprintCommonality>
         <techprintMarketValue>400</techprintMarketValue>
@@ -57,10 +57,10 @@
         <label>rig II</label>
         <description>TODO</description>
         <tab>MVO_Ocean</tab>
-        <baseCost>250</baseCost>
+        <baseCost>650</baseCost>
         <techLevel>Medieval</techLevel>
-        <researchViewX>0.50</researchViewX>
-        <researchViewY>3.00</researchViewY>
+        <researchViewX>2.00</researchViewX>
+        <researchViewY>1.00</researchViewY>
         <techprintCount>1</techprintCount>
         <techprintCommonality>0.6</techprintCommonality>
         <techprintMarketValue>800</techprintMarketValue>
@@ -70,7 +70,7 @@
             <li>Outlander</li>
         </heldByFactionCategoryTags>
         <prerequisites>
-            <li>MVO_ExpandableRaft</li>
+            <li>MVO_RigI</li>
         </prerequisites>
         <generalRules>
             <rulesStrings>

@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<Defs>
+
+    <ResearchProjectDef>
+        <defName>MVO_PrepMeat</defName>
+        <label>meat prepping</label>
+        <description>Learn how to prep meat that's too smelly to eat.</description>
+        <tab>MVO_Ocean</tab>
+        <baseCost>400</baseCost>
+        <techLevel>Medieval</techLevel>
+        <researchViewX>0.00</researchViewX>
+        <researchViewY>5.00</researchViewY>
+        <generalRules>
+            <rulesStrings>
+                <li>subject->meat prepping</li>
+                <li>subject_story->TODO</li>
+                <li>subject_gerund->TODO</li>
+            </rulesStrings>
+        </generalRules>
+    </ResearchProjectDef>
+
+    <ResearchProjectDef>
+        <defName>MVO_SeaFatsRendering</defName>
+        <label>sea fats rendering</label>
+        <description>Learning how to produce fuel from marine animal meat.</description>
+        <tab>MVO_Ocean</tab>
+        <baseCost>700</baseCost>
+        <techLevel>Medieval</techLevel>
+        <researchViewX>0.00</researchViewX>
+        <researchViewY>6.00</researchViewY>
+        <prerequisites>
+            <li>BiofuelRefining</li>
+        </prerequisites>
+        <generalRules>
+            <rulesStrings>
+                <li>subject->sea fats rendering</li>
+                <li>subject_story->TODO</li>
+                <li>subject_gerund->TODO</li>
+            </rulesStrings>
+        </generalRules>
+    </ResearchProjectDef>
+</Defs>
