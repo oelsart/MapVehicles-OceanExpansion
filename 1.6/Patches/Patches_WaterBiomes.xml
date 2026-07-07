@@ -1,95 +1,95 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Patch>
-	<Operation Class="PatchOperationConditional">
-		<xpath>Defs/BiomeDef[defName="Ocean"]/terrainsByFertility</xpath>
-		<nomatch Class="PatchOperationAdd">
-			<xpath>Defs/BiomeDef[defName="Ocean"]</xpath>
-			<value>
-				<terrainsByFertility>
-					<li>
-						<terrain>MVO_WaterOceanDeepPassable</terrain>
-					</li>
-				</terrainsByFertility>
-			</value>
-		</nomatch>
-	</Operation>
-	
-	<Operation Class="PatchOperationConditional">
-		<xpath>Defs/BiomeDef[defName="Ocean"]/allowedPackAnimals</xpath>
-		<nomatch Class="PatchOperationAdd">
-			<xpath>Defs/BiomeDef[defName="Ocean"]</xpath>
-			<value>
-				<allowedPackAnimals>
-					<li>MVO_PackTortoise</li>
-				</allowedPackAnimals>
-			</value>
-		</nomatch>
-	</Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/BiomeDef[defName="Ocean"]/terrainsByFertility</xpath>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>Defs/BiomeDef[defName="Ocean"]</xpath>
+      <value>
+        <terrainsByFertility>
+          <li>
+            <terrain>MVO_WaterOceanDeepPassable</terrain>
+          </li>
+        </terrainsByFertility>
+      </value>
+    </nomatch>
+  </Operation>
 
-	<Operation Class="PatchOperationConditional">
-		<xpath>Defs/BiomeDef[defName="Ocean"]/allowedPackAnimals/li[text()=Tortoise]</xpath>
-		<nomatch Class="PatchOperationAdd">
-			<xpath>Defs/BiomeDef[defName="Ocean"]/allowedPackAnimals</xpath>
-			<value>
-				<li>MVO_PackTortoise</li>
-			</value>
-		</nomatch>
-	</Operation>
-	
-	<Operation Class="PatchOperationConditional">
-		<xpath>Defs/BiomeDef[defName="Lake"]/terrainsByFertility</xpath>
-		<nomatch Class="PatchOperationAdd">
-			<xpath>Defs/BiomeDef[defName="Lake"]</xpath>
-			<value>
-				<terrainsByFertility>
-					<li>
-						<terrain>MVO_WaterDeepPassable</terrain>
-					</li>
-				</terrainsByFertility>
-			</value>
-		</nomatch>
-	</Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/BiomeDef[defName="Ocean"]/allowedPackAnimals</xpath>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>Defs/BiomeDef[defName="Ocean"]</xpath>
+      <value>
+        <allowedPackAnimals>
+          <li>MVO_PackTortoise</li>
+        </allowedPackAnimals>
+      </value>
+    </nomatch>
+  </Operation>
 
-	<Operation Class="PatchOperationConditional">
-		<xpath>Defs/BiomeDef[defName="Lake"]/allowedPackAnimals</xpath>
-		<nomatch Class="PatchOperationAdd">
-			<xpath>Defs/BiomeDef[defName="Lake"]</xpath>
-			<value>
-				<allowedPackAnimals>
-					<li>MVO_PackTortoise</li>
-				</allowedPackAnimals>
-			</value>
-		</nomatch>
-	</Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/BiomeDef[defName="Ocean"]/allowedPackAnimals/li[text()=Tortoise]</xpath>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>Defs/BiomeDef[defName="Ocean"]/allowedPackAnimals</xpath>
+      <value>
+        <li>MVO_PackTortoise</li>
+      </value>
+    </nomatch>
+  </Operation>
 
-	<Operation Class="PatchOperationConditional">
-		<xpath>Defs/BiomeDef[defName="Lake"]/allowedPackAnimals/li[text()=Tortoise]</xpath>
-		<nomatch Class="PatchOperationAdd">
-			<xpath>Defs/BiomeDef[defName="Lake"]/allowedPackAnimals</xpath>
-			<value>
-				<li>MVO_PackTortoise</li>
-			</value>
-		</nomatch>
-	</Operation>
-	
-	<Operation Class="PatchOperationConditional">
-		<xpath>Defs/BiomeDef[defName="Ocean" or defName="Lake"]/baseWeatherCommonalities</xpath>
-		<nomatch Class="PatchOperationAdd">
-			<xpath>Defs/BiomeDef[defName="Ocean" or defName="Lake"]</xpath>
-			<value>
-				<baseWeatherCommonalities> <!--TemperateForest-->
-					<Clear>18</Clear>
-					<Fog>1</Fog>
-					<Rain>2</Rain>
-					<DryThunderstorm>1</DryThunderstorm>
-					<RainyThunderstorm>1</RainyThunderstorm>
-					<FoggyRain>1</FoggyRain>
-					<SnowGentle>4</SnowGentle>
-					<SnowHard>4</SnowHard>
-					<GrayPall MayRequire="Ludeon.RimWorld.Anomaly">1</GrayPall>
-					<Overcast MayRequire="Ludeon.RimWorld.Odyssey">2</Overcast>
-				</baseWeatherCommonalities>
-			</value>
-		</nomatch>
-	</Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/BiomeDef[defName="Lake"]/terrainsByFertility</xpath>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>Defs/BiomeDef[defName="Lake"]</xpath>
+      <value>
+        <terrainsByFertility>
+          <li>
+            <terrain>MVO_WaterDeepPassable</terrain>
+          </li>
+        </terrainsByFertility>
+      </value>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/BiomeDef[defName="Lake"]/allowedPackAnimals</xpath>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>Defs/BiomeDef[defName="Lake"]</xpath>
+      <value>
+        <allowedPackAnimals>
+          <li>MVO_PackTortoise</li>
+        </allowedPackAnimals>
+      </value>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/BiomeDef[defName="Lake"]/allowedPackAnimals/li[text()=Tortoise]</xpath>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>Defs/BiomeDef[defName="Lake"]/allowedPackAnimals</xpath>
+      <value>
+        <li>MVO_PackTortoise</li>
+      </value>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/BiomeDef[defName="Ocean" or defName="Lake"]/baseWeatherCommonalities</xpath>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>Defs/BiomeDef[defName="Ocean" or defName="Lake"]</xpath>
+      <value>
+        <baseWeatherCommonalities> <!--TemperateForest-->
+          <Clear>18</Clear>
+          <Fog>1</Fog>
+          <Rain>2</Rain>
+          <DryThunderstorm>1</DryThunderstorm>
+          <RainyThunderstorm>1</RainyThunderstorm>
+          <FoggyRain>1</FoggyRain>
+          <SnowGentle>4</SnowGentle>
+          <SnowHard>4</SnowHard>
+          <GrayPall MayRequire="Ludeon.RimWorld.Anomaly">1</GrayPall>
+          <Overcast MayRequire="Ludeon.RimWorld.Odyssey">2</Overcast>
+        </baseWeatherCommonalities>
+      </value>
+    </nomatch>
+  </Operation>
 </Patch>

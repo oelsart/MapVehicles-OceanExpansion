@@ -1,47 +1,47 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
 
-    <ResearchProjectDef>
-        <defName>MVO_SailorOutfit</defName>
-        <label>sailor's outfit</label>
-        <description>TODO</description>
-        <tab>MVO_Ocean</tab>
-        <baseCost>300</baseCost>
-        <techLevel>Medieval</techLevel>
-        <researchViewX>0.00</researchViewX>
-        <researchViewY>4.00</researchViewY>
-        <prerequisites>
-            <li>ComplexClothing</li>
-        </prerequisites>
-        <generalRules>
-            <rulesStrings>
-                <li>subject->sailor's outfit</li>
-                <li>subject_story->TODO</li>
-                <li>subject_gerund->TODO</li>
-            </rulesStrings>
-        </generalRules>
-    </ResearchProjectDef>
+  <ResearchProjectDef>
+    <defName>MVO_SailorOutfit</defName>
+    <label>sailor's outfit</label>
+    <description>TODO</description>
+    <tab>MVO_Ocean</tab>
+    <baseCost>300</baseCost>
+    <techLevel>Medieval</techLevel>
+    <researchViewX>0.00</researchViewX>
+    <researchViewY>4.00</researchViewY>
+    <prerequisites>
+      <li>ComplexClothing</li>
+    </prerequisites>
+    <generalRules>
+      <rulesStrings>
+        <li>subject->sailor's outfit</li>
+        <li>subject_story->TODO</li>
+        <li>subject_gerund->TODO</li>
+      </rulesStrings>
+    </generalRules>
+  </ResearchProjectDef>
 
-    <ResearchProjectDef>
-        <defName>MVO_SailorMelee</defName>
-        <label>sailor's melee</label>
-        <description>Learn technologies useful for melee combat on ships.</description>
-        <tab>MVO_Ocean</tab>
-        <baseCost>400</baseCost>
-        <techLevel>Medieval</techLevel>
-        <researchViewX>1.00</researchViewX>
-        <researchViewY>4.00</researchViewY>
-        <prerequisites>
-            <li>Smithing</li>
-            <li>MVO_SailorOutfit</li>
-        </prerequisites>
-        <generalRules>
-            <rulesStrings>
-                <li>subject->sailor's melee</li>
-                <li>subject_story->essential for sailors</li>
-                <li>subject_gerund->crafting sailor's melee equipment</li>
-            </rulesStrings>
-        </generalRules>
-    </ResearchProjectDef>
-    
+  <ResearchProjectDef>
+    <defName>MVO_SailorMelee</defName>
+    <label>sailor's melee</label>
+    <description>Learn technologies useful for melee combat on ships.</description>
+    <tab>MVO_Ocean</tab>
+    <baseCost>400</baseCost>
+    <techLevel>Medieval</techLevel>
+    <researchViewX>1.00</researchViewX>
+    <researchViewY>4.00</researchViewY>
+    <prerequisites>
+      <li>Smithing</li>
+      <li>MVO_SailorOutfit</li>
+    </prerequisites>
+    <generalRules>
+      <rulesStrings>
+        <li>subject->sailor's melee</li>
+        <li>subject_story->essential for sailors</li>
+        <li>subject_gerund->crafting sailor's melee equipment</li>
+      </rulesStrings>
+    </generalRules>
+  </ResearchProjectDef>
+
 </Defs>

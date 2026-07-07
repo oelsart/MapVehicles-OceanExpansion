@@ -9,65 +9,64 @@ namespace MapVehiclesOcean;
 [DefOf]
 public static class MVO_DefOf
 {
-    static MVO_DefOf()
-    {
-        DefOfHelper.EnsureInitializedInCtor(typeof(MVO_DefOf));
-    }
+  static MVO_DefOf()
+  {
+    DefOfHelper.EnsureInitializedInCtor(typeof(MVO_DefOf));
+  }
 
-    public static ThingDef MVO_Volleyball;
+  public static ThingDef MVO_Volleyball;
 
-    public static ThingDef MVO_StoneCoffer;
+  public static ThingDef MVO_StoneCoffer;
 
-    public static ThingDef MVO_Stele;
+  public static ThingDef MVO_Stele;
 
-    public static ThingDef MVO_Filth_TallyMarks;
-    
-    public static ThingCategoryDef MVO_Techprints;
+  public static ThingDef MVO_Filth_TallyMarks;
 
-    public static SoundDef MVO_WaterSplash;
-    
-    public static SoundDef MVO_CannonballImpact;
+  public static ThingCategoryDef MVO_Techprints;
 
-    public static FleckDef MVO_ShockwaveSmall;
+  public static SoundDef MVO_WaterSplash;
 
-    public static FleckDef GroundWaterSplash;
+  public static SoundDef MVO_CannonballImpact;
 
-    public static JobDef MVO_JobLookout;
+  public static FleckDef MVO_ShockwaveSmall;
 
-    public static JobDef MVO_GotoShipCombat;
+  public static FleckDef GroundWaterSplash;
 
-    public static QuestScriptDef MVO_DesertedIsland;
-    
-    public static QuestScriptDef MVO_TheIsland;
+  public static JobDef MVO_JobLookout;
 
-    public static TerrainDef MVO_WaterDeepPassable;
-    
-    public static TerrainDef MVO_WaterOceanDeepPassable;
+  public static JobDef MVO_GotoShipCombat;
 
-    public static TerrainDef MVO_WaterDeepVirtual;
-    
-    public static TerrainDef MVO_WaterOceanDeepVirtual;
-    
-    public static TerrainDef MVO_NoWaterVirtual;
+  public static QuestScriptDef MVO_DesertedIsland;
 
-    public static TerrainDef MVO_FloatingStructure;
+  public static QuestScriptDef MVO_TheIsland;
 
-    public static TerrainDef MVO_FloatingStructureBridge;
+  public static TerrainDef MVO_WaterDeepPassable;
 
-    public static DutyDef MVO_RangedBoatAggressive;
+  public static TerrainDef MVO_WaterOceanDeepPassable;
 
-    public static DutyDef MVO_WanderAnywhere;
+  public static TerrainDef MVO_WaterDeepVirtual;
 
-    public static PawnGroupKindDef MVO_ShipCombat;
+  public static TerrainDef MVO_WaterOceanDeepVirtual;
 
-    public static WorldObjectDef MVO_AmbushSea;
+  public static TerrainDef MVO_NoWaterVirtual;
 
-    public static StructureLayoutDef MVO_MaritimeBase;
-    
-    [MayRequireOdyssey]
-    public static LandmarkDef MVO_OceanIsland;
+  public static TerrainDef MVO_FloatingStructure;
 
-    public static FactionDef MVO_Maritime;
+  public static TerrainDef MVO_FloatingStructureBridge;
 
-    public static PathGridDef MVO_Aquatic;
+  public static DutyDef MVO_RangedBoatAggressive;
+
+  public static DutyDef MVO_WanderAnywhere;
+
+  public static PawnGroupKindDef MVO_ShipCombat;
+
+  public static WorldObjectDef MVO_AmbushSea;
+
+  public static StructureLayoutDef MVO_MaritimeBase;
+
+  [MayRequireOdyssey] public static LandmarkDef MVO_OceanIsland;
+
+  public static FactionDef MVO_Maritime;
+
+  public static PathGridDef MVO_Aquatic;
 }

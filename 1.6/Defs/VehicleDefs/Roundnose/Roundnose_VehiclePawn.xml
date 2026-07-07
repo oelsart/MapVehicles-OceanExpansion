@@ -1,110 +1,110 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 
 <Defs>
-	<Vehicles.VehicleDef ParentName="BaseSeaVehiclePawnWithMap">
-		<defName>MVO_Roundnose</defName>
-		<label>roundnose</label>
-		<description>TODO</description>
+  <Vehicles.VehicleDef ParentName="BaseSeaVehiclePawnWithMap">
+    <defName>MVO_Roundnose</defName>
+    <label>roundnose</label>
+    <description>TODO</description>
 
-		<graphicData>
-			<texPath>MapVehiclesOcean/Things/Roundnose/Roundnose</texPath>
-			<graphicClass>Vehicles.Graphic_Vehicle</graphicClass>
-			<shaderType>CutoutComplexPattern</shaderType>
-			<pattern>VMF_RGBMask</pattern>
-			<drawSize>(8,16)</drawSize>
-			<color>(125,61,15)</color>
-			<colorTwo>(125,125,125)</colorTwo>
-			<colorThree>(136,156,159)</colorThree>
-		</graphicData>
+    <graphicData>
+      <texPath>MapVehiclesOcean/Things/Roundnose/Roundnose</texPath>
+      <graphicClass>Vehicles.Graphic_Vehicle</graphicClass>
+      <shaderType>CutoutComplexPattern</shaderType>
+      <pattern>VMF_RGBMask</pattern>
+      <drawSize>(8,16)</drawSize>
+      <color>(125,61,15)</color>
+      <colorTwo>(125,125,125)</colorTwo>
+      <colorThree>(136,156,159)</colorThree>
+    </graphicData>
 
-		<fillPercent>0.42</fillPercent>
+    <fillPercent>0.42</fillPercent>
 
-		<buildDef>MVO_Roundnose_Blueprint</buildDef>
+    <buildDef>MVO_Roundnose_Blueprint</buildDef>
 
-		<size>(8,16)</size>
+    <size>(8,16)</size>
 
-		<vehicleCategory>Combat</vehicleCategory>
-		<techLevel>Medieval</techLevel>
-		<vehicleType>Sea</vehicleType>
+    <vehicleCategory>Combat</vehicleCategory>
+    <techLevel>Medieval</techLevel>
+    <vehicleType>Sea</vehicleType>
 
-		<statBases>
-			<ArmorRating_Blunt>0.5</ArmorRating_Blunt>
-			<ArmorRating_Sharp>0.3</ArmorRating_Sharp>
-			<ArmorRating_Heat>0.4</ArmorRating_Heat>
-			<Flammability>1.0</Flammability>
-			<MarketValue>5500</MarketValue>
-		</statBases>
+    <statBases>
+      <ArmorRating_Blunt>0.5</ArmorRating_Blunt>
+      <ArmorRating_Sharp>0.3</ArmorRating_Sharp>
+      <ArmorRating_Heat>0.4</ArmorRating_Heat>
+      <Flammability>1.0</Flammability>
+      <MarketValue>5500</MarketValue>
+    </statBases>
 
-		<vehicleStats>
-			<Mass>1200</Mass>
-			<MoveSpeed>0.11</MoveSpeed>
-			<CargoCapacity>500</CargoCapacity>
-			<RepairRate>1.75</RepairRate>
-			<MaximumPayload>8000</MaximumPayload>
-		</vehicleStats>
+    <vehicleStats>
+      <Mass>1200</Mass>
+      <MoveSpeed>0.11</MoveSpeed>
+      <CargoCapacity>500</CargoCapacity>
+      <RepairRate>1.75</RepairRate>
+      <MaximumPayload>8000</MaximumPayload>
+    </vehicleStats>
 
-		<combatPower>250</combatPower>
+    <combatPower>250</combatPower>
 
-		<race>
-			<baseBodySize>16</baseBodySize>
-			<fleshType>WoodenVehicle</fleshType>
-		</race>
-		
-		<enabled>Everyone</enabled>
-		<properties>
-			<manhunterTargetsVehicle>true</manhunterTargetsVehicle>
-			<fishing>true</fishing>
-			<winterSpeedMultiplier>1</winterSpeedMultiplier>
-			<riverCost>1</riverCost>
+    <race>
+      <baseBodySize>16</baseBodySize>
+      <fleshType>WoodenVehicle</fleshType>
+    </race>
 
-			<track Class = "Vehicles.VehicleTrack_Wake">
-				<speed>1</speed>
-			</track>
-		</properties>
+    <enabled>Everyone</enabled>
+    <properties>
+      <manhunterTargetsVehicle>true</manhunterTargetsVehicle>
+      <fishing>true</fishing>
+      <winterSpeedMultiplier>1</winterSpeedMultiplier>
+      <riverCost>1</riverCost>
 
-		<components>
-			<li>
-				<key>Body</key>
-				<label>Body</label>
-				<health>3800</health>
-				<depth>External</depth>
-				<hitbox>
-					<side>Body</side>
-				</hitbox>
-			</li>
-		</components>
+      <track Class="Vehicles.VehicleTrack_Wake">
+        <speed>1</speed>
+      </track>
+    </properties>
 
-		<comps>
-			<li Class="VehicleMapFramework.CompProperties_RelatedBuildCommands"/>
-			<li Class="VehicleMapFramework.CompProperties_DelayedKill">
-				<message>VMF_BeginToSink</message>
-				<effecterDef>MVO_SinkSplash</effecterDef>
-				<moveVector>(0,0,-0.1)</moveVector>
-			</li>
-			<li Class="VehicleMapFramework.CompProperties_NpcVehicleMap">
-				<mapParams>
-				</mapParams>
-			</li>
-			
-		</comps>
+    <components>
+      <li>
+        <key>Body</key>
+        <label>Body</label>
+        <health>3800</health>
+        <depth>External</depth>
+        <hitbox>
+          <side>Body</side>
+        </hitbox>
+      </li>
+    </components>
 
-		<modExtensions>
-			<li Class="VehicleMapFramework.VehicleMapProps">
-				<size>(7,14)</size>
-				<offsetNorth>(0,0,0.125)</offsetNorth>
-				<offsetSouth>(0,0,0.435)</offsetSouth>
-				<offsetEast>(-0.437,0,0.223)</offsetEast>
-				<edgeSpace>
-					<space>0.2</space>
-				</edgeSpace>
-				<emptyStructureCellRects>
-					<li>(0,10,0,13)</li>
-					<li>(1,12,1,13)</li>
-					<li>(2,13,4,13)</li>
-					<li>(5,12,5,13)</li>
-					<li>(6,10,6,13)</li>
-				</emptyStructureCellRects>
-			</li>
-		</modExtensions>
-	</Vehicles.VehicleDef>
+    <comps>
+      <li Class="VehicleMapFramework.CompProperties_RelatedBuildCommands"/>
+      <li Class="VehicleMapFramework.CompProperties_DelayedKill">
+        <message>VMF_BeginToSink</message>
+        <effecterDef>MVO_SinkSplash</effecterDef>
+        <moveVector>(0,0,-0.1)</moveVector>
+      </li>
+      <li Class="VehicleMapFramework.CompProperties_NpcVehicleMap">
+        <mapParams>
+        </mapParams>
+      </li>
+
+    </comps>
+
+    <modExtensions>
+      <li Class="VehicleMapFramework.VehicleMapProps">
+        <size>(7,14)</size>
+        <offsetNorth>(0,0,0.125)</offsetNorth>
+        <offsetSouth>(0,0,0.435)</offsetSouth>
+        <offsetEast>(-0.437,0,0.223)</offsetEast>
+        <edgeSpace>
+          <space>0.2</space>
+        </edgeSpace>
+        <emptyStructureCellRects>
+          <li>(0,10,0,13)</li>
+          <li>(1,12,1,13)</li>
+          <li>(2,13,4,13)</li>
+          <li>(5,12,5,13)</li>
+          <li>(6,10,6,13)</li>
+        </emptyStructureCellRects>
+      </li>
+    </modExtensions>
+  </Vehicles.VehicleDef>
 </Defs>

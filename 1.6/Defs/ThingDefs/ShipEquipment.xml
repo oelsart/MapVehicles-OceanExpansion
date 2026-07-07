@@ -1,986 +1,986 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-	<ThingDef Name="MVO_ShipEquipmentBase" ParentName="BuildingBase" Abstract="True">
-		<tradeability>None</tradeability>
-		<category>Building</category>
-		<thingClass>Building</thingClass>
-		<researchPrerequisites>
-			<li>MVO_ExpandableRaft</li>
-		</researchPrerequisites>
-		<designationCategory>VMF_VehicleMap</designationCategory>
-	</ThingDef>
-	
-	<DesignatorDropdownGroupDef>
-		<defName>MVO_RaftPieceGroup</defName>
-		<iconSource>Placed</iconSource>
-	</DesignatorDropdownGroupDef>
+  <ThingDef Name="MVO_ShipEquipmentBase" ParentName="BuildingBase" Abstract="True">
+    <tradeability>None</tradeability>
+    <category>Building</category>
+    <thingClass>Building</thingClass>
+    <researchPrerequisites>
+      <li>MVO_ExpandableRaft</li>
+    </researchPrerequisites>
+    <designationCategory>VMF_VehicleMap</designationCategory>
+  </ThingDef>
 
-	<ThingDef Name="MVO_RaftPieceBase" ParentName="MVO_ShipEquipmentBase" Abstract="True">
-		<thingClass>VehicleMapFramework.VehicleStructure</thingClass>
-		<altitudeLayer>BelowTerrain</altitudeLayer>
-		<designatorDropdown>MVO_RaftPieceGroup</designatorDropdown>
-		<useBlueprintGraphicAsGhost>true</useBlueprintGraphicAsGhost>
-		<useHitPoints>false</useHitPoints>
-		<destroyable>false</destroyable>
-		<selectable>false</selectable>
-		<noRightClickDraftAttack>true</noRightClickDraftAttack>
-		<drawStyleCategory>Floors</drawStyleCategory>
-		<drawGUIOverlay>true</drawGUIOverlay>
-		<drawGUIOverlayQuality>false</drawGUIOverlayQuality>
-		<building>
-			<isEdifice>false</isEdifice>
-			<deconstructible>false</deconstructible>
-		</building>
-		<terrainAffordanceNeeded>VMF_ImpassableFloor</terrainAffordanceNeeded>
-		<placeWorkers>
-			<li>VehicleMapFramework.PlaceWorker_MapExpander</li>
-			<li>VehicleMapFramework.PlaceWorker_VehicleRelatedBuildings</li>
-		</placeWorkers>
-		<comps>
-			<li Class="VehicleMapFramework.CompProperties_MapExpander"/>
-		</comps>
-	</ThingDef>
-	
-	<ThingDef ParentName="MVO_RaftPieceBase">
-		<defName>MVO_RaftPiece</defName>
-		<label>raft piece</label>
-		<description>TODO</description>
-		<graphicData>
-			<texPath>MapVehiclesOcean/Things/RaftPiece/RaftPiece</texPath>
-			<graphicClass>Graphic_Multi</graphicClass>
-			<shaderType>Cutout</shaderType>
-			<drawSize>2</drawSize>
-		</graphicData>
-		<uiIconPath>MapVehiclesOcean/Things/RaftPiece/Blueprint_RaftPiece_east</uiIconPath>
-		<costList>
-			<WoodLog>45</WoodLog>
-		</costList>
-		<building>
-			<blueprintGraphicData>
-				<graphicClass>Graphic_Multi</graphicClass>
-				<texPath>MapVehiclesOcean/Things/RaftPiece/Blueprint_RaftPiece</texPath>
-				<shaderType>EdgeDetect</shaderType>
-				<drawSize>2</drawSize>
-			</blueprintGraphicData>
-		</building>
-		<comps>
-			<li Class="VehicleMapFramework.CompProperties_ExtraPrint">
-				<graphics>
-					<li>
-						<graphicClass>Graphic_Multi</graphicClass>
-						<texPath>MapVehiclesOcean/Things/RaftPiece/RaftPieceBG</texPath>
-						<shaderType>Cutout</shaderType>
-						<renderQueue>2899</renderQueue>
-						<drawSize>2</drawSize>
-						<drawOffset>(0,-4,0)</drawOffset>
-					</li>
-				</graphics>
-			</li>
-			<li Class="VehicleMapFramework.CompProperties_BuildableUpgrades">
-				<upgrades>
-					<li Class = "Vehicles.StatUpgrade">
-						<vehicleStats>
-							<li>
-								<def>MaximumPayload</def>
-								<value>10</value>
-							</li>
-						</vehicleStats>
-					</li>
-					<li Class = "VehicleMapFramework.VehicleUpgradeBuildable">
-						<health>
-							<li>
-								<key>Body</key>
-								<value>10</value>
-							</li>
-						</health>
-					</li>
-				</upgrades>
-			</li>
-		</comps>
-	</ThingDef>
-	
-	<ThingDef ParentName="MVO_RaftPieceBase">
-		<defName>MVO_RaftPieceFloat</defName>
-		<label>raft piece (float)</label>
-		<description>TODO</description>
-		<graphicData>
-			<texPath>MapVehiclesOcean/Things/RaftPiece/RaftPieceFloat</texPath>
-			<graphicClass>Graphic_Multi</graphicClass>
-			<shaderType>Cutout</shaderType>
-			<drawSize>2</drawSize>
-		</graphicData>
-		<uiIconPath>MapVehiclesOcean/Things/RaftPiece/Blueprint_RaftPieceFloat_east</uiIconPath>
-		<costList>
-			<WoodLog>45</WoodLog>
-			<Chemfuel>20</Chemfuel>
-		</costList>
-		<building>
-			<blueprintGraphicData>
-				<graphicClass>Graphic_Multi</graphicClass>
-				<texPath>MapVehiclesOcean/Things/RaftPiece/Blueprint_RaftPieceFloat</texPath>
-				<shaderType>EdgeDetect</shaderType>
-				<drawSize>2</drawSize>
-			</blueprintGraphicData>
-		</building>
-		<researchPrerequisites>
-			<li>MVO_ExpandableRaft</li>
-		</researchPrerequisites>
-		<comps>
-			<li Class="VehicleMapFramework.CompProperties_ExtraPrint">
-				<graphics>
-					<li>
-						<graphicClass>Graphic_Multi</graphicClass>
-						<texPath>MapVehiclesOcean/Things/RaftPiece/RaftPieceFloatBG</texPath>
-						<shaderType>Cutout</shaderType>
-						<renderQueue>2899</renderQueue>
-						<drawSize>2</drawSize>
-						<drawOffset>(0,-4,0)</drawOffset>
-					</li>
-				</graphics>
-			</li>
-			<li Class="VehicleMapFramework.CompProperties_BuildableUpgrades">
-				<upgrades>
-					<li Class = "Vehicles.StatUpgrade">
-						<vehicleStats>
-							<li>
-								<def>MaximumPayload</def>
-								<value>150</value>
-							</li>
-						</vehicleStats>
-					</li>
-					<li Class = "VehicleMapFramework.VehicleUpgradeBuildable">
-						<health>
-							<li>
-								<key>Body</key>
-								<value>10</value>
-							</li>
-						</health>
-					</li>
-				</upgrades>
-			</li>
-		</comps>
-	</ThingDef>
-	
-	<DesignatorDropdownGroupDef>
-		<defName>MVO_RigGroup</defName>
-		<iconSource>Placed</iconSource>
-	</DesignatorDropdownGroupDef>
-		
-	<ThingDef Name="MVO_RigBase" ParentName="MVO_ShipEquipmentBase" Abstract="True">
-		<passability>Impassable</passability>
-		<fillPercent>1</fillPercent>
-		<drawerType>MapMeshAndRealTime</drawerType>
-		<graphicData>
-			<texPath>MapVehiclesOcean/Things/Rig/MastRoot</texPath>
-			<graphicClass>Graphic_Single</graphicClass>
-			<shaderType>CutoutComplex</shaderType>
-			<drawRotated>false</drawRotated>
-		</graphicData>
-		<rotatable>false</rotatable>
-		<designatorDropdown>MVO_RigGroup</designatorDropdown>
-		<statBases>
-			<Beauty>2</Beauty>
-		</statBases>
-		<stuffCategories>
-			<li>Fabric</li>
-			<li>Leathery</li>
-		</stuffCategories>
-		<building>
-			<supportsWallAttachments>true</supportsWallAttachments>
-			<relatedBuildCommands>
-				<li>MVO_CrowsNest</li>
-			</relatedBuildCommands>
-		</building>
-		<useBlueprintGraphicAsGhost>true</useBlueprintGraphicAsGhost>
-		<placeWorkers>
-			<li>VehicleMapFramework.PlaceWorker_ForceOnVehicle</li>
-			<li>VehicleMapFramework.PlaceWorker_VehicleRelatedBuildings</li>
-			<li>PlaceWorker_NotUnderRoof</li>
-		</placeWorkers>	
-	</ThingDef>
-	
-	<ThingDef ParentName="MVO_RigBase">
-		<defName>MVO_RigOneTiered</defName>
-		<label>rig I</label>
-		<description>TODO</description>
-		<statBases>
-			<MaxHitPoints>150</MaxHitPoints>
-			<Mass>120</Mass>
-		</statBases>
-		<uiIconPathsStuff>
-			<li>
-				<appearance>Fabric</appearance>
-				<iconPath>MapVehiclesOcean/Things/Rig/Rig1/Fabric_Rig1_Icon</iconPath>
-			</li>
-			<li>
-				<appearance>Leathery</appearance>
-				<iconPath>MapVehiclesOcean/Things/Rig/Rig1/Leathery_Rig1_Icon</iconPath>
-			</li>
-		</uiIconPathsStuff>
-		<costList>
-			<WoodLog>120</WoodLog>
-			<Steel>75</Steel>
-		</costList>
-		<costStuffCount>240</costStuffCount>
-		<building>
-			<blueprintGraphicData>
-				<graphicClass>Graphic_Multi</graphicClass>
-				<texPath>MapVehiclesOcean/Things/Rig/Rig1/Fabric_Rig1</texPath>
-				<shaderType>EdgeDetect</shaderType>
-				<drawSize>(8,4)</drawSize>
-				<drawOffset>(0,0,1.5)</drawOffset>
-			</blueprintGraphicData>
-		</building>
-		<comps>
-			<li Class="CompProperties_DrawAdditionalGraphics">
-				<compClass>VehicleMapFramework.CompDrawAdditionalGraphicsOpacity</compClass>
-				<graphics>
-					<li>
-						<graphicClass>VehicleMapFramework.Graphic_AppearanceMulti</graphicClass>
-						<texPath>MapVehiclesOcean/Things/Rig/Rig1/Rig1</texPath>
-						<shaderType>VMF_CutoutComplexRGBOpacity</shaderType>
-						<drawSize>(8,4)</drawSize>
-						<drawOffset>(0,0.1,1.5)</drawOffset>
-						<shadowData>
-							<volume>(0.75,1,0.75)</volume>
-							<offset>(0,0,-1.8)</offset>
-						</shadowData>
-					</li>
-				</graphics>
-			</li>
-			<li Class="VehicleMapFramework.CompProperties_BuildableUpgrades">
-				<upgrades>
-					<li Class = "Vehicles.StatUpgrade">
-						<vehicleStats>
-							<li>
-								<def>MoveSpeed</def>
-								<value>1</value>
-							</li>
-						</vehicleStats>
-					</li>
-				</upgrades>
-			</li>
-		</comps>
-	</ThingDef>
-	
-	<ThingDef ParentName="MVO_RigBase">
-		<defName>MVO_RigTwoTiered</defName>
-		<label>rig II</label>
-		<description>TODO</description>
-		<statBases>
-			<MaxHitPoints>300</MaxHitPoints>
-			<Mass>220</Mass>
-		</statBases>
-		<uiIconPathsStuff>
-			<li>
-				<appearance>Fabric</appearance>
-				<iconPath>MapVehiclesOcean/Things/Rig/Rig2/Fabric_Rig2_Icon</iconPath>
-			</li>
-			<li>
-				<appearance>Leathery</appearance>
-				<iconPath>MapVehiclesOcean/Things/Rig/Rig2/Leathery_Rig2_Icon</iconPath>
-			</li>
-		</uiIconPathsStuff>
-		<costList>
-			<WoodLog>230</WoodLog>
-			<Steel>140</Steel>
-		</costList>
-		<costStuffCount>460</costStuffCount>
-		<building>
-			<blueprintGraphicData>
-				<graphicClass>Graphic_Multi</graphicClass>
-				<texPath>MapVehiclesOcean/Things/Rig/Rig2/Fabric_Rig2</texPath>
-				<shaderType>EdgeDetect</shaderType>
-				<drawSize>(16,8)</drawSize>
-				<drawOffset>(0,0,3.5)</drawOffset>
-			</blueprintGraphicData>
-		</building>
-		<comps>
-			<li Class="CompProperties_DrawAdditionalGraphics">
-				<compClass>VehicleMapFramework.CompDrawAdditionalGraphicsOpacity</compClass>
-				<graphics>
-					<li>
-						<graphicClass>VehicleMapFramework.Graphic_AppearanceMulti</graphicClass>
-						<texPath>MapVehiclesOcean/Things/Rig/Rig2/Rig2</texPath>
-						<shaderType>VMF_CutoutComplexRGBOpacity</shaderType>
-						<drawSize>(16,8)</drawSize>
-						<drawOffset>(0,0.1,3.5)</drawOffset>
-						<shadowData>
-							<volume>(0.75,2,0.75)</volume>
-							<offset>(0,0,-3.8)</offset>
-						</shadowData>
-					</li>
-				</graphics>
-			</li>
-			<li Class="VehicleMapFramework.CompProperties_BuildableUpgrades">
-				<upgrades>
-					<li Class = "Vehicles.StatUpgrade">
-						<vehicleStats>
-							<li>
-								<def>MoveSpeed</def>
-								<value>2</value>
-							</li>
-						</vehicleStats>
-					</li>
-				</upgrades>
-			</li>
-		</comps>
-	</ThingDef>
-	
-	<ThingDef ParentName="MVO_RigBase">
-		<defName>MVO_RigThreeTiered</defName>
-		<label>rig III</label>
-		<description>TODO</description>
-		<statBases>
-			<MaxHitPoints>450</MaxHitPoints>
-			<Mass>330</Mass>
-		</statBases>
-		<uiIconPathsStuff>
-			<li>
-				<appearance>Fabric</appearance>
-				<iconPath>MapVehiclesOcean/Things/Rig/Rig3/Fabric_Rig3_Icon</iconPath>
-			</li>
-			<li>
-				<appearance>Leathery</appearance>
-				<iconPath>MapVehiclesOcean/Things/Rig/Rig3/Leathery_Rig3_Icon</iconPath>
-			</li>
-		</uiIconPathsStuff>
-		<costList>
-			<WoodLog>340</WoodLog>
-			<Steel>200</Steel>
-		</costList>
-		<costStuffCount>690</costStuffCount>
-		<building>
-			<blueprintGraphicData>
-				<graphicClass>Graphic_Multi</graphicClass>
-				<texPath>MapVehiclesOcean/Things/Rig/Rig3/Fabric_Rig3</texPath>
-				<shaderType>EdgeDetect</shaderType>
-				<drawSize>(16,8)</drawSize>
-				<drawOffset>(0,0,3.5)</drawOffset>
-			</blueprintGraphicData>
-		</building>
-		<comps>
-			<li Class="CompProperties_DrawAdditionalGraphics">
-				<compClass>VehicleMapFramework.CompDrawAdditionalGraphicsOpacity</compClass>
-				<graphics>
-					<li>
-						<graphicClass>VehicleMapFramework.Graphic_AppearanceMulti</graphicClass>
-						<texPath>MapVehiclesOcean/Things/Rig/Rig3/Rig3</texPath>
-						<shaderType>VMF_CutoutComplexRGBOpacity</shaderType>
-						<drawSize>(16,8)</drawSize>
-						<drawOffset>(0,0.1,3.5)</drawOffset>
-						<shadowData>
-							<volume>(0.75,3,0.75)</volume>
-							<offset>(0,0,-3.8)</offset>
-						</shadowData>
-					</li>
-				</graphics>
-			</li>
-			<li Class="VehicleMapFramework.CompProperties_BuildableUpgrades">
-				<upgrades>
-					<li Class = "Vehicles.StatUpgrade">
-						<vehicleStats>
-							<li>
-								<def>MoveSpeed</def>
-								<value>3</value>
-							</li>
-						</vehicleStats>
-					</li>
-				</upgrades>
-			</li>
-		</comps>
-	</ThingDef>
+  <DesignatorDropdownGroupDef>
+    <defName>MVO_RaftPieceGroup</defName>
+    <iconSource>Placed</iconSource>
+  </DesignatorDropdownGroupDef>
 
-	<ThingDef ParentName="MVO_ShipEquipmentBase">
-		<defName>MVO_CrowsNest</defName>
-		<label>Crow's nest</label>
-		<description>TODO</description>
-		<drawerType>RealtimeOnly</drawerType>
-		<graphicData>
-			<graphicClass>Graphic_Single</graphicClass>
-			<texPath>VehicleMapFramework/ClearTex</texPath>
-		</graphicData>
-		<uiIconPath>MapVehiclesOcean/Things/CrowsNest/CrowsNestBlueprint_south</uiIconPath>
-		<rotatable>false</rotatable>
-		<statBases>
-			<MaxHitPoints>100</MaxHitPoints>
-			<WorkToBuild>6000</WorkToBuild>
-			<Beauty>3</Beauty>
-			<Mass>25</Mass>
-		</statBases>
-		<hasInteractionCell>true</hasInteractionCell>
-		<interactionCellOffset>(0,0,-1)</interactionCellOffset>
-		<useBlueprintGraphicAsGhost>true</useBlueprintGraphicAsGhost>
-		<building>
-			<isEdifice>false</isEdifice>
-			<blueprintGraphicData>
-				<graphicClass>Graphic_Multi</graphicClass>
-				<texPath>MapVehiclesOcean/Things/CrowsNest/CrowsNestBlueprint</texPath>
-				<shaderType>EdgeDetect</shaderType>
-				<color>(0.8235294,0.92156863,1,0.6)</color>
-				<drawSize>2</drawSize>
-			</blueprintGraphicData>
-		</building>
-		<comps>
-			<li Class="VehicleMapFramework.CompProperties_AdditionalGraphicsChildByParent">
-				<graphicsByParent>
-					<li>
-						<key>MVO_RigOneTiered</key>
-						<value>
-							<li>
-								<graphicClass>Graphic_Multi</graphicClass>
-								<texPath>MapVehiclesOcean/Things/CrowsNest/CrowsNest</texPath>
-								<shaderType>VMF_CutoutComplexRGBOpacity</shaderType>
-								<drawSize>2</drawSize>
-								<drawOffset>(0,0.1001,2.93)</drawOffset>
-								<drawOffsetEast>(0,0.1001,3)</drawOffsetEast>
-								<drawOffsetWest>(0,0.1001,3)</drawOffsetWest>
-							</li>
-							<li>
-								<graphicClass>Graphic_Multi</graphicClass>
-								<texPath>MapVehiclesOcean/Things/CrowsNest/CrowsNestOverlay</texPath>
-								<shaderType>VMF_CutoutComplexRGBOpacity</shaderType>
-								<drawSize>2</drawSize>
-								<drawOffset>(0,0.2,2.93)</drawOffset>
-								<drawOffsetEast>(0,0.2,3)</drawOffsetEast>
-								<drawOffsetWest>(0,0.2,3)</drawOffsetWest>
-							</li>
-						</value>
-					</li>
-					<li>
-						<key>MVO_RigTwoTiered</key>
-						<value>
-							<li>
-								<graphicClass>Graphic_Multi</graphicClass>
-								<texPath>MapVehiclesOcean/Things/CrowsNest/CrowsNest</texPath>
-								<shaderType>VMF_CutoutComplexRGBOpacity</shaderType>
-								<drawSize>1.6</drawSize>
-								<drawOffset>(0,0.1001,5.35)</drawOffset>
-								<drawOffsetEast>(0.444,0.1001,5.18)</drawOffsetEast>
-								<drawOffsetWest>(-0.444,0.1001,5.18)</drawOffsetWest>
-							</li>
-							<li>
-								<graphicClass>Graphic_Multi</graphicClass>
-								<texPath>MapVehiclesOcean/Things/CrowsNest/CrowsNestOverlay</texPath>
-								<shaderType>VMF_CutoutComplexRGBOpacity</shaderType>
-								<drawSize>1.6</drawSize>
-								<drawOffset>(0,0.2,5.35)</drawOffset>
-								<drawOffsetEast>(0.444,0.2,5.18)</drawOffsetEast>
-								<drawOffsetWest>(-0.444,0.2,5.18)</drawOffsetWest>
-							</li>
-						</value>
-					</li>
-					<li>
-						<key>MVO_RigThreeTiered</key>
-						<value>
-							<li>
-								<graphicClass>Graphic_Multi</graphicClass>
-								<texPath>MapVehiclesOcean/Things/CrowsNest/CrowsNest</texPath>
-								<shaderType>VMF_CutoutComplexRGBOpacity</shaderType>
-								<drawSize>1.4</drawSize>
-								<drawOffset>(0,0.1001,7.1)</drawOffset>
-								<drawOffsetEast>(0.825,0.1001,7.2)</drawOffsetEast>
-								<drawOffsetWest>(-0.825,0.1001,7.2)</drawOffsetWest>
-							</li>
-							<li>
-								<graphicClass>Graphic_Multi</graphicClass>
-								<texPath>MapVehiclesOcean/Things/CrowsNest/CrowsNestOverlay</texPath>
-								<shaderType>VMF_CutoutComplexRGBOpacity</shaderType>
-								<drawSize>1.4</drawSize>
-								<drawOffset>(0,0.2,7.1)</drawOffset>
-								<drawOffsetEast>(0.825,0.2,7.2)</drawOffsetEast>
-								<drawOffsetWest>(-0.825,0.2,7.2)</drawOffsetWest>
-							</li>
-						</value>
-					</li>
-				</graphicsByParent>
-			</li>
-			<li Class="MapVehiclesOcean.CompProperties_CrowsNest">
-				<scanFindMtbDays>2.5</scanFindMtbDays>
-				<scanSpeedStat>ReadingSpeed</scanSpeedStat>
-				<questWeights>
-					<MVO_Shipwreck>1</MVO_Shipwreck>
-					<MVO_MaritimeBase>0.5</MVO_MaritimeBase>
-					<MVO_Drifter>0.3</MVO_Drifter>
-				</questWeights>
-			</li>
-			<li Class="CompProperties_Forbiddable"/>
-		</comps>
-		<placeWorkers>
-			<li>VehicleMapFramework.PlaceWorker_RelatedBuildings</li>
-		</placeWorkers>
-	</ThingDef>
-	
-	<ThingDef ParentName="MVO_ShipEquipmentBase">
-		<defName>MVO_Oar</defName>
-		<label>oar</label>
-		<description>TODO</description>
-		<minifiedDef>MinifiedThing</minifiedDef>
-		<thingCategories>
-			<li>BuildingsFurniture</li>
-		</thingCategories>
-		<graphicData>
-			<graphicClass>Graphic_Multi</graphicClass>
-			<texPath>MapVehiclesOcean/Things/Oar/Oar</texPath>
-			<shaderType>Cutout</shaderType>
-			<drawSize>1.5</drawSize>
-			<drawOffsetNorth>(0,2,-0.1)</drawOffsetNorth>
-			<drawOffsetSouth>(0,0,0.3)</drawOffsetSouth>
-			<drawOffsetEast>(-0.1,0,0)</drawOffsetEast>
-			<drawOffsetWest>(0.1,0,0)</drawOffsetWest>
-		</graphicData>
-		<uiIconScale>0.666667</uiIconScale>
-		<statBases>
-			<MaxHitPoints>50</MaxHitPoints>
-			<Mass>5</Mass>
-		</statBases>
-		<fillPercent>0.1</fillPercent>
-		<costList>
-			<WoodLog>75</WoodLog>
-		</costList>
-		<comps>
-			<li Class="VehicleMapFramework.CompProperties_BuildableUpgrades">
-				<compClass>VehicleMapFramework.CompVehicleSeat</compClass>
-				<upgrades>
-					<li Class = "VehicleMapFramework.VehicleUpgradeBuildable">
-						<roles>
-							<li Class = "VehicleMapFramework.RoleUpgradeBuildable">
-								<key>Rower</key>
-								<editKey>rower</editKey>
-								<label>Rower</label>
-								<handlingTypes>Movement</handlingTypes>
-								<slots>1</slots>
-								<slotsToOperate>1</slotsToOperate>
-								<exposed>true</exposed>
-								<pawnRenderer>
-									<showBody>true</showBody>
-									<north>South</north>
-									<northEast>South</northEast>
-									<east>West</east>
-									<southEast>North</southEast>
-									<south>North</south>
-									<southWest>North</southWest>
-									<west>East</west>
-									<northWest>South</northWest>
-									<drawOffsetNorth>(0,0,-0.5)</drawOffsetNorth>
-									<drawOffsetSouth>(0,0,0)</drawOffsetSouth>
-								</pawnRenderer>
-							</li>
-						</roles>
-					</li>
-					<li Class="Vehicles.StatUpgrade">
-						<vehicleStats>
-							<li>
-								<def>MoveSpeed</def>
-								<value>0.25</value>
-							</li>
-						</vehicleStats>
-					</li>
-				</upgrades>
-			</li>
-		</comps>
-		<placeWorkers>
-			<li>VehicleMapFramework.PlaceWorker_ForceOnVehicleMapEdge</li>
-			<li>VehicleMapFramework.PlaceWorker_VehicleRelatedBuildings</li>
-		</placeWorkers>
-	</ThingDef>
-	
-	<DesignatorDropdownGroupDef>
-		<defName>MVO_GrapplingLauncherGroup</defName>
-		<iconSource>Placed</iconSource>
-	</DesignatorDropdownGroupDef>
-	
-	<ThingDef ParentName="BaseArtilleryBuilding">
-		<defName>MVO_Turret_GrapplingLauncher</defName>
-		<label>grappling launcher</label>
-		<description>TODO: A turret that sets up a zipline at the location where it pierces. Used for direct access between vehicles.</description>
-		<thingClass>VehicleMapFramework.Building_TurretGunForcedTargetOnly</thingClass>
-		<designationCategory>VMF_VehicleMap</designationCategory>
-		<designatorDropdown>MVO_GrapplingLauncherGroup</designatorDropdown>
-		<graphicData>
-			<texPath>MapVehiclesOcean/Things/GrapplingLauncher/GrapplingLauncher_Base</texPath>
-			<drawRotated>false</drawRotated>
-			<drawSize>1.05</drawSize>
-		</graphicData>
-		<size>(1,1)</size>
-		<stuffCategories Inherit="False"/>
-		<costStuffCount Inherit="False"/>
-		<costList>
-			<WoodLog>50</WoodLog>
-			<Steel>15</Steel>
-			<ComponentIndustrial>1</ComponentIndustrial>
-		</costList>
-		<hasInteractionCell>false</hasInteractionCell>
-		<inspectorTabs Inherit="False"/>
-		<building>
-			<turretGunDef>MVO_Gun_GrapplingLauncher</turretGunDef>
-			<turretBurstWarmupTime>0</turretBurstWarmupTime>
-			<turretBurstCooldownTime>0</turretBurstCooldownTime>
-			<turretTopDrawSize>1.25</turretTopDrawSize>
-			<turretTopOffset>(0,0.2)</turretTopOffset>
-			<relatedBuildCommands>
-				<li>MVO_MooringRing</li>
-			</relatedBuildCommands>
-		</building>
-		<passability>Standable</passability>
-		<statBases>
-			<MaxHitPoints>90</MaxHitPoints>
-			<Flammability>0.75</Flammability>
-			<WorkToBuild>1600</WorkToBuild>
-			<Mass>20</Mass>
-			<Beauty>-20</Beauty>
-			<ShootingAccuracyTurret>1</ShootingAccuracyTurret>
-		</statBases>
-		<fillPercent>0.2</fillPercent>
-		<comps Inherit="False">
-			<li Class="CompProperties_Forbiddable"/>
-			<li Class="CompProperties_Interactable">
-				<compClass>CompInteractableRocketswarmLauncher</compClass>
-				<activeTicks>1</activeTicks>
-				<ticksToActivate>90</ticksToActivate>
-				<jobString>activate</jobString>
-				<activateTexPath>UI/Commands/ActivateTurret</activateTexPath>
-				<targetingParameters>
-					<canTargetBuildings>false</canTargetBuildings>
-					<canTargetAnimals>false</canTargetAnimals>
-					<canTargetMechs>false</canTargetMechs>
-					<onlyTargetControlledPawns>true</onlyTargetControlledPawns>
-				</targetingParameters>
-			</li>
-			<li Class="VehicleMapFramework.CompProperties_Zipline">
-				<standbyGraphic>
-					<texPath>MapVehiclesOcean/Things/GrapplingLauncher/GrapplingLauncher_TopOverlay</texPath>
-					<graphicClass>Graphic_Single</graphicClass>
-					<drawSize>1.25</drawSize>
-				</standbyGraphic>
-			</li>
-		</comps>
-		<researchPrerequisites>
-		</researchPrerequisites>
-		<uiOrder>1063</uiOrder>
-		<uiIconPath>MapVehiclesOcean/Things/GrapplingLauncher/GrapplingLauncher_MenuIcon</uiIconPath>
-		<placeWorkers Inherit="False">
-			<li>PlaceWorker_TurretTop</li>
-		</placeWorkers>
-	</ThingDef>
+  <ThingDef Name="MVO_RaftPieceBase" ParentName="MVO_ShipEquipmentBase" Abstract="True">
+    <thingClass>VehicleMapFramework.VehicleStructure</thingClass>
+    <altitudeLayer>BelowTerrain</altitudeLayer>
+    <designatorDropdown>MVO_RaftPieceGroup</designatorDropdown>
+    <useBlueprintGraphicAsGhost>true</useBlueprintGraphicAsGhost>
+    <useHitPoints>false</useHitPoints>
+    <destroyable>false</destroyable>
+    <selectable>false</selectable>
+    <noRightClickDraftAttack>true</noRightClickDraftAttack>
+    <drawStyleCategory>Floors</drawStyleCategory>
+    <drawGUIOverlay>true</drawGUIOverlay>
+    <drawGUIOverlayQuality>false</drawGUIOverlayQuality>
+    <building>
+      <isEdifice>false</isEdifice>
+      <deconstructible>false</deconstructible>
+    </building>
+    <terrainAffordanceNeeded>VMF_ImpassableFloor</terrainAffordanceNeeded>
+    <placeWorkers>
+      <li>VehicleMapFramework.PlaceWorker_MapExpander</li>
+      <li>VehicleMapFramework.PlaceWorker_VehicleRelatedBuildings</li>
+    </placeWorkers>
+    <comps>
+      <li Class="VehicleMapFramework.CompProperties_MapExpander"/>
+    </comps>
+  </ThingDef>
 
-	<ThingDef ParentName="BaseWeaponTurret">
-		<defName>MVO_Gun_GrapplingLauncher</defName>
-		<label>grappling launcher gun</label>
-		<description>TODO: A gun made to be mounted on a zipline turret.</description>
-		<graphicData>
-			<texPath>MapVehiclesOcean/Things/GrapplingLauncher/GrapplingLauncher_Top</texPath>
-			<graphicClass>Graphic_Single</graphicClass>
-		</graphicData>
-		<statBases>
-			<Mass>5</Mass>
-			<Flammability>0</Flammability>
-		</statBases>
-		<verbs>
-			<li>
-				<verbClass>VehicleMapFramework.Verb_LaunchZipline</verbClass>
-				<defaultProjectile>MVO_Bullet_GrapplingLauncher</defaultProjectile>
-				<range>17.9</range>
-				<canGoWild>false</canGoWild>
-				<targetParams Class="VehicleMapFramework.TargetingParametersForSpecificThingDef">
-					<canTargetPawns>false</canTargetPawns>
-					<thingDef>MVO_MooringRing</thingDef>
-				</targetParams>
-				<soundCast>Shot_Autocannon</soundCast>
-				<soundCastTail>GunTail_Heavy</soundCastTail>
-			</li>
-		</verbs>
-	</ThingDef>
+  <ThingDef ParentName="MVO_RaftPieceBase">
+    <defName>MVO_RaftPiece</defName>
+    <label>raft piece</label>
+    <description>TODO</description>
+    <graphicData>
+      <texPath>MapVehiclesOcean/Things/RaftPiece/RaftPiece</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <shaderType>Cutout</shaderType>
+      <drawSize>2</drawSize>
+    </graphicData>
+    <uiIconPath>MapVehiclesOcean/Things/RaftPiece/Blueprint_RaftPiece_east</uiIconPath>
+    <costList>
+      <WoodLog>45</WoodLog>
+    </costList>
+    <building>
+      <blueprintGraphicData>
+        <graphicClass>Graphic_Multi</graphicClass>
+        <texPath>MapVehiclesOcean/Things/RaftPiece/Blueprint_RaftPiece</texPath>
+        <shaderType>EdgeDetect</shaderType>
+        <drawSize>2</drawSize>
+      </blueprintGraphicData>
+    </building>
+    <comps>
+      <li Class="VehicleMapFramework.CompProperties_ExtraPrint">
+        <graphics>
+          <li>
+            <graphicClass>Graphic_Multi</graphicClass>
+            <texPath>MapVehiclesOcean/Things/RaftPiece/RaftPieceBG</texPath>
+            <shaderType>Cutout</shaderType>
+            <renderQueue>2899</renderQueue>
+            <drawSize>2</drawSize>
+            <drawOffset>(0,-4,0)</drawOffset>
+          </li>
+        </graphics>
+      </li>
+      <li Class="VehicleMapFramework.CompProperties_BuildableUpgrades">
+        <upgrades>
+          <li Class="Vehicles.StatUpgrade">
+            <vehicleStats>
+              <li>
+                <def>MaximumPayload</def>
+                <value>10</value>
+              </li>
+            </vehicleStats>
+          </li>
+          <li Class="VehicleMapFramework.VehicleUpgradeBuildable">
+            <health>
+              <li>
+                <key>Body</key>
+                <value>10</value>
+              </li>
+            </health>
+          </li>
+        </upgrades>
+      </li>
+    </comps>
+  </ThingDef>
 
-	<ThingDef ParentName="BaseBullet">
-		<defName>MVO_Bullet_GrapplingLauncher</defName>
-		<label>grappling launcher bullet</label>
-		<thingClass>VehicleMapFramework.Bullet_ZiplineEnd</thingClass>
-		<graphicData>
-			<graphicClass>Graphic_Single</graphicClass>
-			<shaderType>Transparent</shaderType>
-			<texPath>MapVehiclesOcean/Things/GrapplingLauncher/GrapplingHook</texPath>
-			<drawSize>1.5</drawSize>
-		</graphicData>
-		<projectile>
-			<speed>20</speed>
-			<arcHeightFactor>0.2</arcHeightFactor>
-			<damageDef>Stab</damageDef>
-			<damageAmountBase>0</damageAmountBase>
-		</projectile>
-		<modExtensions>
-			<li Class="VehicleMapFramework.CustomZipline">
-				<texPath>MapVehiclesOcean/Things/GrapplingLauncher/Rope</texPath>
-				<ziplineWidth>0.09</ziplineWidth>
-				<ziplineEndOffset>0.18</ziplineEndOffset>
-				<launcherOffset>0.55</launcherOffset>
-				<ziplineEndDef>MVO_GrapplingLauncherHook</ziplineEndDef>
-				<ziplineReturnDef>MVO_Bullet_GrapplingLauncherReturn</ziplineReturnDef>
-			</li>
-		</modExtensions>
-	</ThingDef>
+  <ThingDef ParentName="MVO_RaftPieceBase">
+    <defName>MVO_RaftPieceFloat</defName>
+    <label>raft piece (float)</label>
+    <description>TODO</description>
+    <graphicData>
+      <texPath>MapVehiclesOcean/Things/RaftPiece/RaftPieceFloat</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <shaderType>Cutout</shaderType>
+      <drawSize>2</drawSize>
+    </graphicData>
+    <uiIconPath>MapVehiclesOcean/Things/RaftPiece/Blueprint_RaftPieceFloat_east</uiIconPath>
+    <costList>
+      <WoodLog>45</WoodLog>
+      <Chemfuel>20</Chemfuel>
+    </costList>
+    <building>
+      <blueprintGraphicData>
+        <graphicClass>Graphic_Multi</graphicClass>
+        <texPath>MapVehiclesOcean/Things/RaftPiece/Blueprint_RaftPieceFloat</texPath>
+        <shaderType>EdgeDetect</shaderType>
+        <drawSize>2</drawSize>
+      </blueprintGraphicData>
+    </building>
+    <researchPrerequisites>
+      <li>MVO_ExpandableRaft</li>
+    </researchPrerequisites>
+    <comps>
+      <li Class="VehicleMapFramework.CompProperties_ExtraPrint">
+        <graphics>
+          <li>
+            <graphicClass>Graphic_Multi</graphicClass>
+            <texPath>MapVehiclesOcean/Things/RaftPiece/RaftPieceFloatBG</texPath>
+            <shaderType>Cutout</shaderType>
+            <renderQueue>2899</renderQueue>
+            <drawSize>2</drawSize>
+            <drawOffset>(0,-4,0)</drawOffset>
+          </li>
+        </graphics>
+      </li>
+      <li Class="VehicleMapFramework.CompProperties_BuildableUpgrades">
+        <upgrades>
+          <li Class="Vehicles.StatUpgrade">
+            <vehicleStats>
+              <li>
+                <def>MaximumPayload</def>
+                <value>150</value>
+              </li>
+            </vehicleStats>
+          </li>
+          <li Class="VehicleMapFramework.VehicleUpgradeBuildable">
+            <health>
+              <li>
+                <key>Body</key>
+                <value>10</value>
+              </li>
+            </health>
+          </li>
+        </upgrades>
+      </li>
+    </comps>
+  </ThingDef>
 
-	<ThingDef ParentName="BaseBullet">
-		<defName>MVO_Bullet_GrapplingLauncherReturn</defName>
-		<label>grappling launcher bullet</label>
-		<thingClass>VehicleMapFramework.Bullet_ZiplineEndReturn</thingClass>
-		<graphicData>
-			<graphicClass>Graphic_Single</graphicClass>
-			<shaderType>Transparent</shaderType>
-			<texPath>MapVehiclesOcean/Things/GrapplingLauncher/GrapplingHook</texPath>
-			<drawSize>1.5</drawSize>
-		</graphicData>
-		<projectile>
-			<speed>5</speed>
-			<damageDef>Stab</damageDef>
-			<damageAmountBase>0</damageAmountBase>
-		</projectile>
-	</ThingDef>
+  <DesignatorDropdownGroupDef>
+    <defName>MVO_RigGroup</defName>
+    <iconSource>Placed</iconSource>
+  </DesignatorDropdownGroupDef>
 
-	<ThingDef ParentName="BaseBullet">
-		<defName>MVO_GrapplingLauncherHook</defName>
-		<label>grappling hook</label>
-		<thingClass>VehicleMapFramework.ZiplineEnd</thingClass>
-		<category>Building</category>
-		<drawerType>RealtimeOnly</drawerType>
-		<altitudeLayer>BuildingBelowTop</altitudeLayer>
-		<graphicData>
-			<graphicClass>Graphic_Single</graphicClass>
-			<shaderType>Cutout</shaderType>
-			<texPath>MapVehiclesOcean/Things/GrapplingLauncher/GrapplingHook</texPath>
-			<drawSize>1.5</drawSize>
-		</graphicData>
-		<building>
-			<isEdifice>false</isEdifice>
-		</building>
-		<statBases>
-			<Mass>0.1</Mass>
-		</statBases>
-		<comps>
-			<li Class="VehicleMapFramework.CompProperties_Zipline"/>
-		</comps>
-	</ThingDef>
-	
-	<ThingDef ParentName="MVO_ShipEquipmentBase">
-		<defName>MVO_MooringRing</defName>
-		<label>mooring ring</label>
-		<description>TODO</description>
-		<thingCategories>
-			<li>BuildingsFurniture</li>
-		</thingCategories>
-		<minifiedDef>MinifiedThing</minifiedDef>
-		<altitudeLayer>FloorEmplacement</altitudeLayer>
-		<designatorDropdown>MVO_GrapplingLauncherGroup</designatorDropdown>
-		<graphicData>
-			<graphicClass>Graphic_Multi</graphicClass>
-			<texPath>MapVehiclesOcean/Things/MooringRing/MooringRing</texPath>
-			<damageData>
-				<rect>(0.3,0.3,0.7,0.7)</rect>
-			</damageData>
-		</graphicData>
-		<statBases>
-			<MaxHitPoints>180</MaxHitPoints>
-			<WorkToBuild>350</WorkToBuild>
-			<Mass>0.1</Mass>
-		</statBases>
-		<costList>
-			<Steel>10</Steel>
-		</costList>
-		<building />
-	</ThingDef>
-	
-	<ThingDef ParentName="MVO_ShipEquipmentBase">
-		<defName>MVO_Helm</defName>
-		<label>helm</label>
-		<description>TODO</description>
-		<thingClass>VehicleMapFramework.Building_AttackTargetByComps</thingClass>
-		<thingCategories>
-			<li>BuildingsFurniture</li>
-		</thingCategories>
-		<minifiedDef>MinifiedThing</minifiedDef>
-		<graphicData>
-			<graphicClass>Graphic_Multi</graphicClass>
-			<texPath>MapVehiclesOcean/Things/Helm/Helm</texPath>
-			<shaderType>CutoutComplex</shaderType>
-			<color>(128,53,0)</color>
-			<colorTwo>(199,136,20)</colorTwo>
-			<drawOffsetNorth>(0,0,0.23)</drawOffsetNorth>
-			<drawOffsetEast>(0,0,0.1)</drawOffsetEast>
-			<drawOffsetWest>(0,0,0.1)</drawOffsetWest>
-			<damageData>
-				<rectN>(0,0.73,1,1.23)</rectN>
-				<rectE>(0.6,0.1,1,1.1)</rectE>
-				<rectS>(0,0,1,0.55)</rectS>
-				<rectW>(0,0.1,0.4,1.1)</rectW>
-			</damageData>
-			<shadowData>
-				<volume>(0.2,0.1,0.2)</volume>
-				<offset>(0,0,0.23)</offset>
-			</shadowData>
-		</graphicData>
-		<statBases>
-			<MaxHitPoints>180</MaxHitPoints>
-			<WorkToBuild>1000</WorkToBuild>
-			<Mass>40</Mass>
-		</statBases>
-		<fillPercent>0.35</fillPercent>
-		<costList>
-			<WoodLog>30</WoodLog>
-			<Steel>10</Steel>
-			<ComponentIndustrial>3</ComponentIndustrial>
-		</costList>
-		<comps>
-			<li Class = "VehicleMapFramework.CompProperties_BuildableUpgrades">
-				<compClass>VehicleMapFramework.CompVehicleSeat</compClass>
-				<upgrades>
-					<li Class = "VehicleMapFramework.VehicleUpgradeBuildable">
-						<roles>
-							<li Class = "VehicleMapFramework.RoleUpgradeBuildable">
-								<key>helmsman</key>
-								<editKey>helmsman</editKey>
-								<label>Helmsman</label>
-								<handlingTypes>Movement</handlingTypes>
-								<slots>1</slots>
-								<slotsToOperate>1</slotsToOperate>
-								<exposed>true</exposed>
-								<pawnRenderer>
-									<drawOffsetNorth>(0,0,0.2)</drawOffsetNorth>
-									<drawOffsetSouth>(0,0,0.35)</drawOffsetSouth>
-									<drawOffsetEast>(-0.2,0,0)</drawOffsetEast>
-									<drawOffsetWest>(0.2,0,0)</drawOffsetWest>
-									<layerNorth>1</layerNorth>
-									<layerSouth>-25</layerSouth>
-								</pawnRenderer>
-							</li>
-						</roles>
-					</li>
-				</upgrades>
-			</li>
-		</comps>
-		<placeWorkers>
-			<li>VehicleMapFramework.PlaceWorker_ForceOnVehicle</li>
-			<li>VehicleMapFramework.PlaceWorker_VehicleRelatedBuildings</li>
-		</placeWorkers>
-	</ThingDef>
-	
-	<ThingDef ParentName="MVO_ShipEquipmentBase">
-		<defName>MVO_Hatch</defName>
-		<label>hatch</label>
-		<description>TODO</description>
-		<thingClass>VehicleMapFramework.Building_Hatch</thingClass>
-		<altitudeLayer>FloorCoverings</altitudeLayer>
-		<graphicData>
-			<graphicClass>Graphic_Single</graphicClass>
-			<texPath>MapVehiclesOcean/Things/Hatch/Hatch</texPath>
-			<drawSize>(4,4)</drawSize>
-			<damageData>
-				<rect>(0.125,0.125,0.875,0.875)</rect>
-			</damageData>
-		</graphicData>
-		<size>(3,3)</size>
-		<rotatable>false</rotatable>
-		<statBases>
-			<MaxHitPoints>200</MaxHitPoints>
-			<WorkToBuild>8000</WorkToBuild>
-			<Mass>20</Mass>
-		</statBases>
-		<coversFloor>true</coversFloor>
-		<stuffCategories>
-			<li>Woody</li>
-			<li>Metallic</li>
-		</stuffCategories>
-		<costStuffCount>100</costStuffCount>
-		<surfaceType>Item</surfaceType>
-		<canOverlapZones>false</canOverlapZones>
-		<preventDroppingThingsOn>true</preventDroppingThingsOn>
-		<building>
-			<preventDeteriorationOnTop>true</preventDeteriorationOnTop>
-			<ignoreStoredThingsBeauty>true</ignoreStoredThingsBeauty>
-			<bed_canBeMedical>false</bed_canBeMedical>
-			<bed_countsForBedroomOrBarracks>false</bed_countsForBedroomOrBarracks>
-			<bed_emptyCountsForBarracks>false</bed_emptyCountsForBarracks>
-			<bed_UseSheetColor>false</bed_UseSheetColor>
-			<bed_pawnDrawOffset>10000</bed_pawnDrawOffset>
-			<storageGroupTag>Hatch</storageGroupTag>
-			<blueprintClass>Blueprint_Storage</blueprintClass>
-			<maxItemsInCell>3</maxItemsInCell>
-			<fixedStorageSettings>
-				<filter>
-					<disallowNotEverStorable>true</disallowNotEverStorable>
-					<categories>
-						<li>Root</li>
-					</categories>
-					<disallowedCategories>
-						<li>Chunks</li>
-						<li>Plants</li>
-						<li>Buildings</li>
-					</disallowedCategories>
-					<disallowedThingDefs MayRequire="Ludeon.RimWorld.Biotech">
-						<li MayRequire="Ludeon.RimWorld.Biotech">Wastepack</li>
-					</disallowedThingDefs>
-					<specialFiltersToDisallow>
-						<li>AllowLargeCorpses</li>
-					</specialFiltersToDisallow>
-				</filter>
-			</fixedStorageSettings>
-			<defaultStorageSettings>
-				<priority>Preferred</priority>
-				<filter>
-					<categories>
-						<li>Foods</li>
-						<li>Manufactured</li>
-						<li>ResourcesRaw</li>
-						<li>Items</li>
-						<li>Weapons</li>
-						<li>Apparel</li>
-						<li>BodyParts</li>
-					</categories>
-				</filter>
-			</defaultStorageSettings>
-			<paintable>true</paintable>
-		</building>
-		<inspectorTabs>
-			<li>ITab_Storage</li>
-		</inspectorTabs>
-		<comps>
-			<li Class="CompProperties_AssignableToPawn">
-				<drawAssignmentOverlay>false</drawAssignmentOverlay>
-				<compClass>CompAssignableToPawn_Bed</compClass>
-				<maxAssignedPawnsCount>3</maxAssignedPawnsCount>
-			</li>
-		</comps>
-		<placeWorkers>
-			<li>VehicleMapFramework.PlaceWorker_ForceOnVehicle</li>
-			<li>VehicleMapFramework.PlaceWorker_VehicleRelatedBuildings</li>
-		</placeWorkers>
-	</ThingDef>
-	
-	<ThingDef ParentName="MVO_ShipEquipmentBase" MayRequire="Ludeon.RimWorld.Odyssey">
-		<defName>MVO_FishingSpot</defName>
-		<label>fishing spot</label>
-		<description>TODO</description>
-		<graphicData>
-			<graphicClass>Graphic_Single</graphicClass>
-			<texPath>UI/Overlays/InteractionCell</texPath>
-			<shaderType>MetaOverlay</shaderType>
-		</graphicData>
-		<tickerType>Normal</tickerType>
-		<useHitPoints>false</useHitPoints>
-		<noRightClickDraftAttack>true</noRightClickDraftAttack>
-		<useBlueprintGraphicAsGhost>true</useBlueprintGraphicAsGhost>
-		<building>
-			<isEdifice>false</isEdifice>
-			<blueprintGraphicData>
-				<graphicClass>Graphic_Single</graphicClass>
-				<texPath>MapVehiclesOcean/Things/FishingSpot/FishingSpot</texPath>
-			</blueprintGraphicData>
-		</building>
-		<comps>
-			<li Class="MapVehiclesOcean.CompProperties_FishingSpot"/>
-		</comps>
-		<placeWorkers>
-			<li>VehicleMapFramework.PlaceWorker_ForceOnVehicleMapEdgeReverse</li>
-		</placeWorkers>
-	</ThingDef>
-	
+  <ThingDef Name="MVO_RigBase" ParentName="MVO_ShipEquipmentBase" Abstract="True">
+    <passability>Impassable</passability>
+    <fillPercent>1</fillPercent>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <graphicData>
+      <texPath>MapVehiclesOcean/Things/Rig/MastRoot</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+      <drawRotated>false</drawRotated>
+    </graphicData>
+    <rotatable>false</rotatable>
+    <designatorDropdown>MVO_RigGroup</designatorDropdown>
+    <statBases>
+      <Beauty>2</Beauty>
+    </statBases>
+    <stuffCategories>
+      <li>Fabric</li>
+      <li>Leathery</li>
+    </stuffCategories>
+    <building>
+      <supportsWallAttachments>true</supportsWallAttachments>
+      <relatedBuildCommands>
+        <li>MVO_CrowsNest</li>
+      </relatedBuildCommands>
+    </building>
+    <useBlueprintGraphicAsGhost>true</useBlueprintGraphicAsGhost>
+    <placeWorkers>
+      <li>VehicleMapFramework.PlaceWorker_ForceOnVehicle</li>
+      <li>VehicleMapFramework.PlaceWorker_VehicleRelatedBuildings</li>
+      <li>PlaceWorker_NotUnderRoof</li>
+    </placeWorkers>
+  </ThingDef>
+
+  <ThingDef ParentName="MVO_RigBase">
+    <defName>MVO_RigOneTiered</defName>
+    <label>rig I</label>
+    <description>TODO</description>
+    <statBases>
+      <MaxHitPoints>150</MaxHitPoints>
+      <Mass>120</Mass>
+    </statBases>
+    <uiIconPathsStuff>
+      <li>
+        <appearance>Fabric</appearance>
+        <iconPath>MapVehiclesOcean/Things/Rig/Rig1/Fabric_Rig1_Icon</iconPath>
+      </li>
+      <li>
+        <appearance>Leathery</appearance>
+        <iconPath>MapVehiclesOcean/Things/Rig/Rig1/Leathery_Rig1_Icon</iconPath>
+      </li>
+    </uiIconPathsStuff>
+    <costList>
+      <WoodLog>120</WoodLog>
+      <Steel>75</Steel>
+    </costList>
+    <costStuffCount>240</costStuffCount>
+    <building>
+      <blueprintGraphicData>
+        <graphicClass>Graphic_Multi</graphicClass>
+        <texPath>MapVehiclesOcean/Things/Rig/Rig1/Fabric_Rig1</texPath>
+        <shaderType>EdgeDetect</shaderType>
+        <drawSize>(8,4)</drawSize>
+        <drawOffset>(0,0,1.5)</drawOffset>
+      </blueprintGraphicData>
+    </building>
+    <comps>
+      <li Class="CompProperties_DrawAdditionalGraphics">
+        <compClass>VehicleMapFramework.CompDrawAdditionalGraphicsOpacity</compClass>
+        <graphics>
+          <li>
+            <graphicClass>VehicleMapFramework.Graphic_AppearanceMulti</graphicClass>
+            <texPath>MapVehiclesOcean/Things/Rig/Rig1/Rig1</texPath>
+            <shaderType>VMF_CutoutComplexRGBOpacity</shaderType>
+            <drawSize>(8,4)</drawSize>
+            <drawOffset>(0,0.1,1.5)</drawOffset>
+            <shadowData>
+              <volume>(0.75,1,0.75)</volume>
+              <offset>(0,0,-1.8)</offset>
+            </shadowData>
+          </li>
+        </graphics>
+      </li>
+      <li Class="VehicleMapFramework.CompProperties_BuildableUpgrades">
+        <upgrades>
+          <li Class="Vehicles.StatUpgrade">
+            <vehicleStats>
+              <li>
+                <def>MoveSpeed</def>
+                <value>1</value>
+              </li>
+            </vehicleStats>
+          </li>
+        </upgrades>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="MVO_RigBase">
+    <defName>MVO_RigTwoTiered</defName>
+    <label>rig II</label>
+    <description>TODO</description>
+    <statBases>
+      <MaxHitPoints>300</MaxHitPoints>
+      <Mass>220</Mass>
+    </statBases>
+    <uiIconPathsStuff>
+      <li>
+        <appearance>Fabric</appearance>
+        <iconPath>MapVehiclesOcean/Things/Rig/Rig2/Fabric_Rig2_Icon</iconPath>
+      </li>
+      <li>
+        <appearance>Leathery</appearance>
+        <iconPath>MapVehiclesOcean/Things/Rig/Rig2/Leathery_Rig2_Icon</iconPath>
+      </li>
+    </uiIconPathsStuff>
+    <costList>
+      <WoodLog>230</WoodLog>
+      <Steel>140</Steel>
+    </costList>
+    <costStuffCount>460</costStuffCount>
+    <building>
+      <blueprintGraphicData>
+        <graphicClass>Graphic_Multi</graphicClass>
+        <texPath>MapVehiclesOcean/Things/Rig/Rig2/Fabric_Rig2</texPath>
+        <shaderType>EdgeDetect</shaderType>
+        <drawSize>(16,8)</drawSize>
+        <drawOffset>(0,0,3.5)</drawOffset>
+      </blueprintGraphicData>
+    </building>
+    <comps>
+      <li Class="CompProperties_DrawAdditionalGraphics">
+        <compClass>VehicleMapFramework.CompDrawAdditionalGraphicsOpacity</compClass>
+        <graphics>
+          <li>
+            <graphicClass>VehicleMapFramework.Graphic_AppearanceMulti</graphicClass>
+            <texPath>MapVehiclesOcean/Things/Rig/Rig2/Rig2</texPath>
+            <shaderType>VMF_CutoutComplexRGBOpacity</shaderType>
+            <drawSize>(16,8)</drawSize>
+            <drawOffset>(0,0.1,3.5)</drawOffset>
+            <shadowData>
+              <volume>(0.75,2,0.75)</volume>
+              <offset>(0,0,-3.8)</offset>
+            </shadowData>
+          </li>
+        </graphics>
+      </li>
+      <li Class="VehicleMapFramework.CompProperties_BuildableUpgrades">
+        <upgrades>
+          <li Class="Vehicles.StatUpgrade">
+            <vehicleStats>
+              <li>
+                <def>MoveSpeed</def>
+                <value>2</value>
+              </li>
+            </vehicleStats>
+          </li>
+        </upgrades>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="MVO_RigBase">
+    <defName>MVO_RigThreeTiered</defName>
+    <label>rig III</label>
+    <description>TODO</description>
+    <statBases>
+      <MaxHitPoints>450</MaxHitPoints>
+      <Mass>330</Mass>
+    </statBases>
+    <uiIconPathsStuff>
+      <li>
+        <appearance>Fabric</appearance>
+        <iconPath>MapVehiclesOcean/Things/Rig/Rig3/Fabric_Rig3_Icon</iconPath>
+      </li>
+      <li>
+        <appearance>Leathery</appearance>
+        <iconPath>MapVehiclesOcean/Things/Rig/Rig3/Leathery_Rig3_Icon</iconPath>
+      </li>
+    </uiIconPathsStuff>
+    <costList>
+      <WoodLog>340</WoodLog>
+      <Steel>200</Steel>
+    </costList>
+    <costStuffCount>690</costStuffCount>
+    <building>
+      <blueprintGraphicData>
+        <graphicClass>Graphic_Multi</graphicClass>
+        <texPath>MapVehiclesOcean/Things/Rig/Rig3/Fabric_Rig3</texPath>
+        <shaderType>EdgeDetect</shaderType>
+        <drawSize>(16,8)</drawSize>
+        <drawOffset>(0,0,3.5)</drawOffset>
+      </blueprintGraphicData>
+    </building>
+    <comps>
+      <li Class="CompProperties_DrawAdditionalGraphics">
+        <compClass>VehicleMapFramework.CompDrawAdditionalGraphicsOpacity</compClass>
+        <graphics>
+          <li>
+            <graphicClass>VehicleMapFramework.Graphic_AppearanceMulti</graphicClass>
+            <texPath>MapVehiclesOcean/Things/Rig/Rig3/Rig3</texPath>
+            <shaderType>VMF_CutoutComplexRGBOpacity</shaderType>
+            <drawSize>(16,8)</drawSize>
+            <drawOffset>(0,0.1,3.5)</drawOffset>
+            <shadowData>
+              <volume>(0.75,3,0.75)</volume>
+              <offset>(0,0,-3.8)</offset>
+            </shadowData>
+          </li>
+        </graphics>
+      </li>
+      <li Class="VehicleMapFramework.CompProperties_BuildableUpgrades">
+        <upgrades>
+          <li Class="Vehicles.StatUpgrade">
+            <vehicleStats>
+              <li>
+                <def>MoveSpeed</def>
+                <value>3</value>
+              </li>
+            </vehicleStats>
+          </li>
+        </upgrades>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="MVO_ShipEquipmentBase">
+    <defName>MVO_CrowsNest</defName>
+    <label>Crow's nest</label>
+    <description>TODO</description>
+    <drawerType>RealtimeOnly</drawerType>
+    <graphicData>
+      <graphicClass>Graphic_Single</graphicClass>
+      <texPath>VehicleMapFramework/ClearTex</texPath>
+    </graphicData>
+    <uiIconPath>MapVehiclesOcean/Things/CrowsNest/CrowsNestBlueprint_south</uiIconPath>
+    <rotatable>false</rotatable>
+    <statBases>
+      <MaxHitPoints>100</MaxHitPoints>
+      <WorkToBuild>6000</WorkToBuild>
+      <Beauty>3</Beauty>
+      <Mass>25</Mass>
+    </statBases>
+    <hasInteractionCell>true</hasInteractionCell>
+    <interactionCellOffset>(0,0,-1)</interactionCellOffset>
+    <useBlueprintGraphicAsGhost>true</useBlueprintGraphicAsGhost>
+    <building>
+      <isEdifice>false</isEdifice>
+      <blueprintGraphicData>
+        <graphicClass>Graphic_Multi</graphicClass>
+        <texPath>MapVehiclesOcean/Things/CrowsNest/CrowsNestBlueprint</texPath>
+        <shaderType>EdgeDetect</shaderType>
+        <color>(0.8235294,0.92156863,1,0.6)</color>
+        <drawSize>2</drawSize>
+      </blueprintGraphicData>
+    </building>
+    <comps>
+      <li Class="VehicleMapFramework.CompProperties_AdditionalGraphicsChildByParent">
+        <graphicsByParent>
+          <li>
+            <key>MVO_RigOneTiered</key>
+            <value>
+              <li>
+                <graphicClass>Graphic_Multi</graphicClass>
+                <texPath>MapVehiclesOcean/Things/CrowsNest/CrowsNest</texPath>
+                <shaderType>VMF_CutoutComplexRGBOpacity</shaderType>
+                <drawSize>2</drawSize>
+                <drawOffset>(0,0.1001,2.93)</drawOffset>
+                <drawOffsetEast>(0,0.1001,3)</drawOffsetEast>
+                <drawOffsetWest>(0,0.1001,3)</drawOffsetWest>
+              </li>
+              <li>
+                <graphicClass>Graphic_Multi</graphicClass>
+                <texPath>MapVehiclesOcean/Things/CrowsNest/CrowsNestOverlay</texPath>
+                <shaderType>VMF_CutoutComplexRGBOpacity</shaderType>
+                <drawSize>2</drawSize>
+                <drawOffset>(0,0.2,2.93)</drawOffset>
+                <drawOffsetEast>(0,0.2,3)</drawOffsetEast>
+                <drawOffsetWest>(0,0.2,3)</drawOffsetWest>
+              </li>
+            </value>
+          </li>
+          <li>
+            <key>MVO_RigTwoTiered</key>
+            <value>
+              <li>
+                <graphicClass>Graphic_Multi</graphicClass>
+                <texPath>MapVehiclesOcean/Things/CrowsNest/CrowsNest</texPath>
+                <shaderType>VMF_CutoutComplexRGBOpacity</shaderType>
+                <drawSize>1.6</drawSize>
+                <drawOffset>(0,0.1001,5.35)</drawOffset>
+                <drawOffsetEast>(0.444,0.1001,5.18)</drawOffsetEast>
+                <drawOffsetWest>(-0.444,0.1001,5.18)</drawOffsetWest>
+              </li>
+              <li>
+                <graphicClass>Graphic_Multi</graphicClass>
+                <texPath>MapVehiclesOcean/Things/CrowsNest/CrowsNestOverlay</texPath>
+                <shaderType>VMF_CutoutComplexRGBOpacity</shaderType>
+                <drawSize>1.6</drawSize>
+                <drawOffset>(0,0.2,5.35)</drawOffset>
+                <drawOffsetEast>(0.444,0.2,5.18)</drawOffsetEast>
+                <drawOffsetWest>(-0.444,0.2,5.18)</drawOffsetWest>
+              </li>
+            </value>
+          </li>
+          <li>
+            <key>MVO_RigThreeTiered</key>
+            <value>
+              <li>
+                <graphicClass>Graphic_Multi</graphicClass>
+                <texPath>MapVehiclesOcean/Things/CrowsNest/CrowsNest</texPath>
+                <shaderType>VMF_CutoutComplexRGBOpacity</shaderType>
+                <drawSize>1.4</drawSize>
+                <drawOffset>(0,0.1001,7.1)</drawOffset>
+                <drawOffsetEast>(0.825,0.1001,7.2)</drawOffsetEast>
+                <drawOffsetWest>(-0.825,0.1001,7.2)</drawOffsetWest>
+              </li>
+              <li>
+                <graphicClass>Graphic_Multi</graphicClass>
+                <texPath>MapVehiclesOcean/Things/CrowsNest/CrowsNestOverlay</texPath>
+                <shaderType>VMF_CutoutComplexRGBOpacity</shaderType>
+                <drawSize>1.4</drawSize>
+                <drawOffset>(0,0.2,7.1)</drawOffset>
+                <drawOffsetEast>(0.825,0.2,7.2)</drawOffsetEast>
+                <drawOffsetWest>(-0.825,0.2,7.2)</drawOffsetWest>
+              </li>
+            </value>
+          </li>
+        </graphicsByParent>
+      </li>
+      <li Class="MapVehiclesOcean.CompProperties_CrowsNest">
+        <scanFindMtbDays>2.5</scanFindMtbDays>
+        <scanSpeedStat>ReadingSpeed</scanSpeedStat>
+        <questWeights>
+          <MVO_Shipwreck>1</MVO_Shipwreck>
+          <MVO_MaritimeBase>0.5</MVO_MaritimeBase>
+          <MVO_Drifter>0.3</MVO_Drifter>
+        </questWeights>
+      </li>
+      <li Class="CompProperties_Forbiddable"/>
+    </comps>
+    <placeWorkers>
+      <li>VehicleMapFramework.PlaceWorker_RelatedBuildings</li>
+    </placeWorkers>
+  </ThingDef>
+
+  <ThingDef ParentName="MVO_ShipEquipmentBase">
+    <defName>MVO_Oar</defName>
+    <label>oar</label>
+    <description>TODO</description>
+    <minifiedDef>MinifiedThing</minifiedDef>
+    <thingCategories>
+      <li>BuildingsFurniture</li>
+    </thingCategories>
+    <graphicData>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <texPath>MapVehiclesOcean/Things/Oar/Oar</texPath>
+      <shaderType>Cutout</shaderType>
+      <drawSize>1.5</drawSize>
+      <drawOffsetNorth>(0,2,-0.1)</drawOffsetNorth>
+      <drawOffsetSouth>(0,0,0.3)</drawOffsetSouth>
+      <drawOffsetEast>(-0.1,0,0)</drawOffsetEast>
+      <drawOffsetWest>(0.1,0,0)</drawOffsetWest>
+    </graphicData>
+    <uiIconScale>0.666667</uiIconScale>
+    <statBases>
+      <MaxHitPoints>50</MaxHitPoints>
+      <Mass>5</Mass>
+    </statBases>
+    <fillPercent>0.1</fillPercent>
+    <costList>
+      <WoodLog>75</WoodLog>
+    </costList>
+    <comps>
+      <li Class="VehicleMapFramework.CompProperties_BuildableUpgrades">
+        <compClass>VehicleMapFramework.CompVehicleSeat</compClass>
+        <upgrades>
+          <li Class="VehicleMapFramework.VehicleUpgradeBuildable">
+            <roles>
+              <li Class="VehicleMapFramework.RoleUpgradeBuildable">
+                <key>Rower</key>
+                <editKey>rower</editKey>
+                <label>Rower</label>
+                <handlingTypes>Movement</handlingTypes>
+                <slots>1</slots>
+                <slotsToOperate>1</slotsToOperate>
+                <exposed>true</exposed>
+                <pawnRenderer>
+                  <showBody>true</showBody>
+                  <north>South</north>
+                  <northEast>South</northEast>
+                  <east>West</east>
+                  <southEast>North</southEast>
+                  <south>North</south>
+                  <southWest>North</southWest>
+                  <west>East</west>
+                  <northWest>South</northWest>
+                  <drawOffsetNorth>(0,0,-0.5)</drawOffsetNorth>
+                  <drawOffsetSouth>(0,0,0)</drawOffsetSouth>
+                </pawnRenderer>
+              </li>
+            </roles>
+          </li>
+          <li Class="Vehicles.StatUpgrade">
+            <vehicleStats>
+              <li>
+                <def>MoveSpeed</def>
+                <value>0.25</value>
+              </li>
+            </vehicleStats>
+          </li>
+        </upgrades>
+      </li>
+    </comps>
+    <placeWorkers>
+      <li>VehicleMapFramework.PlaceWorker_ForceOnVehicleMapEdge</li>
+      <li>VehicleMapFramework.PlaceWorker_VehicleRelatedBuildings</li>
+    </placeWorkers>
+  </ThingDef>
+
+  <DesignatorDropdownGroupDef>
+    <defName>MVO_GrapplingLauncherGroup</defName>
+    <iconSource>Placed</iconSource>
+  </DesignatorDropdownGroupDef>
+
+  <ThingDef ParentName="BaseArtilleryBuilding">
+    <defName>MVO_Turret_GrapplingLauncher</defName>
+    <label>grappling launcher</label>
+    <description>TODO: A turret that sets up a zipline at the location where it pierces. Used for direct access between vehicles.</description>
+    <thingClass>VehicleMapFramework.Building_TurretGunForcedTargetOnly</thingClass>
+    <designationCategory>VMF_VehicleMap</designationCategory>
+    <designatorDropdown>MVO_GrapplingLauncherGroup</designatorDropdown>
+    <graphicData>
+      <texPath>MapVehiclesOcean/Things/GrapplingLauncher/GrapplingLauncher_Base</texPath>
+      <drawRotated>false</drawRotated>
+      <drawSize>1.05</drawSize>
+    </graphicData>
+    <size>(1,1)</size>
+    <stuffCategories Inherit="False"/>
+    <costStuffCount Inherit="False"/>
+    <costList>
+      <WoodLog>50</WoodLog>
+      <Steel>15</Steel>
+      <ComponentIndustrial>1</ComponentIndustrial>
+    </costList>
+    <hasInteractionCell>false</hasInteractionCell>
+    <inspectorTabs Inherit="False"/>
+    <building>
+      <turretGunDef>MVO_Gun_GrapplingLauncher</turretGunDef>
+      <turretBurstWarmupTime>0</turretBurstWarmupTime>
+      <turretBurstCooldownTime>0</turretBurstCooldownTime>
+      <turretTopDrawSize>1.25</turretTopDrawSize>
+      <turretTopOffset>(0,0.2)</turretTopOffset>
+      <relatedBuildCommands>
+        <li>MVO_MooringRing</li>
+      </relatedBuildCommands>
+    </building>
+    <passability>Standable</passability>
+    <statBases>
+      <MaxHitPoints>90</MaxHitPoints>
+      <Flammability>0.75</Flammability>
+      <WorkToBuild>1600</WorkToBuild>
+      <Mass>20</Mass>
+      <Beauty>-20</Beauty>
+      <ShootingAccuracyTurret>1</ShootingAccuracyTurret>
+    </statBases>
+    <fillPercent>0.2</fillPercent>
+    <comps Inherit="False">
+      <li Class="CompProperties_Forbiddable"/>
+      <li Class="CompProperties_Interactable">
+        <compClass>CompInteractableRocketswarmLauncher</compClass>
+        <activeTicks>1</activeTicks>
+        <ticksToActivate>90</ticksToActivate>
+        <jobString>activate</jobString>
+        <activateTexPath>UI/Commands/ActivateTurret</activateTexPath>
+        <targetingParameters>
+          <canTargetBuildings>false</canTargetBuildings>
+          <canTargetAnimals>false</canTargetAnimals>
+          <canTargetMechs>false</canTargetMechs>
+          <onlyTargetControlledPawns>true</onlyTargetControlledPawns>
+        </targetingParameters>
+      </li>
+      <li Class="VehicleMapFramework.CompProperties_Zipline">
+        <standbyGraphic>
+          <texPath>MapVehiclesOcean/Things/GrapplingLauncher/GrapplingLauncher_TopOverlay</texPath>
+          <graphicClass>Graphic_Single</graphicClass>
+          <drawSize>1.25</drawSize>
+        </standbyGraphic>
+      </li>
+    </comps>
+    <researchPrerequisites>
+    </researchPrerequisites>
+    <uiOrder>1063</uiOrder>
+    <uiIconPath>MapVehiclesOcean/Things/GrapplingLauncher/GrapplingLauncher_MenuIcon</uiIconPath>
+    <placeWorkers Inherit="False">
+      <li>PlaceWorker_TurretTop</li>
+    </placeWorkers>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseWeaponTurret">
+    <defName>MVO_Gun_GrapplingLauncher</defName>
+    <label>grappling launcher gun</label>
+    <description>TODO: A gun made to be mounted on a zipline turret.</description>
+    <graphicData>
+      <texPath>MapVehiclesOcean/Things/GrapplingLauncher/GrapplingLauncher_Top</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <Mass>5</Mass>
+      <Flammability>0</Flammability>
+    </statBases>
+    <verbs>
+      <li>
+        <verbClass>VehicleMapFramework.Verb_LaunchZipline</verbClass>
+        <defaultProjectile>MVO_Bullet_GrapplingLauncher</defaultProjectile>
+        <range>17.9</range>
+        <canGoWild>false</canGoWild>
+        <targetParams Class="VehicleMapFramework.TargetingParametersForSpecificThingDef">
+          <canTargetPawns>false</canTargetPawns>
+          <thingDef>MVO_MooringRing</thingDef>
+        </targetParams>
+        <soundCast>Shot_Autocannon</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+      </li>
+    </verbs>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseBullet">
+    <defName>MVO_Bullet_GrapplingLauncher</defName>
+    <label>grappling launcher bullet</label>
+    <thingClass>VehicleMapFramework.Bullet_ZiplineEnd</thingClass>
+    <graphicData>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>Transparent</shaderType>
+      <texPath>MapVehiclesOcean/Things/GrapplingLauncher/GrapplingHook</texPath>
+      <drawSize>1.5</drawSize>
+    </graphicData>
+    <projectile>
+      <speed>20</speed>
+      <arcHeightFactor>0.2</arcHeightFactor>
+      <damageDef>Stab</damageDef>
+      <damageAmountBase>0</damageAmountBase>
+    </projectile>
+    <modExtensions>
+      <li Class="VehicleMapFramework.CustomZipline">
+        <texPath>MapVehiclesOcean/Things/GrapplingLauncher/Rope</texPath>
+        <ziplineWidth>0.09</ziplineWidth>
+        <ziplineEndOffset>0.18</ziplineEndOffset>
+        <launcherOffset>0.55</launcherOffset>
+        <ziplineEndDef>MVO_GrapplingLauncherHook</ziplineEndDef>
+        <ziplineReturnDef>MVO_Bullet_GrapplingLauncherReturn</ziplineReturnDef>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseBullet">
+    <defName>MVO_Bullet_GrapplingLauncherReturn</defName>
+    <label>grappling launcher bullet</label>
+    <thingClass>VehicleMapFramework.Bullet_ZiplineEndReturn</thingClass>
+    <graphicData>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>Transparent</shaderType>
+      <texPath>MapVehiclesOcean/Things/GrapplingLauncher/GrapplingHook</texPath>
+      <drawSize>1.5</drawSize>
+    </graphicData>
+    <projectile>
+      <speed>5</speed>
+      <damageDef>Stab</damageDef>
+      <damageAmountBase>0</damageAmountBase>
+    </projectile>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseBullet">
+    <defName>MVO_GrapplingLauncherHook</defName>
+    <label>grappling hook</label>
+    <thingClass>VehicleMapFramework.ZiplineEnd</thingClass>
+    <category>Building</category>
+    <drawerType>RealtimeOnly</drawerType>
+    <altitudeLayer>BuildingBelowTop</altitudeLayer>
+    <graphicData>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>Cutout</shaderType>
+      <texPath>MapVehiclesOcean/Things/GrapplingLauncher/GrapplingHook</texPath>
+      <drawSize>1.5</drawSize>
+    </graphicData>
+    <building>
+      <isEdifice>false</isEdifice>
+    </building>
+    <statBases>
+      <Mass>0.1</Mass>
+    </statBases>
+    <comps>
+      <li Class="VehicleMapFramework.CompProperties_Zipline"/>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="MVO_ShipEquipmentBase">
+    <defName>MVO_MooringRing</defName>
+    <label>mooring ring</label>
+    <description>TODO</description>
+    <thingCategories>
+      <li>BuildingsFurniture</li>
+    </thingCategories>
+    <minifiedDef>MinifiedThing</minifiedDef>
+    <altitudeLayer>FloorEmplacement</altitudeLayer>
+    <designatorDropdown>MVO_GrapplingLauncherGroup</designatorDropdown>
+    <graphicData>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <texPath>MapVehiclesOcean/Things/MooringRing/MooringRing</texPath>
+      <damageData>
+        <rect>(0.3,0.3,0.7,0.7)</rect>
+      </damageData>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>180</MaxHitPoints>
+      <WorkToBuild>350</WorkToBuild>
+      <Mass>0.1</Mass>
+    </statBases>
+    <costList>
+      <Steel>10</Steel>
+    </costList>
+    <building/>
+  </ThingDef>
+
+  <ThingDef ParentName="MVO_ShipEquipmentBase">
+    <defName>MVO_Helm</defName>
+    <label>helm</label>
+    <description>TODO</description>
+    <thingClass>VehicleMapFramework.Building_AttackTargetByComps</thingClass>
+    <thingCategories>
+      <li>BuildingsFurniture</li>
+    </thingCategories>
+    <minifiedDef>MinifiedThing</minifiedDef>
+    <graphicData>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <texPath>MapVehiclesOcean/Things/Helm/Helm</texPath>
+      <shaderType>CutoutComplex</shaderType>
+      <color>(128,53,0)</color>
+      <colorTwo>(199,136,20)</colorTwo>
+      <drawOffsetNorth>(0,0,0.23)</drawOffsetNorth>
+      <drawOffsetEast>(0,0,0.1)</drawOffsetEast>
+      <drawOffsetWest>(0,0,0.1)</drawOffsetWest>
+      <damageData>
+        <rectN>(0,0.73,1,1.23)</rectN>
+        <rectE>(0.6,0.1,1,1.1)</rectE>
+        <rectS>(0,0,1,0.55)</rectS>
+        <rectW>(0,0.1,0.4,1.1)</rectW>
+      </damageData>
+      <shadowData>
+        <volume>(0.2,0.1,0.2)</volume>
+        <offset>(0,0,0.23)</offset>
+      </shadowData>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>180</MaxHitPoints>
+      <WorkToBuild>1000</WorkToBuild>
+      <Mass>40</Mass>
+    </statBases>
+    <fillPercent>0.35</fillPercent>
+    <costList>
+      <WoodLog>30</WoodLog>
+      <Steel>10</Steel>
+      <ComponentIndustrial>3</ComponentIndustrial>
+    </costList>
+    <comps>
+      <li Class="VehicleMapFramework.CompProperties_BuildableUpgrades">
+        <compClass>VehicleMapFramework.CompVehicleSeat</compClass>
+        <upgrades>
+          <li Class="VehicleMapFramework.VehicleUpgradeBuildable">
+            <roles>
+              <li Class="VehicleMapFramework.RoleUpgradeBuildable">
+                <key>helmsman</key>
+                <editKey>helmsman</editKey>
+                <label>Helmsman</label>
+                <handlingTypes>Movement</handlingTypes>
+                <slots>1</slots>
+                <slotsToOperate>1</slotsToOperate>
+                <exposed>true</exposed>
+                <pawnRenderer>
+                  <drawOffsetNorth>(0,0,0.2)</drawOffsetNorth>
+                  <drawOffsetSouth>(0,0,0.35)</drawOffsetSouth>
+                  <drawOffsetEast>(-0.2,0,0)</drawOffsetEast>
+                  <drawOffsetWest>(0.2,0,0)</drawOffsetWest>
+                  <layerNorth>1</layerNorth>
+                  <layerSouth>-25</layerSouth>
+                </pawnRenderer>
+              </li>
+            </roles>
+          </li>
+        </upgrades>
+      </li>
+    </comps>
+    <placeWorkers>
+      <li>VehicleMapFramework.PlaceWorker_ForceOnVehicle</li>
+      <li>VehicleMapFramework.PlaceWorker_VehicleRelatedBuildings</li>
+    </placeWorkers>
+  </ThingDef>
+
+  <ThingDef ParentName="MVO_ShipEquipmentBase">
+    <defName>MVO_Hatch</defName>
+    <label>hatch</label>
+    <description>TODO</description>
+    <thingClass>VehicleMapFramework.Building_Hatch</thingClass>
+    <altitudeLayer>FloorCoverings</altitudeLayer>
+    <graphicData>
+      <graphicClass>Graphic_Single</graphicClass>
+      <texPath>MapVehiclesOcean/Things/Hatch/Hatch</texPath>
+      <drawSize>(4,4)</drawSize>
+      <damageData>
+        <rect>(0.125,0.125,0.875,0.875)</rect>
+      </damageData>
+    </graphicData>
+    <size>(3,3)</size>
+    <rotatable>false</rotatable>
+    <statBases>
+      <MaxHitPoints>200</MaxHitPoints>
+      <WorkToBuild>8000</WorkToBuild>
+      <Mass>20</Mass>
+    </statBases>
+    <coversFloor>true</coversFloor>
+    <stuffCategories>
+      <li>Woody</li>
+      <li>Metallic</li>
+    </stuffCategories>
+    <costStuffCount>100</costStuffCount>
+    <surfaceType>Item</surfaceType>
+    <canOverlapZones>false</canOverlapZones>
+    <preventDroppingThingsOn>true</preventDroppingThingsOn>
+    <building>
+      <preventDeteriorationOnTop>true</preventDeteriorationOnTop>
+      <ignoreStoredThingsBeauty>true</ignoreStoredThingsBeauty>
+      <bed_canBeMedical>false</bed_canBeMedical>
+      <bed_countsForBedroomOrBarracks>false</bed_countsForBedroomOrBarracks>
+      <bed_emptyCountsForBarracks>false</bed_emptyCountsForBarracks>
+      <bed_UseSheetColor>false</bed_UseSheetColor>
+      <bed_pawnDrawOffset>10000</bed_pawnDrawOffset>
+      <storageGroupTag>Hatch</storageGroupTag>
+      <blueprintClass>Blueprint_Storage</blueprintClass>
+      <maxItemsInCell>3</maxItemsInCell>
+      <fixedStorageSettings>
+        <filter>
+          <disallowNotEverStorable>true</disallowNotEverStorable>
+          <categories>
+            <li>Root</li>
+          </categories>
+          <disallowedCategories>
+            <li>Chunks</li>
+            <li>Plants</li>
+            <li>Buildings</li>
+          </disallowedCategories>
+          <disallowedThingDefs MayRequire="Ludeon.RimWorld.Biotech">
+            <li MayRequire="Ludeon.RimWorld.Biotech">Wastepack</li>
+          </disallowedThingDefs>
+          <specialFiltersToDisallow>
+            <li>AllowLargeCorpses</li>
+          </specialFiltersToDisallow>
+        </filter>
+      </fixedStorageSettings>
+      <defaultStorageSettings>
+        <priority>Preferred</priority>
+        <filter>
+          <categories>
+            <li>Foods</li>
+            <li>Manufactured</li>
+            <li>ResourcesRaw</li>
+            <li>Items</li>
+            <li>Weapons</li>
+            <li>Apparel</li>
+            <li>BodyParts</li>
+          </categories>
+        </filter>
+      </defaultStorageSettings>
+      <paintable>true</paintable>
+    </building>
+    <inspectorTabs>
+      <li>ITab_Storage</li>
+    </inspectorTabs>
+    <comps>
+      <li Class="CompProperties_AssignableToPawn">
+        <drawAssignmentOverlay>false</drawAssignmentOverlay>
+        <compClass>CompAssignableToPawn_Bed</compClass>
+        <maxAssignedPawnsCount>3</maxAssignedPawnsCount>
+      </li>
+    </comps>
+    <placeWorkers>
+      <li>VehicleMapFramework.PlaceWorker_ForceOnVehicle</li>
+      <li>VehicleMapFramework.PlaceWorker_VehicleRelatedBuildings</li>
+    </placeWorkers>
+  </ThingDef>
+
+  <ThingDef ParentName="MVO_ShipEquipmentBase" MayRequire="Ludeon.RimWorld.Odyssey">
+    <defName>MVO_FishingSpot</defName>
+    <label>fishing spot</label>
+    <description>TODO</description>
+    <graphicData>
+      <graphicClass>Graphic_Single</graphicClass>
+      <texPath>UI/Overlays/InteractionCell</texPath>
+      <shaderType>MetaOverlay</shaderType>
+    </graphicData>
+    <tickerType>Normal</tickerType>
+    <useHitPoints>false</useHitPoints>
+    <noRightClickDraftAttack>true</noRightClickDraftAttack>
+    <useBlueprintGraphicAsGhost>true</useBlueprintGraphicAsGhost>
+    <building>
+      <isEdifice>false</isEdifice>
+      <blueprintGraphicData>
+        <graphicClass>Graphic_Single</graphicClass>
+        <texPath>MapVehiclesOcean/Things/FishingSpot/FishingSpot</texPath>
+      </blueprintGraphicData>
+    </building>
+    <comps>
+      <li Class="MapVehiclesOcean.CompProperties_FishingSpot"/>
+    </comps>
+    <placeWorkers>
+      <li>VehicleMapFramework.PlaceWorker_ForceOnVehicleMapEdgeReverse</li>
+    </placeWorkers>
+  </ThingDef>
+
 </Defs>

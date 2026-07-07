@@ -1,120 +1,120 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
-    
-    <ResearchProjectDef>
-        <defName>MVO_ExpandableRaft</defName>
-        <label>raft</label>
-        <description>Learn to build rafts.</description>
-        <tab>MVO_Ocean</tab>
-        <baseCost>800</baseCost>
-        <techLevel>Neolithic</techLevel>
-        <researchViewX>0.00</researchViewX>
-        <researchViewY>0.00</researchViewY>
-        <generalRules>
-            <rulesStrings>
-                <li>subject->raft</li>
-                <li>subject_story->arrived at [MVO_raft_way] method for humanity to cross the ocean</li>
-                    <li>MVO_raft_way->the first</li>
-                    <li>MVO_raft_way->the primitive</li>
-                    <li>MVO_raft_way->an ultimate</li>
-                <li>subject_story->suggested tying a few logs together with rope</li>
-                <li>subject_story->reached the peak of human technology</li>
-                <li>subject_gerund->constructing rafts</li>
-            </rulesStrings>
-        </generalRules>
-    </ResearchProjectDef>
-    
-    <ResearchProjectDef>
-        <defName>MVO_Keel</defName>
-        <label>keel</label>
-        <description>Learn to build the Keel.</description>
-        <tab>MVO_Ocean</tab>
-        <baseCost>1200</baseCost>
-        <techLevel>Medieval</techLevel>
-        <researchViewX>2.00</researchViewX>
-        <researchViewY>0.00</researchViewY>
-        <prerequisites>
-            <li>MVO_ExpandableRaft</li>
-        </prerequisites>
-        <techprintCount>1</techprintCount>
-        <techprintCommonality>0.2</techprintCommonality>
-        <techprintMarketValue>2000</techprintMarketValue>
-        <heldByFactionCategoryTags>
-            <li>Empire</li>
-            <li>Ancient</li>
-            <li>Outlander</li>
-        </heldByFactionCategoryTags>
-        <generalRules>
-            <rulesStrings>
-                <li>subject->keel</li>
-                <li>subject_story->finally mastered building decent ships</li>
-                <li>subject_story->designed a ship with sufficient buoyancy and sturdiness</li>
-                <li>subject_story->now they can go all over the world</li>
-                <li>subject_gerund->constructing the Keel</li>
-            </rulesStrings>
-        </generalRules>
-    </ResearchProjectDef>
 
-    <ResearchProjectDef>
-        <defName>MVO_Roundnose</defName>
-        <label>roundnose</label>
-        <description>Learn to build the Roundnose.</description>
-        <tab>MVO_Ocean</tab>
-        <baseCost>2000</baseCost>
-        <techLevel>Medieval</techLevel>
-        <researchViewX>3.00</researchViewX>
-        <researchViewY>0.00</researchViewY>
-        <prerequisites>
-            <li>MVO_Keel</li>
-        </prerequisites>
-        <techprintCount>1</techprintCount>
-        <techprintCommonality>0.1</techprintCommonality>
-        <techprintMarketValue>3500</techprintMarketValue>
-        <heldByFactionCategoryTags>
-            <li>Empire</li>
-            <li>Ancient</li>
-            <li>Outlander</li>
-        </heldByFactionCategoryTags>
-        <generalRules>
-            <rulesStrings>
-                <li>subject->roundnose</li>
-                <li>subject_story->steel-reinforced ships can now be built</li>
-                <li>subject_story->designed a ship with robustness and space efficiency</li>
-                <li>subject_story->perfect for warships in the fleet</li>
-                <li>subject_gerund->constructing the Roundnose</li>
-            </rulesStrings>
-        </generalRules>
-    </ResearchProjectDef>
+  <ResearchProjectDef>
+    <defName>MVO_ExpandableRaft</defName>
+    <label>raft</label>
+    <description>Learn to build rafts.</description>
+    <tab>MVO_Ocean</tab>
+    <baseCost>800</baseCost>
+    <techLevel>Neolithic</techLevel>
+    <researchViewX>0.00</researchViewX>
+    <researchViewY>0.00</researchViewY>
+    <generalRules>
+      <rulesStrings>
+        <li>subject->raft</li>
+        <li>subject_story->arrived at [MVO_raft_way] method for humanity to cross the ocean</li>
+        <li>MVO_raft_way->the first</li>
+        <li>MVO_raft_way->the primitive</li>
+        <li>MVO_raft_way->an ultimate</li>
+        <li>subject_story->suggested tying a few logs together with rope</li>
+        <li>subject_story->reached the peak of human technology</li>
+        <li>subject_gerund->constructing rafts</li>
+      </rulesStrings>
+    </generalRules>
+  </ResearchProjectDef>
 
-    <ResearchProjectDef>
-        <defName>MVO_Pontoon</defName>
-        <label>pontoon</label>
-        <description>Learn to build the Pontoon.</description>
-        <tab>MVO_Ocean</tab>
-        <baseCost>3000</baseCost>
-        <techLevel>Medieval</techLevel>
-        <researchViewX>3.00</researchViewX>
-        <researchViewY>1.00</researchViewY>
-        <prerequisites>
-            <li>MVO_Keel</li>
-        </prerequisites>
-        <techprintCount>1</techprintCount>
-        <techprintCommonality>0.1</techprintCommonality>
-        <techprintMarketValue>4200</techprintMarketValue>
-        <heldByFactionCategoryTags>
-            <li>Empire</li>
-            <li>Ancient</li>
-            <li>Outlander</li>
-        </heldByFactionCategoryTags>
-        <generalRules>
-            <rulesStrings>
-                <li>subject->pontoon</li>
-                <li>subject_story->steel square rafts can now be built</li>
-                <li>subject_story->designed a ship with ultimate space efficiency</li>
-                <li>subject_story->technology returns to rafts</li>
-                <li>subject_gerund->constructing the Pontoon</li>
-            </rulesStrings>
-        </generalRules>
-    </ResearchProjectDef>
-    
+  <ResearchProjectDef>
+    <defName>MVO_Keel</defName>
+    <label>keel</label>
+    <description>Learn to build the Keel.</description>
+    <tab>MVO_Ocean</tab>
+    <baseCost>1200</baseCost>
+    <techLevel>Medieval</techLevel>
+    <researchViewX>2.00</researchViewX>
+    <researchViewY>0.00</researchViewY>
+    <prerequisites>
+      <li>MVO_ExpandableRaft</li>
+    </prerequisites>
+    <techprintCount>1</techprintCount>
+    <techprintCommonality>0.2</techprintCommonality>
+    <techprintMarketValue>2000</techprintMarketValue>
+    <heldByFactionCategoryTags>
+      <li>Empire</li>
+      <li>Ancient</li>
+      <li>Outlander</li>
+    </heldByFactionCategoryTags>
+    <generalRules>
+      <rulesStrings>
+        <li>subject->keel</li>
+        <li>subject_story->finally mastered building decent ships</li>
+        <li>subject_story->designed a ship with sufficient buoyancy and sturdiness</li>
+        <li>subject_story->now they can go all over the world</li>
+        <li>subject_gerund->constructing the Keel</li>
+      </rulesStrings>
+    </generalRules>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+    <defName>MVO_Roundnose</defName>
+    <label>roundnose</label>
+    <description>Learn to build the Roundnose.</description>
+    <tab>MVO_Ocean</tab>
+    <baseCost>2000</baseCost>
+    <techLevel>Medieval</techLevel>
+    <researchViewX>3.00</researchViewX>
+    <researchViewY>0.00</researchViewY>
+    <prerequisites>
+      <li>MVO_Keel</li>
+    </prerequisites>
+    <techprintCount>1</techprintCount>
+    <techprintCommonality>0.1</techprintCommonality>
+    <techprintMarketValue>3500</techprintMarketValue>
+    <heldByFactionCategoryTags>
+      <li>Empire</li>
+      <li>Ancient</li>
+      <li>Outlander</li>
+    </heldByFactionCategoryTags>
+    <generalRules>
+      <rulesStrings>
+        <li>subject->roundnose</li>
+        <li>subject_story->steel-reinforced ships can now be built</li>
+        <li>subject_story->designed a ship with robustness and space efficiency</li>
+        <li>subject_story->perfect for warships in the fleet</li>
+        <li>subject_gerund->constructing the Roundnose</li>
+      </rulesStrings>
+    </generalRules>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+    <defName>MVO_Pontoon</defName>
+    <label>pontoon</label>
+    <description>Learn to build the Pontoon.</description>
+    <tab>MVO_Ocean</tab>
+    <baseCost>3000</baseCost>
+    <techLevel>Medieval</techLevel>
+    <researchViewX>3.00</researchViewX>
+    <researchViewY>1.00</researchViewY>
+    <prerequisites>
+      <li>MVO_Keel</li>
+    </prerequisites>
+    <techprintCount>1</techprintCount>
+    <techprintCommonality>0.1</techprintCommonality>
+    <techprintMarketValue>4200</techprintMarketValue>
+    <heldByFactionCategoryTags>
+      <li>Empire</li>
+      <li>Ancient</li>
+      <li>Outlander</li>
+    </heldByFactionCategoryTags>
+    <generalRules>
+      <rulesStrings>
+        <li>subject->pontoon</li>
+        <li>subject_story->steel square rafts can now be built</li>
+        <li>subject_story->designed a ship with ultimate space efficiency</li>
+        <li>subject_story->technology returns to rafts</li>
+        <li>subject_gerund->constructing the Pontoon</li>
+      </rulesStrings>
+    </generalRules>
+  </ResearchProjectDef>
+
 </Defs>

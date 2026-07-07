@@ -1,37 +1,37 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 
 <Defs>
-	<Vehicles.VehicleBuildDef ParentName="VehicleBaseBuildable">
-		<defName>MVO_Cannon_Blueprint</defName>
-		<label>cannon</label>
-		<description>TODO</description>
-		<designationCategory>VF_Vehicles</designationCategory>
-		<graphicData>
-			<texPath>MapVehiclesOcean/Things/Cannon/Cannon</texPath>
-			<graphicClass>Graphic_Multi</graphicClass>
-			<drawSize>(2,2)</drawSize>
-		</graphicData>
+  <Vehicles.VehicleBuildDef ParentName="VehicleBaseBuildable">
+    <defName>MVO_Cannon_Blueprint</defName>
+    <label>cannon</label>
+    <description>TODO</description>
+    <designationCategory>VF_Vehicles</designationCategory>
+    <graphicData>
+      <texPath>MapVehiclesOcean/Things/Cannon/Cannon</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>(2,2)</drawSize>
+    </graphicData>
 
-		<statBases>
-			<MaxHitPoints>300</MaxHitPoints>
-			<WorkToBuild>1800</WorkToBuild>
-			<Flammability>0</Flammability>
-		</statBases>
+    <statBases>
+      <MaxHitPoints>300</MaxHitPoints>
+      <WorkToBuild>1800</WorkToBuild>
+      <Flammability>0</Flammability>
+    </statBases>
 
-		<size>(1,1)</size>
+    <size>(1,1)</size>
 
-		<researchPrerequisites>
-		</researchPrerequisites>
-		
-		<costList>
-			<WoodLog>80</WoodLog>
-			<Steel>75</Steel>
-		</costList>
+    <researchPrerequisites>
+    </researchPrerequisites>
 
-		<soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
+    <costList>
+      <WoodLog>80</WoodLog>
+      <Steel>75</Steel>
+    </costList>
 
-		<thingToSpawn>MVO_Cannon</thingToSpawn>
+    <soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
 
-		<constructionSkillPrerequisite>6</constructionSkillPrerequisite>
-	</Vehicles.VehicleBuildDef>
+    <thingToSpawn>MVO_Cannon</thingToSpawn>
+
+    <constructionSkillPrerequisite>6</constructionSkillPrerequisite>
+  </Vehicles.VehicleBuildDef>
 </Defs>

@@ -1,316 +1,316 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
 
-    <ThingDef Name="ShipwreckPropsBase" ParentName="BuildingBase" Abstract="True">
-        <designationCategory>MVO_Dev</designationCategory>
-    </ThingDef>
-    
-    <ThingDef ParentName="ShipwreckPropsBase">
-        <defName>MVO_ShipwreckHatch</defName>
-        <label>hatch</label>
-        <description>TODO</description>
-        <thingClass>Building_Crate</thingClass>
-        <altitudeLayer>FloorCoverings</altitudeLayer>
-        <graphicData>
-            <graphicClass>Graphic_Single</graphicClass>
-            <texPath>MapVehiclesOcean/Things/Hatch/Hatch</texPath>
-            <drawSize>4</drawSize>
-            <damageData>
-                <rect>(0.125,0.125,0.875,0.875)</rect>
-            </damageData>
-        </graphicData>
-        <size>(3,3)</size>
-        <rotatable>false</rotatable>
-        <statBases>
-            <MaxHitPoints>200</MaxHitPoints>
-            <Mass>20</Mass>
-        </statBases>
-        <coversFloor>true</coversFloor>
-        <stuffCategories>
-            <li>Woody</li>
-            <li>Metallic</li>
-        </stuffCategories>
-        <costStuffCount>100</costStuffCount>
-        <canOverlapZones>false</canOverlapZones>
-    </ThingDef>
+  <ThingDef Name="ShipwreckPropsBase" ParentName="BuildingBase" Abstract="True">
+    <designationCategory>MVO_Dev</designationCategory>
+  </ThingDef>
 
-    <ThingDef ParentName="ShipwreckPropsBase">
-        <defName>MVO_ShipwreckMast</defName>
-        <label>broken mast</label>
-        <description>TODO</description>
-        <graphicData>
-            <graphicClass>Graphic_Single</graphicClass>
-            <texPath>MapVehiclesOcean/Things/Rig/MastRootBroken</texPath>
-            <shaderType>Cutout</shaderType>
-            <drawSize>2</drawSize>
-            <drawOffset>(0,0,0.5)</drawOffset>
-            <damageData>
-                <rect>(0,0,1,1.5)</rect>
-            </damageData>
-            <shadowData>
-                <offset>(0,0,-0.3)</offset>
-                <volume>(0.75,1,0.75)</volume>
-            </shadowData>
-        </graphicData>
-        <size>(1,1)</size>
-        <rotatable>false</rotatable>
-        <passability>Impassable</passability>
-        <fillPercent>1</fillPercent>
-        <statBases>
-            <MaxHitPoints>120</MaxHitPoints>
-            <Mass>20</Mass>
-        </statBases>
-        <costList>
-            <WoodLog>75</WoodLog>
-            <Steel>10</Steel>
-        </costList>
-        <canOverlapZones>false</canOverlapZones>
-    </ThingDef>
+  <ThingDef ParentName="ShipwreckPropsBase">
+    <defName>MVO_ShipwreckHatch</defName>
+    <label>hatch</label>
+    <description>TODO</description>
+    <thingClass>Building_Crate</thingClass>
+    <altitudeLayer>FloorCoverings</altitudeLayer>
+    <graphicData>
+      <graphicClass>Graphic_Single</graphicClass>
+      <texPath>MapVehiclesOcean/Things/Hatch/Hatch</texPath>
+      <drawSize>4</drawSize>
+      <damageData>
+        <rect>(0.125,0.125,0.875,0.875)</rect>
+      </damageData>
+    </graphicData>
+    <size>(3,3)</size>
+    <rotatable>false</rotatable>
+    <statBases>
+      <MaxHitPoints>200</MaxHitPoints>
+      <Mass>20</Mass>
+    </statBases>
+    <coversFloor>true</coversFloor>
+    <stuffCategories>
+      <li>Woody</li>
+      <li>Metallic</li>
+    </stuffCategories>
+    <costStuffCount>100</costStuffCount>
+    <canOverlapZones>false</canOverlapZones>
+  </ThingDef>
 
-    <ThingDef ParentName="ShipwreckPropsBase">
-        <defName>MVO_ShipwreckBarrel</defName>
-        <label>barrel</label>
-        <description>TODO</description>
-        <thingClass>Building_Crate</thingClass>
-        <graphicData>
-            <graphicClass>Graphic_Single</graphicClass>
-            <texPath>MapVehiclesOcean/Things/Barrel/Barrel</texPath>
-            <shaderType>CutoutComplex</shaderType>
-            <drawSize>2</drawSize>
-            <damageData>
-                <rect>(0.25,0.25,0.75,0.8)</rect>
-            </damageData>
-        </graphicData>
-        <size>(1,1)</size>
-        <rotatable>false</rotatable>
-        <passability>PassThroughOnly</passability>
-        <fillPercent>0.4</fillPercent>
-        <statBases>
-            <MaxHitPoints>60</MaxHitPoints>
-            <Mass>10</Mass>
-        </statBases>
-        <costList>
-            <WoodLog>80</WoodLog>
-            <Steel>75</Steel>
-        </costList>
-        <canOverlapZones>false</canOverlapZones>
-        <colorGenerator Class="ColorGenerator_Options">
-            <options>
-                <li>
-                    <min>(90,60,40)</min>
-                    <max>(100,70,50)</max>
-                </li>
-            </options>
-        </colorGenerator>
-        <comps>
-            <li>
-                <compClass>CompColorable</compClass>
-            </li>
-        </comps>
-    </ThingDef>
+  <ThingDef ParentName="ShipwreckPropsBase">
+    <defName>MVO_ShipwreckMast</defName>
+    <label>broken mast</label>
+    <description>TODO</description>
+    <graphicData>
+      <graphicClass>Graphic_Single</graphicClass>
+      <texPath>MapVehiclesOcean/Things/Rig/MastRootBroken</texPath>
+      <shaderType>Cutout</shaderType>
+      <drawSize>2</drawSize>
+      <drawOffset>(0,0,0.5)</drawOffset>
+      <damageData>
+        <rect>(0,0,1,1.5)</rect>
+      </damageData>
+      <shadowData>
+        <offset>(0,0,-0.3)</offset>
+        <volume>(0.75,1,0.75)</volume>
+      </shadowData>
+    </graphicData>
+    <size>(1,1)</size>
+    <rotatable>false</rotatable>
+    <passability>Impassable</passability>
+    <fillPercent>1</fillPercent>
+    <statBases>
+      <MaxHitPoints>120</MaxHitPoints>
+      <Mass>20</Mass>
+    </statBases>
+    <costList>
+      <WoodLog>75</WoodLog>
+      <Steel>10</Steel>
+    </costList>
+    <canOverlapZones>false</canOverlapZones>
+  </ThingDef>
 
-    <ThingDef ParentName="ShipwreckPropsBase">
-        <defName>MVO_StoneCoffer</defName>
-        <label>coffer</label>
-        <description>TODO</description>
-        <thingClass>Building_Crate</thingClass>
-        <graphicData>
-            <graphicClass>Graphic_Multi</graphicClass>
-            <texPath>MapVehiclesOcean/Things/StoneCoffer/StoneCoffer</texPath>
-            <shaderType>CutoutComplex</shaderType>
-            <drawSize>(4,2)</drawSize>
-            <damageData>
-                <rect>(0.125,0.1,0.875,0.6)</rect>
-            </damageData>
-        </graphicData>
-        <size>(3,1)</size>
-        <passability>PassThroughOnly</passability>
-        <fillPercent>0.5</fillPercent>
-        <statBases>
-            <MaxHitPoints>320</MaxHitPoints>
-            <Mass>50</Mass>
-        </statBases>
-        <stuffCategories>
-            <li>Stony</li>
-        </stuffCategories>
-        <costStuffCount>120</costStuffCount>
-        <costList>
-            <Gold>3</Gold>
-        </costList>
-    </ThingDef>
+  <ThingDef ParentName="ShipwreckPropsBase">
+    <defName>MVO_ShipwreckBarrel</defName>
+    <label>barrel</label>
+    <description>TODO</description>
+    <thingClass>Building_Crate</thingClass>
+    <graphicData>
+      <graphicClass>Graphic_Single</graphicClass>
+      <texPath>MapVehiclesOcean/Things/Barrel/Barrel</texPath>
+      <shaderType>CutoutComplex</shaderType>
+      <drawSize>2</drawSize>
+      <damageData>
+        <rect>(0.25,0.25,0.75,0.8)</rect>
+      </damageData>
+    </graphicData>
+    <size>(1,1)</size>
+    <rotatable>false</rotatable>
+    <passability>PassThroughOnly</passability>
+    <fillPercent>0.4</fillPercent>
+    <statBases>
+      <MaxHitPoints>60</MaxHitPoints>
+      <Mass>10</Mass>
+    </statBases>
+    <costList>
+      <WoodLog>80</WoodLog>
+      <Steel>75</Steel>
+    </costList>
+    <canOverlapZones>false</canOverlapZones>
+    <colorGenerator Class="ColorGenerator_Options">
+      <options>
+        <li>
+          <min>(90,60,40)</min>
+          <max>(100,70,50)</max>
+        </li>
+      </options>
+    </colorGenerator>
+    <comps>
+      <li>
+        <compClass>CompColorable</compClass>
+      </li>
+    </comps>
+  </ThingDef>
 
-    <ThingDef ParentName="ShipwreckPropsBase">
-        <defName>MVO_ShipwreckCannon</defName>
-        <label>broken cannon</label>
-        <description>TODO</description>
-        <graphicData>
-            <graphicClass>Graphic_Multi</graphicClass>
-            <texPath>MapVehiclesOcean/Things/Cannon/CannonBroken</texPath>
-            <drawSize>2</drawSize>
-            <damageData>
-                <rectN>(0.25,0.25,0.75,1)</rectN>
-                <rectE>(0.25,0.25,1,0.75)</rectE>
-                <rectS>(0.25,0.1,0.75,0.75)</rectS>
-                <rectW>(0,0.25,0.75,0.75)</rectW>
-            </damageData>
-        </graphicData>
-        <size>(1,1)</size>
-        <passability>PassThroughOnly</passability>
-        <fillPercent>0.25</fillPercent>
-        <statBases>
-            <MaxHitPoints>180</MaxHitPoints>
-            <Mass>150</Mass>
-        </statBases>
-        <coversFloor>true</coversFloor>
-        <costList>
-            <WoodLog>80</WoodLog>
-            <Steel>2</Steel>
-        </costList>
-        <canOverlapZones>false</canOverlapZones>
-    </ThingDef>
+  <ThingDef ParentName="ShipwreckPropsBase">
+    <defName>MVO_StoneCoffer</defName>
+    <label>coffer</label>
+    <description>TODO</description>
+    <thingClass>Building_Crate</thingClass>
+    <graphicData>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <texPath>MapVehiclesOcean/Things/StoneCoffer/StoneCoffer</texPath>
+      <shaderType>CutoutComplex</shaderType>
+      <drawSize>(4,2)</drawSize>
+      <damageData>
+        <rect>(0.125,0.1,0.875,0.6)</rect>
+      </damageData>
+    </graphicData>
+    <size>(3,1)</size>
+    <passability>PassThroughOnly</passability>
+    <fillPercent>0.5</fillPercent>
+    <statBases>
+      <MaxHitPoints>320</MaxHitPoints>
+      <Mass>50</Mass>
+    </statBases>
+    <stuffCategories>
+      <li>Stony</li>
+    </stuffCategories>
+    <costStuffCount>120</costStuffCount>
+    <costList>
+      <Gold>3</Gold>
+    </costList>
+  </ThingDef>
 
-    <ThingDef ParentName="ShipwreckPropsBase">
-        <defName>MVO_Volleyball</defName>
-        <label>volleyball</label>
-        <description>It looks like a ball for playing games. A face is drawn on it.</description>
-        <graphicData>
-            <graphicClass>Graphic_Single</graphicClass>
-            <drawSize>0.8</drawSize>
-            <texPath>MapVehiclesOcean/Things/Volleyball</texPath>
-            <damageData>
-                <rect>(0,0,1,1)</rect>
-            </damageData>
-        </graphicData>
-        <size>(1,1)</size>
-        <passability>PassThroughOnly</passability>
-        <fillPercent>0.1</fillPercent>
-        <statBases>
-            <MaxHitPoints>10</MaxHitPoints>
-            <Mass>0.2</Mass>
-        </statBases>
-        <costList>
-            <Cloth>10</Cloth>
-        </costList>
-    </ThingDef>
-    
-    <ThingDef ParentName="ShipwreckPropsBase">
-        <defName>MVO_Stele</defName>
-        <label>stele</label>
-        <description>A section of an inscription showing the way to the "Island".</description>
-        <graphicData>
-            <graphicClass>Graphic_Random</graphicClass>
-            <drawSize>(2,4)</drawSize>
-            <texPath>MapVehiclesOcean/Things/Stele</texPath>
-        </graphicData>
-        <size>(2,2)</size>
-        <rotatable>false</rotatable>
-        <passability>Impassable</passability>
-        <fillPercent>1</fillPercent>
-        <castEdgeShadows>true</castEdgeShadows>
-        <staticSunShadowHeight>1</staticSunShadowHeight>
-        <statBases>
-            <MaxHitPoints>800</MaxHitPoints>
-            <Mass>450</Mass>
-        </statBases>
-        <costList>
-            <Obsidian MayRequire="Ludeon.RimWorld.Odyssey">200</Obsidian>
-        </costList>
-        <comps>
-            <li Class="CompProperties_Studiable">
-                <studyAmountToComplete>100</studyAmountToComplete>
-                <studyEnabledByDefault>false</studyEnabledByDefault>
-                <showToggleGizmo>true</showToggleGizmo>
-            </li>
-        </comps>
-    </ThingDef>
+  <ThingDef ParentName="ShipwreckPropsBase">
+    <defName>MVO_ShipwreckCannon</defName>
+    <label>broken cannon</label>
+    <description>TODO</description>
+    <graphicData>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <texPath>MapVehiclesOcean/Things/Cannon/CannonBroken</texPath>
+      <drawSize>2</drawSize>
+      <damageData>
+        <rectN>(0.25,0.25,0.75,1)</rectN>
+        <rectE>(0.25,0.25,1,0.75)</rectE>
+        <rectS>(0.25,0.1,0.75,0.75)</rectS>
+        <rectW>(0,0.25,0.75,0.75)</rectW>
+      </damageData>
+    </graphicData>
+    <size>(1,1)</size>
+    <passability>PassThroughOnly</passability>
+    <fillPercent>0.25</fillPercent>
+    <statBases>
+      <MaxHitPoints>180</MaxHitPoints>
+      <Mass>150</Mass>
+    </statBases>
+    <coversFloor>true</coversFloor>
+    <costList>
+      <WoodLog>80</WoodLog>
+      <Steel>2</Steel>
+    </costList>
+    <canOverlapZones>false</canOverlapZones>
+  </ThingDef>
 
-    <ThingDef ParentName="BaseFilth">
-        <defName>MVO_Filth_TallyMarks</defName>
-        <label>tally marks</label>
-        <graphicData>
-            <graphicClass>Graphic_Single</graphicClass>
-            <texPath>MapVehiclesOcean/Things/TallyMarks</texPath>
-            <shaderType>TransparentBelowSnow</shaderType>
-        </graphicData>
-        <statBases>
-            <Beauty>0</Beauty>
-        </statBases>
-        <filth>
-            <ignoreFilthMultiplierStat>true</ignoreFilthMultiplierStat>
-            <disappearsInDays>500~500</disappearsInDays>
-            <cleaningWorkToReduceThickness>25</cleaningWorkToReduceThickness>
-            <canFilthAttach>false</canFilthAttach>
-            <cleaningSound>Interact_CleanFilth_Dirt</cleaningSound>
-        </filth>
-    </ThingDef>
-    
-    <ThingDef Name="MVO_ShipFloorDiagonalBase" ParentName="ShipwreckPropsBase">
-        <defName>MVO_ShipFloorDiagonalA</defName>
-        <label>wood floor</label>
-        <description>Wood plank flooring for that warm, homey feeling. While it is quick to lay, it is also very flammable.</description>
-        <altitudeLayer>Floor</altitudeLayer>
-        <graphicData>
-            <graphicClass>Graphic_Multi</graphicClass>
-            <texPath>MapVehiclesOcean/Terrain/WoodShipProps/WoodShipPropsA_Diagonal</texPath>
-            <shaderType>Mote</shaderType>
-            <drawSize>2</drawSize>
-            <drawOffset>(0,0,-0.5)</drawOffset>
-        </graphicData>
-        <drawerType>MapMeshOnly</drawerType>
-        <size>(1,1)</size>
-        <useHitPoints>false</useHitPoints>
-        <coversFloor>true</coversFloor>
-        <costList>
-            <WoodLog>3</WoodLog>
-        </costList>
-        <leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
-        <canOverlapZones>false</canOverlapZones>
-        <terrainAffordanceNeeded>VMF_DeepWater</terrainAffordanceNeeded>
-        <building>
-            <isEdifice>false</isEdifice>
-        </building>
-    </ThingDef>
-    
-    <ThingDef ParentName="MVO_ShipFloorDiagonalBase">
-        <defName>MVO_ShipFloorDiagonalB</defName>
-        <graphicData>
-            <texPath>MapVehiclesOcean/Terrain/WoodShipProps/WoodShipPropsB_Diagonal</texPath>
-        </graphicData>
-    </ThingDef>
+  <ThingDef ParentName="ShipwreckPropsBase">
+    <defName>MVO_Volleyball</defName>
+    <label>volleyball</label>
+    <description>It looks like a ball for playing games. A face is drawn on it.</description>
+    <graphicData>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>0.8</drawSize>
+      <texPath>MapVehiclesOcean/Things/Volleyball</texPath>
+      <damageData>
+        <rect>(0,0,1,1)</rect>
+      </damageData>
+    </graphicData>
+    <size>(1,1)</size>
+    <passability>PassThroughOnly</passability>
+    <fillPercent>0.1</fillPercent>
+    <statBases>
+      <MaxHitPoints>10</MaxHitPoints>
+      <Mass>0.2</Mass>
+    </statBases>
+    <costList>
+      <Cloth>10</Cloth>
+    </costList>
+  </ThingDef>
 
-    <ThingDef ParentName="MVO_ShipFloorDiagonalBase">
-        <defName>MVO_ShipFloorDiagonalC</defName>
-        <graphicData>
-            <texPath>MapVehiclesOcean/Terrain/WoodShipProps/WoodShipPropsC_Diagonal</texPath>
-        </graphicData>
-    </ThingDef>
+  <ThingDef ParentName="ShipwreckPropsBase">
+    <defName>MVO_Stele</defName>
+    <label>stele</label>
+    <description>A section of an inscription showing the way to the "Island".</description>
+    <graphicData>
+      <graphicClass>Graphic_Random</graphicClass>
+      <drawSize>(2,4)</drawSize>
+      <texPath>MapVehiclesOcean/Things/Stele</texPath>
+    </graphicData>
+    <size>(2,2)</size>
+    <rotatable>false</rotatable>
+    <passability>Impassable</passability>
+    <fillPercent>1</fillPercent>
+    <castEdgeShadows>true</castEdgeShadows>
+    <staticSunShadowHeight>1</staticSunShadowHeight>
+    <statBases>
+      <MaxHitPoints>800</MaxHitPoints>
+      <Mass>450</Mass>
+    </statBases>
+    <costList>
+      <Obsidian MayRequire="Ludeon.RimWorld.Odyssey">200</Obsidian>
+    </costList>
+    <comps>
+      <li Class="CompProperties_Studiable">
+        <studyAmountToComplete>100</studyAmountToComplete>
+        <studyEnabledByDefault>false</studyEnabledByDefault>
+        <showToggleGizmo>true</showToggleGizmo>
+      </li>
+    </comps>
+  </ThingDef>
 
-    <ThingDef ParentName="MVO_ShipFloorDiagonalBase">
-        <defName>MVO_ShipFloorDiagonalAB</defName>
-        <graphicData>
-            <texPath>MapVehiclesOcean/Terrain/WoodShipProps/WoodShipPropsAB_Diagonal</texPath>
-        </graphicData>
-    </ThingDef>
+  <ThingDef ParentName="BaseFilth">
+    <defName>MVO_Filth_TallyMarks</defName>
+    <label>tally marks</label>
+    <graphicData>
+      <graphicClass>Graphic_Single</graphicClass>
+      <texPath>MapVehiclesOcean/Things/TallyMarks</texPath>
+      <shaderType>TransparentBelowSnow</shaderType>
+    </graphicData>
+    <statBases>
+      <Beauty>0</Beauty>
+    </statBases>
+    <filth>
+      <ignoreFilthMultiplierStat>true</ignoreFilthMultiplierStat>
+      <disappearsInDays>500~500</disappearsInDays>
+      <cleaningWorkToReduceThickness>25</cleaningWorkToReduceThickness>
+      <canFilthAttach>false</canFilthAttach>
+      <cleaningSound>Interact_CleanFilth_Dirt</cleaningSound>
+    </filth>
+  </ThingDef>
 
-    <ThingDef ParentName="MVO_ShipFloorDiagonalBase">
-        <defName>MVO_ShipFloorDiagonalBA</defName>
-        <graphicData>
-            <texPath>MapVehiclesOcean/Terrain/WoodShipProps/WoodShipPropsBA_Diagonal</texPath>
-        </graphicData>
-    </ThingDef>
+  <ThingDef Name="MVO_ShipFloorDiagonalBase" ParentName="ShipwreckPropsBase">
+    <defName>MVO_ShipFloorDiagonalA</defName>
+    <label>wood floor</label>
+    <description>Wood plank flooring for that warm, homey feeling. While it is quick to lay, it is also very flammable.</description>
+    <altitudeLayer>Floor</altitudeLayer>
+    <graphicData>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <texPath>MapVehiclesOcean/Terrain/WoodShipProps/WoodShipPropsA_Diagonal</texPath>
+      <shaderType>Mote</shaderType>
+      <drawSize>2</drawSize>
+      <drawOffset>(0,0,-0.5)</drawOffset>
+    </graphicData>
+    <drawerType>MapMeshOnly</drawerType>
+    <size>(1,1)</size>
+    <useHitPoints>false</useHitPoints>
+    <coversFloor>true</coversFloor>
+    <costList>
+      <WoodLog>3</WoodLog>
+    </costList>
+    <leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
+    <canOverlapZones>false</canOverlapZones>
+    <terrainAffordanceNeeded>VMF_DeepWater</terrainAffordanceNeeded>
+    <building>
+      <isEdifice>false</isEdifice>
+    </building>
+  </ThingDef>
 
-    <ThingDef ParentName="MVO_ShipFloorDiagonalBase">
-        <defName>MVO_ShipFloorDiagonalBC</defName>
-        <graphicData>
-            <texPath>MapVehiclesOcean/Terrain/WoodShipProps/WoodShipPropsBC_Diagonal</texPath>
-        </graphicData>
-    </ThingDef>
+  <ThingDef ParentName="MVO_ShipFloorDiagonalBase">
+    <defName>MVO_ShipFloorDiagonalB</defName>
+    <graphicData>
+      <texPath>MapVehiclesOcean/Terrain/WoodShipProps/WoodShipPropsB_Diagonal</texPath>
+    </graphicData>
+  </ThingDef>
 
-    <ThingDef ParentName="MVO_ShipFloorDiagonalBase">
-        <defName>MVO_ShipFloorDiagonalCB</defName>
-        <graphicData>
-            <texPath>MapVehiclesOcean/Terrain/WoodShipProps/WoodShipPropsCB_Diagonal</texPath>
-        </graphicData>
-    </ThingDef>
-    
+  <ThingDef ParentName="MVO_ShipFloorDiagonalBase">
+    <defName>MVO_ShipFloorDiagonalC</defName>
+    <graphicData>
+      <texPath>MapVehiclesOcean/Terrain/WoodShipProps/WoodShipPropsC_Diagonal</texPath>
+    </graphicData>
+  </ThingDef>
+
+  <ThingDef ParentName="MVO_ShipFloorDiagonalBase">
+    <defName>MVO_ShipFloorDiagonalAB</defName>
+    <graphicData>
+      <texPath>MapVehiclesOcean/Terrain/WoodShipProps/WoodShipPropsAB_Diagonal</texPath>
+    </graphicData>
+  </ThingDef>
+
+  <ThingDef ParentName="MVO_ShipFloorDiagonalBase">
+    <defName>MVO_ShipFloorDiagonalBA</defName>
+    <graphicData>
+      <texPath>MapVehiclesOcean/Terrain/WoodShipProps/WoodShipPropsBA_Diagonal</texPath>
+    </graphicData>
+  </ThingDef>
+
+  <ThingDef ParentName="MVO_ShipFloorDiagonalBase">
+    <defName>MVO_ShipFloorDiagonalBC</defName>
+    <graphicData>
+      <texPath>MapVehiclesOcean/Terrain/WoodShipProps/WoodShipPropsBC_Diagonal</texPath>
+    </graphicData>
+  </ThingDef>
+
+  <ThingDef ParentName="MVO_ShipFloorDiagonalBase">
+    <defName>MVO_ShipFloorDiagonalCB</defName>
+    <graphicData>
+      <texPath>MapVehiclesOcean/Terrain/WoodShipProps/WoodShipPropsCB_Diagonal</texPath>
+    </graphicData>
+  </ThingDef>
+
 </Defs>

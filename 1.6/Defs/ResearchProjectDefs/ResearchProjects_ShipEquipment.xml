@@ -1,84 +1,84 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
 
-    <ResearchProjectDef>
-        <defName>MVO_RaftPieceFloat</defName>
-        <label>floating raft piece</label>
-        <description>Learn to increase the buoyancy of rafts.</description>
-        <tab>MVO_Ocean</tab>
-        <baseCost>600</baseCost>
-        <techLevel>Industrial</techLevel>
-        <researchViewX>1.00</researchViewX>
-        <researchViewY>0.50</researchViewY>
-        <prerequisites>
-            <li>MVO_ExpandableRaft</li>
-            <li>BiofuelRefining</li>
-        </prerequisites>
-        <generalRules>
-            <rulesStrings>
-                <li>subject->raft float</li>
-                <li>subject_story->increasing the buoyancy of rafts</li>
-                <li>subject_gerund->constructing floating raft pieces</li>
-            </rulesStrings>
-        </generalRules>
-    </ResearchProjectDef>
-    
-    <ResearchProjectDef>
-        <defName>MVO_RigI</defName>
-        <label>rig I</label>
-        <description>TODO</description>
-        <tab>MVO_Ocean</tab>
-        <baseCost>550</baseCost>
-        <techLevel>Medieval</techLevel>
-        <researchViewX>1.00</researchViewX>
-        <researchViewY>1.00</researchViewY>
-        <techprintCount>1</techprintCount>
-        <techprintCommonality>0.3</techprintCommonality>
-        <techprintMarketValue>400</techprintMarketValue>
-        <heldByFactionCategoryTags>
-            <li>Empire</li>
-            <li>Ancient</li>
-            <li>Outlander</li>
-        </heldByFactionCategoryTags>
-        <prerequisites>
-            <li>MVO_ExpandableRaft</li>
-        </prerequisites>
-        <generalRules>
-            <rulesStrings>
-                <li>subject->rig</li>
-                <li>subject_story->TODO</li>
-                <li>subject_gerund->TODO</li>
-            </rulesStrings>
-        </generalRules>
-    </ResearchProjectDef>
+  <ResearchProjectDef>
+    <defName>MVO_RaftPieceFloat</defName>
+    <label>floating raft piece</label>
+    <description>Learn to increase the buoyancy of rafts.</description>
+    <tab>MVO_Ocean</tab>
+    <baseCost>600</baseCost>
+    <techLevel>Industrial</techLevel>
+    <researchViewX>1.00</researchViewX>
+    <researchViewY>0.50</researchViewY>
+    <prerequisites>
+      <li>MVO_ExpandableRaft</li>
+      <li>BiofuelRefining</li>
+    </prerequisites>
+    <generalRules>
+      <rulesStrings>
+        <li>subject->raft float</li>
+        <li>subject_story->increasing the buoyancy of rafts</li>
+        <li>subject_gerund->constructing floating raft pieces</li>
+      </rulesStrings>
+    </generalRules>
+  </ResearchProjectDef>
 
-    <ResearchProjectDef>
-        <defName>MVO_RigII</defName>
-        <label>rig II</label>
-        <description>TODO</description>
-        <tab>MVO_Ocean</tab>
-        <baseCost>650</baseCost>
-        <techLevel>Medieval</techLevel>
-        <researchViewX>2.00</researchViewX>
-        <researchViewY>1.00</researchViewY>
-        <techprintCount>1</techprintCount>
-        <techprintCommonality>0.6</techprintCommonality>
-        <techprintMarketValue>800</techprintMarketValue>
-        <heldByFactionCategoryTags>
-            <li>Empire</li>
-            <li>Ancient</li>
-            <li>Outlander</li>
-        </heldByFactionCategoryTags>
-        <prerequisites>
-            <li>MVO_RigI</li>
-        </prerequisites>
-        <generalRules>
-            <rulesStrings>
-                <li>subject->rig</li>
-                <li>subject_story->TODO</li>
-                <li>subject_gerund->TODO</li>
-            </rulesStrings>
-        </generalRules>
-    </ResearchProjectDef>
-    
+  <ResearchProjectDef>
+    <defName>MVO_RigI</defName>
+    <label>rig I</label>
+    <description>TODO</description>
+    <tab>MVO_Ocean</tab>
+    <baseCost>550</baseCost>
+    <techLevel>Medieval</techLevel>
+    <researchViewX>1.00</researchViewX>
+    <researchViewY>1.00</researchViewY>
+    <techprintCount>1</techprintCount>
+    <techprintCommonality>0.3</techprintCommonality>
+    <techprintMarketValue>400</techprintMarketValue>
+    <heldByFactionCategoryTags>
+      <li>Empire</li>
+      <li>Ancient</li>
+      <li>Outlander</li>
+    </heldByFactionCategoryTags>
+    <prerequisites>
+      <li>MVO_ExpandableRaft</li>
+    </prerequisites>
+    <generalRules>
+      <rulesStrings>
+        <li>subject->rig</li>
+        <li>subject_story->TODO</li>
+        <li>subject_gerund->TODO</li>
+      </rulesStrings>
+    </generalRules>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+    <defName>MVO_RigII</defName>
+    <label>rig II</label>
+    <description>TODO</description>
+    <tab>MVO_Ocean</tab>
+    <baseCost>650</baseCost>
+    <techLevel>Medieval</techLevel>
+    <researchViewX>2.00</researchViewX>
+    <researchViewY>1.00</researchViewY>
+    <techprintCount>1</techprintCount>
+    <techprintCommonality>0.6</techprintCommonality>
+    <techprintMarketValue>800</techprintMarketValue>
+    <heldByFactionCategoryTags>
+      <li>Empire</li>
+      <li>Ancient</li>
+      <li>Outlander</li>
+    </heldByFactionCategoryTags>
+    <prerequisites>
+      <li>MVO_RigI</li>
+    </prerequisites>
+    <generalRules>
+      <rulesStrings>
+        <li>subject->rig</li>
+        <li>subject_story->TODO</li>
+        <li>subject_gerund->TODO</li>
+      </rulesStrings>
+    </generalRules>
+  </ResearchProjectDef>
+
 </Defs>

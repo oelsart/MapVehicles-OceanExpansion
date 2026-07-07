@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
-  
+
   <ShaderTypeDef>
     <defName>MVO_SeaCreature</defName>
     <shaderPath>MapVehiclesOcean/SeaCreature</shaderPath>
   </ShaderTypeDef>
-  
+
 </Defs>

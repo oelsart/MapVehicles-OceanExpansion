@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
 
-    <MVO_ShipwreckHostileThreat>There are ships moving around. These are likely hostile.</MVO_ShipwreckHostileThreat>
-    
-    <MVO_TradeGoods>{0}'s {1}</MVO_TradeGoods>
+  <MVO_ShipwreckHostileThreat>There are ships moving around. These are likely hostile.</MVO_ShipwreckHostileThreat>
+
+  <MVO_TradeGoods>{0}'s {1}</MVO_TradeGoods>
 
 </LanguageData>

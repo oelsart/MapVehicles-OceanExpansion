@@ -1,178 +1,178 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
-    
-    <ThingSetMakerDef>
-        <defName>MVO_ShipwreckCargo</defName>
-        <debugParams>
-            <totalMarketValueRange>4000~6000</totalMarketValueRange>
-        </debugParams>
-        <root Class="MapVehiclesOcean.ThingSetMaker_SumWithMarketValueWeight">
+
+  <ThingSetMakerDef>
+    <defName>MVO_ShipwreckCargo</defName>
+    <debugParams>
+      <totalMarketValueRange>4000~6000</totalMarketValueRange>
+    </debugParams>
+    <root Class="MapVehiclesOcean.ThingSetMaker_SumWithMarketValueWeight">
+      <options>
+        <li> <!-- Basic resources -->
+          <thingSetMaker Class="ThingSetMaker_RandomOption">
             <options>
-                <li> <!-- Basic resources -->
-                    <thingSetMaker Class="ThingSetMaker_RandomOption">
-                        <options>
-                            <li>
-                                <weight>1</weight>
-                                <thingSetMaker Class="ThingSetMaker_MarketValue">
-                                    <fixedParams>
-                                        <filter>
-                                            <thingDefs>
-                                                <li>WoodLog</li>
-                                                <li>Steel</li>
-                                            </thingDefs>
-                                        </filter>
-                                    </fixedParams>
-                                </thingSetMaker>
-                            </li>
-                            <li>
-                                <weight>1</weight>
-                                <thingSetMaker Class="ThingSetMaker_MarketValue">
-                                    <fixedParams>
-                                        <filter>
-                                            <categories>
-                                                <li>ResourcesRaw</li>
-                                            </categories>
-                                            <disallowedCategories>
-                                                <li>PlantMatter</li>
-                                            </disallowedCategories>
-                                        </filter>
-                                    </fixedParams>
-                                </thingSetMaker>
-                            </li>
-                            <li>
-                                <weight>0.65</weight>
-                                <thingSetMaker Class="ThingSetMaker_MarketValue">
-                                    <fixedParams>
-                                        <filter>
-                                            <categories>
-                                                <li>Textiles</li>
-                                                <li>Leathers</li>
-                                                <li>Wools</li>
-                                            </categories>
-                                        </filter>
-                                    </fixedParams>
-                                </thingSetMaker>
-                            </li>
-                            <li>
-                                <weight>0.5</weight>
-                                <thingSetMaker Class="ThingSetMaker_MarketValue">
-                                    <fixedParams>
-                                        <filter>
-                                            <categories>
-                                                <li>Items</li>
-                                            </categories>
-                                            <disallowedCategories>
-                                                <li>Unfinished</li>
-                                                <li>Artifacts</li>
-                                                <li>InertRelics</li>
-                                            </disallowedCategories>
-                                        </filter>
-                                    </fixedParams>
-                                </thingSetMaker>
-                            </li>
-                            <li>
-                                <weight>0.8</weight>
-                                <thingSetMaker Class="ThingSetMaker_MarketValue">
-                                    <fixedParams>
-                                        <filter>
-                                            <categories>
-                                                <li>BuildingsArt</li>
-                                                <li>BuildingsFurniture</li>
-                                                <li>BuildingsJoy</li>
-                                            </categories>
-                                        </filter>
-                                    </fixedParams>
-                                </thingSetMaker>
-                            </li>
-                            <li>
-                                <weight>0.75</weight>
-                                <thingSetMaker Class="ThingSetMaker_MarketValue">
-                                    <fixedParams>
-                                        <filter>
-                                            <categories>
-                                                <li>Weapons</li>
-                                                <li>ApparelArmor</li>
-                                                <li>ArmorHeadgear</li>
-                                                <li>ApparelUtility</li>
-                                                <li>MortarShells</li>
-                                            </categories>
-                                        </filter>
-                                    </fixedParams>
-                                </thingSetMaker>
-                            </li>
-                        </options>
-                    </thingSetMaker>
-                </li>
-                <li> <!-- Necessities -->
-                    <marketValueWeightRange>0.1~0.3</marketValueWeightRange>
-                    <thingSetMaker Class="ThingSetMaker_MarketValue">
-                        <fixedParams>
-                            <filter>
-                                <categories>
-                                    <li>FoodMeals</li>
-                                    <li>Medicine</li>
-                                </categories>
-                            </filter>
-                        </fixedParams>
-                    </thingSetMaker>
-                </li>
-                <li> <!-- Treasures -->
-                    <marketValueWeightRange>0.1~0.4</marketValueWeightRange>
-                    <chance>0.35</chance>
-                    <thingSetMaker Class="ThingSetMaker_RandomOption">
-                        <options>
-                            <li>
-                                <weight>0.6</weight>
-                                <thingSetMaker Class="ThingSetMaker_Count">
-                                    <fixedParams>
-                                        <countRange>1~8</countRange>
-                                        <filter>
-                                            <thingDefs>
-                                                <li>Skull</li>
-                                            </thingDefs>
-                                        </filter>
-                                    </fixedParams>
-                                </thingSetMaker>
-                            </li>
-                            <li MayRequire="Ludeon.RimWorld.Royalty">
-                                <weight>0.4</weight>
-                                <thingSetMaker Class="ThingSetMaker_Count">
-                                    <fixedParams>
-                                        <countRange>1~1</countRange>
-                                        <filter>
-                                            <categories>
-                                                <li>MVO_Techprints</li>
-                                            </categories>
-                                        </filter>
-                                    </fixedParams>
-                                </thingSetMaker>
-                            </li>
-                            <li MayRequire="Ludeon.RimWorld.Odyssey">
-                                <weight>0.4</weight>
-                                <thingSetMaker Class="ThingSetMaker_UniqueWeapon">
-                                    <fixedParams>
-                                        <countRange>1~3</countRange>
-                                    </fixedParams>
-                                </thingSetMaker>
-                            </li>
-                            <li MayRequire="Ludeon.RimWorld.Anomaly">
-                                <weight>0.05</weight>
-                                <thingSetMaker Class="ThingSetMaker_Count">
-                                    <fixedParams>
-                                        <countRange>1~1</countRange>
-                                        <filter>
-                                            <thingDefs>
-                                                <li>GoldenCube</li>
-                                            </thingDefs>
-                                        </filter>
-                                    </fixedParams>
-                                </thingSetMaker>
-                            </li>
-                        </options>
-                    </thingSetMaker>
-                </li>
+              <li>
+                <weight>1</weight>
+                <thingSetMaker Class="ThingSetMaker_MarketValue">
+                  <fixedParams>
+                    <filter>
+                      <thingDefs>
+                        <li>WoodLog</li>
+                        <li>Steel</li>
+                      </thingDefs>
+                    </filter>
+                  </fixedParams>
+                </thingSetMaker>
+              </li>
+              <li>
+                <weight>1</weight>
+                <thingSetMaker Class="ThingSetMaker_MarketValue">
+                  <fixedParams>
+                    <filter>
+                      <categories>
+                        <li>ResourcesRaw</li>
+                      </categories>
+                      <disallowedCategories>
+                        <li>PlantMatter</li>
+                      </disallowedCategories>
+                    </filter>
+                  </fixedParams>
+                </thingSetMaker>
+              </li>
+              <li>
+                <weight>0.65</weight>
+                <thingSetMaker Class="ThingSetMaker_MarketValue">
+                  <fixedParams>
+                    <filter>
+                      <categories>
+                        <li>Textiles</li>
+                        <li>Leathers</li>
+                        <li>Wools</li>
+                      </categories>
+                    </filter>
+                  </fixedParams>
+                </thingSetMaker>
+              </li>
+              <li>
+                <weight>0.5</weight>
+                <thingSetMaker Class="ThingSetMaker_MarketValue">
+                  <fixedParams>
+                    <filter>
+                      <categories>
+                        <li>Items</li>
+                      </categories>
+                      <disallowedCategories>
+                        <li>Unfinished</li>
+                        <li>Artifacts</li>
+                        <li>InertRelics</li>
+                      </disallowedCategories>
+                    </filter>
+                  </fixedParams>
+                </thingSetMaker>
+              </li>
+              <li>
+                <weight>0.8</weight>
+                <thingSetMaker Class="ThingSetMaker_MarketValue">
+                  <fixedParams>
+                    <filter>
+                      <categories>
+                        <li>BuildingsArt</li>
+                        <li>BuildingsFurniture</li>
+                        <li>BuildingsJoy</li>
+                      </categories>
+                    </filter>
+                  </fixedParams>
+                </thingSetMaker>
+              </li>
+              <li>
+                <weight>0.75</weight>
+                <thingSetMaker Class="ThingSetMaker_MarketValue">
+                  <fixedParams>
+                    <filter>
+                      <categories>
+                        <li>Weapons</li>
+                        <li>ApparelArmor</li>
+                        <li>ArmorHeadgear</li>
+                        <li>ApparelUtility</li>
+                        <li>MortarShells</li>
+                      </categories>
+                    </filter>
+                  </fixedParams>
+                </thingSetMaker>
+              </li>
             </options>
-        </root>
-    </ThingSetMakerDef>
-    
+          </thingSetMaker>
+        </li>
+        <li> <!-- Necessities -->
+          <marketValueWeightRange>0.1~0.3</marketValueWeightRange>
+          <thingSetMaker Class="ThingSetMaker_MarketValue">
+            <fixedParams>
+              <filter>
+                <categories>
+                  <li>FoodMeals</li>
+                  <li>Medicine</li>
+                </categories>
+              </filter>
+            </fixedParams>
+          </thingSetMaker>
+        </li>
+        <li> <!-- Treasures -->
+          <marketValueWeightRange>0.1~0.4</marketValueWeightRange>
+          <chance>0.35</chance>
+          <thingSetMaker Class="ThingSetMaker_RandomOption">
+            <options>
+              <li>
+                <weight>0.6</weight>
+                <thingSetMaker Class="ThingSetMaker_Count">
+                  <fixedParams>
+                    <countRange>1~8</countRange>
+                    <filter>
+                      <thingDefs>
+                        <li>Skull</li>
+                      </thingDefs>
+                    </filter>
+                  </fixedParams>
+                </thingSetMaker>
+              </li>
+              <li MayRequire="Ludeon.RimWorld.Royalty">
+                <weight>0.4</weight>
+                <thingSetMaker Class="ThingSetMaker_Count">
+                  <fixedParams>
+                    <countRange>1~1</countRange>
+                    <filter>
+                      <categories>
+                        <li>MVO_Techprints</li>
+                      </categories>
+                    </filter>
+                  </fixedParams>
+                </thingSetMaker>
+              </li>
+              <li MayRequire="Ludeon.RimWorld.Odyssey">
+                <weight>0.4</weight>
+                <thingSetMaker Class="ThingSetMaker_UniqueWeapon">
+                  <fixedParams>
+                    <countRange>1~3</countRange>
+                  </fixedParams>
+                </thingSetMaker>
+              </li>
+              <li MayRequire="Ludeon.RimWorld.Anomaly">
+                <weight>0.05</weight>
+                <thingSetMaker Class="ThingSetMaker_Count">
+                  <fixedParams>
+                    <countRange>1~1</countRange>
+                    <filter>
+                      <thingDefs>
+                        <li>GoldenCube</li>
+                      </thingDefs>
+                    </filter>
+                  </fixedParams>
+                </thingSetMaker>
+              </li>
+            </options>
+          </thingSetMaker>
+        </li>
+      </options>
+    </root>
+  </ThingSetMakerDef>
+
 </Defs>

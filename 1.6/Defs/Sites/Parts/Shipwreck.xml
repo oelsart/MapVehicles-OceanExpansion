@@ -1,30 +1,30 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-    <SitePartDef>
-        <defName>MVO_Shipwreck</defName>
-        <label>shipwreck</label>
-        <workerClass>MapVehiclesOcean.SitePartWorker_GeneratedThings</workerClass>
-        <description>Remains of shipwrecks.</description>
-        <siteTexture>World/WorldObjects/Sites/GenericSite</siteTexture>
-        <expandingIconTexture>MapVehiclesOcean/World/Shipwreck</expandingIconTexture>
-        <forceExitAndRemoveMapCountdownDurationDays>11</forceExitAndRemoveMapCountdownDurationDays>
-        <mainPartAllThreatsLabel>Hostile activity detected.</mainPartAllThreatsLabel>
-        <tags>
-            <li>MVO_Shipwreck</li>
-        </tags>
-    </SitePartDef>
+  <SitePartDef>
+    <defName>MVO_Shipwreck</defName>
+    <label>shipwreck</label>
+    <workerClass>MapVehiclesOcean.SitePartWorker_GeneratedThings</workerClass>
+    <description>Remains of shipwrecks.</description>
+    <siteTexture>World/WorldObjects/Sites/GenericSite</siteTexture>
+    <expandingIconTexture>MapVehiclesOcean/World/Shipwreck</expandingIconTexture>
+    <forceExitAndRemoveMapCountdownDurationDays>11</forceExitAndRemoveMapCountdownDurationDays>
+    <mainPartAllThreatsLabel>Hostile activity detected.</mainPartAllThreatsLabel>
+    <tags>
+      <li>MVO_Shipwreck</li>
+    </tags>
+  </SitePartDef>
 
-    <GenStepDef>
-        <defName>MVO_Shipwreck</defName>
-        <linkWithSite>MVO_Shipwreck</linkWithSite>
-        <order>900</order>
-        <genStep Class="MapVehiclesOcean.GenStep_Shipwreck">
-            <wrecks>
-                <li>MVO_ShipwreckA</li>
-            </wrecks>
-            <nearMapCenter>true</nearMapCenter>
-        </genStep>
-    </GenStepDef>
+  <GenStepDef>
+    <defName>MVO_Shipwreck</defName>
+    <linkWithSite>MVO_Shipwreck</linkWithSite>
+    <order>900</order>
+    <genStep Class="MapVehiclesOcean.GenStep_Shipwreck">
+      <wrecks>
+        <li>MVO_ShipwreckA</li>
+      </wrecks>
+      <nearMapCenter>true</nearMapCenter>
+    </genStep>
+  </GenStepDef>
 
 </Defs>

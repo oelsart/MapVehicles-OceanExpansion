@@ -7,5 +7,5 @@ namespace MapVehiclesOcean;
 [UsedImplicitly(ImplicitUseTargetFlags.WithMembers)]
 public class RoomPart_TerrainDef : RoomPartDef
 {
-    public TerrainDef terrain;
+  public TerrainDef terrain;
 }

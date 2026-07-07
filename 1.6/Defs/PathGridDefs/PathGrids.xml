@@ -7,5 +7,5 @@
     <flying>false</flying>
     <workerType>MapVehiclesOcean.PathGrid_Aquatic</workerType>
   </PathGridDef>
-  
+
 </Defs>

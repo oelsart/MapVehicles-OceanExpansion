@@ -21,14 +21,6 @@ Shader "MapVehiclesOcean/SeaCreature"
         {
             Blend DstColor OneMinusSrcAlpha
 			ZWrite Off
-//			Stencil
-//			{
-//				Ref 138
-//				ReadMask 138
-//				WriteMask 138
-//				Comp NotEqual
-//				Pass Replace
-//			}     
 
             CGPROGRAM
 			#pragma vertex vert
@@ -63,12 +55,22 @@ Shader "MapVehiclesOcean/SeaCreature"
 
 			fixed4 frag(v2f i) : SV_Target
 			{
-				float wave = sin(_GameSeconds * 7.5 + i.uv.y * 100) * 0.05 * (i.uv.x - 0.5);
+			    float aSum = 0;
+			    float bSum = 0;
+			    for (int j = -1; j < 2; j++)
+			        for (int k = -1; k < 2; k++)
+			        {
+			            float2 uv = float2(i.uv.x + 0.02 * j, i.uv.y + 0.001 * k);
+			            aSum += 1 - tex2D(_MainTex, uv).a;
+			            bSum += tex2D(_MaskTex, uv).b;
+			        }
+			    
+				float wave = sin(_GameSeconds * 7.5 + i.uv.y * 100) * 0.03 * aSum / 9 * bSum / 9;
 				float2 uv = i.uv;
-				uv.x += wave;
+			    uv.x += wave;
 				float4 mainTexColor = tex2D(_MainTex, uv);
 				float4 maskTexColor = tex2D(_MaskTex, uv);
-				clip(mainTexColor.a - 0.01);
+			    clip(mainTexColor.a - 0.01);
 				
 				float u = maskTexColor.r;
 				float v = maskTexColor.g;

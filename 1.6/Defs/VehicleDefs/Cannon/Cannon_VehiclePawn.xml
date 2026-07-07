@@ -1,140 +1,140 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 
 <Defs>
-	<Vehicles.VehicleDef ParentName="BaseVehiclePawn">
-		<defName>MVO_Cannon</defName>
-		<label>cannon</label>
-		<description>TODO</description>
+  <Vehicles.VehicleDef ParentName="BaseVehiclePawn">
+    <defName>MVO_Cannon</defName>
+    <label>cannon</label>
+    <description>TODO</description>
 
-		<graphicData>
-			<texPath>MapVehiclesOcean/Things/Cannon/Cannon</texPath>
-			<graphicClass>Vehicles.Graphic_Vehicle</graphicClass>
-			<shaderType>CutoutComplexPattern</shaderType>
-			<drawSize>(2,2)</drawSize>
-			<pattern>VMF_RGBMask</pattern>
-			<color>(86,57,23)</color>
-			<colorTwo>(74,74,74)</colorTwo>
-		</graphicData>
+    <graphicData>
+      <texPath>MapVehiclesOcean/Things/Cannon/Cannon</texPath>
+      <graphicClass>Vehicles.Graphic_Vehicle</graphicClass>
+      <shaderType>CutoutComplexPattern</shaderType>
+      <drawSize>(2,2)</drawSize>
+      <pattern>VMF_RGBMask</pattern>
+      <color>(86,57,23)</color>
+      <colorTwo>(74,74,74)</colorTwo>
+    </graphicData>
 
-		<fillPercent>0.25</fillPercent>
+    <fillPercent>0.25</fillPercent>
 
-		<buildDef>MVO_Cannon_Blueprint</buildDef>
+    <buildDef>MVO_Cannon_Blueprint</buildDef>
 
-		<size>(1,1)</size>
+    <size>(1,1)</size>
 
-		<vehicleCategory>Combat</vehicleCategory>
-		<techLevel>Medieval</techLevel>
-		<vehicleType>Land</vehicleType>
+    <vehicleCategory>Combat</vehicleCategory>
+    <techLevel>Medieval</techLevel>
+    <vehicleType>Land</vehicleType>
 
-		<statBases>
-			<Flammability>0.5</Flammability>
-			<MarketValue>150</MarketValue>
-		</statBases>
+    <statBases>
+      <Flammability>0.5</Flammability>
+      <MarketValue>150</MarketValue>
+    </statBases>
 
-		<vehicleStats>
-			<Mass>150</Mass>
-			<MoveSpeed>0.5</MoveSpeed>
-			<CargoCapacity>100</CargoCapacity>
-			<RepairRate>1.75</RepairRate>
-		</vehicleStats>
+    <vehicleStats>
+      <Mass>150</Mass>
+      <MoveSpeed>0.5</MoveSpeed>
+      <CargoCapacity>100</CargoCapacity>
+      <RepairRate>1.75</RepairRate>
+    </vehicleStats>
 
-		<race>
-			<baseBodySize>1.5</baseBodySize>
-		</race>
-		
-		<properties>
-			<customRoadCosts AssignDefaults = "0.4"/>
-			<visibilityWeight>4.5</visibilityWeight>
+    <race>
+      <baseBodySize>1.5</baseBodySize>
+    </race>
 
-			<vehicleJobLimitations>
-				<li>(RepairVehicle, 1)</li>
-			</vehicleJobLimitations>
-			
-			<roles>
-				<li>
-					<key>gunner</key>
-					<label>Gunner</label>
-					<slots>1</slots>
-					<slotsToOperate>1</slotsToOperate>
-					
-					<handlingTypes>Movement, Turret</handlingTypes>
-					<turretIds>
-						<li>cannonturret</li>
-					</turretIds>
-					<hitbox>
-						<cells>
-							<li>(0, 0)</li>
-						</cells>
-					</hitbox>
-					<pawnRenderer>
-						<drawOffsetNorth>(0,0,-0.75)</drawOffsetNorth>
-						<drawOffsetSouth>(0,0,0.75)</drawOffsetSouth>
-						<drawOffsetEast>(-0.75,0,0)</drawOffsetEast>
-						<layerNorth>0</layerNorth>
-						<layerSouth>-10</layerSouth>
-					</pawnRenderer>
-				</li>
-			</roles>
-		</properties>
+    <properties>
+      <customRoadCosts AssignDefaults="0.4"/>
+      <visibilityWeight>4.5</visibilityWeight>
 
-		<components>
-			<li>
-				<key>Barrel</key>
-				<label>Barrel</label>
-				<health>160</health>
-				<depth>External</depth>
-				<armor>
-					<ArmorRating_Blunt>0.75</ArmorRating_Blunt>
-					<ArmorRating_Sharp>0.9</ArmorRating_Sharp>
-					<ArmorRating_Heat>0.3</ArmorRating_Heat>
-				</armor>
-				<hitbox>
-					<side>Body</side>
-				</hitbox>
-			</li>
-			<li>
-				<key>Carriage</key>
-				<label>Carriage</label>
-				<health>60</health>
-				<depth>External</depth>
-				<armor>
-					<ArmorRating_Blunt>0.2</ArmorRating_Blunt>
-					<ArmorRating_Sharp>0.2</ArmorRating_Sharp>
-				</armor>
-				<hitbox>
-					<side>Body</side>
-				</hitbox>
-				<categories>
-					<li>MoveSpeed</li>
-				</categories>
-			</li>
-		</components>
+      <vehicleJobLimitations>
+        <li>(RepairVehicle, 1)</li>
+      </vehicleJobLimitations>
 
-		<comps>
-			<li Class="Vehicles.CompProperties_VehicleTurrets">
-				<deployTime>0.5</deployTime>
-				<turrets>
-					<li Class="MapVehiclesOcean.VehicleTurret_Cannon">
-						<turretDef>MVO_Cannon_Turret</turretDef>
-						<gizmoLabel>Cannon</gizmoLabel>
-						<aimPieOffset>(0, 1)</aimPieOffset>
-						<angleRestricted>(0,359)</angleRestricted>
-						<key>cannonturret</key>
-						<component>
-							<key>Barrel</key>
-							<healthPercent>0.5</healthPercent>
-						</component>
-						<deployment>Deployed</deployment> 
-						<targeting>Thing,Pawn,Cell</targeting>
-						<autoTargeting>true</autoTargeting>
-						<manualTargeting>true</manualTargeting>
-					</li>
-				</turrets>
-			</li>
-		</comps>
-		
-		<modExtensions>
-			<li Class="VehicleMapFramework.VehicleHumanPowered"/>
-		</modExtensions>
-	</Vehicles.VehicleDef>
+      <roles>
+        <li>
+          <key>gunner</key>
+          <label>Gunner</label>
+          <slots>1</slots>
+          <slotsToOperate>1</slotsToOperate>
+
+          <handlingTypes>Movement, Turret</handlingTypes>
+          <turretIds>
+            <li>cannonturret</li>
+          </turretIds>
+          <hitbox>
+            <cells>
+              <li>(0, 0)</li>
+            </cells>
+          </hitbox>
+          <pawnRenderer>
+            <drawOffsetNorth>(0,0,-0.75)</drawOffsetNorth>
+            <drawOffsetSouth>(0,0,0.75)</drawOffsetSouth>
+            <drawOffsetEast>(-0.75,0,0)</drawOffsetEast>
+            <layerNorth>0</layerNorth>
+            <layerSouth>-10</layerSouth>
+          </pawnRenderer>
+        </li>
+      </roles>
+    </properties>
+
+    <components>
+      <li>
+        <key>Barrel</key>
+        <label>Barrel</label>
+        <health>160</health>
+        <depth>External</depth>
+        <armor>
+          <ArmorRating_Blunt>0.75</ArmorRating_Blunt>
+          <ArmorRating_Sharp>0.9</ArmorRating_Sharp>
+          <ArmorRating_Heat>0.3</ArmorRating_Heat>
+        </armor>
+        <hitbox>
+          <side>Body</side>
+        </hitbox>
+      </li>
+      <li>
+        <key>Carriage</key>
+        <label>Carriage</label>
+        <health>60</health>
+        <depth>External</depth>
+        <armor>
+          <ArmorRating_Blunt>0.2</ArmorRating_Blunt>
+          <ArmorRating_Sharp>0.2</ArmorRating_Sharp>
+        </armor>
+        <hitbox>
+          <side>Body</side>
+        </hitbox>
+        <categories>
+          <li>MoveSpeed</li>
+        </categories>
+      </li>
+    </components>
+
+    <comps>
+      <li Class="Vehicles.CompProperties_VehicleTurrets">
+        <deployTime>0.5</deployTime>
+        <turrets>
+          <li Class="MapVehiclesOcean.VehicleTurret_Cannon">
+            <turretDef>MVO_Cannon_Turret</turretDef>
+            <gizmoLabel>Cannon</gizmoLabel>
+            <aimPieOffset>(0, 1)</aimPieOffset>
+            <angleRestricted>(0,359)</angleRestricted>
+            <key>cannonturret</key>
+            <component>
+              <key>Barrel</key>
+              <healthPercent>0.5</healthPercent>
+            </component>
+            <deployment>Deployed</deployment>
+            <targeting>Thing,Pawn,Cell</targeting>
+            <autoTargeting>true</autoTargeting>
+            <manualTargeting>true</manualTargeting>
+          </li>
+        </turrets>
+      </li>
+    </comps>
+
+    <modExtensions>
+      <li Class="VehicleMapFramework.VehicleHumanPowered"/>
+    </modExtensions>
+  </Vehicles.VehicleDef>
 </Defs>

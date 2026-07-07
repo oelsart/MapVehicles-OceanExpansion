@@ -1,34 +1,35 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
 
-    <RecipeDef>
-        <defName>MVO_RenderSeaFats</defName>
-        <label>render sea fats</label>
-        <description>Extract oils from raw shark or squid meat by rendering down the tissues. The resulting fats are highly flammable and can be processed into chemfuel.</description>
-        <jobString>Rendering sea fats.</jobString>
-        <effectWorking>Cremate</effectWorking>
-        <soundWorking>Recipe_Cremate</soundWorking>
-        <workAmount>2400</workAmount>
-        <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
-        <allowMixingIngredients>true</allowMixingIngredients>
-        <ingredients>
-            <li>
-                <filter>
-                    <thingDefs>
-                        <li>Meat_MVO_Shark</li>
-<!--                        <li>Meat_MVO_Kraken</li>-->
-                    </thingDefs>
-                </filter>
-                <count>40</count>
-            </li>
-        </ingredients>
-        <products>
-            <Chemfuel>35</Chemfuel>
-        </products>
-        <researchPrerequisite>MVO_SeaFatsRendering</researchPrerequisite>
-        <recipeUsers>
-            <li>BiofuelRefinery</li>
-        </recipeUsers>
-    </RecipeDef>
+  <RecipeDef>
+    <defName>MVO_RenderSeaFats</defName>
+    <label>render sea fats</label>
+    <description>Extract oils from raw shark or squid meat by rendering down the tissues.
+The resulting fats are highly flammable and can be processed into chemfuel.</description>
+    <jobString>Rendering sea fats.</jobString>
+    <effectWorking>Cremate</effectWorking>
+    <soundWorking>Recipe_Cremate</soundWorking>
+    <workAmount>2400</workAmount>
+    <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+    <allowMixingIngredients>true</allowMixingIngredients>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Meat_MVO_Shark</li>
+            <li>Meat_MVO_Kraken</li>
+          </thingDefs>
+        </filter>
+        <count>40</count>
+      </li>
+    </ingredients>
+    <products>
+      <Chemfuel>35</Chemfuel>
+    </products>
+    <researchPrerequisite>MVO_SeaFatsRendering</researchPrerequisite>
+    <recipeUsers>
+      <li>BiofuelRefinery</li>
+    </recipeUsers>
+  </RecipeDef>
 
 </Defs>

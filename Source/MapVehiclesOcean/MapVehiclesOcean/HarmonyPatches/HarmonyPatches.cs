@@ -11,33 +11,33 @@ namespace MapVehiclesOcean.HarmonyPatches;
 [StaticConstructorOnStartup]
 public static class HarmonyPatches
 {
-    private const string HarmonyId = "OELS.MapVehiclesOcean";
-    
-    static HarmonyPatches()
-    {
-        new Harmony(HarmonyId).PatchAll();
-    }
+  private const string HarmonyId = "OELS.MapVehiclesOcean";
+
+  static HarmonyPatches()
+  {
+    new Harmony(HarmonyId).PatchAll();
+  }
 }
 
 [HarmonyPatch(typeof(WaterBodyTracker), nameof(WaterBodyTracker.Notify_Fished))]
 public static class Patch_WaterBodyTracker_Notify_Fished
 {
-    public static void Postfix(IntVec3 c, float amount, Map ___map)
-    {
-        if (___map.IsVehicleMapOf(out var vehicle) && vehicle.Spawned)
-            c.ToBaseMapCoord(vehicle).GetWaterBody(vehicle.Map)?.Population -= amount;
-    }
+  public static void Postfix(IntVec3 c, float amount, Map ___map)
+  {
+    if (___map.IsVehicleMapOf(out var vehicle) && vehicle.Spawned)
+      c.ToBaseMapCoord(vehicle).GetWaterBody(vehicle.Map)?.Population -= amount;
+  }
 }
 
 // 島タイルでCampした時用
 [HarmonyPatch(typeof(EnterMapUtilityVehicles), nameof(EnterMapUtilityVehicles.EnterMap))]
 public static class Patch_EnterMapUtilityVehicles_EnterMap
 {
-    public static void Prefix(Map map, ref EnterMapUtilityVehicles.SpawnParams spawnParams)
+  public static void Prefix(Map map, ref EnterMapUtilityVehicles.SpawnParams spawnParams)
+  {
+    if (map.Tile.Tile.WaterCovered)
     {
-        if (map.Tile.Tile.WaterCovered)
-        {
-            spawnParams.enterMode = CaravanEnterMode.Edge;
-        }
+      spawnParams.enterMode = CaravanEnterMode.Edge;
     }
+  }
 }

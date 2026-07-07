@@ -1,25 +1,6 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 
 <Defs>
-
-  <BodyPartDef>
-    <defName>MVO_SharkBody</defName>
-    <label>body</label>
-    <hitPoints>50</hitPoints>
-    <skinCovered>true</skinCovered>
-    <executionPartPriority>500</executionPartPriority>
-  </BodyPartDef>
-
-  <BodyPartDef>
-    <defName>MVO_SharkHead</defName>
-    <label>head</label>
-    <hitPoints>40</hitPoints>
-    <skinCovered>true</skinCovered>
-    <executionPartPriority>500</executionPartPriority>
-    <tags>
-      <li>HearingSource</li>
-    </tags>
-  </BodyPartDef>
 
   <BodyPartDef>
     <defName>MVO_Gill</defName>

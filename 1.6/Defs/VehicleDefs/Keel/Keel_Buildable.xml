@@ -1,55 +1,55 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 
 <Defs>
-	<Vehicles.VehicleBuildDef ParentName="VehicleBoatWithMapBaseBuildable">
-		<defName>MVO_Keel_Blueprint</defName>
-		<label>keel</label>
-		<description>TODO</description>
-		<designationCategory>VF_Vehicles</designationCategory>
-		<graphicData>
-			<texPath>MapVehiclesOcean/Things/Keel/Keel</texPath>
-			<graphicClass>Graphic_Multi</graphicClass>
-			<drawSize>(8,16)</drawSize>
-			<drawOffsetNorth>(0,0,0.75)</drawOffsetNorth>
-			<drawOffsetSouth>(0,0,-0.75)</drawOffsetSouth>
-			<drawOffsetEast>(0.5,0,0)</drawOffsetEast>
-		</graphicData>
+  <Vehicles.VehicleBuildDef ParentName="VehicleBoatWithMapBaseBuildable">
+    <defName>MVO_Keel_Blueprint</defName>
+    <label>keel</label>
+    <description>TODO</description>
+    <designationCategory>VF_Vehicles</designationCategory>
+    <graphicData>
+      <texPath>MapVehiclesOcean/Things/Keel/Keel</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>(8,16)</drawSize>
+      <drawOffsetNorth>(0,0,0.75)</drawOffsetNorth>
+      <drawOffsetSouth>(0,0,-0.75)</drawOffsetSouth>
+      <drawOffsetEast>(0.5,0,0)</drawOffsetEast>
+    </graphicData>
 
-		<statBases>
-			<MaxHitPoints>3500</MaxHitPoints>
-			<WorkToBuild>10500</WorkToBuild>
-			<Flammability>0.05</Flammability>
-		</statBases>
+    <statBases>
+      <MaxHitPoints>3500</MaxHitPoints>
+      <WorkToBuild>10500</WorkToBuild>
+      <Flammability>0.05</Flammability>
+    </statBases>
 
-		<size>(5,14)</size>
+    <size>(5,14)</size>
 
-		<researchPrerequisites>
-			<li>MVO_Keel</li>
-		</researchPrerequisites>
-		
-		<costList>
-			<WoodLog>1450</WoodLog>
-			<Steel>120</Steel>
-			<ComponentIndustrial>3</ComponentIndustrial>
-		</costList>
-		
-		<building>
-			<relatedBuildCommands>
-				<li>MVO_RigOneTiered</li>
-				<li>MVO_RigTwoTiered</li>
-				<li>MVO_RigThreeTiered</li>
-				<li>MVO_Helm</li>
-				<li>MVO_Hatch</li>
-			</relatedBuildCommands>
-			<destroyEffecter>MVO_SpawnSinker</destroyEffecter>
-		</building>
+    <researchPrerequisites>
+      <li>MVO_Keel</li>
+    </researchPrerequisites>
 
-		<soundImpactDefault>BulletImpact_Wood</soundImpactDefault>
+    <costList>
+      <WoodLog>1450</WoodLog>
+      <Steel>120</Steel>
+      <ComponentIndustrial>3</ComponentIndustrial>
+    </costList>
 
-		<thingToSpawn>MVO_Keel</thingToSpawn>
+    <building>
+      <relatedBuildCommands>
+        <li>MVO_RigOneTiered</li>
+        <li>MVO_RigTwoTiered</li>
+        <li>MVO_RigThreeTiered</li>
+        <li>MVO_Helm</li>
+        <li>MVO_Hatch</li>
+      </relatedBuildCommands>
+      <destroyEffecter>MVO_SpawnSinker</destroyEffecter>
+    </building>
 
-		<constructionSkillPrerequisite>8</constructionSkillPrerequisite>
-		
-		<terrainAffordanceNeeded>VMF_DeepWater</terrainAffordanceNeeded>
-	</Vehicles.VehicleBuildDef>
+    <soundImpactDefault>BulletImpact_Wood</soundImpactDefault>
+
+    <thingToSpawn>MVO_Keel</thingToSpawn>
+
+    <constructionSkillPrerequisite>8</constructionSkillPrerequisite>
+
+    <terrainAffordanceNeeded>VMF_DeepWater</terrainAffordanceNeeded>
+  </Vehicles.VehicleBuildDef>
 </Defs>

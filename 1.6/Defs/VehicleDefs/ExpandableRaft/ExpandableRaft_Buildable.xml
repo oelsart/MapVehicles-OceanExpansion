@@ -1,51 +1,51 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 
 <Defs>
-	<Vehicles.VehicleBuildDef ParentName="VehicleBoatWithMapBaseBuildable">
-		<defName>MVO_ExpandableRaft_Blueprint</defName>
-		<label>raft</label>
-		<description>TODO</description>
-		<designationCategory>VF_Vehicles</designationCategory>
-		<graphicData>
-			<texPath>MapVehiclesOcean/Things/Raft/Raft</texPath>
-			<graphicClass>Graphic_Multi</graphicClass>
-			<drawSize>(4,4)</drawSize>
-		</graphicData>
+  <Vehicles.VehicleBuildDef ParentName="VehicleBoatWithMapBaseBuildable">
+    <defName>MVO_ExpandableRaft_Blueprint</defName>
+    <label>raft</label>
+    <description>TODO</description>
+    <designationCategory>VF_Vehicles</designationCategory>
+    <graphicData>
+      <texPath>MapVehiclesOcean/Things/Raft/Raft</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>(4,4)</drawSize>
+    </graphicData>
 
-		<statBases>
-			<MaxHitPoints>900</MaxHitPoints>
-			<WorkToBuild>3200</WorkToBuild>
-			<Flammability>0.05</Flammability>
-		</statBases>
+    <statBases>
+      <MaxHitPoints>900</MaxHitPoints>
+      <WorkToBuild>3200</WorkToBuild>
+      <Flammability>0.05</Flammability>
+    </statBases>
 
-		<size>(3,3)</size>
+    <size>(3,3)</size>
 
-		<researchPrerequisites>
-			<li>MVO_ExpandableRaft</li>
-		</researchPrerequisites>
-		
-		<costList>
-			<WoodLog>405</WoodLog>
-		</costList>
-		
-		<building>
-			<relatedBuildCommands>
-				<li>MVO_Oar</li>
-				<li>MVO_RaftPiece</li>
-				<li>MVO_RaftPieceFloat</li>
-				<li>MVO_RigOneTiered</li>
-				<li>MVO_RigTwoTiered</li>
-				<li>MVO_RigThreeTiered</li>
-			</relatedBuildCommands>
-			<destroyEffecter>MVO_SpawnSinker</destroyEffecter>
-		</building>
+    <researchPrerequisites>
+      <li>MVO_ExpandableRaft</li>
+    </researchPrerequisites>
 
-		<soundImpactDefault>BulletImpact_Wood</soundImpactDefault>
+    <costList>
+      <WoodLog>405</WoodLog>
+    </costList>
 
-		<thingToSpawn>MVO_ExpandableRaft</thingToSpawn>
+    <building>
+      <relatedBuildCommands>
+        <li>MVO_Oar</li>
+        <li>MVO_RaftPiece</li>
+        <li>MVO_RaftPieceFloat</li>
+        <li>MVO_RigOneTiered</li>
+        <li>MVO_RigTwoTiered</li>
+        <li>MVO_RigThreeTiered</li>
+      </relatedBuildCommands>
+      <destroyEffecter>MVO_SpawnSinker</destroyEffecter>
+    </building>
 
-		<constructionSkillPrerequisite>4</constructionSkillPrerequisite>
-		
-		<terrainAffordanceNeeded>VMF_DeepWater</terrainAffordanceNeeded>
-	</Vehicles.VehicleBuildDef>
+    <soundImpactDefault>BulletImpact_Wood</soundImpactDefault>
+
+    <thingToSpawn>MVO_ExpandableRaft</thingToSpawn>
+
+    <constructionSkillPrerequisite>4</constructionSkillPrerequisite>
+
+    <terrainAffordanceNeeded>VMF_DeepWater</terrainAffordanceNeeded>
+  </Vehicles.VehicleBuildDef>
 </Defs>

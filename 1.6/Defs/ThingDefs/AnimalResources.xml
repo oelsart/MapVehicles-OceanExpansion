@@ -31,12 +31,12 @@
       <li Class="CompProperties_Rottable">
         <rotDestroys>true</rotDestroys>
       </li>
-      <li MayRequire="Ludeon.RimWorld.Anomaly" >
+      <li MayRequire="Ludeon.RimWorld.Anomaly">
         <compClass>CompHarbingerTreeConsumable</compClass>
       </li>
     </comps>
   </ThingDef>
-  
+
   <ThingDef ParentName="LeatherBase">
     <defName>MVO_Leather_Shark</defName>
     <label>sharkskin</label>
@@ -60,5 +60,80 @@
       </statFactors>
     </stuffProps>
   </ThingDef>
-  
+
+  <ThingDef ParentName="OrganicProductBase">
+    <defName>Meat_MVO_Kraken</defName>
+    <label>kraken meat</label>
+    <graphicData>
+      <graphicClass>Graphic_StackCount</graphicClass>
+      <texPath>MapVehiclesOcean/Things/Pawn/Kraken/Meat</texPath>
+      <color>(255,255,160)</color>
+    </graphicData>
+    <thingCategories>
+      <li>MeatRaw</li>
+    </thingCategories>
+    <statBases>
+      <Flammability>0.5</Flammability>
+      <Nutrition>0.05</Nutrition>
+      <FoodPoisonChanceFixedHuman>0.02</FoodPoisonChanceFixedHuman>
+      <MarketValue>2</MarketValue>
+    </statBases>
+    <socialPropernessMatters>true</socialPropernessMatters>
+    <ingestible>
+      <parent>Meat_MVO_Kraken</parent>
+      <foodType>Meat</foodType>
+      <preferability>RawBad</preferability>
+      <tasteThought>AteRawFood</tasteThought>
+      <ingestEffect>EatMeat</ingestEffect>
+      <ingestSound>RawMeat_Eat</ingestSound>
+      <sourceDef>MVO_Kraken</sourceDef>
+      <specialThoughtDirect>MVO_AteStinkyMeat</specialThoughtDirect>
+      <specialThoughtAsIngredient>MVO_AteStinkyMeat</specialThoughtAsIngredient>
+    </ingestible>
+    <comps>
+      <li Class="CompProperties_Rottable">
+        <rotDestroys>true</rotDestroys>
+      </li>
+      <li MayRequire="Ludeon.RimWorld.Anomaly">
+        <compClass>CompHarbingerTreeConsumable</compClass>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="OrganicProductBase">
+    <defName>Meat_MVO_Kraken_Prepped</defName>
+    <label>prepped kraken meat</label>
+    <graphicData>
+      <graphicClass>Graphic_StackCount</graphicClass>
+      <texPath>MapVehiclesOcean/Things/Pawn/Kraken/Meat</texPath>
+    </graphicData>
+    <thingCategories>
+      <li>MeatRaw</li>
+    </thingCategories>
+    <statBases>
+      <Flammability>0.5</Flammability>
+      <Nutrition>0.05</Nutrition>
+      <FoodPoisonChanceFixedHuman>0.02</FoodPoisonChanceFixedHuman>
+      <MarketValue>2</MarketValue>
+    </statBases>
+    <socialPropernessMatters>true</socialPropernessMatters>
+    <ingestible>
+      <parent>Meat_MVO_Kraken_Prepped</parent>
+      <foodType>Meat</foodType>
+      <preferability>RawBad</preferability>
+      <tasteThought>AteRawFood</tasteThought>
+      <ingestEffect>EatMeat</ingestEffect>
+      <ingestSound>RawMeat_Eat</ingestSound>
+      <sourceDef>MVO_Kraken</sourceDef>
+    </ingestible>
+    <comps>
+      <li Class="CompProperties_Rottable">
+        <rotDestroys>true</rotDestroys>
+      </li>
+      <li MayRequire="Ludeon.RimWorld.Anomaly">
+        <compClass>CompHarbingerTreeConsumable</compClass>
+      </li>
+    </comps>
+  </ThingDef>
+
 </Defs>
