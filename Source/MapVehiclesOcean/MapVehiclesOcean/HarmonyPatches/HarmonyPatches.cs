@@ -4,20 +4,8 @@ using RimWorld.Planet;
 using VehicleMapFramework;
 using Vehicles.World;
 using Verse;
-using Verse.AI;
 
 namespace MapVehiclesOcean.HarmonyPatches;
-
-[StaticConstructorOnStartup]
-public static class HarmonyPatches
-{
-  private const string HarmonyId = "OELS.MapVehiclesOcean";
-
-  static HarmonyPatches()
-  {
-    new Harmony(HarmonyId).PatchAll();
-  }
-}
 
 [HarmonyPatch(typeof(WaterBodyTracker), nameof(WaterBodyTracker.Notify_Fished))]
 public static class Patch_WaterBodyTracker_Notify_Fished
@@ -38,6 +26,21 @@ public static class Patch_EnterMapUtilityVehicles_EnterMap
     if (map.Tile.Tile.WaterCovered)
     {
       spawnParams.enterMode = CaravanEnterMode.Edge;
+    }
+  }
+}
+
+// SCOSからのパッチだとインライン化の可能性あり
+[HarmonyPatch(typeof(Pawn), nameof(Pawn.Swimming), MethodType.Getter)]
+public static class Patch_Pawn_Swimming
+{
+  public static void Postfix(Pawn __instance, ref bool __result)
+  {
+    if (__result) return;
+    if (__instance.Spawned)
+    {
+      var terrain = __instance.Position.GetTerrain(__instance.Map);
+      __result = terrain == MVO_DefOf.MVO_WaterDeepPassable || terrain == MVO_DefOf.MVO_WaterOceanDeepPassable;
     }
   }
 }

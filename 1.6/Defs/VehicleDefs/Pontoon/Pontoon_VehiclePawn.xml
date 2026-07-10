@@ -106,10 +106,10 @@
         <effecterDef>MVO_SinkSplash</effecterDef>
         <moveVector>(0,0,-0.1)</moveVector>
       </li>
-      <li Class="VehicleMapFramework.CompProperties_NpcVehicleMap">
-        <mapParams>
-        </mapParams>
-      </li>
+<!--      <li Class="VehicleMapFramework.CompProperties_NpcVehicleMap">-->
+<!--        <mapParams>-->
+<!--        </mapParams>-->
+<!--      </li>-->
     </comps>
 
     <modExtensions>

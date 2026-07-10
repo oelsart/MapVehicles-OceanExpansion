@@ -26,7 +26,7 @@ public class IncidentWorker_Ambush_EnemyBoats : IncidentWorker_Ambush_EnemyMapVe
     return VehicleCaravanIncidentUtility.ValidSeaThreatVehicle(vehicleDef, category, arrivalModeDef, faction, points);
   }
 
-  protected override LordJob CreateLordJob(List<VehiclePawnWithMap> generatedVehicles, IncidentParms parms)
+  protected override LordJob CreateLordJob(IncidentParms parms)
   {
     return new LordJob_ArmoredAssaultSea(parms.faction, LordJob_ArmoredAssault.RaiderPermissions.All);
   }

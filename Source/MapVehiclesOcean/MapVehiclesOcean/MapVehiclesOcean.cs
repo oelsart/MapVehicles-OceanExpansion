@@ -1,4 +1,5 @@
-﻿using RimWorld;
+﻿using HarmonyLib;
+using RimWorld;
 using SmashTools;
 using UnityEngine;
 using Verse;
@@ -8,6 +9,7 @@ namespace MapVehiclesOcean;
 public class MapVehiclesOcean : Mod
 {
   public const string ModName = "Map Vehicles - Ocean Expansion";
+  private const string HarmonyId = "OELS.MapVehiclesOcean";
 
   public static MapVehiclesOcean Mod { get; private set; }
 
@@ -17,6 +19,7 @@ public class MapVehiclesOcean : Mod
   {
     Mod = this;
     settings = GetSettings<Settings>();
+    new Harmony(HarmonyId).PatchAll();
 
     LongEventHandler.ExecuteWhenFinished(() =>
     {
