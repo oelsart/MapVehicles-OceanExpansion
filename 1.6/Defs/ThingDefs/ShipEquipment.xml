@@ -49,6 +49,7 @@
       <texPath>MapVehiclesOcean/Things/RaftPiece/RaftPiece</texPath>
       <graphicClass>Graphic_Multi</graphicClass>
       <shaderType>Cutout</shaderType>
+      <renderQueue>2899</renderQueue>
       <drawSize>2</drawSize>
     </graphicData>
     <uiIconPath>MapVehiclesOcean/Things/RaftPiece/Blueprint_RaftPiece_east</uiIconPath>
@@ -70,7 +71,7 @@
             <graphicClass>Graphic_Multi</graphicClass>
             <texPath>MapVehiclesOcean/Things/RaftPiece/RaftPieceBG</texPath>
             <shaderType>Cutout</shaderType>
-            <renderQueue>2899</renderQueue>
+            <renderQueue>2898</renderQueue>
             <drawSize>2</drawSize>
             <drawOffset>(0,-4,0)</drawOffset>
           </li>
@@ -107,6 +108,7 @@
       <texPath>MapVehiclesOcean/Things/RaftPiece/RaftPieceFloat</texPath>
       <graphicClass>Graphic_Multi</graphicClass>
       <shaderType>Cutout</shaderType>
+      <renderQueue>2899</renderQueue>
       <drawSize>2</drawSize>
     </graphicData>
     <uiIconPath>MapVehiclesOcean/Things/RaftPiece/Blueprint_RaftPieceFloat_east</uiIconPath>
@@ -132,7 +134,7 @@
             <graphicClass>Graphic_Multi</graphicClass>
             <texPath>MapVehiclesOcean/Things/RaftPiece/RaftPieceFloatBG</texPath>
             <shaderType>Cutout</shaderType>
-            <renderQueue>2899</renderQueue>
+            <renderQueue>2898</renderQueue>
             <drawSize>2</drawSize>
             <drawOffset>(0,-4,0)</drawOffset>
           </li>
@@ -819,7 +821,7 @@
       </shadowData>
     </graphicData>
     <statBases>
-      <MaxHitPoints>180</MaxHitPoints>
+      <MaxHitPoints>150</MaxHitPoints>
       <WorkToBuild>1000</WorkToBuild>
       <Mass>40</Mass>
     </statBases>

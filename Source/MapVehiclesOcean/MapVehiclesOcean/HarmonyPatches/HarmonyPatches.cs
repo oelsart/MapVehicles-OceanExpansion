@@ -1,9 +1,13 @@
 ﻿using HarmonyLib;
 using RimWorld;
 using RimWorld.Planet;
+using SmashTools;
+using UnityEngine;
 using VehicleMapFramework;
+using Vehicles;
 using Vehicles.World;
 using Verse;
+using Verse.AI;
 
 namespace MapVehiclesOcean.HarmonyPatches;
 
@@ -42,5 +46,33 @@ public static class Patch_Pawn_Swimming
       var terrain = __instance.Position.GetTerrain(__instance.Map);
       __result = terrain == MVO_DefOf.MVO_WaterDeepPassable || terrain == MVO_DefOf.MVO_WaterOceanDeepPassable;
     }
+  }
+}
+
+// VFのレイダーパッチにより車両の端でExit判定を行えるようになっているが、IsExitCellはMapUsesExitGridチェックを使用するため
+// 非プレイヤー派閥のチェックに向かない。マップ端からの距離による簡易チェックを行う
+[HarmonyPatch(typeof(JobDriver_Goto), "MakeNewToils")]
+public static class Patch_JobDriver_Goto_MakeNewToils
+{
+  public static IEnumerable<Toil> Postfix(IEnumerable<Toil> values, JobDriver_Goto __instance)
+  {
+    foreach (var toil in values) yield return toil;
+    yield return Toils_General.Do(() =>
+    {
+      if (__instance is { pawn: VehiclePawn { Spawned: true} vehicle, job.exitMapOnArrival: true })
+      {
+        var vehicleDef = vehicle.VehicleDef;
+        var largestSize = Mathf.Max(vehicleDef.Size.x, vehicleDef.Size.z);
+        var even = largestSize % 2 == 0;
+        var padding = Mathf.CeilToInt(largestSize / 2f);
+        if (even) padding++;
+        var rot = CellRect.WholeMap(vehicle.Map).GetClosestEdge(vehicle.Position);
+        if (vehicle.PawnOccupiedCells(vehicle.Position, rot).Corners.Any(cell =>
+              cell.CloseToEdge(vehicle.Map, padding)))
+        {
+          PathingHelper.ExitMapForVehicle(vehicle, __instance.job);
+        }
+      }
+    });
   }
 }

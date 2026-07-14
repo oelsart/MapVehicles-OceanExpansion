@@ -11,8 +11,10 @@ public class JobDriver_GotoShipCombat : JobDriver_Goto
     var toil = Toils_Goto.GotoCell(TargetIndex.A, PathEndMode.OnCell);
     toil.FailOn(() => job.GetTarget(TargetIndex.A).Thing is Pawn { ParentHolder: Corpse });
     toil.FailOn(() => job.GetTarget(TargetIndex.A).Thing is { Destroyed: true });
-    toil.tickIntervalAction += _ =>
+    toil.tickAction += () =>
     {
+      if (!toil.actor.IsHashIntervalTick(300)) return;
+      
       if (toil.actor is not VehiclePawn vehicle ||
           !CombatPositionUtility.TryFindShipCombatPosition(vehicle, out var dest, out var endRot)) return;
 

@@ -56,6 +56,8 @@ public static class MVO_DefOf
 
   public static DutyDef MVO_RangedBoatAggressive;
 
+  public static DutyDef MVO_AssaultSea;
+
   public static DutyDef MVO_WanderAnywhere;
 
   public static PawnGroupKindDef MVO_ShipCombat;
