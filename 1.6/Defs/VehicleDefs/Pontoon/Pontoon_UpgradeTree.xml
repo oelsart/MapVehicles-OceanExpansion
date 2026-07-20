@@ -12,7 +12,7 @@
         <work>12500</work>
         <drawSize>(200,200)</drawSize>
         <gridCoordinate>(11,12)</gridCoordinate>
-        <icon>MapVehiclesOcean/Things/Pontoon/Upgrade_LeftDeck</icon>
+        <icon>MapVehiclesOcean/Things/Vehicle/Pontoon/Upgrade_LeftDeck</icon>
         <ingredients>
           <WoodLog>80</WoodLog>
           <Steel>800</Steel>
@@ -45,7 +45,7 @@
         <work>12500</work>
         <drawSize>(200,200)</drawSize>
         <gridCoordinate>(31,12)</gridCoordinate>
-        <icon>MapVehiclesOcean/Things/Pontoon/Upgrade_RightDeck</icon>
+        <icon>MapVehiclesOcean/Things/Vehicle/Pontoon/Upgrade_RightDeck</icon>
         <ingredients>
           <WoodLog>80</WoodLog>
           <Steel>800</Steel>

@@ -4,5 +4,10 @@
   <MVO_ShipwreckHostileThreat>There are ships moving around. These are likely hostile.</MVO_ShipwreckHostileThreat>
 
   <MVO_TradeGoods>{0}'s {1}</MVO_TradeGoods>
+  
+  <MVO_SailEmblemChange>change emblem</MVO_SailEmblemChange>
+  <MVO_SailEmblemChangeDesc>Change the emblem displayed on the sail.</MVO_SailEmblemChangeDesc>
+  <MVO_SailEmblemChangeColor>change color</MVO_SailEmblemChangeColor>
+  <MVO_SailEmblemChangeColorDesc>change the color of the sail emblem.</MVO_SailEmblemChangeColorDesc>
 
 </LanguageData>

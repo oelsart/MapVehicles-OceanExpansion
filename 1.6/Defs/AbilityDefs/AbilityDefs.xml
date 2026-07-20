@@ -27,7 +27,7 @@
       <soundCastTail>GunTail_Light</soundCastTail>
     </verbProperties>
     <groupAbility>true</groupAbility>
-    <iconPath>MapVehiclesOcean/Things/ZiplineBelt/ZiplineBelt_AbilityIcon</iconPath>
+    <iconPath>MapVehiclesOcean/Things/Apparel/ZiplineBelt/ZiplineBelt_AbilityIcon</iconPath>
     <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
   </AbilityDef>
 
@@ -38,7 +38,7 @@
     <graphicData>
       <graphicClass>Graphic_Single</graphicClass>
       <shaderType>Transparent</shaderType>
-      <texPath>MapVehiclesOcean/Things/ZiplineBelt/ZiplineEnd</texPath>
+      <texPath>MapVehiclesOcean/Things/Apparel/ZiplineBelt/ZiplineEnd</texPath>
       <drawSize>1</drawSize>
     </graphicData>
     <projectile>
@@ -68,7 +68,7 @@
     <graphicData>
       <graphicClass>Graphic_Single</graphicClass>
       <shaderType>Transparent</shaderType>
-      <texPath>MapVehiclesOcean/Things/ZiplineBelt/ZiplineEnd</texPath>
+      <texPath>MapVehiclesOcean/Things/Apparel/ZiplineBelt/ZiplineEnd</texPath>
       <drawSize>1</drawSize>
     </graphicData>
     <building>

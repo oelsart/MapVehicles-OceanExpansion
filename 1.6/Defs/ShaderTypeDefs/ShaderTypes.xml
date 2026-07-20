@@ -5,5 +5,10 @@
     <defName>MVO_SeaCreature</defName>
     <shaderPath>MapVehiclesOcean/SeaCreature</shaderPath>
   </ShaderTypeDef>
+  
+  <ShaderTypeDef>
+    <defName>MVO_SailEmblemMask</defName>
+    <shaderPath>MapVehiclesOcean/SailEmblemMask</shaderPath>
+  </ShaderTypeDef>
 
 </Defs>

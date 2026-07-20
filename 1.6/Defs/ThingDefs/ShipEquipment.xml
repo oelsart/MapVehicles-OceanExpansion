@@ -163,11 +163,6 @@
     </comps>
   </ThingDef>
 
-  <DesignatorDropdownGroupDef>
-    <defName>MVO_RigGroup</defName>
-    <iconSource>Placed</iconSource>
-  </DesignatorDropdownGroupDef>
-
   <ThingDef Name="MVO_RigBase" ParentName="MVO_ShipEquipmentBase" Abstract="True">
     <passability>Impassable</passability>
     <fillPercent>1</fillPercent>
@@ -175,11 +170,10 @@
     <graphicData>
       <texPath>MapVehiclesOcean/Things/Rig/MastRoot</texPath>
       <graphicClass>Graphic_Single</graphicClass>
-      <shaderType>CutoutComplex</shaderType>
+      <shaderType>Cutout</shaderType>
       <drawRotated>false</drawRotated>
     </graphicData>
     <rotatable>false</rotatable>
-    <designatorDropdown>MVO_RigGroup</designatorDropdown>
     <statBases>
       <Beauty>2</Beauty>
     </statBases>
@@ -247,7 +241,7 @@
             <texPath>MapVehiclesOcean/Things/Rig/Rig1/Rig1</texPath>
             <shaderType>VMF_CutoutComplexRGBOpacity</shaderType>
             <drawSize>(8,4)</drawSize>
-            <drawOffset>(0,0.1,1.5)</drawOffset>
+            <drawOffset>(0,0,1.5)</drawOffset>
           </li>
         </graphics>
       </li>
@@ -262,6 +256,34 @@
             </vehicleStats>
           </li>
         </upgrades>
+      </li>
+      <li Class="MapVehiclesOcean.CompProperties_SailEmblem">
+        <folderPaths>
+          <li>MapVehiclesOcean/Things/Rig/SailEmblem</li>
+          <li MayRequire="Ludeon.RimWorld.Ideology">UI/Ideoligions</li>
+        </folderPaths>
+        <texturePaths>
+          <li>World/WorldObjects/Expanding/TownRough</li>
+          <li>World/WorldObjects/Expanding/Village</li>
+          <li>World/WorldObjects/Expanding/VillageRough</li>
+          <li>World/WorldObjects/Expanding/VillageSavage</li>
+          <li>World/WorldObjects/Expanding/CannibalPirate</li>
+          <li>World/WorldObjects/Expanding/CannibalTribe</li>
+          <li>World/WorldObjects/Expanding/Empire</li>
+          <li>World/WorldObjects/Expanding/Insects</li>
+          <li>MapVehiclesOcean/World/Seasteader</li>
+        </texturePaths>
+        <maskGraphicData>
+          <texPath>MapVehiclesOcean/Things/Rig/Rig1/SailEmblemMask</texPath>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <shaderType>MVO_SailEmblemMask</shaderType>
+          <drawSize>(8,4)</drawSize>
+          <drawOffset>(0,0,1.5)</drawOffset>
+        </maskGraphicData>
+        <drawOffsetNorth>(0,0,0.4)</drawOffsetNorth>
+        <drawOffsetEast>(0.985,0,-1.1)</drawOffsetEast>
+        <drawOffsetWest>(-0.985,0,-1.1)</drawOffsetWest>
+        <drawOffsetSouth>(0,0,0.3)</drawOffsetSouth>
       </li>
     </comps>
   </ThingDef>
@@ -312,7 +334,7 @@
             <texPath>MapVehiclesOcean/Things/Rig/Rig2/Rig2</texPath>
             <shaderType>VMF_CutoutComplexRGBOpacity</shaderType>
             <drawSize>(16,8)</drawSize>
-            <drawOffset>(0,0.1,3.5)</drawOffset>
+            <drawOffset>(0,0,3.5)</drawOffset>
           </li>
         </graphics>
       </li>
@@ -327,6 +349,34 @@
             </vehicleStats>
           </li>
         </upgrades>
+      </li>
+      <li Class="MapVehiclesOcean.CompProperties_SailEmblem">
+        <folderPaths>
+          <li>MapVehiclesOcean/Things/Rig/SailEmblem</li>
+          <li MayRequire="Ludeon.RimWorld.Ideology">UI/Ideoligions</li>
+        </folderPaths>
+        <texturePaths>
+          <li>World/WorldObjects/Expanding/TownRough</li>
+          <li>World/WorldObjects/Expanding/Village</li>
+          <li>World/WorldObjects/Expanding/VillageRough</li>
+          <li>World/WorldObjects/Expanding/VillageSavage</li>
+          <li>World/WorldObjects/Expanding/CannibalPirate</li>
+          <li>World/WorldObjects/Expanding/CannibalTribe</li>
+          <li>World/WorldObjects/Expanding/Empire</li>
+          <li>World/WorldObjects/Expanding/Insects</li>
+          <li>MapVehiclesOcean/World/Seasteader</li>
+        </texturePaths>
+        <maskGraphicData>
+          <texPath>MapVehiclesOcean/Things/Rig/Rig2/SailEmblemMask</texPath>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <shaderType>MVO_SailEmblemMask</shaderType>
+          <drawSize>(16,8)</drawSize>
+          <drawOffset>(0,0,3.5)</drawOffset>
+        </maskGraphicData>
+        <drawOffsetNorth>(0,0,-1.6)</drawOffsetNorth>
+        <drawOffsetEast>(0.985,0,-3.1)</drawOffsetEast>
+        <drawOffsetWest>(-0.985,0,-3.1)</drawOffsetWest>
+        <drawOffsetSouth>(0,0,-1.7)</drawOffsetSouth>
       </li>
     </comps>
   </ThingDef>
@@ -377,7 +427,7 @@
             <texPath>MapVehiclesOcean/Things/Rig/Rig3/Rig3</texPath>
             <shaderType>VMF_CutoutComplexRGBOpacity</shaderType>
             <drawSize>(16,8)</drawSize>
-            <drawOffset>(0,0.1,3.5)</drawOffset>
+            <drawOffset>(0,0,3.5)</drawOffset>
           </li>
         </graphics>
       </li>
@@ -392,6 +442,34 @@
             </vehicleStats>
           </li>
         </upgrades>
+      </li>
+      <li Class="MapVehiclesOcean.CompProperties_SailEmblem">
+        <folderPaths>
+          <li>MapVehiclesOcean/Things/Rig/SailEmblem</li>
+          <li MayRequire="Ludeon.RimWorld.Ideology">UI/Ideoligions</li>
+        </folderPaths>
+        <texturePaths>
+          <li>World/WorldObjects/Expanding/TownRough</li>
+          <li>World/WorldObjects/Expanding/Village</li>
+          <li>World/WorldObjects/Expanding/VillageRough</li>
+          <li>World/WorldObjects/Expanding/VillageSavage</li>
+          <li>World/WorldObjects/Expanding/CannibalPirate</li>
+          <li>World/WorldObjects/Expanding/CannibalTribe</li>
+          <li>World/WorldObjects/Expanding/Empire</li>
+          <li>World/WorldObjects/Expanding/Insects</li>
+          <li>MapVehiclesOcean/World/Seasteader</li>
+        </texturePaths>
+        <maskGraphicData>
+          <texPath>MapVehiclesOcean/Things/Rig/Rig3/SailEmblemMask</texPath>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <shaderType>MVO_SailEmblemMask</shaderType>
+          <drawSize>(16,8)</drawSize>
+          <drawOffset>(0,0,3.5)</drawOffset>
+        </maskGraphicData>
+        <drawOffsetNorth>(0,0,-1.6)</drawOffsetNorth>
+        <drawOffsetEast>(0.985,0,-3.1)</drawOffsetEast>
+        <drawOffsetWest>(-0.985,0,-3.1)</drawOffsetWest>
+        <drawOffsetSouth>(0,0,-1.7)</drawOffsetSouth>
       </li>
     </comps>
   </ThingDef>

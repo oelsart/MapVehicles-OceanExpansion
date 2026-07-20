@@ -25,6 +25,7 @@ namespace SmashTools
         // RimWorld stores Shaders in Materials/ so asset bundle paths have to match it for their
         // loader to be able to find the content.
         private const string ShaderFolderName = "Materials";
+        private const string MeshFolderName = "Materials";
 
         private const string OutputPath = "../../Common/AssetBundles";
 
@@ -74,6 +75,8 @@ namespace SmashTools
                     return SoundFolderName;
                 if (typeof(T) == typeof(Shader))
                     return ShaderFolderName;
+                if (typeof(T) == typeof(Mesh))
+                    return MeshFolderName;
 
                 throw new NotImplementedException();
             }
@@ -128,10 +131,13 @@ namespace SmashTools
         private static void BuildShaders(string packageId, string outputPath)
         {
             const string ShaderBundleName = "oels_mapvehiclesocean_shaders";
+            const string MeshBundleName = "oels_mapvehiclesocean_meshes";
             // Platform dependent
-            AssetBundleBuild[] platformBundles = new AssetBundleBuild[1];
+            AssetBundleBuild[] platformBundles = new AssetBundleBuild[2];
             platformBundles[0].assetBundleName = ShaderBundleName;
             platformBundles[0].assetNames = GetAssetPaths<Shader>(packageId);
+            platformBundles[1].assetBundleName = MeshBundleName;
+            platformBundles[1].assetNames = GetAssetPaths<Mesh>(packageId);
 
             BuildForPlatform(outputPath,
                 platformBundles,
