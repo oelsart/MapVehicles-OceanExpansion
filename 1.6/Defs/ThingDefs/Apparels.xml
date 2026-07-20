@@ -7,7 +7,7 @@
     <description>TODO</description>
     <graphicData>
       <graphicClass>Graphic_Single</graphicClass>
-      <texPath>MapVehiclesOcean/Things/ZiplineBelt/ZiplineBelt_south</texPath>
+      <texPath>MapVehiclesOcean/Things/Apparel/ZiplineBelt/ZiplineBelt_south</texPath>
     </graphicData>
     <techLevel>Medieval</techLevel>
     <statBases>
@@ -45,7 +45,7 @@
       <li>ApparelUtility</li>
     </thingCategories>
     <apparel>
-      <wornGraphicPath>MapVehiclesOcean/Things/ZiplineBelt/ZiplineBelt</wornGraphicPath>
+      <wornGraphicPath>MapVehiclesOcean/Things/Apparel/ZiplineBelt/ZiplineBelt</wornGraphicPath>
       <wornGraphicData>
         <renderUtilityAsPack>true</renderUtilityAsPack>
         <north>
@@ -115,7 +115,6 @@
       <countsAsClothingForNudity>false</countsAsClothingForNudity>
       <careIfWornByCorpse>false</careIfWornByCorpse>
       <careIfDamaged>false</careIfDamaged>
-      <wearPerDay>0</wearPerDay>
       <bodyPartGroups>
         <li>Waist</li>
       </bodyPartGroups>
@@ -151,10 +150,97 @@
         </li>
       </options>
     </colorGenerator>
-    <allowedArchonexusCount>1</allowedArchonexusCount>
+    <allowedArchonexusCount>-1</allowedArchonexusCount>
     <tradeTags>
       <li>Armor</li>
     </tradeTags>
+  </ThingDef>
+
+  <ThingDef ParentName="ApparelBase">
+    <defName>MVO_Apparel_Float</defName>
+    <label>float</label>
+    <description>TODO</description>
+    <graphicData>
+      <graphicClass>Graphic_Single</graphicClass>
+      <texPath>MapVehiclesOcean/Things/Apparel/Float/Float</texPath>
+      <drawSize>0.8</drawSize>
+    </graphicData>
+    <techLevel>Medieval</techLevel>
+    <statBases>
+      <Mass>1</Mass>
+      <WorkToMake>7000</WorkToMake>
+      <Flammability>1.0</Flammability>
+      <EquipDelay>2</EquipDelay>
+    </statBases>
+    <stuffCategories>
+      <li>Leathery</li>
+      <li>Fabric</li>
+    </stuffCategories>
+    <costStuffCount>30</costStuffCount>
+    <costList>
+      <WoodLog>25</WoodLog>
+    </costList>
+    <recipeMaker>
+      <unfinishedThingDef>UnfinishedBelt</unfinishedThingDef>
+      <researchPrerequisite>MVO_SailorOutfit</researchPrerequisite>
+      <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+      <workSkill>Crafting</workSkill>
+      <effectWorking>Tailor</effectWorking>
+      <soundWorking>Recipe_Tailor</soundWorking>
+      <recipeUsers>
+        <li>ElectricTailoringBench</li>
+        <li>HandTailoringBench</li>
+      </recipeUsers>
+      <skillRequirements>
+        <Crafting>6</Crafting>
+      </skillRequirements>
+      <displayPriority>310</displayPriority>
+    </recipeMaker>
+    <thingCategories>
+      <li>ApparelUtility</li>
+    </thingCategories>
+    <apparel>
+      <renderNodeProperties>
+        <li>
+          <nodeClass>MapVehiclesOcean.PawnRenderNode_ApparelSingle</nodeClass>
+          <workerClass>MapVehiclesOcean.PawnRenderNodeWorker_Swim</workerClass>
+          <texPath>MapVehiclesOcean/Things/Apparel/Float/Float</texPath>
+          <shaderTypeDef>Cutout</shaderTypeDef>
+          <drawData>
+            <scale>0.7</scale>
+            <defaultData>
+              <offset>(0,0,-0.3)</offset>
+            </defaultData>
+          </drawData>
+        </li>
+      </renderNodeProperties>
+      <countsAsClothingForNudity>false</countsAsClothingForNudity>
+      <careIfWornByCorpse>false</careIfWornByCorpse>
+      <careIfDamaged>false</careIfDamaged>
+      <bodyPartGroups>
+        <li>Waist</li>
+      </bodyPartGroups>
+      <layers>
+        <li>Belt</li>
+      </layers>
+      <tags>
+        <li>IndustrialBasic</li>
+        <li>Western</li>
+      </tags>
+      <developmentalStageFilter>Child, Adult</developmentalStageFilter>
+    </apparel>
+    <allowedArchonexusCount>-1</allowedArchonexusCount>
+    <tradeTags>
+      <li>BasicClothing</li>
+    </tradeTags>
+    <comps>
+      <li Class="VehicleMapFramework.CompProperties_AllowDangerTerrains">
+        <allowedDangerTerrains>
+          <li>MVO_WaterDeepPassable</li>
+          <li>MVO_WaterOceanDeepPassable</li>
+        </allowedDangerTerrains>
+      </li>
+    </comps>
   </ThingDef>
 
   <ThingDef ParentName="ApparelMakeableBase">

@@ -7,7 +7,7 @@
     <description>TODO</description>
 
     <graphicData>
-      <texPath>MapVehiclesOcean/Things/Pontoon/Pontoon</texPath>
+      <texPath>MapVehiclesOcean/Things/Vehicle/Pontoon/Pontoon</texPath>
       <graphicClass>Vehicles.Graphic_Vehicle</graphicClass>
       <shaderType>CutoutComplexPattern</shaderType>
       <pattern>VMF_RGBMask</pattern>
@@ -22,7 +22,7 @@
         <li>
           <renderUI>false</renderUI>
           <graphicData>
-            <texPath>MapVehiclesOcean/Things/Pontoon/Fence</texPath>
+            <texPath>MapVehiclesOcean/Things/Vehicle/Pontoon/Fence</texPath>
             <graphicClass>Vehicles.Graphic_Vehicle</graphicClass>
             <shaderType>CutoutComplexPattern</shaderType>
             <pattern>VMF_RGBMask</pattern>
@@ -148,7 +148,7 @@
         <li>
           <renderUI>false</renderUI>
           <graphicData>
-            <texPath>MapVehiclesOcean/Things/Pontoon/Fence</texPath>
+            <texPath>MapVehiclesOcean/Things/Vehicle/Pontoon/Fence</texPath>
             <graphicClass>Vehicles.Graphic_Vehicle</graphicClass>
             <shaderType>CutoutComplexPattern</shaderType>
             <pattern>VMF_RGBMask</pattern>
@@ -166,7 +166,7 @@
           <identifier>LeftDeck</identifier>
           <dynamicShadows>true</dynamicShadows>
           <graphicData>
-            <texPath>MapVehiclesOcean/Things/Pontoon/LeftDeck</texPath>
+            <texPath>MapVehiclesOcean/Things/Vehicle/Pontoon/LeftDeck</texPath>
             <graphicClass>Vehicles.Graphic_Vehicle</graphicClass>
             <shaderType>CutoutComplexPattern</shaderType>
             <pattern>VMF_RGBMask</pattern>
@@ -243,7 +243,7 @@
         <li>
           <renderUI>false</renderUI>
           <graphicData>
-            <texPath>MapVehiclesOcean/Things/Pontoon/Fence</texPath>
+            <texPath>MapVehiclesOcean/Things/Vehicle/Pontoon/Fence</texPath>
             <graphicClass>Vehicles.Graphic_Vehicle</graphicClass>
             <shaderType>CutoutComplexPattern</shaderType>
             <pattern>VMF_RGBMask</pattern>
@@ -261,7 +261,7 @@
           <identifier>RightDeck</identifier>
           <dynamicShadows>true</dynamicShadows>
           <graphicData>
-            <texPath>MapVehiclesOcean/Things/Pontoon/RightDeck</texPath>
+            <texPath>MapVehiclesOcean/Things/Vehicle/Pontoon/RightDeck</texPath>
             <graphicClass>Vehicles.Graphic_Vehicle</graphicClass>
             <shaderType>CutoutComplexPattern</shaderType>
             <pattern>VMF_RGBMask</pattern>
@@ -333,7 +333,7 @@
           <identifier>LeftDeck</identifier>
           <dynamicShadows>true</dynamicShadows>
           <graphicData>
-            <texPath>MapVehiclesOcean/Things/Pontoon/LeftDeck</texPath>
+            <texPath>MapVehiclesOcean/Things/Vehicle/Pontoon/LeftDeck</texPath>
             <graphicClass>Vehicles.Graphic_Vehicle</graphicClass>
             <shaderType>CutoutComplexPattern</shaderType>
             <pattern>VMF_RGBMask</pattern>
@@ -352,7 +352,7 @@
           <identifier>RightDeck</identifier>
           <dynamicShadows>true</dynamicShadows>
           <graphicData>
-            <texPath>MapVehiclesOcean/Things/Pontoon/RightDeck</texPath>
+            <texPath>MapVehiclesOcean/Things/Vehicle/Pontoon/RightDeck</texPath>
             <graphicClass>Vehicles.Graphic_Vehicle</graphicClass>
             <shaderType>CutoutComplexPattern</shaderType>
             <pattern>VMF_RGBMask</pattern>

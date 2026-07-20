@@ -483,7 +483,7 @@
       <leatherDef>Leather_Lizard</leatherDef>
       <lifeExpectancy>180</lifeExpectancy>
       <wildBiomes>
-        <Ocean>0.3</Ocean>
+        <Ocean>0.2</Ocean>
       </wildBiomes>
       <lifeStageAges>
         <li>

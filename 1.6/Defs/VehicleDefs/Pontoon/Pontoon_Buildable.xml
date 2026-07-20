@@ -8,7 +8,7 @@
     <description>TODO</description>
     <designationCategory>VF_Vehicles</designationCategory>
     <graphicData>
-      <texPath>MapVehiclesOcean/Things/Pontoon/Pontoon</texPath>
+      <texPath>MapVehiclesOcean/Things/Vehicle/Pontoon/Pontoon</texPath>
       <graphicClass>Graphic_Multi</graphicClass>
       <drawSize>(16,16)</drawSize>
     </graphicData>

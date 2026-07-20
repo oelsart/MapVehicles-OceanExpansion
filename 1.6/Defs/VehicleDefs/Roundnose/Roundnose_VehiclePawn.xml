@@ -7,7 +7,7 @@
     <description>TODO</description>
 
     <graphicData>
-      <texPath>MapVehiclesOcean/Things/Roundnose/Roundnose</texPath>
+      <texPath>MapVehiclesOcean/Things/Vehicle/Roundnose/Roundnose</texPath>
       <graphicClass>Vehicles.Graphic_Vehicle</graphicClass>
       <shaderType>CutoutComplexPattern</shaderType>
       <pattern>VMF_RGBMask</pattern>
