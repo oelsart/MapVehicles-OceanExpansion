@@ -53,6 +53,9 @@
       <body>MVO_Mech_Nephrops</body>
       <baseBodySize>1.2</baseBodySize>
       <baseHealthScale>1.2</baseHealthScale>
+      <wildBiomes>
+        <Ocean>0.75</Ocean>
+      </wildBiomes>
       <lifeStageAges Inherit="False">
         <li>
           <def>MechanoidFullyFormed</def>
@@ -90,7 +93,7 @@
     <label>nephrops</label>
     <labelPlural>nephrops</labelPlural>
     <race>MVO_Mech_Nephrops</race>
-    <combatPower>85</combatPower>
+    <combatPower>150</combatPower>
     <lifeStages>
       <li>
         <bodyGraphicData>

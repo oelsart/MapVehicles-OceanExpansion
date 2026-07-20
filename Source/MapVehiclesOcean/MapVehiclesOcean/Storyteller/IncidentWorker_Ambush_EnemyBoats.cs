@@ -10,6 +10,11 @@ public class IncidentWorker_Ambush_EnemyBoats : IncidentWorker_Ambush_EnemyMapVe
 {
   protected override WorldObjectDef MapParentDef => MVO_DefOf.MVO_AmbushSea;
 
+  protected override bool CanFireNowSub(IncidentParms parms)
+  {
+    return parms.target.Tile.Tile.WaterCovered && base.CanFireNowSub(parms);
+  }
+
   protected override List<Pawn> GeneratePawns(IncidentParms parms)
   {
     var defaultPawnGroupMakerParms =

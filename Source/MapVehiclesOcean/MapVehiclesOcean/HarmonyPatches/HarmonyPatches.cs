@@ -27,7 +27,7 @@ public static class Patch_EnterMapUtilityVehicles_EnterMap
 {
   public static void Prefix(Map map, ref EnterMapUtilityVehicles.SpawnParams spawnParams)
   {
-    if (map.Tile.Tile.WaterCovered)
+    if (map?.Tile.Tile?.Landmark?.def == MVO_DefOf.MVO_OceanIsland)
     {
       spawnParams.enterMode = CaravanEnterMode.Edge;
     }

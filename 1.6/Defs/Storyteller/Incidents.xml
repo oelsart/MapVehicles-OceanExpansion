@@ -17,8 +17,29 @@
     <letterDef>ThreatBig</letterDef>
     <tale>CaravanAmbushedByHumanlike</tale>
     <mtbDaysByBiome>
-      <Ocean>10</Ocean>
-      <Lake>10</Lake>
+      <Ocean>15</Ocean>
+      <Lake>15</Lake>
+    </mtbDaysByBiome>
+  </IncidentDef>
+  
+  <IncidentDef>
+    <defName>MVO_ManhunterSeaAmbush</defName>
+    <label>manhunter sea ambush</label>
+    <category>ThreatBig</category>
+    <targetTags>
+      <li>Caravan</li>
+      <li>MVO_Map_TempIncidentSea</li>
+    </targetTags>
+    <workerClass>MapVehiclesOcean.IncidentWorker_Ambush_ManhunterPackSea</workerClass>
+    <pointsScaleable>true</pointsScaleable>
+    <minRefireDays>0.17</minRefireDays>
+    <letterText>{0} has been ambushed by manhunting {1}!</letterText>
+    <letterLabel>Caravan ambushed (manhunters)</letterLabel>
+    <letterDef>ThreatBig</letterDef>
+    <tale>CaravanAmbushedByManhunter</tale>
+    <mtbDaysByBiome>
+      <Ocean>15</Ocean>
+      <Lake>15</Lake>
     </mtbDaysByBiome>
   </IncidentDef>
 

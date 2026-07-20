@@ -65,6 +65,9 @@
       <foodType>OmnivoreAnimal, OvivoreAnimal</foodType>
       <leatherDef>MVO_Leather_Shark</leatherDef>
       <lifeExpectancy>55</lifeExpectancy>
+      <wildBiomes>
+        <Ocean>0.75</Ocean>
+      </wildBiomes>
       <lifeStageAges>
         <li>
           <def>AnimalBaby</def>
@@ -236,6 +239,9 @@
       <manhunterOnDamageChance>1</manhunterOnDamageChance>
       <foodType>OmnivoreAnimal, OvivoreAnimal</foodType>
       <lifeExpectancy>5</lifeExpectancy>
+      <wildBiomes>
+        <Ocean>0.3</Ocean>
+      </wildBiomes>
       <lifeStageAges>
         <li>
           <def>AnimalBaby</def>
@@ -476,6 +482,9 @@
       <foodType>OmnivoreRoughAnimal</foodType>
       <leatherDef>Leather_Lizard</leatherDef>
       <lifeExpectancy>180</lifeExpectancy>
+      <wildBiomes>
+        <Ocean>0.3</Ocean>
+      </wildBiomes>
       <lifeStageAges>
         <li>
           <def>AnimalBaby</def>
