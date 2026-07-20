@@ -1,0 +1,142 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <BodyDef>
+    <defName>MVO_Mech_Nephrops</defName>
+    <label>nephrops</label>
+    <corePart>
+      <def>MechanicalThoraxCanManipulate</def>
+      <height>Middle</height>
+      <depth>Outside</depth>
+      <groups>
+        <li>Torso</li>
+      </groups>
+      <parts>
+        <li>
+          <def>MechanicalNeck</def>
+          <coverage>0.10</coverage>
+          <height>Top</height>
+          <parts>
+            <li>
+              <def>MechanicalHead</def>
+              <coverage>0.80</coverage>
+              <groups>
+                <li>HeadAttackTool</li>
+              </groups>
+              <parts>
+                <li>
+                  <def>ArtificialBrain</def>
+                  <coverage>0.10</coverage>
+                  <depth>Inside</depth>
+                </li>
+                <li>
+                  <def>SightSensor</def>
+                  <customLabel>left sight sensor</customLabel>
+                  <coverage>0.15</coverage>
+                </li>
+                <li>
+                  <def>SightSensor</def>
+                  <customLabel>right sight sensor</customLabel>
+                  <coverage>0.15</coverage>
+                </li>
+                <li>
+                  <def>MVO_SensorWhisker</def>
+                  <customLabel>left sensor whisker</customLabel>
+                  <coverage>0.10</coverage>
+                </li>
+                <li>
+                  <def>MVO_SensorWhisker</def>
+                  <customLabel>right sensor whisker</customLabel>
+                  <coverage>0.10</coverage>
+                </li>
+              </parts>
+            </li>
+          </parts>
+        </li>
+
+        <li>
+          <def>MVO_HoverShoulder</def>
+          <customLabel>left hover shoulder</customLabel>
+          <coverage>0.15</coverage>
+          <parts>
+            <li>
+              <def>MechanicalArm</def>
+              <customLabel>left arm</customLabel>
+              <coverage>0.70</coverage>
+              <parts>
+                <li>
+                  <def>MVO_HeavyPincer</def>
+                  <customLabel>left heavy pincer</customLabel>
+                  <coverage>0.40</coverage>
+                  <height>Bottom</height>
+                  <groups>
+                    <li>LeftPowerClaw</li>
+                  </groups>
+                </li>
+              </parts>
+            </li>
+          </parts>
+        </li>
+
+        <li>
+          <def>MVO_HoverShoulder</def>
+          <customLabel>right hover shoulder</customLabel>
+          <coverage>0.15</coverage>
+          <parts>
+            <li>
+              <def>MechanicalArm</def>
+              <customLabel>right arm</customLabel>
+              <coverage>0.70</coverage>
+              <parts>
+                <li>
+                  <def>MVO_HeavyPincer</def>
+                  <customLabel>right heavy pincer</customLabel>
+                  <coverage>0.40</coverage>
+                  <height>Bottom</height>
+                  <groups>
+                    <li>RightPowerClaw</li>
+                  </groups>
+                </li>
+              </parts>
+            </li>
+          </parts>
+        </li>
+
+        <li>
+          <def>MVO_MechanicalTail</def>
+          <coverage>0.18</coverage>
+          <height>Bottom</height>
+          <parts>
+            <li>
+              <def>MVO_TailHoverNode</def>
+              <customLabel>left tail hover node</customLabel>
+              <coverage>0.40</coverage>
+            </li>
+            <li>
+              <def>MVO_TailHoverNode</def>
+              <customLabel>right tail hover node</customLabel>
+              <coverage>0.40</coverage>
+            </li>
+          </parts>
+        </li>
+
+        <li>
+          <def>Reactor</def>
+          <coverage>0.06</coverage>
+          <depth>Inside</depth>
+        </li>
+        <li>
+          <def>FluidReprocessor</def>
+          <coverage>0.04</coverage>
+          <depth>Inside</depth>
+        </li>
+        <li>
+          <def>FluidReprocessor</def>
+          <coverage>0.04</coverage>
+          <depth>Inside</depth>
+        </li>
+      </parts>
+    </corePart>
+  </BodyDef>
+
+</Defs>

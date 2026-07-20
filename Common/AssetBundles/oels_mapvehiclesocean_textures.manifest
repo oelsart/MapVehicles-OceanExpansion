@@ -1,15 +1,15 @@
 ManifestFileVersion: 0
-CRC: 2492579094
+CRC: 521044468
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: a6022333003c0f9c1d5274c87f317166
+    Hash: fd9fa37094a882fda94e191ac6cb713d
   TypeTreeHash:
     serializedVersion: 2
     Hash: 2612ac43db082a73502ee80f2eceb73f
   IncrementalBuildHash:
     serializedVersion: 2
-    Hash: a6022333003c0f9c1d5274c87f317166
+    Hash: fd9fa37094a882fda94e191ac6cb713d
 HashAppended: 0
 ClassTypes:
 - Class: 28
@@ -97,6 +97,7 @@ Assets:
 - Assets/Data/OELS.MapVehicles.OceanExpansion/Textures/MapVehiclesOcean/Things/Rig/Rig1/Leathery_Rig1_east.png
 - Assets/Data/OELS.MapVehicles.OceanExpansion/Textures/MapVehiclesOcean/Things/Pawn/Kraken/Kraken_southm.png
 - Assets/Data/OELS.MapVehicles.OceanExpansion/Textures/MapVehiclesOcean/Things/Helm/Helm_east.png
+- Assets/Data/OELS.MapVehicles.OceanExpansion/Textures/MapVehiclesOcean/Things/Pawn/Nephrops/Nephrops_south.png
 - Assets/Data/OELS.MapVehicles.OceanExpansion/Textures/MapVehiclesOcean/Things/Rig/Rig1/Leathery_Rig1_south.png
 - Assets/Data/OELS.MapVehicles.OceanExpansion/Textures/MapVehiclesOcean/Things/Helm/Helm_north.png
 - Assets/Data/OELS.MapVehicles.OceanExpansion/Textures/MapVehiclesOcean/Things/Apparel/SailorSuit/Pants_Fat_northm.png
@@ -116,6 +117,7 @@ Assets:
 - Assets/Data/OELS.MapVehicles.OceanExpansion/Textures/MapVehiclesOcean/Things/Pontoon/LeftDeck_west.png
 - Assets/Data/OELS.MapVehicles.OceanExpansion/Textures/MapVehiclesOcean/Things/Pontoon/Fence_south.png
 - Assets/Data/OELS.MapVehicles.OceanExpansion/Textures/MapVehiclesOcean/Things/CrowsNest/CrowsNestOverlay_eastm.png
+- Assets/Data/OELS.MapVehicles.OceanExpansion/Textures/MapVehiclesOcean/Things/Pawn/Nephrops/Nephrops_east.png
 - Assets/Data/OELS.MapVehicles.OceanExpansion/Textures/MapVehiclesOcean/Things/Rig/Rig2/Fabric_Rig2_northm.png
 - Assets/Data/OELS.MapVehicles.OceanExpansion/Textures/MapVehiclesOcean/Things/Roundnose/Roundnose_eastm.png
 - Assets/Data/OELS.MapVehicles.OceanExpansion/Textures/MapVehiclesOcean/Things/Pontoon/Pontoon_east.png
@@ -325,9 +327,10 @@ Assets:
 - Assets/Data/OELS.MapVehicles.OceanExpansion/Textures/MapVehiclesOcean/Things/Apparel/SailorSuit/Pants_Thin_eastm.png
 - Assets/Data/OELS.MapVehicles.OceanExpansion/Textures/MapVehiclesOcean/Things/Pontoon/Pontoon_eastm.png
 - Assets/Data/OELS.MapVehicles.OceanExpansion/Textures/MapVehiclesOcean/Terrain/WoodShipProps/WoodShipPropsA_Loop.png
+- Assets/Data/OELS.MapVehicles.OceanExpansion/Textures/MapVehiclesOcean/Things/Pawn/Nephrops/Nephrops_north.png
 - Assets/Data/OELS.MapVehicles.OceanExpansion/Textures/MapVehiclesOcean/Things/Rig/Rig1/Fabric_Rig1_east.png
-- Assets/Data/OELS.MapVehicles.OceanExpansion/Textures/MapVehiclesOcean/Things/Stele/Stele_B.png
 - Assets/Data/OELS.MapVehicles.OceanExpansion/Textures/MapVehiclesOcean/Things/Helm/Helm_eastm.png
+- Assets/Data/OELS.MapVehicles.OceanExpansion/Textures/MapVehiclesOcean/Things/Stele/Stele_B.png
 - Assets/Data/OELS.MapVehicles.OceanExpansion/Textures/MapVehiclesOcean/Things/Rig/Rig3/Leathery_Rig3_eastm.png
 - Assets/Data/OELS.MapVehicles.OceanExpansion/Textures/MapVehiclesOcean/Things/Rig/MastRoot_m.png
 - Assets/Data/OELS.MapVehicles.OceanExpansion/Textures/MapVehiclesOcean/Things/Rig/Rig2/Leathery_Rig2_east.png
