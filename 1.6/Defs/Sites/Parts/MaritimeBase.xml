@@ -15,7 +15,6 @@
     <considerEnteringAsAttack>false</considerEnteringAsAttack>
     <tags>
       <li>MVO_MaritimeBase</li>
-      <li>MVO_MaritimeBasePawns</li>
     </tags>
   </SitePartDef>
 

@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <LayoutRoomDef>
+    <defName>MVO_MechanoidPlatformCorridor</defName>
+    <noRoof>true</noRoof>
+    <floorTypes>
+      <li>MVO_MechanoidPlatformBridge</li>
+    </floorTypes>
+  </LayoutRoomDef>
+
+  <LayoutRoomDef>
+    <defName>MVO_MechanoidPlatform</defName>
+    <noRoof>true</noRoof>
+  </LayoutRoomDef>
+  
+</Defs>

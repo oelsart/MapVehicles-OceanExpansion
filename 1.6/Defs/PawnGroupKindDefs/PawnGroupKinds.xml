@@ -6,4 +6,9 @@
     <workerClass>PawnGroupKindWorker_Normal</workerClass>
   </PawnGroupKindDef>
 
+  <PawnGroupKindDef>
+    <defName>MVO_MechanoidPlatform</defName>
+    <workerClass>PawnGroupKindWorker_Normal</workerClass>
+  </PawnGroupKindDef>
+
 </Defs>

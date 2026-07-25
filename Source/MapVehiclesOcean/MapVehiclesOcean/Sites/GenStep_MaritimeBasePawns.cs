@@ -1,10 +1,12 @@
-﻿using RimWorld;
+﻿using JetBrains.Annotations;
+using RimWorld;
 using RimWorld.Planet;
 using Verse;
 using Verse.AI.Group;
 
 namespace MapVehiclesOcean;
 
+[UsedImplicitly(ImplicitUseTargetFlags.WithMembers)]
 public class GenStep_MaritimeBasePawns : GenStep
 {
   public FactionDef factionDef;

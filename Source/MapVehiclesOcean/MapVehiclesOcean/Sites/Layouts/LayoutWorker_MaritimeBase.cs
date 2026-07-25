@@ -5,12 +5,8 @@ using Verse;
 
 namespace MapVehiclesOcean;
 
-[HotSwap]
 public class LayoutWorker_MaritimeBase(LayoutDef def) : LayoutWorker(def)
 {
-  private static readonly IntRange RoomSizeRange = new(12, 16);
-  private static readonly IntRange RoomCountRange = new(8, 16);
-  private static readonly IntRange RoomSpacingRange = new(4, 6);
   private static readonly PriorityQueue<IntVec3, int> openSet = new();
   private static readonly Dictionary<IntVec3, IntVec3> cameFrom = [];
   private static readonly Dictionary<IntVec3, int> gScore = [];
@@ -18,6 +14,12 @@ public class LayoutWorker_MaritimeBase(LayoutDef def) : LayoutWorker(def)
   private static readonly List<IntVec3> toEnqueue = [];
   private static readonly List<IntVec3> tmpCells = [];
   private static readonly List<List<CellRect>> tmpCorridors = [];
+  
+  protected virtual IntRange RoomSizeRange => new(12, 16);
+  
+  protected virtual IntRange RoomCountRange => new(8, 16);
+  
+  protected virtual IntRange RoomSpacingRange => new(4, 6);
 
   public new StructureLayoutDef Def => (StructureLayoutDef)base.Def;
 
@@ -27,7 +29,7 @@ public class LayoutWorker_MaritimeBase(LayoutDef def) : LayoutWorker(def)
     {
       wall = ThingDefOf.Wall,
       door = ThingDefOf.Door,
-      floor = MVO_DefOf.MVO_FloatingStructureBridge,
+      floor = MVO_DefOf.MVO_FloatingStructureSub,
       importantFloor = MVO_DefOf.MVO_FloatingStructure,
       importantFloorSpacing = 1,
       defaultAffordanceTerrain = MVO_DefOf.MVO_WaterOceanDeepPassable,
@@ -39,7 +41,7 @@ public class LayoutWorker_MaritimeBase(LayoutDef def) : LayoutWorker(def)
     return sketch;
   }
 
-  private StructureLayout GenerateBase(StructureGenParams parms)
+  protected virtual StructureLayout GenerateBase(StructureGenParams parms)
   {
     var cellRect = new CellRect(0, 0, parms.size.x, parms.size.z);
     var layout = new StructureLayout(parms.sketch, cellRect);
@@ -99,15 +101,15 @@ public class LayoutWorker_MaritimeBase(LayoutDef def) : LayoutWorker(def)
       vector2List.Add(new Vector2(vector3.x, vector3.z));
     }
 
-    layout.delaunator = new Delaunator(vector2List.ToArray());
+    layout.delaunator = new Delaunator([.. vector2List]);
     layout.neighbours = new RelativeNeighborhoodGraph(layout.delaunator);
   }
 
-  private static void ScatterSquareRooms(CellRect size, StructureLayout layout)
+  private void ScatterSquareRooms(CellRect size, StructureLayout layout)
   {
     var randomInRange1 = RoomCountRange.RandomInRange;
     var num = 0;
-    for (var index = 0; index < 300 && num < randomInRange1; ++index)
+    for (var index = 0; index < 300 || num < randomInRange1; ++index)
     {
       var randomInRange2 = RoomSizeRange.RandomInRange;
       var randomInRange3 = RoomSizeRange.RandomInRange;
@@ -380,7 +382,7 @@ public class LayoutWorker_MaritimeBase(LayoutDef def) : LayoutWorker(def)
 
   private static int Heuristic(IntVec3 pos, IntVec3 goal) => (goal - pos).LengthManhattan;
 
-  private static bool OverlapsWithAnyRoom(StructureLayout layout, CellRect rect)
+  private bool OverlapsWithAnyRoom(StructureLayout layout, CellRect rect)
   {
     foreach (var room in layout.Rooms)
     {
@@ -394,7 +396,7 @@ public class LayoutWorker_MaritimeBase(LayoutDef def) : LayoutWorker(def)
     return false;
   }
 
-  private static bool CloseWithAnyRoom(StructureLayout layout, CellRect rect)
+  private bool CloseWithAnyRoom(StructureLayout layout, CellRect rect)
   {
     if (layout.Rooms.Empty()) return true;
     foreach (var room in layout.Rooms)

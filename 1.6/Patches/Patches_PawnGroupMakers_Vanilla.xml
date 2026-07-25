@@ -170,4 +170,49 @@
     </value>
   </Operation>
 
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/FactionDef[defName="Mechanoid"]/pawnGroupMakers</xpath>
+    <value>
+      <li>
+        <!-- All types-->
+        <kindDef>MVO_MechanoidPlatform</kindDef>
+        <commonality>100</commonality>
+        <options>
+          <Mech_Scyther>2</Mech_Scyther>
+          <Mech_Pikeman>10</Mech_Pikeman>
+          <Mech_Lancer>10</Mech_Lancer>
+          <Mech_CentipedeBlaster>10</Mech_CentipedeBlaster>
+          <MVO_Mech_Nephrops>25</MVO_Mech_Nephrops>
+          <Mech_Scorcher MayRequire="Ludeon.RimWorld.Biotech">5</Mech_Scorcher>
+          <Mech_Militor MayRequire="Ludeon.RimWorld.Biotech">20</Mech_Militor>
+          <Mech_Centurion MayRequire="Ludeon.RimWorld.Biotech">2</Mech_Centurion>
+          <Mech_Warqueen MayRequire="Ludeon.RimWorld.Biotech">1</Mech_Warqueen>
+          <Mech_Apocriton MayRequire="Ludeon.RimWorld.Biotech">1</Mech_Apocriton>
+        </options>
+      </li>
+      <li>
+        <!-- Ranged only -->
+        <kindDef>MVO_MechanoidPlatform</kindDef>
+        <commonality>30</commonality>
+        <options>
+          <Mech_Pikeman>10</Mech_Pikeman>
+          <Mech_Lancer>10</Mech_Lancer>
+          <Mech_Scorcher MayRequire="Ludeon.RimWorld.Biotech">5</Mech_Scorcher>
+          <Mech_Cyclops MayRequire="Ludeon.RimWorld.Odyssey">5</Mech_Cyclops>
+          <Mech_Tesseron MayRequire="Ludeon.RimWorld.Biotech">5</Mech_Tesseron>
+          <Mech_Legionary MayRequire="Ludeon.RimWorld.Biotech">2</Mech_Legionary>
+          <Mech_Diabolus MayRequire="Ludeon.RimWorld.Biotech">1</Mech_Diabolus>
+        </options>
+      </li>
+      <li>
+        <!-- Melee only-->
+        <kindDef>MVO_MechanoidPlatform</kindDef>
+        <commonality>70</commonality>
+        <options>
+          <MVO_Mech_Nephrops>10</MVO_Mech_Nephrops>
+        </options>
+      </li>
+    </value>
+  </Operation>
+
 </Patch>

@@ -32,6 +32,7 @@
     <tags>
       <li>Ocean</li>
     </tags>
+    <changeable>true</changeable>
     <dangerous>true</dangerous>
   </TerrainDef>
 

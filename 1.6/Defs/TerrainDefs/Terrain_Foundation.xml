@@ -38,10 +38,10 @@
   </TerrainDef>
 
   <TerrainDef ParentName="MVO_WoodShipwreckFloor">
-    <defName>MVO_FloatingStructureBridge</defName>
+    <defName>MVO_FloatingStructureSub</defName>
     <label>floating structure</label>
     <description>Floating structure platform on the ocean.</description>
-    <bridgePropsPath>MapVehiclesOcean/Terrain/FloatingStructure/FloatingStructureBridgeProps</bridgePropsPath>
+    <bridgePropsPath>MapVehiclesOcean/Terrain/FloatingStructure/FloatingStructureSubProps</bridgePropsPath>
   </TerrainDef>
 
   <TerrainDef ParentName="MVO_WoodShipwreckFloor">
@@ -49,7 +49,53 @@
     <label>floating structure</label>
     <description>Floating structure platform on the ocean.</description>
     <texturePath>MapVehiclesOcean/Terrain/CrudeBridge</texturePath>
-    <bridgePropsPath>MapVehiclesOcean/Terrain/FloatingStructure/FloatingStructureBridgeProps</bridgePropsPath>
+    <bridgePropsPath>MapVehiclesOcean/Terrain/FloatingStructure/FloatingStructureSubProps</bridgePropsPath>
+  </TerrainDef>
+
+  <TerrainDef Name="MVO_MechanoidPlatformBase" Abstract="True">
+    <texturePath>MapVehiclesOcean/Terrain/MechanoidPlatform/MechanoidPlatform</texturePath>
+    <renderPrecedence>240</renderPrecedence>
+    <preventCraters>true</preventCraters>
+    <layerable>false</layerable>
+    <isFoundation>true</isFoundation>
+    <bridge>true</bridge>
+    <fertility>0</fertility>
+    <canEverTerraform>false</canEverTerraform>
+    <pollutionOverlayTexturePath>Terrain/Surfaces/PollutionSoil</pollutionOverlayTexturePath>
+    <pollutionColor>(1, 1, 1, 0.43)</pollutionColor>
+    <pollutionOverlayScale>(0.66, 0.66)</pollutionOverlayScale>
+    <natural>true</natural>
+    <statBases>
+      <Beauty>-3</Beauty>
+    </statBases>
+    <filthAcceptanceMask>
+      <li>Unnatural</li>
+    </filthAcceptanceMask>
+    <affordances>
+      <li>Light</li>
+      <li>Medium</li>
+      <li>Heavy</li>
+      <li>Walkable</li>
+    </affordances>
+    <terrainAffordanceNeeded>Bridgeable</terrainAffordanceNeeded>
+  </TerrainDef>
+  
+  <TerrainDef ParentName="MVO_MechanoidPlatformBase">
+    <defName>MVO_MechanoidPlatform</defName>
+    <label>mechanoid platform</label>
+    <bridgePropsPath>MapVehiclesOcean/Terrain/MechanoidPlatform/MechanoidPlatformProps</bridgePropsPath>
+  </TerrainDef>
+
+  <TerrainDef ParentName="MVO_MechanoidPlatformBase">
+    <defName>MVO_MechanoidPlatformSub</defName>
+    <label>mechanoid platform</label>
+    <bridgePropsPath>MapVehiclesOcean/Terrain/MechanoidPlatform/MechanoidPlatformSubProps</bridgePropsPath>
+  </TerrainDef>
+
+  <TerrainDef ParentName="MVO_MechanoidPlatformBase">
+    <defName>MVO_MechanoidPlatformBridge</defName>
+    <label>mechanoid platform</label>
+    <bridgePropsPath>MapVehiclesOcean/Terrain/MechanoidPlatform/MechanoidPlatformBridgeProps</bridgePropsPath>
   </TerrainDef>
 
 </Defs>
