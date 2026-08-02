@@ -13,5 +13,14 @@
     <driverClass>MapVehiclesOcean.JobDriver_GotoShipCombat</driverClass>
     <reportString>moving.</reportString>
   </JobDef>
+  
+  <JobDef>
+    <defName>MVO_WalkPlank</defName>
+    <driverClass>MapVehiclesOcean.JobDriver_WalkPlank</driverClass>
+    <reportString>moving to walk the plank.</reportString>
+    <joyDuration>8000</joyDuration>
+    <joyKind>Social</joyKind>
+    <joyMaxParticipants>4</joyMaxParticipants>
+  </JobDef>
 
 </Defs>

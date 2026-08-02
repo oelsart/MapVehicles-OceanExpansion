@@ -70,12 +70,12 @@ public sealed class CompSailEmblem : ThingComp
             emblem = null;
           })
         ];
-        foreach (var tuple in Props.AllEmblems)
+        foreach (var (path, texture) in Props.AllEmblems)
         {
-          options.Add(new FloatMenuGridOption(tuple.texture, () =>
+          options.Add(new FloatMenuGridOption(texture, () =>
           {
-            texturePath = tuple.path;
-            emblem = tuple.texture;
+            texturePath = path;
+            emblem = texture;
           }, color));
         }
         Find.WindowStack.Add(new FloatMenuGrid(options));
@@ -137,7 +137,7 @@ public sealed class CompSailEmblem : ThingComp
     }
     loc += graphic.DrawOffset(rot);
     var maskMat = graphic.MatAt(rot, parent);
-    loc.y += 0.010006f;
+    loc.y += 0.110006f;
     loc.y -= loc.z * 0.00001f;
     loc.y -= loc.x * 0.000001f;
     Graphics.DrawMesh(mesh, loc, quaternion, maskMat, 0);

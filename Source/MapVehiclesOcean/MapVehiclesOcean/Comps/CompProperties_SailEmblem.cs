@@ -22,7 +22,7 @@ public class CompProperties_SailEmblem : CompProperties
     compClass = typeof(CompSailEmblem);
   }
 
-  public List<(string path, Texture2D texture)> AllEmblems
+  public Dictionary<string, Texture2D> AllEmblems
   {
     get
     {
@@ -33,9 +33,9 @@ public class CompProperties_SailEmblem : CompProperties
         {
           foreach (var folderPath in folderPaths)
           {
-            foreach (var texture in ContentFinder<Texture2D>.GetAllInFolder(folderPath))
+            foreach (var (path, texture) in GetEmblemsInFolder(folderPath))
             {
-              field.Add((Path.Combine(folderPath, texture.name), texture));
+              field[path] = texture;
             }
           }
         }
@@ -44,12 +44,87 @@ public class CompProperties_SailEmblem : CompProperties
         {
           foreach (var texturePath in texturePaths)
           {
-            field.Add((texturePath, ContentFinder<Texture2D>.Get(texturePath)));
+            field[texturePath] = ContentFinder<Texture2D>.Get(texturePath);
           }
         }
       }
 
       return field;
+    }
+  }
+  
+  private static IEnumerable<(string path, Texture2D texture)> GetEmblemsInFolder(string folderPath)
+  {
+    var normalizedFolderPath = folderPath.TrimEnd('/', '\\').Replace('\\', '/');
+    var folderPrefix = normalizedFolderPath + "/";
+    var mods = LoadedModManager.RunningModsListForReading;
+    var contentPath = GenFilePaths.ContentPath<Texture2D>();
+    var modsDir = Path.Combine("Assets", "Data");
+
+    for (var i = mods.Count - 1; i >= 0; --i)
+    {
+      var mod = mods[i];
+
+      var holder = mod.GetContentHolder<Texture2D>();
+      if (holder?.contentList != null)
+      {
+        foreach (var (path, texture) in holder.contentList)
+        {
+          if (path.StartsWith(folderPrefix, StringComparison.OrdinalIgnoreCase))
+          {
+            yield return (path, texture);
+          }
+        }
+      }
+
+      if (mod.assetBundles?.loadedAssetBundles != null)
+      {
+        var validExtensions = ModAssetBundlesHandler.TextureExtensions;
+
+        for (var j = 0; j < mod.assetBundles.loadedAssetBundles.Count; ++j)
+        {
+          var assetBundle = mod.assetBundles.loadedAssetBundles[j];
+          var trie = mod.AllAssetNamesInBundleTrie(j);
+          if (trie == null) continue;
+
+          List<string> rootPaths = [];
+          
+          var rootFolderName = Path.Combine(Path.Combine(modsDir, mod.FolderName), contentPath).Replace('\\', '/');
+          if (!rootFolderName.EndsWith("/")) rootFolderName += "/";
+          rootPaths.Add(rootFolderName);
+
+          if (!mod.IsOfficialMod)
+          {
+            var rootPackageId = Path.Combine(Path.Combine(modsDir, mod.PackageIdPlayerFacing), contentPath).Replace('\\', '/');
+            if (!rootPackageId.EndsWith("/")) rootPackageId += "/";
+            rootPaths.Add(rootPackageId);
+          }
+
+          foreach (var rootPath in rootPaths)
+          {
+            var bundleSearchPrefix = (rootPath + folderPrefix).ToLower();
+
+            foreach (var fullAssetName in trie.GetByPrefix(bundleSearchPrefix))
+            {
+              var ext = Path.GetExtension(fullAssetName);
+              if (validExtensions.Contains(ext))
+              {
+                if (fullAssetName.StartsWith(rootPath, StringComparison.OrdinalIgnoreCase))
+                {
+                  var itemPathWithExt = fullAssetName[rootPath.Length..];
+                  var itemPath = itemPathWithExt[..^ext.Length];
+
+                  var texture = assetBundle.LoadAsset<Texture2D>(fullAssetName);
+                  if (texture != null)
+                  {
+                    yield return (itemPath, texture);
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
     }
   }
   

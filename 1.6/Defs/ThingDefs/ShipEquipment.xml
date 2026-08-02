@@ -731,6 +731,8 @@
         </targetingParameters>
       </li>
       <li Class="VehicleMapFramework.CompProperties_Zipline">
+        <canAccessToGround>true</canAccessToGround>
+        <canAccessVehicleToVehicle>true</canAccessVehicleToVehicle>
         <standbyGraphic>
           <texPath>MapVehiclesOcean/Things/GrapplingLauncher/GrapplingLauncher_TopOverlay</texPath>
           <graphicClass>Graphic_Single</graphicClass>
@@ -840,7 +842,10 @@
       <Mass>0.1</Mass>
     </statBases>
     <comps>
-      <li Class="VehicleMapFramework.CompProperties_Zipline"/>
+      <li Class="VehicleMapFramework.CompProperties_Zipline">
+        <canAccessToGround>true</canAccessToGround>
+        <canAccessVehicleToVehicle>true</canAccessVehicleToVehicle>
+      </li>
     </comps>
   </ThingDef>
 
@@ -1060,6 +1065,53 @@
     </building>
     <comps>
       <li Class="MapVehiclesOcean.CompProperties_FishingSpot"/>
+    </comps>
+    <placeWorkers>
+      <li>VehicleMapFramework.PlaceWorker_ForceOnVehicleMapEdgeReverse</li>
+    </placeWorkers>
+  </ThingDef>
+
+  <ThingDef ParentName="MVO_ShipEquipmentBase">
+    <defName>MVO_Gangplank</defName>
+    <label>gangplank</label>
+    <description>TODO</description>
+    <graphicData>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <texPath>MapVehiclesOcean/Things/Gangplank/Gangplank</texPath>
+      <drawSize>(1,3)</drawSize>
+      <drawOffsetNorth>(0,0,1.1)</drawOffsetNorth>
+      <drawOffsetSouth>(0,0,-1.1)</drawOffsetSouth>
+      <drawOffsetEast>(1.1,0,-0.3)</drawOffsetEast>
+      <drawOffsetWest>(-1.1,0,-0.3)</drawOffsetWest>
+      <color>(135,86,39)</color>
+    </graphicData>
+    <category>Building</category>
+    <minifiedDef>MinifiedThing</minifiedDef>
+    <thingCategories>
+      <li>BuildingsFurniture</li>
+    </thingCategories>
+    <tickerType>Normal</tickerType>
+    <building>
+      <paintable>true</paintable>
+    </building>
+    <statBases>
+      <MaxHitPoints>80</MaxHitPoints>
+      <Beauty>-2</Beauty>
+      <WorkToBuild>150</WorkToBuild>
+      <Mass>3</Mass>
+    </statBases>
+    <size>(1,1)</size>
+    <costList>
+      <WoodLog>5</WoodLog>
+    </costList>
+    <comps>
+      <li Class="VehicleMapFramework.CompProperties_Gangplank">
+        <canAccessVehicleToVehicle>true</canAccessVehicleToVehicle>
+        <length>3</length>
+      </li>
+      <li>
+        <compClass>CompColorable</compClass>
+      </li>
     </comps>
     <placeWorkers>
       <li>VehicleMapFramework.PlaceWorker_ForceOnVehicleMapEdgeReverse</li>

@@ -6,8 +6,11 @@
   <MVO_TradeGoods>{0}'s {1}</MVO_TradeGoods>
   
   <MVO_SailEmblemChange>change emblem</MVO_SailEmblemChange>
-  <MVO_SailEmblemChangeDesc>Change the emblem displayed on the sail.</MVO_SailEmblemChangeDesc>
+  <MVO_SailEmblemChangeDesc>change the emblem displayed on the sail.</MVO_SailEmblemChangeDesc>
   <MVO_SailEmblemChangeColor>change color</MVO_SailEmblemChangeColor>
   <MVO_SailEmblemChangeColorDesc>change the color of the sail emblem.</MVO_SailEmblemChangeColorDesc>
+  
+  <MVO_JobReport_WalkingPlank>walking on the gangplank.</MVO_JobReport_WalkingPlank>
+  <MVO_JobReport_WatchingWalkingPlank>watching others walk on the gangplank.</MVO_JobReport_WatchingWalkingPlank>
 
 </LanguageData>
