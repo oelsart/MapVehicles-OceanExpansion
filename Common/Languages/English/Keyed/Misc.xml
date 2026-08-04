@@ -12,5 +12,7 @@
   
   <MVO_JobReport_WalkingPlank>walking on the gangplank.</MVO_JobReport_WalkingPlank>
   <MVO_JobReport_WatchingWalkingPlank>watching others walk on the gangplank.</MVO_JobReport_WatchingWalkingPlank>
+  
+  <MVO_Castaway_GameStartDialog>Upon waking up, I found myself on a raft. There is nothing but ocean all around me, and I can’t remember a thing. Blood is flowing from my head… I need to stop the bleeding first.</MVO_Castaway_GameStartDialog>
 
 </LanguageData>

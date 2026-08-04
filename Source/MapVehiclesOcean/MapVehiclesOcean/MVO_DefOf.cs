@@ -68,6 +68,8 @@ public static class MVO_DefOf
 
   public static WorldObjectDef MVO_AmbushSea;
 
+  public static MapGeneratorDef MVO_MapGeneratorSea;
+
   public static StructureLayoutDef MVO_MaritimeBase;
 
   public static StructureLayoutDef MVO_MechanoidOceanPlatform;

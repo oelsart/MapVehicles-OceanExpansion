@@ -9,7 +9,7 @@ using Verse.AI;
 namespace MapVehiclesOcean;
 
 [UsedImplicitly(ImplicitUseTargetFlags.WithMembers)]
-public class GenStep_Drifter : GenStep
+public class GenStep_Castaway : GenStep
 {
   public override int SeedPart => 97878422;
 

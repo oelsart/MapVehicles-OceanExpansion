@@ -584,7 +584,7 @@
         <questWeights>
           <MVO_Shipwreck>1</MVO_Shipwreck>
           <MVO_MaritimeBase>0.5</MVO_MaritimeBase>
-          <MVO_Drifter>0.3</MVO_Drifter>
+          <MVO_Castaway>0.3</MVO_Castaway>
         </questWeights>
       </li>
       <li Class="CompProperties_Forbiddable"/>

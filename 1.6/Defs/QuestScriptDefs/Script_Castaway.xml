@@ -2,33 +2,33 @@
 <Defs>
 
   <QuestScriptDef>
-    <defName>MVO_Drifter</defName>
+    <defName>MVO_Castaway</defName>
     <autoAccept>true</autoAccept>
     <defaultChallengeRating>1</defaultChallengeRating>
     <isRootSpecial>true</isRootSpecial>
     <questNameRules>
       <rulesStrings>
-        <li>questName->[drifter_adj] [drifter_noun]</li>
-        <li>questName->Rescuing [drifter_nameDef]</li>
-        <li>questName->The [drifter_adj] Survivor</li>
+        <li>questName->[castaway_adj] [castaway_noun]</li>
+        <li>questName->Rescuing [castaway_nameDef]</li>
+        <li>questName->The [castaway_adj] Survivor</li>
 
-        <li>drifter_adj->Drifting</li>
-        <li>drifter_adj->Stranded</li>
-        <li>drifter_adj->Lost</li>
-        <li>drifter_adj->Solitary</li>
-        <li>drifter_adj->Shipwrecked</li>
+        <li>castaway_adj->Drifting</li>
+        <li>castaway_adj->Stranded</li>
+        <li>castaway_adj->Lost</li>
+        <li>castaway_adj->Solitary</li>
+        <li>castaway_adj->Shipwrecked</li>
 
-        <li>drifter_noun->Survivor</li>
-        <li>drifter_noun->Drifter</li>
-        <li>drifter_noun->Castaway</li>
-        <li>drifter_noun->Sailor</li>
+        <li>castaway_noun->Survivor</li>
+        <li>castaway_noun->Drifter</li>
+        <li>castaway_noun->Castaway</li>
+        <li>castaway_noun->Sailor</li>
       </rulesStrings>
     </questNameRules>
     <questDescriptionRules>
       <rulesStrings>
         <li>questDescription->By the lookout, [worker_definite] has spotted a person drifting on the waves. They appear
-          to be [drifter_label], and they are in desperate need of rescue.\n\n[drifter_pronoun] is currently at a nearby
-          sea location. We should hurry, as [drifter_pronoun] won't be able to survive more than [timeoutTicks_duration]
+          to be [castaway_label], and they are in desperate need of rescue.\n\n[castaway_pronoun] is currently at a nearby
+          sea location. We should hurry, as [castaway_pronoun] won't be able to survive more than [timeoutTicks_duration]
           in these conditions.
         </li>
       </rulesStrings>
@@ -59,7 +59,7 @@
           <storeFactionAs>siteFaction</storeFactionAs>
           <sitePartsTags>
             <li>
-              <tag>MVO_Drifter</tag>
+              <tag>MVO_Castaway</tag>
             </li>
           </sitePartsTags>
         </li>

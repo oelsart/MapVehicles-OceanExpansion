@@ -5,15 +5,52 @@ using Verse;
 namespace MapVehiclesOcean;
 
 [StaticConstructorOnStartup]
-public class TileFinderSea
+public static class TileFinderSea
 {
   private static readonly List<(PlanetTile tile, int traversalDistance)> tmpTiles = [];
 
   private static readonly List<PlanetTile> tmpPlayerTiles = [];
 
   private static List<BiomeDef> WaterBiomes { get; } =
-    DefDatabase<BiomeDef>.AllDefs.Where(biome => biome.isWaterBiome).ToList();
+    [.. DefDatabase<BiomeDef>.AllDefs.Where(biome => biome.isWaterBiome)];
 
+  public static PlanetTile RandomSeaTile()
+  {
+    return RandomSettlementTileFor(Find.WorldGrid.Surface, Faction.OfPlayer);
+  }
+  
+  public static PlanetTile RandomSettlementTileFor(PlanetLayer layer, Faction faction, Predicate<PlanetTile> extraValidator = null)
+  {
+    for (var i = 0; i < 500; i++)
+    {
+      if ((from _ in Enumerable.Range(0, 100)
+            select Rand.Range(0, layer.TilesCount)).TryRandomElementByWeight(x =>
+          {
+            var tile2 = layer[x];
+            if (!tile2.PrimaryBiome.isWaterBiome)
+            {
+              return 0f;
+            }
+            if (extraValidator != null && !extraValidator(tile2.tile))
+            {
+              return 0f;
+            }
+            var num = 1f;
+            if (faction?.def.minSettlementTemperatureChanceCurve != null)
+            {
+              num *= faction.def.minSettlementTemperatureChanceCurve.Evaluate(GenTemperature.MinTemperatureAtTile(tile2.tile));
+            }
+            return num;
+          }, out var result))
+      {
+        var tile = layer[result].tile;
+        return tile;
+      }
+    }
+    Log.Error($"Failed to find faction base tile for {faction}");
+    return new PlanetTile(0, layer);
+  }
+  
   public static bool TryFindNewSiteTile(out PlanetTile tile, int minDist = 7, int maxDist = 27,
     bool allowCaravans = false, List<LandmarkDef> allowedLandmarks = null, float selectLandmarkChance = 0.5f,
     bool canSelectComboLandmarks = true, TileFinderMode tileFinderMode = TileFinderMode.Near,

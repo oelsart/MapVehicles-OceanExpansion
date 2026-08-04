@@ -2,6 +2,28 @@
 <Defs>
 
   <PrefabDef>
+    <defName>MVO_ExpandableRaft_Castaway</defName>
+    <size>(3,3)</size>
+    <things>
+      <Bedroll>
+        <position>(2, 0, 1)</position>
+        <relativeRotation>Opposite</relativeRotation>
+        <stuff>Leather_Light</stuff>
+        <quality>Normal</quality>
+      </Bedroll>
+      <MVO_Oar>
+        <position>(1, 0, 0)</position>
+      </MVO_Oar>
+      <Shelf>
+        <position>(2, 0, 2)</position>
+        <relativeRotation>Opposite</relativeRotation>
+        <stuff>WoodLog</stuff>
+      </Shelf>
+    </things>
+  </PrefabDef>
+
+
+  <PrefabDef>
     <defName>MVO_ExpandableRaft_PrefabA</defName>
     <size>(5,5)</size>
     <terrain>

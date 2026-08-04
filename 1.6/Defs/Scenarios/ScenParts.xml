@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <ScenPartDef>
+    <defName>MVO_ForcedSeaMap</defName>
+    <label>forced sea map</label>
+    <category>Fixed</category>
+    <scenPartClass>MapVehiclesOcean.ScenPart_ForcedSeaMap</scenPartClass>
+    <summaryPriority>410</summaryPriority>
+    <canBeRandomlyAdded>false</canBeRandomlyAdded>
+  </ScenPartDef>
+
+  <ScenPartDef>
+    <defName>MVO_ForcedHediffToBodyPart</defName>
+    <label>forced health condition</label>
+    <scenPartClass>MapVehiclesOcean.ScenPart_ForcedHediffToBodyPart</scenPartClass>
+    <category>PlayerPawnModifier</category>
+    <selectionWeight>1.0</selectionWeight>
+    <summaryPriority>458</summaryPriority>
+  </ScenPartDef>
+  
+</Defs>

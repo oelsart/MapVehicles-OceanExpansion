@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  
+  <ScenarioDef ParentName="ScenarioBase">
+    <defName>MVO_Castaway</defName>
+    <scenario>
+      <name>Castaway</name>
+      <summary>A lone castaway on a raft. Extra difficult.\n&lt;color=#00bfff&gt;Map Vehicles – Ocean Expansion&lt;/color&gt;</summary>
+      <description>Before I knew it, I found myself out at sea, on a small, rickety raft. I have no memory of how I got there, but I have a small amount of food and supplies.</description>
+      <parts>
+        <li Class="MapVehiclesOcean.ScenPart_ForcedSeaMap">
+          <def>MVO_ForcedSeaMap</def>
+        </li>
+        <li Class="ScenPart_ConfigPage_ConfigureStartingPawns">
+          <def>ConfigPage_ConfigureStartingPawns</def>
+          <pawnChoiceCount>8</pawnChoiceCount>
+          <pawnCount>1</pawnCount>
+        </li>
+        <li Class="VehicleMapFramework.ScenPart_StartingMapVehicle">
+          <def>VMF_StartingMapVehicle</def>
+          <vehicleDef>MVO_ExpandableRaft</vehicleDef>
+          <prefabDef>MVO_ExpandableRaft_Castaway</prefabDef>
+        </li>
+        <li Class="ScenPart_StartingResearch">
+          <def>StartingResearch</def>
+          <project>MVO_ExpandableRaft</project>
+        </li>
+        <li Class="VehicleMapFramework.ScenPart_StartOnMapVehicle">
+          <def>VMF_StartOnMapVehicle</def>
+        </li>
+        <li Class="ScenPart_StartingThing_Defined">
+          <def>StartingThing_Defined</def>
+          <thingDef>Silver</thingDef>
+          <count>500</count>
+        </li>
+        <li Class="MapVehiclesOcean.ScenPart_ForcedHediffToBodyPart">
+          <def>MVO_ForcedHediffToBodyPart</def>
+          <visible>false</visible>
+          <context>PlayerStarter</context>
+          <hediffDef>Misc</hediffDef>
+          <bodyPartDef>Head</bodyPartDef>
+          <hideOffMap>true</hideOffMap>
+          <severityRange>1~1</severityRange>
+        </li>
+        <li Class="ScenPart_StartingThing_Defined">
+          <def>StartingThing_Defined</def>
+          <thingDef>MealSurvivalPack</thingDef>
+          <count>10</count>
+        </li>
+        <li Class="ScenPart_StartingThing_Defined">
+          <def>StartingThing_Defined</def>
+          <thingDef>MedicineHerbal</thingDef>
+          <count>25</count>
+        </li>
+        <li Class="ScenPart_StartingThing_Defined">
+          <def>StartingThing_Defined</def>
+          <thingDef>MeleeWeapon_Knife</thingDef>
+          <stuff>Steel</stuff>
+        </li>
+        <li Class="ScenPart_StartingThing_Defined">
+          <def>StartingThing_Defined</def>
+          <thingDef>WoodLog</thingDef>
+          <count>225</count>
+        </li>
+        <li Class="ScenPart_StartingThing_Defined">
+          <def>StartingThing_Defined</def>
+          <thingDef>Steel</thingDef>
+          <count>75</count>
+        </li>
+        <li Class="ScenPart_GameStartDialog">
+          <def>GameStartDialog</def>
+          <textKey>MVO_Castaway_GameStartDialog</textKey>
+          <closeSound>GameStartSting</closeSound>
+        </li>
+      </parts>
+    </scenario>
+  </ScenarioDef>
+  
+</Defs>
