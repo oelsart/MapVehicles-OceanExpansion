@@ -7,6 +7,9 @@
       <name>Castaway</name>
       <summary>A lone castaway on a raft. Extra difficult.\n&lt;color=#00bfff&gt;Map Vehicles – Ocean Expansion&lt;/color&gt;</summary>
       <description>Before I knew it, I found myself out at sea, on a small, rickety raft. I have no memory of how I got there, but I have a small amount of food and supplies.</description>
+      <playerFaction>
+        <factionDef>MVO_PlayerFleet</factionDef>
+      </playerFaction>
       <parts>
         <li Class="MapVehiclesOcean.ScenPart_ForcedSeaMap">
           <def>MVO_ForcedSeaMap</def>

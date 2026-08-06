@@ -645,8 +645,8 @@
                   <southWest>North</southWest>
                   <west>East</west>
                   <northWest>South</northWest>
-                  <drawOffsetNorth>(0,0,-0.5)</drawOffsetNorth>
-                  <drawOffsetSouth>(0,0,0)</drawOffsetSouth>
+                  <drawOffsetNorth>(0,0,0.3)</drawOffsetNorth>
+                  <drawOffsetSouth>(0,0,0.3)</drawOffsetSouth>
                 </pawnRenderer>
               </li>
             </roles>
@@ -655,7 +655,7 @@
             <vehicleStats>
               <li>
                 <def>MoveSpeed</def>
-                <value>0.25</value>
+                <value>0.75</value>
               </li>
             </vehicleStats>
           </li>

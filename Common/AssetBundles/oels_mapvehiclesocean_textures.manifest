@@ -1,15 +1,15 @@
 ManifestFileVersion: 0
-CRC: 3118236558
+CRC: 219850372
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: ea32d8982b68fd17ef32cb60e952ae48
+    Hash: 324d74a20efc175d17bc43c7b25e76fe
   TypeTreeHash:
     serializedVersion: 2
     Hash: 2612ac43db082a73502ee80f2eceb73f
   IncrementalBuildHash:
     serializedVersion: 2
-    Hash: ea32d8982b68fd17ef32cb60e952ae48
+    Hash: 324d74a20efc175d17bc43c7b25e76fe
 HashAppended: 0
 ClassTypes:
 - Class: 28
@@ -70,6 +70,7 @@ Assets:
 - Assets/Data/OELS.MapVehicles.OceanExpansion/Textures/MapVehiclesOcean/Things/Pawn/Shark/Shark_eastm.png
 - Assets/Data/OELS.MapVehicles.OceanExpansion/Textures/MapVehiclesOcean/Things/Apparel/ZiplineBelt/ZiplineBelt_AbilityIcon.png
 - Assets/Data/OELS.MapVehicles.OceanExpansion/Textures/MapVehiclesOcean/Things/Gangplank/Gangplank_east.png
+- Assets/Data/OELS.MapVehicles.OceanExpansion/Textures/MapVehiclesOcean/UI/Issues/OceanConnection.png
 - Assets/Data/OELS.MapVehicles.OceanExpansion/Textures/MapVehiclesOcean/Things/CrowsNest/CrowsNest_eastm.png
 - Assets/Data/OELS.MapVehicles.OceanExpansion/Textures/MapVehiclesOcean/Things/Vehicle/Pontoon/RightDeck_eastm.png
 - Assets/Data/OELS.MapVehicles.OceanExpansion/Textures/MapVehiclesOcean/Things/Vehicle/Pontoon/Fence_southm.png
@@ -109,6 +110,7 @@ Assets:
 - Assets/Data/OELS.MapVehicles.OceanExpansion/Textures/MapVehiclesOcean/Things/Rig/Rig1/Leathery_Rig1_eastm.png
 - Assets/Data/OELS.MapVehicles.OceanExpansion/Textures/MapVehiclesOcean/Things/Cannon/Cannon_southm.png
 - Assets/Data/OELS.MapVehicles.OceanExpansion/Textures/MapVehiclesOcean/Terrain/WoodShipProps/WoodShipPropsB_Right.png
+- Assets/Data/OELS.MapVehicles.OceanExpansion/Textures/MapVehiclesOcean/UI/Roles/Navigator.png
 - Assets/Data/OELS.MapVehicles.OceanExpansion/Textures/MapVehiclesOcean/Things/Cannon/CannonballResource/Cannonball_c.png
 - Assets/Data/OELS.MapVehicles.OceanExpansion/Textures/MapVehiclesOcean/Things/Apparel/SailorSuit/Shirt_Male_southm.png
 - Assets/Data/OELS.MapVehicles.OceanExpansion/Textures/MapVehiclesOcean/Things/Apparel/SailorSuit/Shirt_Male_northm.png
@@ -214,6 +216,7 @@ Assets:
 - Assets/Data/OELS.MapVehicles.OceanExpansion/Textures/MapVehiclesOcean/Things/Apparel/SailorSuit/Pants_Female_south.png
 - Assets/Data/OELS.MapVehicles.OceanExpansion/Textures/MapVehiclesOcean/Things/Rig/Rig1/Fabric_Rig1_southm.png
 - Assets/Data/OELS.MapVehicles.OceanExpansion/Textures/MapVehiclesOcean/Things/Pawn/Shark/Shark_Swimming_north.png
+- Assets/Data/OELS.MapVehicles.OceanExpansion/Textures/MapVehiclesOcean/UI/Issues/ShipQuarters.png
 - Assets/Data/OELS.MapVehicles.OceanExpansion/Textures/MapVehiclesOcean/Terrain/FloatingStructure/FloatingStructureProps_Loop.png
 - Assets/Data/OELS.MapVehicles.OceanExpansion/Textures/MapVehiclesOcean/Things/Apparel/SailorSuit/Shirt_Thin_east.png
 - Assets/Data/OELS.MapVehicles.OceanExpansion/Textures/MapVehiclesOcean/Things/Apparel/SailorSuit/Pants_Male_eastm.png
@@ -303,6 +306,7 @@ Assets:
 - Assets/Data/OELS.MapVehicles.OceanExpansion/Textures/MapVehiclesOcean/Things/Rig/SailEmblem/Pirates.png
 - Assets/Data/OELS.MapVehicles.OceanExpansion/Textures/MapVehiclesOcean/Things/Apparel/PirateHat/PirateHat_south.png
 - Assets/Data/OELS.MapVehicles.OceanExpansion/Textures/MapVehiclesOcean/Terrain/WoodShipProps/WoodShipPropsCB_Diagonal_west.png
+- Assets/Data/OELS.MapVehicles.OceanExpansion/Textures/MapVehiclesOcean/UI/Memes/Seafaring.png
 - Assets/Data/OELS.MapVehicles.OceanExpansion/Textures/MapVehiclesOcean/Things/Hatch/Hatch.png
 - Assets/Data/OELS.MapVehicles.OceanExpansion/Textures/MapVehiclesOcean/Things/Rig/Rig3/Fabric_Rig3_Icon.png
 - Assets/Data/OELS.MapVehicles.OceanExpansion/Textures/MapVehiclesOcean/Things/Apparel/SailorSuit/Shirt_Hulk_eastm.png
@@ -336,6 +340,7 @@ Assets:
 - Assets/Data/OELS.MapVehicles.OceanExpansion/Textures/MapVehiclesOcean/Things/Apparel/SailorSuit/Shirt_Male_north.png
 - Assets/Data/OELS.MapVehicles.OceanExpansion/Textures/MapVehiclesOcean/Things/Pawn/Shark/Shark_Swimming_east.png
 - Assets/Data/OELS.MapVehicles.OceanExpansion/Textures/MapVehiclesOcean/Things/Apparel/PirateHat/PirateHat.png
+- Assets/Data/OELS.MapVehicles.OceanExpansion/Textures/MapVehiclesOcean/UI/Roles/Captain.png
 - Assets/Data/OELS.MapVehicles.OceanExpansion/Textures/MapVehiclesOcean/Things/Pawn/Kraken/Meat/Meat_c.png
 - Assets/Data/OELS.MapVehicles.OceanExpansion/Textures/MapVehiclesOcean/Terrain/WoodShipProps/WoodShipPropsB_Diagonal_east.png
 - Assets/Data/OELS.MapVehicles.OceanExpansion/Textures/MapVehiclesOcean/Things/Cannon/CannonBroken_south.png

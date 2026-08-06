@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  
+  <IdeoPresetDef>
+    <defName>MVO_Seafarer</defName>
+    <label>seafarers</label>
+    <description>A hardened community bound to the waves. They thrive in open waters and cramped shipboard life, taking pride in disciplined navigation while scorning landlocked existence.\n\nUnlocks Captain and Navigator specialist roles.</description>
+    <categoryDef>Mild</categoryDef>
+    <memes>
+      <li>MVO_Seafaring</li>
+      <li>Individualist</li>
+      <li MayRequire="OskarPotocki.VanillaVehiclesExpanded">VVE_Nauticals</li>
+    </memes>
+  </IdeoPresetDef>
+
+</Defs>

@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <ThoughtDef>
+    <defName>MVO_Thought_Ocean_Weak</defName>
+    <workerClass>MapVehiclesOcean.ThoughtWorker_Ocean</workerClass>
+    <thoughtClass>Thought_Situational</thoughtClass>
+    <stages>
+      <li>
+        <label>pleasant sea breeze</label>
+        <description>The gentle motion of the water and the faint scent of salt air make the day feel right.</description>
+        <baseMoodEffect>3</baseMoodEffect>
+      </li>
+      <li>
+        <label>slight sea-longing</label>
+        <description>The unmoving ground feels a bit dull. I miss the subtle rhythm of the open water.</description>
+        <baseMoodEffect>-2</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  <ThoughtDef>
+    <defName>MVO_Thought_Ocean_Strong</defName>
+    <workerClass>MapVehiclesOcean.ThoughtWorker_Ocean</workerClass>
+    <thoughtClass>Thought_Situational</thoughtClass>
+    <stages>
+      <li>
+        <label>at home on the ocean</label>
+        <description>The motion of the water and the scent of salt air bring complete peace to my mind.</description>
+        <baseMoodEffect>6</baseMoodEffect>
+      </li>
+      <li>
+        <label>landlocked anxiety</label>
+        <description>The unmoving ground feels unnatural and dead. I belong back on the open sea.</description>
+        <baseMoodEffect>-5</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+  
+</Defs>

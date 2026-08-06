@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <RulePackDef>
+    <defName>MVO_NamerRoleNavigator</defName>
+    <include>
+      <li>NamerRoleSpecialistUtility</li>
+    </include>
+    <rulePack>
+      <rulesStrings>
+        <li>r_roleName->helmsman</li>
+        <li>r_roleName->pathfinder</li>
+        <li>r_roleName->chartmaster</li>
+        <li>r_roleName->stargazer</li>
+        <li>r_roleName->wayfinder</li>
+
+        <li>firstPart->nav</li>
+        <li>firstPart->sea</li>
+        <li>firstPart->wave</li>
+        <li>firstPart->tide</li>
+        <li>firstPart->chart</li>
+        <li>firstPart->star</li>
+        <li>firstPart->deep</li>
+        <li>firstPart->drift</li>
+        <li>firstPart->wind</li>
+        <li>firstPart->compass</li>
+        <li>firstPart->course</li>
+        <li>firstPart->steer</li>
+
+        <li>secondPart(p=4)->guide</li>
+        <li>secondPart(p=4)->runner</li>
+        <li>secondPart(p=4)->reader</li>
+        <li>secondPart(p=4)->seeker</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+</Defs>
