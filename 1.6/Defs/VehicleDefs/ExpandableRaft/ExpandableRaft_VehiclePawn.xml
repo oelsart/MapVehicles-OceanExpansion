@@ -49,7 +49,6 @@
     <enabled>Everyone</enabled>
     <properties>
       <manhunterTargetsVehicle>true</manhunterTargetsVehicle>
-      <fishing>true</fishing>
       <winterSpeedMultiplier>1</winterSpeedMultiplier>
       <riverCost>1</riverCost>
 

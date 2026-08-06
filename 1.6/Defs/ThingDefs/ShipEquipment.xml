@@ -54,7 +54,7 @@
     </graphicData>
     <uiIconPath>MapVehiclesOcean/Things/RaftPiece/Blueprint_RaftPiece_east</uiIconPath>
     <costList>
-      <WoodLog>45</WoodLog>
+      <WoodLog>15</WoodLog>
     </costList>
     <building>
       <blueprintGraphicData>
@@ -113,7 +113,7 @@
     </graphicData>
     <uiIconPath>MapVehiclesOcean/Things/RaftPiece/Blueprint_RaftPieceFloat_east</uiIconPath>
     <costList>
-      <WoodLog>45</WoodLog>
+      <WoodLog>15</WoodLog>
       <Chemfuel>20</Chemfuel>
     </costList>
     <building>

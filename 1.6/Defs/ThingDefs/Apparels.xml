@@ -223,10 +223,10 @@
       <layers>
         <li>Belt</li>
       </layers>
-      <tags>
-        <li>IndustrialBasic</li>
-        <li>Western</li>
-      </tags>
+<!--      <tags>-->
+<!--        <li>IndustrialBasic</li>-->
+<!--        <li>Western</li>-->
+<!--      </tags>-->
       <developmentalStageFilter>Child, Adult</developmentalStageFilter>
     </apparel>
     <allowedArchonexusCount>-1</allowedArchonexusCount>
@@ -293,10 +293,10 @@
       <layers>
         <li>OnSkin</li>
       </layers>
-      <tags>
-        <li>IndustrialBasic</li>
-        <li>Western</li>
-      </tags>
+<!--      <tags>-->
+<!--        <li>IndustrialBasic</li>-->
+<!--        <li>Western</li>-->
+<!--      </tags>-->
       <defaultOutfitTags>
         <li>Worker</li>
       </defaultOutfitTags>
@@ -354,10 +354,10 @@
       <layers>
         <li>OnSkin</li>
       </layers>
-      <tags>
-        <li>IndustrialBasic</li>
-        <li>Western</li>
-      </tags>
+<!--      <tags>-->
+<!--        <li>IndustrialBasic</li>-->
+<!--        <li>Western</li>-->
+<!--      </tags>-->
       <defaultOutfitTags>
         <li>Worker</li>
       </defaultOutfitTags>
@@ -419,10 +419,10 @@
       <layers>
         <li>Overhead</li>
       </layers>
-      <tags>
-        <li>IndustrialBasic</li>
-        <li>Western</li>
-      </tags>
+<!--      <tags>-->
+<!--        <li>IndustrialBasic</li>-->
+<!--        <li>Western</li>-->
+<!--      </tags>-->
       <defaultOutfitTags>
         <li>Worker</li>
       </defaultOutfitTags>
@@ -482,10 +482,10 @@
       <layers>
         <li>Overhead</li>
       </layers>
-      <tags>
-        <li>IndustrialBasic</li>
-        <li>Western</li>
-      </tags>
+<!--      <tags>-->
+<!--        <li>IndustrialBasic</li>-->
+<!--        <li>Western</li>-->
+<!--      </tags>-->
       <defaultOutfitTags>
         <li>Worker</li>
       </defaultOutfitTags>
