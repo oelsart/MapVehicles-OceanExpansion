@@ -32,14 +32,7 @@
     <techLevel>Medieval</techLevel>
     <researchViewX>1.00</researchViewX>
     <researchViewY>1.00</researchViewY>
-    <techprintCount>1</techprintCount>
-    <techprintCommonality>0.3</techprintCommonality>
     <techprintMarketValue>400</techprintMarketValue>
-    <heldByFactionCategoryTags>
-      <li>Empire</li>
-      <li>Ancient</li>
-      <li>Outlander</li>
-    </heldByFactionCategoryTags>
     <prerequisites>
       <li>MVO_ExpandableRaft</li>
     </prerequisites>
@@ -62,12 +55,10 @@
     <researchViewX>2.00</researchViewX>
     <researchViewY>1.00</researchViewY>
     <techprintCount>1</techprintCount>
-    <techprintCommonality>0.6</techprintCommonality>
+    <techprintCommonality>0.3</techprintCommonality>
     <techprintMarketValue>800</techprintMarketValue>
     <heldByFactionCategoryTags>
-      <li>Empire</li>
-      <li>Ancient</li>
-      <li>Outlander</li>
+      <li>MVO_Maritime</li>
     </heldByFactionCategoryTags>
     <prerequisites>
       <li>MVO_RigI</li>
@@ -75,6 +66,34 @@
     <generalRules>
       <rulesStrings>
         <li>subject->rig</li>
+        <li>subject_story->TODO</li>
+        <li>subject_gerund->TODO</li>
+      </rulesStrings>
+    </generalRules>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+    <defName>MVO_OutboardMotor</defName>
+    <label>outboard motor</label>
+    <description>TODO</description>
+    <tab>MVO_Ocean</tab>
+    <baseCost>1800</baseCost>
+    <techLevel>Industrial</techLevel>
+    <researchViewX>1.00</researchViewX>
+    <researchViewY>1.50</researchViewY>
+    <techprintCount>1</techprintCount>
+    <techprintCommonality>0.1</techprintCommonality>
+    <techprintMarketValue>1800</techprintMarketValue>
+    <heldByFactionCategoryTags>
+      <li>MVO_Maritime</li>
+    </heldByFactionCategoryTags>
+    <prerequisites>
+      <li>MVO_ExpandableRaft</li>
+      <li>MicroelectronicsBasics</li>
+    </prerequisites>
+    <generalRules>
+      <rulesStrings>
+        <li>subject->outboard motor</li>
         <li>subject_story->TODO</li>
         <li>subject_gerund->TODO</li>
       </rulesStrings>

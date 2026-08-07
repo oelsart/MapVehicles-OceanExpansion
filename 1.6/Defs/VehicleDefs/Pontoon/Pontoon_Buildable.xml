@@ -37,6 +37,7 @@
         <li>MVO_RigOneTiered</li>
         <li>MVO_RigTwoTiered</li>
         <li>MVO_RigThreeTiered</li>
+        <li>MVO_OutboardMotor</li>
         <li>MVO_Helm</li>
       </relatedBuildCommands>
       <destroyEffecter>MVO_SpawnSinker</destroyEffecter>

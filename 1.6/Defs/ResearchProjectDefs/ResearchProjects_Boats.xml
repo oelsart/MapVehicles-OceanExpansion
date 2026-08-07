@@ -29,7 +29,7 @@
     <label>keel</label>
     <description>Learn to build the Keel.</description>
     <tab>MVO_Ocean</tab>
-    <baseCost>1200</baseCost>
+    <baseCost>1500</baseCost>
     <techLevel>Medieval</techLevel>
     <researchViewX>2.00</researchViewX>
     <researchViewY>0.00</researchViewY>
@@ -40,9 +40,7 @@
     <techprintCommonality>0.2</techprintCommonality>
     <techprintMarketValue>2000</techprintMarketValue>
     <heldByFactionCategoryTags>
-      <li>Empire</li>
-      <li>Ancient</li>
-      <li>Outlander</li>
+      <li>MVO_Maritime</li>
     </heldByFactionCategoryTags>
     <generalRules>
       <rulesStrings>
@@ -71,9 +69,7 @@
     <techprintCommonality>0.1</techprintCommonality>
     <techprintMarketValue>3500</techprintMarketValue>
     <heldByFactionCategoryTags>
-      <li>Empire</li>
-      <li>Ancient</li>
-      <li>Outlander</li>
+      <li>MVO_Maritime</li>
     </heldByFactionCategoryTags>
     <generalRules>
       <rulesStrings>
@@ -102,9 +98,7 @@
     <techprintCommonality>0.1</techprintCommonality>
     <techprintMarketValue>4200</techprintMarketValue>
     <heldByFactionCategoryTags>
-      <li>Empire</li>
-      <li>Ancient</li>
-      <li>Outlander</li>
+      <li>MVO_Maritime</li>
     </heldByFactionCategoryTags>
     <generalRules>
       <rulesStrings>

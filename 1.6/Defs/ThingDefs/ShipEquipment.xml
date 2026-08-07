@@ -181,6 +181,7 @@
       <li>Fabric</li>
       <li>Leathery</li>
     </stuffCategories>
+    <techLevel>Medieval</techLevel>
     <building>
       <supportsWallAttachments>true</supportsWallAttachments>
       <relatedBuildCommands>
@@ -232,6 +233,9 @@
         <drawOffset>(0,0,1.5)</drawOffset>
       </blueprintGraphicData>
     </building>
+    <researchPrerequisites>
+      <li>MVO_RigI</li>
+    </researchPrerequisites>
     <comps>
       <li Class="CompProperties_DrawAdditionalGraphics">
         <compClass>VehicleMapFramework.CompDrawAdditionalGraphicsOpacity</compClass>
@@ -325,6 +329,9 @@
         <drawOffset>(0,0,3.5)</drawOffset>
       </blueprintGraphicData>
     </building>
+    <researchPrerequisites>
+      <li>MVO_RigII</li>
+    </researchPrerequisites>
     <comps>
       <li Class="CompProperties_DrawAdditionalGraphics">
         <compClass>VehicleMapFramework.CompDrawAdditionalGraphicsOpacity</compClass>
@@ -418,6 +425,9 @@
         <drawOffset>(0,0,3.5)</drawOffset>
       </blueprintGraphicData>
     </building>
+    <researchPrerequisites>
+      <li>MVO_RigII</li>
+    </researchPrerequisites>
     <comps>
       <li Class="CompProperties_DrawAdditionalGraphics">
         <compClass>VehicleMapFramework.CompDrawAdditionalGraphicsOpacity</compClass>
@@ -504,6 +514,9 @@
         <drawSize>2</drawSize>
       </blueprintGraphicData>
     </building>
+    <researchPrerequisites>
+      <li>MVO_RigI</li>
+    </researchPrerequisites>
     <comps>
       <li Class="VehicleMapFramework.CompProperties_AdditionalGraphicsChildByParent">
         <graphicsByParent>
@@ -591,6 +604,63 @@
     </comps>
     <placeWorkers>
       <li>VehicleMapFramework.PlaceWorker_RelatedBuildings</li>
+    </placeWorkers>
+  </ThingDef>
+  
+  <ThingDef ParentName="MVO_ShipEquipmentBase">
+    <defName>MVO_OutboardMotor</defName>
+    <label>outboard motor</label>
+    <description>TODO</description>
+    <graphicData>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <texPath>MapVehiclesOcean/Things/OutboardMotor/OutboardMotor</texPath>
+      <shaderType>CutoutComplex</shaderType>
+      <shadowData>
+        <volume>(0.8,0.3,0.8)</volume>
+      </shadowData>
+    </graphicData>
+    <drawerType>MapMeshOnly</drawerType>
+    <passability>PassThroughOnly</passability>
+    <fillPercent>0.3</fillPercent>
+    <tickerType>Normal</tickerType>
+    <rotatable>false</rotatable>
+    <costList>
+      <Steel>60</Steel>
+      <ComponentIndustrial>10</ComponentIndustrial>
+    </costList>
+    <building>
+      <paintable>true</paintable>
+    </building>
+    <techLevel>Industrial</techLevel>
+    <researchPrerequisites>
+      <li>MVO_OutboardMotor</li>
+    </researchPrerequisites>
+    <constructionSkillPrerequisite>10</constructionSkillPrerequisite>
+    <comps>
+      <li Class="CompProperties_Power">
+        <basePowerConsumption>300</basePowerConsumption>
+        <compClass>VehicleMapFramework.CompPowerVehicle</compClass>
+      </li>
+      <li Class="VehicleMapFramework.CompProperties_BuildableUpgrades">
+        <syncWithPowerCondition>true</syncWithPowerCondition>
+        <upgrades>
+          <li Class="Vehicles.StatUpgrade">
+            <vehicleStats>
+              <li>
+                <def>MoveSpeed</def>
+                <value>4</value>
+              </li>
+            </vehicleStats>
+          </li>
+        </upgrades>
+      </li>
+      <li>
+        <compClass>CompColorable</compClass>
+      </li>
+    </comps>
+    <placeWorkers>
+      <li>VehicleMapFramework.PlaceWorker_ForceOnVehicleMapEdge</li>
+      <li>VehicleMapFramework.PlaceWorker_VehicleRelatedBuildings</li>
     </placeWorkers>
   </ThingDef>
 
