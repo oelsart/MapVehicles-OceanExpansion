@@ -65,6 +65,9 @@
       <Steel>10</Steel>
     </costList>
     <canOverlapZones>false</canOverlapZones>
+    <building>
+      <supportsWallAttachments>true</supportsWallAttachments>
+    </building>
   </ThingDef>
 
   <ThingDef ParentName="ShipwreckPropsBase">

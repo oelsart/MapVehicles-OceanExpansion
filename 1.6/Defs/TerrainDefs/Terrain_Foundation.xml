@@ -13,7 +13,7 @@
     <isFoundation>true</isFoundation>
     <renderPrecedence>250</renderPrecedence>
     <preventCraters>true</preventCraters>
-    <designationCategory Inherit="False"/>
+    <designationCategory>MVO_Dev</designationCategory>
     <statBases>
       <Flammability>0.22</Flammability>
     </statBases>

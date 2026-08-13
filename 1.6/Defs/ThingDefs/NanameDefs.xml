@@ -5,7 +5,7 @@
     <designationCategory>MVO_Dev</designationCategory>
   </ThingDef>
 
-  <ThingDef ParentName="MVO_NanameBase" Name="Wall">
+  <ThingDef ParentName="MVO_NanameBase">
     <defName>Wall_NAWDiagonal</defName>
     <label>wall</label>
     <description>An impassable wall. Capable of holding up a roof.</description>
@@ -209,6 +209,66 @@
       </blueprintGraphicData>
       <paintable>true</paintable>
     </building>
+  </ThingDef>
+
+  <ThingDef ParentName="MVO_NanameBase">
+    <defName>Barricade_NAWDiagonal</defName>
+    <label>barricade</label>
+    <description>A waist-high barrier for use as cover from incoming shots. Barricades are ugly, but provide better cover than other low objects. Barricades will block certain kinds of animals the same way that fences do.</description>
+    <thingClass>Building</thingClass>
+    <category>Building</category>
+    <replaceTags>
+      <li>Barricade</li>
+    </replaceTags>
+    <graphicData>
+      <texPath>Things/Building/Linked/Barricade_Atlas</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <linkType>217</linkType>
+      <linkFlags>
+        <li>Barricades</li>
+      </linkFlags>
+      <color>(139,122,87)</color>
+    </graphicData>
+    <uiIconPath>Things/Building/Linked/Barricade_MenuIcon</uiIconPath>
+    <uiIconScale>1.2</uiIconScale>
+    <altitudeLayer>Building</altitudeLayer>
+    <pathCost>42</pathCost>
+    <pathCostIgnoreRepeat>true</pathCostIgnoreRepeat>
+    <passability>PassThroughOnly</passability>
+    <castEdgeShadows>true</castEdgeShadows>
+    <fillPercent>0.55</fillPercent>
+    <canOverlapZones>false</canOverlapZones>
+    <uiOrder>10</uiOrder>
+    <statBases>
+      <MaxHitPoints>300</MaxHitPoints>
+      <Beauty>-3</Beauty>
+      <WorkToBuild>320</WorkToBuild>
+      <Flammability>1</Flammability>
+    </statBases>
+    <building>
+      <ai_chillDestination>false</ai_chillDestination>
+      <isInert>true</isInert>
+      <isFence>true</isFence>
+      <isPlaceOverableWall>true</isPlaceOverableWall>
+      <blueprintGraphicData>
+        <texPath>Things/Building/Linked/Barricade_Blueprint_Atlas</texPath>
+      </blueprintGraphicData>
+      <paintable>true</paintable>
+    </building>
+    <drawStyleCategory>Defenses</drawStyleCategory>
+    <stuffCategories>
+      <li>Metallic</li>
+      <li>Woody</li>
+      <li>Stony</li>
+    </stuffCategories>
+    <costStuffCount>5</costStuffCount>
+    <filthLeaving>Filth_RubbleBuilding</filthLeaving>
+    <rotatable>false</rotatable>
+    <selectable>true</selectable>
+    <neverMultiSelect>true</neverMultiSelect>
+    <useStuffTerrainAffordance>true</useStuffTerrainAffordance>
+    <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded> <!-- Best affordance needed for stone -->
+    <staticSunShadowHeight>0.20</staticSunShadowHeight>
   </ThingDef>
 
 </Defs>

@@ -13,7 +13,7 @@ public class CompFishingSpot : ThingComp
     if (!ModsConfig.OdysseyActive || !parent.IsOnVehicleMapOf(out var vehicle)) return;
 
     var cell = FishingCell;
-    if (!vehicle.CachedImpassableCells.Contains(cell) || parent.Map.zoneManager.ZoneAt(cell) is not null) return;
+    if (!cell.InBounds(parent.Map) || !vehicle.ImpassableCellGrid[cell] || parent.Map.zoneManager.ZoneAt(cell) is not null) return;
 
     var zone = new Zone_FishingOnVehicle(parent.Map.zoneManager);
     parent.Map.zoneManager.RegisterZone(zone);
