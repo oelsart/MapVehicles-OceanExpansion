@@ -86,9 +86,19 @@
             <preferredDir>North</preferredDir>
           </li>
           <li>
-            <pawnCountRange>3~</pawnCountRange>
+            <pawnCountRange>6~12</pawnCountRange>
             <prefabDef>MVO_ExpandableRaft_PrefabB</prefabDef>
             <preferredDir>West</preferredDir>
+          </li>
+          <li>
+            <pawnCountRange>3~8</pawnCountRange>
+            <prefabDef>MVO_ExpandableRaft_PrefabC</prefabDef>
+            <preferredDir>North</preferredDir>
+          </li>
+          <li>
+            <pawnCountRange>10~</pawnCountRange>
+            <prefabDef>MVO_ExpandableRaft_PrefabD</prefabDef>
+            <preferredDir>North</preferredDir>
           </li>
         </mapParams>
       </li>
