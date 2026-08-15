@@ -1,0 +1,541 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+
+  <PrefabDef>
+    <defName>MVO_Roundnose_PrefabA</defName>
+    <size>(7,14)</size>
+    <things>
+      <Battery>
+        <position>(1, 0, 2)</position>
+        <relativeRotation>Opposite</relativeRotation>
+      </Battery>
+      <Battery>
+        <positions>
+          <li>(2, 0, 1)</li>
+          <li>(2, 0, 2)</li>
+        </positions>
+        <relativeRotation>Clockwise</relativeRotation>
+      </Battery>
+      <MVO_RigTwoTiered>
+        <rects>
+          <li>(0,4,0,4)</li>
+          <li>(6,4,6,4)</li>
+        </rects>
+        <stuff>Cloth</stuff>
+      </MVO_RigTwoTiered>
+      <Turret_MiniTurret>
+        <rects>
+          <li>(1,9,1,9)</li>
+          <li>(5,9,5,9)</li>
+          <li>(2,11,2,11)</li>
+          <li>(4,11,4,11)</li>
+        </rects>
+        <stuff>Steel</stuff>
+      </Turret_MiniTurret>
+      <Door>
+        <position>(2, 0, 4)</position>
+        <stuff>WoodLog</stuff>
+      </Door>
+      <Barricade>
+        <position>(3, 0, 12)</position>
+        <stuff>Steel</stuff>
+      </Barricade>
+      <Barricade_NAWDiagonal>
+        <rects>
+          <li>(0,9,0,9)</li>
+          <li>(6,9,6,9)</li>
+          <li>(1,10,1,11)</li>
+          <li>(5,10,5,11)</li>
+          <li>(2,12,2,12)</li>
+          <li>(4,12,4,12)</li>
+        </rects>
+        <stuff>Steel</stuff>
+      </Barricade_NAWDiagonal>
+      <ChemfuelPoweredGenerator>
+        <position>(4, 0, 1)</position>
+      </ChemfuelPoweredGenerator>
+      <TorchWallLamp>
+        <position>(1, 0, 2)</position>
+        <relativeRotation>Counterclockwise</relativeRotation>
+      </TorchWallLamp>
+      <TorchWallLamp>
+        <position>(5, 0, 2)</position>
+        <relativeRotation>Clockwise</relativeRotation>
+      </TorchWallLamp>
+      <PowerConduit>
+        <rects>
+          <li>(1,3,1,11)</li>
+          <li>(5,3,5,11)</li>
+          <li>(2,11,4,11)</li>
+        </rects>
+      </PowerConduit>
+      <MVO_Hatch>
+        <position>(3, 0, 7)</position>
+        <stuff>WoodLog</stuff>
+      </MVO_Hatch>
+      <MVO_Gangplank>
+        <position>(0, 0, 8)</position>
+        <relativeRotation>Counterclockwise</relativeRotation>
+      </MVO_Gangplank>
+      <MVO_Gangplank>
+        <position>(6, 0, 8)</position>
+        <relativeRotation>Clockwise</relativeRotation>
+      </MVO_Gangplank>
+      <Wall>
+        <rects>
+          <li>(0,0,6,0)</li>
+          <li>(0,1,0,2)</li>
+          <li>(6,1,6,2)</li>
+          <li>(3,4,4,4)</li>
+        </rects>
+        <stuff>WoodLog</stuff>
+      </Wall>
+      <MVO_Helm>
+        <position>(3, 0, 9)</position>
+      </MVO_Helm>
+      <Wall_NAWDiagonal>
+        <rects>
+          <li>(0,3,0,3)</li>
+          <li>(6,3,6,3)</li>
+          <li>(1,4,1,4)</li>
+          <li>(5,4,5,4)</li>
+        </rects>
+        <stuff>WoodLog</stuff>
+      </Wall_NAWDiagonal>
+      <MedicineHerbal>
+        <position>(2, 0, 8)</position>
+        <stackCountRange>0~25</stackCountRange>
+      </MedicineHerbal>
+      <MVO_Cannon_Blueprint>
+        <position>(0, 0, 6)</position>
+        <relativeRotation>Counterclockwise</relativeRotation>
+      </MVO_Cannon_Blueprint>
+      <MVO_Cannon_Blueprint>
+        <position>(6, 0, 6)</position>
+        <relativeRotation>Clockwise</relativeRotation>
+      </MVO_Cannon_Blueprint>
+      <MealSurvivalPack>
+        <position>(2, 0, 7)</position>
+        <stackCountRange>0~10</stackCountRange>
+      </MealSurvivalPack>
+      <MealSurvivalPack>
+        <position>(2, 0, 7)</position>
+        <stackCountRange>0~10</stackCountRange>
+      </MealSurvivalPack>
+      <MVO_Cannonball>
+        <position>(2, 0, 7)</position>
+        <stackCountRange>5~25</stackCountRange>
+      </MVO_Cannonball>
+      <MVO_Cannonball>
+        <position>(2, 0, 8)</position>
+        <stackCountRange>5~25</stackCountRange>
+      </MVO_Cannonball>
+    </things>
+    <terrain>
+      <VMF_VehicleFloor>
+        <rects>
+          <li>(0,0,6,9)</li>
+          <li>(1,10,5,11)</li>
+          <li>(2,12,4,12)</li>
+        </rects>
+      </VMF_VehicleFloor>
+      <VMF_ImpassableFloor>
+        <rects>
+          <li>(0,10,0,13)</li>
+          <li>(6,10,6,13)</li>
+          <li>(1,12,1,13)</li>
+          <li>(5,12,5,13)</li>
+          <li>(2,13,4,13)</li>
+        </rects>
+      </VMF_ImpassableFloor>
+    </terrain>
+  </PrefabDef>
+  
+  <PrefabDef>
+    <defName>MVO_Roundnose_PrefabB</defName>
+    <size>(7,14)</size>
+    <things>
+      <MVO_MooringRing>
+        <rects>
+          <li>(5,1,5,1)</li>
+          <li>(5,7,5,7)</li>
+        </rects>
+      </MVO_MooringRing>
+      <MVO_RigTwoTiered>
+        <position>(3, 0, 8)</position>
+        <stuff>Cloth</stuff>
+      </MVO_RigTwoTiered>
+      <MVO_CrowsNest>
+        <position>(3, 0, 8)</position>
+      </MVO_CrowsNest>
+      <Stool>
+        <position>(4, 0, 1)</position>
+        <stuff>WoodLog</stuff>
+        <quality>Normal</quality>
+      </Stool>
+      <Stool>
+        <rects>
+          <li>(1,2,1,2)</li>
+          <li>(1,6,1,6)</li>
+        </rects>
+        <relativeRotation>Clockwise</relativeRotation>
+        <stuff>Steel</stuff>
+        <quality>Normal</quality>
+      </Stool>
+      <Stool>
+        <rects>
+          <li>(5,2,5,6)</li>
+        </rects>
+        <relativeRotation>Clockwise</relativeRotation>
+        <stuff>WoodLog</stuff>
+        <quality>Normal</quality>
+      </Stool>
+      <Fence>
+        <rects>
+          <li>(2,0,6,0)</li>
+          <li>(6,1,6,7)</li>
+          <li>(3,12,3,12)</li>
+        </rects>
+        <stuff>WoodLog</stuff>
+      </Fence>
+      <Barricade_NAWDiagonal>
+        <rects>
+          <li>(1,0,1,0)</li>
+          <li>(0,1,0,2)</li>
+          <li>(1,3,1,3)</li>
+          <li>(1,5,1,5)</li>
+          <li>(0,6,0,7)</li>
+          <li>(1,8,1,8)</li>
+        </rects>
+        <stuff>Steel</stuff>
+      </Barricade_NAWDiagonal>
+      <MVO_Turret_GrapplingLauncher>
+        <rects>
+          <li>(1,1,1,1)</li>
+          <li>(1,7,1,7)</li>
+        </rects>
+        <relativeRotation>Counterclockwise</relativeRotation>
+      </MVO_Turret_GrapplingLauncher>
+      <VMF_Ladder>
+        <position>(6, 0, 8)</position>
+        <relativeRotation>Counterclockwise</relativeRotation>
+      </VMF_Ladder>
+      <TorchWallLamp>
+        <rects>
+          <li>(3,1,3,1)</li>
+          <li>(3,7,3,7)</li>
+        </rects>
+      </TorchWallLamp>
+      <TorchWallLamp>
+        <rects>
+          <li>(3,3,3,3)</li>
+          <li>(3,9,3,9)</li>
+        </rects>
+        <relativeRotation>Opposite</relativeRotation>
+      </TorchWallLamp>
+      <Fence_NAWDiagonal>
+        <rects>
+          <li>(0,9,0,9)</li>
+          <li>(6,9,6,9)</li>
+          <li>(1,10,1,11)</li>
+          <li>(5,10,5,11)</li>
+          <li>(2,12,2,12)</li>
+          <li>(4,12,4,12)</li>
+        </rects>
+        <stuff>WoodLog</stuff>
+      </Fence_NAWDiagonal>
+      <MVO_Hatch>
+        <position>(3, 0, 5)</position>
+        <stuff>Steel</stuff>
+      </MVO_Hatch>
+      <MVO_Gangplank>
+        <position>(0, 0, 4)</position>
+        <relativeRotation>Counterclockwise</relativeRotation>
+      </MVO_Gangplank>
+      <MVO_Helm>
+        <position>(3, 0, 11)</position>
+      </MVO_Helm>
+      <MVO_RigThreeTiered>
+        <position>(3, 0, 2)</position>
+        <stuff>Cloth</stuff>
+      </MVO_RigThreeTiered>
+      <VMF_GangplankAnchor>
+        <position>(0, 0, 8)</position>
+      </VMF_GangplankAnchor>
+    </things>
+    <terrain>
+      <VMF_VehicleFloor>
+        <rects>
+          <li>(0,0,6,9)</li>
+          <li>(1,10,5,11)</li>
+          <li>(2,12,4,12)</li>
+        </rects>
+      </VMF_VehicleFloor>
+      <VMF_ImpassableFloor>
+        <rects>
+          <li>(0,10,0,13)</li>
+          <li>(6,10,6,13)</li>
+          <li>(1,12,1,13)</li>
+          <li>(5,12,5,13)</li>
+          <li>(2,13,4,13)</li>
+        </rects>
+      </VMF_ImpassableFloor>
+    </terrain>
+  </PrefabDef>
+  
+  <PrefabDef>
+    <defName>MVO_Roundnose_PrefabC</defName>
+    <size>(7,14)</size>
+    <things>
+      <Battery>
+        <positions>
+          <li>(1, 0, 1)</li>
+          <li>(1, 0, 2)</li>
+        </positions>
+        <relativeRotation>Clockwise</relativeRotation>
+      </Battery>
+      <MVO_OutboardMotor>
+        <position>(3, 0, 0)</position>
+      </MVO_OutboardMotor>
+      <Door>
+        <position>(3, 0, 3)</position>
+        <stuff>WoodLog</stuff>
+      </Door>
+      <Fence>
+        <rects>
+          <li>(0,4,0,8)</li>
+        </rects>
+        <stuff>WoodLog</stuff>
+      </Fence>
+      <Fence>
+        <rects>
+          <li>(1,10,1,11)</li>
+          <li>(5,10,5,11)</li>
+          <li>(2,11,2,12)</li>
+          <li>(4,11,4,12)</li>
+          <li>(3,12,3,12)</li>
+        </rects>
+        <stuff>Steel</stuff>
+      </Fence>
+      <Barricade>
+        <rects>
+          <li>(6,4,6,8)</li>
+        </rects>
+        <stuff>Steel</stuff>
+      </Barricade>
+      <VMF_Ladder>
+        <position>(0, 0, 9)</position>
+        <relativeRotation>Clockwise</relativeRotation>
+      </VMF_Ladder>
+      <ChemfuelPoweredGenerator>
+        <position>(4, 0, 1)</position>
+      </ChemfuelPoweredGenerator>
+      <VMF_Turret_ZiplineTurret>
+        <position>(4, 0, 10)</position>
+        <relativeRotation>Clockwise</relativeRotation>
+      </VMF_Turret_ZiplineTurret>
+      <PowerConduit>
+        <rects>
+          <li>(3,0,3,2)</li>
+          <li>(1,3,1,10)</li>
+          <li>(5,3,5,10)</li>
+          <li>(1,10,5,10)</li>
+        </rects>
+      </PowerConduit>
+      <MVO_Hatch>
+        <position>(3, 0, 7)</position>
+        <stuff>Steel</stuff>
+      </MVO_Hatch>
+      <MVO_Gangplank>
+        <position>(6, 0, 9)</position>
+        <relativeRotation>Clockwise</relativeRotation>
+      </MVO_Gangplank>
+      <MVO_ShipwreckBarrel>
+        <position>(1, 0, 4)</position>
+      </MVO_ShipwreckBarrel>
+      <MVO_ShipwreckBarrel>
+        <position>(2, 0, 4)</position>
+      </MVO_ShipwreckBarrel>
+      <MVO_ShipwreckBarrel>
+        <position>(4, 0, 4)</position>
+      </MVO_ShipwreckBarrel>
+      <MVO_ShipwreckBarrel>
+        <position>(5, 0, 4)</position>
+      </MVO_ShipwreckBarrel>
+      <Wall>
+        <rects>
+          <li>(0,0,2,0)</li>
+          <li>(4,0,6,0)</li>
+          <li>(0,1,0,3)</li>
+          <li>(6,1,6,3)</li>
+          <li>(1,3,2,3)</li>
+          <li>(4,3,5,3)</li>
+        </rects>
+        <stuff>WoodLog</stuff>
+      </Wall>
+      <MVO_Helm>
+        <position>(3, 0, 11)</position>
+      </MVO_Helm>
+      <Shelf>
+        <positions>
+          <li>(1, 0, 6)</li>
+          <li>(1, 0, 8)</li>
+        </positions>
+        <relativeRotation>Clockwise</relativeRotation>
+        <stuff>Steel</stuff>
+      </Shelf>
+      <MVO_Cannon_Blueprint>
+        <rects>
+          <li>(5,5,5,8)</li>
+        </rects>
+        <relativeRotation>Clockwise</relativeRotation>
+      </MVO_Cannon_Blueprint>
+      <MVO_Cannonball>
+        <rects>
+          <li>(1,5,1,8)</li>
+        </rects>
+        <stackCountRange>5~25</stackCountRange>
+      </MVO_Cannonball>
+    </things>
+    <terrain>
+      <VMF_VehicleFloor>
+        <rects>
+          <li>(0,0,6,9)</li>
+          <li>(1,10,5,11)</li>
+          <li>(2,12,4,12)</li>
+        </rects>
+      </VMF_VehicleFloor>
+      <VMF_ImpassableFloor>
+        <rects>
+          <li>(0,10,0,13)</li>
+          <li>(6,10,6,13)</li>
+          <li>(1,12,1,13)</li>
+          <li>(5,12,5,13)</li>
+          <li>(2,13,4,13)</li>
+        </rects>
+      </VMF_ImpassableFloor>
+    </terrain>
+  </PrefabDef>
+  
+  <PrefabDef>
+    <defName>MVO_Roundnose_PrefabD</defName>
+    <size>(7,14)</size>
+    <things>
+      <MVO_MooringRing>
+        <position>(3, 0, 12)</position>
+      </MVO_MooringRing>
+      <Battery>
+        <positions>
+          <li>(3, 0, 2)</li>
+          <li>(3, 0, 4)</li>
+          <li>(3, 0, 6)</li>
+        </positions>
+      </Battery>
+      <MVO_OutboardMotor>
+        <position>(2, 0, 0)</position>
+      </MVO_OutboardMotor>
+      <MVO_OutboardMotor>
+        <position>(4, 0, 0)</position>
+      </MVO_OutboardMotor>
+      <Door>
+        <position>(3, 0, 9)</position>
+        <stuff>WoodLog</stuff>
+      </Door>
+      <Stool>
+        <rects>
+          <li>(1,2,1,3)</li>
+          <li>(5,2,5,3)</li>
+          <li>(1,6,1,7)</li>
+          <li>(5,6,5,7)</li>
+        </rects>
+        <relativeRotation>Clockwise</relativeRotation>
+        <stuff>WoodLog</stuff>
+        <quality>Normal</quality>
+      </Stool>
+      <Fence>
+        <rects>
+          <li>(1,10,1,11)</li>
+          <li>(5,10,5,11)</li>
+          <li>(2,11,4,11)</li>
+        </rects>
+        <stuff>WoodLog</stuff>
+      </Fence>
+      <Barricade>
+        <rects>
+          <li>(0,2,0,3)</li>
+          <li>(6,2,6,3)</li>
+          <li>(0,6,0,7)</li>
+          <li>(6,6,6,7)</li>
+        </rects>
+        <stuff>WoodLog</stuff>
+      </Barricade>
+      <ChemfuelPoweredGenerator>
+        <positions>
+          <li>(1, 0, 4)</li>
+          <li>(4, 0, 4)</li>
+        </positions>
+      </ChemfuelPoweredGenerator>
+      <TorchWallLamp>
+        <rects>
+          <li>(1,1,1,1)</li>
+          <li>(1,8,1,8)</li>
+        </rects>
+        <relativeRotation>Counterclockwise</relativeRotation>
+      </TorchWallLamp>
+      <TorchWallLamp>
+        <rects>
+          <li>(5,1,5,1)</li>
+          <li>(5,8,5,8)</li>
+        </rects>
+        <relativeRotation>Clockwise</relativeRotation>
+      </TorchWallLamp>
+      <VMF_Turret_ZiplineTurret>
+        <position>(3, 0, 0)</position>
+      </VMF_Turret_ZiplineTurret>
+      <PowerConduit>
+        <rects>
+          <li>(2,0,4,0)</li>
+          <li>(3,1,3,1)</li>
+        </rects>
+      </PowerConduit>
+      <Wall>
+        <rects>
+          <li>(0,0,1,0)</li>
+          <li>(5,0,6,0)</li>
+          <li>(0,1,0,1)</li>
+          <li>(6,1,6,1)</li>
+          <li>(0,4,0,5)</li>
+          <li>(6,4,6,5)</li>
+          <li>(0,8,0,9)</li>
+          <li>(6,8,6,9)</li>
+          <li>(1,9,2,9)</li>
+          <li>(4,9,5,9)</li>
+        </rects>
+        <stuff>WoodLog</stuff>
+      </Wall>
+      <MVO_Helm>
+        <position>(3, 0, 10)</position>
+      </MVO_Helm>
+    </things>
+    <terrain>
+      <VMF_VehicleFloor>
+        <rects>
+          <li>(0,0,6,9)</li>
+          <li>(1,10,5,11)</li>
+          <li>(2,12,4,12)</li>
+        </rects>
+      </VMF_VehicleFloor>
+      <VMF_ImpassableFloor>
+        <rects>
+          <li>(0,10,0,13)</li>
+          <li>(6,10,6,13)</li>
+          <li>(1,12,1,13)</li>
+          <li>(5,12,5,13)</li>
+          <li>(2,13,4,13)</li>
+        </rects>
+      </VMF_ImpassableFloor>
+    </terrain>
+  </PrefabDef>
+  
+</Defs>

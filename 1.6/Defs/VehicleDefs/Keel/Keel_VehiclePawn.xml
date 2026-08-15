@@ -116,6 +116,9 @@
         <offsetNorth>(0,0,-1.5625)</offsetNorth>
         <offsetSouth>(0,0,1.671875)</offsetSouth>
         <offsetEast>(-1.91875,0,0.209375)</offsetEast>
+        <edgeSpace>
+          <space>0.1</space>
+        </edgeSpace>
         <emptyStructureCells>
           <li>(0,4)</li>
           <li>(6,4)</li>

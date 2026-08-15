@@ -80,10 +80,31 @@
         <effecterDef>MVO_SinkSplash</effecterDef>
         <moveVector>(0,0,-0.05)</moveVector>
       </li>
-<!--      <li Class="VehicleMapFramework.CompProperties_NpcVehicleMap">-->
-<!--        <mapParams>-->
-<!--        </mapParams>-->
-<!--      </li>-->
+      <li Class="VehicleMapFramework.CompProperties_NpcVehicleMap">
+        <pawnCountWeight>1.2</pawnCountWeight>
+        <mapParams>
+          <li>
+            <pawnCountRange>0~6</pawnCountRange>
+            <prefabDef>MVO_Roundnose_PrefabA</prefabDef>
+            <preferredDir>North</preferredDir>
+          </li>
+          <li>
+            <pawnCountRange>4~10</pawnCountRange>
+            <prefabDef>MVO_Roundnose_PrefabB</prefabDef>
+            <preferredDir>West</preferredDir>
+          </li>
+          <li>
+            <pawnCountRange>5~12</pawnCountRange>
+            <prefabDef>MVO_Roundnose_PrefabC</prefabDef>
+            <preferredDir>East</preferredDir>
+          </li>
+          <li>
+            <pawnCountRange>6~</pawnCountRange>
+            <prefabDef>MVO_Roundnose_PrefabD</prefabDef>
+            <preferredDir>East</preferredDir>
+          </li>
+        </mapParams>
+      </li>
     </comps>
 
     <modExtensions>
