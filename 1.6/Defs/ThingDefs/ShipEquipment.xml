@@ -2,8 +2,6 @@
 <Defs>
   <ThingDef Name="MVO_ShipEquipmentBase" ParentName="BuildingBase" Abstract="True">
     <tradeability>None</tradeability>
-    <category>Building</category>
-    <thingClass>Building</thingClass>
     <researchPrerequisites>
       <li>MVO_ExpandableRaft</li>
     </researchPrerequisites>
@@ -622,7 +620,6 @@
     <drawerType>MapMeshOnly</drawerType>
     <passability>PassThroughOnly</passability>
     <fillPercent>0.3</fillPercent>
-    <tickerType>Normal</tickerType>
     <rotatable>false</rotatable>
     <costList>
       <Steel>60</Steel>
