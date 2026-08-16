@@ -639,8 +639,12 @@
     <comps>
       <li Class="CompProperties_Power">
         <basePowerConsumption>300</basePowerConsumption>
-        <compClass>VehicleMapFramework.CompPowerVehicle</compClass>
+        <compClass>CompPowerTrader</compClass>
       </li>
+      <li>
+        <compClass>VehicleMapFramework.CompPowerVehicleDrafted</compClass>
+      </li>
+      <li Class="CompProperties_Flickable"/>
       <li Class="VehicleMapFramework.CompProperties_BuildableUpgrades">
         <syncWithPowerCondition>true</syncWithPowerCondition>
         <upgrades>

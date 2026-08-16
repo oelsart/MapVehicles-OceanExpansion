@@ -1,8 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 
 <Defs>
-  <Vehicles.VehicleDef Name="MVO_PontoonBase" ParentName="BaseSeaVehiclePawnWithMap">
-    <defName>MVO_Pontoon</defName>
+  <Vehicles.VehicleDef Abstract="True" Name="MVO_PontoonBase" ParentName="BaseSeaVehiclePawnWithMap">
     <label>pontoon</label>
     <description>TODO</description>
 
@@ -105,10 +104,6 @@
         <effecterDef>MVO_SinkSplash</effecterDef>
         <moveVector>(0,0,-0.05)</moveVector>
       </li>
-<!--      <li Class="VehicleMapFramework.CompProperties_NpcVehicleMap">-->
-<!--        <mapParams>-->
-<!--        </mapParams>-->
-<!--      </li>-->
     </comps>
 
     <modExtensions>
@@ -118,7 +113,7 @@
         <offsetSouth>(0,0,0.171)</offsetSouth>
         <offsetEast>(0.18,0,0.232)</offsetEast>
         <edgeSpace>
-          <space>0.2</space>
+          <space>0.18</space>
         </edgeSpace>
         <emptyStructureCellRects>
           <li>(0,12,3,14)</li>
@@ -131,6 +126,36 @@
         </expandableCellRects>
       </li>
     </modExtensions>
+  </Vehicles.VehicleDef>
+  
+  <Vehicles.VehicleDef ParentName="MVO_PontoonBase">
+    <defName>MVO_Pontoon</defName>
+    <comps>
+      <li Class="VehicleMapFramework.CompProperties_NpcVehicleMap">
+        <mapParams>
+          <li>
+            <pawnCountRange>0~6</pawnCountRange>
+            <prefabDef>MVO_Pontoon_PrefabA</prefabDef>
+            <preferredDir>East</preferredDir>
+          </li>
+          <li>
+            <pawnCountRange>4~10</pawnCountRange>
+            <prefabDef>MVO_Pontoon_PrefabB</prefabDef>
+            <preferredDir>North</preferredDir>
+          </li>
+          <li>
+            <pawnCountRange>5~12</pawnCountRange>
+            <prefabDef>MVO_Pontoon_PrefabC</prefabDef>
+            <preferredDir>West</preferredDir>
+          </li>
+          <li>
+            <pawnCountRange>6~</pawnCountRange>
+            <prefabDef>MVO_Pontoon_PrefabD</prefabDef>
+            <preferredDir>West</preferredDir>
+          </li>
+        </mapParams>
+      </li>
+    </comps>
   </Vehicles.VehicleDef>
 
   <Vehicles.VehicleDef ParentName="MVO_PontoonBase">

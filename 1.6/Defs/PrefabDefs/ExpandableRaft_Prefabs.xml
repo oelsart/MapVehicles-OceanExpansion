@@ -38,6 +38,11 @@
           <li>(4,0,4,4)</li>
         </rects>
       </MVO_RaftPieceFloat>
+      <PowerConduit>
+        <rects>
+          <li>(0,2,0,4)</li>
+        </rects>
+      </PowerConduit>
       <Battery>
         <position>(0, 0, 0)</position>
       </Battery>
@@ -49,11 +54,6 @@
         <position>(2, 0, 2)</position>
         <stuff>Cloth</stuff>
       </MVO_RigOneTiered>
-      <PowerConduit>
-        <rects>
-          <li>(0,2,0,4)</li>
-        </rects>
-      </PowerConduit>
       <Bedroll>
         <position>(3, 0, 2)</position>
         <relativeRotation>Opposite</relativeRotation>
@@ -128,6 +128,9 @@
           <li>(6,10,6,10)</li>
         </rects>
       </MVO_MooringRing>
+      <PowerConduit>
+        <position>(2, 0, 5)</position>
+      </PowerConduit>
       <Battery>
         <positions>
           <li>(2, 0, 3)</li>
@@ -162,9 +165,6 @@
       <MVO_Turret_GrapplingLauncher>
         <position>(3, 0, 1)</position>
       </MVO_Turret_GrapplingLauncher>
-      <PowerConduit>
-        <position>(2, 0, 5)</position>
-      </PowerConduit>
       <MVO_Oar>
         <rects>
           <li>(1,1,1,1)</li>
@@ -226,6 +226,11 @@
           <li>(4,1,4,8)</li>
         </rects>
       </MVO_RaftPieceFloat>
+      <PowerConduit>
+        <rects>
+          <li>(1,2,3,2)</li>
+        </rects>
+      </PowerConduit>
       <Battery>
         <positions>
           <li>(0, 0, 2)</li>
@@ -288,11 +293,6 @@
         <relativeRotation>Counterclockwise</relativeRotation>
         <stuff>WoodLog</stuff>
       </ShelfSmall>
-      <PowerConduit>
-        <rects>
-          <li>(1,2,3,2)</li>
-        </rects>
-      </PowerConduit>
       <MVO_Gangplank>
         <position>(2, 0, 10)</position>
       </MVO_Gangplank>
@@ -369,6 +369,22 @@
           <li>(5,10,7,12)</li>
         </rects>
       </MVO_RaftPieceFloat>
+      <ChemfuelPoweredGenerator>
+        <positions>
+          <li>(3, 0, 2)</li>
+          <li>(8, 0, 2)</li>
+          <li>(3, 0, 9)</li>
+          <li>(8, 0, 9)</li>
+        </positions>
+      </ChemfuelPoweredGenerator>
+      <PowerConduit>
+        <rects>
+          <li>(5,2,7,2)</li>
+          <li>(2,5,2,7)</li>
+          <li>(10,5,10,7)</li>
+          <li>(5,10,7,10)</li>
+        </rects>
+      </PowerConduit>
       <Battery>
         <positions>
           <li>(2, 0, 4)</li>
@@ -421,22 +437,6 @@
         </rects>
         <stuff>Steel</stuff>
       </Barricade_NAWDiagonal>
-      <ChemfuelPoweredGenerator>
-        <positions>
-          <li>(3, 0, 2)</li>
-          <li>(8, 0, 2)</li>
-          <li>(3, 0, 9)</li>
-          <li>(8, 0, 9)</li>
-        </positions>
-      </ChemfuelPoweredGenerator>
-      <PowerConduit>
-        <rects>
-          <li>(5,2,7,2)</li>
-          <li>(2,5,2,7)</li>
-          <li>(10,5,10,7)</li>
-          <li>(5,10,7,10)</li>
-        </rects>
-      </PowerConduit>
       <MVO_Gangplank>
         <position>(6, 0, 0)</position>
         <relativeRotation>Opposite</relativeRotation>
