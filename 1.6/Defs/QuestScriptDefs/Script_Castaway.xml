@@ -19,7 +19,6 @@
         <li>castaway_adj->Shipwrecked</li>
 
         <li>castaway_noun->Survivor</li>
-        <li>castaway_noun->Drifter</li>
         <li>castaway_noun->Castaway</li>
         <li>castaway_noun->Sailor</li>
       </rulesStrings>
@@ -27,7 +26,7 @@
     <questDescriptionRules>
       <rulesStrings>
         <li>questDescription->By the lookout, [worker_definite] has spotted a person drifting on the waves. They appear
-          to be [castaway_label], and they are in desperate need of rescue.\n\n[castaway_pronoun] is currently at a nearby
+          to be [castaway_adj], and they are in desperate need of rescue.\n\n[castaway_pronoun] is currently at a nearby
           sea location. We should hurry, as [castaway_pronoun] won't be able to survive more than [timeoutTicks_duration]
           in these conditions.
         </li>
@@ -44,13 +43,13 @@
           <allowEnemy>false</allowEnemy>
           <allowNeutral>true</allowNeutral>
           <allowAlly>true</allowAlly>
-          <storeAs>drifterFaction</storeAs>
+          <storeAs>castawayFaction</storeAs>
         </li>
 
         <li Class="QuestNode_GeneratePawn">
           <kindDef>SpaceRefugee</kindDef>
-          <faction>$drifterFaction</faction>
-          <storeAs>drifter</storeAs>
+          <faction>castawayFaction</faction>
+          <storeAs>castaway</storeAs>
           <mustBeCapableOfViolence>false</mustBeCapableOfViolence>
         </li>
 
@@ -73,7 +72,7 @@
 
         <li Class="QuestNode_Set">
           <name>generatedPawn</name>
-          <value>$drifter</value>
+          <value>$castaway</value>
         </li>
 
         <li Class="QuestNode_SubScript">
@@ -97,9 +96,7 @@
             <nodes>
               <li Class="QuestNode_Letter">
                 <label TKey="LetterLabelQuestExpired">Quest expired: [resolvedQuestName]</label>
-                <text TKey="LetterTextQuestExpired">[drifter_nameDef] has drifted away or succumbed to the ocean. The
-                  quest [resolvedQuestName] has expired.
-                </text>
+                <text TKey="LetterTextQuestExpired">[castaway_nameDef] has drifted away or succumbed to the ocean. The quest [resolvedQuestName] has expired.</text>
               </li>
               <li Class="QuestNode_End">
                 <outcome>Fail</outcome>
@@ -109,7 +106,7 @@
         </li>
 
         <li Class="QuestNode_AddPawnReward">
-          <pawn>$drifter</pawn>
+          <pawn>$castaway</pawn>
           <inSignalChoiceUsed>site.MapGenerated</inSignalChoiceUsed>
           <rewardDetailsHidden>true</rewardDetailsHidden>
         </li>

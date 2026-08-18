@@ -1,9 +1,50 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
-
+  
+  <ThingDef ParentName="OrganicProductBase">
+    <defName>Meat_MVO_Shark</defName>
+    <label>shark meat</label>
+    <description>Raw butchered flesh. Can be cooked into meals, or eaten raw. However, it contains a large amount of ammonia, so it likely doesn't taste good. It is rich in fat.</description>
+    <graphicData>
+      <graphicClass>Graphic_StackCount</graphicClass>
+      <texPath>Things/Item/Resource/MeatFoodRaw/Meat_Big</texPath>
+      <color>(255,255,160)</color>
+    </graphicData>
+    <thingCategories>
+      <li>MeatRaw</li>
+    </thingCategories>
+    <statBases>
+      <Flammability>0.5</Flammability>
+      <Nutrition>0.05</Nutrition>
+      <FoodPoisonChanceFixedHuman>0.02</FoodPoisonChanceFixedHuman>
+      <MarketValue>2</MarketValue>
+    </statBases>
+    <socialPropernessMatters>true</socialPropernessMatters>
+    <ingestible>
+      <parent>Meat_MVO_Shark</parent>
+      <foodType>Meat</foodType>
+      <preferability>RawBad</preferability>
+      <tasteThought>AteRawFood</tasteThought>
+      <ingestEffect>EatMeat</ingestEffect>
+      <ingestSound>RawMeat_Eat</ingestSound>
+      <sourceDef>MVO_Shark</sourceDef>
+      <specialThoughtDirect>MVO_AteStinkyMeat</specialThoughtDirect>
+      <specialThoughtAsIngredient>MVO_AteStinkyMeat</specialThoughtAsIngredient>
+    </ingestible>
+    <comps>
+      <li Class="CompProperties_Rottable">
+        <rotDestroys>true</rotDestroys>
+      </li>
+      <li MayRequire="Ludeon.RimWorld.Anomaly">
+        <compClass>CompHarbingerTreeConsumable</compClass>
+      </li>
+    </comps>
+  </ThingDef>
+  
   <ThingDef ParentName="OrganicProductBase">
     <defName>Meat_MVO_Shark_Prepped</defName>
     <label>prepped shark meat</label>
+    <description>Raw butchered flesh. Can be cooked into meals, or eaten raw. It has already been prepped, so there is no unpleasant odor.</description>
     <graphicData>
       <graphicClass>Graphic_StackCount</graphicClass>
       <texPath>Things/Item/Resource/MeatFoodRaw/Meat_Big</texPath>
@@ -40,15 +81,15 @@
   <ThingDef ParentName="LeatherBase">
     <defName>MVO_Leather_Shark</defName>
     <label>sharkskin</label>
-    <description>TODO</description>
+    <description>Tanned, dried, scraped sharkskin. The surface is rough and hard.</description>
     <possessionCount>20</possessionCount>
     <graphicData>
       <color>(119,129,159)</color>
     </graphicData>
     <statBases>
-      <MarketValue>3.1</MarketValue>
+      <MarketValue>3.8</MarketValue>
       <StuffPower_Armor_Sharp>0.88</StuffPower_Armor_Sharp>
-      <StuffPower_Armor_Blunt>0.35</StuffPower_Armor_Blunt>
+      <StuffPower_Armor_Blunt>1.35</StuffPower_Armor_Blunt>
       <StuffPower_Insulation_Cold>4</StuffPower_Insulation_Cold>
       <StuffPower_Insulation_Heat>10</StuffPower_Insulation_Heat>
     </statBases>
@@ -64,10 +105,11 @@
   <ThingDef ParentName="OrganicProductBase">
     <defName>Meat_MVO_Kraken</defName>
     <label>kraken meat</label>
+    <description>Raw butchered flesh. Can be cooked into meals, or eaten raw. However, it contains a large amount of ammonia, so it likely doesn't taste good. It is rich in fat.</description>
     <graphicData>
       <graphicClass>Graphic_StackCount</graphicClass>
       <texPath>MapVehiclesOcean/Things/Pawn/Kraken/Meat</texPath>
-      <color>(255,255,160)</color>
+      <color>(255,255,220)</color>
     </graphicData>
     <thingCategories>
       <li>MeatRaw</li>
@@ -103,6 +145,7 @@
   <ThingDef ParentName="OrganicProductBase">
     <defName>Meat_MVO_Kraken_Prepped</defName>
     <label>prepped kraken meat</label>
+    <description>Raw butchered flesh. Can be cooked into meals, or eaten raw. It has already been prepped, so there is no unpleasant odor.</description>
     <graphicData>
       <graphicClass>Graphic_StackCount</graphicClass>
       <texPath>MapVehiclesOcean/Things/Pawn/Kraken/Meat</texPath>

@@ -105,7 +105,7 @@
                       <letterDef>PositiveEvent</letterDef>
                       <lookTargets>$lookTargets</lookTargets>
                       <label TKey="LetterLabelIslandAppeared">[resolvedQuestName]: Discovery</label>
-                      <text TKey="LetterTextIslandAppeared">The location of the “island” has finally been pinpointed and
+                      <text TKey="LetterTextIslandAppeared">The location of the "island" has finally been pinpointed and
                         can now be viewed on the world map.
                         \nHowever, it lies within a fierce naval battle zone. Enemy ships could appear at any moment.
                       </text>

@@ -5,7 +5,7 @@
     <defName>MVO_Shark</defName>
     <label>shark</label>
     <devNote>misc</devNote>
-    <description>TODO</description>
+    <description>The vicious great white shark. It stands at the top of the marine food chain and even attacks people and ships.</description>
     <statBases>
       <MoveSpeed>0.5</MoveSpeed>
       <MarketValue>500</MarketValue>
@@ -51,7 +51,7 @@
     <!--        </comps>-->
     <race>
       <fleshType>MVO_SeaCreature</fleshType>
-      <meatColor>(255,255,160)</meatColor>
+      <specificMeatDef>Meat_MVO_Shark</specificMeatDef>
       <body>MVO_Shark</body>
       <waterSeeker>true</waterSeeker>
       <waterCellCost>1</waterCellCost>
@@ -192,7 +192,7 @@
     <defName>MVO_Kraken</defName>
     <label>kraken</label>
     <devNote>misc</devNote>
-    <description>TODO</description>
+    <description>A giant squid that would normally live in the deep sea. It attacks people and ships with its eight legs and two tentacles. The suction cup has spikes on it.</description>
     <statBases>
       <MoveSpeed>0.4</MoveSpeed>
       <MarketValue>750</MarketValue>

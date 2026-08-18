@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <MVO_Util_GenerateSeaSite.root.singleSitePartRules.slateRef>
+    <rulesStrings>
+      <li>root(priority=1,sitePart==ClimateAdjuster)->局地的な温度を[temperatureOffset]変化させる(*Threat)気候調整器(/Threat)が存在します</li>
+      <li>root(priority=1,sitePart==PsychicDroner)->[affectedGender]に照準を合わせた(*Threat)サイコドローン(/Threat)が存在します</li>
+      <li>root(priority=1,sitePart==PsychicSuppressor)->[affectedGender]に照準を合わせた(*Threat)サイコサプレッサー(/Threat)が存在します</li>
+      <li>root(priority=1,sitePart==WeatherController)->地域一帯の気象を[weather_label]に変化させる(*Threat)ウェザーコントローラ(/Threat)が存在します</li>
+      <li>root(priority=1,sitePart==SmokeSpewer)->地域一帯に煙を吐き出す(*Threat)スモーク噴霧器(/Threat)が存在します</li>
+      <li>root(priority=1,sitePart==SunBlocker)->地域一帯の太陽の光を遮る(*Threat)サンブロッカー(/Threat)が存在します</li>
+      <li>root(priority=1,sitePart==EMIDynamo)->地域一帯の電気機器を無効化する(*Threat)EMIダイナモ(/Threat)が存在します</li>
+      <li>root(priority=1,sitePart==ToxicSpewer)->地域一帯に毒物を吐き出す(*Threat)毒物噴霧器(/Threat)が存在します</li>
+      <li>root(priority=1,sitePart==RaidSource)->(*Threat)[enemiesCount]名の[enemiesLabel](/Threat)で守られた部隊集結地であり,[mtbDays]間隔で襲撃して来るでしょう</li>
+      <li>root(priority=1,sitePart==Outpost)->(*Threat)[enemiesCount]名の[enemiesLabel](/Threat)が前哨基地を守っています</li>
+      <li>root(priority=1,sitePart==BanditCamp)->(*Threat)[enemiesCount]名の[enemiesLabel](/Threat)が野営地を守っています</li>
+      <li>root(priority=1,sitePart==Manhunters,count==1)->(*Threat)人狩りの[kindLabel](/Threat)が辺りをうろついています</li>
+      <li>root(priority=1,sitePart==Manhunters,count>1)->(*Threat)[count]匹の人狩りの[kindLabel](/Threat)が辺りをうろついています</li>
+      <li>root(priority=1,sitePart==SleepingMechanoids,count==1)->(*Threat)メカノイド(/Threat)が休止状態にあります</li>
+      <li>root(priority=1,sitePart==SleepingMechanoids,count>1)->(*Threat)[count]体のメカノイド(/Threat)が休止状態にあります</li>
+      <li>root(priority=1,sitePart==Turrets)->(*Threat)[threatsInfo](/Threat)が守りについています</li>
+      <li>root(priority=1,sitePart==AmbushEdge)->(*Threat)敵部隊(/Threat)が獲物が近くに来るのを待ち伏せしています</li>
+      <li>root(priority=1,sitePart==AmbushHidden)->(*Threat)敵部隊(/Threat)が獲物が近くに来るのを待ち伏せしています</li>
+      <li>root(priority=1,sitePart==MechCluster)->(*Threat)敵対的なメカノイドで構成されたクラスター(/Threat)があります</li>
+      <li>root(priority=1,sitePart==PossibleUnknownThreatMarker)->(*Threat)未知の脅威(/Threat)があるかもしれません</li>
+      <li>root->[label]が存在します</li>
+    </rulesStrings>
+  </MVO_Util_GenerateSeaSite.root.singleSitePartRules.slateRef>
+  
+  <MVO_Castaway.questDescriptionRules.rulesStrings.0>questDescription-&gt;見張り台から,[worker_definite]が波間に漂う人物を発見しました.[castaway_adj]のようで,一刻も早い救助を求めています.\n\n現在,[castaway_pronoun]は近くの海上にいます.この状況では[castaway_pronoun]は[timeoutTicks_duration]以上生き延びられないため,急ぐ必要があります.</MVO_Castaway.questDescriptionRules.rulesStrings.0>
+  <MVO_Castaway.questNameRules.rulesStrings.1>questName-&gt;[castaway_nameDef]の救助</MVO_Castaway.questNameRules.rulesStrings.1>
+  <MVO_Castaway.questNameRules.rulesStrings.2>questName-&gt;[castaway_adj]生存者</MVO_Castaway.questNameRules.rulesStrings.2>
+  <MVO_Castaway.questNameRules.rulesStrings.3>castaway_adj-&gt;漂流する</MVO_Castaway.questNameRules.rulesStrings.3>
+  <MVO_Castaway.questNameRules.rulesStrings.4>castaway_adj-&gt;動けなくなった</MVO_Castaway.questNameRules.rulesStrings.4>
+  <MVO_Castaway.questNameRules.rulesStrings.5>castaway_adj-&gt;遭難した</MVO_Castaway.questNameRules.rulesStrings.5>
+  <MVO_Castaway.questNameRules.rulesStrings.6>castaway_adj-&gt;孤立した</MVO_Castaway.questNameRules.rulesStrings.6>
+  <MVO_Castaway.questNameRules.rulesStrings.7>castaway_adj-&gt;難破した</MVO_Castaway.questNameRules.rulesStrings.7>
+  <MVO_Castaway.questNameRules.rulesStrings.8>castaway_noun-&gt;生存者</MVO_Castaway.questNameRules.rulesStrings.8>
+  <MVO_Castaway.questNameRules.rulesStrings.9>castaway_noun-&gt;漂流者</MVO_Castaway.questNameRules.rulesStrings.9>
+  <MVO_Castaway.questNameRules.rulesStrings.10>castaway_noun-&gt;漂流者</MVO_Castaway.questNameRules.rulesStrings.10>
+  <MVO_Castaway.questNameRules.rulesStrings.11>castaway_noun-&gt;船乗り</MVO_Castaway.questNameRules.rulesStrings.11>
+  <MVO_Castaway.root.nodes.9.node.nodes.0.label>クエスト期限切れ: [resolvedQuestName]</MVO_Castaway.root.nodes.9.node.nodes.0.label>
+  <MVO_Castaway.root.nodes.9.node.nodes.0.text>[drifter_nameDef]は流され,海の藻屑となりました.クエスト[resolvedQuestName]の期限が切れました.</MVO_Castaway.root.nodes.9.node.nodes.0.text>
+  
+  <MVO_DesertedIsland.questDescriptionRules.rulesStrings.0>questDescription-&gt;船での見張り中,地平線の彼方に未知の島が発見されました.\nそこに何かが眠っているかもしれません.</MVO_DesertedIsland.questDescriptionRules.rulesStrings.0>
+  <MVO_DesertedIsland.questNameRules.rulesStrings.0>questName-&gt;未知の島</MVO_DesertedIsland.questNameRules.rulesStrings.0>
+  <MVO_DesertedIsland.questNameRules.rulesStrings.1>questName-&gt;忘れられた島</MVO_DesertedIsland.questNameRules.rulesStrings.1>
+  <MVO_DesertedIsland.questNameRules.rulesStrings.2>questName-&gt;孤立した島</MVO_DesertedIsland.questNameRules.rulesStrings.2>
+  <MVO_DesertedIsland.root.nodes.3.elseNode.node.nodes.4.label>漂流者の発見</MVO_DesertedIsland.root.nodes.3.elseNode.node.nodes.4.label>
+  <MVO_DesertedIsland.root.nodes.3.elseNode.node.nodes.4.text>島には漂流者[generatedPawn_label]がいます.助けを求めています!</MVO_DesertedIsland.root.nodes.3.elseNode.node.nodes.4.text>
+  <MVO_DesertedIsland.root.nodes.8.node.nodes.0.label>クエスト期限切れ: [resolvedQuestName]</MVO_DesertedIsland.root.nodes.8.node.nodes.0.label>
+  <MVO_DesertedIsland.root.nodes.8.node.nodes.0.text>他の者たちが難破船を漁っていきました.クエスト[resolvedQuestName]の期限が切れました.</MVO_DesertedIsland.root.nodes.8.node.nodes.0.text>
+  
+  <MVO_MaritimeBase.questDescriptionRules.rulesStrings.0>questDescription-&gt;見張り台から,[worker_definite]が近くの海上基地を発見しました.\n彼らの基地は海を移動しているため,[timeoutTicks_duration]にはどこかへ消えてしまうでしょう.</MVO_MaritimeBase.questDescriptionRules.rulesStrings.0>
+  <MVO_MaritimeBase.questNameRules.rulesStrings.1>MVO_base-&gt;海上基地</MVO_MaritimeBase.questNameRules.rulesStrings.1>
+  <MVO_MaritimeBase.questNameRules.rulesStrings.2>MVO_found-&gt;発見した</MVO_MaritimeBase.questNameRules.rulesStrings.2>
+  <MVO_MaritimeBase.questNameRules.rulesStrings.3>MVO_found-&gt;見つけた</MVO_MaritimeBase.questNameRules.rulesStrings.3>
+  <MVO_MaritimeBase.questNameRules.rulesStrings.4>MVO_found-&gt;目撃した</MVO_MaritimeBase.questNameRules.rulesStrings.4>
+  <MVO_MaritimeBase.questNameRules.rulesStrings.5>MVO_found-&gt;突き止めた</MVO_MaritimeBase.questNameRules.rulesStrings.5>
+  <MVO_MaritimeBase.root.nodes.6.node.nodes.0.label>クエスト期限切れ: [resolvedQuestName]</MVO_MaritimeBase.root.nodes.6.node.nodes.0.label>
+  <MVO_MaritimeBase.root.nodes.6.node.nodes.0.text>海上基地はどこかへ去っていきました.クエスト[resolvedQuestName]の期限が切れました.</MVO_MaritimeBase.root.nodes.6.node.nodes.0.text>
+  <MVO_MechanoidPlatform.questDescriptionRules.rulesStrings.0>questDescription-&gt;[asker_faction_name]の[asker_faction_leaderTitle]である [asker_nameFull]が, メッセージを送ってきました.\nどうやら[asker_faction_name]は,海上航路沿いのメカノイド拠点に困っているようです.\n\n[asker_nameDef]は拠点の敵全員とタレットを破壊するよう依頼しています.[asker_label]によれば,[sitePart0_description]とのことです.</MVO_MechanoidPlatform.questDescriptionRules.rulesStrings.0>
+  
+  <MVO_MechanoidPlatform.questNameRules.rulesStrings.0>questName-&gt;[mechanoid][platform]</MVO_MechanoidPlatform.questNameRules.rulesStrings.0>
+  <MVO_MechanoidPlatform.questNameRules.rulesStrings.2>questName-&gt;海上航路の[mechanoidPlural]</MVO_MechanoidPlatform.questNameRules.rulesStrings.2>
+  <MVO_MechanoidPlatform.questNameRules.rulesStrings.3>platform-&gt;プラットフォーム</MVO_MechanoidPlatform.questNameRules.rulesStrings.3>
+  <MVO_MechanoidPlatform.questNameRules.rulesStrings.4>platform-&gt;拠点</MVO_MechanoidPlatform.questNameRules.rulesStrings.4>
+  <MVO_MechanoidPlatform.questNameRules.rulesStrings.5>platform-&gt;基地</MVO_MechanoidPlatform.questNameRules.rulesStrings.5>
+  <MVO_MechanoidPlatform.questNameRules.rulesStrings.6>mechanoid-&gt;メカノイド</MVO_MechanoidPlatform.questNameRules.rulesStrings.6>
+  <MVO_MechanoidPlatform.questNameRules.rulesStrings.7>mechanoidPlural-&gt;メカノイド群</MVO_MechanoidPlatform.questNameRules.rulesStrings.7>
+  <MVO_MechanoidPlatform.root.nodes.11.node.nodes.0.label>クエスト期限切れ: [resolvedQuestName]</MVO_MechanoidPlatform.root.nodes.11.node.nodes.0.label>
+  <MVO_MechanoidPlatform.root.nodes.11.node.nodes.0.text>メカノイドたちは各地への襲撃に出発しました.クエスト[resolvedQuestName]の期限が切れました.</MVO_MechanoidPlatform.root.nodes.11.node.nodes.0.text>
+  <MVO_MechanoidPlatform.root.nodes.12.node.nodes.0.label>クエスト失敗: [resolvedQuestName]</MVO_MechanoidPlatform.root.nodes.12.node.nodes.0.label>
+  <MVO_MechanoidPlatform.root.nodes.12.node.nodes.0.text>発見された後,メカノイドたちは各地への襲撃に出発しました.クエスト[resolvedQuestName]は終了しました.</MVO_MechanoidPlatform.root.nodes.12.node.nodes.0.text>
+  <MVO_MechanoidPlatform.root.nodes.13.node.nodes.1.customLetterLabel>報酬が到着しました</MVO_MechanoidPlatform.root.nodes.13.node.nodes.1.customLetterLabel>
+  <MVO_MechanoidPlatform.root.nodes.13.node.nodes.1.customLetterText>メカノイド拠点を撃破しました！\n\n[asker_faction_name]からの報酬が届きました.</MVO_MechanoidPlatform.root.nodes.13.node.nodes.1.customLetterText>
+  <MVO_MechanoidPlatform.root.nodes.13.node.nodes.1.nodeIfChosenPawnSignalUsed.text>以下の入植者はクエスト'[resolvedQuestName]'の勝利に関与していました.[asker_definite]はこの功績として,誰が[royalFavorReward_amount][asker_faction_royalFavorLabel]を受けるべきか知りたがっています.</MVO_MechanoidPlatform.root.nodes.13.node.nodes.1.nodeIfChosenPawnSignalUsed.text>
+  
+  <MVO_Shipwreck.questDescriptionRules.rulesStrings.0>questDescription-&gt;見張り中,[worker_definite]は近くに難破船を発見しました.\n\nあいにく[timeoutTicks_duration]以内に物資を回収しないと,他の者たちに漁られてしまいます.[MVO_ShipwreckThreatDescription]</MVO_Shipwreck.questDescriptionRules.rulesStrings.0>
+  <MVO_Shipwreck.questNameRules.rulesStrings.0>questName-&gt;[MVO_ship]の[MVO_wreck]</MVO_Shipwreck.questNameRules.rulesStrings.0>
+  <MVO_Shipwreck.questNameRules.rulesStrings.1>questName-&gt;[MVO_ship][MVO_wreck]</MVO_Shipwreck.questNameRules.rulesStrings.1>
+  <MVO_Shipwreck.questNameRules.rulesStrings.2>questName-&gt;[MVO_ship][MVO_wreck]</MVO_Shipwreck.questNameRules.rulesStrings.2>
+  <MVO_Shipwreck.questNameRules.rulesStrings.3>questName-&gt;[MVO_sunken][MVO_ship]</MVO_Shipwreck.questNameRules.rulesStrings.3>
+  <MVO_Shipwreck.questNameRules.rulesStrings.4>questName-&gt;[MVO_ship][MVO_found]</MVO_Shipwreck.questNameRules.rulesStrings.4>
+  <MVO_Shipwreck.questNameRules.rulesStrings.5>MVO_ship-&gt;船</MVO_Shipwreck.questNameRules.rulesStrings.5>
+  <MVO_Shipwreck.questNameRules.rulesStrings.6>MVO_ship-&gt;艦船</MVO_Shipwreck.questNameRules.rulesStrings.6>
+  <MVO_Shipwreck.questNameRules.rulesStrings.7>MVO_ship-&gt;ボート</MVO_Shipwreck.questNameRules.rulesStrings.7>
+  <MVO_Shipwreck.questNameRules.rulesStrings.8>MVO_ship-&gt;船</MVO_Shipwreck.questNameRules.rulesStrings.8>
+  <MVO_Shipwreck.questNameRules.rulesStrings.9>MVO_ship-&gt;貨物船</MVO_Shipwreck.questNameRules.rulesStrings.9>
+  <MVO_Shipwreck.questNameRules.rulesStrings.10>MVO_ship-&gt;輸送船</MVO_Shipwreck.questNameRules.rulesStrings.10>
+  <MVO_Shipwreck.questNameRules.rulesStrings.11>MVO_wreck-&gt;残骸</MVO_Shipwreck.questNameRules.rulesStrings.11>
+  <MVO_Shipwreck.questNameRules.rulesStrings.12>MVO_wreck-&gt;残骸</MVO_Shipwreck.questNameRules.rulesStrings.12>
+  <MVO_Shipwreck.questNameRules.rulesStrings.13>MVO_wreck-&gt;遺物</MVO_Shipwreck.questNameRules.rulesStrings.13>
+  <MVO_Shipwreck.questNameRules.rulesStrings.14>MVO_wreck-&gt;船体</MVO_Shipwreck.questNameRules.rulesStrings.14>
+  <MVO_Shipwreck.questNameRules.rulesStrings.15>MVO_wreck-&gt;廃墟</MVO_Shipwreck.questNameRules.rulesStrings.15>
+  <MVO_Shipwreck.questNameRules.rulesStrings.16>MVO_sunken-&gt;沈没した</MVO_Shipwreck.questNameRules.rulesStrings.16>
+  <MVO_Shipwreck.questNameRules.rulesStrings.17>MVO_sunken-&gt;幽霊</MVO_Shipwreck.questNameRules.rulesStrings.17>
+  <MVO_Shipwreck.questNameRules.rulesStrings.18>MVO_sunken-&gt;漂流する</MVO_Shipwreck.questNameRules.rulesStrings.18>
+  <MVO_Shipwreck.questNameRules.rulesStrings.19>MVO_sunken-&gt;遥か遠くの</MVO_Shipwreck.questNameRules.rulesStrings.19>
+  <MVO_Shipwreck.questNameRules.rulesStrings.20>MVO_sunken-&gt;遠くの</MVO_Shipwreck.questNameRules.rulesStrings.20>
+  <MVO_Shipwreck.questNameRules.rulesStrings.21>MVO_sunken-&gt;未知の</MVO_Shipwreck.questNameRules.rulesStrings.21>
+  <MVO_Shipwreck.questNameRules.rulesStrings.22>MVO_found-&gt;発見した</MVO_Shipwreck.questNameRules.rulesStrings.22>
+  <MVO_Shipwreck.questNameRules.rulesStrings.23>MVO_found-&gt;見つけた</MVO_Shipwreck.questNameRules.rulesStrings.23>
+  <MVO_Shipwreck.questNameRules.rulesStrings.24>MVO_found-&gt;目撃した</MVO_Shipwreck.questNameRules.rulesStrings.24>
+  <MVO_Shipwreck.questNameRules.rulesStrings.25>MVO_found-&gt;突き止めた</MVO_Shipwreck.questNameRules.rulesStrings.25>
+  <MVO_Shipwreck.root.nodes.8.node.nodes.0.label>クエスト期限切れ: [resolvedQuestName]</MVO_Shipwreck.root.nodes.8.node.nodes.0.label>
+  <MVO_Shipwreck.root.nodes.8.node.nodes.0.text>他の者たちが難破船を漁っていきました.クエスト[resolvedQuestName]の期限が切れました.</MVO_Shipwreck.root.nodes.8.node.nodes.0.text>
+  <MVO_TheIsland.questDescriptionRules.rulesStrings.0>questDescription-&gt;この惑星には「島」に関する伝説があります.そこには計り知れない宝が眠っていると言われていますが,その島の正確な場所すら誰も知りません.\n\n富か,力か,それとも……まあ,いずれにせよ調べる価値はありそうです.</MVO_TheIsland.questDescriptionRules.rulesStrings.0>
+  
+  <MVO_TheIsland.questNameRules.rulesStrings.0>questName-&gt;「島」</MVO_TheIsland.questNameRules.rulesStrings.0>
+  <MVO_TheIsland.root.nodes.2.node.nodes.0.node.label>[resolvedQuestName]: 実在</MVO_TheIsland.root.nodes.2.node.nodes.0.node.label>
+  <MVO_TheIsland.root.nodes.2.node.nodes.0.node.text>伝説の「島」は実在した.この石碑には,かつてそこに暮らしていた人々の生活が記録されているようだ.</MVO_TheIsland.root.nodes.2.node.nodes.0.node.text>
+  <MVO_TheIsland.root.nodes.2.node.nodes.1.node.label>[resolvedQuestName]: 王国</MVO_TheIsland.root.nodes.2.node.nodes.1.node.label>
+  <MVO_TheIsland.root.nodes.2.node.nodes.1.node.text>「島」の上にはかつて王朝が築かれ,この惑星に絶大な影響力を振るっていたようだ.</MVO_TheIsland.root.nodes.2.node.nodes.1.node.text>
+  <MVO_TheIsland.root.nodes.2.node.nodes.2.node.label>[resolvedQuestName]: 疑問</MVO_TheIsland.root.nodes.2.node.nodes.2.node.label>
+  <MVO_TheIsland.root.nodes.2.node.nodes.2.node.text>伝説に描かれた王国と,この惑星の現在の地形の間にはいくつかの食い違いが存在する.\nしかし,その事実こそが島の位置を特定する手がかりとなるはずだ.</MVO_TheIsland.root.nodes.2.node.nodes.2.node.text>
+  <MVO_TheIsland.root.nodes.2.node.nodes.3.node.nodes.7.label>[resolvedQuestName]: 発見</MVO_TheIsland.root.nodes.2.node.nodes.3.node.nodes.7.label>
+  <MVO_TheIsland.root.nodes.2.node.nodes.3.node.nodes.7.text>ついに「島」の位置が特定され,ワールドマップ上で確認できるようになった.\nしかし,そこは激しい海戦のただ中にあり,いつでも敵船が現れる可能性がある.</MVO_TheIsland.root.nodes.2.node.nodes.3.node.nodes.7.text>
+  
+</LanguageData>

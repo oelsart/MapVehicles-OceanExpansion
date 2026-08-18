@@ -4,6 +4,7 @@
   <AbilityDef>
     <defName>MVO_GrapplingHook</defName>
     <label>grappling hook</label>
+    <description>Stab the grappling hook into the target and make a short jump. It is mainly used for travel between vehicles.</description>
     <abilityClass>VehicleMapFramework.Ability_GrapplingHook</abilityClass>
     <displayOrder>50</displayOrder>
     <verbProperties>

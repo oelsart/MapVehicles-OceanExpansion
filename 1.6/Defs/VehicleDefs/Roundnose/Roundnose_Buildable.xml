@@ -4,7 +4,7 @@
   <Vehicles.VehicleBuildDef ParentName="VehicleBoatWithMapBaseBuildable">
     <defName>MVO_Roundnose_Blueprint</defName>
     <label>roundnose</label>
-    <description>TODO</description>
+    <description>A massive, robust ship's hull. It is reinforced with iron. It will surely prove its worth in battle.</description>
     <designationCategory>VF_Vehicles</designationCategory>
     <graphicData>
       <texPath>MapVehiclesOcean/Things/Vehicle/Roundnose/Roundnose</texPath>

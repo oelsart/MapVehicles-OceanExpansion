@@ -17,7 +17,7 @@
     <generalRules>
       <rulesStrings>
         <li>subject->raft float</li>
-        <li>subject_story->increasing the buoyancy of rafts</li>
+        <li>subject_story->increase the buoyancy of rafts</li>
         <li>subject_gerund->constructing floating raft pieces</li>
       </rulesStrings>
     </generalRules>
@@ -26,7 +26,7 @@
   <ResearchProjectDef>
     <defName>MVO_RigI</defName>
     <label>rig I</label>
-    <description>TODO</description>
+    <description>Learn to build basic ship rigging including mast and sail assemblies to increase vessel speed, and construct crow's nests to spot islands, shipwrecks, and points of interest.</description>
     <tab>MVO_Ocean</tab>
     <baseCost>550</baseCost>
     <techLevel>Medieval</techLevel>
@@ -38,9 +38,10 @@
     </prerequisites>
     <generalRules>
       <rulesStrings>
-        <li>subject->rig</li>
-        <li>subject_story->TODO</li>
-        <li>subject_gerund->TODO</li>
+        <li>subject->ship rigging</li>
+        <li>subject_story->harnessing the power of the wind with a sturdy mast and sails</li>
+        <li>subject_story->building high lookout perches to scout treacherous waters and distant lands</li>
+        <li>subject_gerund->rigging basic sails and lookouts</li>
       </rulesStrings>
     </generalRules>
   </ResearchProjectDef>
@@ -48,7 +49,7 @@
   <ResearchProjectDef>
     <defName>MVO_RigII</defName>
     <label>rig II</label>
-    <description>TODO</description>
+    <description>Learn to build advanced multi-tiered masts and complex sail rigs to dramatically increase the cruising speed of your ships.</description>
     <tab>MVO_Ocean</tab>
     <baseCost>650</baseCost>
     <techLevel>Medieval</techLevel>
@@ -65,9 +66,10 @@
     </prerequisites>
     <generalRules>
       <rulesStrings>
-        <li>subject->rig</li>
-        <li>subject_story->TODO</li>
-        <li>subject_gerund->TODO</li>
+        <li>subject->advanced rigging</li>
+        <li>subject_story->designed massive multi-tiered masts capable of holding extensive sail area</li>
+        <li>subject_story->perfected complex sail plans to catch even the faintest ocean breezes</li>
+        <li>subject_gerund->constructing multi-tiered ship rigs</li>
       </rulesStrings>
     </generalRules>
   </ResearchProjectDef>
@@ -75,7 +77,7 @@
   <ResearchProjectDef>
     <defName>MVO_OutboardMotor</defName>
     <label>outboard motor</label>
-    <description>TODO</description>
+    <description>Learn to manufacture electrically powered outboard motors for watercraft, trading electrical power for steady and rapid propulsion regardless of wind.</description>
     <tab>MVO_Ocean</tab>
     <baseCost>1800</baseCost>
     <techLevel>Industrial</techLevel>
@@ -93,9 +95,32 @@
     </prerequisites>
     <generalRules>
       <rulesStrings>
-        <li>subject->outboard motor</li>
-        <li>subject_story->TODO</li>
-        <li>subject_gerund->TODO</li>
+        <li>subject->outboard motors</li>
+        <li>subject_story->adapted microelectronics into a rugged, waterproof marine propulsion drive</li>
+        <li>subject_story->designed high-torque electric outboard engines to power vessels through calm waters</li>
+        <li>subject_gerund->manufacturing outboard marine motors</li>
+      </rulesStrings>
+    </generalRules>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+    <defName>MVO_Cannon</defName>
+    <label>cannon</label>
+    <description>Learn to cast and assemble black powder naval cannons to arm watercraft with devastating heavy firepower against enemy vessels and threats.</description>
+    <tab>MVO_Ocean</tab>
+    <baseCost>1200</baseCost>
+    <techLevel>Industrial</techLevel>
+    <researchViewX>1.00</researchViewX>
+    <researchViewY>2.00</researchViewY>
+    <prerequisites>
+      <li>Gunsmithing</li>
+    </prerequisites>
+    <generalRules>
+      <rulesStrings>
+        <li>subject->naval cannons</li>
+        <li>subject_story->now we can cast heavy iron barrels designed to withstand gunpowder detonations</li>
+        <li>subject_story->designed powerful cannons on naval carriages to dominate maritime combat</li>
+        <li>subject_gerund->casting and mounting naval cannons</li>
       </rulesStrings>
     </generalRules>
   </ResearchProjectDef>

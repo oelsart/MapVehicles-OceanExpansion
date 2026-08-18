@@ -4,8 +4,7 @@ using Verse;
 
 namespace MapVehiclesOcean;
 
-[HotSwap]
-public class ExtendedRoomGenUtility
+public static class ExtendedRoomGenUtility
 {
   public static void FillPrefabs(RoomPart_PrefabDef def, LayoutRoom room, Map map,
     Func<IntVec3, Rot4, bool> validator = null, int contractedBy = 1, List<Thing> spawned = null,

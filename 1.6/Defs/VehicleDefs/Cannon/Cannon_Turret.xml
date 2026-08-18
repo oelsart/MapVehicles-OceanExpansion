@@ -4,7 +4,7 @@
   <ThingDef ParentName="MakeableShellBase">
     <defName>MVO_Cannonball</defName>
     <label>cannonball</label>
-    <description>TODO</description>
+    <description>A large chunk of iron fired from a cannon. It doesn't explode, but it can deal significant damage to a single target.</description>
     <possessionCount>1</possessionCount>
     <graphicData>
       <texPath>MapVehiclesOcean/Things/Cannon/CannonballResource</texPath>
@@ -18,7 +18,7 @@
       <Steel>15</Steel>
     </costList>
     <recipeMaker>
-      <!-- <researchPrerequisite>Mortars</researchPrerequisite> -->
+      <researchPrerequisite>MVO_Cannon</researchPrerequisite>
     </recipeMaker>
   </ThingDef>
 
@@ -48,7 +48,7 @@
   <Vehicles.VehicleTurretDef ParentName="VehicleTurretBase">
     <defName>MVO_Cannon_Turret</defName>
     <label>cannon</label>
-    <description>TODO</description>
+    <description>A cannon that can be built using early gunpowder technology.</description>
     <turretType>Rotatable</turretType>
     <shotSound>MortarIncendiary_Explode</shotSound>
     <reloadSound>Artillery_ShellLoaded</reloadSound>

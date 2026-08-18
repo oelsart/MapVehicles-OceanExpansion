@@ -42,7 +42,7 @@
   <ThingDef ParentName="MVO_RaftPieceBase">
     <defName>MVO_RaftPiece</defName>
     <label>raft piece</label>
-    <description>TODO</description>
+    <description>A raft piece. Can be used to expand the raft.\n\n&lt;color=#bb8f04&gt;Maximum payload:&lt;/color&gt; +10 kg\n&lt;color=#bb8f04&gt;Raft health: +10&lt;/color&gt;</description>
     <graphicData>
       <texPath>MapVehiclesOcean/Things/RaftPiece/RaftPiece</texPath>
       <graphicClass>Graphic_Multi</graphicClass>
@@ -101,7 +101,7 @@
   <ThingDef ParentName="MVO_RaftPieceBase">
     <defName>MVO_RaftPieceFloat</defName>
     <label>raft piece (float)</label>
-    <description>TODO</description>
+    <description>A raft piece. Can be used to expand the raft. It has a float attached to it.\n\n&lt;color=#bb8f04&gt;Maximum payload:&lt;/color&gt; +150 kg\n&lt;color=#bb8f04&gt;Raft health: +10&lt;/color&gt;</description>
     <graphicData>
       <texPath>MapVehiclesOcean/Things/RaftPiece/RaftPieceFloat</texPath>
       <graphicClass>Graphic_Multi</graphicClass>
@@ -197,7 +197,7 @@
   <ThingDef ParentName="MVO_RigBase">
     <defName>MVO_RigOneTiered</defName>
     <label>rig I</label>
-    <description>TODO</description>
+    <description>Combined mast, yard, and sail assembly for a ship. It increases the ship's speed and allows for the installation of a crow's nest (lookout post).&lt;color=#bb8f04&gt;Move speed:&lt;/color&gt; +1</description>
     <graphicData>
       <shadowData>
         <volume>(0.75,1,0.75)</volume>
@@ -293,7 +293,7 @@
   <ThingDef ParentName="MVO_RigBase">
     <defName>MVO_RigTwoTiered</defName>
     <label>rig II</label>
-    <description>TODO</description>
+    <description>Combined mast, yard, and sail assembly for a ship. It increases the ship's speed and allows for the installation of a crow's nest (lookout post).&lt;color=#bb8f04&gt;Move speed:&lt;/color&gt; +2</description>
     <graphicData>
       <shadowData>
         <volume>(0.75,2,0.75)</volume>
@@ -389,7 +389,7 @@
   <ThingDef ParentName="MVO_RigBase">
     <defName>MVO_RigThreeTiered</defName>
     <label>rig III</label>
-    <description>TODO</description>
+    <description>Combined mast, yard, and sail assembly for a ship. It increases the ship's speed and allows for the installation of a crow's nest (lookout post).&lt;color=#bb8f04&gt;Move speed:&lt;/color&gt; +3</description>
     <graphicData>
       <shadowData>
         <volume>(0.75,3,0.75)</volume>
@@ -485,7 +485,7 @@
   <ThingDef ParentName="MVO_ShipEquipmentBase">
     <defName>MVO_CrowsNest</defName>
     <label>Crow's nest</label>
-    <description>TODO</description>
+    <description>A lookout mounted on a ship's mast. This is necessary for quests to trigger on board, such as discovering islands or shipwrecks.</description>
     <drawerType>RealtimeOnly</drawerType>
     <graphicData>
       <graphicClass>Graphic_Single</graphicClass>
@@ -608,7 +608,7 @@
   <ThingDef ParentName="MVO_ShipEquipmentBase">
     <defName>MVO_OutboardMotor</defName>
     <label>outboard motor</label>
-    <description>TODO</description>
+    <description>An outboard motor for a boat. It consumes power while running and increases the ship's speed.\n\n&lt;color=#bb8f04&gt;Power consumption:&lt;/color&gt; 300W\n&lt;color=#bb8f04&gt;Move speed:&lt;/color&gt; +4</description>
     <graphicData>
       <graphicClass>Graphic_Multi</graphicClass>
       <texPath>MapVehiclesOcean/Things/OutboardMotor/OutboardMotor</texPath>
@@ -668,7 +668,7 @@
   <ThingDef ParentName="MVO_ShipEquipmentBase">
     <defName>MVO_Oar</defName>
     <label>oar</label>
-    <description>TODO</description>
+    <description>An oar used to steer a raft.\n\n&lt;color=#bb8f04&gt;Move speed:&lt;/color&gt; +0.75</description>
     <minifiedDef>MinifiedThing</minifiedDef>
     <thingCategories>
       <li>BuildingsFurniture</li>
@@ -739,18 +739,12 @@
     </placeWorkers>
   </ThingDef>
 
-  <DesignatorDropdownGroupDef>
-    <defName>MVO_GrapplingLauncherGroup</defName>
-    <iconSource>Placed</iconSource>
-  </DesignatorDropdownGroupDef>
-
   <ThingDef ParentName="BaseArtilleryBuilding">
     <defName>MVO_Turret_GrapplingLauncher</defName>
     <label>grappling launcher</label>
-    <description>TODO: A turret that sets up a zipline at the location where it pierces. Used for direct access between vehicles.</description>
+    <description>A ballista that fires a grappling hook. It can only be fired at a mooring ring, and once it has hooked onto it, it can be used to move between boats.</description>
     <thingClass>VehicleMapFramework.Building_TurretGunForcedTargetOnly</thingClass>
     <designationCategory>VMF_VehicleMap</designationCategory>
-    <designatorDropdown>MVO_GrapplingLauncherGroup</designatorDropdown>
     <graphicData>
       <texPath>MapVehiclesOcean/Things/GrapplingLauncher/GrapplingLauncher_Base</texPath>
       <drawRotated>false</drawRotated>
@@ -823,7 +817,7 @@
   <ThingDef ParentName="BaseWeaponTurret">
     <defName>MVO_Gun_GrapplingLauncher</defName>
     <label>grappling launcher gun</label>
-    <description>TODO: A gun made to be mounted on a zipline turret.</description>
+    <description>A gun made to be mounted on a grappling launcher.</description>
     <graphicData>
       <texPath>MapVehiclesOcean/Things/GrapplingLauncher/GrapplingLauncher_Top</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -923,13 +917,12 @@
   <ThingDef ParentName="MVO_ShipEquipmentBase">
     <defName>MVO_MooringRing</defName>
     <label>mooring ring</label>
-    <description>TODO</description>
+    <description>A ring used to hook onto the grappling launcher hook and secure the rope. However, enemies can also use it.</description>
     <thingCategories>
       <li>BuildingsFurniture</li>
     </thingCategories>
     <minifiedDef>MinifiedThing</minifiedDef>
     <altitudeLayer>FloorEmplacement</altitudeLayer>
-    <designatorDropdown>MVO_GrapplingLauncherGroup</designatorDropdown>
     <graphicData>
       <graphicClass>Graphic_Multi</graphicClass>
       <texPath>MapVehiclesOcean/Things/MooringRing/MooringRing</texPath>
@@ -951,7 +944,7 @@
   <ThingDef ParentName="MVO_ShipEquipmentBase">
     <defName>MVO_Helm</defName>
     <label>helm</label>
-    <description>TODO</description>
+    <description>A helm required to steer a ship. Without it, the ship cannot be moved.</description>
     <thingClass>VehicleMapFramework.Building_AttackTargetByComps</thingClass>
     <thingCategories>
       <li>BuildingsFurniture</li>
@@ -1025,7 +1018,7 @@
   <ThingDef ParentName="MVO_ShipEquipmentBase">
     <defName>MVO_Hatch</defName>
     <label>hatch</label>
-    <description>TODO</description>
+    <description>A hatch leading into the interior of the boat. Inside, there is sleeping space for three people and storage space.</description>
     <thingClass>VehicleMapFramework.Building_Hatch</thingClass>
     <altitudeLayer>FloorCoverings</altitudeLayer>
     <graphicData>
@@ -1117,7 +1110,7 @@
   <ThingDef ParentName="MVO_ShipEquipmentBase" MayRequire="Ludeon.RimWorld.Odyssey">
     <defName>MVO_FishingSpot</defName>
     <label>fishing spot</label>
-    <description>TODO</description>
+    <description>A spot for fishing from the edge of the boat. It is an important way to obtain food while on board.</description>
     <graphicData>
       <graphicClass>Graphic_Single</graphicClass>
       <texPath>UI/Overlays/InteractionCell</texPath>
@@ -1145,7 +1138,7 @@
   <ThingDef ParentName="MVO_ShipEquipmentBase">
     <defName>MVO_Gangplank</defName>
     <label>gangplank</label>
-    <description>TODO</description>
+    <description>A dangerous plank used to cross from one boat to the next. However, when it isn’t connected to the neighboring boat, the crew uses it as a test of courage.</description>
     <graphicData>
       <graphicClass>Graphic_Multi</graphicClass>
       <texPath>MapVehiclesOcean/Things/Gangplank/Gangplank</texPath>

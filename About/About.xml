@@ -4,7 +4,7 @@
   <packageId>OELS.MapVehicles.OceanExpansion</packageId>
   <author>OELS</author>
   <description>Add four vehicles with map using the Vehicle Map Framework.
-Vehicle Map Frameworkを使用したマップ付きの乗り物を4種追加します。</description>
+Vehicle Map Frameworkを使用したマップ付きの乗り物を4種追加します.</description>
   <modVersion IgnoreIfNoMatchingField="True">ver.1.0.0</modVersion>
 
   <supportedVersions>

@@ -4,7 +4,7 @@
   <Vehicles.VehicleBuildDef ParentName="VehicleBaseBuildable">
     <defName>MVO_Cannon_Blueprint</defName>
     <label>cannon</label>
-    <description>TODO</description>
+    <description>A cannon that can be built using early gunpowder technology.</description>
     <designationCategory>VF_Vehicles</designationCategory>
     <graphicData>
       <texPath>MapVehiclesOcean/Things/Cannon/Cannon</texPath>
@@ -21,6 +21,7 @@
     <size>(1,1)</size>
 
     <researchPrerequisites>
+      <li>MVO_Cannon</li>
     </researchPrerequisites>
 
     <costList>

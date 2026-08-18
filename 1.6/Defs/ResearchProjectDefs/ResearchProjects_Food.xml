@@ -5,7 +5,7 @@
   <ResearchProjectDef>
     <defName>MVO_PrepMeat</defName>
     <label>meat prepping</label>
-    <description>Learn how to prep meat that's too smelly to eat.</description>
+    <description>Learn culinary techniques to treat and prep pungent marine meats such as shark and kraken flesh to make them palatable and safe to eat.</description>
     <tab>MVO_Ocean</tab>
     <baseCost>400</baseCost>
     <techLevel>Medieval</techLevel>
@@ -14,8 +14,9 @@
     <generalRules>
       <rulesStrings>
         <li>subject->meat prepping</li>
-        <li>subject_story->TODO</li>
-        <li>subject_gerund->TODO</li>
+        <li>subject_story->discovered how to leech offensive odors and tough compounds out of pungent ocean meats</li>
+        <li>subject_story->turned unpalatable shark and kraken flesh into delicious meals for the crew</li>
+        <li>subject_gerund->prepping pungent marine meats</li>
       </rulesStrings>
     </generalRules>
   </ResearchProjectDef>
@@ -23,7 +24,7 @@
   <ResearchProjectDef>
     <defName>MVO_SeaFatsRendering</defName>
     <label>sea fats rendering</label>
-    <description>Learning how to produce fuel from marine animal meat.</description>
+    <description>Learn how to render down rich fats and tissues from shark and kraken meat at a biofuel refinery to produce chemfuel.</description>
     <tab>MVO_Ocean</tab>
     <baseCost>700</baseCost>
     <techLevel>Medieval</techLevel>
@@ -35,8 +36,9 @@
     <generalRules>
       <rulesStrings>
         <li>subject->sea fats rendering</li>
-        <li>subject_story->TODO</li>
-        <li>subject_gerund->TODO</li>
+        <li>subject_story->extracted rich, combustible oils by rendering down shark and kraken tissue</li>
+        <li>subject_story->refined ocean predator fats into valuable chemfuel</li>
+        <li>subject_gerund->rendering sea fats into chemfuel</li>
       </rulesStrings>
     </generalRules>
   </ResearchProjectDef>

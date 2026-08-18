@@ -4,7 +4,7 @@
   <Vehicles.VehicleBuildDef ParentName="VehicleBoatWithMapBaseBuildable">
     <defName>MVO_Keel_Blueprint</defName>
     <label>keel</label>
-    <description>TODO</description>
+    <description>A ship's hull built using early technology. It's narrow but reasonably sturdy.</description>
     <designationCategory>VF_Vehicles</designationCategory>
     <graphicData>
       <texPath>MapVehiclesOcean/Things/Vehicle/Keel/Keel</texPath>

@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  
+  <MVO_FloatingStructure.label>浮遊構造物</MVO_FloatingStructure.label>
+  <MVO_FloatingStructure.description>海洋上の浮遊構造物プラットフォームです.</MVO_FloatingStructure.description>
+  <MVO_FloatingStructureCrude.label>浮遊構造物</MVO_FloatingStructureCrude.label>
+  <MVO_FloatingStructureCrude.description>海洋上の浮遊構造物プラットフォームです.</MVO_FloatingStructureCrude.description>
+  <MVO_FloatingStructureSub.label>浮遊構造物</MVO_FloatingStructureSub.label>
+  <MVO_FloatingStructureSub.description>海洋上の浮遊構造物プラットフォームです.</MVO_FloatingStructureSub.description>
+  <MVO_MechanoidPlatform.label>メカノイドプラットフォーム</MVO_MechanoidPlatform.label>
+  <MVO_MechanoidPlatformBridge.label>メカノイドプラットフォーム</MVO_MechanoidPlatformBridge.label>
+  <MVO_MechanoidPlatformSub.label>メカノイドプラットフォーム</MVO_MechanoidPlatformSub.label>
+  <MVO_WoodShipwreckFloorA.label>フローリング</MVO_WoodShipwreckFloorA.label>
+  <MVO_WoodShipwreckFloorA.description>木のフローリングです.暖かで自宅に居る気分になります.敷き詰めるのも早いですが,非常に燃えやすいです.</MVO_WoodShipwreckFloorA.description>
+  <MVO_TempFloor.label>範囲外</MVO_TempFloor.label>
+  <MVO_NoWaterVirtual.label>範囲外</MVO_NoWaterVirtual.label>
+  <MVO_WaterDeepPassable.label>海</MVO_WaterDeepPassable.label>
+  <MVO_WaterDeepVirtual.label>海</MVO_WaterDeepVirtual.label>
+  <MVO_WaterOceanDeepPassable.label>外洋</MVO_WaterOceanDeepPassable.label>
+  <MVO_WaterOceanDeepVirtual.label>外洋</MVO_WaterOceanDeepVirtual.label>
+  
+</LanguageData>

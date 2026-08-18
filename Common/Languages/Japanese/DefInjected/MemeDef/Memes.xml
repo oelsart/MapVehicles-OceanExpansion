@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <MVO_Seafaring.label>海洋志向</MVO_Seafaring.label>
+  <MVO_Seafaring.description>海こそが我々の真の故郷であり,生命の源だ.開かれた海から離れて暮らすことは,我々の使命を絶たれることに等しい.</MVO_Seafaring.description>
+  <MVO_Seafaring.generalRules.rulesStrings.0>memeAdjective-&gt;海の</MVO_Seafaring.generalRules.rulesStrings.0>
+  <MVO_Seafaring.generalRules.rulesStrings.1>memeAdjective-&gt;航海の</MVO_Seafaring.generalRules.rulesStrings.1>
+  <MVO_Seafaring.generalRules.rulesStrings.2>memeAdjective-&gt;大洋の</MVO_Seafaring.generalRules.rulesStrings.2>
+  <MVO_Seafaring.generalRules.rulesStrings.3>memeCreed-&gt;乗組員</MVO_Seafaring.generalRules.rulesStrings.3>
+  <MVO_Seafaring.generalRules.rulesStrings.4>memeCreed-&gt;小艦隊</MVO_Seafaring.generalRules.rulesStrings.4>
+  <MVO_Seafaring.generalRules.rulesStrings.5>memeCreed-&gt;艦隊</MVO_Seafaring.generalRules.rulesStrings.5>
+  <MVO_Seafaring.generalRules.rulesStrings.6>memeConcept-&gt;大洋</MVO_Seafaring.generalRules.rulesStrings.6>
+  <MVO_Seafaring.generalRules.rulesStrings.7>memeConcept-&gt;航海術</MVO_Seafaring.generalRules.rulesStrings.7>
+  <MVO_Seafaring.generalRules.rulesStrings.8>memeConcept-&gt;操船術</MVO_Seafaring.generalRules.rulesStrings.8>
+  <MVO_Seafaring.generalRules.rulesStrings.9>memeLeaderNoun-&gt;提督</MVO_Seafaring.generalRules.rulesStrings.9>
+  <MVO_Seafaring.generalRules.rulesStrings.10>memeLeaderNoun-&gt;船長</MVO_Seafaring.generalRules.rulesStrings.10>
+  <MVO_Seafaring.generalRules.rulesStrings.11>memeMoralist-&gt;操舵手</MVO_Seafaring.generalRules.rulesStrings.11>
+  <MVO_Seafaring.generalRules.rulesStrings.12>memeMoralist-&gt;操舵長</MVO_Seafaring.generalRules.rulesStrings.12>
+  <MVO_Seafaring.descriptionMaker.rules.rulesStrings.0>creation(tag=meme_MVO_Seafaring) -&gt;[deity0_name]は原初の地を切り開き,広大な大洋を生み出して,最初の乗組員たちを潮の流れる海へと送り出した.</MVO_Seafaring.descriptionMaker.rules.rulesStrings.0>
+  <MVO_Seafaring.descriptionMaker.rules.rulesStrings.1>episode(uses=1,tag=meme_MVO_Seafaring) -&gt;乗組員たちは[deity0_name]の眼差しのもとでハリケーンを乗り越え,陸地における安定など偽りの約束に過ぎないことを学んだ.</MVO_Seafaring.descriptionMaker.rules.rulesStrings.1>
+  <MVO_Seafaring.descriptionMaker.rules.rulesStrings.2>intro(tag=meme_MVO_Seafaring) -&gt;[place_name]の水上で,[founderName]は最初の航海船を造り上げ,乾いた陸地の塵を捨て去った.</MVO_Seafaring.descriptionMaker.rules.rulesStrings.2>
+  <MVO_Seafaring.descriptionMaker.rules.rulesStrings.3>lessonIntro(tag=meme_MVO_Seafaring) -&gt;夜更けに船体に打ち寄せる波の音を聞きながら,私は悟った.</MVO_Seafaring.descriptionMaker.rules.rulesStrings.3>
+  <MVO_Seafaring.descriptionMaker.rules.rulesStrings.4>lesson(tag=meme_MVO_Seafaring) -&gt;陸地は魂を縛るが,海は魂を解放するのだと</MVO_Seafaring.descriptionMaker.rules.rulesStrings.4>
+  <MVO_Seafaring.descriptionMaker.rules.rulesStrings.5>lessonReinforcement(tag=meme_MVO_Seafaring) -&gt;地上に長く留まりすぎれば,精神は石へと変わってしまう.</MVO_Seafaring.descriptionMaker.rules.rulesStrings.5>
+  <MVO_Seafaring.symbolPacks.0.ideoName>ノーティリズム</MVO_Seafaring.symbolPacks.0.ideoName>
+  <MVO_Seafaring.symbolPacks.0.theme>大洋</MVO_Seafaring.symbolPacks.0.theme>
+  <MVO_Seafaring.symbolPacks.0.adjective>航海の</MVO_Seafaring.symbolPacks.0.adjective>
+  <MVO_Seafaring.symbolPacks.0.member>船乗り</MVO_Seafaring.symbolPacks.0.member>
+  <MVO_Seafaring.symbolPacks.1.ideoName>ペラギズム</MVO_Seafaring.symbolPacks.1.ideoName>
+  <MVO_Seafaring.symbolPacks.1.theme>海</MVO_Seafaring.symbolPacks.1.theme>
+  <MVO_Seafaring.symbolPacks.1.adjective>遠洋の</MVO_Seafaring.symbolPacks.1.adjective>
+  <MVO_Seafaring.symbolPacks.1.member>航海者</MVO_Seafaring.symbolPacks.1.member>
+</LanguageData>

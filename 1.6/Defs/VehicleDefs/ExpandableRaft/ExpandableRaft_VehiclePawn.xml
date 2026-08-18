@@ -4,7 +4,7 @@
   <Vehicles.VehicleDef ParentName="BaseSeaVehiclePawnWithMap">
     <defName>MVO_ExpandableRaft</defName>
     <label>raft</label>
-    <description>TODO</description>
+    <description>An expandable raft made of pieces. The first invention that enabled humanity to cross the ocean.</description>
 
     <graphicData>
       <texPath>MapVehiclesOcean/Things/Vehicle/Raft/Raft</texPath>

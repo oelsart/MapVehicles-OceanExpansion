@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <MVO_SeaAmbush.label>海のアンブッシュ</MVO_SeaAmbush.label>
+  <MVO_SeaAmbush.letterLabel>海のアンブッシュ</MVO_SeaAmbush.letterLabel>
+  <MVO_SeaAmbush.letterText>{0}は　{2}の{1}に奇襲を受けた!</MVO_SeaAmbush.letterText>
+  <MVO_ManhunterSeaAmbush.label>海の人狩りアンブッシュ</MVO_ManhunterSeaAmbush.label>
+  <MVO_ManhunterSeaAmbush.letterLabel>海のアンブッシュ(人狩り)</MVO_ManhunterSeaAmbush.letterLabel>
+  <MVO_ManhunterSeaAmbush.letterText>{0}は 凶暴な{1}の奇襲を受けました!</MVO_ManhunterSeaAmbush.letterText>
+  
+</LanguageData>

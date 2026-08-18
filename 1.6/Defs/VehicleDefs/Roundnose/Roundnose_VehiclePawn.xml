@@ -4,7 +4,7 @@
   <Vehicles.VehicleDef ParentName="BaseSeaVehiclePawnWithMap">
     <defName>MVO_Roundnose</defName>
     <label>roundnose</label>
-    <description>TODO</description>
+    <description>A massive, robust ship's hull. It is reinforced with iron. It will surely prove its worth in battle.</description>
 
     <graphicData>
       <texPath>MapVehiclesOcean/Things/Vehicle/Roundnose/Roundnose</texPath>

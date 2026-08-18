@@ -2,7 +2,6 @@
 
 namespace MapVehiclesOcean;
 
-[HotSwap]
 public class GenStep_MaritimeBase : GenStep
 {
   public override int SeedPart => 1871699328;

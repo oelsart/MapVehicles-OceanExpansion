@@ -3,7 +3,6 @@ using Verse;
 
 namespace MapVehiclesOcean;
 
-[HotSwap]
 public class RoomContents_PowerPlantArea : RoomContentsWorker
 {
   public override void FillRoom(Map map, LayoutRoom room, Faction faction, float? threatPoints = null)

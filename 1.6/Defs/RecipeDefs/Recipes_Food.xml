@@ -5,7 +5,7 @@
   <RecipeDef>
     <defName>MVO_PrepSharkMeat</defName>
     <label>prep shark meat</label>
-    <description>TODO</description>
+    <description>Process raw shark meat to remove strong odors and compounds, turning it into palatable prepped meat.</description>
     <jobString>Prepping shark meat.</jobString>
     <workAmount>400</workAmount>
     <workSpeedStat>CookSpeed</workSpeedStat>
@@ -37,7 +37,7 @@
   <RecipeDef>
     <defName>MVO_PrepSharkMeatBulk</defName>
     <label>prep shark meat x4</label>
-    <description>TODO</description>
+    <description>Process a batch of raw shark meat to remove strong odors and compounds, turning it into palatable prepped meat.</description>
     <jobString>Prepping shark meat.</jobString>
     <workAmount>1600</workAmount>
     <workSpeedStat>CookSpeed</workSpeedStat>
@@ -69,7 +69,7 @@
   <RecipeDef>
     <defName>MVO_PrepKrakenMeat</defName>
     <label>prep kraken meat</label>
-    <description>TODO</description>
+    <description>Process raw kraken meat to remove foul odors and tough, unpalatable parts, turning it into appetizing prepped meat.</description>
     <jobString>Prepping kraken meat.</jobString>
     <workAmount>400</workAmount>
     <workSpeedStat>CookSpeed</workSpeedStat>
@@ -101,7 +101,7 @@
   <RecipeDef>
     <defName>MVO_PrepKrakenMeatBulk</defName>
     <label>prep kraken meat x4</label>
-    <description>TODO</description>
+    <description>Process a batch of raw kraken meat to remove foul odors and tough, unpalatable parts, turning it into appetizing prepped meat.</description>
     <jobString>Prepping kraken meat.</jobString>
     <workAmount>1600</workAmount>
     <workSpeedStat>CookSpeed</workSpeedStat>

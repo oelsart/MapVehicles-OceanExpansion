@@ -4,7 +4,7 @@
   <Vehicles.VehicleBuildDef ParentName="VehicleBoatWithMapBaseBuildable">
     <defName>MVO_ExpandableRaft_Blueprint</defName>
     <label>raft</label>
-    <description>TODO</description>
+    <description>An expandable raft made of pieces. The first invention that enabled humanity to cross the ocean.</description>
     <designationCategory>VF_Vehicles</designationCategory>
     <graphicData>
       <texPath>MapVehiclesOcean/Things/Vehicle/Raft/Raft</texPath>

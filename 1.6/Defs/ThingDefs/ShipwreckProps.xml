@@ -1,14 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
 
-  <ThingDef Name="ShipwreckPropsBase" ParentName="BuildingBase" Abstract="True">
-    <designationCategory>MVO_Dev</designationCategory>
+  <ThingDef Name="MVO_ShipwreckPropsBase" ParentName="BuildingBase" Abstract="True">
+<!--    <designationCategory>MVO_Dev</designationCategory>-->
   </ThingDef>
 
-  <ThingDef ParentName="ShipwreckPropsBase">
+  <ThingDef ParentName="MVO_ShipwreckPropsBase">
     <defName>MVO_ShipwreckHatch</defName>
     <label>hatch</label>
-    <description>TODO</description>
+    <description>A hatch leading into the interior of the boat. There might be some supplies hidden in there.</description>
     <thingClass>Building_Crate</thingClass>
     <altitudeLayer>FloorCoverings</altitudeLayer>
     <graphicData>
@@ -34,10 +34,10 @@
     <canOverlapZones>false</canOverlapZones>
   </ThingDef>
 
-  <ThingDef ParentName="ShipwreckPropsBase">
+  <ThingDef ParentName="MVO_ShipwreckPropsBase">
     <defName>MVO_ShipwreckMast</defName>
     <label>broken mast</label>
-    <description>TODO</description>
+    <description>A broken mast of a wrecked ship.</description>
     <graphicData>
       <graphicClass>Graphic_Single</graphicClass>
       <texPath>MapVehiclesOcean/Things/Rig/MastRootBroken</texPath>
@@ -70,10 +70,10 @@
     </building>
   </ThingDef>
 
-  <ThingDef ParentName="ShipwreckPropsBase">
+  <ThingDef ParentName="MVO_ShipwreckPropsBase">
     <defName>MVO_ShipwreckBarrel</defName>
     <label>barrel</label>
-    <description>TODO</description>
+    <description>A barrel containing supplies.</description>
     <thingClass>Building_Crate</thingClass>
     <graphicData>
       <graphicClass>Graphic_Single</graphicClass>
@@ -112,10 +112,10 @@
     </comps>
   </ThingDef>
 
-  <ThingDef ParentName="ShipwreckPropsBase">
+  <ThingDef ParentName="MVO_ShipwreckPropsBase">
     <defName>MVO_StoneCoffer</defName>
     <label>coffer</label>
-    <description>TODO</description>
+    <description>A stone coffer that looks like it might contain something important.</description>
     <thingClass>Building_Crate</thingClass>
     <graphicData>
       <graphicClass>Graphic_Multi</graphicClass>
@@ -142,10 +142,10 @@
     </costList>
   </ThingDef>
 
-  <ThingDef ParentName="ShipwreckPropsBase">
+  <ThingDef ParentName="MVO_ShipwreckPropsBase">
     <defName>MVO_ShipwreckCannon</defName>
     <label>broken cannon</label>
-    <description>TODO</description>
+    <description>A broken cannon.</description>
     <graphicData>
       <graphicClass>Graphic_Multi</graphicClass>
       <texPath>MapVehiclesOcean/Things/Cannon/CannonBroken</texPath>
@@ -172,7 +172,7 @@
     <canOverlapZones>false</canOverlapZones>
   </ThingDef>
 
-  <ThingDef ParentName="ShipwreckPropsBase">
+  <ThingDef ParentName="MVO_ShipwreckPropsBase">
     <defName>MVO_Volleyball</defName>
     <label>volleyball</label>
     <description>It looks like a ball for playing games. A face is drawn on it.</description>
@@ -196,7 +196,7 @@
     </costList>
   </ThingDef>
 
-  <ThingDef ParentName="ShipwreckPropsBase">
+  <ThingDef ParentName="MVO_ShipwreckPropsBase">
     <defName>MVO_Stele</defName>
     <label>stele</label>
     <description>A section of an inscription showing the way to the "Island".</description>
@@ -247,7 +247,7 @@
     </filth>
   </ThingDef>
 
-  <ThingDef Name="MVO_ShipFloorDiagonalBase" ParentName="ShipwreckPropsBase">
+  <ThingDef Name="MVO_ShipFloorDiagonalBase" ParentName="MVO_ShipwreckPropsBase">
     <defName>MVO_ShipFloorDiagonalA</defName>
     <label>wood floor</label>
     <description>Wood plank flooring for that warm, homey feeling. While it is quick to lay, it is also very flammable.</description>

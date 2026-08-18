@@ -44,7 +44,7 @@
     <questDescriptionRules>
       <rulesStrings>
         <li>questDescription->By the lookout, [worker_definite] has found a shipwreck nearby.\n\nUnfortunately, it won't
-          last - others will scavenge it first in [timeoutTicks_duration] if we don't.[MVO_ShipwreckThreatDescription]
+          last – others will scavenge it first in [timeoutTicks_duration] if we don't.[MVO_ShipwreckThreatDescription]
         </li>
       </rulesStrings>
     </questDescriptionRules>

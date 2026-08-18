@@ -4,7 +4,7 @@
   <ResearchProjectDef>
     <defName>MVO_SailorOutfit</defName>
     <label>sailor's outfit</label>
-    <description>TODO</description>
+    <description>Tailor practical maritime apparel designed for life at sea, including nautical shirts, pants, sailor and pirate hats, as well as wearable floats for swimming safely in deep waters.</description>
     <tab>MVO_Ocean</tab>
     <baseCost>300</baseCost>
     <techLevel>Medieval</techLevel>
@@ -15,9 +15,10 @@
     </prerequisites>
     <generalRules>
       <rulesStrings>
-        <li>subject->sailor's outfit</li>
-        <li>subject_story->TODO</li>
-        <li>subject_gerund->TODO</li>
+        <li>subject->sailor's apparel</li>
+        <li>subject_story->devised comfortable, durable garb suited for long voyages on the open sea</li>
+        <li>subject_story->designed wearable floats that allow crew members to swim safely across deep ocean waters</li>
+        <li>subject_gerund->tailoring sailor outfits and flotation gear</li>
       </rulesStrings>
     </generalRules>
   </ResearchProjectDef>

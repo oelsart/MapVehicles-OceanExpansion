@@ -3,7 +3,7 @@
 <Defs>
   <Vehicles.VehicleDef Abstract="True" Name="MVO_PontoonBase" ParentName="BaseSeaVehiclePawnWithMap">
     <label>pontoon</label>
-    <description>TODO</description>
+    <description>A comfortable boat with excellent space efficiency. Additional decks can be added. It is, in a sense, a raft built with advanced technology.</description>
 
     <graphicData>
       <texPath>MapVehiclesOcean/Things/Vehicle/Pontoon/Pontoon</texPath>

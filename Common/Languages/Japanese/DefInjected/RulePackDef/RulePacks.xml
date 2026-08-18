@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  
+  <MVO_LeaderTitleMaker_Maritimer.rulePack.rulesStrings.0>r_leaderTitle-&gt;船長</MVO_LeaderTitleMaker_Maritimer.rulePack.rulesStrings.0>
+  
+  <MVO_NamerRoleNavigator.rulePack.rulesStrings.0>r_roleName-&gt;操舵手</MVO_NamerRoleNavigator.rulePack.rulesStrings.0>
+  <MVO_NamerRoleNavigator.rulePack.rulesStrings.1>r_roleName-&gt;航海士</MVO_NamerRoleNavigator.rulePack.rulesStrings.1>
+  <MVO_NamerRoleNavigator.rulePack.rulesStrings.2>r_roleName-&gt;海図担当</MVO_NamerRoleNavigator.rulePack.rulesStrings.2>
+  <MVO_NamerRoleNavigator.rulePack.rulesStrings.3>r_roleName-&gt;星の観測者</MVO_NamerRoleNavigator.rulePack.rulesStrings.3>
+  <MVO_NamerRoleNavigator.rulePack.rulesStrings.4>r_roleName-&gt;舵取り</MVO_NamerRoleNavigator.rulePack.rulesStrings.4>
+  <MVO_NamerRoleNavigator.rulePack.rulesStrings.5>firstPart-&gt;航法</MVO_NamerRoleNavigator.rulePack.rulesStrings.5>
+  <MVO_NamerRoleNavigator.rulePack.rulesStrings.6>firstPart-&gt;海</MVO_NamerRoleNavigator.rulePack.rulesStrings.6>
+  <MVO_NamerRoleNavigator.rulePack.rulesStrings.7>firstPart-&gt;波</MVO_NamerRoleNavigator.rulePack.rulesStrings.7>
+  <MVO_NamerRoleNavigator.rulePack.rulesStrings.8>firstPart-&gt;潮汐</MVO_NamerRoleNavigator.rulePack.rulesStrings.8>
+  <MVO_NamerRoleNavigator.rulePack.rulesStrings.9>firstPart-&gt;海図</MVO_NamerRoleNavigator.rulePack.rulesStrings.9>
+  <MVO_NamerRoleNavigator.rulePack.rulesStrings.10>firstPart-&gt;星</MVO_NamerRoleNavigator.rulePack.rulesStrings.10>
+  <MVO_NamerRoleNavigator.rulePack.rulesStrings.11>firstPart-&gt;深淵</MVO_NamerRoleNavigator.rulePack.rulesStrings.11>
+  <MVO_NamerRoleNavigator.rulePack.rulesStrings.12>firstPart-&gt;漂流</MVO_NamerRoleNavigator.rulePack.rulesStrings.12>
+  <MVO_NamerRoleNavigator.rulePack.rulesStrings.13>firstPart-&gt;風</MVO_NamerRoleNavigator.rulePack.rulesStrings.13>
+  <MVO_NamerRoleNavigator.rulePack.rulesStrings.14>firstPart-&gt;羅針盤</MVO_NamerRoleNavigator.rulePack.rulesStrings.14>
+  <MVO_NamerRoleNavigator.rulePack.rulesStrings.15>firstPart-&gt;航路</MVO_NamerRoleNavigator.rulePack.rulesStrings.15>
+  <MVO_NamerRoleNavigator.rulePack.rulesStrings.16>firstPart-&gt;操舵</MVO_NamerRoleNavigator.rulePack.rulesStrings.16>
+  <MVO_NamerRoleNavigator.rulePack.rulesStrings.17>secondPart(p=4)-&gt;ガイド</MVO_NamerRoleNavigator.rulePack.rulesStrings.17>
+  <MVO_NamerRoleNavigator.rulePack.rulesStrings.18>secondPart(p=4)-&gt;ランナー</MVO_NamerRoleNavigator.rulePack.rulesStrings.18>
+  <MVO_NamerRoleNavigator.rulePack.rulesStrings.19>secondPart(p=4)-&gt;解読者</MVO_NamerRoleNavigator.rulePack.rulesStrings.19>
+  <MVO_NamerRoleNavigator.rulePack.rulesStrings.20>secondPart(p=4)-&gt;探求者</MVO_NamerRoleNavigator.rulePack.rulesStrings.20>
+  
+</LanguageData>

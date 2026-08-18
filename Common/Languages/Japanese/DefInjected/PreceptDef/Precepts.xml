@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  
+  <MVO_Precept_OceanConnection_None.description>海は単なる水溜まりにすぎない.どこに住もうとも,精神的な違いはない.</MVO_Precept_OceanConnection_None.description>
+  <MVO_Precept_OceanConnection_Weak.label>弱</MVO_Precept_OceanConnection_Weak.label>
+  <MVO_Precept_OceanConnection_Weak.description>信者は外洋に対して緩やかな好みを抱く.水上での生活はわずかな快適さをもたらし,陸地に閉じ込められると軽い落ち着かなさを感じる.</MVO_Precept_OceanConnection_Weak.description>
+  <MVO_Precept_OceanConnection_Weak.comps.0.thoughtStageDescriptions.0>海に居る</MVO_Precept_OceanConnection_Weak.comps.0.thoughtStageDescriptions.0>
+  <MVO_Precept_OceanConnection_Weak.comps.0.thoughtStageDescriptions.1>陸に居る</MVO_Precept_OceanConnection_Weak.comps.0.thoughtStageDescriptions.1>
+  <MVO_Precept_OceanConnection_Strong.label>強</MVO_Precept_OceanConnection_Strong.label>
+  <MVO_Precept_OceanConnection_Strong.description>信者は精神的に広大な海と結びついている.外洋にいることは彼らの心情を著しく高め,陸上での長期滞在は深い苦痛をもたらす.</MVO_Precept_OceanConnection_Strong.description>
+  <MVO_Precept_OceanConnection_Strong.comps.0.thoughtStageDescriptions.0>海に居る</MVO_Precept_OceanConnection_Strong.comps.0.thoughtStageDescriptions.0>
+  <MVO_Precept_OceanConnection_Strong.comps.0.thoughtStageDescriptions.1>陸に居る</MVO_Precept_OceanConnection_Strong.comps.0.thoughtStageDescriptions.1>
+  <MVO_Precept_CompactQuarters_Undesirable.label>望ましくない</MVO_Precept_CompactQuarters_Undesirable.label>
+  <MVO_Precept_CompactQuarters_Undesirable.description>船の狭苦しい宿舎で暮らすことは不快であり,士気を低下させる.</MVO_Precept_CompactQuarters_Undesirable.description>
+  <MVO_Precept_CompactQuarters_Accepted.label>容認</MVO_Precept_CompactQuarters_Accepted.label>
+  <MVO_Precept_CompactQuarters_Accepted.description>船の狭い客室で暮らすのは当然のことだ.船上でのスペース効率は尊重され,狭い宿舎で寝ることによるペナルティは発生しない.</MVO_Precept_CompactQuarters_Accepted.description>
+  <MVO_IdeoRole_Captain.label>指導者</MVO_IdeoRole_Captain.label>
+  <MVO_IdeoRole_Captain.description>船の絶対的な指導者.維持された規律は作業効率を向上させ,船上の危機における士気を安定させる.</MVO_IdeoRole_Captain.description>
+  <MVO_IdeoRole_Navigator.label>航海士</MVO_IdeoRole_Navigator.label>
+  <MVO_IdeoRole_Navigator.description>水路を読み,高い精度で船のシステムを操作することに長けた航海の専門家.</MVO_IdeoRole_Navigator.description>
+  
+</LanguageData>

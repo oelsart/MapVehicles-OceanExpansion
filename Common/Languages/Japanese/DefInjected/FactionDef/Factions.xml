@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <MVO_PlayerFleet.label>船団</MVO_PlayerFleet.label>
+  <MVO_PlayerFleet.description>船乗りたちの船団.</MVO_PlayerFleet.description>
+  <MVO_PlayerFleet.pawnSingular>乗組員</MVO_PlayerFleet.pawnSingular>
+  <MVO_PlayerFleet.pawnsPlural>乗組員たち</MVO_PlayerFleet.pawnsPlural>
+  <MVO_Maritime.label>海民</MVO_Maritime.label>
+  <MVO_Maritime.pawnSingular>海の民</MVO_Maritime.pawnSingular>
+  <MVO_Maritime.pawnsPlural>海の民たち</MVO_Maritime.pawnsPlural>
+  <MVO_Maritime.messageDefendersAttacking>海の民たちが攻撃してきています.</MVO_Maritime.messageDefendersAttacking>
+  
+</LanguageData>

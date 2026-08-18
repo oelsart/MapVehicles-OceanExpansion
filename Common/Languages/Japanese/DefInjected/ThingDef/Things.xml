@@ -1,0 +1,160 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <Meat_MVO_Kraken.label>クラーケンの肉</Meat_MVO_Kraken.label>
+  <Meat_MVO_Kraken.description>生の切り分けられた食用肉です.調理することも,生のままで食べることもできます.ただし,大量のアンモニアを含んでいるため,味は良くありません.脂肪分が豊富です.</Meat_MVO_Kraken.description>
+  
+  <Meat_MVO_Kraken_Prepped.label>下処理済みのクラーケンの肉</Meat_MVO_Kraken_Prepped.label>
+  <Meat_MVO_Kraken_Prepped.description>生の切り分けられた食用肉です.調理することも,生のままで食べることもできます.下処理済みのため,嫌な臭いはしません.</Meat_MVO_Kraken_Prepped.description>
+  
+  <Meat_MVO_Shark.label>サメの肉</Meat_MVO_Shark.label>
+  <Meat_MVO_Shark.description>生の切り分けられた食用肉です.調理することも,生のままで食べることもできます.ただし,大量のアンモニアを含んでいるため,味は良くありません.脂肪分が豊富です.豊富である.</Meat_MVO_Shark.description>
+  
+  <Meat_MVO_Shark_Prepped.label>下処理済みのサメの肉</Meat_MVO_Shark_Prepped.label>
+  <Meat_MVO_Shark_Prepped.description>生の切り分けられた食用肉です.調理することも,生のままで食べることもできます.下処理済みのため,嫌な臭いはしません.</Meat_MVO_Shark_Prepped.description>
+
+  <MVO_Leather_Shark.label>サメの革</MVO_Leather_Shark.label>
+  <MVO_Leather_Shark.description>なめして,乾燥させ,そぎ落としたサメの皮です.表面はザラザラしていて,硬いです.</MVO_Leather_Shark.description>
+  
+  <MVO_Kraken.label>クラーケン</MVO_Kraken.label>
+  <MVO_Kraken.description>本来は深海に生息する巨大なイカです.八本の足と二本の触腕で人や船を襲います.吸盤にはトゲがあります.</MVO_Kraken.description>
+  <MVO_Kraken.tools.0.label>触手</MVO_Kraken.tools.0.label>
+
+  <MVO_PackTortoise.label>カメ</MVO_PackTortoise.label>
+  <MVO_PackTortoise.description>この硬い甲羅で覆われた爬虫類は,歩く速度がとても遅い反面,驚くほど素早く噛むことで知られています.その自然な鎧によって,殺すことは難しく,近接戦闘が長引くと深刻なダメージを受ける可能性があります.</MVO_PackTortoise.description>
+  <MVO_PackTortoise.tools.0.label>嘴</MVO_PackTortoise.tools.0.label>
+  <MVO_PackTortoise.tools.1.label>頭部</MVO_PackTortoise.tools.1.label>
+
+  <MVO_Shark.label>サメ</MVO_Shark.label>
+  <MVO_Shark.description>凶暴なホホジロザメです.海の食物連鎖の頂点に君臨し,人や船をも襲います.</MVO_Shark.description>
+  <MVO_Shark.tools.0.label>牙</MVO_Shark.tools.0.label>
+  <MVO_Shark.tools.1.label>頭部</MVO_Shark.tools.1.label>
+
+  <MVO_Apparel_Float.label>浮き輪</MVO_Apparel_Float.label>
+  <MVO_Apparel_Float.description>海上で腰に装着する浮き輪です.通常は危険な外洋でも,これを装着すれば自由に泳ぐことができます.</MVO_Apparel_Float.description>
+
+  <MVO_Apparel_GrapplingBelt.label>グラップリングベルト</MVO_Apparel_GrapplingBelt.label>
+  <MVO_Apparel_GrapplingBelt.description>グラップリングフックを使用可能にするベルトです.主に船同士で飛び移るために使われます.</MVO_Apparel_GrapplingBelt.description>
+
+  <MVO_Apparel_PirateHat.label>海賊帽</MVO_Apparel_PirateHat.label>
+  <MVO_Apparel_PirateHat.description>つばが折り返された帽子です.トリコーン(三角帽子)としても知られています.</MVO_Apparel_PirateHat.description>
+  
+  <MVO_Apparel_SailorHat.label>水夫帽</MVO_Apparel_SailorHat.label>
+  <MVO_Apparel_SailorHat.description>シンプルな水夫の帽子です.</MVO_Apparel_SailorHat.description>
+  
+  <MVO_Apparel_SailorPants.label>水夫ズボン</MVO_Apparel_SailorPants.label>
+  <MVO_Apparel_SailorPants.description>シンプルな水水夫のズボンです.</MVO_Apparel_SailorPants.description>
+  
+  <MVO_Apparel_SailorShirt.label>水夫シャツ</MVO_Apparel_SailorShirt.label>
+  <MVO_Apparel_SailorShirt.description>シンプルな水夫のシャツです.</MVO_Apparel_SailorShirt.description>
+  
+  <MVO_Mech_Nephrops.label>ネフロプス</MVO_Mech_Nephrops.label>
+  <MVO_Mech_Nephrops.description>甲殻類のような戦闘用メカノイドです.両手の大ハサミで武装し,厚い装甲に覆われています.近接戦闘で敵陣を素早く圧倒するために集団で展開されるよう設計されています.</MVO_Mech_Nephrops.description>
+  <MVO_Mech_Nephrops.tools.0.label>左大ハサミ</MVO_Mech_Nephrops.tools.0.label>
+  <MVO_Mech_Nephrops.tools.1.label>右大ハサミ</MVO_Mech_Nephrops.tools.1.label>
+  <MVO_Mech_Nephrops.tools.2.label>頭部</MVO_Mech_Nephrops.tools.2.label>
+
+  <Barricade_NAWDiagonal.label>バリケード</Barricade_NAWDiagonal.label>
+  <Barricade_NAWDiagonal.description>銃弾から身を守る腰までの高さの防壁です.バリケードは見た目は悪いですが,他の背の低い物よりも良い遮蔽物になります.バリケードはフェンスと同じように,特定の種類の家畜の移動を防ぎます.</Barricade_NAWDiagonal.description>
+
+  <Fence_NAWDiagonal.label>フェンス</Fence_NAWDiagonal.label>
+  <Fence_NAWDiagonal.description>特定の家畜を囲うために使用する,横木と支柱を組み合わせたフェンスです.特定の種類の動物はフェンスを通り抜けられます.捕食者はフェンスの中にいる生き物を狩りませんが,フェンスの中に迷い込むことがあります.</Fence_NAWDiagonal.description>
+  
+  <Wall_NAWDiagonal.label>壁</Wall_NAWDiagonal.label>
+  <Wall_NAWDiagonal.description>通行できない壁です.屋根を支えます.</Wall_NAWDiagonal.description>
+  
+  <MVO_Bullet_GrapplingLauncher.label>グラップリングランチャー弾</MVO_Bullet_GrapplingLauncher.label>
+  <MVO_Bullet_GrapplingLauncherReturn.label>グラップリングランチャー弾</MVO_Bullet_GrapplingLauncherReturn.label>
+  
+  <MVO_CrowsNest.label>見張り台</MVO_CrowsNest.label>
+  <MVO_CrowsNest.description>船のマストに取り付けられる見張り台です.島や難破船の発見など,船上で発生するクエストに必要です.</MVO_CrowsNest.description>
+
+  <MVO_FishingSpot.label>釣りスポット</MVO_FishingSpot.label>
+  <MVO_FishingSpot.description>ボートの端から釣りをするための場所です.船上で食料を得るための重要な手段です.</MVO_FishingSpot.description>
+
+  <MVO_Gangplank.label>渡し板</MVO_Gangplank.label>
+  <MVO_Gangplank.description>隣のボートへ渡るために使われる危険な板です.しかしながら,隣のボートに接続されていないときは,乗組員の度胸試しに使われます.</MVO_Gangplank.description>
+  
+  <MVO_GrapplingLauncherHook.label>グラップリングフック</MVO_GrapplingLauncherHook.label>
+  <MVO_Gun_GrapplingLauncher.description>グラップリングランチャーに搭載するために作られた銃です.</MVO_Gun_GrapplingLauncher.description>
+  <MVO_Gun_GrapplingLauncher.label>グラップリングランチャー銃</MVO_Gun_GrapplingLauncher.label>
+
+  <MVO_GrapplingHook.label>グラップリングフック</MVO_GrapplingHook.label>
+  <MVO_Bullet_GrapplingHook.label>グラップリングフック弾</MVO_Bullet_GrapplingHook.label>
+
+  <MVO_Hatch.label>ハッチ</MVO_Hatch.label>
+  <MVO_Hatch.description>船の内部に通じるハッチです.中には三人分の就寝スペースと,物資の収納スペースがあります.</MVO_Hatch.description>
+  
+  <MVO_Helm.label>舵</MVO_Helm.label>
+  <MVO_Helm.description>船の操縦に必要な舵です.これがないと船を動かすことはできません.</MVO_Helm.description>
+  <MVO_Helm.comps.0.upgrades.0.roles.0.label>操舵手</MVO_Helm.comps.0.upgrades.0.roles.0.label>
+
+  <MVO_MooringRing.label>係留リング</MVO_MooringRing.label>
+  <MVO_MooringRing.description>グラップリングランチャーのフックを引っ掛けてロープを固定するためのリングです.ただし,敵もこれを利用することができます.</MVO_MooringRing.description>
+
+  <MVO_Oar.label>オール</MVO_Oar.label>
+  <MVO_Oar.comps.0.upgrades.0.roles.0.label>漕ぎ手</MVO_Oar.comps.0.upgrades.0.roles.0.label>
+  <MVO_Oar.description>イカダを操舵するためのオールです.\n\n&lt;color=#bb8f04&gt;移動速度:&lt;/color&gt; +0.75</MVO_Oar.description>
+  
+  <MVO_OutboardMotor.label>船外機</MVO_OutboardMotor.label>
+  <MVO_OutboardMotor.description>ボート用の船外機です.稼働中に電力を消費し,船の速度を上げます.\n\n&lt;color=#bb8f04&gt;消費電力:&lt;/color&gt; 300W\n&lt;color=#bb8f04&gt;移動速度:&lt;/color&gt; +4</MVO_OutboardMotor.description>
+
+  <MVO_RaftPiece.label>イカダパーツ</MVO_RaftPiece.label>
+  <MVO_RaftPiece.description>イカダのパーツです.イカダを拡張するために使用できます.\n\n&lt;color=#bb8f04&gt;最大積載量:&lt;/color&gt; +10 kg\n&lt;color=#bb8f04&gt;イカダの耐久値: +10&lt;/color&gt;</MVO_RaftPiece.description>
+
+  <MVO_RaftPieceFloat.label>イカダパーツ (フロート)</MVO_RaftPieceFloat.label>
+  <MVO_RaftPieceFloat.description>イカダのパーツです.イカダを拡張するために使用できます.浮きが取り付けられています.\n\n&lt;color=#bb8f04&gt;最大積載量:&lt;/color&gt; +150 kg\n&lt;color=#bb8f04&gt;イカダの耐久値: +10&lt;/color&gt;</MVO_RaftPieceFloat.description>
+
+  <MVO_RigOneTiered.label>帆装 I</MVO_RigOneTiered.label>
+  <MVO_RigOneTiered.description>船用のマスト,ヤード,帆などの一式です.船の速度が向上し,見張り台を設置できるようになります.&lt;color=#bb8f04&gt;移動速度:&lt;/color&gt; +1</MVO_RigOneTiered.description>
+  
+  <MVO_RigTwoTiered.label>帆装 II</MVO_RigTwoTiered.label>
+  <MVO_RigTwoTiered.description>船用のマスト,ヤード,帆などの一式です.船の速度が向上し,見張り台を設置できるようになります.&lt;color=#bb8f04&gt;移動速度:&lt;/color&gt; +2</MVO_RigTwoTiered.description>
+  
+  <MVO_RigThreeTiered.label>帆装 III</MVO_RigThreeTiered.label>
+  <MVO_RigThreeTiered.description>船用のマスト,ヤード,帆などの一式です.船の速度が向上し,見張り台を設置できるようになります.&lt;color=#bb8f04&gt;移動速度:&lt;/color&gt; +3</MVO_RigThreeTiered.description>
+
+  <MVO_Turret_GrapplingLauncher.label>グラップリングランチャー</MVO_Turret_GrapplingLauncher.label>
+  <MVO_Turret_GrapplingLauncher.comps.1.jobString>射出</MVO_Turret_GrapplingLauncher.comps.1.jobString>
+  <MVO_Turret_GrapplingLauncher.description>グラップリングフックを発射するバリスタです.係留リングに向けてのみ発射可能で,一度引っ掛かると船どうしを移動するために使用できます.</MVO_Turret_GrapplingLauncher.description>
+  
+  <MVO_Filth_TallyMarks.label>タリーマーク</MVO_Filth_TallyMarks.label>
+
+  <MVO_ShipFloorDiagonalA.label>フローリング</MVO_ShipFloorDiagonalA.label>
+  <MVO_ShipFloorDiagonalA.description>木のフローリングです.暖かで自宅に居る気分になります.敷き詰めるのも早いですが,非常に燃えやすいです.</MVO_ShipFloorDiagonalA.description>
+
+  <MVO_ShipwreckBarrel.label>樽</MVO_ShipwreckBarrel.label>
+  <MVO_ShipwreckBarrel.description>物資が入った樽です.</MVO_ShipwreckBarrel.description>
+  
+  <MVO_ShipwreckCannon.label>壊れた大砲</MVO_ShipwreckCannon.label>
+  <MVO_ShipwreckCannon.description>壊れた大砲です.</MVO_ShipwreckCannon.description>
+
+  <MVO_ShipwreckHatch.label>ハッチ</MVO_ShipwreckHatch.label>
+  <MVO_ShipwreckHatch.description>船の内部に通じるハッチです.中に物資が隠されているかもしれません.</MVO_ShipwreckHatch.description>
+  
+  <MVO_ShipwreckMast.label>折れたマスト</MVO_ShipwreckMast.label>
+  <MVO_ShipwreckMast.description>難破船の折れたマストです.</MVO_ShipwreckMast.description>
+  
+  <MVO_Stele.label>石碑</MVO_Stele.label>
+  <MVO_Stele.description>「島」への道が示される碑文の一部が彫られた石碑です.</MVO_Stele.description>
+
+  <MVO_StoneCoffer.label>石箱</MVO_StoneCoffer.label>
+  <MVO_StoneCoffer.description>何か重要なものが入っていそうな石の箱です.</MVO_StoneCoffer.description>
+  
+  <MVO_Volleyball.label>バレーボール</MVO_Volleyball.label>
+  <MVO_Volleyball.description>遊びに使うボールのようです.顔が描かれています.</MVO_Volleyball.description>
+  
+  <MVO_TradeGoods.label>交易品</MVO_TradeGoods.label>
+  <MVO_TradeGoods.description>売却以外に使い道のない交易品です.遠くまで運べばより高く売れます.</MVO_TradeGoods.description>
+  
+  <MVO_MeleeWeapon_Cutlass.label>カットラス</MVO_MeleeWeapon_Cutlass.label>
+  <MVO_MeleeWeapon_Cutlass.description>帆船の甲板での戦闘に使われる,短く取り回しのよい剣です.</MVO_MeleeWeapon_Cutlass.description>
+  <MVO_MeleeWeapon_Cutlass.tools.0.label>柄</MVO_MeleeWeapon_Cutlass.tools.0.label>
+  <MVO_MeleeWeapon_Cutlass.tools.1.label>刃</MVO_MeleeWeapon_Cutlass.tools.1.label>
+  
+  <MVO_Bullet_Cannonball.label>砲弾</MVO_Bullet_Cannonball.label>
+  
+  <MVO_Cannonball.label>砲弾</MVO_Cannonball.label>
+  <MVO_Cannonball.description>大砲から発射される巨大な鉄塊です.爆発はしませんが,単一の標的に対して大きなダメージを与えることができます.</MVO_Cannonball.description>
+  
+</LanguageData>

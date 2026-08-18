@@ -76,3 +76,14 @@ public static class Patch_JobDriver_Goto_MakeNewToils
     });
   }
 }
+
+[HarmonyPatch(typeof(MapGenerator), nameof(MapGenerator.GenerateMap))]
+public static class Patch_MapGenerator_GenerateMap
+{
+  public static void Prefix(MapParent parent, ref MapGeneratorDef mapGenerator)
+  {
+    if (parent.Tile.Tile.WaterCovered &&
+        mapGenerator == MapGeneratorDefOf.Encounter || mapGenerator == MapGeneratorDefOf.Base_Player)
+      mapGenerator = MVO_DefOf.MVO_MapGeneratorSea;
+  }
+}

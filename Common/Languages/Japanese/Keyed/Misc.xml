@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  
+  <MVO_ShipwreckHostileThreat>周囲を航行している船があります.敵対的である可能性が高いです.</MVO_ShipwreckHostileThreat>
+  <MVO_TradeGoods>{0}の{1}</MVO_TradeGoods>
+  <MVO_SailEmblemChange>紋章を変更</MVO_SailEmblemChange>
+  <MVO_SailEmblemChangeDesc>帆に表示される紋章を変更します.</MVO_SailEmblemChangeDesc>
+  <MVO_SailEmblemChangeColor>色を変更</MVO_SailEmblemChangeColor>
+  <MVO_SailEmblemChangeColorDesc>帆の紋章の色を変更します.</MVO_SailEmblemChangeColorDesc>
+  <MVO_JobReport_WalkingPlank>渡し板を歩いている.</MVO_JobReport_WalkingPlank>
+  <MVO_JobReport_WatchingWalkingPlank>他の人が渡し板を歩くのを見ている.</MVO_JobReport_WatchingWalkingPlank>
+  <MVO_Castaway_GameStartDialog>目を覚ますと,自分はイカダの上にいた.周りには海しかなく,何も思い出すことができない.頭から血が流れている…….まずは止血をしなければ.</MVO_Castaway_GameStartDialog>
+  
+</LanguageData>

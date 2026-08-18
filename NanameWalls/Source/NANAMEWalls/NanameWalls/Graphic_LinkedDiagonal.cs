@@ -7,7 +7,6 @@ using static NanameWalls.ModCompat;
 namespace NanameWalls;
 
 [StaticConstructorOnStartup]
-[HotSwap]
 public class Graphic_LinkedDiagonal(Graphic subGraphic) : Graphic_LinkedCornerFiller(subGraphic)
 {
   private static readonly Dictionary<Material, Material> materialCache = [];

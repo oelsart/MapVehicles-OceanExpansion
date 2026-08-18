@@ -21,7 +21,7 @@
     </questNameRules>
     <questDescriptionRules>
       <rulesStrings>
-        <li>questDescription->[asker_nameFull], [asker_faction_leaderTitle] of [asker_faction_name], has sent us a message. Apparently, [siteFaction_pawnsPlural] is having trouble with the mechanoid platforms along their maritime route.
+        <li>questDescription->[asker_nameFull], [asker_faction_leaderTitle] of [asker_faction_name], has sent us a message. Apparently, [asker_faction_name] is having trouble with the mechanoid platforms along their maritime route.
           \n[asker_nameDef] is asking us to destroy the platform, which means eliminating all enemies and turrets. [asker_label] says that [sitePart0_description].</li>
       </rulesStrings>
     </questDescriptionRules>

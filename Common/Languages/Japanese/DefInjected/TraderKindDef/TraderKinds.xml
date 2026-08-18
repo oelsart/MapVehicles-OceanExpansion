@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  
+  <MVO_MaritimeBase_Seasteader_BulkGoods.label>貿易商</MVO_MaritimeBase_Seasteader_BulkGoods.label>
+  <MVO_MaritimeBase_Seasteader_CombatSupplier.label>武器商</MVO_MaritimeBase_Seasteader_CombatSupplier.label>
+  <MVO_MaritimeBase_Seasteader_Exotic.label>エキゾチックトレーダー</MVO_MaritimeBase_Seasteader_Exotic.label>
+  <MVO_MaritimeBase_Seasteader_PirateMerchant.label>闇商</MVO_MaritimeBase_Seasteader_PirateMerchant.label>
+  
+</LanguageData>

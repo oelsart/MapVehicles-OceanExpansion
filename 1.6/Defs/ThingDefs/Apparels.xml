@@ -4,7 +4,7 @@
   <ThingDef ParentName="ApparelBase">
     <defName>MVO_Apparel_GrapplingBelt</defName>
     <label>grappling belt</label>
-    <description>TODO</description>
+    <description>A belt that allows the wearer to use a grappling hook. It is mainly used for short-distance jumps between ships.</description>
     <graphicData>
       <graphicClass>Graphic_Single</graphicClass>
       <texPath>MapVehiclesOcean/Things/Apparel/ZiplineBelt/ZiplineBelt_south</texPath>
@@ -159,7 +159,7 @@
   <ThingDef ParentName="ApparelBase">
     <defName>MVO_Apparel_Float</defName>
     <label>float</label>
-    <description>TODO</description>
+    <description>A float worn around the waist at sea. It allows the wearer to swim freely in the ocean, where it is normally dangerous to go in.</description>
     <graphicData>
       <graphicClass>Graphic_Single</graphicClass>
       <texPath>MapVehiclesOcean/Things/Apparel/Float/Float</texPath>
@@ -371,7 +371,7 @@
   <ThingDef ParentName="HatMakeableBase">
     <defName>MVO_Apparel_SailorHat</defName>
     <label>sailor hat</label>
-    <description>TODO</description>
+    <description>A simple sailor hat.</description>
     <recipeMaker>
       <researchPrerequisite>MVO_SailorOutfit</researchPrerequisite>
       <displayPriority>313</displayPriority>
@@ -435,7 +435,7 @@
   <ThingDef ParentName="HatMakeableBase">
     <defName>MVO_Apparel_PirateHat</defName>
     <label>pirate hat</label>
-    <description>TODO</description>
+    <description>A hat with a folded brim. It is also known as a tricorn hat.</description>
     <recipeMaker>
       <researchPrerequisite>MVO_SailorOutfit</researchPrerequisite>
       <displayPriority>314</displayPriority>

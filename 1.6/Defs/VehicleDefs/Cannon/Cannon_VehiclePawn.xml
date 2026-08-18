@@ -4,7 +4,7 @@
   <Vehicles.VehicleDef ParentName="BaseVehiclePawn">
     <defName>MVO_Cannon</defName>
     <label>cannon</label>
-    <description>TODO</description>
+    <description>A cannon that can be built using early gunpowder technology.</description>
 
     <graphicData>
       <texPath>MapVehiclesOcean/Things/Cannon/Cannon</texPath>

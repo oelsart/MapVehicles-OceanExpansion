@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <MVO_ExpandableRaft.label>イカダ</MVO_ExpandableRaft.label>
+  <MVO_ExpandableRaft.description>イカダの建造方法を学ぶ.</MVO_ExpandableRaft.description>
+  <MVO_ExpandableRaft.generalRules.rulesStrings.0>subject-&gt;イカダ</MVO_ExpandableRaft.generalRules.rulesStrings.0>
+  <MVO_ExpandableRaft.generalRules.rulesStrings.1>subject_story-&gt;人類が海を渡る[MVO_raft_way]手段に到達した</MVO_ExpandableRaft.generalRules.rulesStrings.1>
+  <MVO_ExpandableRaft.generalRules.rulesStrings.2>MVO_raft_way-&gt;最初の</MVO_ExpandableRaft.generalRules.rulesStrings.2>
+  <MVO_ExpandableRaft.generalRules.rulesStrings.3>MVO_raft_way-&gt;原始的な</MVO_ExpandableRaft.generalRules.rulesStrings.3>
+  <MVO_ExpandableRaft.generalRules.rulesStrings.4>MVO_raft_way-&gt;究極の</MVO_ExpandableRaft.generalRules.rulesStrings.4>
+  <MVO_ExpandableRaft.generalRules.rulesStrings.5>subject_story-&gt;数本の丸太をロープで縛ることを提案した</MVO_ExpandableRaft.generalRules.rulesStrings.5>
+  <MVO_ExpandableRaft.generalRules.rulesStrings.6>subject_story-&gt;人間工学の頂点に到達した</MVO_ExpandableRaft.generalRules.rulesStrings.6>
+  <MVO_ExpandableRaft.generalRules.rulesStrings.7>subject_gerund-&gt;イカダの建造</MVO_ExpandableRaft.generalRules.rulesStrings.7>
+
+  <MVO_Keel.label>キール</MVO_Keel.label>
+  <MVO_Keel.description>キールの建造方法を学ぶ.</MVO_Keel.description>
+  <MVO_Keel.generalRules.rulesStrings.0>subject-&gt;キール</MVO_Keel.generalRules.rulesStrings.0>
+  <MVO_Keel.generalRules.rulesStrings.1>subject_story-&gt;まともな船の建造をようやくマスターした</MVO_Keel.generalRules.rulesStrings.1>
+  <MVO_Keel.generalRules.rulesStrings.2>subject_story-&gt;十分な浮力と堅牢性を備えた船を設計した</MVO_Keel.generalRules.rulesStrings.2>
+  <MVO_Keel.generalRules.rulesStrings.3>subject_story-&gt;これで世界中へ旅立つことができる</MVO_Keel.generalRules.rulesStrings.3>
+  <MVO_Keel.generalRules.rulesStrings.4>subject_gerund-&gt;キールの建造</MVO_Keel.generalRules.rulesStrings.4>
+
+  <MVO_Pontoon.label>ポンツーン</MVO_Pontoon.label>
+  <MVO_Pontoon.description>ポンツーンの建造方法を学ぶ.</MVO_Pontoon.description>
+  <MVO_Pontoon.generalRules.rulesStrings.0>subject-&gt;ポンツーン</MVO_Pontoon.generalRules.rulesStrings.0>
+  <MVO_Pontoon.generalRules.rulesStrings.1>subject_story-&gt;スチール製の四角いいかだが建造可能になった</MVO_Pontoon.generalRules.rulesStrings.1>
+  <MVO_Pontoon.generalRules.rulesStrings.2>subject_story-&gt;究極の空間効率を持つ船を設計した</MVO_Pontoon.generalRules.rulesStrings.2>
+  <MVO_Pontoon.generalRules.rulesStrings.3>subject_story-&gt;テクノロジーがいかだへと回帰する</MVO_Pontoon.generalRules.rulesStrings.3>
+  <MVO_Pontoon.generalRules.rulesStrings.4>subject_gerund-&gt;ポンツーンの建造</MVO_Pontoon.generalRules.rulesStrings.4>
+
+  <MVO_Roundnose.label>ラウンドノーズ</MVO_Roundnose.label>
+  <MVO_Roundnose.description>ラウンドノーズの建造方法を学ぶ.</MVO_Roundnose.description>
+  <MVO_Roundnose.generalRules.rulesStrings.0>subject-&gt;ラウンドノーズ</MVO_Roundnose.generalRules.rulesStrings.0>
+  <MVO_Roundnose.generalRules.rulesStrings.1>subject_story-&gt;スチールで補強された船が建造可能になった</MVO_Roundnose.generalRules.rulesStrings.1>
+  <MVO_Roundnose.generalRules.rulesStrings.2>subject_story-&gt;頑丈さと空間効率を兼ね備えた船を設計した</MVO_Roundnose.generalRules.rulesStrings.2>
+  <MVO_Roundnose.generalRules.rulesStrings.3>subject_story-&gt;艦隊の戦闘艦に最適である</MVO_Roundnose.generalRules.rulesStrings.3>
+  <MVO_Roundnose.generalRules.rulesStrings.4>subject_gerund-&gt;ラウンドノーズの建造</MVO_Roundnose.generalRules.rulesStrings.4>
+
+  <MVO_PrepMeat.label>肉の下処理</MVO_PrepMeat.label>
+  <MVO_PrepMeat.description>サメやクラーケンの肉といった,強烈な臭いを持つ海洋肉を下処理して美味しく安全に食べるための調理技術を学ぶ.</MVO_PrepMeat.description>
+  <MVO_PrepMeat.generalRules.rulesStrings.0>subject-&gt;肉の下処理</MVO_PrepMeat.generalRules.rulesStrings.0>
+  <MVO_PrepMeat.generalRules.rulesStrings.1>subject_story-&gt;海洋肉特有の不快な臭いや硬い組織を取り除く方法を発見した</MVO_PrepMeat.generalRules.rulesStrings.1>
+  <MVO_PrepMeat.generalRules.rulesStrings.2>subject_story-&gt;不味かったサメやクラーケンの肉を乗組員のための美味しい食事へと変える</MVO_PrepMeat.generalRules.rulesStrings.2>
+  <MVO_PrepMeat.generalRules.rulesStrings.3>subject_gerund-&gt;臭い海洋肉の下処理</MVO_PrepMeat.generalRules.rulesStrings.3>
+
+  <MVO_SeaFatsRendering.label>海洋脂肪精製</MVO_SeaFatsRendering.label>
+  <MVO_SeaFatsRendering.description>サメやクラーケンの肉から豊富な脂肪や組織をバイオ燃料精製所で溶かし出し,化学燃料を生産する方法を学ぶ.</MVO_SeaFatsRendering.description>
+  <MVO_SeaFatsRendering.generalRules.rulesStrings.0>subject-&gt;海洋脂肪の精製</MVO_SeaFatsRendering.generalRules.rulesStrings.0>
+  <MVO_SeaFatsRendering.generalRules.rulesStrings.1>subject_story-&gt;サメやクラーケンの組織を精製して,豊富で可燃性の高い油を抽出する</MVO_SeaFatsRendering.generalRules.rulesStrings.1>
+  <MVO_SeaFatsRendering.generalRules.rulesStrings.2>subject_story-&gt;海洋捕食者の脂肪から貴重な化学燃料を生成する</MVO_SeaFatsRendering.generalRules.rulesStrings.2>
+  <MVO_SeaFatsRendering.generalRules.rulesStrings.3>subject_gerund-&gt;海の生き物の脂を使った化学燃料の精製</MVO_SeaFatsRendering.generalRules.rulesStrings.3>
+  
+  <MVO_RigI.label>帆装 I</MVO_RigI.label>
+  <MVO_RigI.description>マスト,ヤードや帆などの基本的な船の帆装を組み立てて船の速度を上げ,見張り台を設置して島や難破船などを発見する方法を学ぶ.</MVO_RigI.description>
+  <MVO_RigI.generalRules.rulesStrings.0>subject-&gt;船の帆装</MVO_RigI.generalRules.rulesStrings.0>
+  <MVO_RigI.generalRules.rulesStrings.1>subject_story-&gt;頑丈なマストと帆を使って,風の力を利用する</MVO_RigI.generalRules.rulesStrings.1>
+  <MVO_RigI.generalRules.rulesStrings.2>subject_story-&gt;危険な海域や遠くの島を見つけるための見張り台を築く</MVO_RigI.generalRules.rulesStrings.2>
+  <MVO_RigI.generalRules.rulesStrings.3>subject_gerund-&gt;基本的な帆の張り方と見張り</MVO_RigI.generalRules.rulesStrings.3>
+  
+  <MVO_RigII.label>帆装 II</MVO_RigII.label>
+  <MVO_RigII.description>高度な多段式マストや複雑な帆装の組み立て方を学び、船の速度を大きく向上させる.</MVO_RigII.description>
+  <MVO_RigII.generalRules.rulesStrings.0>subject-&gt;進歩した帆装</MVO_RigII.generalRules.rulesStrings.0>
+  <MVO_RigII.generalRules.rulesStrings.1>subject_story-&gt;広大な帆面積を支えることのできる,巨大な多段式マストを設計した</MVO_RigII.generalRules.rulesStrings.1>
+  <MVO_RigII.generalRules.rulesStrings.2>subject_story-&gt;微風をも捉えるための完璧で複雑な帆の配置を編み出した</MVO_RigII.generalRules.rulesStrings.2>
+  <MVO_RigII.generalRules.rulesStrings.3>subject_gerund-&gt;多層式の船の帆装の建造</MVO_RigII.generalRules.rulesStrings.3>
+
+  <MVO_SailorMelee.label>船乗りの近接武器</MVO_SailorMelee.label>
+  <MVO_SailorMelee.description>船上での近接戦闘に役立つ技術を学ぶ.</MVO_SailorMelee.description>
+  <MVO_SailorMelee.generalRules.rulesStrings.0>subject-&gt;船乗りの近接武器</MVO_SailorMelee.generalRules.rulesStrings.0>
+  <MVO_SailorMelee.generalRules.rulesStrings.1>subject_story-&gt;船乗りには不可欠</MVO_SailorMelee.generalRules.rulesStrings.1>
+  <MVO_SailorMelee.generalRules.rulesStrings.2>subject_gerund-&gt;船乗り用の近接武器の製作</MVO_SailorMelee.generalRules.rulesStrings.2>
+
+  <MVO_SailorOutfit.label>船乗りの衣装</MVO_SailorOutfit.label>
+  <MVO_SailorOutfit.description>航海用のシャツ,パンツ,水兵や海賊の帽子,外海でも安全に泳ぐための浮き具など,海上生活のために設計された実用的な航海用衣類を仕立てる.</MVO_SailorOutfit.description>
+  <MVO_SailorOutfit.generalRules.rulesStrings.0>subject-&gt;航海用衣類</MVO_SailorOutfit.generalRules.rulesStrings.0>
+  <MVO_SailorOutfit.generalRules.rulesStrings.1>subject_story-&gt;外洋での長い航海に適した快適で耐久性のある衣服を考案した</MVO_SailorOutfit.generalRules.rulesStrings.1>
+  <MVO_SailorOutfit.generalRules.rulesStrings.2>subject_story-&gt;乗組員が外海を安全に泳げる浮き具を設計した</MVO_SailorOutfit.generalRules.rulesStrings.2>
+  <MVO_SailorOutfit.generalRules.rulesStrings.3>subject_gerund-&gt;船乗りの衣装や浮き具の仕立て</MVO_SailorOutfit.generalRules.rulesStrings.3>
+  
+  <MVO_Cannon.description>黒色火薬の海戦用大砲を鋳造・組み立て,船に武装させることで,敵船や脅威に対して壊滅的な重火力を発揮する.</MVO_Cannon.description>
+  <MVO_Cannon.label>大砲</MVO_Cannon.label>
+  <MVO_Cannon.generalRules.rulesStrings.0>subject-&gt;海戦用大砲</MVO_Cannon.generalRules.rulesStrings.0>
+  <MVO_Cannon.generalRules.rulesStrings.1>subject_story-&gt;火薬の爆発に耐えられる重厚な鉄の砲身が鋳造できるようになった</MVO_Cannon.generalRules.rulesStrings.1>
+  <MVO_Cannon.generalRules.rulesStrings.2>subject_story-&gt;海戦を支配するための船に載せる強力な大砲を設計した</MVO_Cannon.generalRules.rulesStrings.2>
+  <MVO_Cannon.generalRules.rulesStrings.3>subject_gerund-&gt;海戦用大砲の鋳造</MVO_Cannon.generalRules.rulesStrings.3>
+
+  <MVO_OutboardMotor.label>船外機</MVO_OutboardMotor.label>
+  <MVO_OutboardMotor.description>船舶用の電動船外機の製造法を学ぶ.風に左右されず,電力を使用して安定した高速推進力を得る.</MVO_OutboardMotor.description>
+  <MVO_OutboardMotor.generalRules.rulesStrings.0>subject-&gt;船外機</MVO_OutboardMotor.generalRules.rulesStrings.0>
+  <MVO_OutboardMotor.generalRules.rulesStrings.1>subject_story-&gt;マイクロエレクトロニクスを頑丈で防水性の高い洋上推進に適応させた</MVO_OutboardMotor.generalRules.rulesStrings.1>
+  <MVO_OutboardMotor.generalRules.rulesStrings.2>subject_story-&gt;高トルクの電動船外機を設計し,穏やかな水面を航行できるようになった</MVO_OutboardMotor.generalRules.rulesStrings.2>
+  <MVO_OutboardMotor.generalRules.rulesStrings.3>subject_gerund-&gt;船外機の製造</MVO_OutboardMotor.generalRules.rulesStrings.3>
+
+  <MVO_RaftPieceFloat.label>イカダのフロートパーツ</MVO_RaftPieceFloat.label>
+  <MVO_RaftPieceFloat.description>イカダの浮力を高める方法を学ぶ.</MVO_RaftPieceFloat.description>
+  <MVO_RaftPieceFloat.generalRules.rulesStrings.0>subject-&gt;イカダの浮き</MVO_RaftPieceFloat.generalRules.rulesStrings.0>
+  <MVO_RaftPieceFloat.generalRules.rulesStrings.1>subject_story-&gt;イカダの浮力を増加させよう</MVO_RaftPieceFloat.generalRules.rulesStrings.1>
+  <MVO_RaftPieceFloat.generalRules.rulesStrings.2>subject_gerund-&gt;イカダのフロートパーツの組み立て</MVO_RaftPieceFloat.generalRules.rulesStrings.2>
+  
+</LanguageData>
