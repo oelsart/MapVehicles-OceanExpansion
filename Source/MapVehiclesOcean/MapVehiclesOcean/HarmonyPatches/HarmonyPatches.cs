@@ -11,13 +11,31 @@ using Verse.AI;
 
 namespace MapVehiclesOcean.HarmonyPatches;
 
-[HarmonyPatch(typeof(WaterBodyTracker), nameof(WaterBodyTracker.Notify_Fished))]
-public static class Patch_WaterBodyTracker_Notify_Fished
+[HarmonyPatch(typeof(WaterBodyTracker), nameof(WaterBodyTracker.TryGetWaterBodyAt))]
+public static class Patch_WaterBodyTracker_TryGetWaterBodyAt
 {
-  public static void Postfix(IntVec3 c, float amount, Map ___map)
+  public static bool Prefix(Map ___map, IntVec3 c, ref WaterBody body, ref bool __result)
   {
     if (___map.IsVehicleMapOf(out var vehicle) && vehicle.Spawned)
-      c.ToBaseMapCoord(vehicle).GetWaterBody(vehicle.Map)?.Population -= amount;
+    {
+      var c2 = c.ToBaseMapCoord(vehicle);
+      var map = vehicle.Map;
+      __result = map.waterBodyTracker.TryGetWaterBodyAt(c2, out body);
+      return false;
+    }
+
+    return true;
+  }
+}
+
+[HarmonyPatch(typeof(WaterBody), nameof(WaterBody.Size), MethodType.Getter)]
+public static class Patch_WaterBody_Size
+{
+  private const int OceanTileWaterSize = 1000;
+  
+  public static void Postfix(Map ___map, ref int __result)
+  {
+    if (___map.IsVehicleMap) __result = OceanTileWaterSize;
   }
 }
 

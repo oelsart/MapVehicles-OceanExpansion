@@ -4,6 +4,7 @@ using Verse;
 
 namespace MapVehiclesOcean;
 
+[HotSwap]
 public class CompFishingSpot : ThingComp
 {
   protected IntVec3 FishingCell => parent.Position + parent.Rotation.FacingCell;
@@ -46,13 +47,11 @@ public class CompFishingSpot : ThingComp
     var map = parent.Map;
     WaterBodyType waterBodyType;
     bool polluted;
-    WaterBody waterBody = null;
     if (vehicle.Spawned)
     {
       var map2 = vehicle.Map;
       var baseCell = cell.ToBaseMapCoord(vehicle);
       waterBodyType = baseCell.GetTerrain(map2)?.waterBodyType ?? WaterBodyType.None;
-      waterBody = baseCell.GetWaterBody(map2);
       polluted = baseCell.IsPolluted(map2);
     }
     else
@@ -72,17 +71,24 @@ public class CompFishingSpot : ThingComp
       WaterBodyType.Saltwater => MVO_DefOf.MVO_WaterOceanDeepVirtual,
       _ => MVO_DefOf.MVO_NoWaterVirtual
     };
-    if (cell.GetTerrain(map) != terrain)
+
+    var terrain2 = cell.GetTerrain(map);
+    if (terrain2 != terrain)
     {
-      map.terrainGrid.SetTerrain(cell, terrain);
-      if (cell.GetZone(map) is Zone_FishingOnVehicle zone)
-        Find.Selector.Deselect(zone);
+      if (terrain2.passability == Traversability.Impassable)
+      {
+        map.terrainGrid.SetTerrain(cell, terrain);
+        if (cell.GetZone(map) is Zone_FishingOnVehicle zone)
+          Find.Selector.Deselect(zone);
+      }
+      else
+      {
+        parent.Destroy();
+        return;
+      }
     }
 
     if (cell.IsPolluted(map) != polluted)
       map.pollutionGrid.SetPolluted(cell, polluted, true);
-
-    if (waterBodyType == WaterBodyType.None) return;
-    cell.GetWaterBody(map)?.Population = waterBody?.Population ?? map.TileInfo.FishPopulationFactor * 50f;
   }
 }

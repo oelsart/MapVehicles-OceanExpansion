@@ -92,5 +92,77 @@
       </value>
     </nomatch>
   </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/BiomeDef[defName="Ocean"]/maxFishPopulation</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>Defs/BiomeDef[defName="Ocean"]/maxFishPopulation</xpath>
+      <value>
+        <maxFishPopulation>800</maxFishPopulation>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>Defs/BiomeDef[defName="Ocean"]</xpath>
+      <value>
+        <maxFishPopulation>800</maxFishPopulation>
+      </value>
+    </nomatch>
+  </Operation>
+    
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/BiomeDef[defName="Lake"]/maxFishPopulation</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>Defs/BiomeDef[defName="Lake"]/maxFishPopulation</xpath>
+      <value>
+        <maxFishPopulation>800</maxFishPopulation>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>Defs/BiomeDef[defName="Lake"]</xpath>
+      <value>
+        <maxFishPopulation>800</maxFishPopulation>
+      </value>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/BiomeDef[defName="Ocean"]/fishTypes</xpath>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>Defs/BiomeDef[defName="Ocean"]</xpath>
+      <value>
+        <fishTypes MayRequire="Ludeon.RimWorld.Odyssey">
+          <saltwater_Common>
+            <Fish_Bluefish MayRequire="Ludeon.RimWorld.Odyssey">1</Fish_Bluefish>
+          </saltwater_Common>
+          <saltwater_Uncommon>
+            <Fish_Tuna MayRequire="Ludeon.RimWorld.Odyssey">1</Fish_Tuna>
+            <Fish_Flounder MayRequire="Ludeon.RimWorld.Odyssey">1</Fish_Flounder>
+            <Fish_Marlin MayRequire="Ludeon.RimWorld.Odyssey">1</Fish_Marlin>
+            <Fish_Dogfish MayRequire="Ludeon.RimWorld.Odyssey">1</Fish_Dogfish>
+            <Fish_Salmon MayRequire="Ludeon.RimWorld.Odyssey">1</Fish_Salmon>
+          </saltwater_Uncommon>
+        </fishTypes>
+      </value>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/BiomeDef[defName="Lake"]/fishTypes</xpath>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>Defs/BiomeDef[defName="Lake"]</xpath>
+      <value>
+        <fishTypes MayRequire="Ludeon.RimWorld.Odyssey">
+          <freshwater_Common>
+            <Fish_Tilapia MayRequire="Ludeon.RimWorld.Odyssey">1</Fish_Tilapia>
+            <Fish_Bass MayRequire="Ludeon.RimWorld.Odyssey">1</Fish_Bass>
+          </freshwater_Common>
+          <freshwater_Uncommon>
+            <Fish_Catfish MayRequire="Ludeon.RimWorld.Odyssey">1</Fish_Catfish>
+            <Fish_Salmon MayRequire="Ludeon.RimWorld.Odyssey">1</Fish_Salmon>
+          </freshwater_Uncommon>
+        </fishTypes>
+      </value>
+    </nomatch>
+  </Operation>
   
 </Patch>

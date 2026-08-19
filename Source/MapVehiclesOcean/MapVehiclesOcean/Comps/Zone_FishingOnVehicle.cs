@@ -36,7 +36,7 @@ public class Zone_FishingOnVehicle : Zone_Fishing
       icon = TexCommand.ForbidOff,
       hotKey = KeyBindingDefOf.Command_ItemForbid,
       isActive = () => allowed(this),
-      toggleAction = delegate { allowed(this) = !allowed(this); }
+      toggleAction = () => allowed(this) = !allowed(this)
     };
   }
 }
