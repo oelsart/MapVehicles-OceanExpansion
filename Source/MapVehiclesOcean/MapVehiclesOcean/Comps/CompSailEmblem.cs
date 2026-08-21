@@ -137,7 +137,7 @@ public sealed class CompSailEmblem : ThingComp
     }
     loc += graphic.DrawOffset(rot);
     var maskMat = graphic.MatAt(rot, parent);
-    loc.y += 0.110006f;
+    loc.y += 0.11001f;
     loc.y -= loc.z * 0.00001f;
     loc.y -= loc.x * 0.000001f;
     Graphics.DrawMesh(mesh, loc, quaternion, maskMat, 0);
