@@ -243,7 +243,10 @@
             <texPath>MapVehiclesOcean/Things/Rig/Rig1/Rig1</texPath>
             <shaderType>VMF_CutoutComplexRGBOpacity</shaderType>
             <drawSize>(8,4)</drawSize>
-            <drawOffset>(0,0,1.5)</drawOffset>
+            <drawOffset>(0,0.13,1.5)</drawOffset>
+            <drawOffsetEast>(0,0.18,1.5)</drawOffsetEast>
+            <drawOffsetWest>(0,0.18,1.5)</drawOffsetWest>
+            <addTopAltitudeBias>true</addTopAltitudeBias>
           </li>
         </graphics>
       </li>
@@ -280,7 +283,7 @@
           <graphicClass>Graphic_Multi</graphicClass>
           <shaderType>MVO_SailEmblemMask</shaderType>
           <drawSize>(8,4)</drawSize>
-          <drawOffset>(0,0,1.5)</drawOffset>
+          <drawOffset>(0,0.16,1.5)</drawOffset>
         </maskGraphicData>
         <drawOffsetNorth>(0,0,0.4)</drawOffsetNorth>
         <drawOffsetEast>(0.985,0,-1.1)</drawOffsetEast>
@@ -339,7 +342,10 @@
             <texPath>MapVehiclesOcean/Things/Rig/Rig2/Rig2</texPath>
             <shaderType>VMF_CutoutComplexRGBOpacity</shaderType>
             <drawSize>(16,8)</drawSize>
-            <drawOffset>(0,0,3.5)</drawOffset>
+            <drawOffset>(0,0.2,3.5)</drawOffset>
+            <drawOffsetEast>(0,0.25,3.5)</drawOffsetEast>
+            <drawOffsetWest>(0,0.25,3.5)</drawOffsetWest>
+            <addTopAltitudeBias>true</addTopAltitudeBias>
           </li>
         </graphics>
       </li>
@@ -376,7 +382,7 @@
           <graphicClass>Graphic_Multi</graphicClass>
           <shaderType>MVO_SailEmblemMask</shaderType>
           <drawSize>(16,8)</drawSize>
-          <drawOffset>(0,0,3.5)</drawOffset>
+          <drawOffset>(0,0.21,3.5)</drawOffset>
         </maskGraphicData>
         <drawOffsetNorth>(0,0,-1.6)</drawOffsetNorth>
         <drawOffsetEast>(0.985,0,-3.1)</drawOffsetEast>
@@ -435,7 +441,10 @@
             <texPath>MapVehiclesOcean/Things/Rig/Rig3/Rig3</texPath>
             <shaderType>VMF_CutoutComplexRGBOpacity</shaderType>
             <drawSize>(16,8)</drawSize>
-            <drawOffset>(0,0,3.5)</drawOffset>
+            <drawOffset>(0,0.2,3.5)</drawOffset>
+            <drawOffsetEast>(0,0.25,3.5)</drawOffsetEast>
+            <drawOffsetWest>(0,0.25,3.5)</drawOffsetWest>
+            <addTopAltitudeBias>true</addTopAltitudeBias>
           </li>
         </graphics>
       </li>
@@ -472,7 +481,7 @@
           <graphicClass>Graphic_Multi</graphicClass>
           <shaderType>MVO_SailEmblemMask</shaderType>
           <drawSize>(16,8)</drawSize>
-          <drawOffset>(0,0,3.5)</drawOffset>
+          <drawOffset>(0,0.21,3.5)</drawOffset>
         </maskGraphicData>
         <drawOffsetNorth>(0,0,-1.6)</drawOffsetNorth>
         <drawOffsetEast>(0.985,0,-3.1)</drawOffsetEast>
@@ -526,18 +535,18 @@
                 <texPath>MapVehiclesOcean/Things/CrowsNest/CrowsNest</texPath>
                 <shaderType>VMF_CutoutComplexRGBOpacity</shaderType>
                 <drawSize>2</drawSize>
-                <drawOffset>(0,0.1001,2.93)</drawOffset>
-                <drawOffsetEast>(0,0.1001,3)</drawOffsetEast>
-                <drawOffsetWest>(0,0.1001,3)</drawOffsetWest>
+                <drawOffset>(0,0.4,2.93)</drawOffset>
+                <drawOffsetEast>(0,0.4,3)</drawOffsetEast>
+                <drawOffsetWest>(0,0.4,3)</drawOffsetWest>
               </li>
               <li>
                 <graphicClass>Graphic_Multi</graphicClass>
                 <texPath>MapVehiclesOcean/Things/CrowsNest/CrowsNestOverlay</texPath>
                 <shaderType>VMF_CutoutComplexRGBOpacity</shaderType>
                 <drawSize>2</drawSize>
-                <drawOffset>(0,0.2,2.93)</drawOffset>
-                <drawOffsetEast>(0,0.2,3)</drawOffsetEast>
-                <drawOffsetWest>(0,0.2,3)</drawOffsetWest>
+                <drawOffset>(0,0.42,2.93)</drawOffset>
+                <drawOffsetEast>(0,0.42,3)</drawOffsetEast>
+                <drawOffsetWest>(0,0.42,3)</drawOffsetWest>
               </li>
             </value>
           </li>
@@ -549,18 +558,18 @@
                 <texPath>MapVehiclesOcean/Things/CrowsNest/CrowsNest</texPath>
                 <shaderType>VMF_CutoutComplexRGBOpacity</shaderType>
                 <drawSize>1.6</drawSize>
-                <drawOffset>(0,0.1001,5.35)</drawOffset>
-                <drawOffsetEast>(0.444,0.1001,5.18)</drawOffsetEast>
-                <drawOffsetWest>(-0.444,0.1001,5.18)</drawOffsetWest>
+                <drawOffset>(0,0.4,5.35)</drawOffset>
+                <drawOffsetEast>(0.444,0.4,5.18)</drawOffsetEast>
+                <drawOffsetWest>(-0.444,0.4,5.18)</drawOffsetWest>
               </li>
               <li>
                 <graphicClass>Graphic_Multi</graphicClass>
                 <texPath>MapVehiclesOcean/Things/CrowsNest/CrowsNestOverlay</texPath>
                 <shaderType>VMF_CutoutComplexRGBOpacity</shaderType>
                 <drawSize>1.6</drawSize>
-                <drawOffset>(0,0.2,5.35)</drawOffset>
-                <drawOffsetEast>(0.444,0.2,5.18)</drawOffsetEast>
-                <drawOffsetWest>(-0.444,0.2,5.18)</drawOffsetWest>
+                <drawOffset>(0,0.42,5.35)</drawOffset>
+                <drawOffsetEast>(0.444,0.42,5.18)</drawOffsetEast>
+                <drawOffsetWest>(-0.444,0.42,5.18)</drawOffsetWest>
               </li>
             </value>
           </li>
@@ -572,18 +581,18 @@
                 <texPath>MapVehiclesOcean/Things/CrowsNest/CrowsNest</texPath>
                 <shaderType>VMF_CutoutComplexRGBOpacity</shaderType>
                 <drawSize>1.4</drawSize>
-                <drawOffset>(0,0.1001,7.1)</drawOffset>
-                <drawOffsetEast>(0.825,0.1001,7.2)</drawOffsetEast>
-                <drawOffsetWest>(-0.825,0.1001,7.2)</drawOffsetWest>
+                <drawOffset>(0,0.4,7.1)</drawOffset>
+                <drawOffsetEast>(0.825,0.4,7.2)</drawOffsetEast>
+                <drawOffsetWest>(-0.825,0.4,7.2)</drawOffsetWest>
               </li>
               <li>
                 <graphicClass>Graphic_Multi</graphicClass>
                 <texPath>MapVehiclesOcean/Things/CrowsNest/CrowsNestOverlay</texPath>
                 <shaderType>VMF_CutoutComplexRGBOpacity</shaderType>
                 <drawSize>1.4</drawSize>
-                <drawOffset>(0,0.2,7.1)</drawOffset>
-                <drawOffsetEast>(0.825,0.2,7.2)</drawOffsetEast>
-                <drawOffsetWest>(-0.825,0.2,7.2)</drawOffsetWest>
+                <drawOffset>(0,0.42,7.1)</drawOffset>
+                <drawOffsetEast>(0.825,0.42,7.2)</drawOffsetEast>
+                <drawOffsetWest>(-0.825,0.42,7.2)</drawOffsetWest>
               </li>
             </value>
           </li>
@@ -678,11 +687,12 @@
       <texPath>MapVehiclesOcean/Things/Oar/Oar</texPath>
       <shaderType>Cutout</shaderType>
       <drawSize>1.5</drawSize>
-      <drawOffsetNorth>(0,2,-0.1)</drawOffsetNorth>
+      <drawOffsetNorth>(0,0,-0.1)</drawOffsetNorth>
       <drawOffsetSouth>(0,0,0.3)</drawOffsetSouth>
       <drawOffsetEast>(-0.1,0,0)</drawOffsetEast>
       <drawOffsetWest>(0.1,0,0)</drawOffsetWest>
     </graphicData>
+    <altitudeLayer>Pawn</altitudeLayer>
     <uiIconScale>0.666667</uiIconScale>
     <statBases>
       <MaxHitPoints>50</MaxHitPoints>
@@ -718,6 +728,8 @@
                   <northWest>South</northWest>
                   <drawOffsetNorth>(0,0,0.3)</drawOffsetNorth>
                   <drawOffsetSouth>(0,0,0.3)</drawOffsetSouth>
+                  <layerNorth>-5</layerNorth>
+                  <layerSouth>1</layerSouth>
                 </pawnRenderer>
               </li>
             </roles>
@@ -1116,7 +1128,7 @@
       <texPath>UI/Overlays/InteractionCell</texPath>
       <shaderType>MetaOverlay</shaderType>
     </graphicData>
-    <tickerType>Normal</tickerType>
+    <tickerType>Rare</tickerType>
     <useHitPoints>false</useHitPoints>
     <noRightClickDraftAttack>true</noRightClickDraftAttack>
     <useBlueprintGraphicAsGhost>true</useBlueprintGraphicAsGhost>

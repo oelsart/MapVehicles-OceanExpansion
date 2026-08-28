@@ -6,6 +6,7 @@ using Verse.AI;
 
 namespace MapVehiclesOcean;
 
+[HotSwap]
 public class JobDriver_Lookout : JobDriver_OperateScanner, IBodyOffsetJobDriver
 {
   public override Vector3 ForcedBodyOffset
@@ -26,7 +27,10 @@ public class JobDriver_Lookout : JobDriver_OperateScanner, IBodyOffsetJobDriver
     }
   }
 
-  float IBodyOffsetJobDriver.PawnDrawPosOffset_Y => 0.1f;
+  float IBodyOffsetJobDriver.PawnDrawPosOffset_Y => 0.32f;
+
+  float IBodyOffsetJobDriver.PawnBodyAngleOffset =>
+	  OnLastToil && pawn.IsOnVehicleMapOf(out var vehicle) ? vehicle.ExtraAngle : 0f;
 
   protected override IEnumerable<Toil> MakeNewToils()
   {

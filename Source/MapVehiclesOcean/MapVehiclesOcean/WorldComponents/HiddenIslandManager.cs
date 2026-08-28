@@ -119,10 +119,10 @@ public class HiddenIslandManager(World world) : WorldComponent(world)
     }
   }
 
-  [DebugAction("MapVehiclesOcean", hideInSubMenu: true)]
+  [DebugAction("MapVehiclesOcean", hideInSubMenu: true, allowedGameStates = AllowedGameStates.PlayingOnWorld)]
   public static void RegenerateHiddenIslands() => Instance?.InitHiddenIslandTileIDs();
 
-  [DebugAction("MapVehiclesOcean", hideInSubMenu: true)]
+  [DebugAction("MapVehiclesOcean", hideInSubMenu: true, allowedGameStates = AllowedGameStates.PlayingOnWorld)]
   public static void FlashHiddenIslands()
   {
     var world = Find.World;

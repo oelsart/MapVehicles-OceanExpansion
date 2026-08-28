@@ -4,7 +4,6 @@ using Verse;
 
 namespace MapVehiclesOcean;
 
-[HotSwap]
 public class CompFishingSpot : ThingComp
 {
   protected IntVec3 FishingCell => parent.Position + parent.Rotation.FacingCell;
@@ -39,7 +38,7 @@ public class CompFishingSpot : ThingComp
     map.terrainGrid.SetTerrain(cell, VMF_DefOf.VMF_ImpassableFloor);
   }
 
-  public override void CompTickInterval(int delta)
+  public override void CompTickRare()
   {
     if (!ModsConfig.OdysseyActive || !parent.IsOnVehicleMapOf(out var vehicle)) return;
 

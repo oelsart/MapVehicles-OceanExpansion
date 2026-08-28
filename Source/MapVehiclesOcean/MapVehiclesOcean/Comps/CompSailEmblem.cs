@@ -117,14 +117,15 @@ public sealed class CompSailEmblem : ThingComp
     var emblemOffset = Props.DrawOffsetForRot(rot);
     if (parent.IsOnVehicleMapOf(out var vehicle))
     {
-      var angle = vehicle.ExtraAngle;
-      extraRotation += angle;
-      var offset = graphic.DrawOffset(rot);
-      var offset2 = offset.RotatedBy(angle);
-      loc += new Vector3(offset2.x - offset.x, 0f, offset2.z - offset.z);
-      emblemOffset = emblemOffset.RotatedBy(angle);
+	    var angle = vehicle.ExtraAngle;
+	    extraRotation += angle;
+	    var offset = graphic.DrawOffset(rot);
+	    var offset2 = offset.RotatedBy(angle);
+	    loc += new Vector3(offset2.x - offset.x, 0f, offset2.z - offset.z);
+	    emblemOffset = emblemOffset.RotatedBy(angle);
     }
-
+    
+    // マスクを描画
     var mesh = graphic.MeshAt(rot);
     var quaternion = graphic.QuatFromRot(rot);
     if (extraRotation != 0f)
@@ -137,13 +138,14 @@ public sealed class CompSailEmblem : ThingComp
     }
     loc += graphic.DrawOffset(rot);
     var maskMat = graphic.MatAt(rot, parent);
-    loc.y += 0.11001f;
+    loc.y += 0.00001f;
     loc.y -= loc.z * 0.00001f;
     loc.y -= loc.x * 0.000001f;
     Graphics.DrawMesh(mesh, loc, quaternion, maskMat, 0);
 
+    // エンブレムを描画
     loc += emblemOffset;
-    loc.y -= 0.000004f;
+    loc.y -= 0.00001f;
     var opacity = rot == Rot4.North ? RigGraphicComp.Opacity * 0.2f : RigGraphicComp.Opacity;
     propertyBlock.SetTexture(AdditionalShaderPropertyIDs.MainTex, emblem);
     propertyBlock.SetColor(ShaderPropertyIDs.Color, color.WithAlpha(opacity));

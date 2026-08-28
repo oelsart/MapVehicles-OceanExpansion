@@ -23,7 +23,6 @@ public class CompCrowsNest : CompScanner
   private bool TryFindIsland(Slate slate)
   {
     if (ModsConfig.OdysseyActive &&
-        Find.QuestManager.ActiveQuestsListForReading.Exists(q => q.root == MVO_DefOf.MVO_TheIsland) &&
         HiddenIslandManager.HiddenIslandTileIDs(parent.Map?.Tile.Layer) is { Count: > 0 } hashSet &&
         TileFinder.TryFindTileWithDistance(parent.Tile, 1, 9, out var tile, t => hashSet.Contains(t.tileId),
           TileFinderMode.Near))
