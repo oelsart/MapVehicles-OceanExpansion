@@ -157,4 +157,40 @@
   <MVO_Cannonball.label>砲弾</MVO_Cannonball.label>
   <MVO_Cannonball.description>大砲から発射される巨大な鉄塊です.爆発はしませんが,単一の標的に対して大きなダメージを与えることができます.</MVO_Cannonball.description>
   
+  <MVO_AncientPillar.label>古代の柱</MVO_AncientPillar.label>
+  <MVO_AncientPillar.description>明かりのついた古代の柱です.</MVO_AncientPillar.description>
+  
+  <MVO_AncientPillarSingle.label>古代の柱</MVO_AncientPillarSingle.label>
+  <MVO_AncientPillarSingle.description>明かりのついた古代の柱です.</MVO_AncientPillarSingle.description>
+  
+  <MVO_Steps.label>段差</MVO_Steps.label>
+  <MVO_Steps.description>段差です.</MVO_Steps.description>
+  
+  <MVO_GoldFloorLine.label>床ライン</MVO_GoldFloorLine.label>
+  <MVO_GoldFloorLine.description>床のラインです.</MVO_GoldFloorLine.description>
+
+  <MVO_GoldFloorLine_NAWDiagonal.label>床ライン</MVO_GoldFloorLine_NAWDiagonal.label>
+  <MVO_GoldFloorLine_NAWDiagonal.description>床のラインです.</MVO_GoldFloorLine_NAWDiagonal.description>
+  
+  <MVO_Midas.label>ミダス像</MVO_Midas.label>
+  <MVO_Midas.description>触れるものすべてを純金に変えたという,地球の揺り籠の世界の伝説的な王の姿を模して鋳造された古代の像です.金属には摩耗の兆候が一切見られず,そのうつろな目からは奇妙で強欲な引力が発せられているようです.</MVO_Midas.description>
+  <MVO_Minotaur.label>ミノタウロス像</MVO_Minotaur.label>
+  <MVO_Minotaur.description>迷宮の囚われ人であった,地球の古代神話に登場する角のある伝説の獣を模した威圧的な金の像です.磨かれた金が圧倒的な威圧感を放っており,まるで伝説の怪物がその迷路の暗い回廊のなかで今もなお落ち着きなく歩き回っているかのようです.</MVO_Minotaur.description>
+  <MVO_Athena.label>アテナ像</MVO_Athena.label>
+  <MVO_Athena.description>貫通不能な鎧をまとい,掲げた槍を振るう,地球の揺り籠の世界の揺るぎない勝利と武術戦略の古代の神を模したきらめく黄金の像です.その鋭いまなざしは戦場と弱点を見極めているかのようで,圧倒的な戦術的優位性の威圧的なオーラを放っています.</MVO_Athena.description>
+  <MVO_Poseidon.label>ポセイドン像</MVO_Poseidon.label>
+  <MVO_Poseidon.description>巨大な三叉槍を握りしめ,深海と荒れ狂う嵐を支配する地球の古代の君主を模した巨大な黄金の像です.その足元では深淵の怒りと飢えた潮騒がいまだにうごめいているかのような,重く湿った圧力を放っています.</MVO_Poseidon.description>
+  
+  <MVO_Statue.label>像</MVO_Statue.label>
+  <MVO_Statue.description>名状しがたい形状の"像". 異様な存在感を放っている.</MVO_Statue.description>
+  
+  <MVO_Lychnos.label>リュクノス</MVO_Lychnos.label>
+  <MVO_Lychnos.description>火を灯すために油が入っているボウルです.部屋の試練を完了すると火が灯るようです.</MVO_Lychnos.description>
+
+  <MVO_Bowl.label>鉢</MVO_Bowl.label>
+  <MVO_Bowl.description>シンプルな鉢です.金を載せてください.</MVO_Bowl.description>
+  
+  <MVO_Ingots.label>インゴット</MVO_Ingots.label>
+  <MVO_Ingots.description>金属のインゴットです.</MVO_Ingots.description>
+  
 </LanguageData>

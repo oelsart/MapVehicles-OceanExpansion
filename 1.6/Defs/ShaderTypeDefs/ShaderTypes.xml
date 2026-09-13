@@ -11,4 +11,9 @@
     <shaderPath>MapVehiclesOcean/SailEmblemMask</shaderPath>
   </ShaderTypeDef>
 
+  <ShaderTypeDef>
+    <defName>MVO_CutoutMultiply</defName>
+    <shaderPath>MapVehiclesOcean/CutoutMultiply</shaderPath>
+  </ShaderTypeDef>
+
 </Defs>

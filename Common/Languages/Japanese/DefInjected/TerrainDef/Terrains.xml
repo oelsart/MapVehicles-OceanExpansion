@@ -14,6 +14,8 @@
   <MVO_WoodShipwreckFloorA.description>木のフローリングです.暖かで自宅に居る気分になります.敷き詰めるのも早いですが,非常に燃えやすいです.</MVO_WoodShipwreckFloorA.description>
   <MVO_TempFloor.label>範囲外</MVO_TempFloor.label>
   <MVO_NoWaterVirtual.label>範囲外</MVO_NoWaterVirtual.label>
+  <MVO_GoldTileHard.label>黄金タイル</MVO_GoldTileHard.label>
+  <MVO_GoldTileHard.description>威圧的な贅沢として,黄金のタイルに勝るものはありません.群を抜いて高級で,群を抜いて美しく,そして人々はこう思うでしょう.あなたが本当にここに住んでいるのなら,群の抜いて偉そうな奴だと.</MVO_GoldTileHard.description>
   <MVO_WaterDeepPassable.label>海</MVO_WaterDeepPassable.label>
   <MVO_WaterDeepVirtual.label>海</MVO_WaterDeepVirtual.label>
   <MVO_WaterOceanDeepPassable.label>外洋</MVO_WaterOceanDeepPassable.label>

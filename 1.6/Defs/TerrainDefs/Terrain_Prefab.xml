@@ -16,4 +16,25 @@
     </filthAcceptanceMask>
   </TerrainDef>
 
+  <TerrainDef ParentName="TileMetalBase">
+    <defName>MVO_GoldTileHard</defName>
+    <label>gold tile</label>
+    <renderPrecedence>399</renderPrecedence>
+    <description>For overbearing extravagance, nothing beats gold tiles. They are exceptionally expensive, and exceptionally beautiful, and people will think you're exceptionally snobbish if you actually live on them.</description>
+    <color>(0.65, 0.65, 0.35)</color>
+    <statBases>
+      <Beauty>11</Beauty>
+      <WorkToBuild>800</WorkToBuild>
+      <Cleanliness>0.2</Cleanliness>
+      <CleaningTimeFactor>0.6</CleaningTimeFactor>
+    </statBases>
+    <costList>
+      <Gold>70</Gold>
+    </costList>
+    <designationCategory />
+    <tags>
+      <li>FineFloor</li>
+    </tags>
+  </TerrainDef>
+  
 </Defs>

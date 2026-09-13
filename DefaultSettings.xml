@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="ut-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <DefaultSettings>
   <NAW_DefaultWall>
     <enabled>true</enabled>
@@ -494,5 +494,72 @@
     <SouthVertsRepeat IsNull="True" />
     <TopFillerUVs IsNull="True" />
   </Fence_NAWDiagonal>
+  
+  <MVO_GoldFloorLine_NAWDiagonal>
+    <enabled>True</enabled>
+    <noChangeLinkState>True</noChangeLinkState>
+    <allowVShaped>True</allowVShaped>
+    <LineUVs_UVs>
+      <UVs>
+        <li>(0, 0.5, 0)</li>
+        <li>(0, 0.5, 0)</li>
+        <li>(1, 0.5, 0)</li>
+        <li>(1, 0.5, 0)</li>
+      </UVs>
+    </LineUVs_UVs>
+    <NorthVerts_Verts>
+      <linkUVs>LineUVs</linkUVs>
+      <direction>North</direction>
+      <Verts>
+        <li>(-0.35, 0, 0.35)</li>
+        <li>(0.65, 0.01, 1.35)</li>
+        <li>(1.35, 0.01, 0.65)</li>
+        <li>(0.35, 0, -0.35)</li>
+      </Verts>
+    </NorthVerts_Verts>
+    <NorthVertsFinish_Verts>
+      <linkUVs>LineUVs</linkUVs>
+      <direction>NorthFinish</direction>
+      <Verts>
+        <li>(-0.35, 0, 0.35)</li>
+        <li>(0.65, 0.01, 1.35)</li>
+        <li>(1.35, 0.01, 0.65)</li>
+        <li>(0.35, 0, -0.35)</li>
+      </Verts>
+    </NorthVertsFinish_Verts>
+    <SouthVerts_Verts>
+      <linkUVs>LineUVs</linkUVs>
+      <direction>South</direction>
+      <Verts>
+        <li>(-0.35, 0, 0.35)</li>
+        <li>(0.65, 0.01, 1.35)</li>
+        <li>(1.35, 0.01, 0.65)</li>
+        <li>(0.35, 0, -0.35)</li>
+      </Verts>
+    </SouthVerts_Verts>
+    <SouthVertsFinish_Verts>
+      <linkUVs>LineUVs</linkUVs>
+      <direction>SouthFinish</direction>
+      <Verts>
+        <li>(-0.35, 0, 0.35)</li>
+        <li>(0.65, 0.01, 1.35)</li>
+        <li>(1.35, 0.01, 0.65)</li>
+        <li>(0.35, 0, -0.35)</li>
+      </Verts>
+    </SouthVertsFinish_Verts>
+    <BorderFillerUVs IsNull="True" />
+    <NorthUVs IsNull="True" />
+    <NorthUVsFinish IsNull="True" />
+    <NorthVertsFiller IsNull="True" />
+    <NorthVertsFinishBorder IsNull="True" />
+    <NorthVertsRepeat IsNull="True" />
+    <SouthUVs IsNull="True" />
+    <SouthUVsFinish IsNull="True" />
+    <SouthVertsFiller IsNull="True" />
+    <SouthVertsRepeat IsNull="True" />
+    <TopFillerUVs IsNull="True" />
+    <NorthVertsBorder IsNull="True" />
+    <SouthVertsBorder IsNull="True" />
+  </MVO_GoldFloorLine_NAWDiagonal>
 
 </DefaultSettings>

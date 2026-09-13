@@ -1,0 +1,296 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  
+  <DesignationCategoryDef>
+    <defName>MVO_Dev</defName>
+    <label>MVO_Dev</label>
+  </DesignationCategoryDef>
+  
+  <ThingDef Name="MVO_AncientPropsBase" ParentName="BuildingBase" Abstract="True">
+    <designationCategory>MVO_Dev</designationCategory>
+  </ThingDef>
+  
+  <ThingDef Name="MVO_AncientPillar" ParentName="MVO_AncientPropsBase">
+    <defName>MVO_AncientPillar</defName>
+    <label>ancient pillar</label>
+    <description>an ancient pillar with a burning light.</description>
+    <graphicData>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <texPath>MapVehiclesOcean/Things/Ancient/AncientPillar/AncientPillar</texPath>
+      <drawSize>1.5</drawSize>
+      <color>(255,235,122)</color>
+      <drawOffsetNorth>(0,0,-0.4)</drawOffsetNorth>
+      <drawOffsetEast>(-0.25,0,0)</drawOffsetEast>
+      <drawOffsetWest>(0.25,0,0)</drawOffsetWest>
+      <drawOffsetSouth>(0,0,0.4)</drawOffsetSouth>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>200</MaxHitPoints>
+      <Beauty>5</Beauty>
+    </statBases>
+    <fillPercent>0.5</fillPercent>
+    <passability>PassThroughOnly</passability>
+    <canOverlapZones>false</canOverlapZones>
+    <tickerType>Normal</tickerType>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <comps>
+      <li Class="CompProperties_FireOverlay">
+        <fireSize>0.3</fireSize>
+        <finalFireSize>0.5</finalFireSize>
+        <fireGrowthDurationTicks>150</fireGrowthDurationTicks>
+        <offsetNorth>(0,0,10000)</offsetNorth>
+        <offsetEast>(0.25,0,0.3)</offsetEast>
+        <offsetWest>(-0.25,0,0.3)</offsetWest>
+        <offsetSouth>(0,0,0.1)</offsetSouth>
+      </li>
+      <li Class="CompProperties_Glower">
+        <glowRadius>10</glowRadius>
+        <glowColor>(184,136,83,0)</glowColor>
+      </li>
+    </comps>
+  </ThingDef>
+  
+  <ThingDef ParentName="MVO_AncientPillar">
+    <defName>MVO_AncientPillarSingle</defName>
+    <graphicData Inherit="False">
+      <graphicClass>Graphic_Single</graphicClass>
+      <texPath>MapVehiclesOcean/Things/Ancient/AncientPillar/AncientPillar</texPath>
+      <drawSize>1.5</drawSize>
+      <color>(255,235,122)</color>
+      <drawOffset>(0,0,0.1)</drawOffset>
+    </graphicData>
+    <rotatable>false</rotatable>
+    <comps Inherit="False">
+      <li Class="CompProperties_FireOverlay">
+        <fireSize>0.3</fireSize>
+        <finalFireSize>0.5</finalFireSize>
+        <fireGrowthDurationTicks>150</fireGrowthDurationTicks>
+        <offset>(0,0,0.08)</offset>
+      </li>
+      <li Class="CompProperties_Glower">
+        <glowRadius>10</glowRadius>
+        <glowColor>(184,136,83,0)</glowColor>
+      </li>
+    </comps>
+  </ThingDef>
+  
+  <ThingDef Name="MVO_Steps" ParentName="MVO_AncientPropsBase">
+    <defName>MVO_Steps</defName>
+    <label>steps</label>
+    <description>the steps.</description>
+    <graphicData>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <texPath>MapVehiclesOcean/Things/Ancient/Steps/Steps</texPath>
+      <color>(150,140,130)</color>
+      <shaderType>MVO_CutoutMultiply</shaderType>
+    </graphicData>
+    <altitudeLayer>FloorCoverings</altitudeLayer>
+    <pathCost>0</pathCost>
+    <selectable>false</selectable>
+    <useHitPoints>false</useHitPoints>
+    <canOverlapZones>true</canOverlapZones>
+  </ThingDef>
+  
+  <ThingDef ParentName="MVO_Steps">
+    <defName>MVO_StepsCorner</defName>
+    <label>steps corner</label>
+    <graphicData>
+      <texPath>MapVehiclesOcean/Things/Ancient/Steps/StepsCorner</texPath>
+    </graphicData>
+  </ThingDef>
+  
+  <ThingDef Name="MVO_GoldFloorLine" ParentName="MVO_AncientPropsBase">
+    <defName>MVO_GoldFloorLine</defName>
+    <label>floor line</label>
+    <description>the floor line.</description>
+    <graphicData>
+      <graphicClass>Graphic_Single</graphicClass>
+      <texPath>MapVehiclesOcean/Things/Ancient/GoldFloorLine/GoldFloorLine_Atlas</texPath>
+      <linkType>Basic</linkType>
+      <linkFlags>
+        <li>Custom7</li>
+      </linkFlags>
+      <damageData>
+        <rect>(0,0.28,1,0.37)</rect>
+      </damageData>
+    </graphicData>
+    <altitudeLayer>Conduits</altitudeLayer>
+    <pathCost>0</pathCost>
+    <selectable>false</selectable>
+    <useHitPoints>false</useHitPoints>
+    <canOverlapZones>true</canOverlapZones>
+    <uiIconPath>MapVehiclesOcean/Things/Ancient/GoldFloorLine/GoldFloorLine_Atlas</uiIconPath>
+    <building>
+      <isEdifice>false</isEdifice>
+    </building>
+  </ThingDef>
+  
+  <ThingDef ParentName="MVO_GoldFloorLine">
+    <defName>MVO_GoldFloorLine_NAWDiagonal</defName>
+    <label>diagonal floor line</label>
+    <graphicData>
+      <linkType>217</linkType>
+    </graphicData>
+  </ThingDef>
+  
+  <ThingDef Name="MVO_StatueBase" ParentName="MVO_AncientPropsBase" Abstract="True">
+    <graphicData>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(3,6)</drawSize>
+      <drawOffset>(0,0,1.5)</drawOffset>
+    </graphicData>
+    <castEdgeShadows>true</castEdgeShadows>
+    <size>(3,3)</size>
+    <rotatable>false</rotatable>
+    <passability>Impassable</passability>
+    <fillPercent>0.4</fillPercent>
+    <disableImpassableShotOverConfigError>true</disableImpassableShotOverConfigError>
+    <canOverlapZones>false</canOverlapZones>
+    <statBases>
+      <MaxHitPoints>500</MaxHitPoints>
+      <Beauty>10</Beauty>
+    </statBases>
+  </ThingDef>
+  
+  <ThingDef ParentName="MVO_StatueBase">
+    <defName>MVO_Midas</defName>
+    <label>statue of Midas</label>
+    <description>An ancient monument forged in the likeness of a legendary king from Earth's cradle worlds, who turned everything he touched into solid gold. The metal shows no sign of wear, and a strange, avaricious pull seems to emanate from its hollow eyes.</description>
+    <graphicData>
+      <texPath>MapVehiclesOcean/Things/Ancient/Midas</texPath>
+    </graphicData>
+  </ThingDef>
+
+  <ThingDef ParentName="MVO_StatueBase">
+    <defName>MVO_Minotaur</defName>
+    <label>statue of Minotaur</label>
+    <description>A menacing gold effigy of a legendary horned beast from ancient terrestrial mythology, trapped at the heart of a labyrinthine prison. The polished gold radiates an oppressive hostility, as if the legendary monster still paces restlessly within the dark corridors of its maze.</description>
+    <graphicData>
+      <texPath>MapVehiclesOcean/Things/Ancient/Minotaur</texPath>
+    </graphicData>
+  </ThingDef>
+
+  <ThingDef ParentName="MVO_StatueBase">
+    <defName>MVO_Athena</defName>
+    <label>statue of Athena</label>
+    <description>A gleaming golden effigy honoring an ancient terrestrial deity of martial strategy and unyielding victory, clad in impenetrable plate and brandishing a raised spear. Its piercing gaze seems to calculate battlefields and weaknesses, radiating an intimidating aura of tactical supremacy.</description>
+    <graphicData>
+      <texPath>MapVehiclesOcean/Things/Ancient/Athena</texPath>
+    </graphicData>
+  </ThingDef>
+
+  <ThingDef ParentName="MVO_StatueBase">
+    <defName>MVO_Poseidon</defName>
+    <label>statue of Poseidon</label>
+    <description>A colossal golden effigy depicting an ancient terrestrial sovereign of the deep seas and roaring tempests, gripping a massive trident. The statue exudes a heavy, damp pressure, as if the wrath of the abyssal depths and hungry tides still stirs beneath its feet.</description>
+    <graphicData>
+      <texPath>MapVehiclesOcean/Things/Ancient/Poseidon</texPath>
+    </graphicData>
+  </ThingDef>
+
+  <ThingDef ParentName="MVO_AncientPropsBase">
+    <defName>MVO_Statue</defName>
+    <label>statue</label>
+    <description>A "statue" with an indescribable shape. It exudes a strange presence.</description>
+    <graphicData>
+      <graphicClass>Graphic_Single</graphicClass>
+      <texPath>MapVehiclesOcean/Things/Ancient/Statue</texPath>
+      <drawSize>(4.2,8.4)</drawSize>
+      <drawOffset>(0,0,-0.05)</drawOffset>
+    </graphicData>
+    <useHitPoints>false</useHitPoints>
+    <destroyable>false</destroyable>
+    <passability>Impassable</passability>
+    <fillPercent>0.2</fillPercent>
+    <disableImpassableShotOverConfigError>true</disableImpassableShotOverConfigError>
+    <canOverlapZones>false</canOverlapZones>
+    <size>(4,4)</size>
+    <rotatable>false</rotatable>
+  </ThingDef>
+
+  <ThingDef ParentName="MVO_AncientPropsBase">
+    <defName>MVO_Lychnos</defName>
+    <label>lychnos</label>
+    <description>A bowl filled with oil used to light a fire. It seems the fire is lit when completing the room's trial.</description>
+    <graphicData>
+      <graphicClass>Graphic_Single</graphicClass>
+      <texPath>MapVehiclesOcean/Things/Ancient/Lychnos</texPath>
+      <drawSize>(1.1,2.2)</drawSize>
+    </graphicData>
+    <useHitPoints>false</useHitPoints>
+    <destroyable>false</destroyable>
+    <passability>Impassable</passability>
+    <fillPercent>0.2</fillPercent>
+    <disableImpassableShotOverConfigError>true</disableImpassableShotOverConfigError>
+    <canOverlapZones>false</canOverlapZones>
+    <size>(1,1)</size>
+    <rotatable>false</rotatable>
+  </ThingDef>
+
+  <ThingDef ParentName="MVO_AncientPropsBase">
+    <defName>MVO_Bowl</defName>
+    <label>bowl</label>
+    <description>A simple bowl. Put some gold on it.</description>
+    <thingClass>Building_Storage</thingClass>
+    <graphicData>
+      <graphicClass>Graphic_Single</graphicClass>
+      <texPath>MapVehiclesOcean/Things/Ancient/Bowl</texPath>
+      <drawSize>1.15</drawSize>
+    </graphicData>
+    <useHitPoints>false</useHitPoints>
+    <destroyable>false</destroyable>
+    <canOverlapZones>false</canOverlapZones>
+    <size>(1,1)</size>
+    <rotatable>false</rotatable>
+    <building>
+      <storageGroupTag>Shelf</storageGroupTag>
+      <maxItemsInCell>1</maxItemsInCell>
+      <fixedStorageSettings>
+        <filter>
+          <disallowNotEverStorable>true</disallowNotEverStorable>
+          <thingDefs>
+            <li>Gold</li>
+          </thingDefs>
+        </filter>
+      </fixedStorageSettings>
+      <defaultStorageSettings>
+        <priority>Unstored</priority>
+        <filter>
+          <thingDefs>
+            <li>Gold</li>
+          </thingDefs>
+        </filter>
+      </defaultStorageSettings>
+    </building>
+    <inspectorTabs>
+      <li>ITab_Storage</li>
+    </inspectorTabs>
+    <surfaceType>Item</surfaceType>
+  </ThingDef>
+  
+  <ThingDef ParentName="MVO_AncientPropsBase">
+    <defName>MVO_Ingots</defName>
+    <label>ingots</label>
+    <description>Ingots of metal.</description>
+    <graphicData>
+      <graphicClass>Graphic_Single</graphicClass>
+      <texPath>MapVehiclesOcean/Things/Ancient/Ingots</texPath>
+      <drawSize>0.6</drawSize>
+      <drawOffset>(0,0,0.25)</drawOffset>
+    </graphicData>
+    <altitudeLayer>BuildingBelowTop</altitudeLayer>
+    <useHitPoints>false</useHitPoints>
+    <destroyable>false</destroyable>
+    <selectable>false</selectable>
+    <size>(1,1)</size>
+    <rotatable>false</rotatable>
+    <stuffCategories>
+      <li>Metallic</li>
+    </stuffCategories>
+    <costStuffCount>10</costStuffCount>
+    <building>
+      <isEdifice>false</isEdifice>
+    </building>
+  </ThingDef>
+
+</Defs>
