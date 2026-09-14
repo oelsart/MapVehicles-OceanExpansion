@@ -11,8 +11,7 @@ public class GenStep_IslandTreasure : GenStep
 
   public override void Generate(Map map, GenStepParams parms)
   {
-    var elevation = MapGenerator.Elevation;
-    var top = map.AllCells.MaxBy(c => elevation[c]);
+    var top = map.AllCells.MaxBy(c => MapGenerator.Elevation[c]);
 
     var quest = Find.QuestManager.ActiveQuestsListForReading.Find(q => q.root == MVO_DefOf.MVO_TheIsland);
     if (quest is not null)

@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <SitePartDef>
+    <defName>MVO_Dungeon</defName>
+    <label>dungeon</label>
+    <description>An ancient, enclosed structure filled with unknown dangers and potential riches.</description>
+    <siteTexture>World/WorldObjects/Sites/GenericSite</siteTexture>
+    <expandingIconTexture>World/WorldObjects/Expanding/Sites/ItemStash</expandingIconTexture>
+    <handlesWorldObjectTimeoutInspectString>true</handlesWorldObjectTimeoutInspectString>
+    <tags>
+      <li>MVO_TheIsland</li>
+    </tags>
+  </SitePartDef>
+
+  <GenStepDef>
+    <defName>MVO_Dungeon</defName>
+    <linkWithSite>MVO_Dungeon</linkWithSite>
+    <order>400</order>
+    <genStep Class="MapVehiclesOcean.GenStep_Dungeon">
+      <prefabDef>MVO_Dungeon</prefabDef>
+    </genStep>
+  </GenStepDef>
+  
+</Defs>

@@ -79,7 +79,7 @@
                       <storeAs>sitePartDefs</storeAs>
                       <sitePartsTags>
                         <li>
-                          <tag>MVO_IslandHumanTraces</tag>
+                          <tag>MVO_TheIsland</tag>
                         </li>
                       </sitePartsTags>
                     </li>
@@ -122,9 +122,20 @@
             </nodes>
           </node>
         </li>
+        
+        <li Class="QuestNode_AllSignals">
+          <inSignals>
+            <li>MVO_Lychnos_Midas.Activated</li>
+            <li>MVO_Lychnos_Minotaur.Activated</li>
+            <li>MVO_Lychnos_Athena.Activated</li>
+            <li>MVO_Lychnos_Poseidon.Activated</li>
+          </inSignals>
+          <outSignals>
+            <li>AllTrialPassed</li>
+          </outSignals>
+        </li>
 
         <!-- Ending -->
-
         <li Class="QuestNode_End">
           <inSignal>MVO_TheIsland.Clear</inSignal>
           <outcome>Success</outcome>

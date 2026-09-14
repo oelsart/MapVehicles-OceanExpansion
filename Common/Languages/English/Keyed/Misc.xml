@@ -14,5 +14,8 @@
   <MVO_JobReport_WatchingWalkingPlank>watching others walk on the gangplank.</MVO_JobReport_WatchingWalkingPlank>
   
   <MVO_Castaway_GameStartDialog>Upon waking up, I found myself on a raft. There is nothing but ocean all around me, and I can’t remember a thing. Blood is flowing from my head… I need to stop the bleeding first.</MVO_Castaway_GameStartDialog>
+  
+  <MVO_Midas_NotFulfilled>The amount of gold does not meet the requirement. ({0}/3000)</MVO_Midas_NotFulfilled>
+  <MVO_Athena_NotDefeated>There are still hostile soldiers in the room.</MVO_Athena_NotDefeated>
 
 </LanguageData>

@@ -1,9 +1,11 @@
-﻿using RimWorld;
+﻿using JetBrains.Annotations;
+using RimWorld;
 using RimWorld.QuestGen;
 using Verse;
 
 namespace MapVehiclesOcean;
 
+[UsedImplicitly(ImplicitUseTargetFlags.WithMembers)]
 public class QuestNode_SignalCount : QuestNode
 {
   [NoTranslate] [TranslationHandle(Priority = 100)]

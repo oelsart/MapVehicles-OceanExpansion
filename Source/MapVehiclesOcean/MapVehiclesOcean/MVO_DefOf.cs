@@ -22,6 +22,22 @@ public static class MVO_DefOf
 
   public static ThingDef MVO_Filth_TallyMarks;
 
+  public static ThingDef MVO_Bowl;
+
+  public static ThingDef MVO_Lychnos_Midas;
+
+  public static ThingDef MVO_Lychnos_Minotaur;
+
+  public static ThingDef MVO_Lychnos_Athena;
+
+  public static ThingDef MVO_Lychnos_Poseidon;
+
+  public static ThingDef MVO_SignalAction_SpawnThing;
+
+  public static ThingDef MVO_DungeonStairDown;
+
+  public static PawnKindDef MVO_Shark;
+
   public static ThingCategoryDef MVO_Techprints;
 
   public static SoundDef MVO_WaterSplash;

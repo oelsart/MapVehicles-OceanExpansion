@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
+  
   <MapGeneratorDef>
     <defName>MVO_MapGeneratorSea</defName>
     <genSteps>
@@ -18,4 +19,5 @@
     <order>200</order>
     <genStep Class="MapVehiclesOcean.GenStep_SimpleTerrain"/>
   </GenStepDef>
+  
 </Defs>

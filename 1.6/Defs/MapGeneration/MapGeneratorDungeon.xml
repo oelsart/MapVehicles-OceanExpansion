@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <MapGeneratorDef>
+    <defName>MVO_MapGeneratorDungeon</defName>
+    <genSteps>
+      <li>MVO_SimpleTerrain</li>
+      <li>MVO_DungeonDeep</li>
+    </genSteps>
+  </MapGeneratorDef>
+
+  <GenStepDef>
+    <defName>MVO_DungeonDeep</defName>
+    <order>400</order>
+    <genStep Class="MapVehiclesOcean.GenStep_Dungeon">
+      <prefabDef>MVO_DungeonDeep</prefabDef>
+    </genStep>
+  </GenStepDef>
+
+</Defs>

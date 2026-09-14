@@ -183,14 +183,57 @@
   
   <MVO_Statue.label>像</MVO_Statue.label>
   <MVO_Statue.description>名状しがたい形状の"像". 異様な存在感を放っている.</MVO_Statue.description>
-  
-  <MVO_Lychnos.label>リュクノス</MVO_Lychnos.label>
-  <MVO_Lychnos.description>火を灯すために油が入っているボウルです.部屋の試練を完了すると火が灯るようです.</MVO_Lychnos.description>
 
   <MVO_Bowl.label>鉢</MVO_Bowl.label>
   <MVO_Bowl.description>シンプルな鉢です.金を載せてください.</MVO_Bowl.description>
   
   <MVO_Ingots.label>インゴット</MVO_Ingots.label>
   <MVO_Ingots.description>金属のインゴットです.</MVO_Ingots.description>
+
+  <MVO_Lychnos_Midas.label>リュクノス (ミダス)</MVO_Lychnos_Midas.label>
+  <MVO_Lychnos_Midas.description>火を灯すために油が入っているボウルです.部屋の試練を完了すると火が灯るようです.</MVO_Lychnos_Midas.description>
+  <MVO_Lychnos_Midas.comps.CompInteractableQuest.jobString>火を灯す</MVO_Lychnos_Midas.comps.CompInteractableQuest.jobString>
+  <MVO_Lychnos_Midas.comps.CompInteractableQuest.activateLabelString>火を灯す...</MVO_Lychnos_Midas.comps.CompInteractableQuest.activateLabelString>
+  <MVO_Lychnos_Midas.comps.CompInteractableQuest.activateDescString>リュクノスに火を灯す.</MVO_Lychnos_Midas.comps.CompInteractableQuest.activateDescString>
+  <MVO_Lychnos_Midas.comps.CompInteractableQuest.guiLabelString>火を灯す人物を選択</MVO_Lychnos_Midas.comps.CompInteractableQuest.guiLabelString>
+  <MVO_Lychnos_Midas.comps.CompInteractableQuest.inspectString>入植者によって火を灯すことができます.</MVO_Lychnos_Midas.comps.CompInteractableQuest.inspectString>
+  <MVO_Lychnos_Midas.comps.CompInteractableQuest.descPartActive>試練は果たされた.</MVO_Lychnos_Midas.comps.CompInteractableQuest.descPartActive>
+  <MVO_Lychnos_Midas.comps.CompInteractableQuest.descPartInactive>この部屋の試練は,一定量の金塊を鉢に載せることです.</MVO_Lychnos_Midas.comps.CompInteractableQuest.descPartInactive>
+  
+  <MVO_Lychnos_Minotaur.label>リュクノス (ミノタウロス)</MVO_Lychnos_Minotaur.label>
+  <MVO_Lychnos_Minotaur.description>火を灯すために油が入っているボウルです.部屋の試練を完了すると火が灯るようです.</MVO_Lychnos_Minotaur.description>
+  <MVO_Lychnos_Minotaur.comps.CompInteractableQuest.jobString>火を灯す</MVO_Lychnos_Minotaur.comps.CompInteractableQuest.jobString>
+  <MVO_Lychnos_Minotaur.comps.CompInteractableQuest.activateLabelString>火を灯す...</MVO_Lychnos_Minotaur.comps.CompInteractableQuest.activateLabelString>
+  <MVO_Lychnos_Minotaur.comps.CompInteractableQuest.activateDescString>リュクノスに火を灯す.</MVO_Lychnos_Minotaur.comps.CompInteractableQuest.activateDescString>
+  <MVO_Lychnos_Minotaur.comps.CompInteractableQuest.guiLabelString>火を灯す人物を選択</MVO_Lychnos_Minotaur.comps.CompInteractableQuest.guiLabelString>
+  <MVO_Lychnos_Minotaur.comps.CompInteractableQuest.inspectString>入植者によって火を灯すことができます.</MVO_Lychnos_Minotaur.comps.CompInteractableQuest.inspectString>
+  <MVO_Lychnos_Minotaur.comps.CompInteractableQuest.descPartActive>試練は果たされた.</MVO_Lychnos_Minotaur.comps.CompInteractableQuest.descPartActive>
+  <MVO_Lychnos_Minotaur.comps.CompInteractableQuest.descPartInactive>この部屋の試練は,迷宮の最深部に到達することです.</MVO_Lychnos_Minotaur.comps.CompInteractableQuest.descPartInactive>
+
+  <MVO_Lychnos_Athena.label>リュクノス (アテナ)</MVO_Lychnos_Athena.label>
+  <MVO_Lychnos_Athena.description>火を灯すために油が入っているボウルです.部屋の試練を完了すると火が灯るようです.</MVO_Lychnos_Athena.description>
+  <MVO_Lychnos_Athena.comps.CompInteractableQuest.jobString>火を灯す</MVO_Lychnos_Athena.comps.CompInteractableQuest.jobString>
+  <MVO_Lychnos_Athena.comps.CompInteractableQuest.activateLabelString>火を灯す...</MVO_Lychnos_Athena.comps.CompInteractableQuest.activateLabelString>
+  <MVO_Lychnos_Athena.comps.CompInteractableQuest.activateDescString>リュクノスに火を灯す.</MVO_Lychnos_Athena.comps.CompInteractableQuest.activateDescString>
+  <MVO_Lychnos_Athena.comps.CompInteractableQuest.guiLabelString>火を灯す人物を選択</MVO_Lychnos_Athena.comps.CompInteractableQuest.guiLabelString>
+  <MVO_Lychnos_Athena.comps.CompInteractableQuest.inspectString>入植者によって火を灯すことができます.</MVO_Lychnos_Athena.comps.CompInteractableQuest.inspectString>
+  <MVO_Lychnos_Athena.comps.CompInteractableQuest.descPartActive>試練は果たされた.</MVO_Lychnos_Athena.comps.CompInteractableQuest.descPartActive>
+  <MVO_Lychnos_Athena.comps.CompInteractableQuest.descPartInactive>この部屋の試練は,古代の兵士たちを全滅させることです.</MVO_Lychnos_Athena.comps.CompInteractableQuest.descPartInactive>
+
+  <MVO_Lychnos_Poseidon.label>リュクノス (ポセイドン)</MVO_Lychnos_Poseidon.label>
+  <MVO_Lychnos_Poseidon.description>火を灯すために油が入っているボウルです.部屋の試練を完了すると火が灯るようです.</MVO_Lychnos_Poseidon.description>
+  <MVO_Lychnos_Poseidon.comps.CompInteractableQuest.jobString>火を灯す</MVO_Lychnos_Poseidon.comps.CompInteractableQuest.jobString>
+  <MVO_Lychnos_Poseidon.comps.CompInteractableQuest.activateLabelString>火を灯す...</MVO_Lychnos_Poseidon.comps.CompInteractableQuest.activateLabelString>
+  <MVO_Lychnos_Poseidon.comps.CompInteractableQuest.activateDescString>リュクノスに火を灯す.</MVO_Lychnos_Poseidon.comps.CompInteractableQuest.activateDescString>
+  <MVO_Lychnos_Poseidon.comps.CompInteractableQuest.guiLabelString>火を灯す人物を選択</MVO_Lychnos_Poseidon.comps.CompInteractableQuest.guiLabelString>
+  <MVO_Lychnos_Poseidon.comps.CompInteractableQuest.inspectString>入植者によって火を灯すことができます.</MVO_Lychnos_Poseidon.comps.CompInteractableQuest.inspectString>
+  <MVO_Lychnos_Poseidon.comps.CompInteractableQuest.descPartActive>試練は果たされた.</MVO_Lychnos_Poseidon.comps.CompInteractableQuest.descPartActive>
+  <MVO_Lychnos_Poseidon.comps.CompInteractableQuest.descPartInactive>この部屋の試練は,サメで満たされた海を泳ぎ渡ることです.</MVO_Lychnos_Poseidon.comps.CompInteractableQuest.descPartInactive>
+  
+  <MVO_DungeonStairDown.label>階段</MVO_DungeonStairDown.label>
+  <MVO_DungeonStairDown.description>ダンジョンの最奥へと続く階段です.</MVO_DungeonStairDown.description>
+  
+  <MVO_DungeonStairUp.label>階段</MVO_DungeonStairUp.label>
+  <MVO_DungeonStairUp.description>ダンジョンの地上階へ戻るための階段です.</MVO_DungeonStairUp.description>
   
 </LanguageData>

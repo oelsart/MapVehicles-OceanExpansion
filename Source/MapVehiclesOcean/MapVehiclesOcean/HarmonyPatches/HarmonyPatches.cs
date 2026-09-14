@@ -100,7 +100,7 @@ public static class Patch_MapGenerator_GenerateMap
 {
   public static void Prefix(MapParent parent, ref MapGeneratorDef mapGenerator)
   {
-    if (parent.Tile.Tile.WaterCovered &&
+    if (parent is { Tile.Tile.WaterCovered: true } &&
         (mapGenerator == MapGeneratorDefOf.Encounter || mapGenerator == MapGeneratorDefOf.Base_Player))
       mapGenerator = MVO_DefOf.MVO_MapGeneratorSea;
   }

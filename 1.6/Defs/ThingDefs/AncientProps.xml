@@ -8,6 +8,9 @@
   
   <ThingDef Name="MVO_AncientPropsBase" ParentName="BuildingBase" Abstract="True">
     <designationCategory>MVO_Dev</designationCategory>
+    <building>
+      <claimable>false</claimable>
+    </building>
   </ThingDef>
   
   <ThingDef Name="MVO_AncientPillar" ParentName="MVO_AncientPropsBase">
@@ -33,6 +36,7 @@
     <canOverlapZones>false</canOverlapZones>
     <tickerType>Normal</tickerType>
     <drawerType>MapMeshAndRealTime</drawerType>
+    <holdsRoof>true</holdsRoof>
     <comps>
       <li Class="CompProperties_FireOverlay">
         <fireSize>0.3</fireSize>
@@ -92,10 +96,18 @@
   </ThingDef>
   
   <ThingDef ParentName="MVO_Steps">
-    <defName>MVO_StepsCorner</defName>
-    <label>steps corner</label>
+    <defName>MVO_StepsCornerA</defName>
+    <label>steps corner A</label>
     <graphicData>
-      <texPath>MapVehiclesOcean/Things/Ancient/Steps/StepsCorner</texPath>
+      <texPath>MapVehiclesOcean/Things/Ancient/Steps/StepsCornerA</texPath>
+    </graphicData>
+  </ThingDef>
+
+  <ThingDef ParentName="MVO_Steps">
+    <defName>MVO_StepsCornerB</defName>
+    <label>steps corner B</label>
+    <graphicData>
+      <texPath>MapVehiclesOcean/Things/Ancient/Steps/StepsCornerB</texPath>
     </graphicData>
   </ThingDef>
   
@@ -198,6 +210,7 @@
       <drawSize>(4.2,8.4)</drawSize>
       <drawOffset>(0,0,-0.05)</drawOffset>
     </graphicData>
+    <drawerType>MapMeshAndRealTime</drawerType>
     <useHitPoints>false</useHitPoints>
     <destroyable>false</destroyable>
     <passability>Impassable</passability>
@@ -206,25 +219,41 @@
     <canOverlapZones>false</canOverlapZones>
     <size>(4,4)</size>
     <rotatable>false</rotatable>
-  </ThingDef>
-
-  <ThingDef ParentName="MVO_AncientPropsBase">
-    <defName>MVO_Lychnos</defName>
-    <label>lychnos</label>
-    <description>A bowl filled with oil used to light a fire. It seems the fire is lit when completing the room's trial.</description>
-    <graphicData>
-      <graphicClass>Graphic_Single</graphicClass>
-      <texPath>MapVehiclesOcean/Things/Ancient/Lychnos</texPath>
-      <drawSize>(1.1,2.2)</drawSize>
-    </graphicData>
-    <useHitPoints>false</useHitPoints>
-    <destroyable>false</destroyable>
-    <passability>Impassable</passability>
-    <fillPercent>0.2</fillPercent>
-    <disableImpassableShotOverConfigError>true</disableImpassableShotOverConfigError>
-    <canOverlapZones>false</canOverlapZones>
-    <size>(1,1)</size>
-    <rotatable>false</rotatable>
+    <receivesSignals>true</receivesSignals>
+    <comps>
+      <li Class="MapVehiclesOcean.CompProperties_FireOverlayQuest">
+        <questTag>MVO_Lychnos_Midas.Activated</questTag>
+        <fireSize>0.75</fireSize>
+        <finalFireSize>1.25</finalFireSize>
+        <fireGrowthDurationTicks>150</fireGrowthDurationTicks>
+        <offset>(1.5,0,-1)</offset>
+      </li>
+      <li Class="MapVehiclesOcean.CompProperties_FireOverlayQuest">
+        <questTag>MVO_Lychnos_Minotaur.Activated</questTag>
+        <fireSize>0.75</fireSize>
+        <finalFireSize>1.25</finalFireSize>
+        <fireGrowthDurationTicks>150</fireGrowthDurationTicks>
+        <offset>(-1.5,0,-1)</offset>
+      </li>
+      <li Class="MapVehiclesOcean.CompProperties_FireOverlayQuest">
+        <questTag>MVO_Lychnos_Athena.Activated</questTag>
+        <fireSize>0.75</fireSize>
+        <finalFireSize>1.25</finalFireSize>
+        <fireGrowthDurationTicks>150</fireGrowthDurationTicks>
+        <offset>(1.5,0,2)</offset>
+      </li>
+      <li Class="MapVehiclesOcean.CompProperties_FireOverlayQuest">
+        <questTag>MVO_Lychnos_Poseidon.Activated</questTag>
+        <fireSize>0.75</fireSize>
+        <finalFireSize>1.25</finalFireSize>
+        <fireGrowthDurationTicks>150</fireGrowthDurationTicks>
+        <offset>(-1.5,0,2)</offset>
+      </li>
+      <li Class="CompProperties_Glower">
+        <glowRadius>20</glowRadius>
+        <overlightRadius>15</overlightRadius>
+      </li>
+    </comps>
   </ThingDef>
 
   <ThingDef ParentName="MVO_AncientPropsBase">
@@ -291,6 +320,207 @@
     <building>
       <isEdifice>false</isEdifice>
     </building>
+  </ThingDef>
+
+  <ThingDef Name="MVO_LychnosBase" ParentName="MVO_AncientPropsBase" Abstract="True">
+    <description>A bowl filled with oil used to light a fire. It seems the fire is lit when completing the room's trial.</description>
+    <graphicData>
+      <graphicClass>Graphic_Single</graphicClass>
+      <texPath>MapVehiclesOcean/Things/Ancient/Lychnos</texPath>
+      <drawSize>(1.1,2.2)</drawSize>
+    </graphicData>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <useHitPoints>false</useHitPoints>
+    <destroyable>false</destroyable>
+    <passability>Impassable</passability>
+    <fillPercent>0.2</fillPercent>
+    <disableImpassableShotOverConfigError>true</disableImpassableShotOverConfigError>
+    <canOverlapZones>false</canOverlapZones>
+    <size>(1,1)</size>
+    <rotatable>false</rotatable>
+    <receivesSignals>true</receivesSignals>
+    <comps>
+      <li Class="CompProperties_Glower">
+        <glowRadius>10</glowRadius>
+        <glowColor>(184,136,83,0)</glowColor>
+      </li>
+    </comps>
+  </ThingDef>
+  
+  <ThingDef ParentName="MVO_LychnosBase">
+    <defName>MVO_Lychnos_Midas</defName>
+    <label>lychnos (Midas)</label>
+    <comps>
+      <li Class="MapVehiclesOcean.CompProperties_InteractableQuest">
+        <activeTicks>2147483647</activeTicks>
+        <soundActivate>Interact_Ignite</soundActivate>
+        <ticksToActivate>100</ticksToActivate>
+        <activateTexPath>MapVehiclesOcean/UI/Icons/Fire</activateTexPath>
+        <jobString>ignite</jobString>
+        <activateLabelString>Ignite...</activateLabelString>
+        <activateDescString>Light the lychnos.</activateDescString>
+        <guiLabelString>Choose who should ignite this</guiLabelString>
+        <inspectString>Can be Ignited by a colonist.</inspectString>
+        <targetingParameters>
+          <canTargetBuildings>false</canTargetBuildings>
+          <canTargetAnimals>false</canTargetAnimals>
+          <canTargetMechs>false</canTargetMechs>
+          <onlyTargetControlledPawns>true</onlyTargetControlledPawns>
+        </targetingParameters>
+        <descPartActive>The trial has been completed.</descPartActive>
+        <descPartInactive>The trial in this room requires placing a certain amount of gold in the bowls.</descPartInactive>
+        <trialWorkerType>MapVehiclesOcean.QuestTrialWorker_Midas</trialWorkerType>
+      </li>
+      <li Class="MapVehiclesOcean.CompProperties_FireOverlayQuest">
+        <questTag>MVO_Lychnos_Midas.Activated</questTag>
+        <fireSize>0.75</fireSize>
+        <finalFireSize>1.25</finalFireSize>
+        <fireGrowthDurationTicks>150</fireGrowthDurationTicks>
+        <offset>(0,0,0.3)</offset>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="MVO_LychnosBase">
+    <defName>MVO_Lychnos_Minotaur</defName>
+    <label>lychnos (Minotaur)</label>
+    <comps>
+      <li Class="MapVehiclesOcean.CompProperties_InteractableQuest">
+        <activeTicks>2147483647</activeTicks>
+        <soundActivate>Interact_Ignite</soundActivate>
+        <ticksToActivate>100</ticksToActivate>
+        <activateTexPath>MapVehiclesOcean/UI/Icons/Fire</activateTexPath>
+        <jobString>ignite</jobString>
+        <activateLabelString>Ignite...</activateLabelString>
+        <activateDescString>Light the lychnos.</activateDescString>
+        <guiLabelString>Choose who should ignite this</guiLabelString>
+        <inspectString>Can be Ignited by a colonist.</inspectString>
+        <targetingParameters>
+          <canTargetBuildings>false</canTargetBuildings>
+          <canTargetAnimals>false</canTargetAnimals>
+          <canTargetMechs>false</canTargetMechs>
+          <onlyTargetControlledPawns>true</onlyTargetControlledPawns>
+        </targetingParameters>
+        <descPartActive>The trial has been completed.</descPartActive>
+        <descPartInactive>The trial in this room is to reach the deepest part of the labyrinth.</descPartInactive>
+      </li>
+      <li Class="MapVehiclesOcean.CompProperties_FireOverlayQuest">
+        <questTag>MVO_Lychnos_Minotaur.Activated</questTag>
+        <fireSize>0.75</fireSize>
+        <finalFireSize>1.25</finalFireSize>
+        <fireGrowthDurationTicks>150</fireGrowthDurationTicks>
+        <offset>(0,0,0.3)</offset>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="MVO_LychnosBase">
+    <defName>MVO_Lychnos_Athena</defName>
+    <label>lychnos (Athena)</label>
+    <comps>
+      <li Class="MapVehiclesOcean.CompProperties_InteractableQuest">
+        <activeTicks>2147483647</activeTicks>
+        <soundActivate>Interact_Ignite</soundActivate>
+        <ticksToActivate>100</ticksToActivate>
+        <activateTexPath>MapVehiclesOcean/UI/Icons/Fire</activateTexPath>
+        <jobString>ignite</jobString>
+        <activateLabelString>Ignite...</activateLabelString>
+        <activateDescString>Light the lychnos.</activateDescString>
+        <guiLabelString>Choose who should ignite this</guiLabelString>
+        <inspectString>Can be Ignited by a colonist.</inspectString>
+        <targetingParameters>
+          <canTargetBuildings>false</canTargetBuildings>
+          <canTargetAnimals>false</canTargetAnimals>
+          <canTargetMechs>false</canTargetMechs>
+          <onlyTargetControlledPawns>true</onlyTargetControlledPawns>
+        </targetingParameters>
+        <descPartActive>The trial has been completed.</descPartActive>
+        <descPartInactive>The trial in this room is to defeat all the ancient soldiers.</descPartInactive>
+        <trialWorkerType>MapVehiclesOcean.QuestTrialWorker_Athena</trialWorkerType>
+      </li>
+      <li Class="MapVehiclesOcean.CompProperties_FireOverlayQuest">
+        <questTag>MVO_Lychnos_Athena.Activated</questTag>
+        <fireSize>0.75</fireSize>
+        <finalFireSize>1.25</finalFireSize>
+        <fireGrowthDurationTicks>150</fireGrowthDurationTicks>
+        <offset>(0,0,0.3)</offset>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="MVO_LychnosBase">
+    <defName>MVO_Lychnos_Poseidon</defName>
+    <label>lychnos (Poseidon)</label>
+    <comps>
+      <li Class="MapVehiclesOcean.CompProperties_InteractableQuest">
+        <activeTicks>2147483647</activeTicks>
+        <soundActivate>Interact_Ignite</soundActivate>
+        <ticksToActivate>100</ticksToActivate>
+        <activateTexPath>MapVehiclesOcean/UI/Icons/Fire</activateTexPath>
+        <jobString>ignite</jobString>
+        <activateLabelString>Ignite...</activateLabelString>
+        <activateDescString>Light the lychnos.</activateDescString>
+        <guiLabelString>Choose who should ignite this</guiLabelString>
+        <inspectString>Can be Ignited by a colonist.</inspectString>
+        <targetingParameters>
+          <canTargetBuildings>false</canTargetBuildings>
+          <canTargetAnimals>false</canTargetAnimals>
+          <canTargetMechs>false</canTargetMechs>
+          <onlyTargetControlledPawns>true</onlyTargetControlledPawns>
+        </targetingParameters>
+        <descPartActive>The trial has been completed.</descPartActive>
+        <descPartInactive>The trial in this room is to swim across the sea filled with sharks.</descPartInactive>
+      </li>
+      <li Class="MapVehiclesOcean.CompProperties_FireOverlayQuest">
+        <questTag>MVO_Lychnos_Poseidon.Activated</questTag>
+        <fireSize>0.75</fireSize>
+        <finalFireSize>1.25</finalFireSize>
+        <fireGrowthDurationTicks>150</fireGrowthDurationTicks>
+        <offset>(0,0,0.3)</offset>
+      </li>
+    </comps>
+  </ThingDef>
+  
+  <ThingDef ParentName="SignalActionBase">
+    <defName>MVO_SignalAction_SpawnThing</defName>
+    <thingClass>MapVehiclesOcean.SignalAction_SpawnThing</thingClass>
+  </ThingDef>
+  
+  <ThingDef ParentName="MVO_AncientPropsBase">
+    <defName>MVO_DungeonStairDown</defName>
+    <label>stairway</label>
+    <description>A stairway leading to the deepest part of the dungeon.</description>
+    <thingClass>MapPortal</thingClass>
+    <graphicData>
+      <graphicClass>Graphic_Single</graphicClass>
+      <texPath>MapVehiclesOcean/Things/Ancient/StairDown</texPath>
+      <drawSize>(4,3)</drawSize>
+    </graphicData>
+    <destroyable>false</destroyable>
+    <useHitPoints>false</useHitPoints>
+    <canOverlapZones>false</canOverlapZones>
+    <size>(4,3)</size>
+    <rotatable>false</rotatable>
+    <portal>
+      <pocketMapGenerator>MVO_MapGeneratorDungeon</pocketMapGenerator>
+    </portal>
+  </ThingDef>
+
+  <ThingDef ParentName="MVO_AncientPropsBase">
+    <defName>MVO_DungeonStairUp</defName>
+    <label>stairway</label>
+    <description>A stairway leading back to the dungeon's first floor.</description>
+    <thingClass>PocketMapExit</thingClass>
+    <graphicData>
+      <graphicClass>Graphic_Single</graphicClass>
+      <texPath>MapVehiclesOcean/Things/Ancient/StairUp</texPath>
+      <drawSize>(4,4)</drawSize>
+    </graphicData>
+    <destroyable>false</destroyable>
+    <useHitPoints>false</useHitPoints>
+    <canOverlapZones>false</canOverlapZones>
+    <size>(4,4)</size>
+    <rotatable>false</rotatable>
   </ThingDef>
 
 </Defs>

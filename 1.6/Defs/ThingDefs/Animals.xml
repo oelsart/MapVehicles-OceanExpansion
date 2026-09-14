@@ -96,9 +96,6 @@
       <li>AnimalUncommon</li>
       <li>AnimalFighter</li>
     </tradeTags>
-    <modExtensions>
-      <li Class="MapVehiclesOcean.AquaticCreature"/>
-    </modExtensions>
   </ThingDef>
 
   <PawnKindDef ParentName="AnimalKindBase">
@@ -186,6 +183,9 @@
         </swimmingGraphicData>
       </li>
     </lifeStages>
+    <modExtensions>
+      <li Class="MapVehiclesOcean.AquaticCreature"/>
+    </modExtensions>
   </PawnKindDef>
 
   <ThingDef ParentName="AnimalThingBase">
@@ -270,9 +270,6 @@
       <li>AnimalUncommon</li>
       <li>AnimalFighter</li>
     </tradeTags>
-    <modExtensions>
-      <li Class="MapVehiclesOcean.AquaticCreature"/>
-    </modExtensions>
   </ThingDef>
 
   <PawnKindDef ParentName="AnimalKindBase">
@@ -381,6 +378,9 @@
         </swimmingGraphicData>
       </li>
     </lifeStages>
+    <modExtensions>
+      <li Class="MapVehiclesOcean.AquaticCreature"/>
+    </modExtensions>
   </PawnKindDef>
 
   <PawnKindDef ParentName="AnimalKindBase">

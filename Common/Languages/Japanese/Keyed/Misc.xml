@@ -10,5 +10,8 @@
   <MVO_JobReport_WalkingPlank>渡し板を歩いている.</MVO_JobReport_WalkingPlank>
   <MVO_JobReport_WatchingWalkingPlank>他の人が渡し板を歩くのを見ている.</MVO_JobReport_WatchingWalkingPlank>
   <MVO_Castaway_GameStartDialog>目を覚ますと,自分はイカダの上にいた.周りには海しかなく,何も思い出すことができない.頭から血が流れている…….まずは止血をしなければ.</MVO_Castaway_GameStartDialog>
+
+  <MVO_Midas_NotFulfilled>金塊の量が要求を満たしていません.({0}/3000)</MVO_Midas_NotFulfilled>
+  <MVO_Athena_NotDefeated>部屋にまだ倒されていない敵の兵士がいます.</MVO_Athena_NotDefeated>
   
 </LanguageData>
