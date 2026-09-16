@@ -3,7 +3,7 @@
 
   <IncidentDef>
     <defName>MVO_SeaAmbush</defName>
-    <label>sea ambush</label>
+    <label>ambush</label>
     <category>ThreatBig</category>
     <targetTags>
       <li>Caravan</li>
@@ -24,7 +24,7 @@
   
   <IncidentDef>
     <defName>MVO_ManhunterSeaAmbush</defName>
-    <label>manhunter sea ambush</label>
+    <label>manhunter ambush</label>
     <category>ThreatBig</category>
     <targetTags>
       <li>Caravan</li>
@@ -40,6 +40,27 @@
     <mtbDaysByBiome>
       <Ocean>15</Ocean>
       <Lake>15</Lake>
+    </mtbDaysByBiome>
+  </IncidentDef>
+  
+  <IncidentDef>
+    <defName>MVO_SeaAmbushAroundTheIsland</defName>
+    <label>ambush</label>
+    <category>ThreatBig</category>
+    <targetTags>
+      <li>Caravan</li>
+      <li>MVO_Map_TempIncidentSea</li>
+    </targetTags>
+    <workerClass>MapVehiclesOcean.IncidentWorker_Ambush_TheIsland</workerClass>
+    <pointsScaleable>true</pointsScaleable>
+    <minRefireDays>0.17</minRefireDays>
+    <letterText>{0} has been ambushed by {1} from {2}!</letterText>
+    <letterLabel>Caravan ambushed</letterLabel>
+    <letterDef>ThreatBig</letterDef>
+    <tale>CaravanAmbushedByHumanlike</tale>
+    <mtbDaysByBiome>
+      <Ocean>1.5</Ocean>
+      <Lake>1.5</Lake>
     </mtbDaysByBiome>
   </IncidentDef>
 

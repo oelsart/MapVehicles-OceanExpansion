@@ -1,5 +1,4 @@
-﻿using JetBrains.Annotations;
-using LudeonTK;
+﻿using LudeonTK;
 using RimWorld;
 using RimWorld.Planet;
 using Verse;
@@ -9,10 +8,17 @@ namespace MapVehiclesOcean;
 public class HiddenIslandManager(World world) : WorldComponent(world)
 {
   private Dictionary<int, HashSet<int>> hiddenIslandTileIDs;
+  
+  private PlanetTile specialIslandTile = PlanetTile.Invalid;
 
   public static HiddenIslandManager Instance { get; private set; }
+  
+  public PlanetTile SpecialIslandTile
+  {
+	  get => specialIslandTile;
+	  set => specialIslandTile = value;
+  }
 
-  [CanBeNull]
   public static HashSet<int> HiddenIslandTileIDs(PlanetLayer layer)
   {
     return Instance.hiddenIslandTileIDs.GetValueOrDefault(layer.LayerID);
@@ -84,6 +90,7 @@ public class HiddenIslandManager(World world) : WorldComponent(world)
 
   public override void ExposeData()
   {
+	  Scribe_Values.Look(ref specialIslandTile, nameof(specialIslandTile), PlanetTile.Invalid);
     switch (Scribe.mode)
     {
       case LoadSaveMode.Saving when hiddenIslandTileIDs is not null:
