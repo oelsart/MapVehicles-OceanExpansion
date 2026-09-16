@@ -15,10 +15,11 @@ public class QuestNode_DiscoverHiddenIsland : QuestNode
 
   protected override void RunInt()
   {
-	  if (tile.TryGetValue(QuestGen.slate, out var planetTile))
+	  if (tile.TryGetValue(QuestGen.slate, out var planetTile) &&
+	      Find.World.GetComponent<HiddenIslandManager>() is { } hiddenIslandManager)
 	  {
-		  HiddenIslandManager.DiscoverHiddenIsland(planetTile);
-		  HiddenIslandManager.Instance.SpecialIslandTile = planetTile;
+		  hiddenIslandManager.DiscoverHiddenIsland(planetTile);
+		  hiddenIslandManager.SpecialIslandTile = planetTile;
 	  }
   }
 }

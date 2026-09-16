@@ -10,8 +10,6 @@ public class HiddenIslandManager(World world) : WorldComponent(world)
   private Dictionary<int, HashSet<int>> hiddenIslandTileIDs;
   
   private PlanetTile specialIslandTile = PlanetTile.Invalid;
-
-  public static HiddenIslandManager Instance { get; private set; }
   
   public PlanetTile SpecialIslandTile
   {
@@ -19,14 +17,13 @@ public class HiddenIslandManager(World world) : WorldComponent(world)
 	  set => specialIslandTile = value;
   }
 
-  public static HashSet<int> HiddenIslandTileIDs(PlanetLayer layer)
+  public HashSet<int> HiddenIslandTileIDs(PlanetLayer layer)
   {
-    return Instance.hiddenIslandTileIDs.GetValueOrDefault(layer.LayerID);
+    return hiddenIslandTileIDs.GetValueOrDefault(layer.LayerID);
   }
 
-  public static void DiscoverHiddenIsland(PlanetTile tile)
+  public void DiscoverHiddenIsland(PlanetTile tile)
   {
-    var world = Instance.world;
     var layer = tile.Layer;
     world.landmarks.AddLandmark(MVO_DefOf.MVO_OceanIsland, tile, layer, true);
     tile.Tile.PrimaryBiome = NonWaterBiomeFrom(tile.Tile, tile, layer);
@@ -60,7 +57,6 @@ public class HiddenIslandManager(World world) : WorldComponent(world)
 
   public override void FinalizeInit(bool fromLoad)
   {
-    Instance = this;
     if (hiddenIslandTileIDs is null)
     {
       InitHiddenIslandTileIDs();
@@ -127,13 +123,14 @@ public class HiddenIslandManager(World world) : WorldComponent(world)
   }
 
   [DebugAction("MapVehiclesOcean", hideInSubMenu: true, allowedGameStates = AllowedGameStates.PlayingOnWorld)]
-  public static void RegenerateHiddenIslands() => Instance?.InitHiddenIslandTileIDs();
+  public static void RegenerateHiddenIslands() =>
+	  Find.World.GetComponent<HiddenIslandManager>()?.InitHiddenIslandTileIDs();
 
   [DebugAction("MapVehiclesOcean", hideInSubMenu: true, allowedGameStates = AllowedGameStates.PlayingOnWorld)]
   public static void FlashHiddenIslands()
   {
     var world = Find.World;
-    foreach (var id in Instance.hiddenIslandTileIDs[world.grid.Surface.LayerID])
+    foreach (var id in world.GetComponent<HiddenIslandManager>().hiddenIslandTileIDs[world.grid.Surface.LayerID])
     {
       world.debugDrawer.FlashTile(world.grid[id].tile, 0.5f);
     }

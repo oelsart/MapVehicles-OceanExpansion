@@ -11,8 +11,7 @@ public class IncidentWorker_Ambush_TheIsland : IncidentWorker_Ambush_EnemyBoats
 	
 	protected override bool CanFireNowSub(IncidentParms parms)
 	{
-		Log.Message($"{HiddenIslandManager.Instance.SpecialIslandTile}");
-		return HiddenIslandManager.Instance.SpecialIslandTile is { Valid: true } tile &&
+		return Find.World.GetComponent<HiddenIslandManager>().SpecialIslandTile is { Valid: true } tile &&
 		       Find.World.grid.ApproxDistanceInTiles(parms.target.Tile, tile) <= MaxDistance &&
 		       base.CanFireNowSub(parms);
 	}
