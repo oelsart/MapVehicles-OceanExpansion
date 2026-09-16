@@ -39,8 +39,8 @@
     <holdsRoof>true</holdsRoof>
     <comps>
       <li Class="CompProperties_FireOverlay">
-        <fireSize>0.3</fireSize>
-        <finalFireSize>0.5</finalFireSize>
+        <fireSize>0.15</fireSize>
+        <finalFireSize>0.3</finalFireSize>
         <fireGrowthDurationTicks>150</fireGrowthDurationTicks>
         <offsetNorth>(0,0,10000)</offsetNorth>
         <offsetEast>(0.25,0,0.3)</offsetEast>
@@ -66,8 +66,8 @@
     <rotatable>false</rotatable>
     <comps Inherit="False">
       <li Class="CompProperties_FireOverlay">
-        <fireSize>0.3</fireSize>
-        <finalFireSize>0.5</finalFireSize>
+        <fireSize>0.15</fireSize>
+        <finalFireSize>0.3</finalFireSize>
         <fireGrowthDurationTicks>150</fireGrowthDurationTicks>
         <offset>(0,0,0.08)</offset>
       </li>
@@ -503,6 +503,7 @@
     <rotatable>false</rotatable>
     <portal>
       <pocketMapGenerator>MVO_MapGeneratorDungeon</pocketMapGenerator>
+      <pocketMapSize>31</pocketMapSize>
     </portal>
   </ThingDef>
 
@@ -521,6 +522,24 @@
     <canOverlapZones>false</canOverlapZones>
     <size>(4,4)</size>
     <rotatable>false</rotatable>
+  </ThingDef>
+
+  <ThingDef ParentName="MVO_AncientPropsBase">
+    <defName>MVO_DungeonBook</defName>
+    <label>ancient book</label>
+    <description>A mysterious book containing ancient knowledge.</description>
+    <graphicData>
+      <graphicClass>Graphic_Single</graphicClass>
+      <texPath>MapVehiclesOcean/Things/Ancient/Book</texPath>
+    </graphicData>
+    <altitudeLayer>BuildingBelowTop</altitudeLayer>
+    <destroyable>false</destroyable>
+    <useHitPoints>false</useHitPoints>
+    <size>(1,1)</size>
+    <rotatable>false</rotatable>
+    <building>
+      <isEdifice>false</isEdifice>
+    </building>
   </ThingDef>
 
 </Defs>

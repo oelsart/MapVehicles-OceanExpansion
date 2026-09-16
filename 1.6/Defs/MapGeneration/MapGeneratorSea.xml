@@ -3,10 +3,12 @@
   
   <MapGeneratorDef>
     <defName>MVO_MapGeneratorSea</defName>
+    <label>sea</label>
     <genSteps>
       <li>MutatorPostElevationFertility</li>
       <li>MVO_SimpleTerrain</li>
       <li>MutatorPostTerrain</li>
+      <li>FindPlayerStartSpot</li>
       <li>ScenParts</li>
       <li MayRequire="Ludeon.RimWorld.Biotech">Pollution</li>
       <li>MutatorFinal</li>

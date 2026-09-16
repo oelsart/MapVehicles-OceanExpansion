@@ -8,6 +8,7 @@
     <siteTexture>World/WorldObjects/Sites/GenericSite</siteTexture>
     <expandingIconTexture>World/WorldObjects/Expanding/Sites/ItemStash</expandingIconTexture>
     <handlesWorldObjectTimeoutInspectString>true</handlesWorldObjectTimeoutInspectString>
+    <minMapSize>(200,0,200)</minMapSize>
     <tags>
       <li>MVO_TheIsland</li>
     </tags>
@@ -19,6 +20,18 @@
     <order>400</order>
     <genStep Class="MapVehiclesOcean.GenStep_Dungeon">
       <prefabDef>MVO_Dungeon</prefabDef>
+    </genStep>
+  </GenStepDef>
+
+  <GenStepDef>
+    <defName>MVO_GoldLump</defName>
+    <linkWithSite>MVO_Dungeon</linkWithSite>
+    <order>900</order>
+    <genStep Class="GenStep_PreciousLump">
+      <mineables>
+        <li>MineableGold</li>
+      </mineables>
+      <totalValueRange>40000~50000</totalValueRange>
     </genStep>
   </GenStepDef>
   

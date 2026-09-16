@@ -71,13 +71,19 @@ public class GenStep_Dungeon : GenStep
 			}
 		});
 
-		var root = cellRect.GetCorner(Rot4.West) + new IntVec3(15, 0, -8);
-		for (var i = 0; i < SharkCount; i++)
+		if (prefabDef.defName == "MVO_Dungeon")
 		{
-			var shark = PawnGenerator.GeneratePawn(MVO_DefOf.MVO_Shark);
-			GenSpawn.Spawn(shark, root, map);
-			shark.mindState.mentalStateHandler.TryStartMentalState(MentalStateDefOf.ManhunterPermanent);
+			var root = cellRect.GetCorner(Rot4.West) + new IntVec3(15, 0, -8);
+			for (var i = 0; i < SharkCount; i++)
+			{
+				var shark = PawnGenerator.GeneratePawn(MVO_DefOf.MVO_Shark);
+				GenSpawn.Spawn(shark, root, map);
+				shark.mindState.mentalStateHandler.TryStartMentalState(MentalStateDefOf.ManhunterPermanent);
+			}
 		}
+		
+		var list = MapGenerator.GetOrGenerateVar<List<CellRect>>(MapGenerator.UsedRectsName);
+		list.Add(cellRect);
 	}
 
 	private void SetupArea(Map map, CellRect rect)

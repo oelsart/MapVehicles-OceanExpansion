@@ -16,6 +16,6 @@ public class GenStep_SimpleTerrain : GenStep
       terrainGrid.SetTerrain(c, naturalTerrainAt);
     }
 
-    MapGenerator.PlayerStartSpot = map.Center;
+    MapGenerator.PlayerStartSpot = map.BoundsRect(5).GetCenterCellOnEdge(Rot4.South);
   }
 }

@@ -3,10 +3,20 @@
 
   <MapGeneratorDef>
     <defName>MVO_MapGeneratorDungeon</defName>
+    <label>dungeon</label>
+    <isUnderground>true</isUnderground>
     <genSteps>
+      <li>ElevationFertility</li>
       <li>MVO_SimpleTerrain</li>
       <li>MVO_DungeonDeep</li>
+      <li>FindPlayerStartSpot</li>
+      <li>Fog</li>
     </genSteps>
+    <pocketMapProperties>
+      <biome>Underground</biome>
+      <temperature>21</temperature>
+      <canBeCleaned>true</canBeCleaned>
+    </pocketMapProperties>
   </MapGeneratorDef>
 
   <GenStepDef>

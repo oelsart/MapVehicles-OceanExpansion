@@ -6,7 +6,7 @@ namespace MapVehiclesOcean;
 public class QuestTrialWorker_Midas : QuestTrialWorker
 {
 	private readonly ThingDef MVO_Bowl = DefDatabase<ThingDef>.GetNamed("MVO_Bowl");
-	private const int GoldRequirement = 3000;
+	private const int GoldRequirement = 2800;
 	
 	public override AcceptanceReport CanInteract(CompInteractableQuest comp)
 	{

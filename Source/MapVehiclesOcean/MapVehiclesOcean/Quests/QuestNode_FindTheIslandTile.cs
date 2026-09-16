@@ -6,13 +6,13 @@ namespace MapVehiclesOcean;
 
 public class QuestNode_FindTheIslandTile : QuestNode
 {
-  private const int MinTraversalDistance = 180;
+  private const int MinTraversalDistance = 30;
   private const int MaxTraversalDistance = 800;
   [NoTranslate] public SlateRef<string> storeAs;
 
   private bool TryFindRootTile(out PlanetTile tile)
   {
-    return TileFinder.TryFindRandomPlayerTile(out tile, false, x => TryFindDestinationTileActual(x, 180, out _));
+    return TileFinder.TryFindRandomPlayerTile(out tile, false, x => TryFindDestinationTileActual(x, MinTraversalDistance, out _));
   }
 
   private static bool TryFindDestinationTile(PlanetTile rootTile, out PlanetTile tile)

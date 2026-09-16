@@ -235,5 +235,8 @@
   
   <MVO_DungeonStairUp.label>階段</MVO_DungeonStairUp.label>
   <MVO_DungeonStairUp.description>ダンジョンの地上階へ戻るための階段です.</MVO_DungeonStairUp.description>
-  
+
+  <MVO_DungeonBook.label>古代の本</MVO_DungeonBook.label>
+  <MVO_DungeonBook.description>古代の知識が書かれた謎めいた本です.</MVO_DungeonBook.description>
+
 </LanguageData>
