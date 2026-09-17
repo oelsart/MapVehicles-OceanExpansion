@@ -2,10 +2,10 @@
 <Defs>
 
   <TileMutatorDef>
-    <defName>MVO_OceanIsland</defName>
-    <label>ocean island</label>
+    <defName>MVO_Island</defName>
+    <label>island</label>
     <description>A solitary island floating in the sea.</description>
-    <workerClass>MapVehiclesOcean.TileMutatorWorker_OceanIsland</workerClass>
+    <workerClass>MapVehiclesOcean.TileMutatorWorker_Island</workerClass>
     <categories>
       <li>Ocean</li>
     </categories>

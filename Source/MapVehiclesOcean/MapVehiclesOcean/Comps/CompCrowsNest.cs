@@ -23,12 +23,10 @@ public class CompCrowsNest : CompScanner
   private bool TryFindIsland(Slate slate)
   {
 	  var hiddenIslandManager = Find.World.GetComponent<HiddenIslandManager>();
-	  if (hiddenIslandManager is null) return false;
-	  
-    if (ModsConfig.OdysseyActive &&
-        hiddenIslandManager.HiddenIslandTileIDs(parent.Map?.Tile.Layer) is { Count: > 0 } hashSet &&
-        TileFinder.TryFindTileWithDistance(parent.Tile, 1, 9, out var tile, t => hashSet.Contains(t.tileId),
-          TileFinderMode.Near))
+
+	  if (hiddenIslandManager?.HiddenIslandTileIDs(parent.Map?.Tile.Layer) is { Count: > 0 } hashSet &&
+	      TileFinder.TryFindTileWithDistance(parent.Tile, 1, 9, out var tile, t => hashSet.Contains(t.tileId),
+		      TileFinderMode.Near))
     {
 	    hiddenIslandManager.DiscoverHiddenIsland(tile);
       slate.Set("siteTile", tile);

@@ -6,7 +6,7 @@
     <label>dungeon</label>
     <description>An ancient, enclosed structure filled with unknown dangers and potential riches.</description>
     <siteTexture>World/WorldObjects/Sites/GenericSite</siteTexture>
-    <expandingIconTexture>World/WorldObjects/Expanding/Sites/ItemStash</expandingIconTexture>
+    <expandingIconTexture>MapVehiclesOcean/World/Dungeon</expandingIconTexture>
     <handlesWorldObjectTimeoutInspectString>true</handlesWorldObjectTimeoutInspectString>
     <minMapSize>(200,0,200)</minMapSize>
     <tags>

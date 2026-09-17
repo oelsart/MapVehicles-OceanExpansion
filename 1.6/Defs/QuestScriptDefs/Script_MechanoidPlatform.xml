@@ -151,7 +151,7 @@
                 <customLetterText TKey="LetterTextPaymentArrived">You have defeated the mechanoid platform!\n\nThe payment from [asker_faction_name] has arrived.</customLetterText>
                 <nodeIfChosenPawnSignalUsed Class="QuestNode_Letter">
                   <letterDef>ChoosePawn</letterDef>
-                  <label TKey="LetterLabelFavorReceiver">[asker_faction_royalFavorLabel]</label>
+                  <label>[asker_faction_royalFavorLabel]</label>
                   <text TKey="LetterTextFavorReceiver">These colonists participated in the victory for the quest [resolvedQuestName]. [asker_definite] wants to know who should receive the [royalFavorReward_amount] [asker_faction_royalFavorLabel] for this service.</text>
                   <useColonistsOnMap>$site</useColonistsOnMap>
                   <chosenPawnSignal>ChosenPawnForReward</chosenPawnSignal>

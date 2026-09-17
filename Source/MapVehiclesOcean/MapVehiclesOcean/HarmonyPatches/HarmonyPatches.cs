@@ -2,8 +2,10 @@
 using RimWorld;
 using RimWorld.Planet;
 using SmashTools;
+using SmashTools.Performance;
 using UnityEngine;
 using VehicleMapFramework;
+using VehicleMapFramework.VMF_HarmonyPatches;
 using Vehicles;
 using Vehicles.World;
 using Verse;
@@ -104,4 +106,13 @@ public static class Patch_MapGenerator_GenerateMap
         (mapGenerator == MapGeneratorDefOf.Encounter || mapGenerator == MapGeneratorDefOf.Base_Player))
       mapGenerator = MVO_DefOf.MVO_MapGeneratorSea;
   }
+}
+
+[HarmonyPatch(typeof(WorldRendererUtility), nameof(WorldRendererUtility.CurrentWorldRenderMode), MethodType.Getter)]
+public static class Patch_WorldRendererUtility_CurrentWorldRenderMode
+{
+	public static void Postfix(ref WorldRenderMode __result)
+	{
+		if (CompAncientBook.CutsceneInProgress) __result = WorldRenderMode.Planet;
+	}
 }

@@ -5,7 +5,7 @@ using Verse.Noise;
 
 namespace MapVehiclesOcean;
 
-public class TileMutatorWorker_OceanIsland(TileMutatorDef def) : TileMutatorWorker_Coast(def)
+public class TileMutatorWorker_Island(TileMutatorDef def) : TileMutatorWorker_Coast(def)
 {
   protected override FloatRange CoastOffset => new(0.2f, 0.4f);
   protected virtual FloatRange MountainSizeFactor => new(0.4f, 0.5f);
@@ -30,7 +30,6 @@ public class TileMutatorWorker_OceanIsland(TileMutatorDef def) : TileMutatorWork
 
   public override void GeneratePostElevationFertility(Map map)
   {
-    if (!ModsConfig.OdysseyActive) return;
     base.GeneratePostElevationFertility(map);
 
     // 山のElevation設定

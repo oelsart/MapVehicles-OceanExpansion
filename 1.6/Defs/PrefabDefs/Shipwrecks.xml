@@ -460,7 +460,7 @@
       <PassiveCooler>
         <position>(3, 0, 3)</position>
       </PassiveCooler>
-      <AncientWoodenCrate>
+      <AncientWoodenCrate MayRequire="Ludeon.RimWorld.Odyssey">
         <position>(1, 0, 2)</position>
       </AncientWoodenCrate>
       <VMF_CargoContainer>
@@ -506,7 +506,7 @@
         <relativeRotation>Clockwise</relativeRotation>
         <colorDef>Structure_UmberBurnt</colorDef>
       </VMF_Ladder>
-      <Brazier>
+      <Brazier MayRequire="Ludeon.RimWorld.Royalty">
         <position>(5, 0, 12)</position>
         <stuff>Steel</stuff>
       </Brazier>
@@ -591,7 +591,7 @@
         </rects>
         <stuff>WoodLog</stuff>
       </Wall_NAWDiagonal>
-      <AncientBox_ComponentIndustrial>
+      <AncientBox_ComponentIndustrial MayRequire="Ludeon.RimWorld.Odyssey">
         <position>(4, 0, 1)</position>
       </AncientBox_ComponentIndustrial>
       <MVO_Cannonball>
@@ -1012,7 +1012,7 @@
         <position>(14, 0, 22)</position>
         <relativeRotation>Counterclockwise</relativeRotation>
       </MVO_ShipFloorDiagonalAB>
-      <AncientAmmoStack>
+      <AncientAmmoStack MayRequire="Ludeon.RimWorld.Odyssey">
         <rects>
           <li>(1,21,1,21)</li>
           <li>(13,21,13,21)</li>

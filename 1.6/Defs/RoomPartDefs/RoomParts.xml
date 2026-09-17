@@ -19,7 +19,7 @@
   <MapVehiclesOcean.RoomPart_PrefabDef>
     <defName>MVO_DiningTables_Large</defName>
     <workerClass>MapVehiclesOcean.RoomPart_FillWithPrefab</workerClass>
-    <prefab>DiningTable_Large</prefab>
+    <prefab>MVO_DiningTable</prefab>
     <snapToGrid>true</snapToGrid>
     <fillOnPost>true</fillOnPost>
   </MapVehiclesOcean.RoomPart_PrefabDef>
@@ -52,14 +52,14 @@
   <MapVehiclesOcean.RoomPart_PrefabDef>
     <defName>MVO_Couches</defName>
     <workerClass>MapVehiclesOcean.RoomPart_FillWithPrefab</workerClass>
-    <prefab>Couch_Edge</prefab>
+    <prefab>MVO_Couch_Edge</prefab>
     <intervalRange>8</intervalRange>
   </MapVehiclesOcean.RoomPart_PrefabDef>
 
   <MapVehiclesOcean.RoomPart_PrefabDef>
     <defName>MVO_PokerTables</defName>
     <workerClass>MapVehiclesOcean.RoomPart_FillWithPrefab</workerClass>
-    <prefab>PokerTable</prefab>
+    <prefab>MVO_PokerTable</prefab>
     <snapToGrid>true</snapToGrid>
     <ignoreAdjacent>true</ignoreAdjacent>
   </MapVehiclesOcean.RoomPart_PrefabDef>

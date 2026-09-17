@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using LudeonTK;
+using UnityEngine;
 using VehicleMapFramework;
 using VehicleMapFramework.VMF_HarmonyPatches;
 using Vehicles;
@@ -7,6 +8,7 @@ using Verse;
 namespace MapVehiclesOcean;
 
 [StaticConstructorOnStartup]
+[HotSwap]
 public sealed class CompSailEmblem : ThingComp
 {
   private static Material material;
@@ -126,7 +128,6 @@ public sealed class CompSailEmblem : ThingComp
     }
     
     // マスクを描画
-    var mesh = graphic.MeshAt(rot);
     var quaternion = graphic.QuatFromRot(rot);
     if (extraRotation != 0f)
     {
@@ -134,18 +135,19 @@ public sealed class CompSailEmblem : ThingComp
     }
     if (graphic.data is { addTopAltitudeBias: true })
     {
-      quaternion *= Quaternion.Euler(Vector3.left * 2f);
+      quaternion *= Quaternion.Euler(Vector3.right * 2f);
     }
     loc += graphic.DrawOffset(rot);
+    var mesh = graphic.MeshAt(rot);
     var maskMat = graphic.MatAt(rot, parent);
-    loc.y += 0.00001f;
+    loc.y += 0.1f;
     loc.y -= loc.z * 0.00001f;
     loc.y -= loc.x * 0.000001f;
     Graphics.DrawMesh(mesh, loc, quaternion, maskMat, 0);
 
     // エンブレムを描画
     loc += emblemOffset;
-    loc.y -= 0.00001f;
+    loc.y -= 0.1f;
     var opacity = rot == Rot4.North ? RigGraphicComp.Opacity * 0.2f : RigGraphicComp.Opacity;
     propertyBlock.SetTexture(AdditionalShaderPropertyIDs.MainTex, emblem);
     propertyBlock.SetColor(ShaderPropertyIDs.Color, color.WithAlpha(opacity));

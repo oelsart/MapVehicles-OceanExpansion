@@ -47,7 +47,7 @@
             </fixedParams>
           </thingSetMaker>
         </li>
-        <li> <!-- Treasures -->
+        <li MayRequireAnyOf="Ludeon.RimWorld.Royalty,Ludeon.RimWorld.Odyssey,Ludeon.RimWorld.Anomaly"> <!-- Treasures -->
           <marketValueWeightRange>0.2~0.4</marketValueWeightRange>
           <thingSetMaker Class="ThingSetMaker_RandomOption">
             <options>

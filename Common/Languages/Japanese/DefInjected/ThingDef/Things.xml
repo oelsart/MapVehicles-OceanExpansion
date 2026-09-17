@@ -237,6 +237,11 @@
   <MVO_DungeonStairUp.description>ダンジョンの地上階へ戻るための階段です.</MVO_DungeonStairUp.description>
 
   <MVO_DungeonBook.label>古代の本</MVO_DungeonBook.label>
-  <MVO_DungeonBook.description>古代の知識が書かれた謎めいた本です.</MVO_DungeonBook.description>
+  <MVO_DungeonBook.description>古代の知識を秘めた謎めいた本です.</MVO_DungeonBook.description>
+  <MVO_DungeonBook.comps.CompAncientBook.jobString>触れる</MVO_DungeonBook.comps.CompAncientBook.jobString>
+  <MVO_DungeonBook.comps.CompAncientBook.activateLabelString>触れる...</MVO_DungeonBook.comps.CompAncientBook.activateLabelString>
+  <MVO_DungeonBook.comps.CompAncientBook.activateDescString>古代の本に触れる.</MVO_DungeonBook.comps.CompAncientBook.activateDescString>
+  <MVO_DungeonBook.comps.CompAncientBook.guiLabelString>本に触れる人物を選択</MVO_DungeonBook.comps.CompAncientBook.guiLabelString>
+  <MVO_DungeonBook.comps.CompAncientBook.inspectString>入植者によって本に触れることができます.</MVO_DungeonBook.comps.CompAncientBook.inspectString>
 
 </LanguageData>

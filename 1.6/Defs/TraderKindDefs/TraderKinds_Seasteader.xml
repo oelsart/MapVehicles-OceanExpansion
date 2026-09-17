@@ -51,7 +51,7 @@
       <li Class="StockGenerator_ReinforcedBarrels">
         <countRange>1~4</countRange>
       </li>
-      <li Class="StockGenerator_Category">
+      <li Class="StockGenerator_Category" MayRequire="Ludeon.RimWorld.Odyssey">
         <categoryDef>Fish</categoryDef>
         <thingDefCountRange>2~5</thingDefCountRange>
         <totalPriceRange>500~800</totalPriceRange>

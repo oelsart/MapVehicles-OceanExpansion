@@ -3,4 +3,10 @@
   
   <MVO_TentacleAttackTool.label>触手</MVO_TentacleAttackTool.label>
   
+  <MVO_LeftPowerClaw.label>左パワークロー</MVO_LeftPowerClaw.label>
+  <MVO_LeftPowerClaw.labelShort>パワークロー</MVO_LeftPowerClaw.labelShort>
+
+  <MVO_RightPowerClaw.label>右パワークロー</MVO_RightPowerClaw.label>
+  <MVO_RightPowerClaw.labelShort>パワークロー</MVO_RightPowerClaw.labelShort>
+  
 </LanguageData>

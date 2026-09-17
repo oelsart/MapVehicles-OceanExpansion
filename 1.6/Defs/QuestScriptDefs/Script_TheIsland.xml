@@ -13,9 +13,7 @@
     </questNameRules>
     <questDescriptionRules>
       <rulesStrings>
-        <li>questDescription->There is a legend about an "island" on this planet. It is said that treasures beyond
-          measure lie buried there, yet no one even knows the island's location.
-          \nIs it wealth, or power, or... well, it seems worth looking into anyway.
+        <li>questDescription->There is a legend about an "island" on this planet. It is said that treasures beyond measure lie buried there, yet no one even knows the island's location.\nIs it wealth, or power, or... well, it seems worth looking into anyway.
         </li>
       </rulesStrings>
     </questDescriptionRules>
@@ -39,8 +37,7 @@
                 <node Class="QuestNode_Letter">
                   <letterDef>PositiveEvent</letterDef>
                   <label TKey="LetterLabelIslandExistence">[resolvedQuestName]: Existence</label>
-                  <text TKey="LetterTextIslandExistence">The legendary "island" truly exists. This stele appears to
-                    record the lives of those who once lived there.
+                  <text TKey="LetterTextIslandExistence">The legendary "island" truly exists. This stele appears to record the lives of those who once lived there.
                   </text>
                 </node>
               </li>
@@ -48,9 +45,8 @@
                 <inSignal>OuterNodeCompleted.2</inSignal>
                 <node Class="QuestNode_Letter">
                   <letterDef>PositiveEvent</letterDef>
-                  <label TKey="LetterLabelIslandAppeared">[resolvedQuestName]: Kingdom</label>
-                  <text TKey="LetterTextIslandAppeared">A dynasty was established on the "island" and it seems to have
-                    once wielded immense influence on this planet.
+                  <label TKey="LetterLabelIslandKingdom">[resolvedQuestName]: Kingdom</label>
+                  <text TKey="LetterTextIslandKingdom">A dynasty was established on the "island" and it seems to have once wielded immense influence on this planet.
                   </text>
                 </node>
               </li>
@@ -58,10 +54,8 @@
                 <inSignal>OuterNodeCompleted.3</inSignal>
                 <node Class="QuestNode_Letter">
                   <letterDef>PositiveEvent</letterDef>
-                  <label TKey="LetterLabelIslandAppeared">[resolvedQuestName]: Questions</label>
-                  <text TKey="LetterTextIslandAppeared">Several discrepancies exist between the kingdom depicted in
-                    legend and the planet's current geography.
-                    \nYet that very fact should provide clues to pinpoint the island's location.
+                  <label TKey="LetterLabelIslandQuestions">[resolvedQuestName]: Questions</label>
+                  <text TKey="LetterTextIslandQuestions">Several discrepancies exist between the kingdom depicted in legend and the planet's current geography.\nYet that very fact should provide clues to pinpoint the island's location.
                   </text>
                 </node>
               </li>
@@ -104,10 +98,8 @@
                     <li Class="QuestNode_Letter">
                       <letterDef>PositiveEvent</letterDef>
                       <lookTargets>$lookTargets</lookTargets>
-                      <label TKey="LetterLabelIslandAppeared">[resolvedQuestName]: Discovery</label>
-                      <text TKey="LetterTextIslandAppeared">The location of the "island" has finally been pinpointed and
-                        can now be viewed on the world map.
-                        \nHowever, it lies within a fierce naval battle zone. Enemy ships could appear at any moment.
+                      <label TKey="LetterLabelIslandDiscovery">[resolvedQuestName]: Discovery</label>
+                      <text TKey="LetterTextIslandDiscovery">The location of the "island" has finally been pinpointed and can now be viewed on the world map.\nHowever, it lies within a fierce naval battle zone. Enemy ships could appear at any moment.
                       </text>
                     </li>
                     <li Class="QuestNode_NoWorldObject">
@@ -136,8 +128,13 @@
         </li>
 
         <!-- Ending -->
+        <li Class="QuestNode_EndGame">
+          <inSignal>MVO_DungeonBook.Clear</inSignal>
+          <introText TKey="EndGameIntroText">The legendary continent emerges</introText>
+          <endingText TKey="EndGameEndingText">The true identity of the "island" was part of a legendary continent that once existed. A realm known as the Golden Kingdom stood there, holding vast influence over this entire planet. Its people enjoyed great prosperity, but a forbidden spell cast by a court sorcerer—one of the king's closest advisers—sank the entire kingdom beneath the waves.\nWhy the sorcerer did such a thing is no longer clear, but that curse has now been broken.\n\nThe treasure resting within the "island" was the kingdom itself.</endingText>
+        </li>
         <li Class="QuestNode_End">
-          <inSignal>MVO_TheIsland.Clear</inSignal>
+          <inSignal>MVO_DungeonBook.Clear</inSignal>
           <outcome>Success</outcome>
         </li>
       </nodes>

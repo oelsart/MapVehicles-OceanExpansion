@@ -93,8 +93,8 @@
                   <pawn>$generatedPawn</pawn>
                 </li>
                 <li Class="QuestNode_Letter">
-                  <label>discovery of a castaway</label>
-                  <text>There is a castaway [generatedPawn_label] on the island. They are calling for help!</text>
+                  <label TKey="LetterLabelDiscovery">discovery of a castaway</label>
+                  <text TKey="LetterTextDiscovery">There is a castaway [generatedPawn_label] on the island. They are calling for help!</text>
                 </li>
               </nodes>
             </node>

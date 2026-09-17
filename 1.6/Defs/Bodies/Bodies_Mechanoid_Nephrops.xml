@@ -70,7 +70,7 @@
                   <coverage>0.40</coverage>
                   <height>Bottom</height>
                   <groups>
-                    <li>LeftPowerClaw</li>
+                    <li>MVO_LeftPowerClaw</li>
                   </groups>
                 </li>
               </parts>
@@ -94,7 +94,7 @@
                   <coverage>0.40</coverage>
                   <height>Bottom</height>
                   <groups>
-                    <li>RightPowerClaw</li>
+                    <li>MVO_RightPowerClaw</li>
                   </groups>
                 </li>
               </parts>

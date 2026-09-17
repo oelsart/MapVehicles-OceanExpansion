@@ -65,5 +65,17 @@
       <li>MovingLimbCore</li>
     </tags>
   </BodyPartDef>
+  
+  <BodyPartGroupDef>
+    <defName>MVO_LeftPowerClaw</defName>
+    <label>left power claw</label>
+    <labelShort>power claw</labelShort>
+  </BodyPartGroupDef>
+
+  <BodyPartGroupDef>
+    <defName>MVO_RightPowerClaw</defName>
+    <label>right power claw</label>
+    <labelShort>power claw</labelShort>
+  </BodyPartGroupDef>
 
 </Defs>

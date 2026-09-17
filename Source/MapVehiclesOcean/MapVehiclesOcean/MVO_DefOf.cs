@@ -36,6 +36,8 @@ public static class MVO_DefOf
 
   public static ThingDef MVO_DungeonStairDown;
 
+  public static ThingDef MVO_DungeonBook;
+
   public static PawnKindDef MVO_Shark;
 
   public static ThingCategoryDef MVO_Techprints;
@@ -43,6 +45,8 @@ public static class MVO_DefOf
   public static SoundDef MVO_WaterSplash;
 
   public static SoundDef MVO_CannonballImpact;
+
+  public static SoundDef MVO_EarthRumble;
 
   public static FleckDef MVO_ShockwaveSmall;
 
@@ -90,9 +94,11 @@ public static class MVO_DefOf
 
   public static StructureLayoutDef MVO_MechanoidOceanPlatform;
 
-  [MayRequireOdyssey] public static LandmarkDef MVO_OceanIsland;
-
   public static FactionDef MVO_Maritime;
 
   public static PathGridDef MVO_Aquatic;
+
+  public static TileMutatorDef MVO_Island;
+
+  [MayRequireOdyssey] public static LandmarkDef MVO_OceanIsland;
 }

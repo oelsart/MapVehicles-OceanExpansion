@@ -146,5 +146,102 @@
       <Battery/>
     </things>
   </PrefabDef>
+  
+  <PrefabDef>
+    <defName>MVO_DiningTable</defName>
+    <size>(4,4)</size>
+    <things>
+      <DiningChair>
+        <positions>
+          <li>(0, 0, 1)</li>
+          <li>(0, 0, 2)</li>
+        </positions>
+        <chance>0.75</chance>
+        <relativeRotation>Clockwise</relativeRotation>
+        <stuff>WoodLog</stuff>
+      </DiningChair>
+      <DiningChair>
+        <positions>
+          <li>(3, 0, 1)</li>
+          <li>(3, 0, 2)</li>
+        </positions>
+        <chance>0.75</chance>
+        <relativeRotation>Counterclockwise</relativeRotation>
+        <stuff>WoodLog</stuff>
+      </DiningChair>
+      <DiningChair>
+        <positions>
+          <li>(1, 0, 3)</li>
+          <li>(2, 0, 3)</li>
+        </positions>
+        <chance>0.75</chance>
+        <relativeRotation>Opposite</relativeRotation>
+        <stuff>WoodLog</stuff>
+      </DiningChair>
+      <Table2x2c>
+        <position>(1,0,1)</position>
+        <stuff>WoodLog</stuff>
+      </Table2x2c>
+    </things>
+  </PrefabDef>
+  
+  <PrefabDef>
+    <defName>MVO_Couch_Edge</defName>
+    <edgeOnly>true</edgeOnly>
+    <size>(2,1)</size>
+    <things>
+      <Couch>
+        <position>(1,0,0)</position>
+        <relativeRotation>Opposite</relativeRotation>
+        <stuff>Leather_Plain</stuff>
+      </Couch>
+    </things>
+  </PrefabDef>
+
+  <PrefabDef>
+    <defName>MVO_PokerTable</defName>
+    <size>(4,4)</size>
+    <things>
+      <Stool>
+        <chance>0.25</chance>
+        <positions>
+          <li>(1, 0, 0)</li>
+          <li>(2, 0, 0)</li>
+        </positions>
+        <relativeRotation>Opposite</relativeRotation>
+        <stuff>WoodLog</stuff>
+      </Stool>
+      <Stool>
+        <chance>0.25</chance>
+        <positions>
+          <li>(0, 0, 1)</li>
+          <li>(0, 0, 2)</li>
+        </positions>
+        <relativeRotation>Counterclockwise</relativeRotation>
+        <stuff>WoodLog</stuff>
+      </Stool>
+      <Stool>
+        <chance>0.25</chance>
+        <positions>
+          <li>(3, 0, 1)</li>
+          <li>(3, 0, 2)</li>
+        </positions>
+        <relativeRotation>Clockwise</relativeRotation>
+        <stuff>WoodLog</stuff>
+      </Stool>
+      <Stool>
+        <chance>0.5</chance>
+        <positions>
+          <li>(1, 0, 3)</li>
+          <li>(2, 0, 3)</li>
+        </positions>
+        <stuff>WoodLog</stuff>
+      </Stool>
+      <PokerTable>
+        <position>(1,0,1)</position>
+        <stuff>WoodLog</stuff>
+      </PokerTable>
+    </things>
+  </PrefabDef>
 
 </Defs>

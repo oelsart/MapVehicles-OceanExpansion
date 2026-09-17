@@ -10,7 +10,7 @@
       <MoveSpeed>4.2</MoveSpeed>
       <ArmorRating_Blunt>0.20</ArmorRating_Blunt>
       <ArmorRating_Sharp>0.60</ArmorRating_Sharp>
-      <BandwidthCost>1</BandwidthCost>
+      <BandwidthCost MayRequire="Ludeon.RimWorld.Biotech">1</BandwidthCost>
     </statBases>
     <tools>
       <li>
@@ -22,7 +22,7 @@
         </capacities>
         <power>14</power>
         <cooldownTime>1.8</cooldownTime>
-        <linkedBodyPartsGroup>LeftPowerClaw</linkedBodyPartsGroup>
+        <linkedBodyPartsGroup>MVO_LeftPowerClaw</linkedBodyPartsGroup>
         <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
       </li>
       <li>
@@ -34,7 +34,7 @@
         </capacities>
         <power>14</power>
         <cooldownTime>1.8</cooldownTime>
-        <linkedBodyPartsGroup>RightPowerClaw</linkedBodyPartsGroup>
+        <linkedBodyPartsGroup>MVO_RightPowerClaw</linkedBodyPartsGroup>
         <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
       </li>
       <li>

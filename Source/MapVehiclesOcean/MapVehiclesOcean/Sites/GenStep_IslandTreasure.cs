@@ -5,8 +5,6 @@ namespace MapVehiclesOcean;
 
 public class GenStep_IslandTreasure : GenStep
 {
-  private const string SteleQuestTag = "MVO_Stele";
-
   public override int SeedPart => 848961748;
 
   public override void Generate(Map map, GenStepParams parms)
@@ -23,7 +21,7 @@ public class GenStep_IslandTreasure : GenStep
           RCellFinder.TryFindRandomCellNearWith(top, validator, map, out cell, 7))
       {
         var stele = GenSpawn.Spawn(MVO_DefOf.MVO_Stele, cell, map, Rot4.North);
-        QuestUtility.AddQuestTag(stele, $"Quest{quest.id}.{SteleQuestTag}");
+        QuestUtility.AddQuestTag(stele, $"Quest{quest.id}.{MVO_DefOf.MVO_Stele.defName}");
       }
     }
 

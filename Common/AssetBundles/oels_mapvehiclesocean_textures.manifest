@@ -1,15 +1,15 @@
 ManifestFileVersion: 0
-CRC: 2415284041
+CRC: 4028116685
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: d840c9804e35642a7b67a7024270fd2e
+    Hash: 194355dc6bbb2831cb3cffa5044c28e5
   TypeTreeHash:
     serializedVersion: 2
     Hash: 2612ac43db082a73502ee80f2eceb73f
   IncrementalBuildHash:
     serializedVersion: 2
-    Hash: d840c9804e35642a7b67a7024270fd2e
+    Hash: 194355dc6bbb2831cb3cffa5044c28e5
 HashAppended: 0
 ClassTypes:
 - Class: 28
@@ -68,6 +68,7 @@ Assets:
 - Assets/Data/OELS.MapVehicles.OceanExpansion/Textures/MapVehiclesOcean/Things/Vehicle/Pontoon/Fence_south.png
 - Assets/Data/OELS.MapVehicles.OceanExpansion/Textures/MapVehiclesOcean/Things/Ancient/Book.png
 - Assets/Data/OELS.MapVehicles.OceanExpansion/Textures/MapVehiclesOcean/Terrain/WoodShipProps/WoodShipPropsA_Diagonal_north.png
+- Assets/Data/OELS.MapVehicles.OceanExpansion/Textures/MapVehiclesOcean/World/Dungeon.png
 - Assets/Data/OELS.MapVehicles.OceanExpansion/Textures/MapVehiclesOcean/Things/Rig/Rig1/SailEmblemMask_south.png
 - Assets/Data/OELS.MapVehicles.OceanExpansion/Textures/MapVehiclesOcean/Things/Ancient/Athena.png
 - Assets/Data/OELS.MapVehicles.OceanExpansion/Textures/MapVehiclesOcean/Things/CrowsNest/CrowsNestOverlay_eastm.png

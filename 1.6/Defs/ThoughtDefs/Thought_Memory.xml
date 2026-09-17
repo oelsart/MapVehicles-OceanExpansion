@@ -10,7 +10,7 @@
       <li>Ascetic</li>
     </nullifyingTraits>
     <nullifyingHediffs>
-      <li>Inhumanized</li>
+      <li MayRequire="Ludeon.RimWorld.Anomaly">Inhumanized</li>
     </nullifyingHediffs>
     <stages>
       <li>

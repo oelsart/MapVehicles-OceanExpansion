@@ -28,7 +28,8 @@ public class GenStep_Dungeon : GenStep
 			else if (thing.def == MVO_DefOf.MVO_Lychnos_Midas ||
 			         thing.def == MVO_DefOf.MVO_Lychnos_Minotaur ||
 			         thing.def == MVO_DefOf.MVO_Lychnos_Athena ||
-			         thing.def == MVO_DefOf.MVO_Lychnos_Poseidon)
+			         thing.def == MVO_DefOf.MVO_Lychnos_Poseidon ||
+			         thing.def == MVO_DefOf.MVO_DungeonBook)
 			{
 				QuestUtility.AddQuestTag(thing, thing.def.defName);
 				if (quest != null)

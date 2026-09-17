@@ -1,15 +1,15 @@
 ManifestFileVersion: 0
-CRC: 3938997715
+CRC: 3050573597
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: f014fde21b943d39813d22b0dedae9cf
+    Hash: 2841fb8af1fc4cdc1ae1bef736a58a10
   TypeTreeHash:
     serializedVersion: 2
     Hash: 9a2ca7bdbd1871f7131daf57de908e0c
   IncrementalBuildHash:
     serializedVersion: 2
-    Hash: f014fde21b943d39813d22b0dedae9cf
+    Hash: 2841fb8af1fc4cdc1ae1bef736a58a10
 HashAppended: 0
 ClassTypes:
 - Class: 83
@@ -17,5 +17,7 @@ ClassTypes:
 SerializeReferenceClassIdentifiers: []
 Assets:
 - Assets/Data/OELS.MapVehicles.OceanExpansion/Sounds/MapVehiclesOcean/Water_Splash.ogg
+- Assets/Data/OELS.MapVehicles.OceanExpansion/Sounds/MapVehiclesOcean/EarthRumble.ogg
 - Assets/Data/OELS.MapVehicles.OceanExpansion/Sounds/MapVehiclesOcean/Cannonball_Impact.ogg
+- Assets/Data/OELS.MapVehicles.OceanExpansion/Sounds/MapVehiclesOcean/PageFlip.ogg
 Dependencies: []

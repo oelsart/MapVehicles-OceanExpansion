@@ -25,7 +25,16 @@ public class HiddenIslandManager(World world) : WorldComponent(world)
   public void DiscoverHiddenIsland(PlanetTile tile)
   {
     var layer = tile.Layer;
-    world.landmarks.AddLandmark(MVO_DefOf.MVO_OceanIsland, tile, layer, true);
+    if (ModsConfig.OdysseyActive)
+    {
+	    world.landmarks.AddLandmark(MVO_DefOf.MVO_OceanIsland, tile, layer, true);
+    }
+    else
+    {
+	    tile.Tile.AddMutator(MVO_DefOf.MVO_Island);
+    }
+
+    tile.Tile.elevation = 5f;
     tile.Tile.PrimaryBiome = NonWaterBiomeFrom(tile.Tile, tile, layer);
     HiddenIslandTileIDs(layer)?.Remove(tile.tileId);
     world.renderer.GetLayer<WorldDrawLayer_Terrain>(layer).SetDirty();

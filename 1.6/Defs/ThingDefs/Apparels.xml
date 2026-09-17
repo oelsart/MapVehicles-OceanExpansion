@@ -276,7 +276,7 @@
     <equippedStatOffsets>
       <MentalBreakThreshold>-0.03</MentalBreakThreshold>
       <RestRateMultiplier>0.10</RestRateMultiplier>
-      <FishingYield>0.05</FishingYield>
+      <FishingYield MayRequire="Ludeon.RimWorld.Odyssey">0.05</FishingYield>
     </equippedStatOffsets>
     <apparel>
       <bodyPartGroups>
@@ -338,7 +338,7 @@
       <RestRateMultiplier>0.05</RestRateMultiplier>
       <WorkSpeedGlobal>0.02</WorkSpeedGlobal>
       <CleaningSpeed>0.10</CleaningSpeed>
-      <FishingSpeed>0.05</FishingSpeed>
+      <FishingSpeed MayRequire="Ludeon.RimWorld.Odyssey">0.05</FishingSpeed>
     </equippedStatOffsets>
     <apparel>
       <bodyPartGroups>

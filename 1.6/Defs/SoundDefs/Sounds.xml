@@ -33,5 +33,40 @@
       </li>
     </subSounds>
   </SoundDef>
+  
+  <SoundDef>
+    <defName>MVO_PageFlip</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>1</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>MapVehiclesOcean/PageFlip</clipPath>
+          </li>
+        </grains>
+        <volumeRange>100~100</volumeRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>MVO_EarthRumble</defName>
+    <context>WorldOnly</context>
+    <sustain>true</sustain>
+    <priorityMode>PrioritizeExisting</priorityMode>
+    <sustainFadeoutTime>4</sustainFadeoutTime>
+    <subSounds>
+      <li>
+        <onCamera>true</onCamera>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>MapVehiclesOcean/EarthRumble</clipPath>
+          </li>
+        </grains>
+        <volumeRange>75~75</volumeRange>
+      </li>
+    </subSounds>
+  </SoundDef>
 
 </Defs>

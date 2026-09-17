@@ -360,7 +360,7 @@
         <activateLabelString>Ignite...</activateLabelString>
         <activateDescString>Light the lychnos.</activateDescString>
         <guiLabelString>Choose who should ignite this</guiLabelString>
-        <inspectString>Can be Ignited by a colonist.</inspectString>
+        <inspectString>Can be ignited by a colonist.</inspectString>
         <targetingParameters>
           <canTargetBuildings>false</canTargetBuildings>
           <canTargetAnimals>false</canTargetAnimals>
@@ -394,7 +394,7 @@
         <activateLabelString>Ignite...</activateLabelString>
         <activateDescString>Light the lychnos.</activateDescString>
         <guiLabelString>Choose who should ignite this</guiLabelString>
-        <inspectString>Can be Ignited by a colonist.</inspectString>
+        <inspectString>Can be ignited by a colonist.</inspectString>
         <targetingParameters>
           <canTargetBuildings>false</canTargetBuildings>
           <canTargetAnimals>false</canTargetAnimals>
@@ -427,7 +427,7 @@
         <activateLabelString>Ignite...</activateLabelString>
         <activateDescString>Light the lychnos.</activateDescString>
         <guiLabelString>Choose who should ignite this</guiLabelString>
-        <inspectString>Can be Ignited by a colonist.</inspectString>
+        <inspectString>Can be ignited by a colonist.</inspectString>
         <targetingParameters>
           <canTargetBuildings>false</canTargetBuildings>
           <canTargetAnimals>false</canTargetAnimals>
@@ -461,7 +461,7 @@
         <activateLabelString>Ignite...</activateLabelString>
         <activateDescString>Light the lychnos.</activateDescString>
         <guiLabelString>Choose who should ignite this</guiLabelString>
-        <inspectString>Can be Ignited by a colonist.</inspectString>
+        <inspectString>Can be ignited by a colonist.</inspectString>
         <targetingParameters>
           <canTargetBuildings>false</canTargetBuildings>
           <canTargetAnimals>false</canTargetAnimals>
@@ -540,6 +540,26 @@
     <building>
       <isEdifice>false</isEdifice>
     </building>
+    <comps>
+      <li Class="CompProperties_Interactable">
+        <compClass>MapVehiclesOcean.CompAncientBook</compClass>
+        <activeTicks>2147483647</activeTicks>
+        <soundActivate>MVO_PageFlip</soundActivate>
+        <ticksToActivate>60</ticksToActivate>
+        <activateTexPath>MapVehiclesOcean/UI/Icons/Fire</activateTexPath>
+        <jobString>interact</jobString>
+        <activateLabelString>interact...</activateLabelString>
+        <activateDescString>Interact with the ancient book.</activateDescString>
+        <guiLabelString>Choose who should interact this</guiLabelString>
+        <inspectString>Can be interacted by a colonist.</inspectString>
+        <targetingParameters>
+          <canTargetBuildings>false</canTargetBuildings>
+          <canTargetAnimals>false</canTargetAnimals>
+          <canTargetMechs>false</canTargetMechs>
+          <onlyTargetControlledPawns>true</onlyTargetControlledPawns>
+        </targetingParameters>
+      </li>
+    </comps>
   </ThingDef>
 
 </Defs>
