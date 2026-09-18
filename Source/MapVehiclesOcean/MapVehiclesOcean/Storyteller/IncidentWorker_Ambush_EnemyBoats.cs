@@ -21,7 +21,7 @@ public class IncidentWorker_Ambush_EnemyBoats : IncidentWorker_Ambush_EnemyMapVe
       IncidentParmsUtility.GetDefaultPawnGroupMakerParms(MVO_DefOf.MVO_ShipCombat, parms);
     defaultPawnGroupMakerParms.generateFightersOnly = true;
     defaultPawnGroupMakerParms.dontUseSingleUseRocketLaunchers = true;
-    return PawnGroupMakerUtility.GeneratePawns(defaultPawnGroupMakerParms).ToList();
+    return [.. PawnGroupMakerUtility.GeneratePawns(defaultPawnGroupMakerParms)];
   }
 
   protected override bool ValidRaiderVehicle(VehicleDef vehicleDef, VehicleCategory category,

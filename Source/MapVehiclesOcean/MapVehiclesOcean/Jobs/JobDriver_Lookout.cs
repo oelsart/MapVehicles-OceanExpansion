@@ -6,7 +6,6 @@ using Verse.AI;
 
 namespace MapVehiclesOcean;
 
-[HotSwap]
 public class JobDriver_Lookout : JobDriver_OperateScanner, IBodyOffsetJobDriver
 {
   public override Vector3 ForcedBodyOffset

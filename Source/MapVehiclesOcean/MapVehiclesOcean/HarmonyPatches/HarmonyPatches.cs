@@ -2,10 +2,8 @@
 using RimWorld;
 using RimWorld.Planet;
 using SmashTools;
-using SmashTools.Performance;
 using UnityEngine;
 using VehicleMapFramework;
-using VehicleMapFramework.VMF_HarmonyPatches;
 using Vehicles;
 using Vehicles.World;
 using Verse;

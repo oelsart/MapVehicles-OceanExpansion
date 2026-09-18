@@ -1,5 +1,4 @@
-﻿using LudeonTK;
-using UnityEngine;
+﻿using UnityEngine;
 using VehicleMapFramework;
 using VehicleMapFramework.VMF_HarmonyPatches;
 using Vehicles;
@@ -8,7 +7,6 @@ using Verse;
 namespace MapVehiclesOcean;
 
 [StaticConstructorOnStartup]
-[HotSwap]
 public sealed class CompSailEmblem : ThingComp
 {
   private static Material material;
@@ -57,6 +55,9 @@ public sealed class CompSailEmblem : ThingComp
 
   public override IEnumerable<Gizmo> CompGetGizmosExtra()
   {
+	  if (parent.Faction is not { IsPlayer: true } && !DebugSettings.godMode)
+		  yield break;
+	  
     yield return new Command_Action
     {
       defaultLabel = "MVO_SailEmblemChange".Translate(),
