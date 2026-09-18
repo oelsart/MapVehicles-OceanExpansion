@@ -1,13 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
   
-  <DesignationCategoryDef>
-    <defName>MVO_Dev</defName>
-    <label>MVO_Dev</label>
-  </DesignationCategoryDef>
+<!--  <DesignationCategoryDef>-->
+<!--    <defName>MVO_Dev</defName>-->
+<!--    <label>MVO_Dev</label>-->
+<!--  </DesignationCategoryDef>-->
   
   <ThingDef Name="MVO_AncientPropsBase" ParentName="BuildingBase" Abstract="True">
-    <designationCategory>MVO_Dev</designationCategory>
+<!--    <designationCategory>MVO_Dev</designationCategory>-->
     <building>
       <claimable>false</claimable>
     </building>
