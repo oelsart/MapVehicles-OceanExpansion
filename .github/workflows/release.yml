@@ -122,4 +122,4 @@ jobs:
         webhook: ${{ secrets.DISCORD_WEBHOOK_UPDATE }}
         title: 'Beta Update: ${{ github.ref_name }}'
         username: LS & Co. (GitHub Division)
-        url: "https://steamcommunity.com/sharedfiles/filedetails/?id=3803843677
+        url: "https://steamcommunity.com/sharedfiles/filedetails/?id=3803843677"

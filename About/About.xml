@@ -4,7 +4,7 @@
   <packageId>OELS.MapVehicles.OceanExpansion</packageId>
   <author>OELS</author>
   <description>A mod that adds a variety of marine experiences centered around four types of boats using the Vehicle Map Framework.</description>
-  <modVersion IgnoreIfNoMatchingField="True">1.6.0</modVersion>
+  <modVersion IgnoreIfNoMatchingField="True">1.6.2</modVersion>
   <supportedVersions>
     <li>1.5</li>
     <li>1.6</li>
