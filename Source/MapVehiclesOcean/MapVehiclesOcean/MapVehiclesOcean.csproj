@@ -16,23 +16,51 @@
 
   <ItemGroup>
     <PackageReference Include="Krafs.Rimworld.Ref" Version="1.6.*" />
+    <PackageReference Include="Nerdbank.GitVersioning" Version="3.10.94">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
   </ItemGroup>
 
-  <ItemGroup>
+  <PropertyGroup>
+    <SteamWorkshopRoot Condition="'$(SteamWorkshopRoot)' == ''">..\..\..\..\..\..\workshop\content\294100</SteamWorkshopRoot>
+  </PropertyGroup>
+
+  <ItemGroup Condition="'$(CIBuild)' != 'true'">
     <ProjectReference Include="..\..\..\..\VehicleMapFramework\Source\VehicleMapFramework\VehicleMapFramework.csproj">
       <Private>False</Private>
     </ProjectReference>
   </ItemGroup>
 
-  <ItemGroup>
-    <Reference Include="SmashTools">
-      <HintPath>..\..\..\..\..\..\..\workshop\content\294100\3014915404\1.6\Assemblies\SmashTools.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Vehicles">
-      <HintPath>..\..\..\..\..\..\..\workshop\content\294100\3014915404\1.6\Assemblies\Vehicles.dll</HintPath>
+  <ItemGroup Condition="'$(CIBuild)' == 'true'">
+    <Reference Include="VehicleMapFramework">
+      <HintPath>$(SteamWorkshopRoot)\3528683767\1.6\Assemblies\VehicleMapFramework.dll</HintPath>
       <Private>False</Private>
     </Reference>
   </ItemGroup>
+  
+  <PropertyGroup>
+    <VFFolder Condition="'$(CIBuild)' == 'true'">$(SteamWorkshopRoot)\3522907382</VFFolder>
+    <VFFolder Condition="'$(CIBuild)' != 'true'">..\..\..\..\Vehicle-Framework</VFFolder>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="SmashTools">
+      <HintPath>$(VFFolder)\1.6\Assemblies\SmashTools.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Vehicles">
+      <HintPath>$(VFFolder)\1.6\Assemblies\Vehicles.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  
+  <PropertyGroup>
+    <AboutFolderPath Condition="'$(AboutXmlPath)' == ''">../../../About</AboutFolderPath>
+  </PropertyGroup>
+  
+  <Target Name="UpdateVersion" AfterTargets="PostBuildEvent" Condition="'$(SkipPostBuild)' != 'true'">
+    <Exec Command="powershell.exe -ExecutionPolicy Bypass -File &quot;$(ProjectDir)UpdateAboutXmlVersion.ps1&quot; -AboutXmlPath &quot;$(AboutFolderPath)/About.xml&quot; -BuiltDllPath &quot;$(TargetPath)&quot;"/>
+  </Target>
 
 </Project>

@@ -1,12 +1,12 @@
 <loadFolders>
   <v1.6>
-    <li>Common</li>
+	<li>2022.3</li>
     <li>1.6</li>
 	<li IfModActive="Ludeon.RimWorld.Royalty">1.6/_Royalty</li>
 	<li IfModActive="Ludeon.RimWorld.Ideology">1.6/_Ideology</li>
 	<li IfModActive="Ludeon.RimWorld.Biotech">1.6/_Biotech</li>
 	<li IfModActive="Ludeon.RimWorld.Odyssey">1.6/_Odyssey</li>
-    <li IfModActive="CETeam.CombatExtended,CETeam.CombatExtended_steam">Common/_CE</li>
+    <li IfModActive="CETeam.CombatExtended,CETeam.CombatExtended_steam">1.6/_CE</li>
 	<li IfModNotActive="OELS.NanameWalls">NanameWalls/1.6</li>
   </v1.6>
 </loadFolders>
