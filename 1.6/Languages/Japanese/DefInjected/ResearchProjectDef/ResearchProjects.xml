@@ -91,7 +91,7 @@
   <MVO_OutboardMotor.generalRules.rulesStrings.2>subject_story-&gt;高トルクの電動船外機を設計し,穏やかな水面を航行できるようになった</MVO_OutboardMotor.generalRules.rulesStrings.2>
   <MVO_OutboardMotor.generalRules.rulesStrings.3>subject_gerund-&gt;船外機の製造</MVO_OutboardMotor.generalRules.rulesStrings.3>
 
-  <MVO_RaftPieceFloat.label>イカダのフロートパーツ</MVO_RaftPieceFloat.label>
+  <MVO_RaftPieceFloat.label>イカダフロートパーツ</MVO_RaftPieceFloat.label>
   <MVO_RaftPieceFloat.description>イカダの浮力を高める方法を学ぶ.</MVO_RaftPieceFloat.description>
   <MVO_RaftPieceFloat.generalRules.rulesStrings.0>subject-&gt;イカダの浮き</MVO_RaftPieceFloat.generalRules.rulesStrings.0>
   <MVO_RaftPieceFloat.generalRules.rulesStrings.1>subject_story-&gt;イカダの浮力を増加させよう</MVO_RaftPieceFloat.generalRules.rulesStrings.1>

@@ -91,6 +91,7 @@ jobs:
           2022.3
           About
           NanameWalls
+          DefaultSettings.xml
           LICENSE
           LoadFolders.xml
     
@@ -112,7 +113,7 @@ jobs:
         configVdf: ${{ secrets.STEAM_CONFIG_VDF }}
         path: MapVehiclesOcean
         appId: 294100
-        publishedFileId: 3528683767
+        publishedFileId: 3803843677
         changeNote: ${{ github.ref_name }}
 
     - name: Discord Notification
@@ -121,4 +122,4 @@ jobs:
         webhook: ${{ secrets.DISCORD_WEBHOOK_UPDATE }}
         title: 'Beta Update: ${{ github.ref_name }}'
         username: LS & Co. (GitHub Division)
-        url: "https://steamcommunity.com/sharedfiles/filedetails/?id=3528683767"
+        url: "https://steamcommunity.com/sharedfiles/filedetails/?id=3803843677
