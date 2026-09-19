@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VehicleMapFramework", "..\.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "..\MVO_Unity\Assembly-CSharp.csproj", "{E07781C7-DB1A-2616-E9C4-89BB8288D2E1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test_NUnit", "..\..\..\VehicleMapFramework\Source\Test_NUnit\Test_NUnit.csproj", "{3C7BB5F1-0377-4F83-A49C-DBAB8B5A3974}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,12 @@ Global
 		{E07781C7-DB1A-2616-E9C4-89BB8288D2E1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{E07781C7-DB1A-2616-E9C4-89BB8288D2E1}.Dev|Any CPU.ActiveCfg = Debug|Any CPU
 		{E07781C7-DB1A-2616-E9C4-89BB8288D2E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3C7BB5F1-0377-4F83-A49C-DBAB8B5A3974}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3C7BB5F1-0377-4F83-A49C-DBAB8B5A3974}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3C7BB5F1-0377-4F83-A49C-DBAB8B5A3974}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3C7BB5F1-0377-4F83-A49C-DBAB8B5A3974}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3C7BB5F1-0377-4F83-A49C-DBAB8B5A3974}.Dev|Any CPU.ActiveCfg = Dev|Any CPU
+		{3C7BB5F1-0377-4F83-A49C-DBAB8B5A3974}.Dev|Any CPU.Build.0 = Dev|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
