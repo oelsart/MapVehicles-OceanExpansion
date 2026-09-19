@@ -51,6 +51,9 @@
       <drawSize>2</drawSize>
     </graphicData>
     <uiIconPath>MapVehiclesOcean/Things/RaftPiece/Blueprint_RaftPiece_east</uiIconPath>
+    <statBases>
+      <WorkToBuild>100</WorkToBuild>
+    </statBases>
     <costList>
       <WoodLog>15</WoodLog>
     </costList>
@@ -110,6 +113,9 @@
       <drawSize>2</drawSize>
     </graphicData>
     <uiIconPath>MapVehiclesOcean/Things/RaftPiece/Blueprint_RaftPieceFloat_east</uiIconPath>
+    <statBases>
+      <WorkToBuild>200</WorkToBuild>
+    </statBases>
     <costList>
       <WoodLog>15</WoodLog>
       <Chemfuel>20</Chemfuel>
@@ -206,6 +212,7 @@
     <statBases>
       <MaxHitPoints>150</MaxHitPoints>
       <Mass>120</Mass>
+      <WorkToBuild>1000</WorkToBuild>
     </statBases>
     <uiIconPathsStuff>
       <li>
@@ -306,6 +313,7 @@
     <statBases>
       <MaxHitPoints>300</MaxHitPoints>
       <Mass>220</Mass>
+      <WorkToBuild>2000</WorkToBuild>
     </statBases>
     <uiIconPathsStuff>
       <li>
@@ -406,6 +414,7 @@
     <statBases>
       <MaxHitPoints>450</MaxHitPoints>
       <Mass>330</Mass>
+      <WorkToBuild>3000</WorkToBuild>
     </statBases>
     <uiIconPathsStuff>
       <li>
@@ -507,7 +516,7 @@
     <rotatable>false</rotatable>
     <statBases>
       <MaxHitPoints>100</MaxHitPoints>
-      <WorkToBuild>6000</WorkToBuild>
+      <WorkToBuild>300</WorkToBuild>
       <Beauty>3</Beauty>
       <Mass>25</Mass>
     </statBases>
@@ -633,6 +642,12 @@
     <passability>PassThroughOnly</passability>
     <fillPercent>0.3</fillPercent>
     <rotatable>false</rotatable>
+    <statBases>
+      <MaxHitPoints>200</MaxHitPoints>
+      <Beauty>-1</Beauty>
+      <Mass>20</Mass>
+      <WorkToBuild>1000</WorkToBuild>
+    </statBases>
     <costList>
       <Steel>60</Steel>
       <ComponentIndustrial>10</ComponentIndustrial>
@@ -700,6 +715,8 @@
     <statBases>
       <MaxHitPoints>50</MaxHitPoints>
       <Mass>5</Mass>
+      <Flammability>0.75</Flammability>
+      <WorkToBuild>100</WorkToBuild>
     </statBases>
     <fillPercent>0.1</fillPercent>
     <costList>
@@ -787,11 +804,11 @@
     </building>
     <passability>Standable</passability>
     <statBases>
-      <MaxHitPoints>90</MaxHitPoints>
+      <MaxHitPoints>200</MaxHitPoints>
       <Flammability>0.75</Flammability>
-      <WorkToBuild>1600</WorkToBuild>
+      <WorkToBuild>800</WorkToBuild>
       <Mass>20</Mass>
-      <Beauty>-20</Beauty>
+      <Beauty>-5</Beauty>
       <ShootingAccuracyTurret>1</ShootingAccuracyTurret>
     </statBases>
     <fillPercent>0.2</fillPercent>
@@ -948,7 +965,7 @@
     <statBases>
       <MaxHitPoints>180</MaxHitPoints>
       <WorkToBuild>350</WorkToBuild>
-      <Mass>0.1</Mass>
+      <Mass>1</Mass>
     </statBases>
     <costList>
       <Steel>10</Steel>
@@ -986,9 +1003,10 @@
       </shadowData>
     </graphicData>
     <statBases>
-      <MaxHitPoints>150</MaxHitPoints>
+      <MaxHitPoints>200</MaxHitPoints>
       <WorkToBuild>1000</WorkToBuild>
       <Mass>40</Mass>
+      <Flammability>0.4</Flammability>
     </statBases>
     <fillPercent>0.35</fillPercent>
     <costList>
@@ -1047,8 +1065,8 @@
     <size>(3,3)</size>
     <rotatable>false</rotatable>
     <statBases>
-      <MaxHitPoints>200</MaxHitPoints>
-      <WorkToBuild>8000</WorkToBuild>
+      <MaxHitPoints>300</MaxHitPoints>
+      <WorkToBuild>3000</WorkToBuild>
       <Mass>20</Mass>
     </statBases>
     <coversFloor>true</coversFloor>
@@ -1135,6 +1153,9 @@
     <useHitPoints>false</useHitPoints>
     <noRightClickDraftAttack>true</noRightClickDraftAttack>
     <useBlueprintGraphicAsGhost>true</useBlueprintGraphicAsGhost>
+    <statBases>
+      <WorkToBuild>0</WorkToBuild>
+    </statBases>
     <building>
       <isEdifice>false</isEdifice>
       <blueprintGraphicData>
@@ -1174,7 +1195,7 @@
       <paintable>true</paintable>
     </building>
     <statBases>
-      <MaxHitPoints>80</MaxHitPoints>
+      <MaxHitPoints>90</MaxHitPoints>
       <Beauty>-2</Beauty>
       <WorkToBuild>150</WorkToBuild>
       <Mass>3</Mass>

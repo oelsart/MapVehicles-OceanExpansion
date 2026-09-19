@@ -43,9 +43,11 @@ public static class Patch_WaterBody_Size
 [HarmonyPatch(typeof(EnterMapUtilityVehicles), nameof(EnterMapUtilityVehicles.EnterMap))]
 public static class Patch_EnterMapUtilityVehicles_EnterMap
 {
-  public static void Prefix(Map map, ref EnterMapUtilityVehicles.SpawnParams spawnParams)
+  public static void Prefix(VehicleCaravan caravan, Map map, ref EnterMapUtilityVehicles.SpawnParams spawnParams)
   {
-    if (map?.Tile.Tile?.Landmark?.def == MVO_DefOf.MVO_OceanIsland)
+    if ((map?.Tile.Tile?.Mutators?.Any(def => def == MVO_DefOf.MVO_Island) ?? false) ||
+        map is not { Biome.isWaterBiome: true } &&
+        caravan.Vehicles.Any(v => v.VehicleDef.type == VehicleType.Sea))
     {
       spawnParams.enterMode = CaravanEnterMode.Edge;
     }
