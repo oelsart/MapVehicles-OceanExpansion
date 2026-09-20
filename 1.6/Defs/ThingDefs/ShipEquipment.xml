@@ -1156,6 +1156,9 @@
     <statBases>
       <WorkToBuild>0</WorkToBuild>
     </statBases>
+    <researchPrerequisites>
+      <li>Fishing</li>
+    </researchPrerequisites>
     <building>
       <isEdifice>false</isEdifice>
       <blueprintGraphicData>

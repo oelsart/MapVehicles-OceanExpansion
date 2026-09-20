@@ -32,7 +32,6 @@
     <techLevel>Medieval</techLevel>
     <researchViewX>1.00</researchViewX>
     <researchViewY>1.00</researchViewY>
-    <techprintMarketValue>400</techprintMarketValue>
     <prerequisites>
       <li>MVO_ExpandableRaft</li>
     </prerequisites>
