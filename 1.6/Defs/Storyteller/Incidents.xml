@@ -1,5 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
+  
+  <IncidentDef ParentName="GiveQuestBase">
+    <defName>MVO_GiveQuest_TheIsland</defName>
+    <label>the "Island"</label>
+    <letterLabel>The "Island"</letterLabel>
+    <questScriptDef>MVO_TheIsland</questScriptDef>
+    <baseChance>0</baseChance> <!-- given by a special storyteller comp -->
+  </IncidentDef>
 
   <IncidentDef>
     <defName>MVO_SeaAmbush</defName>

@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/StorytellerDef[not(@Abstract="true" or @Abstract="True" or @Abstract="TRUE")]/comps</xpath>
+    <value>
+      <li Class="StorytellerCompProperties_SingleOnceFixed">
+        <fireAfterDaysPassed>7</fireAfterDaysPassed>
+        <incident>MVO_GiveQuest_TheIsland</incident>
+        <allowedTargetTags>
+          <li>World</li>
+        </allowedTargetTags>
+      </li>
+    </value>
+  </Operation>
+  
+</Patch>

@@ -1,6 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
 
+  <MVO_GiveQuest_TheIsland.label>「島」</MVO_GiveQuest_TheIsland.label>
+  <MVO_GiveQuest_TheIsland.letterLabel>「島」</MVO_GiveQuest_TheIsland.letterLabel>
   <MVO_SeaAmbush.label>アンブッシュ</MVO_SeaAmbush.label>
   <MVO_SeaAmbush.letterLabel>アンブッシュ</MVO_SeaAmbush.letterLabel>
   <MVO_SeaAmbush.letterText>{0}は　{2}の{1}に奇襲を受けた!</MVO_SeaAmbush.letterText>
