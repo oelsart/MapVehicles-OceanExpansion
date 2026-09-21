@@ -713,14 +713,14 @@
     <altitudeLayer>Pawn</altitudeLayer>
     <uiIconScale>0.666667</uiIconScale>
     <statBases>
-      <MaxHitPoints>50</MaxHitPoints>
+      <MaxHitPoints>70</MaxHitPoints>
       <Mass>5</Mass>
       <Flammability>0.75</Flammability>
       <WorkToBuild>100</WorkToBuild>
     </statBases>
     <fillPercent>0.1</fillPercent>
     <costList>
-      <WoodLog>75</WoodLog>
+      <WoodLog>40</WoodLog>
     </costList>
     <comps>
       <li Class="VehicleMapFramework.CompProperties_BuildableUpgrades">
@@ -1014,6 +1014,9 @@
       <Steel>10</Steel>
       <ComponentIndustrial>3</ComponentIndustrial>
     </costList>
+    <researchPrerequisites>
+      <li>MVO_Keel</li>
+    </researchPrerequisites>
     <comps>
       <li Class="VehicleMapFramework.CompProperties_BuildableUpgrades">
         <compClass>VehicleMapFramework.CompVehicleSeat</compClass>
@@ -1078,6 +1081,9 @@
     <surfaceType>Item</surfaceType>
     <canOverlapZones>false</canOverlapZones>
     <preventDroppingThingsOn>true</preventDroppingThingsOn>
+    <researchPrerequisites>
+      <li>MVO_Keel</li>
+    </researchPrerequisites>
     <building>
       <preventDeteriorationOnTop>true</preventDeteriorationOnTop>
       <ignoreStoredThingsBeauty>true</ignoreStoredThingsBeauty>

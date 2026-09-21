@@ -11,10 +11,10 @@
   </supportedVersions>
   <modDependencies>
     <li>
-      <packageId>OELS.VehicleMapFramework.dev</packageId>
-      <!-- <alternativePackageIds IgnoreIfNoMatchingField="True"> -->
-      <!-- <li>OELS.VehicleMapFramework.dev</li> -->
-      <!-- </alternativePackageIds> -->
+      <packageId>OELS.VehicleMapFramework</packageId>
+      <alternativePackageIds IgnoreIfNoMatchingField="True">
+        <li>OELS.VehicleMapFramework.dev</li>
+      </alternativePackageIds>
       <displayName>Vehicle Map Framework</displayName>
       <downloadUrl>https://github.com/oelsart/VehicleMapFramework</downloadUrl>
     </li>

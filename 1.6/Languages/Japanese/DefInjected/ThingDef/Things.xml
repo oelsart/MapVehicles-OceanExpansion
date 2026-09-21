@@ -106,13 +106,13 @@
   <MVO_RaftPieceFloat.description>イカダのパーツです.イカダを拡張するために使用できます.浮きが取り付けられています.\n\n&lt;color=#bb8f04&gt;最大積載量:&lt;/color&gt; +150 kg\n&lt;color=#bb8f04&gt;イカダの耐久値: +10&lt;/color&gt;</MVO_RaftPieceFloat.description>
 
   <MVO_RigOneTiered.label>帆装 I</MVO_RigOneTiered.label>
-  <MVO_RigOneTiered.description>船用のマスト,ヤード,帆などの一式です.船の速度が向上し,見張り台を設置できるようになります.&lt;color=#bb8f04&gt;移動速度:&lt;/color&gt; +1</MVO_RigOneTiered.description>
+  <MVO_RigOneTiered.description>船用のマスト,ヤード,帆などの一式です.船の速度が向上し,見張り台を設置できるようになります.\n\n&lt;color=#bb8f04&gt;移動速度:&lt;/color&gt; +1</MVO_RigOneTiered.description>
   
   <MVO_RigTwoTiered.label>帆装 II</MVO_RigTwoTiered.label>
-  <MVO_RigTwoTiered.description>船用のマスト,ヤード,帆などの一式です.船の速度が向上し,見張り台を設置できるようになります.&lt;color=#bb8f04&gt;移動速度:&lt;/color&gt; +2</MVO_RigTwoTiered.description>
+  <MVO_RigTwoTiered.description>船用のマスト,ヤード,帆などの一式です.船の速度が向上し,見張り台を設置できるようになります.\n\n&lt;color=#bb8f04&gt;移動速度:&lt;/color&gt; +2</MVO_RigTwoTiered.description>
   
   <MVO_RigThreeTiered.label>帆装 III</MVO_RigThreeTiered.label>
-  <MVO_RigThreeTiered.description>船用のマスト,ヤード,帆などの一式です.船の速度が向上し,見張り台を設置できるようになります.&lt;color=#bb8f04&gt;移動速度:&lt;/color&gt; +3</MVO_RigThreeTiered.description>
+  <MVO_RigThreeTiered.description>船用のマスト,ヤード,帆などの一式です.船の速度が向上し,見張り台を設置できるようになります.\n\n&lt;color=#bb8f04&gt;移動速度:&lt;/color&gt; +3</MVO_RigThreeTiered.description>
 
   <MVO_Turret_GrapplingLauncher.label>グラップリングランチャー</MVO_Turret_GrapplingLauncher.label>
   <MVO_Turret_GrapplingLauncher.comps.1.jobString>射出</MVO_Turret_GrapplingLauncher.comps.1.jobString>
