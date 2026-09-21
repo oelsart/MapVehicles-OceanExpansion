@@ -1176,7 +1176,7 @@
       <li Class="MapVehiclesOcean.CompProperties_FishingSpot"/>
     </comps>
     <placeWorkers>
-      <li>VehicleMapFramework.PlaceWorker_ForceOnVehicleMapEdgeReverse</li>
+      <li>VehicleMapFramework.PlaceWorker_ForceOnVehicleMapEdgeOpposite</li>
     </placeWorkers>
   </ThingDef>
 
@@ -1223,7 +1223,7 @@
       </li>
     </comps>
     <placeWorkers>
-      <li>VehicleMapFramework.PlaceWorker_ForceOnVehicleMapEdgeReverse</li>
+      <li>VehicleMapFramework.PlaceWorker_ForceOnVehicleMapEdgeOpposite</li>
     </placeWorkers>
   </ThingDef>
 
