@@ -110,10 +110,8 @@ public class CompAncientBook : CompInteractable
 		sustainer ??= MVO_DefOf.MVO_EarthRumble.TrySpawnSustainer(SoundInfo.OnCamera(MaintenanceType.PerFrame));
 		if (sustainer is { Ended: false})
 			sustainer.Maintain();
-		var transform = Find.WorldCamera.transform;
-		var shakeOffset = shaker.ShakeOffset;
-		var offset = transform.right * shakeOffset.x + transform.up * shakeOffset.z;
-		transform.position += offset;
+		
+		Find.WorldCamera.transform.Translate(shaker.ShakeOffset.ToVector2());
 		return;
 		
 		void DoGroundUplift()

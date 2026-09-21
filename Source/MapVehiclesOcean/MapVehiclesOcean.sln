@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "..\MVO_U
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test_NUnit", "..\..\..\VehicleMapFramework\Source\Test_NUnit\Test_NUnit.csproj", "{3C7BB5F1-0377-4F83-A49C-DBAB8B5A3974}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test_DevTools", "..\..\..\VehicleMapFramework\Source\Test_DevTools\Test_DevTools.csproj", "{CC8B7CAE-3E4C-4D47-ABCA-4F7DC1F465D8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -47,6 +49,12 @@ Global
 		{3C7BB5F1-0377-4F83-A49C-DBAB8B5A3974}.Release|Any CPU.Build.0 = Release|Any CPU
 		{3C7BB5F1-0377-4F83-A49C-DBAB8B5A3974}.Dev|Any CPU.ActiveCfg = Dev|Any CPU
 		{3C7BB5F1-0377-4F83-A49C-DBAB8B5A3974}.Dev|Any CPU.Build.0 = Dev|Any CPU
+		{CC8B7CAE-3E4C-4D47-ABCA-4F7DC1F465D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC8B7CAE-3E4C-4D47-ABCA-4F7DC1F465D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CC8B7CAE-3E4C-4D47-ABCA-4F7DC1F465D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CC8B7CAE-3E4C-4D47-ABCA-4F7DC1F465D8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CC8B7CAE-3E4C-4D47-ABCA-4F7DC1F465D8}.Dev|Any CPU.ActiveCfg = Dev|Any CPU
+		{CC8B7CAE-3E4C-4D47-ABCA-4F7DC1F465D8}.Dev|Any CPU.Build.0 = Dev|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
