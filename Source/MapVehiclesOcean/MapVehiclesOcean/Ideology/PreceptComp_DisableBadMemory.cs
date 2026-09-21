@@ -10,7 +10,9 @@ public abstract class PreceptComp_DisableBadMemory : PreceptComp
   public override void Notify_AddBedThoughts(Pawn pawn, Precept precept)
   {
     var memories = pawn.needs.mood.thoughts.memories;
-    if (memories.GetFirstMemoryOfDef(ThoughtDef) is { moodOffset: < 0 })
-      memories.RemoveMemoriesOfDef(ThoughtDef);
+    if (memories.GetFirstMemoryOfDef(ThoughtDef)?.MoodOffset() < 0)
+    {
+	    memories.RemoveMemoriesOfDef(ThoughtDef);
+    }
   }
 }
