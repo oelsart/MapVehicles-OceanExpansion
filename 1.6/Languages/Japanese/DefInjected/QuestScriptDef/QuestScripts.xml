@@ -106,7 +106,7 @@
   <MVO_Shipwreck.LetterLabelQuestExpired.slateRef>クエスト期限切れ: [resolvedQuestName]</MVO_Shipwreck.LetterLabelQuestExpired.slateRef>
   <MVO_Shipwreck.LetterTextQuestExpired.slateRef>他の者たちが難破船を漁っていきました.クエスト[resolvedQuestName]の期限が切れました.</MVO_Shipwreck.LetterTextQuestExpired.slateRef>
   
-  <MVO_TheIsland.questDescriptionRules.rulesStrings.0>questDescription-&gt;この惑星には「島」に関する伝説があります.そこには計り知れない宝が眠っていると言われていますが,その島の正確な場所すら誰も知りません.\n\n富か,力か,それとも……まあ,いずれにせよ調べる価値はありそうです.</MVO_TheIsland.questDescriptionRules.rulesStrings.0>
+  <MVO_TheIsland.questDescriptionRules.rulesStrings.0>questDescription-&gt;この惑星には「島」に関する伝説があります.そこには計り知れない宝が眠っていると言われていますが,その島の正確な場所すら誰も知りません.\n\n富か,力か,それとも……まあ,いずれにせよ調べる価値はありそうです.この世界に点在する"地図に無い島々"にその手がかりがあるようです.</MVO_TheIsland.questDescriptionRules.rulesStrings.0>
   <MVO_TheIsland.questNameRules.rulesStrings.0>questName-&gt;「島」</MVO_TheIsland.questNameRules.rulesStrings.0>
   <MVO_TheIsland.LetterLabelIslandExistence.slateRef>[resolvedQuestName]: 実在</MVO_TheIsland.LetterLabelIslandExistence.slateRef>
   <MVO_TheIsland.LetterTextIslandExistence.slateRef>伝説の「島」は実在した.この石碑には,かつてそこに暮らしていた人々の生活が記録されているようだ.</MVO_TheIsland.LetterTextIslandExistence.slateRef>

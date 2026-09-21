@@ -13,8 +13,7 @@
     </questNameRules>
     <questDescriptionRules>
       <rulesStrings>
-        <li>questDescription->There is a legend about an "island" on this planet. It is said that treasures beyond measure lie buried there, yet no one even knows the island's location.\nIs it wealth, or power, or... well, it seems worth looking into anyway.
-        </li>
+        <li>questDescription->There is a legend about an "island" on this planet. It is said that treasures beyond measure lie buried there, yet no one even knows the island's location.\nIs it wealth, or power, or... well, it seems worth looking into anyway.\n\nIt appears that the clues lie on the "uncharted islands" scattered throughout this world.</li>
       </rulesStrings>
     </questDescriptionRules>
     <root Class="QuestNode_Sequence">

@@ -523,6 +523,9 @@
     <hasInteractionCell>true</hasInteractionCell>
     <interactionCellOffset>(0,0,-1)</interactionCellOffset>
     <useBlueprintGraphicAsGhost>true</useBlueprintGraphicAsGhost>
+    <costList>
+      <WoodLog>120</WoodLog>
+    </costList>
     <building>
       <isEdifice>false</isEdifice>
       <blueprintGraphicData>
