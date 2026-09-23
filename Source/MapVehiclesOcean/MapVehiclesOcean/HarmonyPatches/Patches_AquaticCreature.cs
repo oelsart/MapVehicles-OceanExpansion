@@ -90,7 +90,7 @@ public static class Patch_PathFinderMapData_ParameterizeGridJob
 	
 	public static void Postfix(PathRequest request, Map ___map, ref PathGridJob job)
 	{
-		if (AquaticCreature.IsAquatic(request.pawn))
+		if (request.pawn is not null && AquaticCreature.IsAquatic(request.pawn))
 		{
 			var waterCost = waterCostTable.GetValue(___map, m =>
 			{
