@@ -79,7 +79,7 @@
       </li>
       <li Class="StockGenerator_Tag">
         <tradeTag>MVO_TradeGoods</tradeTag>
-        <thingDefCountRange>50~150</thingDefCountRange>
+        <thingDefCountRange>10~50</thingDefCountRange>
       </li>
 
       <!-- Drugs -->

@@ -7,7 +7,7 @@
     <value>
       <li Class="StockGenerator_Tag">
         <tradeTag>MVO_TradeGoods</tradeTag>
-        <countRange>50~150</countRange>
+        <countRange>10~50</countRange>
       </li>
     </value>
   </Operation>
