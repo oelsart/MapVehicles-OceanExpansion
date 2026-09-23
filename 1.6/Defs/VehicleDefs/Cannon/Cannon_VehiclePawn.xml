@@ -45,7 +45,6 @@
     <properties>
       <customTerrainCosts DisallowTerrainWithTag="Water"/>
       <customRoadCosts AssignDefaults="0.4"/>
-      <visibilityWeight>4.5</visibilityWeight>
 
       <vehicleJobLimitations>
         <li>(RepairVehicle, 1)</li>

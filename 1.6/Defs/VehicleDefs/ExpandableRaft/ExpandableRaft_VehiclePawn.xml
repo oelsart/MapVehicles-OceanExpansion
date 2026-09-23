@@ -51,6 +51,7 @@
       <manhunterTargetsVehicle>true</manhunterTargetsVehicle>
       <winterSpeedMultiplier>1</winterSpeedMultiplier>
       <riverCost>1</riverCost>
+      <visibilityWeight>3</visibilityWeight>
 
       <track Class="Vehicles.VehicleTrack_Wake">
         <speed>1</speed>
