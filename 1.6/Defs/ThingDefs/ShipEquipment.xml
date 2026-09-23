@@ -526,6 +526,7 @@
     <costList>
       <WoodLog>120</WoodLog>
     </costList>
+    <clearBuildingArea>false</clearBuildingArea>
     <building>
       <isEdifice>false</isEdifice>
       <blueprintGraphicData>
