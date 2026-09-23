@@ -25,8 +25,8 @@
     <letterDef>ThreatBig</letterDef>
     <tale>CaravanAmbushedByHumanlike</tale>
     <mtbDaysByBiome>
-      <Ocean>15</Ocean>
-      <Lake>15</Lake>
+      <Ocean>7.5</Ocean>
+      <Lake>7.5</Lake>
     </mtbDaysByBiome>
   </IncidentDef>
   
@@ -46,8 +46,8 @@
     <letterDef>ThreatBig</letterDef>
     <tale>CaravanAmbushedByManhunter</tale>
     <mtbDaysByBiome>
-      <Ocean>15</Ocean>
-      <Lake>15</Lake>
+      <Ocean>7.5</Ocean>
+      <Lake>7.5</Lake>
     </mtbDaysByBiome>
   </IncidentDef>
   

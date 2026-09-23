@@ -55,7 +55,7 @@
       <WorkToBuild>100</WorkToBuild>
     </statBases>
     <costList>
-      <WoodLog>15</WoodLog>
+      <WoodLog>10</WoodLog>
     </costList>
     <building>
       <blueprintGraphicData>
@@ -117,7 +117,7 @@
       <WorkToBuild>200</WorkToBuild>
     </statBases>
     <costList>
-      <WoodLog>15</WoodLog>
+      <WoodLog>10</WoodLog>
       <Chemfuel>20</Chemfuel>
     </costList>
     <building>

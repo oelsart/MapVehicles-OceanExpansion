@@ -46,10 +46,10 @@ public class CompFishingSpot : ThingComp
     var map = parent.Map;
     WaterBodyType waterBodyType;
     bool polluted;
-    if (vehicle.Spawned)
+    IntVec3 baseCell;
+    Map map2;
+    if (vehicle.Spawned && (baseCell = cell.ToBaseMapCoord(vehicle)).InBounds(map2 = vehicle.Map))
     {
-      var map2 = vehicle.Map;
-      var baseCell = cell.ToBaseMapCoord(vehicle);
       waterBodyType = baseCell.GetTerrain(map2)?.waterBodyType ?? WaterBodyType.None;
       polluted = baseCell.IsPolluted(map2);
     }
