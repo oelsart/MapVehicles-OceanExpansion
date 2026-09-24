@@ -12,6 +12,7 @@
     <techLevel>Medieval</techLevel>
     <statBases>
       <Mass>1</Mass>
+      <MarketValue>150</MarketValue>
       <WorkToMake>7000</WorkToMake>
       <Flammability>0.8</Flammability>
       <EquipDelay>2</EquipDelay>
@@ -168,6 +169,7 @@
     <techLevel>Medieval</techLevel>
     <statBases>
       <Mass>1</Mass>
+      <MarketValue>90</MarketValue>
       <WorkToMake>7000</WorkToMake>
       <Flammability>1.0</Flammability>
       <EquipDelay>2</EquipDelay>
@@ -266,6 +268,7 @@
     </thingCategories>
     <statBases>
       <MaxHitPoints>100</MaxHitPoints>
+      <MarketValue>100</MarketValue>
       <WorkToMake>2200</WorkToMake>
       <Mass>0.35</Mass>
       <StuffEffectMultiplierArmor>0.2</StuffEffectMultiplierArmor>
@@ -327,6 +330,7 @@
     </thingCategories>
     <statBases>
       <MaxHitPoints>100</MaxHitPoints>
+      <MarketValue>80</MarketValue>
       <WorkToMake>2000</WorkToMake>
       <Mass>0.3</Mass>
       <StuffEffectMultiplierArmor>0.2</StuffEffectMultiplierArmor>
@@ -387,6 +391,7 @@
     </stuffCategories>
     <statBases>
       <MaxHitPoints>60</MaxHitPoints>
+      <MarketValue>40</MarketValue>
       <WorkToMake>1000</WorkToMake>
       <Mass>0.07</Mass>
       <StuffEffectMultiplierArmor>0.1</StuffEffectMultiplierArmor>
@@ -451,6 +456,7 @@
     </stuffCategories>
     <statBases>
       <MaxHitPoints>120</MaxHitPoints>
+      <MarketValue>65</MarketValue>
       <WorkToMake>2000</WorkToMake>
       <Mass>0.14</Mass>
       <StuffEffectMultiplierArmor>0.2</StuffEffectMultiplierArmor>

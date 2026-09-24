@@ -28,7 +28,7 @@
       <ArmorRating_Sharp>0.2</ArmorRating_Sharp>
       <ArmorRating_Heat>0.4</ArmorRating_Heat>
       <Flammability>1.0</Flammability>
-      <MarketValue>500</MarketValue>
+      <MarketValue>2000</MarketValue>
     </statBases>
 
     <vehicleStats>
@@ -39,7 +39,7 @@
       <MaximumPayload>450</MaximumPayload>
     </vehicleStats>
 
-    <combatPower>50</combatPower>
+    <combatPower>20</combatPower>
 
     <race>
       <baseBodySize>4</baseBodySize>

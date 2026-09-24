@@ -20,6 +20,7 @@
     </thingSetMakerTags>
     <statBases>
       <WorkToMake>16000</WorkToMake>
+      <MarketValue>80</MarketValue>
       <Mass>1.4</Mass>
     </statBases>
     <equippedAngleOffset>-65</equippedAngleOffset>

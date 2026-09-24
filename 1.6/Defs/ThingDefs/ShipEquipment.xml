@@ -52,6 +52,7 @@
     </graphicData>
     <uiIconPath>MapVehiclesOcean/Things/RaftPiece/Blueprint_RaftPiece_east</uiIconPath>
     <statBases>
+      <MarketValue>100</MarketValue>
       <WorkToBuild>100</WorkToBuild>
     </statBases>
     <costList>
@@ -114,6 +115,7 @@
     </graphicData>
     <uiIconPath>MapVehiclesOcean/Things/RaftPiece/Blueprint_RaftPieceFloat_east</uiIconPath>
     <statBases>
+      <MarketValue>130</MarketValue>
       <WorkToBuild>200</WorkToBuild>
     </statBases>
     <costList>
@@ -211,6 +213,7 @@
     </graphicData>
     <statBases>
       <MaxHitPoints>150</MaxHitPoints>
+      <MarketValue>500</MarketValue>
       <Mass>120</Mass>
       <WorkToBuild>1000</WorkToBuild>
     </statBases>
@@ -312,6 +315,7 @@
     </graphicData>
     <statBases>
       <MaxHitPoints>300</MaxHitPoints>
+      <MarketValue>1000</MarketValue>
       <Mass>220</Mass>
       <WorkToBuild>2000</WorkToBuild>
     </statBases>
@@ -413,6 +417,7 @@
     </graphicData>
     <statBases>
       <MaxHitPoints>450</MaxHitPoints>
+      <MarketValue>1500</MarketValue>
       <Mass>330</Mass>
       <WorkToBuild>3000</WorkToBuild>
     </statBases>
@@ -516,6 +521,7 @@
     <rotatable>false</rotatable>
     <statBases>
       <MaxHitPoints>100</MaxHitPoints>
+      <MarketValue>300</MarketValue>
       <WorkToBuild>300</WorkToBuild>
       <Beauty>3</Beauty>
       <Mass>25</Mass>
@@ -648,6 +654,7 @@
     <rotatable>false</rotatable>
     <statBases>
       <MaxHitPoints>200</MaxHitPoints>
+      <MarketValue>600</MarketValue>
       <Beauty>-1</Beauty>
       <Mass>20</Mass>
       <WorkToBuild>1000</WorkToBuild>
@@ -718,6 +725,7 @@
     <uiIconScale>0.666667</uiIconScale>
     <statBases>
       <MaxHitPoints>70</MaxHitPoints>
+      <MarketValue>75</MarketValue>
       <Mass>5</Mass>
       <Flammability>0.75</Flammability>
       <WorkToBuild>100</WorkToBuild>
@@ -809,6 +817,7 @@
     <passability>Standable</passability>
     <statBases>
       <MaxHitPoints>200</MaxHitPoints>
+      <MarketValue>350</MarketValue>
       <Flammability>0.75</Flammability>
       <WorkToBuild>800</WorkToBuild>
       <Mass>20</Mass>
@@ -968,6 +977,7 @@
     </graphicData>
     <statBases>
       <MaxHitPoints>180</MaxHitPoints>
+      <MarketValue>50</MarketValue>
       <WorkToBuild>350</WorkToBuild>
       <Mass>1</Mass>
     </statBases>
@@ -1008,6 +1018,7 @@
     </graphicData>
     <statBases>
       <MaxHitPoints>200</MaxHitPoints>
+      <MarketValue>150</MarketValue>
       <WorkToBuild>1000</WorkToBuild>
       <Mass>40</Mass>
       <Flammability>0.4</Flammability>
@@ -1073,6 +1084,7 @@
     <rotatable>false</rotatable>
     <statBases>
       <MaxHitPoints>300</MaxHitPoints>
+      <MarketValue>250</MarketValue>
       <WorkToBuild>3000</WorkToBuild>
       <Mass>20</Mass>
     </statBases>
@@ -1209,6 +1221,7 @@
     </building>
     <statBases>
       <MaxHitPoints>90</MaxHitPoints>
+      <MarketValue>30</MarketValue>
       <Beauty>-2</Beauty>
       <WorkToBuild>150</WorkToBuild>
       <Mass>3</Mass>
