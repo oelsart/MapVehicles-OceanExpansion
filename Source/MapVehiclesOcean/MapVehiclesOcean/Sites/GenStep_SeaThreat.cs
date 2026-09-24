@@ -20,13 +20,16 @@ public class GenStep_SeaThreat : GenStep_MapVehicleThreat
 
   protected override List<Pawn> GeneratePawns(Faction faction, SitePart sitePart)
   {
-    return PawnGroupMakerUtility.GeneratePawns(new PawnGroupMakerParms
-    {
-      groupKind = PawnGroupKindDefOf.Combat,
-      tile = sitePart.site.Tile,
-      faction = faction,
-      points = Mathf.Max(sitePart.parms.points,
-        faction.def.MinPointsToGeneratePawnGroup(MVO_DefOf.MVO_ShipCombat))
-    }).ToList();
+	  var kindDef = ShipCombatUtility.PawnGroupKindFor(faction);
+    return
+    [
+	    .. PawnGroupMakerUtility.GeneratePawns(new PawnGroupMakerParms
+	    {
+		    groupKind = kindDef,
+		    tile = sitePart.site.Tile,
+		    faction = faction,
+		    points = Mathf.Max(sitePart.parms.points, faction.def.MinPointsToGeneratePawnGroup(kindDef))
+	    })
+    ];
   }
 }

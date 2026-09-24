@@ -17,6 +17,7 @@ public class IncidentWorker_Ambush_EnemyBoats : IncidentWorker_Ambush_EnemyMapVe
 
   protected override List<Pawn> GeneratePawns(IncidentParms parms)
   {
+	  var kindDef = ShipCombatUtility.PawnGroupKindFor(parms.faction);
     var defaultPawnGroupMakerParms =
       IncidentParmsUtility.GetDefaultPawnGroupMakerParms(MVO_DefOf.MVO_ShipCombat, parms);
     defaultPawnGroupMakerParms.generateFightersOnly = true;
