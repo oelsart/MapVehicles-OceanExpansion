@@ -18,6 +18,6 @@ public class Settings : ModSettings
 
   private static class Default
   {
-    public const float hiddenIslandChance = 0.01f;
+    public const float hiddenIslandChance = 0.04f;
   }
 }
