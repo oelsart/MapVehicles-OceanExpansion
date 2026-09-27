@@ -132,6 +132,7 @@
     </building>
     <researchPrerequisites>
       <li>MVO_ExpandableRaft</li>
+      <li>MVO_RaftPieceFloat</li>
     </researchPrerequisites>
     <comps>
       <li Class="VehicleMapFramework.CompProperties_ExtraPrint">
@@ -622,6 +623,7 @@
       </li>
       <li Class="MapVehiclesOcean.CompProperties_CrowsNest">
         <scanFindMtbDays>2.5</scanFindMtbDays>
+        <scanFindGuaranteedDays>5</scanFindGuaranteedDays>
         <scanSpeedStat>ReadingSpeed</scanSpeedStat>
         <questWeights>
           <MVO_Shipwreck>1</MVO_Shipwreck>
