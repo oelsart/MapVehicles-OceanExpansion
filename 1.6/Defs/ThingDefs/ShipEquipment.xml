@@ -29,7 +29,7 @@
       <isEdifice>false</isEdifice>
       <deconstructible>false</deconstructible>
     </building>
-    <terrainAffordanceNeeded>VMF_ImpassableFloor</terrainAffordanceNeeded>
+    <terrainAffordanceNeeded/>
     <placeWorkers>
       <li>VehicleMapFramework.PlaceWorker_MapExpander</li>
       <li>VehicleMapFramework.PlaceWorker_VehicleRelatedBuildings</li>
