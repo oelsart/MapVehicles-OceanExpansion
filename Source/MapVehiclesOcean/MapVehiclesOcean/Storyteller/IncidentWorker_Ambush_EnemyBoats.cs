@@ -19,7 +19,7 @@ public class IncidentWorker_Ambush_EnemyBoats : IncidentWorker_Ambush_EnemyMapVe
   {
 	  var kindDef = ShipCombatUtility.PawnGroupKindFor(parms.faction);
     var defaultPawnGroupMakerParms =
-      IncidentParmsUtility.GetDefaultPawnGroupMakerParms(MVO_DefOf.MVO_ShipCombat, parms);
+      IncidentParmsUtility.GetDefaultPawnGroupMakerParms(kindDef, parms);
     defaultPawnGroupMakerParms.generateFightersOnly = true;
     defaultPawnGroupMakerParms.dontUseSingleUseRocketLaunchers = true;
     return [.. PawnGroupMakerUtility.GeneratePawns(defaultPawnGroupMakerParms)];
