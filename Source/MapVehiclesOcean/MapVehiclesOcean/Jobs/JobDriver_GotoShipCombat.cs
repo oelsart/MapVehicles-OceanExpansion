@@ -8,15 +8,17 @@ public class JobDriver_GotoShipCombat : JobDriver_Goto
 {
   protected override IEnumerable<Toil> MakeNewToils()
   {
-    var toil = Toils_Goto.GotoCell(TargetIndex.A, PathEndMode.OnCell);
-    toil.FailOn(() => job.GetTarget(TargetIndex.A).Thing is Pawn { ParentHolder: Corpse });
-    toil.FailOn(() => job.GetTarget(TargetIndex.A).Thing is { Destroyed: true });
+    this.FailOn(() => job.GetTarget(TargetIndex.A).Thing is Pawn { ParentHolder: Corpse });
+    this.FailOn(() => job.GetTarget(TargetIndex.A).Thing is { Destroyed: true });
+    var toil = ToilMaker.MakeToil();
+    toil.defaultCompleteMode = ToilCompleteMode.Never;
     toil.tickAction += () =>
     {
       if (!toil.actor.IsHashIntervalTick(300)) return;
       
       if (toil.actor is not VehiclePawn vehicle ||
-          !CombatPositionUtility.TryFindShipCombatPosition(vehicle, out var dest, out var endRot)) return;
+          !CombatPositionUtility.TryFindShipCombatPosition(vehicle, out var dest, out var endRot))
+	      return;
 
       var curTarget = vehicle.jobs.curJob.GetTarget(TargetIndex.A);
       if (curTarget != dest)
@@ -27,19 +29,13 @@ public class JobDriver_GotoShipCombat : JobDriver_Goto
           vehicle.jobs.curDriver.ReadyForNextToil();
           return;
         }
-
-// #if DEV
-//                 var pathOrderData = new PathOrderData
-//                 {
-//                     destination = dest,
-//                     endRotation = endRot
-//                 };
-//                 vehicle.vehiclePather.OrderMoveTo(in pathOrderData);
-// #else
-        if (endRot.IsValid)
-          vehicle.vehiclePather.SetEndRotation(endRot);
-        vehicle.vehiclePather.StartPath(dest, PathEndMode.OnCell);
-// #endif
+        
+	      var data = new PathOrderData
+	      {
+		      destination = dest,
+		      endRotation = endRot
+	      };
+	      vehicle.vehiclePather.TryOrderMoveTo(in data);
       }
     };
     yield return toil;
