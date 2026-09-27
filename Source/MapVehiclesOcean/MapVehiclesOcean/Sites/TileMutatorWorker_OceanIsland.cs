@@ -8,9 +8,8 @@ namespace MapVehiclesOcean;
 public class TileMutatorWorker_Island(TileMutatorDef def) : TileMutatorWorker_Coast(def)
 {
   protected override FloatRange CoastOffset => new(0.2f, 0.4f);
-  protected virtual FloatRange MountainSizeFactor => new(0.4f, 0.5f);
+  protected virtual FloatRange MountainSizeFactor => new(0.25f, 0.4f);
 
-  private readonly List<IntVec3> tmpRidgeCells = [];
   private readonly TileMutatorWorker_IslandCaves caveMutator = new(def);
 
   private const float MountainNoiseFrequency = 0.015f;
@@ -63,7 +62,7 @@ public class TileMutatorWorker_Island(TileMutatorDef def) : TileMutatorWorker_Co
         if (index != -1) visited[index] = true;
 
         var terrain = c.GetTerrain(map);
-        if (terrain != TerrainDefOf.WaterOceanDeep && terrain != TerrainDefOf.WaterOceanShallow)
+        if (terrain != MVO_DefOf.MVO_WaterOceanDeepPassable && terrain != TerrainDefOf.WaterOceanShallow)
         {
           map.terrainGrid.SetTerrain(c, TerrainDefOf.WaterOceanShallow);
         }
@@ -73,8 +72,8 @@ public class TileMutatorWorker_Island(TileMutatorDef def) : TileMutatorWorker_Co
     caveMutator.GeneratePostTerrain(map);
     GenerateMountain(map);
     ModuleBase freqFactorNoise =
-      new Perlin(0.014999999664723873, 2.0, 0.5, 6, Rand.Range(0, 999999), QualityMode.Medium);
-    freqFactorNoise = new ScaleBias(1.0, 1.0, freqFactorNoise);
+      new Perlin(0.015f, 2f, 0.5f, 6, Rand.Range(0, 999999), QualityMode.Medium);
+    freqFactorNoise = new ScaleBias(1f, 1f, freqFactorNoise);
     NoiseDebugUI.StoreNoiseRender(freqFactorNoise, "rock_chunks_freq_factor");
     var num = map.TileInfo.Mutators.Aggregate(0.006f,
       (current, tileMutatorDef) => current * tileMutatorDef.chunkDensityFactor);
@@ -88,68 +87,50 @@ public class TileMutatorWorker_Island(TileMutatorDef def) : TileMutatorWorker_Co
       }
     }
 
-    // マップがWaterDeepで囲まれている時PlayerStartSpotと動物のスポーン地点の取得に失敗するため、一時的にWaterShallowで橋を作る
-    if (map.regionGrid.allDistricts.All(d => !d.TouchesMapEdge))
+    // RimWorldはImpassableなセルで囲まれたマップを嫌う
+    foreach (var cell in CellRect.WholeMap(map))
     {
-      for (var i = 0; i < 4; i++)
-      {
-        tmpRidgeCells.Clear();
-        var rot = new Rot4(i);
-        var opposite = rot.Opposite.FacingCell;
-        var cell = map.BoundsRect().GetCenterCellOnEdge(rot);
-        while (cell.InBounds(map) && cell.GetTerrain(map) == TerrainDefOf.WaterOceanDeep)
-        {
-          tmpRidgeCells.Add(cell);
-          cell += opposite;
-        }
-
-        if (cell.GetDistrict(map) is { CellCount: >= 10 })
-        {
-          foreach (var cell2 in tmpRidgeCells)
-          {
-            map.terrainGrid.SetTerrain(cell2, TerrainDefOf.WaterOceanShallow);
-          }
-
-          break;
-        }
-      }
+	    var terrain = cell.GetTerrain(map);
+	    if (terrain == TerrainDefOf.WaterDeep)
+		    map.terrainGrid.SetTerrain(cell, MVO_DefOf.MVO_WaterDeepPassable);
+	    else if (terrain == TerrainDefOf.WaterOceanDeep)
+		    map.terrainGrid.SetTerrain(cell, MVO_DefOf.MVO_WaterOceanDeepPassable);
     }
-
+    
     return;
 
     // GenStep_RocksFromGridより
     static void GenerateMountain(Map map)
     {
       map.regionAndRoomUpdater.Enabled = false;
-      const float num1 = 0.7f;
-      var roofThresholdList =
-        new List<RoofThreshold>
-        {
-          new()
-          {
-            roofDef = RoofDefOf.RoofRockThick,
-            minGridVal = num1 * 1.14f
-          },
-          new()
-          {
-            roofDef = RoofDefOf.RoofRockThin,
-            minGridVal = num1 * 1.04f
-          }
-        };
+      const float Threshold = 0.7f;
+      var roofThresholdList = new List<RoofThreshold>
+      {
+	      new()
+	      {
+		      roofDef = RoofDefOf.RoofRockThick,
+		      minGridVal = Threshold * 1.14f
+	      },
+	      new()
+	      {
+		      roofDef = RoofDefOf.RoofRockThin,
+		      minGridVal = Threshold * 1.04f
+	      }
+      };
       var elevation = MapGenerator.Elevation;
       var caves = MapGenerator.Caves;
-      foreach (var cell in map.BoundsRect())
+      foreach (var cell in CellRect.WholeMap(map))
       {
-        var num2 = elevation[cell];
-        if ((double)num2 > num1)
+        var cellElevation = elevation[cell];
+        if ((double)cellElevation > Threshold)
         {
-          if (caves[cell] <= 0.0)
+          if (caves[cell] <= 0f)
             GenSpawn.Spawn(GenStep_RocksFromGrid.RockDefAt(cell), cell, map);
-          for (var index = 0; index < roofThresholdList.Count; ++index)
+          for (var i = 0; i < roofThresholdList.Count; ++i)
           {
-            if ((double)num2 > roofThresholdList[index].minGridVal)
+            if ((double)cellElevation > roofThresholdList[i].minGridVal)
             {
-              map.roofGrid.SetRoof(cell, roofThresholdList[index].roofDef);
+              map.roofGrid.SetRoof(cell, roofThresholdList[i].roofDef);
               break;
             }
           }
@@ -255,15 +236,6 @@ public class TileMutatorWorker_Island(TileMutatorDef def) : TileMutatorWorker_Co
           }
         }
       }
-    }
-  }
-
-  public override void GeneratePostFog(Map map)
-  {
-    base.GeneratePostFog(map);
-    foreach (var cell in tmpRidgeCells)
-    {
-      map.terrainGrid.SetTerrain(cell, TerrainDefOf.WaterOceanDeep);
     }
   }
 
