@@ -17,5 +17,9 @@
   
   <MVO_Midas_NotFulfilled>The amount of gold does not meet the requirement. ({0}/3000)</MVO_Midas_NotFulfilled>
   <MVO_Athena_NotDefeated>There are still hostile soldiers in the room.</MVO_Athena_NotDefeated>
+  
+  <MVO_UserLookoutAbility>User lookout ability</MVO_UserLookoutAbility>
+  <MVO_LookoutAverageInterval>Random find interval</MVO_LookoutAverageInterval>
+  <MVO_LookoutProgressToGuaranteedFind>Days to guaranteed find</MVO_LookoutProgressToGuaranteedFind>
 
 </LanguageData>

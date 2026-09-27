@@ -13,5 +13,9 @@
 
   <MVO_Midas_NotFulfilled>金塊の量が要求を満たしていません.({0}/3000)</MVO_Midas_NotFulfilled>
   <MVO_Athena_NotDefeated>部屋にまだ倒されていない敵の兵士がいます.</MVO_Athena_NotDefeated>
+
+  <MVO_UserLookoutAbility>見張り能力</MVO_UserLookoutAbility>
+  <MVO_LookoutAverageInterval>ランダムな発見の間隔</MVO_LookoutAverageInterval>
+  <MVO_LookoutProgressToGuaranteedFind>確実な発見までの日数</MVO_LookoutProgressToGuaranteedFind>
   
 </LanguageData>

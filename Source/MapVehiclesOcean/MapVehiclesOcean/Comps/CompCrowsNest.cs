@@ -94,4 +94,18 @@ public class CompCrowsNest : CompScanner
       };
     }
   }
+
+  public override string CompInspectStringExtra()
+  {
+	  var text = "";
+	  if (lastScanTick > Find.TickManager.TicksGame - 30)
+	  {
+		  text += $"{"MVO_UserLookoutAbility".Translate().RawText}: {lastUserSpeed.ToStringPercent()}\n" +
+		          $"{"MVO_LookoutAverageInterval".Translate().RawText}: " +
+		          $"{"PeriodDays".Translate((Props.scanFindMtbDays / lastUserSpeed).ToString("F1")).RawText}\n";
+	  }
+
+	  return text + $"{"MVO_LookoutProgressToGuaranteedFind".Translate().RawText}: " +
+	         $"{(daysWorkingSinceLastFinding / Props.scanFindGuaranteedDays).ToStringPercent()}";
+}
 }
