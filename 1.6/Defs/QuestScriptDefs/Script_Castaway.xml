@@ -30,6 +30,11 @@
           sea location. We should hurry, as [castaway_pronoun] won't be able to survive more than [timeoutTicks_duration]
           in these conditions.
         </li>
+        <li>castaway_adj->Drifting</li>
+        <li>castaway_adj->Stranded</li>
+        <li>castaway_adj->Lost</li>
+        <li>castaway_adj->Solitary</li>
+        <li>castaway_adj->Shipwrecked</li>
       </rulesStrings>
     </questDescriptionRules>
     <root Class="QuestNode_Sequence">

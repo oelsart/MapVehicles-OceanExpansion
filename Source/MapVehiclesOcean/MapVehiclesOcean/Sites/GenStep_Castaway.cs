@@ -18,35 +18,52 @@ public class GenStep_Castaway : GenStep
   public override void Generate(Map map, GenStepParams parms)
   {
     var pawns = parms.sitePart.things.OfType<Pawn>().ToList();
-    if (pawns.Empty()) return;
+    if (pawns.Empty())
+    {
+	    VMF_Log.Error("GenStep_Castaway: No pawn was generated.");
+	    return;
+    }
 
-    if (!vehicleDefs.TryRandomElementByWeight(v => v.weight, out var option)) return;
+    if (!vehicleDefs.TryRandomElementByWeight(v => v.weight, out var option))
+    {
+	    VMF_Log.Error("GenStep_Castaway: Can't find any VehicleDef.");
+	    return;
+    }
     var vehicle = VehicleSpawner.GenerateVehicle(option.vehicleDef, pawns[0].Faction);
 
     var rot = Rot4.Random;
     if (!CellFinderExtended.TryFindRandomCenterCell(map, c => GenSpawn.CanSpawnAt(option.vehicleDef, c, map, rot),
-          out var cell))
-      return;
+	        out var cell))
+    {
+	    VMF_Log.Error("GenStep_Castaway: Can't find spawn cell.");
+	    return;
+    }
     GenSpawn.Spawn(vehicle, cell, map, rot);
 
-    if (vehicle is not VehiclePawnWithMap { VehicleMap: { } vehicleMap } vehiclePawnWithMap) return;
-    if (vehiclePawnWithMap.GetComp<CompNpcVehicleMap>() is { } compNpcVehicleMap)
+    LongEventHandler.ExecuteWhenFinished(() =>
     {
-      compNpcVehicleMap.SetParams(pawns.Count);
-      var prefab = compNpcVehicleMap.Params.prefabDef;
-      PrefabUtility.SpawnPrefab(prefab, vehicleMap, vehicleMap.Center, Rot4.North, vehicle.Faction);
-      vehiclePawnWithMap.Resize();
-    }
+	    if (vehicle is not VehiclePawnWithMap { VehicleMap: { } vehicleMap } vehiclePawnWithMap)
+	    {
+		    VMF_Log.Error("GenStep_Castaway: The vehicle map haven't been generated.");
+		    return;
+	    }
+	    if (vehiclePawnWithMap.GetComp<CompNpcVehicleMap>() is { } compNpcVehicleMap)
+	    {
+		    compNpcVehicleMap.SetParams(pawns.Count);
+		    var prefab = compNpcVehicleMap.Params.prefabDef;
+		    PrefabUtility.SpawnPrefab(prefab, vehicleMap, vehicleMap.Center, Rot4.North, vehicle.Faction);
+	    }
 
-    foreach (var pawn in pawns)
-    {
-      pawn.mindState.WillJoinColonyIfRescued = true;
-      pawn.mindState.duty = new PawnDuty(MVO_DefOf.MVO_WanderAnywhere, LocalTargetInfo.Invalid);
-      if (CellFinder.TryFindRandomSpawnCellForPawnNear(vehicleMap.Center, vehicleMap, out var cell2))
-      {
-        GenSpawn.Spawn(pawn, cell2, vehicleMap);
-      }
-    }
+	    foreach (var pawn in pawns)
+	    {
+		    pawn.mindState.WillJoinColonyIfRescued = true;
+		    pawn.mindState.duty = new PawnDuty(MVO_DefOf.MVO_WanderAnywhere, LocalTargetInfo.Invalid);
+		    if (CellFinder.TryFindRandomSpawnCellForPawnNear(vehicleMap.Center, vehicleMap, out var cell2))
+		    {
+			    GenSpawn.Spawn(pawn, cell2, vehicleMap);
+		    }
+	    }
+    });
   }
 
   public class VehicleWeight

@@ -27,7 +27,12 @@
     </rulesStrings>
   </MVO_Util_GenerateSeaSite.root.singleSitePartRules.slateRef>
   
-  <MVO_Castaway.questDescriptionRules.rulesStrings.0>questDescription-&gt;見張り台から,[worker_definite]が波間に漂う人物を発見しました.[castaway_adj]のようで,一刻も早い救助を求めています.\n\n現在,[castaway_pronoun]は近くの海上にいます.この状況では[castaway_pronoun]は[timeoutTicks_duration]以上生き延びられないため,急ぐ必要があります.</MVO_Castaway.questDescriptionRules.rulesStrings.0>
+  <MVO_Castaway.questDescriptionRules.rulesStrings.0>questDescription-&gt;見張り台から,[worker_definite]が波間に漂う人物を発見しました.[castaway_adj]ようで,一刻も早い救助を求めています.\n\n現在,[castaway_pronoun]は近くの海上にいます.この状況では[castaway_pronoun]は[timeoutTicks_duration]以上生き延びられないため,急ぐ必要があります.</MVO_Castaway.questDescriptionRules.rulesStrings.0>
+  <MVO_Castaway.questDescriptionRules.rulesStrings.1>castaway_adj-&gt;漂流している</MVO_Castaway.questDescriptionRules.rulesStrings.1>
+  <MVO_Castaway.questDescriptionRules.rulesStrings.2>castaway_adj-&gt;動けなくなった</MVO_Castaway.questDescriptionRules.rulesStrings.2>
+  <MVO_Castaway.questDescriptionRules.rulesStrings.3>castaway_adj-&gt;遭難した</MVO_Castaway.questDescriptionRules.rulesStrings.3>
+  <MVO_Castaway.questDescriptionRules.rulesStrings.4>castaway_adj-&gt;孤立した</MVO_Castaway.questDescriptionRules.rulesStrings.4>
+  <MVO_Castaway.questDescriptionRules.rulesStrings.5>castaway_adj-&gt;難破した</MVO_Castaway.questDescriptionRules.rulesStrings.5>
   <MVO_Castaway.questNameRules.rulesStrings.1>questName-&gt;[castaway_nameDef]の救助</MVO_Castaway.questNameRules.rulesStrings.1>
   <MVO_Castaway.questNameRules.rulesStrings.2>questName-&gt;[castaway_adj]生存者</MVO_Castaway.questNameRules.rulesStrings.2>
   <MVO_Castaway.questNameRules.rulesStrings.3>castaway_adj-&gt;漂流する</MVO_Castaway.questNameRules.rulesStrings.3>
@@ -40,7 +45,7 @@
   <MVO_Castaway.questNameRules.rulesStrings.10>castaway_noun-&gt;漂流者</MVO_Castaway.questNameRules.rulesStrings.10>
   <MVO_Castaway.questNameRules.rulesStrings.11>castaway_noun-&gt;船乗り</MVO_Castaway.questNameRules.rulesStrings.11>
   <MVO_Castaway.LetterLabelQuestExpired.slateRef>クエスト期限切れ: [resolvedQuestName]</MVO_Castaway.LetterLabelQuestExpired.slateRef>
-  <MVO_Castaway.LetterTextQuestExpired.slateRef>[drifter_nameDef]は流され,海の藻屑となりました.クエスト[resolvedQuestName]の期限が切れました.</MVO_Castaway.LetterTextQuestExpired.slateRef>
+  <MVO_Castaway.LetterTextQuestExpired.slateRef>[castaway_nameDef]は流され,海の藻屑となりました.クエスト[resolvedQuestName]の期限が切れました.</MVO_Castaway.LetterTextQuestExpired.slateRef>
   
   <MVO_DesertedIsland.questDescriptionRules.rulesStrings.0>questDescription-&gt;船での見張り中,地平線の彼方に未知の島が発見されました.\nそこに何かが眠っているかもしれません.</MVO_DesertedIsland.questDescriptionRules.rulesStrings.0>
   <MVO_DesertedIsland.questNameRules.rulesStrings.0>questName-&gt;未知の島</MVO_DesertedIsland.questNameRules.rulesStrings.0>
