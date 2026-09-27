@@ -22,6 +22,12 @@
     <genStep Class="MapVehiclesOcean.GenStep_Shipwreck">
       <wrecks>
         <li>MVO_ShipwreckA</li>
+        <li>MVO_ShipwreckB</li>
+        <li>MVO_ShipwreckC</li>
+        <li>MVO_ShipwreckD</li>
+        <li>MVO_ShipwreckE</li>
+        <li>MVO_ShipwreckF</li>
+        <li>MVO_ShipwreckG</li>
       </wrecks>
       <nearMapCenter>true</nearMapCenter>
     </genStep>
