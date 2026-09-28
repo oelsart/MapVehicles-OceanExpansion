@@ -1,9 +1,11 @@
-﻿using HarmonyLib;
+﻿using System.Reflection.Emit;
+using HarmonyLib;
 using RimWorld;
 using RimWorld.Planet;
 using SmashTools;
 using UnityEngine;
 using VehicleMapFramework;
+using VehicleMapFramework.VMF_HarmonyPatches;
 using Vehicles;
 using Vehicles.World;
 using Verse;
@@ -114,5 +116,24 @@ public static class Patch_WorldRendererUtility_CurrentWorldRenderMode
 	public static void Postfix(ref WorldRenderMode __result)
 	{
 		if (CompAncientBook.CutsceneInProgress) __result = WorldRenderMode.Planet;
+	}
+}
+
+[HarmonyPatch(typeof(ShipJob_Arrive), nameof(ShipJob_Arrive.TryStart))]
+public static class Patch_ShipJob_Arrive_TryStart
+{
+	public static IEnumerable<CodeInstruction> Transpiler(IEnumerable<CodeInstruction> instructions)
+	{
+		return PatchHelper.CreateCodeMatcherFast(instructions)
+			.MatchStartForward(new CodeMatch(OpCodes.Isinst, typeof(PocketMapParent)))
+			.InsertAfter(((Delegate)SourceMapIsNotSea).Method.CallInstruction)
+			.InstructionEnumeration();
+	}
+
+	private static PocketMapParent SourceMapIsNotSea(PocketMapParent pocketMapParent)
+	{
+		return pocketMapParent?.sourceMap?.generatorDef == MVO_DefOf.MVO_MapGeneratorSea
+			? null
+			: pocketMapParent;
 	}
 }
