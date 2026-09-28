@@ -4,6 +4,7 @@ using UnityEngine;
 using VehicleMapFramework;
 using Vehicles;
 using Verse;
+using Verse.AI.Group;
 
 namespace MapVehiclesOcean;
 
@@ -31,5 +32,10 @@ public class GenStep_SeaThreat : GenStep_MapVehicleThreat
 		    points = Mathf.Max(sitePart.parms.points, faction.def.MinPointsToGeneratePawnGroup(kindDef))
 	    })
     ];
+  }
+
+  protected override LordJob CreateLordJob(Faction faction)
+  {
+	  return new LordJob_ArmoredAssaultSea(faction, LordJob_ArmoredAssault.RaiderPermissions.All);
   }
 }
