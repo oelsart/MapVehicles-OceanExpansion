@@ -622,8 +622,8 @@
         </graphicsByParent>
       </li>
       <li Class="MapVehiclesOcean.CompProperties_CrowsNest">
-        <scanFindMtbDays>2.5</scanFindMtbDays>
-        <scanFindGuaranteedDays>5</scanFindGuaranteedDays>
+        <scanFindMtbDays>3</scanFindMtbDays>
+        <scanFindGuaranteedDays>6</scanFindGuaranteedDays>
         <scanSpeedStat>ReadingSpeed</scanSpeedStat>
         <questWeights>
           <MVO_Shipwreck>1</MVO_Shipwreck>

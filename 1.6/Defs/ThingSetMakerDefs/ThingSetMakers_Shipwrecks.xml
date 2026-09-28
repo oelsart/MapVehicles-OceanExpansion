@@ -4,7 +4,7 @@
   <ThingSetMakerDef>
     <defName>MVO_ShipwreckCargo</defName>
     <debugParams>
-      <totalMarketValueRange>4000~6000</totalMarketValueRange>
+      <totalMarketValueRange>3000~5000</totalMarketValueRange>
     </debugParams>
     <root Class="MapVehiclesOcean.ThingSetMaker_SumWithMarketValueWeight">
       <options>
