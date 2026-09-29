@@ -61,7 +61,7 @@
       <MoveSpeed>0.11</MoveSpeed>
       <CargoCapacity>100</CargoCapacity>
       <RepairRate>1.75</RepairRate>
-      <MaximumPayload>12000</MaximumPayload>
+      <MaximumPayload>6000</MaximumPayload>
     </vehicleStats>
 
     <combatPower>350</combatPower>
@@ -209,6 +209,11 @@
       </graphicOverlays>
     </drawProperties>
 
+    <vehicleStats>
+      <Mass>3200</Mass>
+      <MaximumPayload>9000</MaximumPayload>
+    </vehicleStats>
+
     <components Inherit="False">
       <li>
         <key>Body</key>
@@ -303,6 +308,11 @@
         </li>
       </graphicOverlays>
     </drawProperties>
+    
+    <vehicleStats>
+      <Mass>3200</Mass>
+      <MaximumPayload>9000</MaximumPayload>
+    </vehicleStats>
 
     <components Inherit="False">
       <li>
@@ -394,6 +404,11 @@
         </li>
       </graphicOverlays>
     </drawProperties>
+
+    <vehicleStats>
+      <Mass>4400</Mass>
+      <MaximumPayload>12000</MaximumPayload>
+    </vehicleStats>
 
     <components Inherit="False">
       <li>

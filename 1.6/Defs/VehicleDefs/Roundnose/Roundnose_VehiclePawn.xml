@@ -40,7 +40,7 @@
       <MoveSpeed>0.11</MoveSpeed>
       <CargoCapacity>500</CargoCapacity>
       <RepairRate>1.75</RepairRate>
-      <MaximumPayload>8000</MaximumPayload>
+      <MaximumPayload>5000</MaximumPayload>
     </vehicleStats>
 
     <combatPower>250</combatPower>
