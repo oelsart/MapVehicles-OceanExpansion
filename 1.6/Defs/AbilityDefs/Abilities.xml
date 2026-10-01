@@ -71,7 +71,9 @@
       <shaderType>Transparent</shaderType>
       <texPath>MapVehiclesOcean/Things/Apparel/ZiplineBelt/ZiplineEnd</texPath>
       <drawSize>1</drawSize>
+      <drawRotated>false</drawRotated>
     </graphicData>
+    <rotatable>false</rotatable>
     <building>
       <isEdifice>false</isEdifice>
     </building>
