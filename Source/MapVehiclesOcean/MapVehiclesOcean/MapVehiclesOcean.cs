@@ -2,7 +2,6 @@
 using RimWorld;
 using SmashTools;
 using UnityEngine;
-using VehicleMapFramework;
 using Verse;
 
 namespace MapVehiclesOcean;

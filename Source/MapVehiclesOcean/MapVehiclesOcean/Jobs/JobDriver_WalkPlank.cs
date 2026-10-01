@@ -168,8 +168,6 @@ public class JobDriver_WalkPlank : JobDriverBodyOffset
       var forward = Gangplank.Rotation.FacingCell.ToVector3();
       var side = Gangplank.Rotation.RighthandCell.ToVector3();
       var targetOffset = forward * targetDistance + side * wobbleNoise;
-      if (walkPlank.actor.IsOnNonFocusedVehicleMapOf(out var vehicle))
-	      targetOffset = targetOffset.RotatedBy(vehicle.FullAngle);
       
       drawOffset = Vector3.Lerp(drawOffset, targetOffset, 0.15f);
 
