@@ -30,6 +30,9 @@
       <deconstructible>false</deconstructible>
     </building>
     <terrainAffordanceNeeded/>
+    <replaceTags>
+      <li>MVO_RaftPiece</li>
+    </replaceTags>
     <placeWorkers>
       <li>VehicleMapFramework.PlaceWorker_MapExpander</li>
       <li>VehicleMapFramework.PlaceWorker_VehicleRelatedBuildings</li>
@@ -196,6 +199,9 @@
       </relatedBuildCommands>
     </building>
     <useBlueprintGraphicAsGhost>true</useBlueprintGraphicAsGhost>
+    <replaceTags>
+      <li>MVO_Rig</li>
+    </replaceTags>
     <placeWorkers>
       <li>VehicleMapFramework.PlaceWorker_ForceOnVehicle</li>
       <li>VehicleMapFramework.PlaceWorker_VehicleRelatedBuildings</li>
