@@ -32,6 +32,12 @@ public class VehicleTurret_Cannon : VehicleTurret_AutoRefuel
   {
   }
 
+  public override void RegisterEvents()
+  {
+	  base.RegisterEvents();
+	  vehicle.AddEvent(VehicleEventDefOf.Undeployed, () => vehicle.Transform.rotation = 0f);
+  }
+
   protected override bool TurretRotationTick()
   {
     if (base.TurretRotationTick())
