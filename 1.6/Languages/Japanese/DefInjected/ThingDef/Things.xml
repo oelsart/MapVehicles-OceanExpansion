@@ -68,7 +68,12 @@
   
   <MVO_CrowsNest.label>見張り台</MVO_CrowsNest.label>
   <MVO_CrowsNest.description>船のマストに取り付けられる見張り台です.島や難破船の発見など,船上で発生するクエストに必要です.</MVO_CrowsNest.description>
+  
+  <MVO_CrowsNestTelescope.label>見張り台 (望遠鏡付き)</MVO_CrowsNestTelescope.label>
+  <MVO_CrowsNestTelescope.description>船のマストに取り付けられる見張り台です.島や難破船の発見など,船上で発生するクエストに必要です.\n望遠鏡が取り付けられており,より遠くの島を発見できます.</MVO_CrowsNestTelescope.description>
 
+  <MVO_MinifiedThing_Telescope.label>望遠鏡</MVO_MinifiedThing_Telescope.label>
+  
   <MVO_FishingSpot.label>釣りスポット</MVO_FishingSpot.label>
   <MVO_FishingSpot.description>ボートの端から釣りをするための場所です.船上で食料を得るための重要な手段です.</MVO_FishingSpot.description>
 

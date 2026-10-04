@@ -25,7 +25,7 @@ public class CompCrowsNest : CompScanner
 	  var hiddenIslandManager = Find.World.GetComponent<HiddenIslandManager>();
 
 	  if (hiddenIslandManager?.HiddenIslandTileIDs(parent.Map?.Tile.Layer) is { Count: > 0 } hashSet &&
-	      TileFinder.TryFindTileWithDistance(parent.Tile, 1, 9, out var tile, t => hashSet.Contains(t.tileId),
+	      TileFinder.TryFindTileWithDistance(parent.Tile, 1, Props.range, out var tile, t => hashSet.Contains(t.tileId),
 		      TileFinderMode.Near))
     {
 	    hiddenIslandManager.DiscoverHiddenIsland(tile);
@@ -43,7 +43,7 @@ public class CompCrowsNest : CompScanner
 
   private void FindQuest(Slate slate, QuestScriptDef quest)
   {
-    slate.Set("siteDistRange", new IntRange(1, 9));
+    slate.Set("siteDistRange", new IntRange(1, Props.range));
     if (!quest.CanRun(slate, parent.Map))
       return;
 

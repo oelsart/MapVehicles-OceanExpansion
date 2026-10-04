@@ -8,6 +8,7 @@ namespace MapVehiclesOcean;
 [UsedImplicitly(ImplicitUseTargetFlags.WithMembers)]
 public class CompProperties_CrowsNest : CompProperties_Scanner
 {
+	public int range;
   public List<QuestWeight> questWeights;
 
   public CompProperties_CrowsNest()
@@ -15,6 +16,7 @@ public class CompProperties_CrowsNest : CompProperties_Scanner
     compClass = typeof(CompCrowsNest);
   }
 
+  [UsedImplicitly(ImplicitUseTargetFlags.WithMembers)]
   public class QuestWeight
   {
     public QuestScriptDef quest;

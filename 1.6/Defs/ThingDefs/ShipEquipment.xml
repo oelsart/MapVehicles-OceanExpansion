@@ -196,6 +196,7 @@
       <supportsWallAttachments>true</supportsWallAttachments>
       <relatedBuildCommands>
         <li>MVO_CrowsNest</li>
+        <li>MVO_CrowsNestTelescope</li>
       </relatedBuildCommands>
     </building>
     <useBlueprintGraphicAsGhost>true</useBlueprintGraphicAsGhost>
@@ -514,11 +515,8 @@
       </li>
     </comps>
   </ThingDef>
-
-  <ThingDef ParentName="MVO_ShipEquipmentBase">
-    <defName>MVO_CrowsNest</defName>
-    <label>Crow's nest</label>
-    <description>A lookout mounted on a ship's mast. This is necessary for quests to trigger on board, such as discovering islands or shipwrecks.</description>
+  
+  <ThingDef Name="MVO_CrowsNestBase" ParentName="MVO_ShipEquipmentBase" Abstract="True">
     <drawerType>RealtimeOnly</drawerType>
     <graphicData>
       <graphicClass>Graphic_Single</graphicClass>
@@ -562,7 +560,8 @@
               <li>
                 <graphicClass>Graphic_Multi</graphicClass>
                 <texPath>MapVehiclesOcean/Things/CrowsNest/CrowsNest</texPath>
-                <shaderType>VMF_CutoutComplexRGBOpacity</shaderType>
+                <shaderType>Transparent</shaderType>
+                <renderQueue>2900</renderQueue>
                 <drawSize>2</drawSize>
                 <drawOffset>(0,0.4,2.93)</drawOffset>
                 <drawOffsetEast>(0,0.4,3)</drawOffsetEast>
@@ -571,7 +570,8 @@
               <li>
                 <graphicClass>Graphic_Multi</graphicClass>
                 <texPath>MapVehiclesOcean/Things/CrowsNest/CrowsNestOverlay</texPath>
-                <shaderType>VMF_CutoutComplexRGBOpacity</shaderType>
+                <shaderType>Transparent</shaderType>
+                <renderQueue>2900</renderQueue>
                 <drawSize>2</drawSize>
                 <drawOffset>(0,0.45,2.93)</drawOffset>
                 <drawOffsetEast>(0,0.45,3)</drawOffsetEast>
@@ -585,20 +585,24 @@
               <li>
                 <graphicClass>Graphic_Multi</graphicClass>
                 <texPath>MapVehiclesOcean/Things/CrowsNest/CrowsNest</texPath>
-                <shaderType>VMF_CutoutComplexRGBOpacity</shaderType>
-                <drawSize>1.6</drawSize>
-                <drawOffset>(0,0.4,5.35)</drawOffset>
-                <drawOffsetEast>(0.444,0.4,5.18)</drawOffsetEast>
-                <drawOffsetWest>(-0.444,0.4,5.18)</drawOffsetWest>
+                <shaderType>Transparent</shaderType>
+                <renderQueue>2900</renderQueue>
+                <drawSize>1.65</drawSize>
+                <drawOffsetNorth>(0,0.4,5.3275)</drawOffsetNorth>
+                <drawOffsetSouth>(0,0.4,5.25)</drawOffsetSouth>
+                <drawOffsetEast>(0.444,0.4,5.16)</drawOffsetEast>
+                <drawOffsetWest>(-0.444,0.4,5.16)</drawOffsetWest>
               </li>
               <li>
                 <graphicClass>Graphic_Multi</graphicClass>
                 <texPath>MapVehiclesOcean/Things/CrowsNest/CrowsNestOverlay</texPath>
-                <shaderType>VMF_CutoutComplexRGBOpacity</shaderType>
-                <drawSize>1.6</drawSize>
-                <drawOffset>(0,0.45,5.35)</drawOffset>
-                <drawOffsetEast>(0.444,0.45,5.18)</drawOffsetEast>
-                <drawOffsetWest>(-0.444,0.45,5.18)</drawOffsetWest>
+                <shaderType>Transparent</shaderType>
+                <renderQueue>2900</renderQueue>
+                <drawSize>1.65</drawSize>
+                <drawOffsetNorth>(0,0.45,5.3275)</drawOffsetNorth>
+                <drawOffsetSouth>(0,0.45,5.25)</drawOffsetSouth>
+                <drawOffsetEast>(0.444,0.45,5.16)</drawOffsetEast>
+                <drawOffsetWest>(-0.444,0.45,5.16)</drawOffsetWest>
               </li>
             </value>
           </li>
@@ -608,40 +612,132 @@
               <li>
                 <graphicClass>Graphic_Multi</graphicClass>
                 <texPath>MapVehiclesOcean/Things/CrowsNest/CrowsNest</texPath>
-                <shaderType>VMF_CutoutComplexRGBOpacity</shaderType>
-                <drawSize>1.4</drawSize>
-                <drawOffset>(0,0.4,7.1)</drawOffset>
-                <drawOffsetEast>(0.825,0.4,7.2)</drawOffsetEast>
-                <drawOffsetWest>(-0.825,0.4,7.2)</drawOffsetWest>
+                <shaderType>Transparent</shaderType>
+                <drawSize>1.5</drawSize>
+                <drawOffsetNorth>(0,0.4,7.075)</drawOffsetNorth>
+                <drawOffsetSouth>(0,0.4,7.05)</drawOffsetSouth>
+                <drawOffsetEast>(0.825,0.4,7.175)</drawOffsetEast>
+                <drawOffsetWest>(-0.825,0.4,7.175)</drawOffsetWest>
               </li>
               <li>
                 <graphicClass>Graphic_Multi</graphicClass>
                 <texPath>MapVehiclesOcean/Things/CrowsNest/CrowsNestOverlay</texPath>
-                <shaderType>VMF_CutoutComplexRGBOpacity</shaderType>
-                <drawSize>1.4</drawSize>
-                <drawOffset>(0,0.45,7.1)</drawOffset>
-                <drawOffsetEast>(0.825,0.45,7.2)</drawOffsetEast>
-                <drawOffsetWest>(-0.825,0.45,7.2)</drawOffsetWest>
+                <shaderType>Transparent</shaderType>
+                <drawSize>1.5</drawSize>
+                <drawOffsetNorth>(0,0.45,7.05)</drawOffsetNorth>
+                <drawOffsetSouth>(0,0.45,7.05)</drawOffsetSouth>
+                <drawOffsetEast>(0.825,0.45,7.175)</drawOffsetEast>
+                <drawOffsetWest>(-0.825,0.45,7.175)</drawOffsetWest>
+              </li>
+            </value>
+          </li>
+        </graphicsByParent>
+      </li>
+      <li Class="CompProperties_Forbiddable"/>
+    </comps>
+    <replaceTags>
+      <li>MVO_CrowsNest</li>
+    </replaceTags>
+    <placeWorkers>
+      <li>VehicleMapFramework.PlaceWorker_RelatedBuildings</li>
+    </placeWorkers>
+  </ThingDef>
+
+  <ThingDef ParentName="MVO_CrowsNestBase">
+    <defName>MVO_CrowsNest</defName>
+    <label>Crow's nest</label>
+    <description>A lookout mounted on a ship's mast. This is necessary for quests to trigger on board, such as discovering islands or shipwrecks.</description>
+    <comps>
+      <li Class="MapVehiclesOcean.CompProperties_CrowsNest">
+        <scanFindMtbDays>3</scanFindMtbDays>
+        <scanFindGuaranteedDays>6</scanFindGuaranteedDays>
+        <range>6</range>
+        <scanSpeedStat>ReadingSpeed</scanSpeedStat>
+        <questWeights>
+          <MVO_Shipwreck>1</MVO_Shipwreck>
+          <MVO_MaritimeBase>0.5</MVO_MaritimeBase>
+          <MVO_Castaway>0.4</MVO_Castaway>
+        </questWeights>
+      </li>
+    </comps>
+  </ThingDef>
+  
+  <ThingDef ParentName="MVO_CrowsNestBase">
+    <defName>MVO_CrowsNestTelescope</defName>
+    <label>Crow's nest (telescope)</label>
+    <description>A lookout mounted on a ship's mast. This is necessary for quests to trigger on board, such as discovering islands or shipwrecks.\nA telescope is mounted on it, making it possible to spot islands farther away.</description>
+    <costList>
+      <MVO_MinifiedThing_Telescope>1</MVO_MinifiedThing_Telescope>
+    </costList>
+    <comps>
+      <li Class="VehicleMapFramework.CompProperties_AdditionalGraphicsChildByParent">
+        <graphicsByParent>
+          <li>
+            <key>MVO_RigOneTiered</key>
+            <value>
+              <li>
+                <graphicClass>Graphic_Multi</graphicClass>
+                <texPath>MapVehiclesOcean/Things/CrowsNest/CrowsNestTelescope</texPath>
+                <shaderType>Transparent</shaderType>
+                <color>(128,128,128)</color>
+                <drawOffsetNorth>(0,0.401,4)</drawOffsetNorth>
+                <drawOffsetSouth>(0,0.451,2.2)</drawOffsetSouth>
+                <drawOffsetEast>(1.17,0.401,3.23)</drawOffsetEast>
+                <drawOffsetWest>(-1.17,0.401,3.23)</drawOffsetWest>
+              </li>
+            </value>
+          </li>
+          <li>
+            <key>MVO_RigTwoTiered</key>
+            <value>
+              <li>
+                <graphicClass>Graphic_Multi</graphicClass>
+                <texPath>MapVehiclesOcean/Things/CrowsNest/CrowsNestTelescope</texPath>
+                <shaderType>Transparent</shaderType>
+                <color>(128,128,128)</color>
+                <drawSize>0.8</drawSize>
+                <drawOffsetNorth>(0,0.401,6.2)</drawOffsetNorth>
+                <drawOffsetSouth>(0,0.451,4.675)</drawOffsetSouth>
+                <drawOffsetEast>(1.405,0.401,5.355)</drawOffsetEast>
+                <drawOffsetWest>(-1.405,0.401,5.355)</drawOffsetWest>
+              </li>
+            </value>
+          </li>
+          <li>
+            <key>MVO_RigThreeTiered</key>
+            <value>
+              <li>
+                <graphicClass>Graphic_Multi</graphicClass>
+                <texPath>MapVehiclesOcean/Things/CrowsNest/CrowsNestTelescope</texPath>
+                <shaderType>Transparent</shaderType>
+                <color>(128,128,128)</color>
+                <drawSize>0.7</drawSize>
+                <drawOffsetNorth>(0,0.401,7.85)</drawOffsetNorth>
+                <drawOffsetSouth>(0,0.451,6.525)</drawOffsetSouth>
+                <drawOffsetEast>(1.69,0.401,7.35)</drawOffsetEast>
+                <drawOffsetWest>(-1.69,0.401,7.35)</drawOffsetWest>
               </li>
             </value>
           </li>
         </graphicsByParent>
       </li>
       <li Class="MapVehiclesOcean.CompProperties_CrowsNest">
-        <scanFindMtbDays>3</scanFindMtbDays>
-        <scanFindGuaranteedDays>6</scanFindGuaranteedDays>
+        <scanFindMtbDays>2.5</scanFindMtbDays>
+        <scanFindGuaranteedDays>5</scanFindGuaranteedDays>
+        <range>12</range>
         <scanSpeedStat>ReadingSpeed</scanSpeedStat>
         <questWeights>
           <MVO_Shipwreck>1</MVO_Shipwreck>
           <MVO_MaritimeBase>0.5</MVO_MaritimeBase>
-          <MVO_Castaway>0.3</MVO_Castaway>
+          <MVO_Castaway>0.4</MVO_Castaway>
         </questWeights>
       </li>
-      <li Class="CompProperties_Forbiddable"/>
     </comps>
-    <placeWorkers>
-      <li>VehicleMapFramework.PlaceWorker_RelatedBuildings</li>
-    </placeWorkers>
+  </ThingDef>
+  
+  <ThingDef ParentName="MinifiedThing">
+    <defName>MVO_MinifiedThing_Telescope</defName>
+    <label>telescope</label>
   </ThingDef>
   
   <ThingDef ParentName="MVO_ShipEquipmentBase">
