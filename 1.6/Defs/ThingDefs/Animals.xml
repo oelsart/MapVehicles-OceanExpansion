@@ -383,50 +383,6 @@
     </modExtensions>
   </PawnKindDef>
 
-  <PawnKindDef ParentName="AnimalKindBase">
-    <defName>Tortoise</defName>
-    <label>tortoise</label>
-    <race>Tortoise</race>
-    <combatPower>70</combatPower>
-    <ecoSystemWeight>0.40</ecoSystemWeight>
-    <lifeStages>
-      <li>
-        <bodyGraphicData>
-          <texPath>Things/Pawn/Animal/Tortoise/Tortoise</texPath>
-          <drawSize>0.9</drawSize>
-        </bodyGraphicData>
-        <dessicatedBodyGraphicData>
-          <texPath>Things/Pawn/Animal/Tortoise/Dessicated_Tortoise</texPath>
-          <drawSize>0.9</drawSize>
-        </dessicatedBodyGraphicData>
-      </li>
-      <li>
-        <bodyGraphicData>
-          <texPath>Things/Pawn/Animal/Tortoise/Tortoise</texPath>
-          <drawSize>1.2</drawSize>
-        </bodyGraphicData>
-        <dessicatedBodyGraphicData>
-          <texPath>Things/Pawn/Animal/Tortoise/Dessicated_Tortoise</texPath>
-          <drawSize>1.2</drawSize>
-        </dessicatedBodyGraphicData>
-      </li>
-      <li>
-        <bodyGraphicData>
-          <texPath>Things/Pawn/Animal/Tortoise/Tortoise</texPath>
-          <drawSize>1.5</drawSize>
-          <shadowData>
-            <volume>(0.45, 0.45, 0.45)</volume>
-            <offset>(0,0,0)</offset>
-          </shadowData>
-        </bodyGraphicData>
-        <dessicatedBodyGraphicData>
-          <texPath>Things/Pawn/Animal/Tortoise/Dessicated_Tortoise</texPath>
-          <drawSize>1.5</drawSize>
-        </dessicatedBodyGraphicData>
-      </li>
-    </lifeStages>
-  </PawnKindDef>
-
   <ThingDef ParentName="AnimalThingBase">
     <defName>MVO_PackTortoise</defName>
     <label>tortoise</label>
