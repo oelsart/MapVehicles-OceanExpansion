@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  
+  <MVO_Scurvy.label>壊血病</MVO_Scurvy.label>
+  <MVO_Scurvy.description>ビタミンCの欠乏によって引き起こされる病気です.</MVO_Scurvy.description>
+  <MVO_Scurvy.stages.minor.label>軽度</MVO_Scurvy.stages.minor.label>
+  <MVO_Scurvy.stages.major.label>中度</MVO_Scurvy.stages.major.label>
+  <MVO_Scurvy.stages.extreme.label>重度</MVO_Scurvy.stages.extreme.label>
+  
+</LanguageData>

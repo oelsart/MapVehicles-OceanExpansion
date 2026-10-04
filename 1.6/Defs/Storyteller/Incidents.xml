@@ -71,5 +71,12 @@
       <Lake>0.5</Lake>
     </mtbDaysByBiome>
   </IncidentDef>
+  
+  <IncidentDef ParentName="DiseaseIncident">
+    <defName>MVO_Disease_Scurvy</defName>
+    <label>scurvy</label>
+    <diseaseIncident>MVO_Scurvy</diseaseIncident>
+    <letterLabel>Disease: Scurvy</letterLabel>
+  </IncidentDef>
 
 </Defs>
