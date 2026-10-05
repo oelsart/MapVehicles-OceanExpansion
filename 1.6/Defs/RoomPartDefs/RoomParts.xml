@@ -16,6 +16,11 @@
     <workerClass>MapVehiclesOcean.RoomPart_FillBatteries</workerClass>
   </RoomPartDef>
 
+  <RoomPartDef>
+    <defName>MVO_ForbidStorage</defName>
+    <workerClass>MapVehiclesOcean.RoomPart_ForbidStorage</workerClass>
+  </RoomPartDef>
+
   <MapVehiclesOcean.RoomPart_PrefabDef>
     <defName>MVO_DiningTables_Large</defName>
     <workerClass>MapVehiclesOcean.RoomPart_FillWithPrefab</workerClass>

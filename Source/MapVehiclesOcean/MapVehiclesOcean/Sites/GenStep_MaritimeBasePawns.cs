@@ -37,21 +37,18 @@ public class GenStep_MaritimeBasePawns : GenStep
   {
     var faction = Find.FactionManager.FirstFactionOfDef(factionDef);
     var lord = LordMaker.MakeNewLord(faction, new LordJob_MaritimeBasePawns(faction), map);
-    var pawnGroupMakerSeed = OutpostSitePartUtility.GetPawnGroupMakerSeed(parms.sitePart.parms);
-    var parms1 =
-      GroupMakerParms(map.Tile, faction, FixedPoints, pawnGroupMakerSeed);
     var cellRect2 = MapGenerator.GetVar<CellRect>("SpawnRect");
 
     for (var i = 0; i < 3; i++)
     {
-      SpawnPawns();
+      SpawnPawns(GroupMakerParms(map.Tile, faction, FixedPoints, Rand.Int)); // SitePartのrandomValueを使うのではなく毎回乱数を生成する
     }
 
     return;
 
-    void SpawnPawns()
+    void SpawnPawns(PawnGroupMakerParms groupMakerParms)
     {
-      foreach (var pawn in PawnGroupMakerUtility.GeneratePawns(parms1))
+      foreach (var pawn in PawnGroupMakerUtility.GeneratePawns(groupMakerParms))
       {
         if (pawn.RaceProps.Animal && cellRect2.TryFindRandomCell(out var cell, ValidatorAnimal))
         {

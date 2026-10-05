@@ -49,6 +49,7 @@
       <MVO_DiningTables_Large/>
       <MVO_ConnectConduits/>
       <MVO_MiniTurrets/>
+      <MVO_ForbidStorage/>
     </parts>
     <wallAttachments>
       <TorchWallLamp>
