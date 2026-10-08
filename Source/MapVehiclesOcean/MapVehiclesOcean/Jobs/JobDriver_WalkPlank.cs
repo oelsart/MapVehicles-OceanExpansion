@@ -44,52 +44,85 @@ public class JobDriver_WalkPlank : JobDriverBodyOffset
     this.FailOnBurningImmobile(TargetIndex.A);
     yield return Toils_Goto.GotoCell(TargetIndex.B, PathEndMode.OnCell);
     
-    var chooseRole = ToilMaker.MakeToil();
-    var walkPlank = ToilMaker.MakeToil();
-    var watchPlank = ToilMaker.MakeToil();
-    
-    chooseRole.initAction = () =>
-    {
-      if (Find.TickManager.TicksGame > startTick + job.def.joyDuration)
-      {
-        EndJobWith(JobCondition.Succeeded);
-        return;
-      }
-
-      var participants = GetParticipants();
-      try
-      {
-        var someoneWalking = false;
-
-        foreach (var p in participants)
-        {
-          if (p.jobs?.curDriver is JobDriver_WalkPlank { IsWalking: true })
-          {
-            someoneWalking = true;
-            break;
-          }
-        }
-
-        if (!someoneWalking)
-        {
-          var selected = participants.RandomElementByWeightWithFallback(_ => 1f);
-          if (selected == pawn)
-          {
-            return; // 自分に当選したため walkPlank へ進む
-          }
-        }
-
-        JumpToToil(watchPlank);
-      }
-      finally
-      {
-        participants.Clear();
-        SimplePool<List<Pawn>>.Return(participants);
-      }
-    };
-    chooseRole.defaultCompleteMode = ToilCompleteMode.Instant;
+    var walkPlank = WalkPlankToil();
+    var watchPlank = WatchPlankToil();
+    var chooseRole = ChooseRoleToil(watchPlank);
 
     yield return chooseRole;
+    yield return walkPlank;
+    yield return Toils_Jump.Jump(chooseRole);
+    yield return watchPlank;
+    yield return Toils_Jump.Jump(chooseRole);
+  }
+
+  private List<Pawn> GetParticipants()
+  {
+    var plank = Gangplank;
+    
+    var list = SimplePool<List<Pawn>>.Get();
+    if (pawn.Map == null || Gangplank == null)
+      return list;
+
+    foreach (var reservation in plank.Map.reservationManager.ReservationsReadOnly)
+    {
+      if (reservation.Job?.def == job.def && reservation.Target == Gangplank)
+      {
+        list.Add(reservation.Claimant);
+      }
+    }
+
+    return list;
+  }
+
+  private Toil ChooseRoleToil(Toil jumpTo)
+  {
+	  var chooseRole = ToilMaker.MakeToil();
+	  chooseRole.initAction = () =>
+	  {
+		  if (Find.TickManager.TicksGame > startTick + job.def.joyDuration)
+		  {
+			  EndJobWith(JobCondition.Succeeded);
+			  return;
+		  }
+
+		  var participants = GetParticipants();
+		  try
+		  {
+			  var someoneWalking = false;
+
+			  foreach (var p in participants)
+			  {
+				  if (p.jobs?.curDriver is JobDriver_WalkPlank { IsWalking: true })
+				  {
+					  someoneWalking = true;
+					  break;
+				  }
+			  }
+
+			  if (!someoneWalking)
+			  {
+				  var selected = participants.RandomElementByWeightWithFallback(_ => 1f);
+				  if (selected == pawn)
+				  {
+					  return; // 自分に当選したため walkPlank へ進む
+				  }
+			  }
+
+			  JumpToToil(jumpTo);
+		  }
+		  finally
+		  {
+			  participants.Clear();
+			  SimplePool<List<Pawn>>.Return(participants);
+		  }
+	  };
+	  chooseRole.defaultCompleteMode = ToilCompleteMode.Instant;
+	  return chooseRole;
+  }
+  
+  private Toil WalkPlankToil()
+  {
+	  var walkPlank = ToilMaker.MakeToil();
 
     // 板を歩くToil
     walkPlank.defaultCompleteMode = ToilCompleteMode.Delay;
@@ -108,17 +141,17 @@ public class JobDriver_WalkPlank : JobDriverBodyOffset
       if (plank.Position != actor.Position)
       {
         map.reservationManager.Release(actor.Position, actor, job);
-        
-        var firstPawn = plank.Position.GetFirstPawn(map);
-        if (firstPawn != null && firstPawn.CurJobDef == job.def)
+
+        if (map.reservationManager.TryGetReserver(plank.Position, actor.Faction, out var reserver) &&
+            reserver.NextJobOrCurJob?.def == job.def)
         {
-          map.reservationManager.Release(firstPawn.Position, firstPawn, firstPawn.CurJob);
-          map.reservationManager.Reserve(firstPawn, firstPawn.CurJob, actor.Position);
-          firstPawn.pather.StartPath(actor.Position, PathEndMode.OnCell);
+	        map.reservationManager.Release(plank.Position, reserver, reserver.NextJobOrCurJob);
+	        map.reservationManager.Reserve(reserver, reserver.NextJobOrCurJob, actor.Position);
+	        reserver.pather.StartPath(actor.Position, PathEndMode.OnCell);
         }
         
         map.reservationManager.Reserve(actor, job, plank.Position);
-        actor.pather.StartPath(plank.Position, PathEndMode.OnCell);
+        actor.pather.StartPath(plank, PathEndMode.OnCell);
       }
     };
 
@@ -191,55 +224,39 @@ public class JobDriver_WalkPlank : JobDriverBodyOffset
       JoyUtility.TryGainRecRoomThought(pawn);
     });
 
-    yield return walkPlank;
-    yield return Toils_Jump.Jump(chooseRole);
-
-    // 観覧するToil
-    watchPlank.defaultCompleteMode = ToilCompleteMode.Delay;
-    watchPlank.defaultDuration = WatchDuration;
-    watchPlank.handlingFacing = true;
-    watchPlank.socialMode = RandomSocialMode.SuperActive;
-
-    watchPlank.tickIntervalAction = delta =>
-    {
-      drawOffset = Vector3.zero;
-      pawn.rotationTracker.FaceCell(Gangplank.Position);
-
-      if (Find.TickManager.TicksGame > startTick + job.def.joyDuration)
-      {
-        EndJobWith(JobCondition.Succeeded);
-      }
-      else
-      {
-        JoyUtility.JoyTickCheckEnd(pawn, delta, joySource: Gangplank as Building);
-      }
-    };
-
-    watchPlank.AddFinishAction(() =>
-    {
-      JoyUtility.TryGainRecRoomThought(pawn);
-    });
-
-    yield return watchPlank;
-    yield return Toils_Jump.Jump(chooseRole);
+    return walkPlank;
   }
 
-  private List<Pawn> GetParticipants()
+  private Toil WatchPlankToil()
   {
-    var plank = Gangplank;
-    
-    var list = SimplePool<List<Pawn>>.Get();
-    if (pawn.Map == null || Gangplank == null)
-      return list;
+	  var watchPlank = ToilMaker.MakeToil();
+	  
+	  // 観覧するToil
+	  watchPlank.defaultCompleteMode = ToilCompleteMode.Delay;
+	  watchPlank.defaultDuration = WatchDuration;
+	  watchPlank.handlingFacing = true;
+	  watchPlank.socialMode = RandomSocialMode.SuperActive;
 
-    foreach (var reservation in plank.Map.reservationManager.ReservationsReadOnly)
-    {
-      if (reservation.Job?.def == job.def && reservation.Target == Gangplank)
-      {
-        list.Add(reservation.Claimant);
-      }
-    }
+	  watchPlank.tickIntervalAction = delta =>
+	  {
+		  drawOffset = Vector3.zero;
+		  pawn.rotationTracker.FaceCell(Gangplank.Position);
 
-    return list;
+		  if (Find.TickManager.TicksGame > startTick + job.def.joyDuration)
+		  {
+			  EndJobWith(JobCondition.Succeeded);
+		  }
+		  else
+		  {
+			  JoyUtility.JoyTickCheckEnd(pawn, delta, joySource: Gangplank as Building);
+		  }
+	  };
+
+	  watchPlank.AddFinishAction(() =>
+	  {
+		  JoyUtility.TryGainRecRoomThought(pawn);
+	  });
+
+	  return watchPlank;
   }
 }

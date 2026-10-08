@@ -1,0 +1,74 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net48</TargetFramework>
+    <LangVersion>preview</LangVersion>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <RootNamespace>MapVehiclesOcean.Test</RootNamespace>
+    <OutDir>..\..\1.6\Assemblies\</OutDir>
+    <Configurations>Dev</Configurations>
+    <Platforms>AnyCPU</Platforms>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Dev|AnyCPU'">
+    <DebugType>full</DebugType>
+    <Optimize>True</Optimize>
+    <DefineConstants>UNITY_ASSERTIONS</DefineConstants>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\MapVehiclesOcean\MapVehiclesOcean\MapVehiclesOcean.csproj">
+      <Private>False</Private>
+    </ProjectReference>
+  </ItemGroup>
+  
+  <ItemGroup Condition="'$(CIBuild)' != 'true'">
+    <ProjectReference Include="..\..\..\VehicleMapFramework\Source\Test_VehicleMapFramework\Test_VehicleMapFramework.csproj">
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\VehicleMapFramework\Source\VehicleMapFramework\VehicleMapFramework.csproj">
+      <Private>False</Private>
+    </ProjectReference>
+  </ItemGroup>
+
+  <ItemGroup Condition="'$(CIBuild)' == 'true'">
+    <Reference Include="Test_VehicleMapFramework">
+      <HintPath>$(SteamWorkshopRoot)\3528683767\Test\Assemblies\Test_VehicleMapFramework.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="VehicleMapFramework">
+      <HintPath>$(SteamWorkshopRoot)\3528683767\1.6\Assemblies\Test_VehicleMapFramework.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="DevTools">
+      <HintPath>..\..\..\Vehicle-Framework\1.6\Assemblies\DevTools.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="SmashTools">
+      <HintPath>..\..\..\Vehicle-Framework\1.6\Assemblies\SmashTools.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Test_SmashTools">
+      <HintPath>..\..\..\Vehicle-Framework\1.6\Assemblies\Test_SmashTools.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Test_Vehicles">
+      <HintPath>..\..\..\Vehicle-Framework\1.6\Assemblies\Test_Vehicles.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Vehicles">
+      <HintPath>..\..\..\Vehicle-Framework\1.6\Assemblies\Vehicles.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Krafs.Rimworld.Ref" Version="1.6.4871" />
+    <PackageReference Include="PolySharp" Version="1.16.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+</Project>
