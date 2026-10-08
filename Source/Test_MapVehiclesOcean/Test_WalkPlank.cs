@@ -1,10 +1,10 @@
-﻿global using static VehicleMapFramework.Test_Logics.TestUtility;
+﻿global using static VehicleMapFramework.Test_DevTools.TestUtility;
 using System.Collections;
 using DevTools.Testing;
 using RimWorld;
 using UnityEngine.Assertions;
 using VehicleMapFramework;
-using VehicleMapFramework.Test_Logics;
+using VehicleMapFramework.Test_DevTools;
 using Vehicles.Testing;
 using Verse;
 using Verse.AI;
