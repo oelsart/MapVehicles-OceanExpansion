@@ -25,6 +25,10 @@
         <countRange>400~800</countRange>
       </li>
       <li Class="StockGenerator_SingleDef">
+        <thingDef>WoodLog</thingDef>
+        <countRange>400~800</countRange>
+      </li>
+      <li Class="StockGenerator_SingleDef">
         <thingDef>Cloth</thingDef>
         <countRange>400~800</countRange>
       </li>
