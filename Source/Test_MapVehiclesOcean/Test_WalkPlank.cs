@@ -4,6 +4,7 @@ using DevTools.Testing;
 using RimWorld;
 using UnityEngine.Assertions;
 using VehicleMapFramework;
+using VehicleMapFramework.Test_Logics;
 using Vehicles.Testing;
 using Verse;
 using Verse.AI;
@@ -54,8 +55,9 @@ internal sealed class Test_WalkPlank
 			Assert.AreEqual(jobDef, pawn.NextJobOrCurJob?.def);
 		}
 
-		Find.TickManager.CurTimeSpeed = TimeSpeed.Ultrafast;
-		yield return Group.pawns[0].WaitJob(jobDef);
-		Find.TickManager.CurTimeSpeed = TimeSpeed.Normal;
+		using (new TimeSpeedScope(TimeSpeed.Ultrafast))
+		{
+			yield return Group.pawns[0].WaitJob(jobDef);
+		}
 	}
 }
