@@ -4,7 +4,7 @@
     <LangVersion>preview</LangVersion>
     <ImplicitUsings>enable</ImplicitUsings>
     <RootNamespace>MapVehiclesOcean.Test</RootNamespace>
-    <OutDir>..\..\1.6\Assemblies\</OutDir>
+    <OutDir>..\..\Test\Assemblies\</OutDir>
     <Configurations>Dev</Configurations>
     <Platforms>AnyCPU</Platforms>
   </PropertyGroup>
