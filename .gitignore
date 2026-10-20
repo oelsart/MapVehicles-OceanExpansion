@@ -31,9 +31,9 @@ bld/
 [Oo]bj/
 [Ll]og/
 [Ll]ogs/
-/1.6/**/*.dll
+/1.7/**/*.dll
 /Test/**/*.dll
-/NanameWalls/1.6/**/*.dll
+/NanameWalls/1.7/**/*.dll
 
 # Visual Studio 2015/2017 cache/options directory
 .vs/
