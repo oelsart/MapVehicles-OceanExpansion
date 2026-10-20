@@ -32,7 +32,7 @@
 
   <ItemGroup Condition="'$(CIBuild)' == 'true'">
     <Reference Include="VehicleMapFramework">
-      <HintPath>$(SteamWorkshopRoot)\3528683767\1.6\Assemblies\VehicleMapFramework.dll</HintPath>
+      <HintPath>$(SteamWorkshopRoot)\3528683767\1.7\Assemblies\VehicleMapFramework.dll</HintPath>
       <Private>False</Private>
     </Reference>
   </ItemGroup>
