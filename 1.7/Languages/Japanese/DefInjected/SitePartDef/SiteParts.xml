@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <MVO_SeaThreat.label>海の脅威</MVO_SeaThreat.label>
+  <MVO_SeaThreat.description>海の脅威です.</MVO_SeaThreat.description>
+  
+  <MVO_Castaway.label>遭難者</MVO_Castaway.label>
+  <MVO_Castaway.description>救助を求めている遭難者です.</MVO_Castaway.description>
+
+  <MVO_MaritimeBase.label>海上基地</MVO_MaritimeBase.label>
+  <MVO_MaritimeBase.description>海を移動する海上基地です.</MVO_MaritimeBase.description>
+
+  <MVO_MechanoidPlatform.label>メカノイド拠点</MVO_MechanoidPlatform.label>
+  <MVO_MechanoidPlatform.description>海からの様々な場所への襲撃のためにメカノイドによって建造された拠点です.</MVO_MechanoidPlatform.description>
+  <MVO_MechanoidPlatform.approachingReportString>{0}を攻撃中.</MVO_MechanoidPlatform.approachingReportString>
+  <MVO_MechanoidPlatform.approachOrderString>{0}を攻撃</MVO_MechanoidPlatform.approachOrderString>
+
+  <MVO_IslandHumanTraces.label>人の痕跡</MVO_IslandHumanTraces.label>
+  <MVO_IslandHumanTraces.description>かつて誰かがいたようですが……彼らはこの場所を去ることはなかったようです.</MVO_IslandHumanTraces.description>
+
+  <MVO_IslandTreasure.label>宝</MVO_IslandTreasure.label>
+  <MVO_IslandTreasure.description>島に眠る宝です.</MVO_IslandTreasure.description>
+
+  <MVO_Shipwreck.label>難破船</MVO_Shipwreck.label>
+  <MVO_Shipwreck.description>難破船の残骸です.</MVO_Shipwreck.description>
+  <MVO_Shipwreck.mainPartAllThreatsLabel>敵対的な何かが検出されました.</MVO_Shipwreck.mainPartAllThreatsLabel>
+  
+</LanguageData>

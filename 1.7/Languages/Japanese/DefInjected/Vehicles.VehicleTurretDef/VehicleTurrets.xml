@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  
+  <MVO_Cannon_Turret.label>大砲</MVO_Cannon_Turret.label>
+  <MVO_Cannon_Turret.description>初期の火薬技術を用いて建造できる大砲です.</MVO_Cannon_Turret.description>
+  <MVO_Cannon_Turret.fireModes.0.label>単発</MVO_Cannon_Turret.fireModes.0.label>
+  
+</LanguageData>

@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  
+  <MVO_JobLookout.reportString>TargetAで見張り中.</MVO_JobLookout.reportString>
+  <MVO_GotoShipCombat.reportString>移動中.</MVO_GotoShipCombat.reportString>
+  <MVO_WalkPlank.reportString>板歩きのため移動中.</MVO_WalkPlank.reportString>
+  
+</LanguageData>

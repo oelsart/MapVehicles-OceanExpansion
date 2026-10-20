@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  
+  <MVO_AteStinkyMeat.stages.0.label>臭い肉を食べた</MVO_AteStinkyMeat.stages.0.label>
+  <MVO_AteStinkyMeat.stages.0.description>本当に臭い肉だった.調理前に下処理が必要だったのかもしれない.</MVO_AteStinkyMeat.stages.0.description>
+
+  <MVO_Thought_Ocean_Weak.stages.0.label>心地よい潮風</MVO_Thought_Ocean_Weak.stages.0.label>
+  <MVO_Thought_Ocean_Weak.stages.0.description>水の穏やかな動きと微かな潮の香りが,この日を素晴らしいものにしてくれる.</MVO_Thought_Ocean_Weak.stages.0.description>
+
+  <MVO_Thought_Ocean_Weak.stages.1.label>微かな海への憧れ</MVO_Thought_Ocean_Weak.stages.1.label>
+  <MVO_Thought_Ocean_Weak.stages.1.description>動かない大地は少し退屈だ.開かれた海のリズムが恋しい.</MVO_Thought_Ocean_Weak.stages.1.description>
+  
+  <MVO_Thought_Ocean_Strong.stages.0.label>海の上の安らぎ</MVO_Thought_Ocean_Strong.stages.0.label>
+  <MVO_Thought_Ocean_Strong.stages.0.description>水の動きと潮の香りが,私の心に完全な平穏をもたらしてくれる.</MVO_Thought_Ocean_Strong.stages.0.description>
+
+  <MVO_Thought_Ocean_Strong.stages.1.label>陸の孤独</MVO_Thought_Ocean_Strong.stages.1.label>
+  <MVO_Thought_Ocean_Strong.stages.1.description>動かない大地は不自然で死んでいるように感じる.私は開かれた海に帰るべきだ.</MVO_Thought_Ocean_Strong.stages.1.description>
+  
+</LanguageData>

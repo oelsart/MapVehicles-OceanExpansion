@@ -3,4 +3,7 @@
   <MVO_WorkLookout.gerund>で見張りをする</MVO_WorkLookout.gerund>
   <MVO_WorkLookout.label>見張り</MVO_WorkLookout.label>
   <MVO_WorkLookout.verb>見張りをする</MVO_WorkLookout.verb>
+  <MVO_WorkLookoutTelescope.gerund>で見張りをする</MVO_WorkLookoutTelescope.gerund>
+  <MVO_WorkLookoutTelescope.label>見張り</MVO_WorkLookoutTelescope.label>
+  <MVO_WorkLookoutTelescope.verb>見張りをする</MVO_WorkLookoutTelescope.verb>
 </LanguageData>

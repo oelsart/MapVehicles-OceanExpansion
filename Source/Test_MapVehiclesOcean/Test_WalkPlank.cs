@@ -5,7 +5,7 @@ using RimWorld;
 using UnityEngine.Assertions;
 using VehicleMapFramework;
 using VehicleMapFramework.Test_DevTools;
-using Vehicles.Testing;
+using Vehicles.Tests;
 using Verse;
 using Verse.AI;
 

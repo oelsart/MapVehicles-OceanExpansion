@@ -1,12 +1,12 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFramework>net48</TargetFramework>
+    <TargetFramework>net10.0</TargetFramework>
     <LangVersion>preview</LangVersion>
     <ImplicitUsings>enable</ImplicitUsings>
     <RootNamespace>MapVehiclesOcean.Test</RootNamespace>
     <OutDir>..\..\Test\Assemblies\</OutDir>
+    <GenerateDependencyFile>false</GenerateDependencyFile>
     <Configurations>Dev</Configurations>
-    <Platforms>AnyCPU</Platforms>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Dev|AnyCPU'">
@@ -44,31 +44,20 @@
 
   <ItemGroup>
     <Reference Include="DevTools">
-      <HintPath>..\..\..\Vehicle-Framework\1.6\Assemblies\DevTools.dll</HintPath>
+      <HintPath>..\..\..\Vehicle-Framework\1.7\Assemblies\DevTools.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="SmashTools">
-      <HintPath>..\..\..\Vehicle-Framework\1.6\Assemblies\SmashTools.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Test_SmashTools">
-      <HintPath>..\..\..\Vehicle-Framework\1.6\Assemblies\Test_SmashTools.dll</HintPath>
+      <HintPath>..\..\..\Vehicle-Framework\1.7\Assemblies\SmashTools.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Test_Vehicles">
-      <HintPath>..\..\..\Vehicle-Framework\1.6\Assemblies\Test_Vehicles.dll</HintPath>
+      <HintPath>..\..\..\Vehicle-Framework\1.7\Assemblies\Test_Vehicles.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Vehicles">
-      <HintPath>..\..\..\Vehicle-Framework\1.6\Assemblies\Vehicles.dll</HintPath>
+      <HintPath>..\..\..\Vehicle-Framework\1.7\Assemblies\Vehicles.dll</HintPath>
       <Private>False</Private>
     </Reference>
-  </ItemGroup>
-  <ItemGroup>
-    <PackageReference Include="Krafs.Rimworld.Ref" Version="1.6.4871" />
-    <PackageReference Include="PolySharp" Version="1.16.0">
-      <PrivateAssets>all</PrivateAssets>
-      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-    </PackageReference>
   </ItemGroup>
 </Project>

@@ -1,0 +1,161 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <HediffDef>
+    <defName>MVO_Scurvy</defName>
+    <label>scurvy</label>
+    <description>A disease caused by severe deficiency of vitamin C.</description>
+    <hediffClass>MapVehiclesOcean.Hediff_VitaminDeficiency</hediffClass>
+    <makesSickThought>true</makesSickThought>
+    <lethalSeverity>1</lethalSeverity>
+    <alwaysShowSeverity>true</alwaysShowSeverity>
+    <tendable>true</tendable>
+    <initialSeverity>0.1</initialSeverity>
+    <comps>
+      <li Class="HediffCompProperties_TendDuration">
+        <baseTendDurationHours>24</baseTendDurationHours>
+        <severityPerDayTended>-0.06</severityPerDayTended>
+        <showTendQuality>false</showTendQuality>
+      </li>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>0.05</severityPerDay>
+      </li>
+      <li Class="MapVehiclesOcean.HediffCompProperties_VitaminC">
+        <vitaminSources>
+          <RawPotatoes>0.15</RawPotatoes>
+          <Chocolate>0.05</Chocolate>
+          <SmokeleafLeaves>0.05</SmokeleafLeaves>
+          <RawBerries>0.1</RawBerries>
+
+          <!-- Vanilla Plants Expanded -->
+          <RawAgave MayRequire="VanillaExpanded.VPlantsE">0.1</RawAgave>
+          <VCE_RawOnion MayRequire="VanillaExpanded.VPlantsE">0.08</VCE_RawOnion>
+          <VCE_RawPumpkin MayRequire="VanillaExpanded.VPlantsE">0.12</VCE_RawPumpkin>
+          <VCE_RawPepper MayRequire="VanillaExpanded.VPlantsE">0.2</VCE_RawPepper>
+          <VCE_RawPeas MayRequire="VanillaExpanded.VPlantsE">0.1</VCE_RawPeas>
+          <VCE_RawEggplant MayRequire="VanillaExpanded.VPlantsE">0.08</VCE_RawEggplant>
+          <VCE_RawCabbage MayRequire="VanillaExpanded.VPlantsE">0.18</VCE_RawCabbage>
+          <VCE_RawBeets MayRequire="VanillaExpanded.VPlantsE">0.1</VCE_RawBeets>
+          <VCE_RawTomatoes MayRequire="VanillaExpanded.VPlantsE">0.15</VCE_RawTomatoes>
+          <VCE_RawApple MayRequire="VanillaExpanded.VPlantsE">0.15</VCE_RawApple>
+          <VCE_RawPeach MayRequire="VanillaExpanded.VPlantsE">0.12</VCE_RawPeach>
+          <VCE_RawCherry MayRequire="VanillaExpanded.VPlantsE">0.1</VCE_RawCherry>
+          <VCE_RawPlum MayRequire="VanillaExpanded.VPlantsE">0.15</VCE_RawPlum>
+          <VCE_RawPear MayRequire="VanillaExpanded.VPlantsE">0.1</VCE_RawPear>
+          <VCE_RawPricklyPear MayRequire="VanillaExpanded.VPlantsE">0.14</VCE_RawPricklyPear>
+          <VCE_Bearberry MayRequire="VanillaExpanded.VPlantsE">0.12</VCE_Bearberry>
+          <VCE_RawBanana MayRequire="VanillaExpanded.VPlantsE">0.12</VCE_RawBanana>
+          <VCE_RawOrange MayRequire="VanillaExpanded.VPlantsE">0.3</VCE_RawOrange>
+
+          <!-- Vanilla Plants Expanded - More Plants -->
+          <VCE_RawAvocado MayRequire="VanillaExpanded.VPlantsEMore">0.1</VCE_RawAvocado>
+          <VCE_RawCoconut MayRequire="VanillaExpanded.VPlantsEMore">0.05</VCE_RawCoconut>
+          <VCE_RawAlmonds MayRequire="VanillaExpanded.VPlantsEMore">0.02</VCE_RawAlmonds>
+          <VCE_Mangoes MayRequire="VanillaExpanded.VPlantsEMore">0.25</VCE_Mangoes>
+          <VCE_RawCelery MayRequire="VanillaExpanded.VPlantsEMore">0.08</VCE_RawCelery>
+          <VCE_RawPineapple MayRequire="VanillaExpanded.VPlantsEMore">0.25</VCE_RawPineapple>
+          <VCE_RawLettuce MayRequire="VanillaExpanded.VPlantsEMore">0.1</VCE_RawLettuce>
+          <VCE_RawBrusselsSprouts MayRequire="VanillaExpanded.VPlantsEMore">0.22</VCE_RawBrusselsSprouts>
+          <VCE_RawCassava MayRequire="VanillaExpanded.VPlantsEMore">0.12</VCE_RawCassava>
+          <VCE_RawSweetPotatoes MayRequire="VanillaExpanded.VPlantsEMore">0.12</VCE_RawSweetPotatoes>
+          <VCE_RawRadish MayRequire="VanillaExpanded.VPlantsEMore">0.1</VCE_RawRadish>
+          <VCE_RawPeanut MayRequire="VanillaExpanded.VPlantsEMore">0.02</VCE_RawPeanut>
+          <VCE_RawSunflower MayRequire="VanillaExpanded.VPlantsEMore">0.03</VCE_RawSunflower>
+          <VCE_RawOkra MayRequire="VanillaExpanded.VPlantsEMore">0.15</VCE_RawOkra>
+          <VCE_RawGarlic MayRequire="VanillaExpanded.VPlantsEMore">0.1</VCE_RawGarlic>
+          <VCE_RawCarrot MayRequire="VanillaExpanded.VPlantsEMore">0.08</VCE_RawCarrot>
+          <VCE_RawBeans MayRequire="VanillaExpanded.VPlantsEMore">0.1</VCE_RawBeans>
+          <VCE_RawChickpeas MayRequire="VanillaExpanded.VPlantsEMore">0.04</VCE_RawChickpeas>
+          <VCE_RawBellPeppers MayRequire="VanillaExpanded.VPlantsEMore">0.25</VCE_RawBellPeppers>
+          <VCE_RawYellowBellPeppers MayRequire="VanillaExpanded.VPlantsEMore">0.3</VCE_RawYellowBellPeppers>
+          <VCE_RawTaro MayRequire="VanillaExpanded.VPlantsEMore">0.1</VCE_RawTaro>
+          <VCE_RawWatercress MayRequire="VanillaExpanded.VPlantsEMore">0.2</VCE_RawWatercress>
+          <VCE_RawLotus MayRequire="VanillaExpanded.VPlantsEMore">0.12</VCE_RawLotus>
+          <VCE_RawWaterChestnut MayRequire="VanillaExpanded.VPlantsEMore">0.08</VCE_RawWaterChestnut>
+          <VCE_RawMelon MayRequire="VanillaExpanded.VPlantsEMore">0.15</VCE_RawMelon>
+          <VCE_RawCucumber MayRequire="VanillaExpanded.VPlantsEMore">0.08</VCE_RawCucumber>
+          <VCE_RawButternutSquash MayRequire="VanillaExpanded.VPlantsEMore">0.12</VCE_RawButternutSquash>
+        </vitaminSources>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <label>minor</label>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.05</offset>
+          </li>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>-0.05</offset>
+          </li>
+        </capMods>
+      </li>
+      <li>
+        <minSeverity>0.4</minSeverity>
+        <label>moderate</label>
+        <painOffset>0.1</painOffset>
+        <naturalHealingFactor>0.5</naturalHealingFactor>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.1</offset>
+          </li>
+          <li>
+            <capacity>Manipulation</capacity>
+            <offset>-0.1</offset>
+          </li>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>-0.1</offset>
+          </li>
+        </capMods>
+      </li>
+      <li>
+        <minSeverity>0.7</minSeverity>
+        <label>major</label>
+        <painOffset>0.2</painOffset>
+        <totalBleedFactor>1.3</totalBleedFactor>
+        <naturalHealingFactor>0.1</naturalHealingFactor>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.15</offset>
+          </li>
+          <li>
+            <capacity>Manipulation</capacity>
+            <offset>-0.2</offset>
+          </li>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>-0.2</offset>
+          </li>
+        </capMods>
+      </li>
+      <li>
+        <minSeverity>0.9</minSeverity>
+        <label>extreme</label>
+        <lifeThreatening>true</lifeThreatening>
+        <painOffset>0.3</painOffset>
+        <totalBleedFactor>1.6</totalBleedFactor>
+        <naturalHealingFactor>0.0</naturalHealingFactor>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.2</offset>
+          </li>
+          <li>
+            <capacity>Manipulation</capacity>
+            <offset>-0.3</offset>
+          </li>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>-0.3</offset>
+          </li>
+        </capMods>
+      </li>
+    </stages>
+  </HediffDef>
+  
+</Defs>

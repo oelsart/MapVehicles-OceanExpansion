@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  
+  <MVO_Cannon_Blueprint.label>大砲</MVO_Cannon_Blueprint.label>
+  <MVO_Cannon_Blueprint.description>初期の火薬技術を用いて建造できる大砲です.</MVO_Cannon_Blueprint.description>
+  
+  <MVO_ExpandableRaft_Blueprint.label>イカダ</MVO_ExpandableRaft_Blueprint.label>
+  <MVO_ExpandableRaft_Blueprint.description>パーツを組み合わせて作られる,拡張可能なイカダです.人類が海を渡ることを可能にした最初の発明です.</MVO_ExpandableRaft_Blueprint.description>
+  
+  <MVO_Keel_Blueprint.label>キール</MVO_Keel_Blueprint.label>
+  <MVO_Keel_Blueprint.description>初期の技術で建造された船の土台です.狭いですが,それなりに頑丈です.</MVO_Keel_Blueprint.description>
+  
+  <MVO_Pontoon_Blueprint.label>ポンツーン</MVO_Pontoon_Blueprint.label>
+  <MVO_Pontoon_Blueprint.description>面積効率に優れた快適なボートです.デッキを追加で増設することができます.ある意味では,先進技術で構築されたイカダとも言えます.</MVO_Pontoon_Blueprint.description>
+  
+  <MVO_Roundnose_Blueprint.label>ラウンドノーズ</MVO_Roundnose_Blueprint.label>
+  <MVO_Roundnose_Blueprint.description>鉄で補強された,巨大で頑丈な船の土台です.戦闘において真価を発揮するでしょう.</MVO_Roundnose_Blueprint.description>
+  
+</LanguageData>

@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <SitePartDef>
+    <defName>MVO_MechanoidPlatform</defName>
+    <label>mechanoid platform</label>
+    <description>A base built by the mechanoids for raids on various locations from the sea.</description>
+    <workerClass>SitePartWorker_Outpost</workerClass>
+    <siteTexture>World/WorldObjects/Sites/Outpost</siteTexture>
+    <expandingIconTexture>World/WorldObjects/Expanding/Sites/Outpost</expandingIconTexture>
+    <applyFactionColorToSiteTexture>true</applyFactionColorToSiteTexture>
+    <showFactionInInspectString>true</showFactionInInspectString>
+    <requiresFaction>true</requiresFaction>
+    <approachOrderString>Attack {0}</approachOrderString>
+    <approachingReportString>Attacking {0}.</approachingReportString>
+    <arrivedLetter>There is the mechanoid platform in this area.</arrivedLetter>
+    <arrivedLetterDef>NegativeEvent</arrivedLetterDef>
+    <wantsThreatPoints>true</wantsThreatPoints>
+    <minThreatPoints>350</minThreatPoints>
+    <tags>
+      <li>MVO_MechanoidPlatform</li>
+    </tags>
+  </SitePartDef>
+
+  <GenStepDef>
+    <defName>MVO_MechanoidPlatform</defName>
+    <linkWithSite>MVO_MechanoidPlatform</linkWithSite>
+    <order>400</order>
+    <genStep Class="MapVehiclesOcean.GenStep_MechanoidPlatform"/>
+  </GenStepDef>
+
+  <GenStepDef>
+    <defName>MVO_Mechanoids</defName>
+    <linkWithSite>MVO_MechanoidPlatform</linkWithSite>
+    <order>410</order>
+    <genStep Class="MapVehiclesOcean.GenStep_Mechanoids">
+      <pawnGroupKindDef>MVO_MechanoidPlatform</pawnGroupKindDef>
+    </genStep>
+  </GenStepDef>
+
+</Defs>

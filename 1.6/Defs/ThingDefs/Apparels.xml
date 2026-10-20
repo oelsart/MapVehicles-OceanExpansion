@@ -168,7 +168,7 @@
     </graphicData>
     <techLevel>Medieval</techLevel>
     <statBases>
-      <Mass>1</Mass>
+      <Mass>0.4</Mass>
       <MarketValue>90</MarketValue>
       <WorkToMake>3000</WorkToMake>
       <Flammability>1.0</Flammability>

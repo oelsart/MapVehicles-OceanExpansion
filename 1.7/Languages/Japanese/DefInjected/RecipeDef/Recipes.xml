@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  
+  <MVO_PrepKrakenMeat.description>生ぐさい匂いや硬くて食べられない部分を取り除くために生のクラーケンの肉を処理し,美味しそうな下処理済みの肉に変える.</MVO_PrepKrakenMeat.description>
+  <MVO_PrepKrakenMeat.jobString>クラーケンの肉を下処理中.</MVO_PrepKrakenMeat.jobString>
+  <MVO_PrepKrakenMeat.label>クラーケンの肉を下処理する</MVO_PrepKrakenMeat.label>
+  <MVO_PrepKrakenMeatBulk.description>生のクラーケンの肉をまとめて処理して生ぐさい匂いや硬くて食べられない部分を取り除き,美味しそうな下処理済みの肉に変える.</MVO_PrepKrakenMeatBulk.description>
+  <MVO_PrepKrakenMeatBulk.jobString>クラーケンの肉を下処理中.</MVO_PrepKrakenMeatBulk.jobString>
+  <MVO_PrepKrakenMeatBulk.label>クラーケンの肉を下処理する x4</MVO_PrepKrakenMeatBulk.label>
+  <MVO_PrepSharkMeat.description>強い匂いや成分を取り除くために生のサメの肉を処理し,食べやすい下処理済みの肉に変える.</MVO_PrepSharkMeat.description>
+  <MVO_PrepSharkMeat.jobString>サメの肉を下処理中.</MVO_PrepSharkMeat.jobString>
+  <MVO_PrepSharkMeat.label>サメの肉を下処理する</MVO_PrepSharkMeat.label>
+  <MVO_PrepSharkMeatBulk.description>強い匂や成分を取り除くために生のサメの肉をまとめて処理し,食べやすい下処理済みの肉に変える.</MVO_PrepSharkMeatBulk.description>
+  <MVO_PrepSharkMeatBulk.jobString>サメの肉を下処理中.</MVO_PrepSharkMeatBulk.jobString>
+  <MVO_PrepSharkMeatBulk.label>サメの肉を下処理する x4</MVO_PrepSharkMeatBulk.label>
+  <MVO_RenderSeaFats.description>生のサメやイカの肉から油を抽出する.得られた脂肪は非常に燃えやすく,化学燃料として使用できる.</MVO_RenderSeaFats.description>
+  <MVO_RenderSeaFats.jobString>海産脂肪を精製中.</MVO_RenderSeaFats.jobString>
+  <MVO_RenderSeaFats.label>海産脂肪を精製する</MVO_RenderSeaFats.label>
+  
+</LanguageData>

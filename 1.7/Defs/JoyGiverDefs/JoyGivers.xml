@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <JoyGiverDef>
+    <defName>MVO_WalkPlank</defName>
+    <giverClass>MapVehiclesOcean.JoyGiver_WalkPlank</giverClass>
+    <baseChance>4</baseChance>
+    <thingDefs>
+      <li>MVO_Gangplank</li>
+    </thingDefs>
+    <jobDef>MVO_WalkPlank</jobDef>
+    <joyKind>Social</joyKind>
+    <requiredCapacities>
+      <li>Moving</li>
+    </requiredCapacities>
+  </JoyGiverDef>
+  
+</Defs>

@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <MVO_Kraken.label>クラーケン</MVO_Kraken.label>
+  <MVO_Kraken.corePart.parts.2.customLabel>左腎</MVO_Kraken.corePart.parts.2.customLabel>
+  <MVO_Kraken.corePart.parts.3.customLabel>右腎</MVO_Kraken.corePart.parts.3.customLabel>
+  <MVO_Kraken.corePart.parts.5.customLabel>左エラ</MVO_Kraken.corePart.parts.5.customLabel>
+  <MVO_Kraken.corePart.parts.6.customLabel>右エラ</MVO_Kraken.corePart.parts.6.customLabel>
+  <MVO_Kraken.corePart.parts.8.parts.1.customLabel>左目</MVO_Kraken.corePart.parts.8.parts.1.customLabel>
+  <MVO_Kraken.corePart.parts.8.parts.2.customLabel>右目</MVO_Kraken.corePart.parts.8.parts.2.customLabel>
+  <MVO_Kraken.corePart.parts.8.parts.3.customLabel>口</MVO_Kraken.corePart.parts.8.parts.3.customLabel>
+  <MVO_Kraken.corePart.parts.8.parts.4.customLabel>左触腕</MVO_Kraken.corePart.parts.8.parts.4.customLabel>
+  <MVO_Kraken.corePart.parts.8.parts.5.customLabel>右触腕</MVO_Kraken.corePart.parts.8.parts.5.customLabel>
+  <MVO_Kraken.corePart.parts.8.parts.6.customLabel>左第一触手</MVO_Kraken.corePart.parts.8.parts.6.customLabel>
+  <MVO_Kraken.corePart.parts.8.parts.7.customLabel>左第二触手</MVO_Kraken.corePart.parts.8.parts.7.customLabel>
+  <MVO_Kraken.corePart.parts.8.parts.8.customLabel>左第三触手</MVO_Kraken.corePart.parts.8.parts.8.customLabel>
+  <MVO_Kraken.corePart.parts.8.parts.9.customLabel>左第四触手</MVO_Kraken.corePart.parts.8.parts.9.customLabel>
+  <MVO_Kraken.corePart.parts.8.parts.10.customLabel>右第一触手</MVO_Kraken.corePart.parts.8.parts.10.customLabel>
+  <MVO_Kraken.corePart.parts.8.parts.11.customLabel>右第二触手</MVO_Kraken.corePart.parts.8.parts.11.customLabel>
+  <MVO_Kraken.corePart.parts.8.parts.12.customLabel>右第三触手</MVO_Kraken.corePart.parts.8.parts.12.customLabel>
+  <MVO_Kraken.corePart.parts.8.parts.13.customLabel>右第四触手</MVO_Kraken.corePart.parts.8.parts.13.customLabel>
+  
+  <MVO_Shark.label>サメ</MVO_Shark.label>
+  <MVO_Shark.corePart.parts.10.customLabel>右胸鰭</MVO_Shark.corePart.parts.10.customLabel>
+  <MVO_Shark.corePart.parts.11.parts.1.customLabel>左目</MVO_Shark.corePart.parts.11.parts.1.customLabel>
+  <MVO_Shark.corePart.parts.11.parts.2.customLabel>右目</MVO_Shark.corePart.parts.11.parts.2.customLabel>
+  <MVO_Shark.corePart.parts.4.customLabel>左エラ</MVO_Shark.corePart.parts.4.customLabel>
+  <MVO_Shark.corePart.parts.5.customLabel>右エラ</MVO_Shark.corePart.parts.5.customLabel>
+  <MVO_Shark.corePart.parts.6.customLabel>左腎</MVO_Shark.corePart.parts.6.customLabel>
+  <MVO_Shark.corePart.parts.7.customLabel>右腎</MVO_Shark.corePart.parts.7.customLabel>
+  <MVO_Shark.corePart.parts.9.customLabel>左胸鰭</MVO_Shark.corePart.parts.9.customLabel>
+  
+  <MVO_Mech_Nephrops.label>ネフロプス</MVO_Mech_Nephrops.label>
+  <MVO_Mech_Nephrops.corePart.parts.0.parts.0.parts.1.customLabel>左視覚センサー</MVO_Mech_Nephrops.corePart.parts.0.parts.0.parts.1.customLabel>
+  <MVO_Mech_Nephrops.corePart.parts.0.parts.0.parts.2.customLabel>右視覚センサー</MVO_Mech_Nephrops.corePart.parts.0.parts.0.parts.2.customLabel>
+  <MVO_Mech_Nephrops.corePart.parts.0.parts.0.parts.3.customLabel>左触角センサー</MVO_Mech_Nephrops.corePart.parts.0.parts.0.parts.3.customLabel>
+  <MVO_Mech_Nephrops.corePart.parts.0.parts.0.parts.4.customLabel>右触角センサー</MVO_Mech_Nephrops.corePart.parts.0.parts.0.parts.4.customLabel>
+  <MVO_Mech_Nephrops.corePart.parts.1.customLabel>左肩ホバー</MVO_Mech_Nephrops.corePart.parts.1.customLabel>
+  <MVO_Mech_Nephrops.corePart.parts.1.parts.0.customLabel>左腕</MVO_Mech_Nephrops.corePart.parts.1.parts.0.customLabel>
+  <MVO_Mech_Nephrops.corePart.parts.1.parts.0.parts.0.customLabel>左大ハサミ</MVO_Mech_Nephrops.corePart.parts.1.parts.0.parts.0.customLabel>
+  <MVO_Mech_Nephrops.corePart.parts.2.customLabel>右肩ホバー</MVO_Mech_Nephrops.corePart.parts.2.customLabel>
+  <MVO_Mech_Nephrops.corePart.parts.2.parts.0.customLabel>右腕</MVO_Mech_Nephrops.corePart.parts.2.parts.0.customLabel>
+  <MVO_Mech_Nephrops.corePart.parts.2.parts.0.parts.0.customLabel>右大ハサミ</MVO_Mech_Nephrops.corePart.parts.2.parts.0.parts.0.customLabel>
+  <MVO_Mech_Nephrops.corePart.parts.3.parts.0.customLabel>左尾部ホバー</MVO_Mech_Nephrops.corePart.parts.3.parts.0.customLabel>
+  <MVO_Mech_Nephrops.corePart.parts.3.parts.1.customLabel>右尾部ホバー</MVO_Mech_Nephrops.corePart.parts.3.parts.1.customLabel>
+  
+</LanguageData>

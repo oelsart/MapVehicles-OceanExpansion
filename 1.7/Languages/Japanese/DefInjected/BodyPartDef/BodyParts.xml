@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  
+  <MVO_KrakenFeedingTentacle.label>触腕</MVO_KrakenFeedingTentacle.label>
+  <MVO_KrakenSiphon.label>漏斗</MVO_KrakenSiphon.label>
+  <MVO_KrakenTentacle.label>触手</MVO_KrakenTentacle.label>
+  <MVO_HeavyPincer.label>大ハサミ</MVO_HeavyPincer.label>
+  <MVO_HoverShoulder.label>肩ホバー</MVO_HoverShoulder.label>
+  <MVO_MechanicalTail.label>尾</MVO_MechanicalTail.label>
+  <MVO_SensorWhisker.label>触覚センサー</MVO_SensorWhisker.label>
+  <MVO_TailHoverNode.label>尾部ホバー</MVO_TailHoverNode.label>
+  <MVO_CaudalFin.label>尾鰭</MVO_CaudalFin.label>
+  <MVO_Gill.label>エラ</MVO_Gill.label>
+  <MVO_PectoralFin.label>胸鰭</MVO_PectoralFin.label>
+  <MVO_SharkJaw.label>顎</MVO_SharkJaw.label>
+  
+</LanguageData>

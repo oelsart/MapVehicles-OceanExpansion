@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <BodyPartDef>
+    <defName>MVO_KrakenSiphon</defName>
+    <label>siphon</label>
+    <hitPoints>80</hitPoints>
+    <skinCovered>true</skinCovered>
+    <tags>
+      <li>MovingLimbCore</li>
+    </tags>
+  </BodyPartDef>
+
+  <BodyPartDef>
+    <defName>MVO_KrakenTentacle</defName>
+    <label>tentacle</label>
+    <hitPoints>90</hitPoints>
+    <skinCovered>true</skinCovered>
+    <tags>
+      <li>MovingLimbCore</li>
+      <li>ManipulationLimbCore</li>
+    </tags>
+  </BodyPartDef>
+
+  <BodyPartDef>
+    <defName>MVO_KrakenFeedingTentacle</defName>
+    <label>feeding tentacle</label>
+    <hitPoints>120</hitPoints>
+    <skinCovered>true</skinCovered>
+    <tags>
+      <li>ManipulationLimbCore</li>
+    </tags>
+  </BodyPartDef>
+
+  <BodyPartGroupDef>
+    <defName>MVO_TentacleAttackTool</defName>
+    <label>tentacle</label>
+  </BodyPartGroupDef>
+
+</Defs>

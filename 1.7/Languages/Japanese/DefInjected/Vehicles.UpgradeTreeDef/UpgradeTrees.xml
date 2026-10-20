@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  
+  <MVO_Pontoon_UpgradeTree.nodes.0.label>デッキ拡張 (左)</MVO_Pontoon_UpgradeTree.nodes.0.label>
+  <MVO_Pontoon_UpgradeTree.nodes.0.description>ボートの左側に追加のデッキを増設します.</MVO_Pontoon_UpgradeTree.nodes.0.description>
+  <MVO_Pontoon_UpgradeTree.nodes.1.label>デッキ拡張 (右)</MVO_Pontoon_UpgradeTree.nodes.1.label>
+  <MVO_Pontoon_UpgradeTree.nodes.1.description>ボートの右側に追加のデッキを増設します.</MVO_Pontoon_UpgradeTree.nodes.1.description>
+  
+</LanguageData>

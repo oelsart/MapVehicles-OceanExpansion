@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <MemeDef>
+    <defName>MVO_Seafaring</defName>
+    <label>seafaring</label>
+    <description>The sea is our true home and lifeblood. To live away from open waters is to be severed from our purpose.</description>
+    <iconPath>MapVehiclesOcean/UI/Memes/Seafaring</iconPath>
+    <groupDef>Misc</groupDef>
+    <impact>2</impact>
+    <generalRules>
+      <rulesStrings>
+        <li>memeAdjective->maritime</li>
+        <li>memeAdjective->nautical</li>
+        <li>memeAdjective->oceanic</li>
+        <li>memeCreed->crew</li>
+        <li>memeCreed->flotilla</li>
+        <li>memeCreed->fleet</li>
+        <li>memeConcept->ocean</li>
+        <li>memeConcept->navigation</li>
+        <li>memeConcept->seamanship</li>
+        <li>memeLeaderNoun->admiral</li>
+        <li>memeLeaderNoun->captain</li>
+        <li>memeMoralist->helmsman</li>
+        <li>memeMoralist->quartermaster</li>
+      </rulesStrings>
+    </generalRules>
+    <descriptionMaker>
+      <rules>
+        <rulesStrings>
+          <li>creation(tag=meme_MVO_Seafaring) ->[deity0_name] parted the primordial land and birthed the vast ocean, placing the first crew upon the tide.</li>
+          <li>episode(uses=1,tag=meme_MVO_Seafaring) ->The crew weathered a hurricane under [deity0_name]'s gaze, learning that stability on land is a false promise.</li>
+          <li>intro(tag=meme_MVO_Seafaring) ->On the waters of [place_name], [founderName] built the first sea vessel and abandoned the dust of dry land.</li>
+          <li>lessonIntro(tag=meme_MVO_Seafaring) ->Listening to the waves against the hull late at night, I realized that</li>
+          <li>lesson(tag=meme_MVO_Seafaring) ->land binds the soul, but the sea sets it free</li>
+          <li>lessonReinforcement(tag=meme_MVO_Seafaring) ->If you stay too long on the ground, your spirit turns to stone.</li>
+        </rulesStrings>
+      </rules>
+    </descriptionMaker>
+    <requireOne>
+      <li>
+        <li>MVO_Precept_OceanConnection_Weak</li>
+        <li>MVO_Precept_OceanConnection_Strong</li>
+      </li>
+      <li>
+        <li>MVO_Precept_CompactQuarters_Accepted</li>
+      </li>
+    </requireOne>
+    <symbolPacks>
+      <li>
+        <ideoName>Nautilism</ideoName>
+        <theme>ocean</theme>
+        <adjective>nautical</adjective>
+        <member>sailor</member>
+      </li>
+      <li>
+        <ideoName>Pelagism</ideoName>
+        <theme>sea</theme>
+        <adjective>pelagic</adjective>
+        <member>seafarer</member>
+      </li>
+    </symbolPacks>
+  </MemeDef>
+
+</Defs>

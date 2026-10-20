@@ -1,4 +1,8 @@
-﻿using System.Xml;
+﻿using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using System.Xml;
 using HarmonyLib;
 using UnityEngine;
 using Verse;
@@ -47,8 +51,8 @@ public class MeshSettings : IExposable
           foreach (XmlNode child in children)
           {
             MeshSettings settings = null;
-            if (child.Attributes?.GetNamedItem("Redirect") is { } redirect &&
-                defaultSettings.TryGetValue(redirect.Value, out var redirectSettings))
+            if (child.Attributes?.GetNamedItem("Redirect") is { Value: { } value } &&
+                defaultSettings.TryGetValue(value, out var redirectSettings))
             {
               settings = redirectSettings;
             }

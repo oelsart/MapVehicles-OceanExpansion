@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <StructureLayoutDef>
+    <defName>MVO_MechanoidOceanPlatform</defName>
+    <workerClass>MapVehiclesOcean.LayoutWorker_MechanoidPlatform</workerClass>
+    <corridorDef>MVO_MechanoidPlatformCorridor</corridorDef>
+    <roomDefs>
+      <MVO_MechanoidPlatform>1</MVO_MechanoidPlatform>
+    </roomDefs>
+  </StructureLayoutDef>
+
+</Defs>

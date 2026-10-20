@@ -1,0 +1,149 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <BodyDef>
+    <defName>MVO_Kraken</defName>
+    <label>kraken</label>
+    <corePart>
+      <def>Body</def>
+      <height>Middle</height>
+      <depth>Outside</depth>
+      <parts>
+        <li>
+          <def>Heart</def>
+          <coverage>0.03</coverage>
+          <depth>Inside</depth>
+        </li>
+        <li>
+          <def>Stomach</def>
+          <coverage>0.05</coverage>
+          <depth>Inside</depth>
+        </li>
+        <li>
+          <def>Kidney</def>
+          <customLabel>left kidney</customLabel>
+          <coverage>0.03</coverage>
+          <depth>Inside</depth>
+        </li>
+        <li>
+          <def>Kidney</def>
+          <customLabel>right kidney</customLabel>
+          <coverage>0.03</coverage>
+          <depth>Inside</depth>
+        </li>
+        <li>
+          <def>Liver</def>
+          <coverage>0.05</coverage>
+          <depth>Inside</depth>
+        </li>
+
+        <li>
+          <def>MVO_Gill</def>
+          <customLabel>left gill</customLabel>
+          <coverage>0.04</coverage>
+          <depth>Inside</depth>
+        </li>
+        <li>
+          <def>MVO_Gill</def>
+          <customLabel>right gill</customLabel>
+          <coverage>0.04</coverage>
+          <depth>Inside</depth>
+        </li>
+
+        <li>
+          <def>MVO_KrakenSiphon</def>
+          <coverage>0.05</coverage>
+        </li>
+
+        <li>
+          <def>HeadWithEarHoles</def>
+          <coverage>0.55</coverage>
+          <parts>
+            <li>
+              <def>Brain</def>
+              <coverage>0.10</coverage>
+              <depth>Inside</depth>
+            </li>
+            <li>
+              <def>Eye</def>
+              <customLabel>left eye</customLabel>
+              <coverage>0.08</coverage>
+            </li>
+            <li>
+              <def>Eye</def>
+              <customLabel>right eye</customLabel>
+              <coverage>0.08</coverage>
+            </li>
+            <li>
+              <def>Beak</def>
+              <customLabel>beak</customLabel>
+              <coverage>0.12</coverage>
+              <groups>
+                <li>Mouth</li>
+              </groups>
+            </li>
+
+            <li>
+              <def>MVO_KrakenFeedingTentacle</def>
+              <customLabel>left feeding tentacle</customLabel>
+              <coverage>0.08</coverage>
+              <groups>
+                <li>MVO_TentacleAttackTool</li>
+              </groups>
+            </li>
+            <li>
+              <def>MVO_KrakenFeedingTentacle</def>
+              <customLabel>right feeding tentacle</customLabel>
+              <coverage>0.08</coverage>
+              <groups>
+                <li>MVO_TentacleAttackTool</li>
+              </groups>
+            </li>
+
+            <li>
+              <def>MVO_KrakenTentacle</def>
+              <customLabel>first left tentacle</customLabel>
+              <coverage>0.04</coverage>
+            </li>
+            <li>
+              <def>MVO_KrakenTentacle</def>
+              <customLabel>second left tentacle</customLabel>
+              <coverage>0.04</coverage>
+            </li>
+            <li>
+              <def>MVO_KrakenTentacle</def>
+              <customLabel>third left tentacle</customLabel>
+              <coverage>0.04</coverage>
+            </li>
+            <li>
+              <def>MVO_KrakenTentacle</def>
+              <customLabel>fourth left tentacle</customLabel>
+              <coverage>0.04</coverage>
+            </li>
+            <li>
+              <def>MVO_KrakenTentacle</def>
+              <customLabel>first right tentacle</customLabel>
+              <coverage>0.04</coverage>
+            </li>
+            <li>
+              <def>MVO_KrakenTentacle</def>
+              <customLabel>second right tentacle</customLabel>
+              <coverage>0.04</coverage>
+            </li>
+            <li>
+              <def>MVO_KrakenTentacle</def>
+              <customLabel>third right tentacle</customLabel>
+              <coverage>0.04</coverage>
+            </li>
+            <li>
+              <def>MVO_KrakenTentacle</def>
+              <customLabel>fourth right tentacle</customLabel>
+              <coverage>0.04</coverage>
+            </li>
+          </parts>
+        </li>
+      </parts>
+    </corePart>
+  </BodyDef>
+
+</Defs>

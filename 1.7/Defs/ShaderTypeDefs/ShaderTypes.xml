@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <ShaderTypeDef>
+    <defName>MVO_SeaCreature</defName>
+    <shaderPath>MapVehiclesOcean/SeaCreature</shaderPath>
+  </ShaderTypeDef>
+  
+  <ShaderTypeDef>
+    <defName>MVO_SailEmblemMask</defName>
+    <shaderPath>MapVehiclesOcean/SailEmblemMask</shaderPath>
+  </ShaderTypeDef>
+
+  <ShaderTypeDef>
+    <defName>MVO_CutoutMultiply</defName>
+    <shaderPath>MapVehiclesOcean/CutoutMultiply</shaderPath>
+  </ShaderTypeDef>
+
+</Defs>

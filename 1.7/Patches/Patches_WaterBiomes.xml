@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/BiomeDef[defName="Ocean"]/terrainsByFertility</xpath>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>Defs/BiomeDef[defName="Ocean"]</xpath>
+      <value>
+        <terrainsByFertility>
+          <li>
+            <terrain>MVO_WaterOceanDeepPassable</terrain>
+          </li>
+        </terrainsByFertility>
+      </value>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/BiomeDef[defName="Ocean"]/allowedPackAnimals</xpath>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>Defs/BiomeDef[defName="Ocean"]</xpath>
+      <value>
+        <allowedPackAnimals>
+          <li>MVO_PackTortoise</li>
+        </allowedPackAnimals>
+      </value>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/BiomeDef[defName="Ocean"]/allowedPackAnimals/li[text()=Tortoise]</xpath>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>Defs/BiomeDef[defName="Ocean"]/allowedPackAnimals</xpath>
+      <value>
+        <li>MVO_PackTortoise</li>
+      </value>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/BiomeDef[defName="Lake"]/terrainsByFertility</xpath>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>Defs/BiomeDef[defName="Lake"]</xpath>
+      <value>
+        <terrainsByFertility>
+          <li>
+            <terrain>MVO_WaterDeepPassable</terrain>
+          </li>
+        </terrainsByFertility>
+      </value>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/BiomeDef[defName="Lake"]/allowedPackAnimals</xpath>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>Defs/BiomeDef[defName="Lake"]</xpath>
+      <value>
+        <allowedPackAnimals>
+          <li>MVO_PackTortoise</li>
+        </allowedPackAnimals>
+      </value>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/BiomeDef[defName="Lake"]/allowedPackAnimals/li[text()=Tortoise]</xpath>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>Defs/BiomeDef[defName="Lake"]/allowedPackAnimals</xpath>
+      <value>
+        <li>MVO_PackTortoise</li>
+      </value>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/BiomeDef[defName="Ocean" or defName="Lake"]/baseWeatherCommonalities</xpath>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>Defs/BiomeDef[defName="Ocean" or defName="Lake"]</xpath>
+      <value>
+        <baseWeatherCommonalities> <!--TemperateForest-->
+          <Clear>18</Clear>
+          <Fog>1</Fog>
+          <Rain>2</Rain>
+          <DryThunderstorm>1</DryThunderstorm>
+          <RainyThunderstorm>1</RainyThunderstorm>
+          <FoggyRain>1</FoggyRain>
+          <SnowGentle>4</SnowGentle>
+          <SnowHard>4</SnowHard>
+          <GrayPall MayRequire="Ludeon.RimWorld.Anomaly">1</GrayPall>
+          <Overcast MayRequire="Ludeon.RimWorld.Odyssey">2</Overcast>
+        </baseWeatherCommonalities>
+      </value>
+    </nomatch>
+  </Operation>
+  
+  <Operation Class="PatchOperationConditional">
+  <xpath>Defs/BiomeDef[defName="Ocean" or defName="Lake"]/diseases</xpath>
+  <nomatch Class="PatchOperationAdd">
+    <xpath>Defs/BiomeDef[defName="Ocean" or defName="Lake"]</xpath>
+    <value>
+      <diseaseMtbDays>50</diseaseMtbDays>
+      <diseases>
+        <li>
+          <diseaseInc>MVO_Disease_Scurvy</diseaseInc>
+          <commonality>125</commonality>
+        </li>
+        <li>
+          <diseaseInc>Disease_Flu</diseaseInc>
+          <commonality>75</commonality>
+        </li>
+        <li>
+          <diseaseInc>Disease_Plague</diseaseInc>
+          <commonality>75</commonality>
+        </li>
+        <li>
+          <diseaseInc>Disease_Malaria</diseaseInc>
+          <commonality>75</commonality>
+        </li>
+        <li>
+          <diseaseInc>Disease_GutWorms</diseaseInc>
+          <commonality>50</commonality>
+        </li>
+        <li>
+          <diseaseInc>Disease_FibrousMechanites</diseaseInc>
+          <commonality>30</commonality>
+        </li>
+        <li>
+          <diseaseInc>Disease_SensoryMechanites</diseaseInc>
+          <commonality>30</commonality>
+        </li>
+        <li>
+          <diseaseInc>Disease_MuscleParasites</diseaseInc>
+          <commonality>50</commonality>
+        </li>
+
+        <li>
+          <diseaseInc>Disease_AnimalFlu</diseaseInc>
+          <commonality>100</commonality>
+        </li>
+        <li>
+          <diseaseInc>Disease_AnimalPlague</diseaseInc>
+          <commonality>100</commonality>
+        </li>
+        <li>
+          <diseaseInc>Disease_OrganDecay</diseaseInc>
+          <commonality>10</commonality>
+        </li>
+      </diseases>
+    </value>
+  </nomatch>
+</Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/BiomeDef[defName="Ocean"]/maxFishPopulation</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>Defs/BiomeDef[defName="Ocean"]/maxFishPopulation</xpath>
+      <value>
+        <maxFishPopulation>800</maxFishPopulation>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>Defs/BiomeDef[defName="Ocean"]</xpath>
+      <value>
+        <maxFishPopulation>800</maxFishPopulation>
+      </value>
+    </nomatch>
+  </Operation>
+    
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/BiomeDef[defName="Lake"]/maxFishPopulation</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>Defs/BiomeDef[defName="Lake"]/maxFishPopulation</xpath>
+      <value>
+        <maxFishPopulation>800</maxFishPopulation>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>Defs/BiomeDef[defName="Lake"]</xpath>
+      <value>
+        <maxFishPopulation>800</maxFishPopulation>
+      </value>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/BiomeDef[defName="Ocean"]/fishTypes</xpath>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>Defs/BiomeDef[defName="Ocean"]</xpath>
+      <value>
+        <fishTypes MayRequire="Ludeon.RimWorld.Odyssey">
+          <saltwater_Common>
+            <Fish_Bluefish MayRequire="Ludeon.RimWorld.Odyssey">1</Fish_Bluefish>
+          </saltwater_Common>
+          <saltwater_Uncommon>
+            <Fish_Tuna MayRequire="Ludeon.RimWorld.Odyssey">1</Fish_Tuna>
+            <Fish_Flounder MayRequire="Ludeon.RimWorld.Odyssey">1</Fish_Flounder>
+            <Fish_Marlin MayRequire="Ludeon.RimWorld.Odyssey">1</Fish_Marlin>
+            <Fish_Dogfish MayRequire="Ludeon.RimWorld.Odyssey">1</Fish_Dogfish>
+            <Fish_Salmon MayRequire="Ludeon.RimWorld.Odyssey">1</Fish_Salmon>
+          </saltwater_Uncommon>
+        </fishTypes>
+      </value>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/BiomeDef[defName="Lake"]/fishTypes</xpath>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>Defs/BiomeDef[defName="Lake"]</xpath>
+      <value>
+        <fishTypes MayRequire="Ludeon.RimWorld.Odyssey">
+          <freshwater_Common>
+            <Fish_Tilapia MayRequire="Ludeon.RimWorld.Odyssey">1</Fish_Tilapia>
+            <Fish_Bass MayRequire="Ludeon.RimWorld.Odyssey">1</Fish_Bass>
+          </freshwater_Common>
+          <freshwater_Uncommon>
+            <Fish_Catfish MayRequire="Ludeon.RimWorld.Odyssey">1</Fish_Catfish>
+            <Fish_Salmon MayRequire="Ludeon.RimWorld.Odyssey">1</Fish_Salmon>
+          </freshwater_Uncommon>
+        </fishTypes>
+      </value>
+    </nomatch>
+  </Operation>
+  
+</Patch>

@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <MVO_Cannon.label>大砲</MVO_Cannon.label>
+  <MVO_Cannon.description>初期の火薬技術を用いて建造できる大砲です.</MVO_Cannon.description>
+  <MVO_Cannon.properties.roles.0.label>砲手</MVO_Cannon.properties.roles.0.label>
+  <MVO_Cannon.components.0.label>砲身</MVO_Cannon.components.0.label>
+  <MVO_Cannon.components.1.label>砲架</MVO_Cannon.components.1.label>
+  <MVO_Cannon.comps.0.turrets.0.gizmoLabel>大砲</MVO_Cannon.comps.0.turrets.0.gizmoLabel>
+  
+  <MVO_ExpandableRaft.label>イカダ</MVO_ExpandableRaft.label>
+  <MVO_ExpandableRaft.description>パーツを組み合わせて作られる,拡張可能なイカダです.人類が海を渡ることを可能にした最初の発明です.</MVO_ExpandableRaft.description>
+  <MVO_ExpandableRaft.components.0.label>ボディ</MVO_ExpandableRaft.components.0.label>
+  
+  <MVO_Keel.label>キール</MVO_Keel.label>
+  <MVO_Keel.description>初期の技術で建造された船の土台です.狭いですが,それなりに頑丈です.</MVO_Keel.description>
+  <MVO_Keel.components.0.label>船体</MVO_Keel.components.0.label>
+
+  <MVO_Pontoon.label>ポンツーン</MVO_Pontoon.label>
+  <MVO_Pontoon.description>面積効率に優れた快適なボートです.デッキを追加で増設することができます.ある意味では,先進技術で構築されたイカダとも言えます.</MVO_Pontoon.description>
+  <MVO_Pontoon.components.0.label>船体</MVO_Pontoon.components.0.label>
+
+  <MVO_Pontoon_LDecked.label>ポンツーン</MVO_Pontoon_LDecked.label>
+  <MVO_Pontoon_LDecked.description>面積効率に優れた快適なボートです.デッキを追加で増設することができます.ある意味では,先進技術で構築されたイカダとも言えます.</MVO_Pontoon_LDecked.description>
+  <MVO_Pontoon_LDecked.components.0.label>船体</MVO_Pontoon_LDecked.components.0.label>
+  <MVO_Pontoon_LDecked.components.1.label>左舷甲板</MVO_Pontoon_LDecked.components.1.label>
+
+  <MVO_Pontoon_RDecked.label>ポンツーン</MVO_Pontoon_RDecked.label>
+  <MVO_Pontoon_RDecked.description>面積効率に優れた快適なボートです.デッキを追加で増設することができます.ある意味では,先進技術で構築されたイカダとも言えます.</MVO_Pontoon_RDecked.description>
+  <MVO_Pontoon_RDecked.components.0.label>船体</MVO_Pontoon_RDecked.components.0.label>
+  <MVO_Pontoon_RDecked.components.1.label>右舷甲板</MVO_Pontoon_RDecked.components.1.label>
+
+  <MVO_Pontoon_LRDecked.label>ポンツーン</MVO_Pontoon_LRDecked.label>
+  <MVO_Pontoon_LRDecked.description>面積効率に優れた快適なボートです.デッキを追加で増設することができます.ある意味では,先進技術で構築されたイカダとも言えます.</MVO_Pontoon_LRDecked.description>
+  <MVO_Pontoon_LRDecked.components.0.label>船体</MVO_Pontoon_LRDecked.components.0.label>
+  <MVO_Pontoon_LRDecked.components.1.label>左舷甲板</MVO_Pontoon_LRDecked.components.1.label>
+  <MVO_Pontoon_LRDecked.components.2.label>右舷甲板</MVO_Pontoon_LRDecked.components.2.label>
+  
+  <MVO_Roundnose.label>ラウンドノーズ</MVO_Roundnose.label>
+  <MVO_Roundnose.description>鉄で補強された,巨大で頑丈な船の土台です.戦闘において真価を発揮するでしょう.</MVO_Roundnose.description>
+  <MVO_Roundnose.components.0.label>船体</MVO_Roundnose.components.0.label>
+  
+</LanguageData>

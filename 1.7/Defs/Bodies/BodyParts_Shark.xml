@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<Defs>
+
+  <BodyPartDef>
+    <defName>MVO_Gill</defName>
+    <label>gill</label>
+    <hitPoints>15</hitPoints>
+    <bleedRate>2</bleedRate>
+    <skinCovered>false</skinCovered>
+    <tags>
+      <li>BreathingSource</li>
+      <li>BloodFiltrationSource</li>
+    </tags>
+  </BodyPartDef>
+
+  <BodyPartDef>
+    <defName>MVO_PectoralFin</defName>
+    <label>pectoral fin</label>
+    <hitPoints>20</hitPoints>
+    <skinCovered>true</skinCovered>
+    <tags>
+      <li>MovingLimbCore</li>
+    </tags>
+  </BodyPartDef>
+
+  <BodyPartDef>
+    <defName>MVO_CaudalFin</defName>
+    <label>caudal fin</label>
+    <hitPoints>30</hitPoints>
+    <skinCovered>true</skinCovered>
+    <tags>
+      <li>MovingLimbCore</li>
+    </tags>
+  </BodyPartDef>
+
+  <BodyPartDef>
+    <defName>MVO_SharkJaw</defName>
+    <label>jaw</label>
+    <hitPoints>25</hitPoints>
+    <skinCovered>false</skinCovered>
+    <solid>true</solid>
+    <bleedRate>0</bleedRate>
+    <tags>
+      <li>EatingSource</li>
+      <li>ManipulationLimbCore</li>
+    </tags>
+  </BodyPartDef>
+
+</Defs>

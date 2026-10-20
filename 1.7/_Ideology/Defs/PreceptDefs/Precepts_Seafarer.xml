@@ -1,0 +1,183 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <IssueDef>
+    <defName>MVO_Issue_OceanConnection</defName>
+    <label>ocean connection</label>
+    <iconPath>MapVehiclesOcean/UI/Issues/OceanConnection</iconPath>
+  </IssueDef>
+  
+  <PreceptDef>
+    <defName>MVO_Precept_OceanConnection_None</defName>
+    <issue>MVO_Issue_OceanConnection</issue>
+    <label>none</label>
+    <description>The sea is merely a body of water. Where one lives makes no spiritual difference.</description>
+    <impact>Low</impact>
+    <displayOrderInIssue>10</displayOrderInIssue>
+    <classic>true</classic>
+    <defaultSelectionWeight>1</defaultSelectionWeight>
+    <associatedMemes>
+      <li>MVO_Seafaring</li>
+    </associatedMemes>
+  </PreceptDef>
+  
+  <PreceptDef>
+    <defName>MVO_Precept_OceanConnection_Weak</defName>
+    <label>weak</label>
+    <description>Believers feel a mild preference for the open sea. Living on water brings a slight sense of comfort, while being landlocked causes mild restlessness.</description>
+    <issue>MVO_Issue_OceanConnection</issue>
+    <impact>Low</impact>
+    <displayOrderInIssue>20</displayOrderInIssue>
+    <associatedMemes>
+      <li>MVO_Seafaring</li>
+    </associatedMemes>
+    <comps>
+      <li Class="PreceptComp_SituationalThought">
+        <thought>MVO_Thought_Ocean_Weak</thought>
+        <thoughtStageDescriptions>
+          <li>On ocean tile</li>
+          <li>On land tile</li>
+        </thoughtStageDescriptions>
+        <tooltipShowMoodRange>true</tooltipShowMoodRange>
+      </li>
+    </comps>
+  </PreceptDef>
+
+  <PreceptDef>
+    <defName>MVO_Precept_OceanConnection_Strong</defName>
+    <label>strong</label>
+    <description>Believers are spiritually tied to the vast ocean. Being in open waters elevates their mood significantly, while prolonged stays on dry land cause deep distress.</description>
+    <issue>MVO_Issue_OceanConnection</issue>
+    <impact>Medium</impact>
+    <displayOrderInIssue>30</displayOrderInIssue>
+    <associatedMemes>
+      <li>MVO_Seafaring</li>
+    </associatedMemes>
+    <comps>
+      <li Class="PreceptComp_SituationalThought">
+        <thought>MVO_Thought_Ocean_Strong</thought>
+        <thoughtStageDescriptions>
+          <li>On ocean tile</li>
+          <li>On land tile</li>
+        </thoughtStageDescriptions>
+        <tooltipShowMoodRange>true</tooltipShowMoodRange>
+      </li>
+    </comps>
+  </PreceptDef>
+
+  <IssueDef>
+    <defName>MVO_Issue_CompactQuarters</defName>
+    <label>cramped quarters</label>
+    <iconPath>MapVehiclesOcean/UI/Issues/ShipQuarters</iconPath>
+  </IssueDef>
+
+  <PreceptDef>
+    <defName>MVO_Precept_CompactQuarters_Undesirable</defName>
+    <issue>MVO_Issue_CompactQuarters</issue>
+    <label>undesirable</label>
+    <description>Living in cramped ship quarters is uncomfortable and reduces morale.</description>
+    <impact>Low</impact>
+    <displayOrderInIssue>10</displayOrderInIssue>
+    <defaultSelectionWeight>1</defaultSelectionWeight>
+    <classic>true</classic>
+    <associatedMemes>
+      <li>MVO_Seafaring</li>
+    </associatedMemes>
+  </PreceptDef>
+  
+  <PreceptDef>
+    <defName>MVO_Precept_CompactQuarters_Accepted</defName>
+    <label>accepted</label>
+    <description>Living in tight ship cabins is natural. Space efficiency on a vessel is respected, and sleeping in tight quarters is not penalized.</description>
+    <issue>MVO_Issue_CompactQuarters</issue>
+    <impact>Medium</impact>
+    <displayOrderInIssue>20</displayOrderInIssue>
+    <associatedMemes>
+      <li>MVO_Seafaring</li>
+    </associatedMemes>
+    <comps>
+      <li Class="MapVehiclesOcean.PreceptComp_CompactSleeping" />
+    </comps>
+  </PreceptDef>
+
+  <PreceptDef ParentName="PreceptRoleSingleBase">
+    <defName>MVO_IdeoRole_Captain</defName>
+    <label>leader</label>
+    <description>The undisputed leader of the vessel. Maintained discipline inspires work efficiency and stabilizes morale during shipboard crises.</description>
+    <iconPath>MapVehiclesOcean/UI/Roles/Captain</iconPath>
+    <leaderRole>true</leaderRole>
+    <displayOrderInImpact>1000</displayOrderInImpact>
+    <expectationsOffset>2</expectationsOffset>
+    <canRemoveInUI>false</canRemoveInUI>
+    <classic>true</classic>
+    <requiredMemes>
+      <li>MVO_Seafaring</li>
+    </requiredMemes>
+    <roleRequirements>
+      <li Class="RoleRequirement_MinSkillAny">
+        <skills>
+          <Social>6</Social>
+        </skills>
+      </li>
+    </roleRequirements>
+    <roleApparelRequirements>
+      <li>
+        <anyMemeRequired><li>Raider</li></anyMemeRequired>
+        <requirement>
+          <bodyPartGroupsMatchAny>
+            <li>UpperHead</li>
+            <li>FullHead</li>
+          </bodyPartGroupsMatchAny>
+          <requiredDefs>
+            <li>MVO_Apparel_PirateHat</li>
+          </requiredDefs>
+        </requirement>
+      </li>
+    </roleApparelRequirements>
+    <grantedAbilities>
+      <li>LeaderSpeech</li>
+      <li>WorkDrive</li>
+      <li>CombatCommand</li>
+      <li>Trial</li>
+    </grantedAbilities>
+    <roleTags><li>Leader</li></roleTags>
+  </PreceptDef>
+
+  <PreceptDef ParentName="PreceptRoleMultiBase">
+    <defName>MVO_IdeoRole_Navigator</defName>
+    <label>navigator</label>
+    <description>A navigation specialist adept at reading waters and operating ship systems with high precision.</description>
+    <iconPath>MapVehiclesOcean/UI/Roles/Navigator</iconPath>
+    <nameMaker>MVO_NamerRoleNavigator</nameMaker>
+    <roleRequirements>
+      <li Class="RoleRequirement_MinSkillAny">
+        <skills>
+          <Intellectual>6</Intellectual>
+        </skills>
+      </li>
+    </roleRequirements>
+    <roleRequiredWorkTags><li>Intellectual</li></roleRequiredWorkTags>
+    <roleTags><li>ResearchSpecialist</li></roleTags>
+    <requiredMemes>
+      <li>MVO_Seafaring</li>
+    </requiredMemes>
+    <roleEffects>
+      <li Class="RoleEffect_PawnStatOffset">
+        <statDef>ResearchSpeed</statDef>
+        <modifier>0.7</modifier>
+      </li>
+    </roleEffects>
+    <grantedAbilities>
+      <li>ResearchCommand</li>
+    </grantedAbilities>
+    <displayOrderInImpact>2</displayOrderInImpact>
+    <roleDisabledWorkTags>
+      <li>ManualDumb</li>
+      <li>Animals</li>
+      <li>Cooking</li>
+      <li>PlantWork</li>
+      <li>Mining</li>
+    </roleDisabledWorkTags>
+  </PreceptDef>
+  
+</Defs>

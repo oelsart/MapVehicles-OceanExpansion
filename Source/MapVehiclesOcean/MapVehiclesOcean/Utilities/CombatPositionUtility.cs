@@ -24,7 +24,7 @@ public static class CombatPositionUtility
     var offset = vehicle is VehiclePawnWithMap { CompNpcVehicleMap.Params.preferredDir.IsVertical: true }
       ? vehicle.VehicleDef.Size.z
       : vehicle.VehicleDef.Size.x;
-    var collisionRect = target.OccupiedRect().ExpandedBy(offset / 2 + 1);
+    var collisionRect = target.OccupiedRect().ExpandedBy(offset);
     var root = target.Position + Rot8.FromAngle((vehicle.Position - target.Position).AngleFlat).FacingCell *
       Mathf.Min(target.def.Size.x, target.def.Size.z) / 2;
     var num = GenRadial.NumCellsInRadius(radius);
