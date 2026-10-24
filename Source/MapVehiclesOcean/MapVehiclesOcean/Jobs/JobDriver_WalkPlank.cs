@@ -142,11 +142,11 @@ public class JobDriver_WalkPlank : JobDriverBodyOffset
       {
         map.reservationManager.Release(actor.Position, actor, job);
 
-        if (map.reservationManager.TryGetReserver(plank.Position, actor.Faction, out var reserver) &&
-            reserver.NextJobOrCurJob?.def == job.def)
+        if (map.reservationManager.TryGetReserver(plank.Position, actor.Faction, out var reserver))
         {
 	        map.reservationManager.Release(plank.Position, reserver, reserver.NextJobOrCurJob);
 	        map.reservationManager.Reserve(reserver, reserver.NextJobOrCurJob, actor.Position);
+	        reserver.NextJobOrCurJob.targetB = actor.Position;
 	        reserver.pather.StartPath(actor.Position, PathEndMode.OnCell);
         }
         
