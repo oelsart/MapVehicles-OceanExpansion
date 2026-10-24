@@ -1,10 +1,10 @@
-﻿global using static VehicleMapFramework.Test_DevTools.TestUtility;
+﻿global using static VehicleMapFramework.Test.TestUtility;
 using System.Collections;
 using DevTools.Testing;
 using RimWorld;
 using UnityEngine.Assertions;
 using VehicleMapFramework;
-using VehicleMapFramework.Test_DevTools;
+using VehicleMapFramework.Test;
 using Vehicles.Tests;
 using Verse;
 using Verse.AI;
@@ -19,17 +19,17 @@ internal sealed class Test_WalkPlank
 	[SetUp]
 	public void SetUp()
 	{
-		Group = VehicleGroup.CreateBasicVehicleGroup(new VehicleGroup.MockSettings
+		Group = CreateBasicMapVehicleGroup(new VehicleGroup.MockSettings
 		{
-			vehicleDef = Crawler,
+			size = new IntVec2(4, 8),
 			passengers = 4
 		});
 
-		var crawler = (VehiclePawnWithMap)Group.vehicle;
-		TestUtils.ForceSpawn(crawler);
+		var vehicle = (VehiclePawnWithMap)Group.vehicle;
+		TestUtils.ForceSpawn(vehicle);
 		var gangplank = DefDatabase<ThingDef>.GetNamed("MVO_Gangplank");
 		Assert.IsNotNull(gangplank);
-		GenSpawn.Spawn(gangplank, new IntVec3(1, 0, 2), crawler.VehicleMap, Rot4.West);
+		GenSpawn.Spawn(gangplank, new IntVec3(1, 0, 2), vehicle.VehicleMap, Rot4.West);
 		Group.SpawnPawns();
 	}
 
