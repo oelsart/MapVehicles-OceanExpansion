@@ -62,6 +62,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="Krafs.Rimworld.Ref" Version="1.7.4985-unstable" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="18.11.0" />
   </ItemGroup>
 </Project>

@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using RimWorld.Planet;
+﻿using RimWorld.Planet;
 using System.Xml;
 using Verse;
 
