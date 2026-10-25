@@ -76,11 +76,13 @@ jobs:
     - name: Restore Dependencies
       run: |
         dotnet restore Source/MapVehiclesOcean/MapVehiclesOcean/MapVehiclesOcean.csproj
+        dotnet restore NanameWalls/Source/NANAMEWalls/NanameWalls/NanameWalls.csproj
     
     - name: Build DLL
       run: |
         $workshopRoot = "$pwd/Steam/steamapps/workshop/content/294100"
         dotnet build Source/MapVehiclesOcean/MapVehiclesOcean/MapVehiclesOcean.csproj --configuration Release --no-restore /p:CIBuild=true /p:SteamWorkshopRoot=$workshopRoot
+        dotnet build NanameWalls/Source/NANAMEWalls/NanameWalls/NanameWalls.csproj --configuration Release --no-restore /p:CIBuild=true /p:SteamWorkshopRoot=$workshopRoot
     
     - name: Upload build artifacts
       uses: actions/upload-artifact@v7
@@ -91,7 +93,7 @@ jobs:
           1.7
           2022.3
           About
-          NanameWalls
+          NanameWalls/1.7
           DefaultSettings.xml
           LICENSE
           LoadFolders.xml

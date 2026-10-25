@@ -42,9 +42,8 @@ public class NanameWalls : Mod
     Settings = GetSettings<Settings>();
     Harmony = new Harmony("OELS.NanameWalls");
     Harmony.Patch(
-      AccessTools.Method(typeof(GraphicUtility), nameof(GraphicUtility.WrapLinked)),
-      prefix: new HarmonyMethod(typeof(Patch_GraphicUtility_WrapLinked),
-        nameof(Patch_GraphicUtility_WrapLinked.Prefix)));
+      ((Delegate)GraphicUtility.WrapLinked).Method,
+      prefix: ((Delegate)Patch_GraphicUtility_WrapLinked.Prefix).Method);
   }
 
   public override string SettingsCategory()
