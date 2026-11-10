@@ -15,7 +15,7 @@
 
   <ThingDef Name="MVO_RaftPieceBase" ParentName="MVO_ShipEquipmentBase" Abstract="True">
     <thingClass>VehicleMapFramework.VehicleStructure</thingClass>
-    <altitudeLayer>BelowTerrain</altitudeLayer>
+    <altitudeLayer>Terrain</altitudeLayer>
     <designatorDropdown>MVO_RaftPieceGroup</designatorDropdown>
     <useBlueprintGraphicAsGhost>true</useBlueprintGraphicAsGhost>
     <useHitPoints>false</useHitPoints>

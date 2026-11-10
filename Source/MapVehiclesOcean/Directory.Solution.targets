@@ -1,0 +1,10 @@
+﻿<Project>
+  <PropertyGroup>
+    <VMFSolutionDirectory>$(MSBuildThisFileDirectory)..\..\..\VehicleMapFramework\Source\VehicleMapFramework\</VMFSolutionDirectory>
+  </PropertyGroup>
+  <Target Name="CopyToDev"
+          AfterTargets="Build"
+          Condition="'$(Configuration)'=='Dev' or '$(Configuration)'=='DevRelease'">
+    <Exec Command="powershell.exe -NoProfile -ExecutionPolicy Bypass -File &quot;$(VMFSolutionDirectory)CopyToDev.ps1&quot; -SolutionDir &quot;$(VMFSolutionDirectory)&quot;" />
+  </Target>
+</Project>
