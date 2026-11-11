@@ -2,9 +2,10 @@
 <Configuration>
   <Excluded>
     <exclude>.git</exclude>
+    <exclude>.runsettings</exclude>
     <exclude>Analyzer.xml</exclude>
-    <exclude>NanameWalls\1.6\Assemblies\NanameWalls.pdb</exclude>
     <exclude>NanameWalls\Source</exclude>
     <exclude>Source</exclude>
+    <exclude>Test</exclude>
   </Excluded>
 </Configuration>
