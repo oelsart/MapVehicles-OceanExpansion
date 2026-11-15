@@ -14,7 +14,7 @@
           "Test_MapVehiclesOcean.dll": {}
         }
       },
-      "Lib.Harmony/3.0.0-rc.3": {
+      "Lib.Harmony/3.0.0-rc.5": {
         "runtime": {
           "lib/net10.0/0Harmony.dll": {
             "assemblyVersion": "3.0.0.0",
@@ -352,6 +352,14 @@
             "localPath": "zh-Hant/Microsoft.VisualStudio.TestPlatform.Common.resources.dll"
           }
         }
+      },
+      "ManualHarmony.Runtime/1.0.0": {
+        "runtime": {
+          "ManualHarmony.Runtime.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
       }
     }
   },
@@ -361,12 +369,12 @@
       "serviceable": false,
       "sha512": ""
     },
-    "Lib.Harmony/3.0.0-rc.3": {
+    "Lib.Harmony/3.0.0-rc.5": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-bW1UU49jqW9w5NxdTs7G+h7Nyi9FGs4cX4lHN3rP7+q62zwLk+cO4ypD/cRboAeq5jtgACt7u37o2KAE+O0RNg==",
-      "path": "lib.harmony/3.0.0-rc.3",
-      "hashPath": "lib.harmony.3.0.0-rc.3.nupkg.sha512"
+      "sha512": "sha512-5AWJgvNW2g1fIKWbTHm/zq8nKx+iVwDwcnIJe9kFxJFmNI35bCDaBij+dhtIAR3uqBiSpKnciFNV31NgIy7n8g==",
+      "path": "lib.harmony/3.0.0-rc.5",
+      "hashPath": "lib.harmony.3.0.0-rc.5.nupkg.sha512"
     },
     "Microsoft.CodeCoverage/18.11.0": {
       "type": "package",
@@ -395,6 +403,11 @@
       "sha512": "sha512-AKjwKpyRBwoQFQmpcchtoYlfJEBlaY/40uxBRi+qXP4NR7xT8t+XTJtOyEyumfvfJcH5pASs75LwNdXYRr4XNA==",
       "path": "microsoft.testplatform.testhost/18.11.0",
       "hashPath": "microsoft.testplatform.testhost.18.11.0.nupkg.sha512"
+    },
+    "ManualHarmony.Runtime/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     }
   }
 }

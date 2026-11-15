@@ -6,6 +6,8 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <OutDir>../../../1.7/Assemblies</OutDir>
     <GenerateDependencyFile>false</GenerateDependencyFile>
+    <DebugType>embedded</DebugType>
+    <DebugSymbols>true</DebugSymbols>
     <Configurations>Debug;Release;Dev</Configurations>
     <Platforms>AnyCPU</Platforms>
     <RootNamespace>MapVehiclesOcean</RootNamespace>

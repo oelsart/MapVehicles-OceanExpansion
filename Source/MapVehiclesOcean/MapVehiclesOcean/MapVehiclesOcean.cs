@@ -1,4 +1,5 @@
-﻿using HarmonyLib;
+﻿using System.Reflection;
+using HarmonyLib;
 using RimWorld;
 using SmashTools;
 using UnityEngine;
@@ -19,7 +20,7 @@ public class MapVehiclesOcean : Mod
   {
     Mod = this;
     settings = GetSettings<Settings>();
-    new Harmony(HarmonyId).PatchAll();
+    new Harmony(HarmonyId).PatchAll(Assembly.GetExecutingAssembly());
     RegisterTKeys();
 
     LongEventHandler.ExecuteWhenFinished(() =>
