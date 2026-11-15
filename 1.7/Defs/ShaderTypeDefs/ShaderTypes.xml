@@ -8,12 +8,12 @@
   
   <ShaderTypeDef>
     <defName>MVO_SailEmblemMask</defName>
-    <shaderPath>MapVehiclesOcean/SailEmblemMask</shaderPath>
+    <shaderPath>MVO_SailEmblemMask</shaderPath>
   </ShaderTypeDef>
 
   <ShaderTypeDef>
     <defName>MVO_CutoutMultiply</defName>
-    <shaderPath>MapVehiclesOcean/CutoutMultiply</shaderPath>
+    <shaderPath>MVO_CutoutMultiply</shaderPath>
   </ShaderTypeDef>
 
 </Defs>

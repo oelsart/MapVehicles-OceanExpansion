@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <ShaderDef>
+    <defName>MVO_CutoutMultiply</defName>
+    <shaderProgram>
+      <fragmentShaderFileName>Cutout.frag.glsl</fragmentShaderFileName>
+      <transparent>true</transparent>
+      <renderQueue>2900</renderQueue>
+      <blendMode>MultiplyDestination</blendMode>
+    </shaderProgram>
+  </ShaderDef>
+  
+  <ShaderDef>
+    <defName>MVO_SailEmblemMask</defName>
+    <shaderProgram>
+      <fragmentShaderFileName>MapVehiclesOcean/SailEmblemMask.frag.glsl</fragmentShaderFileName>
+      <transparent>true</transparent>
+      <colorWrite>false</colorWrite>
+      <renderQueue>2900</renderQueue>
+    </shaderProgram>
+  </ShaderDef>
+  
+</Defs>

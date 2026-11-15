@@ -1,22 +1,20 @@
 ManifestFileVersion: 0
-CRC: 3901956084
+CRC: 711261327
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: dd7ef0b74764fb578e16a39a0ecfaccc
+    Hash: e8c14af6d257c1605100cac887a5dbed
   TypeTreeHash:
     serializedVersion: 2
     Hash: 0df1dec30b5d061d422d3e6493d27647
   IncrementalBuildHash:
     serializedVersion: 2
-    Hash: dd7ef0b74764fb578e16a39a0ecfaccc
+    Hash: e8c14af6d257c1605100cac887a5dbed
 HashAppended: 0
 ClassTypes:
 - Class: 48
   Script: {instanceID: 0}
 SerializeReferenceClassIdentifiers: []
 Assets:
-- Assets/Data/OELS.MapVehicles.OceanExpansion/Materials/MapVehiclesOcean/SailEmblemMask.shader
 - Assets/Data/OELS.MapVehicles.OceanExpansion/Materials/MapVehiclesOcean/SeaCreature.shader
-- Assets/Data/OELS.MapVehicles.OceanExpansion/Materials/MapVehiclesOcean/CutoutMultiply.shader
 Dependencies: []
