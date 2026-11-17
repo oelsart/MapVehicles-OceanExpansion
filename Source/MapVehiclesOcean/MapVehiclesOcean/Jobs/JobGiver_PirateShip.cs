@@ -86,7 +86,7 @@ public class JobGiver_PirateShip : JobGiver_CombatFormation
 
       var job = cell == vehicle.Position
         ? JobMaker.MakeJob(JobDefOf_Vehicles.IdleVehicle, vehicle)
-        : JobMaker.MakeJob(MVO_DefOf.MVO_GotoShipCombat, cell);
+        : JobMaker.MakeJob(MVO_DefOf.MVO_GotoShipCombat, enemyTarget);
       job.expiryInterval = ExpiryInterval.RandomInRange;
       job.checkOverrideOnExpire = true;
       return job;

@@ -34,15 +34,21 @@ public static class CombatPositionUtility
       if (collisionRect.Contains(intVec)) continue;
       if (vehicle.CanReachVehicle(intVec, PathEndMode.OnCell, Danger.Deadly))
       {
+	      Rot8? rot = null;
         if (vehicle is VehiclePawnWithMap { CompNpcVehicleMap: { } compNpcVehicleMap })
         {
           var dir = compNpcVehicleMap.Params.preferredDir;
           var angle = (intVec - target.PositionOnBaseMap).AngleFlat;
           var rot2 = Rot8.FromAngle(angle);
-          endRot = new Rot8(Rot8.FromIntClockwise((rot2.AsIntClockwise + dir.AsIntClockwise) % 8));
+          rot = new Rot8(Rot8.FromIntClockwise((rot2.AsIntClockwise + dir.AsIntClockwise) % 8));
         }
 
-        return PathingHelper.TryFindNearestStandableCell(vehicle, intVec, out dest);
+        if (vehicle.CellRectStandable(vehicle.Map, intVec, rot))
+        {
+	        endRot = rot ?? Rot8.Invalid;
+	        dest = intVec;
+	        return true;
+        }
       }
     }
 
