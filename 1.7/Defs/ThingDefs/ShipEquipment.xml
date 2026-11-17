@@ -301,7 +301,7 @@
           <graphicClass>Graphic_Multi</graphicClass>
           <shaderType>MVO_SailEmblemMask</shaderType>
           <drawSize>(8,4)</drawSize>
-          <drawOffset>(0,0.16,1.5)</drawOffset>
+          <drawOffset>(0,0.35,1.5)</drawOffset>
           <addTopAltitudeBias>true</addTopAltitudeBias>
         </maskGraphicData>
         <drawOffsetNorth>(0,0,0.4)</drawOffsetNorth>
