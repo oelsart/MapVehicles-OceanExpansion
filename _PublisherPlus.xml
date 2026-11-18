@@ -4,7 +4,11 @@
     <exclude>.git</exclude>
     <exclude>.runsettings</exclude>
     <exclude>Analyzer.xml</exclude>
+    <exclude>Common\Sounds</exclude>
+    <exclude>Common\Textures</exclude>
+    <exclude>NanameWalls\1.7\Assemblies\NanameWalls.pdb</exclude>
     <exclude>NanameWalls\Source</exclude>
+    <exclude>README.md</exclude>
     <exclude>Source</exclude>
     <exclude>Test</exclude>
   </Excluded>
