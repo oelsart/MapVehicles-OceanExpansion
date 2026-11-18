@@ -8,8 +8,8 @@
     <GenerateDependencyFile>false</GenerateDependencyFile>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Krafs.Rimworld.Ref" Version="1.7.5005-unstable" />
-    <PackageReference Include="Lib.Harmony" Version="3.0.0-rc.5" />
+    <PackageReference Include="Krafs.Rimworld.Ref" Version="1.7.5013-unstable" />
+    <PackageReference Include="Lib.Harmony" Version="3.0.0-rc.7" />
   </ItemGroup>
   <ItemGroup>
     <InternalsVisibleTo Include="NanameWallsWorker" />

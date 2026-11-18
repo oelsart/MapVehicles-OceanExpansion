@@ -14,7 +14,7 @@
           "Test_MapVehiclesOcean.dll": {}
         }
       },
-      "Lib.Harmony/3.0.0-rc.5": {
+      "Lib.Harmony/3.0.0-rc.7": {
         "runtime": {
           "lib/net10.0/0Harmony.dll": {
             "assemblyVersion": "3.0.0.0",
@@ -361,12 +361,12 @@
       "serviceable": false,
       "sha512": ""
     },
-    "Lib.Harmony/3.0.0-rc.5": {
+    "Lib.Harmony/3.0.0-rc.7": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-5AWJgvNW2g1fIKWbTHm/zq8nKx+iVwDwcnIJe9kFxJFmNI35bCDaBij+dhtIAR3uqBiSpKnciFNV31NgIy7n8g==",
-      "path": "lib.harmony/3.0.0-rc.5",
-      "hashPath": "lib.harmony.3.0.0-rc.5.nupkg.sha512"
+      "sha512": "sha512-XgNE/BlkcuNj8b7DCo24gSTcbWmwvWhPdvIt1htKgX6qXmCTmDOX6YoWCkekCMDIycYdtv/f0O5DCAHwSCRXeg==",
+      "path": "lib.harmony/3.0.0-rc.7",
+      "hashPath": "lib.harmony.3.0.0-rc.7.nupkg.sha512"
     },
     "Microsoft.CodeCoverage/18.11.0": {
       "type": "package",
