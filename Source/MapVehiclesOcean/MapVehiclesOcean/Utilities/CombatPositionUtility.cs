@@ -38,7 +38,7 @@ public static class CombatPositionUtility
         if (vehicle is VehiclePawnWithMap { CompNpcVehicleMap: { } compNpcVehicleMap })
         {
           var dir = compNpcVehicleMap.Params.preferredDir;
-          var angle = (intVec - target.PositionOnBaseMap).AngleFlat;
+          var angle = (target.PositionOnBaseMap - intVec).AngleFlat;
           var rot2 = Rot8.FromAngle(angle);
           rot = new Rot8(Rot8.FromIntClockwise((rot2.AsIntClockwise + dir.AsIntClockwise) % 8));
         }
