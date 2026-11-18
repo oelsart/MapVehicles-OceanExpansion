@@ -352,14 +352,6 @@
             "localPath": "zh-Hant/Microsoft.VisualStudio.TestPlatform.Common.resources.dll"
           }
         }
-      },
-      "ManualHarmony.Runtime/1.0.0": {
-        "runtime": {
-          "ManualHarmony.Runtime.dll": {
-            "assemblyVersion": "1.0.0.0",
-            "fileVersion": "1.0.0.0"
-          }
-        }
       }
     }
   },
@@ -403,11 +395,6 @@
       "sha512": "sha512-AKjwKpyRBwoQFQmpcchtoYlfJEBlaY/40uxBRi+qXP4NR7xT8t+XTJtOyEyumfvfJcH5pASs75LwNdXYRr4XNA==",
       "path": "microsoft.testplatform.testhost/18.11.0",
       "hashPath": "microsoft.testplatform.testhost.18.11.0.nupkg.sha512"
-    },
-    "ManualHarmony.Runtime/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
     }
   }
 }
