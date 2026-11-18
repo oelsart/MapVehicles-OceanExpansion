@@ -1,0 +1,56 @@
+<Project>
+  
+  <PropertyGroup>
+    <RimWorldDirectory>$(MSBuildThisFileDirectory)\..\..\..\</RimWorldDirectory>
+    <UseStrictRimWorldVersionComparison>false</UseStrictRimWorldVersionComparison>
+    <EnableLocalRimWorldReferences>true</EnableLocalRimWorldReferences>
+  </PropertyGroup>
+  
+  <PropertyGroup>
+    <RimWorldDirectory Condition="'$(RimWorldDirectory)'=='' AND Exists('$(USERPROFILE)\AppData\Local\Steam\steamapps\common\RimWorld')">
+      $(USERPROFILE)\AppData\Local\Steam\steamapps\common\RimWorld
+    </RimWorldDirectory>
+    <RimWorldDirectory Condition="'$(RimWorldDirectory)'=='' AND Exists('$(MSBuildProgramFiles32))\Steam\steamapps\common\RimWorld')">
+      $(MSBuildProgramFiles32)\Steam\steamapps\common\RimWorld
+    </RimWorldDirectory>
+    <RimWorldDirectory Condition="'$(RimWorldDirectory)'=='' AND Exists('$(HOME)/.local/share/Steam/steamapps/common/RimWorld')">
+      $(HOME)/.local/share/Steam/steamapps/common/RimWorld
+    </RimWorldDirectory>
+    <RimWorldDirectory Condition="'$(RimWorldDirectory)'=='' AND Exists('$(HOME)/.steam/steam/steamapps/common/RimWorld')">
+      $(HOME)/.steam/steam/steamapps/common/RimWorld
+    </RimWorldDirectory>
+    <RimWorldDirectory Condition="'$(RimWorldDirectory)'=='' AND Exists('$(HOME)/Library/Application Support/Steam/steamapps/common/RimWorld')">
+      $(HOME)/Library/Application Support/Steam/steamapps/common/RimWorld
+    </RimWorldDirectory>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(RimWorldDirectory)' != ''">
+    <RimWorldDirectory>$([System.String]::Copy('$(RimWorldDirectory)').Trim())</RimWorldDirectory>
+    <RimWorldDirectory>$([MSBuild]::NormalizeDirectory('$(RimWorldDirectory)'))</RimWorldDirectory>
+  </PropertyGroup>
+  
+  <PropertyGroup>
+    <ShouldUseLocalRim>false</ShouldUseLocalRim>
+    <ShouldUseLocalRim Condition="'$(EnableLocalRimWorldReferences)' == 'true' AND Exists('$(RimWorldDirectory)Assembly-CSharp.dll')">true</ShouldUseLocalRim>
+  </PropertyGroup>
+  
+  <ItemGroup Condition="'$(ShouldUseLocalRim)' == 'true'">
+    <PackageReference Remove="Krafs.Rimworld.Ref" />
+    <Reference Include="$(RimWorldDirectory)Assembly-CSharp.dll">
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="$(RimWorldDirectory)RimWorld.dll">
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="$(RimWorldDirectory)UnityStubs.dll">
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="$(RimWorldDirectory)Waylith.dll">
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="$(RimWorldDirectory)Waylith.Injection.dll">
+      <Private>false</Private>
+    </Reference>
+  </ItemGroup>
+
+</Project>
