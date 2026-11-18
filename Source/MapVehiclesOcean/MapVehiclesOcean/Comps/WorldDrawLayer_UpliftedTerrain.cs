@@ -1,31 +1,16 @@
-﻿using HarmonyLib;
-using RimWorld;
+﻿using RimWorld;
+using RimWorld.Planet;
 using UnityEngine;
 using Verse;
-using RimWorld.Planet;
 
 namespace MapVehiclesOcean;
 
-public static class WorldTerrainUpdater
+public class WorldDrawLayer_UpliftedTerrain : WorldDrawLayer
 {
-	private static Func<Material, LayerSubMesh> getSubMeshFunc;
-
-	public static void Clear(WorldDrawLayer_Terrain layer)
+	public void AppendUpliftedTiles(List<(PlanetTile tile, int distance)> targetTiles)
 	{
-		layer.RegenerateNow();
-		getSubMeshFunc = null;
-	}
-
-	public static void AppendUpliftedTiles(WorldDrawLayer_Terrain layer, List<(PlanetTile tile, int distance)> targetTiles)
-	{
-		getSubMeshFunc ??= AccessTools.MethodDelegate<Func<Material, LayerSubMesh>>(
-			AccessTools.Method(typeof(WorldDrawLayerBase), "GetSubMesh", [typeof(Material)]), layer);
-
-		var planetLayer = layer.planetLayer;
 		var tileIDToVerts_offsets = planetLayer.UnsafeTileIDToVerts_offsets;
 		var verts = planetLayer.UnsafeVerts;
-
-		HashSet<LayerSubMesh> dirtySubMeshes = [];
 
 		foreach (var (pTile, _) in targetTiles)
 		{
@@ -45,7 +30,7 @@ public static class WorldTerrainUpdater
 				});
 			}
 
-			var subMesh = getSubMeshFunc(material);
+			var subMesh = GetSubMesh(material);
 
 			var startOffset = tileIDToVerts_offsets[i];
 			var nextOffset = i + 1 < tileIDToVerts_offsets.Length ? tileIDToVerts_offsets[i + 1] : verts.Length;
@@ -66,17 +51,14 @@ public static class WorldTerrainUpdater
 				subMesh.tris.Add(baseVertCount + j + 1);
 				subMesh.tris.Add(baseVertCount);
 			}
-
-			dirtySubMeshes.Add(subMesh);
 		}
 
-		foreach (var subMesh in dirtySubMeshes)
-		{
-			subMesh.mesh.Clear();
-			subMesh.mesh.SetVertices(subMesh.verts);
-			subMesh.mesh.SetUVs(0, subMesh.uvs);
-			subMesh.mesh.SetTriangles(subMesh.tris, 0);
-			subMesh.mesh.RecalculateNormals();
-		}
+		FinalizeMesh(MeshParts.All);
+	}
+
+	public void Clear()
+	{
+		RegenerateNow();
+		subMeshes.Clear();
 	}
 }

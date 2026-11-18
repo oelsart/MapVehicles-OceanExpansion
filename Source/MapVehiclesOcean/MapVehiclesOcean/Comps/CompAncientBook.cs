@@ -48,6 +48,7 @@ public class CompAncientBook : CompInteractable
 		tiles = [];
 		List<PlanetTile> landmarkTiles = [];
 		List<PlanetTile> neighbors = [];
+		Find.WorldGrid.GetTileNeighbors(planetTile, neighbors);
 		planetTile.Layer.Filler.FloodFill(planetTile, t => t.Tile.WaterCovered, (_, to, distance) =>
 		{
 			if (distance > UpliftRadius) return true;
@@ -69,23 +70,28 @@ public class CompAncientBook : CompInteractable
 			
 			tiles.Add((to, distance));
 			return false;
-		});
+		}, extraRootTiles: neighbors);
 		ScreenFader.StartFade(Color.black, FadeOutDuration);
-		Delay.AfterNSeconds(FadeOutDuration, () =>
-		{
-			CameraJumper.TryShowWorld();
-			Find.World.renderer.RegenerateLayersIfDirtyInLongEvent();
-			CutsceneInProgress = true;
-			Find.WorldCameraDriver.JumpTo(planetTile);
-			shaker = new CameraShaker();
-			shaker.DoShake(0.2f);
-			Delay.AfterNSeconds(0f, () => ScreenFader.StartFade(Color.clear, 0f));
-		});
 	}
 
-	private void CutsceneUpdate()
+	private void CutsceneUpdate(float elapsed)
 	{
-		if (!CutsceneInProgress || LongEventHandler.ShouldWaitForEvent) return;
+		if (!CutsceneInProgress)
+		{
+			if (elapsed >= FadeOutDuration)
+			{
+				CutsceneInProgress = true;
+				CameraJumper.TryShowWorld();
+				Find.World.renderer.RegenerateLayersIfDirtyInLongEvent();
+				Find.WorldCameraDriver.JumpTo(planetTile);
+				shaker = new CameraShaker();
+				shaker.DoShake(0.2f);
+				FrameDelay.DelayOne<object>(_ => ScreenFader.StartFade(Color.clear, 0f), null);
+			}
+
+			return;
+		}
+		if (LongEventHandler.ShouldWaitForEvent) return;
 
 		var lastRealTime = RealTime.LastRealTime;
 		if (startTime < 0f)
@@ -128,8 +134,9 @@ public class CompAncientBook : CompInteractable
 					tile.Tile.PrimaryBiome = BiomeFrom(tile);
 				}
 			}
-			WorldTerrainUpdater.AppendUpliftedTiles(
-				Find.World.renderer.GetLayer<WorldDrawLayer_Terrain>(planetTile.Layer), tiles);
+
+			if (Find.World.renderer.GetLayer<WorldDrawLayer_UpliftedTerrain>(planetTile.Layer) is { } layer)
+				layer.AppendUpliftedTiles(tiles);
 		}
 	}
 
@@ -160,7 +167,10 @@ public class CompAncientBook : CompInteractable
 		CutsceneInProgress = false;
 		estimatedTime = -1f;
 		startTime = -1f;
-		WorldTerrainUpdater.Clear(Find.World.renderer.GetLayer<WorldDrawLayer_Terrain>(planetTile.Layer));
+		if (Find.World.renderer.GetLayer<WorldDrawLayer_UpliftedTerrain>(planetTile.Layer) is { } layer)
+			layer.Clear();
+		if (Find.World.renderer.GetLayer<WorldDrawLayer_Terrain>(planetTile.Layer) is { } layer2)
+			layer2.RegenerateNow();
 		QuestUtility.SendQuestTargetSignals(parent.questTags, ClearSignal);
 		sustainer = null;
 		shaker = null;
