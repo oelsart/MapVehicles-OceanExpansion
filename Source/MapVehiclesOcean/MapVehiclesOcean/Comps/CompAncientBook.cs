@@ -1,4 +1,5 @@
-﻿using RimWorld;
+﻿using HarmonyLib;
+using RimWorld;
 using RimWorld.Planet;
 using UnityEngine;
 using VehicleMapFramework;
@@ -72,6 +73,9 @@ public class CompAncientBook : CompInteractable
 			return false;
 		}, extraRootTiles: neighbors);
 		ScreenFader.StartFade(Color.black, FadeOutDuration);
+		MapVehiclesOcean.Harmony.Patch(
+			AccessTools.PropertyGetter(typeof(WorldRendererUtility), nameof(WorldRendererUtility.CurrentWorldRenderMode)),
+			postfix: ((Delegate)Patch_WorldRendererUtility_CurrentWorldRenderMode.Postfix).Method);
 	}
 
 	private void CutsceneUpdate(float elapsed)
@@ -174,5 +178,16 @@ public class CompAncientBook : CompInteractable
 		QuestUtility.SendQuestTargetSignals(parent.questTags, ClearSignal);
 		sustainer = null;
 		shaker = null;
+		MapVehiclesOcean.Harmony.Unpatch(
+			AccessTools.PropertyGetter(typeof(WorldRendererUtility), nameof(WorldRendererUtility.CurrentWorldRenderMode)),
+			((Delegate)Patch_WorldRendererUtility_CurrentWorldRenderMode.Postfix).Method);
+	}
+}
+
+public static class Patch_WorldRendererUtility_CurrentWorldRenderMode
+{
+	public static void Postfix(ref WorldRenderMode __result)
+	{
+		if (CompAncientBook.CutsceneInProgress) __result = WorldRenderMode.Planet;
 	}
 }

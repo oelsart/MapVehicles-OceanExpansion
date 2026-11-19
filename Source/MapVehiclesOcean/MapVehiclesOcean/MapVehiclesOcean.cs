@@ -14,13 +14,16 @@ public class MapVehiclesOcean : Mod
 
   public static MapVehiclesOcean Mod { get; private set; }
 
-  public readonly Settings settings;
+  public static Harmony Harmony { get; private set; }
+
+  public readonly Settings Settings;
 
   public MapVehiclesOcean(ModContentPack content) : base(content)
   {
     Mod = this;
-    settings = GetSettings<Settings>();
-    new Harmony(HarmonyId).PatchAll(Assembly.GetExecutingAssembly());
+    Settings = GetSettings<Settings>();
+    Harmony = new Harmony(HarmonyId);
+	  Harmony.PatchAll(Assembly.GetExecutingAssembly());
     RegisterTKeys();
 
     LongEventHandler.ExecuteWhenFinished(() =>
@@ -78,13 +81,13 @@ public class MapVehiclesOcean : Mod
     var listing_Standard = new Listing_Standard();
     listing_Standard.Begin(inRect);
     listing_Standard.SliderLabeled("MVO_HiddenIslandChance".Translate(), null, null,
-      ref settings.hiddenIslandChance, 0f, 0.1f, decimalPlaces: 3);
+      ref Settings.hiddenIslandChance, 0f, 0.1f, decimalPlaces: 3);
     listing_Standard.End();
 
     var bottomRight = inRect.BottomPartPixels(30f).RightPartPixels(30f);
     if (Widgets.ButtonImageFitted(bottomRight, TexButton.HotReloadDefs))
     {
-      settings.Reset();
+      Settings.Reset();
     }
   }
 

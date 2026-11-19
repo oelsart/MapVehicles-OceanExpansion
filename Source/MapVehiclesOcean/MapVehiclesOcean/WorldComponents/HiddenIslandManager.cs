@@ -84,7 +84,7 @@ public class HiddenIslandManager(World world) : WorldComponent(world)
       foreach (var tile in layer.Tiles)
       {
         if (tile.PrimaryBiome == BiomeDefOf.Ocean &&
-            Rand.ChanceSeeded(MapVehiclesOcean.Mod.settings.hiddenIslandChance,
+            Rand.ChanceSeeded(MapVehiclesOcean.Mod.Settings.hiddenIslandChance,
               world.ConstantRandSeed ^ layer.LayerID ^ tile.tile.tileId))
         {
           hiddenIslandTileIDs[layer.LayerID].Add(tile.tile.tileId);

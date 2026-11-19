@@ -110,15 +110,6 @@ public static class Patch_MapGenerator_GenerateMap
   }
 }
 
-[HarmonyPatch(typeof(WorldRendererUtility), nameof(WorldRendererUtility.CurrentWorldRenderMode), MethodType.Getter)]
-public static class Patch_WorldRendererUtility_CurrentWorldRenderMode
-{
-	public static void Postfix(ref WorldRenderMode __result)
-	{
-		if (CompAncientBook.CutsceneInProgress) __result = WorldRenderMode.Planet;
-	}
-}
-
 [HarmonyPatch(typeof(ShipJob_Arrive), nameof(ShipJob_Arrive.TryStart))]
 public static class Patch_ShipJob_Arrive_TryStart
 {
