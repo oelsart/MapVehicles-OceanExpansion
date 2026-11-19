@@ -14,7 +14,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Krafs.Rimworld.Ref" Version="1.7.5005-unstable" />
+    <PackageReference Include="Krafs.Rimworld.Ref" Version="1.7.*-*" />
     <PackageReference Include="Lib.Harmony" Version="3.0.0-rc.7" />
     <PackageReference Include="Nerdbank.GitVersioning" Version="3.10.94">
       <PrivateAssets>all</PrivateAssets>
@@ -34,13 +34,13 @@
 
   <ItemGroup Condition="'$(CIBuild)' == 'true'">
     <Reference Include="VehicleMapFramework">
-      <HintPath>$(SteamWorkshopRoot)\3528683767\1.7\Assemblies\VehicleMapFramework.dll</HintPath>
+      <HintPath>$(SteamWorkshopRoot)\3426502333\1.7\Assemblies\VehicleMapFramework.dll</HintPath>
       <Private>False</Private>
     </Reference>
   </ItemGroup>
   
   <PropertyGroup>
-    <VFFolder Condition="'$(CIBuild)' == 'true'">$(SteamWorkshopRoot)\3522907382</VFFolder>
+    <VFFolder Condition="'$(CIBuild)' == 'true'">$(SteamWorkshopRoot)\3014915404</VFFolder>
     <VFFolder Condition="'$(CIBuild)' != 'true'">..\..\..\..\Vehicle-Framework</VFFolder>
   </PropertyGroup>
 

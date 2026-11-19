@@ -13,8 +13,8 @@ jobs:
     env:
       Solution_Name: VehicleMapFramework
       WorkshopMods: |
-        3522907382  # Vehicle Framework (Unstable)
-        3528683767  # Vehicle Map Framework (Dev)
+        3014915404  # Vehicle Framework
+        3426502333  # Vehicle Map Framework
       
     steps:
     - name: Checkout
@@ -92,7 +92,10 @@ jobs:
           1.7
           2022.3
           About
-          Common
+          Common/Assets.zip
+          Common/Assets.zip.fingerprint
+          Common/Assets.zip.roles
+          Common/Assets.zip.stamps
           NanameWalls/1.7
           DefaultSettings.xml
           LICENSE
@@ -122,13 +125,13 @@ jobs:
         configVdf: ${{ secrets.STEAM_CONFIG_VDF }}
         path: MapVehiclesOcean
         appId: 294100
-        publishedFileId: 3803843677
+        publishedFileId: 3842174841
         changeNote: ${{ github.ref_name }}
 
     - name: Discord Notification
       uses: sarisia/actions-status-discord@v1
       with:
         webhook: ${{ secrets.DISCORD_WEBHOOK_UPDATE }}
-        title: 'Beta Update: ${{ github.ref_name }}'
+        title: 'Ocean Expansion Update: ${{ github.ref_name }}'
         username: LS & Co. (GitHub Division)
-        url: "https://steamcommunity.com/sharedfiles/filedetails/?id=3803843677"
+        url: "https://steamcommunity.com/sharedfiles/filedetails/?id=3842174841"
