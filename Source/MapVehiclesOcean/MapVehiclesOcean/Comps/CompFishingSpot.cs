@@ -41,6 +41,8 @@ public class CompFishingSpot : ThingComp
     }
 
     map.terrainGrid.SetTerrain(cell, VMF_DefOf.VMF_ImpassableFloor);
+    if (cell.GetZone(map) is { } zone && zone.GetType().SameOrSubclassOf(Zone_FishingOnVehicle))
+	    zone.Delete();
   }
 
   public override void CompTickRare()
@@ -85,7 +87,7 @@ public class CompFishingSpot : ThingComp
 	      Patch_WaterBodyTracker_TryGetWaterBodyAt.Initialize = true;
         map.terrainGrid.SetTerrain(cell, terrain);
         Patch_WaterBodyTracker_TryGetWaterBodyAt.Initialize = false;
-        if (cell.GetZone(map) is { } zone)
+        if (cell.GetZone(map) is { } zone && zone.GetType().SameOrSubclassOf(Zone_FishingOnVehicle))
           Find.Selector.Deselect(zone);
       }
       else
