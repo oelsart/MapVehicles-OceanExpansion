@@ -28,6 +28,10 @@
           <def>StartingResearch</def>
           <project>MVO_ExpandableRaft</project>
         </li>
+        <li Class="ScenPart_StartingResearch" MayRequire="Ludeon.RimWorld.Odyssey">
+          <def>StartingResearch</def>
+          <project>Fishing</project>
+        </li>
         <li Class="VehicleMapFramework.ScenPart_StartOnMapVehicle">
           <def>VMF_StartOnMapVehicle</def>
         </li>
