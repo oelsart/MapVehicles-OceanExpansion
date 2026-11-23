@@ -1293,7 +1293,7 @@
       </blueprintGraphicData>
     </building>
     <comps>
-      <li Class="MapVehiclesOcean.CompProperties_FishingSpot"/>
+      <li MayRequire="Ludeon.RimWorld.Odyssey" Class="MapVehiclesOcean.CompProperties_FishingSpot"/>
     </comps>
     <placeWorkers>
       <li>VehicleMapFramework.PlaceWorker_ForceOnVehicleMapEdgeOpposite</li>

@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/VCE_Fishing.FishableTerrainDef[defName="VCEF_VanillaFishableTerrainsFresh"]/allowedTerrains</xpath>
+    <value>
+      <li>MVO_WaterDeepPassable</li>
+      <li>MVO_WaterDeepVirtual</li>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/VCE_Fishing.FishableTerrainDef[defName="VCEF_VanillaFishableTerrainsOcean"]/allowedTerrains</xpath>
+    <value>
+      <li>MVO_WaterOceanDeepPassable</li>
+      <li>MVO_WaterOceanDeepVirtual</li>
+    </value>
+  </Operation>
+  
+</Patch>

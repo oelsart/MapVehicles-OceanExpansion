@@ -8,21 +8,25 @@ public class CompFishingSpot : ThingComp
 {
   protected IntVec3 FishingCell => parent.Position + parent.Rotation.FacingCell;
 
+  protected virtual Type Zone_FishingOnVehicle => typeof(Zone_FishingOnVehicle);
+
+  protected virtual bool RequiredModActive => ModsConfig.OdysseyActive;
+
   public override void PostSpawnSetup(bool respawningAfterLoad)
   {
-    if (!ModsConfig.OdysseyActive || !parent.IsOnVehicleMapOf(out var vehicle)) return;
+    if (!RequiredModActive || !parent.IsOnVehicleMapOf(out var vehicle)) return;
 
     var cell = FishingCell;
     if (!cell.InBounds(parent.Map) || !vehicle.ImpassableCellGrid[cell] || parent.Map.zoneManager.ZoneAt(cell) is not null) return;
 
-    var zone = new Zone_FishingOnVehicle(parent.Map.zoneManager);
-    parent.Map.zoneManager.RegisterZone(zone);
+    var zone = (Zone)Activator.CreateInstance(Zone_FishingOnVehicle, parent.Map.zoneManager)!;
     zone.AddCell(cell);
+    parent.Map.zoneManager.RegisterZone(zone);
   }
 
   public override void PostDeSpawn(Map map, DestroyMode mode = DestroyMode.Vanish)
   {
-    if (!ModsConfig.OdysseyActive || !map.IsVehicleMap) return;
+    if (!RequiredModActive || !map.IsVehicleMap) return;
 
     var cell = FishingCell;
     for (var i = 0; i < GenAdj.CardinalDirections.Length; i++)
@@ -40,7 +44,7 @@ public class CompFishingSpot : ThingComp
 
   public override void CompTickRare()
   {
-    if (!ModsConfig.OdysseyActive || !parent.IsOnVehicleMapOf(out var vehicle)) return;
+    if (!RequiredModActive || !parent.IsOnVehicleMapOf(out var vehicle)) return;
 
     var cell = FishingCell;
     var map = parent.Map;

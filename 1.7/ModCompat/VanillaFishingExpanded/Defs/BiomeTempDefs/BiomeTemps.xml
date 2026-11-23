@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <VCE_Fishing.BiomeTempDef>
+    <defName>MVO_BiomeOcean</defName>
+    <biomeTempLabel>Ocean</biomeTempLabel>
+    <biomes>
+      <li>Ocean</li>
+    </biomes>
+  </VCE_Fishing.BiomeTempDef>
+
+  <VCE_Fishing.BiomeTempDef>
+    <defName>MVO_BiomeLake</defName>
+    <biomeTempLabel>Lake</biomeTempLabel>
+    <biomes>
+      <li>Lake</li>
+    </biomes>
+  </VCE_Fishing.BiomeTempDef>
+  
+</Defs>

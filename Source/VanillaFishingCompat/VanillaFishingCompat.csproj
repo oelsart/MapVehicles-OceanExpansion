@@ -1,0 +1,48 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <LangVersion>preview</LangVersion>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <OutDir>../../1.7/ModCompat/VanillaFishingExpanded/Assemblies</OutDir>
+    <GenerateDependencyFile>false</GenerateDependencyFile>
+    <DebugType>embedded</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+    <Configurations>Debug;Release;Dev</Configurations>
+    <Platforms>AnyCPU</Platforms>
+    <RootNamespace>MapVehiclesOcean.VanillaFishingCompat</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Nerdbank.GitVersioning" Version="3.10.94">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <PropertyGroup>
+    <SteamWorkshopRoot Condition="'$(SteamWorkshopRoot)' == ''">..\..\..\..\..\..\workshop\content\294100</SteamWorkshopRoot>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\MapVehiclesOcean\MapVehiclesOcean\MapVehiclesOcean.csproj" />
+    <Reference Include="$(SteamWorkshopRoot)\1914064942\1.6NotOdyssey\Assemblies\VCE-Fishing.dll" />
+  </ItemGroup>
+  
+  <PropertyGroup>
+    <VFFolder Condition="'$(CIBuild)' == 'true'">$(SteamWorkshopRoot)\3014915404</VFFolder>
+    <VFFolder Condition="'$(CIBuild)' != 'true'">..\..\..\Vehicle-Framework</VFFolder>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="SmashTools">
+      <HintPath>$(VFFolder)\1.7\Assemblies\SmashTools.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Vehicles">
+      <HintPath>$(VFFolder)\1.7\Assemblies\Vehicles.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  
+</Project>

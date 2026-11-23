@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/VCE_Fishing.FishDef[
+      defName="VCEF_AnchovyFish" or
+      defName="VCEF_HerringFish" or
+      defName="VCEF_BassFish" or
+      defName="VCEF_EelFish" or
+      defName="VCEF_SalmonFish" or
+      defName="VCEF_ClownfishFish" or
+      defName="VCEF_SpratFish" or
+      defName="VCEF_AnglerfishFish" or
+      defName="VCEF_HaddockFish" or
+      defName="VCEF_MackerelFish" or
+      defName="VCEF_PufferfishFish" or
+      defName="VCEF_HalibutFish" or
+      defName="VCEF_CodFish" or
+      defName="VCEF_LobsterFish" or
+      defName="VCEF_SwordfishFish" or
+      defName="VCEF_TunaFish"
+      ]/allowedBiomes</xpath>
+    <value>
+      <li>Ocean</li>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/VCE_Fishing.FishDef[
+      defName="VCEF_AngelfishFish" or
+      defName="VCEF_GuppyFish" or
+      defName="VCEF_BassFish" or
+      defName="VCEF_EelFish" or
+      defName="VCEF_TroutFish" or
+      defName="VCEF_SalmonFish" or
+      defName="VCEF_GoldfishFish" or
+      defName="VCEF_MinnowFish" or
+      defName="VCEF_KoiFish" or
+      defName="VCEF_PerchFish" or
+      defName="VCEF_PiranhaFish" or
+      defName="VCEF_CatfishFish"
+      ]/allowedBiomes</xpath>
+    <value>
+      <li>Lake</li>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/VCE_Fishing.FishDef[
+      defName="VCEF_SpecialWood" or
+      defName="VCEF_SpecialBeer" or
+      defName="VCEF_SpecialSteel" or
+      defName="VCEF_SpecialGold" or
+      defName="VCEF_SpecialJade"
+      ]/allowedBiomes</xpath>
+    <value>
+      <li>Ocean</li>
+      <li>Lake</li>
+    </value>
+  </Operation>
+  
+</Patch>

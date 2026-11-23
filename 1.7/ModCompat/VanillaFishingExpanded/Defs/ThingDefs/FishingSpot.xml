@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <ThingDef ParentName="MVO_ShipEquipmentBase">
+    <defName>MVO_FishingSpot</defName>
+    <label>fishing spot</label>
+    <description>A spot for fishing from the edge of the boat. It is an important way to obtain food while on board.</description>
+    <graphicData>
+      <graphicClass>Graphic_Single</graphicClass>
+      <texPath>UI/Overlays/InteractionCell</texPath>
+      <shaderType>MetaOverlay</shaderType>
+    </graphicData>
+    <tickerType>Rare</tickerType>
+    <useHitPoints>false</useHitPoints>
+    <noRightClickDraftAttack>true</noRightClickDraftAttack>
+    <useBlueprintGraphicAsGhost>true</useBlueprintGraphicAsGhost>
+    <statBases>
+      <WorkToBuild>0</WorkToBuild>
+    </statBases>
+    <building>
+      <isEdifice>false</isEdifice>
+      <blueprintGraphicData>
+        <graphicClass>Graphic_Single</graphicClass>
+        <texPath>MapVehiclesOcean/Things/FishingSpot/FishingSpot</texPath>
+      </blueprintGraphicData>
+    </building>
+    <comps>
+      <li Class="MapVehiclesOcean.VanillaFishingCompat.CompProperties_FishingSpot"/>
+    </comps>
+    <placeWorkers>
+      <li>VehicleMapFramework.PlaceWorker_ForceOnVehicleMapEdgeOpposite</li>
+    </placeWorkers>
+  </ThingDef>
+  
+</Defs>
