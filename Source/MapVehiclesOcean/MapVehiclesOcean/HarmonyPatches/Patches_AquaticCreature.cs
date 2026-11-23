@@ -1,8 +1,8 @@
-﻿using System.Runtime.CompilerServices;
-using HarmonyLib;
+﻿using HarmonyLib;
 using VehicleMapFramework;
 using Verse;
 using Verse.AI;
+using Waylith.Injection;
 
 namespace MapVehiclesOcean.HarmonyPatches;
 
@@ -86,20 +86,23 @@ public static class Patch_Region_Allows
 [HarmonyPatch(typeof(PathFinderMapData), nameof(PathFinderMapData.ParameterizeGridJob))]
 public static class Patch_PathFinderMapData_ParameterizeGridJob
 {
-	private static readonly ConditionalWeakTable<Map, CostSource> waterCostTable = [];
-	
 	public static void Postfix(PathRequest request, Map ___map, ref PathGridJob job)
 	{
 		if (request.pawn is not null && AquaticCreature.IsAquatic(request.pawn))
 		{
-			var waterCost = waterCostTable.GetValue(___map, m =>
+			ref var waterCost = ref ___map.pathFinder.MapData.WaterCost;
+			if (waterCost is null)
 			{
-				var source = new CostSource(m, m.pathing.Get(MVO_DefOf.MVO_Aquatic));
-				m.pathFinder.MapData.RegisterSource(source);
-				source.ComputeAll(null);
-				return source;
-			});
+				waterCost = new CostSource(___map, ___map.pathing.Get(MVO_DefOf.MVO_Aquatic));
+				___map.pathFinder.MapData.RegisterSource(waterCost);
+				waterCost.ComputeAll(null);
+			}
 			job.pathGridDirect = waterCost.Data;
 		}
+	}
+
+	extension(PathFinderMapData mapData)
+	{
+		private extern ref CostSource WaterCost { [InjectedField] get; }
 	}
 }
