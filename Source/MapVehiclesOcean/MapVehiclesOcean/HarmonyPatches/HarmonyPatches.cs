@@ -16,8 +16,13 @@ namespace MapVehiclesOcean.HarmonyPatches;
 [HarmonyPatch(typeof(WaterBodyTracker), nameof(WaterBodyTracker.TryGetWaterBodyAt))]
 public static class Patch_WaterBodyTracker_TryGetWaterBodyAt
 {
+	public static bool Initialize { private get; set; }
+	
   public static bool Prefix(Map ___map, IntVec3 c, ref WaterBody body, ref bool __result)
   {
+	  if (Initialize)
+		  return true;
+	  
     if (___map.IsVehicleMapOf(out var vehicle) && vehicle.Spawned)
     {
       var c2 = c.ToBaseMapCoord(vehicle);

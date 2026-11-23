@@ -1,4 +1,5 @@
-﻿using RimWorld;
+﻿using MapVehiclesOcean.HarmonyPatches;
+using RimWorld;
 using VehicleMapFramework;
 using Verse;
 
@@ -80,8 +81,11 @@ public class CompFishingSpot : ThingComp
     {
       if (terrain2.passability == Traversability.Impassable)
       {
+	      // 車両マップ上に1マスのWaterBodyが形成されるにはパッチを一度スキップさせる必要がある
+	      Patch_WaterBodyTracker_TryGetWaterBodyAt.Initialize = true;
         map.terrainGrid.SetTerrain(cell, terrain);
-        if (cell.GetZone(map) is Zone_FishingOnVehicle zone)
+        Patch_WaterBodyTracker_TryGetWaterBodyAt.Initialize = false;
+        if (cell.GetZone(map) is { } zone)
           Find.Selector.Deselect(zone);
       }
       else
