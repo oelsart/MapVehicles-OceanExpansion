@@ -7,7 +7,8 @@
     <li IfModActive="Ludeon.RimWorld.Ideology">1.7/ModCompat/Ideology</li>
     <li IfModActive="Ludeon.RimWorld.Biotech">1.7/ModCompat/Biotech</li>
     <li IfModActive="Ludeon.RimWorld.Odyssey">1.7/ModCompat/Odyssey</li>
-    <li IfModActive="CETeam.CombatExtended,CETeam.CombatExtended_steam">1.7/ModCompat/CombatExtended</li>
+    <li IfModActive="CETeam.CombatExtended">1.7/ModCompat/CombatExtended</li>
+    <li IfModActive="DankPyon.Medieval.Overhaul">1.7/ModCompat/MedievalOverhaul</li>
 	<li IfModActive="VanillaExpanded.VCEF" IfModNotActive="Ludeon.RimWorld.Odyssey">1.7/ModCompat/VanillaFishingExpanded</li>
 	<li IfModNotActive="OELS.NanameWalls">NanameWalls/1.7</li>
   </v1.7>

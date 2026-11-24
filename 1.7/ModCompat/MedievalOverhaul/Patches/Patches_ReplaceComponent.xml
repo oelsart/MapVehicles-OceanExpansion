@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/Vehicles.VehicleBuildDef[defName="MVO_Keel_Blueprint"]/costList/ComponentIndustrial</xpath>
+    <value>
+      <DankPyon_ComponentBasic>3</DankPyon_ComponentBasic>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/Vehicles.VehicleBuildDef[defName="MVO_Roundnose_Blueprint"]/costList/ComponentIndustrial</xpath>
+    <value>
+      <DankPyon_ComponentBasic>10</DankPyon_ComponentBasic>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="MVO_Apparel_GrapplingBelt"]/costList/ComponentIndustrial</xpath>
+    <value>
+      <DankPyon_ComponentBasic>3</DankPyon_ComponentBasic>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="MVO_Turret_GrapplingLauncher"]/costList/ComponentIndustrial</xpath>
+    <value>
+      <DankPyon_ComponentBasic>1</DankPyon_ComponentBasic>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="MVO_Helm"]/costList/ComponentIndustrial</xpath>
+    <value>
+      <DankPyon_ComponentBasic>3</DankPyon_ComponentBasic>
+    </value>
+  </Operation>
+  
+</Patch>
