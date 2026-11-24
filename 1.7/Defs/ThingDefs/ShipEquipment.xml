@@ -25,6 +25,7 @@
     <drawStyleCategory>Floors</drawStyleCategory>
     <drawGUIOverlay>true</drawGUIOverlay>
     <drawGUIOverlayQuality>false</drawGUIOverlayQuality>
+    <techLevel>Neolithic</techLevel>
     <building>
       <isEdifice>false</isEdifice>
       <deconstructible>false</deconstructible>
@@ -538,6 +539,7 @@
       <WoodLog>120</WoodLog>
     </costList>
     <clearBuildingArea>false</clearBuildingArea>
+    <techLevel>Medieval</techLevel>
     <building>
       <isEdifice>false</isEdifice>
       <blueprintGraphicData>
@@ -835,6 +837,7 @@
       <WorkToBuild>100</WorkToBuild>
     </statBases>
     <fillPercent>0.1</fillPercent>
+    <techLevel>Neolithic</techLevel>
     <costList>
       <WoodLog>40</WoodLog>
     </costList>
@@ -908,6 +911,7 @@
     </costList>
     <hasInteractionCell>false</hasInteractionCell>
     <inspectorTabs Inherit="False"/>
+    <techLevel>Medieval</techLevel>
     <building>
       <turretGunDef>MVO_Gun_GrapplingLauncher</turretGunDef>
       <turretBurstWarmupTime>0</turretBurstWarmupTime>
@@ -1088,6 +1092,7 @@
     <costList>
       <Steel>10</Steel>
     </costList>
+    <techLevel>Medieval</techLevel>
     <building/>
   </ThingDef>
 
@@ -1133,6 +1138,7 @@
       <Steel>10</Steel>
       <ComponentIndustrial>3</ComponentIndustrial>
     </costList>
+    <techLevel>Medieval</techLevel>
     <researchPrerequisites>
       <li>MVO_Keel</li>
     </researchPrerequisites>
@@ -1204,6 +1210,7 @@
     <researchPrerequisites>
       <li>MVO_Keel</li>
     </researchPrerequisites>
+    <techLevel>Medieval</techLevel>
     <building>
       <preventDeteriorationOnTop>true</preventDeteriorationOnTop>
       <ignoreStoredThingsBeauty>true</ignoreStoredThingsBeauty>
@@ -1285,6 +1292,7 @@
     <researchPrerequisites>
       <li>Fishing</li>
     </researchPrerequisites>
+    <techLevel>Neolithic</techLevel>
     <building>
       <isEdifice>false</isEdifice>
       <blueprintGraphicData>
@@ -1320,6 +1328,7 @@
       <li>BuildingsFurniture</li>
     </thingCategories>
     <tickerType>Normal</tickerType>
+    <techLevel>Neolithic</techLevel>
     <building>
       <paintable>true</paintable>
     </building>
