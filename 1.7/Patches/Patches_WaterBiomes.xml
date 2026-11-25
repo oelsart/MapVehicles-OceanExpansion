@@ -222,12 +222,4 @@
     </nomatch>
   </Operation>
   
-  <Operation Class="PatchOperationReplace">
-    <xpath>Defs/BiomeDef[defName="Ocean" or defName="Lake"]/canBuildBase</xpath>
-    <value>
-      <canBuildBase>true</canBuildBase>
-      <canAutoChoose>false</canAutoChoose>
-    </value>
-  </Operation>
-  
 </Patch>
