@@ -23,6 +23,11 @@
     <IncidentTargetTags>
       <li>MVO_Map_TempIncidentSea</li>
     </IncidentTargetTags>
+    <modExtensions>
+      <li MayRequire="OskarPotocki.VanillaFactionsExpanded.Core" Class="VEF.Maps.WorldObjectExtension">
+        <disableObjectSpawnDefs>true</disableObjectSpawnDefs>
+      </li>
+    </modExtensions>
   </WorldObjectDef>
 
   <WorldObjectDef ParentName="StaticWorldObjectBase">
@@ -45,6 +50,11 @@
       <li Class="WorldObjectCompProperties_FormCaravan"/>
       <li Class="WorldObjectCompProperties_TimedDetectionRaids"/>
     </comps>
+    <modExtensions>
+      <li MayRequire="OskarPotocki.VanillaFactionsExpanded.Core" Class="VEF.Maps.WorldObjectExtension">
+        <disableObjectSpawnDefs>true</disableObjectSpawnDefs>
+      </li>
+    </modExtensions>
   </WorldObjectDef>
 
 </Defs>
