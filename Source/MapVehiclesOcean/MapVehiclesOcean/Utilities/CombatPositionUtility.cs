@@ -40,7 +40,7 @@ public static class CombatPositionUtility
           var dir = compNpcVehicleMap.Params.preferredDir;
           var angle = (target.PositionOnBaseMap - intVec).AngleFlat;
           var rot2 = Rot8.FromAngle(angle);
-          rot = new Rot8(Rot8.FromIntClockwise((rot2.AsIntClockwise + dir.AsIntClockwise) % 8));
+          rot = new Rot8(Rot8.FromIntClockwise(GenMath.PositiveMod(rot2.AsIntClockwise - dir.AsIntClockwise, 8)));
         }
 
         if (vehicle.CellRectStandable(vehicle.Map, intVec, rot))

@@ -2,7 +2,7 @@
 
 namespace MapVehiclesOcean;
 
-public class ShipCombatUtility
+public static class ShipCombatUtility
 {
 	public static PawnGroupKindDef PawnGroupKindFor(Faction faction)
 	{
